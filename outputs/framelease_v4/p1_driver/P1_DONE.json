@@ -1,0 +1,144 @@
+{
+ "d1": {
+  "entry_line": 2229,
+  "json": "outputs/framelease_v4/tuning/d1/FULL_d1_summary.json",
+  "json_sha256": "d8c0a76eba80c0c5d4faf93346146ff3db59d162d27636c2411cd206a09a2fb3",
+  "md": "outputs/framelease_v4/tuning/d1/FULL_d1_summary.md",
+  "md_sha256": "c53d08903830001d20656853205b5b48546924f0527da799c260f60dcaf5c989"
+ },
+ "freeze": {
+  "A_star": {
+   "age_lease_s": 1.0
+  },
+  "L_star": {
+   "config": "T_x0.00",
+   "envelope_path": "outputs/framelease_v4/envelopes/B0.json",
+   "envelope_sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927",
+   "label": "B0",
+   "validity": "std"
+  },
+  "d_star": {
+   "d": 1,
+   "utility": "v4_adet_d1"
+  },
+  "entry_line": 2221,
+  "event_star": {
+   "candidate": "s_hb2.0",
+   "policy_params": {
+    "det_shift_m": 1.0,
+    "heartbeat_s": 2.0,
+    "speed_delta_mps": 0.5,
+    "yaw_delta_rad": 0.05
+   }
+  },
+  "fl_risk": {
+   "lease_point": "E5",
+   "rule": "L* = B0: fl_risk runs the better of E5 / E10 by mean DS on lease_s1 (T22a), ties earlier"
+  },
+  "path": "outputs/framelease_v4/tuning/selection.json",
+  "sha256": "652fcbdbf0a6adb498aa0691fcaaffb097fcd680b4bf40235a28639aed69b930"
+ },
+ "manifest_files": 221,
+ "manifest_sha256": "4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033",
+ "next": "D1 goes to the user, who decides whether the work continues (PROTOCOL Sec. 4.8). The driver started no later phase (P2 and later are not started).",
+ "protocol_sha256": "33089c4fc6d22d687e95b5ddcea7bca3797de33b305b67b5193cd32564bac08f",
+ "queue": "outputs/framelease_v4/queue_p1",
+ "schema": "framelease_v4.p1_driver_done/1",
+ "seal_ok": true,
+ "stages": {
+  "age_s1": {
+   "entry_line": 2199,
+   "job_file": "outputs/framelease_v4/queue_p1/jobs.d/b08_age_s1.jsonl",
+   "selection": "outputs/framelease_v4/tuning/selection/FULL/age_s1.json",
+   "sha256": "88fa28271484e92758978b5b1ddcdeba42567fa1a7979715eedddc5bad31acdc",
+   "winners": {
+    "survivors": [
+     "A1.0",
+     "A2.5"
+    ]
+   }
+  },
+  "age_s2": {
+   "entry_line": 2211,
+   "job_file": "outputs/framelease_v4/queue_p1/jobs.d/b09_age_s2.jsonl",
+   "selection": "outputs/framelease_v4/tuning/selection/FULL/age_s2.json",
+   "sha256": "b79b9440bde4b8f1c4fad1d7bcfb41fe88f3995fd0eb501084bd38c5e178b355",
+   "winners": {
+    "mean_ds": 60.18459781818182,
+    "mean_ds_T22": 63.97602786363636,
+    "selected": "A1.0"
+   }
+  },
+  "event_s1": {
+   "entry_line": 2138,
+   "job_file": "outputs/framelease_v4/queue_p1/jobs.d/b03_event_s1.jsonl",
+   "selection": "outputs/framelease_v4/tuning/selection/FULL/event_s1.json",
+   "sha256": "b66a83c6c5d1b4e7ee6db23a6eaa942276ce7fcf3e89c9d0736c4002f61cfc0f",
+   "winners": {
+    "survivors": [
+     "s_hb2.0",
+     "s_hb1.0"
+    ]
+   }
+  },
+  "event_s2": {
+   "entry_line": 2165,
+   "job_file": "outputs/framelease_v4/queue_p1/jobs.d/b05_event_s2.jsonl",
+   "selection": "outputs/framelease_v4/tuning/selection/FULL/event_s2.json",
+   "sha256": "682a8e0560a388047fb89c4e77ce4f51869e5e23342ffa0ecfa829c5451ec659",
+   "winners": {
+    "mean_ds": 60.30833454545454,
+    "mean_ds_T22": 61.641726272727276,
+    "selected": "s_hb2.0"
+   }
+  },
+  "heur_s1": {
+   "entry_line": 2178,
+   "job_file": "outputs/framelease_v4/queue_p1/jobs.d/b06_heur_s1.jsonl",
+   "selection": "outputs/framelease_v4/tuning/selection/FULL/heur_s1.json",
+   "sha256": "03d1145dba118b22806a0246fbca35d41338a815a9e9cb9f8d4d79ca2e230914",
+   "winners": {
+    "survivors": [
+     "d10",
+     "d1"
+    ]
+   }
+  },
+  "heur_s2": {
+   "entry_line": 2188,
+   "job_file": "outputs/framelease_v4/queue_p1/jobs.d/b07_heur_s2.jsonl",
+   "selection": "outputs/framelease_v4/tuning/selection/FULL/heur_s2.json",
+   "sha256": "ca497c268b94cd18b19cbd5fd36ba174a3e86bdd739695c7954de948c919ac4d",
+   "winners": {
+    "mean_ds": 49.91109845454545,
+    "mean_ds_T22": 57.10222642857144,
+    "selected": "d1"
+   }
+  },
+  "lease_s1": {
+   "entry_line": 2128,
+   "job_file": "outputs/framelease_v4/queue_p1/jobs.d/b02_lease_s1.jsonl",
+   "selection": "outputs/framelease_v4/tuning/selection/FULL/lease_s1.json",
+   "sha256": "f23a6522c28aedc27b02494521cb763331fbf3097b8114b8ece8cd83021fa261",
+   "winners": {
+    "survivors": [
+     "E5",
+     "B0"
+    ]
+   }
+  },
+  "lease_s2": {
+   "entry_line": 2153,
+   "job_file": "outputs/framelease_v4/queue_p1/jobs.d/b04_lease_s2.jsonl",
+   "selection": "outputs/framelease_v4/tuning/selection/FULL/lease_s2.json",
+   "sha256": "bc2f7299f438309d99ddfb6017ab86d1593e996247e50456c51b747e0a332351",
+   "winners": {
+    "mean_ds": 47.762471454545455,
+    "mean_ds_T22": 49.992281999999996,
+    "selected": "B0"
+   }
+  }
+ },
+ "variant": "FULL",
+ "written": "2026-11-15T06:38:47+0800"
+}

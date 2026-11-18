@@ -1,0 +1,3 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/A10A11/applier/prober.py /tmp/A10A11/applier/treeO/framelease_v4/.protocol.lock 1
+(exit 0, 1.0 s)
+{"transitions": [[1794710625.8079839, "free"]], "counts": {"free": 20, "busy": 0}}

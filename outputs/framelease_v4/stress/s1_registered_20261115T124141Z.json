@@ -1,0 +1,1123 @@
+{
+ "envelope": {
+  "path": "outputs/framelease_v4/envelopes/B0.json",
+  "sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927"
+ },
+ "foreign_cpu_accepted": true,
+ "label": "registered S1 run (PROTOCOL Sec. 7.6)",
+ "n_feature_dicts": 562,
+ "notes": [
+  "Deviation (GAP_AUDIT S-4): shield + decision replays ShieldedHeuristicPolicy.decide with the state's recorded shield budgets (the closed loop reads them from the memoized latency profile).",
+  "Deviation (GAP_AUDIT S-4): decisions.jsonl logs no detections, so the lease and the commit check run on C1-sweep scenes (real model detections and candidate plans) or synthetic scenes.",
+  "qnet_call is QUtility's timed region (featurize + forward + two reads) on choice-epoch feature dicts; would_disable_at_call applies QUtility's 5%-of-256 rule to the measured series.",
+  "commit_check.outcomes include the 200 warm-up calls.",
+  "blocking_processes sees only FrameLease runners, the simulator and RL jobs; foreign_cpu (plan) and foreign_cpu_before (each load level) list every other process that used >= min_share_of_one_core over sample_s (/proc utime + stime). A registered run refuses while one exists unless --accept-foreign-cpu (foreign_cpu_accepted)."
+ ],
+ "per_load": [
+  {
+   "busy_pids": [],
+   "commit_check": {
+    "max_us": 150.72699170559645,
+    "mean_us": 54.33985241979826,
+    "n": 5000,
+    "outcomes": {
+     "accepted": 4926,
+     "expired_before_commit": 274
+    },
+    "p50_us": 65.52950071636587,
+    "p99_us": 82.77116270619445
+   },
+   "foreign_cpu_before": {
+    "min_share_of_one_core": 0.05,
+    "processes": [
+     {
+      "cmdline": "/usr/lib/x86_64-linux-gnu/webkit2gtk-4.1/WebKitWebProcess 4 37",
+      "comm": "WebKitWebProces",
+      "cpu_share": 0.2213,
+      "pid": 522182
+     },
+     {
+      "cmdline": "/opt/todesk/bin/ToDesk",
+      "comm": "ToDesk",
+      "cpu_share": 0.1328,
+      "pid": 567251
+     },
+     {
+      "cmdline": "/opt/todesk/bin/ToDesk_Service",
+      "comm": "ToDesk_Service",
+      "cpu_share": 0.1131,
+      "pid": 542289
+     },
+     {
+      "cmdline": "/usr/bin/gnome-shell --mode=ubuntu",
+      "comm": "gnome-shell",
+      "cpu_share": 0.1033,
+      "pid": 4232
+     },
+     {
+      "cmdline": "/opt/todesk/bin/ToDesk_Session --localPort=35600 --isVideoSession=true",
+      "comm": "ToDesk_Session",
+      "cpu_share": 0.0639,
+      "pid": 588740
+     }
+    ],
+    "sample_s": 2.0,
+    "total_cpu_share": 0.6344
+   },
+   "lease": {
+    "max_us": 1968.7809981405735,
+    "mean_us": 578.7691565783462,
+    "n": 5000,
+    "p50_us": 558.9080028585158,
+    "p99_us": 1479.4471749337392
+   },
+   "load": 0,
+   "loadavg_end": [
+    0.60791015625,
+    1.21240234375,
+    2.94091796875
+   ],
+   "loadavg_start": [
+    0.57373046875,
+    1.21630859375,
+    2.95166015625
+   ],
+   "qnet_call": {
+    "v4_qnet_1c3d57e3d8e7": {
+     "budget_s": 0.0001,
+     "max_us": 25.84399771876633,
+     "mean_us": 7.756435052579036,
+     "n": 20000,
+     "overrun_rate": 0.0,
+     "overruns": 0,
+     "p50_us": 7.652997737750411,
+     "p99_us": 11.824088724097223,
+     "would_disable_at_call": null
+    },
+    "v4_qnet_5d8ffd7cf7dd": {
+     "budget_s": 0.0001,
+     "max_us": 46.53100040741265,
+     "mean_us": 7.683460398402531,
+     "n": 20000,
+     "overrun_rate": 0.0,
+     "overruns": 0,
+     "p50_us": 7.6029973570257425,
+     "p99_us": 10.91512880520893,
+     "would_disable_at_call": null
+    },
+    "v4_qnet_6d5026a7b46f": {
+     "budget_s": 0.0001,
+     "max_us": 25.110988644883037,
+     "mean_us": 6.855579327384476,
+     "n": 20000,
+     "overrun_rate": 0.0,
+     "overruns": 0,
+     "p50_us": 6.786998710595071,
+     "p99_us": 9.415061940671867,
+     "would_disable_at_call": null
+    }
+   },
+   "shield_decision": {
+    "heuristic": {
+     "all": {
+      "max_us": 28.27501157298684,
+      "mean_us": 12.233130897948286,
+      "n": 20000,
+      "p50_us": 12.43599399458617,
+      "p99_us": 17.538117390358803
+     },
+     "bypass": null,
+     "choice_epochs": {
+      "max_us": 25.820001610554755,
+      "mean_us": 12.1803873845623,
+      "n": 5620,
+      "p50_us": 12.47599720954895,
+      "p99_us": 17.241948226001142
+     },
+     "network_disabled": null,
+     "utility": "heuristic"
+    },
+    "v4_qnet_1c3d57e3d8e7": {
+     "all": {
+      "max_us": 93.01399404648691,
+      "mean_us": 17.1246089223132,
+      "n": 20000,
+      "p50_us": 13.873010175302625,
+      "p99_us": 33.008233003783936
+     },
+     "bypass": {
+      "disabled": 0,
+      "nonfinite": 0,
+      "overrun": 0,
+      "slack": 0
+     },
+     "choice_epochs": {
+      "max_us": 84.71700130030513,
+      "mean_us": 26.836317002332482,
+      "n": 5620,
+      "p50_us": 26.63499617483467,
+      "p99_us": 43.13985642511406
+     },
+     "network_disabled": false,
+     "utility": "v4_qnet_1c3d57e3d8e7"
+    },
+    "v4_qnet_5d8ffd7cf7dd": {
+     "all": {
+      "max_us": 79.82700481079519,
+      "mean_us": 16.727618235745467,
+      "n": 20000,
+      "p50_us": 13.71650432702154,
+      "p99_us": 28.8202297815587
+     },
+     "bypass": {
+      "disabled": 0,
+      "nonfinite": 0,
+      "overrun": 0,
+      "slack": 0
+     },
+     "choice_epochs": {
+      "max_us": 50.722010200843215,
+      "mean_us": 26.25160575082055,
+      "n": 5620,
+      "p50_us": 26.520996470935643,
+      "p99_us": 30.808343144599355
+     },
+     "network_disabled": false,
+     "utility": "v4_qnet_5d8ffd7cf7dd"
+    },
+    "v4_qnet_6d5026a7b46f": {
+     "all": {
+      "max_us": 68.26600292697549,
+      "mean_us": 16.352150088641793,
+      "n": 20000,
+      "p50_us": 13.484503142535686,
+      "p99_us": 28.175210609333558
+     },
+     "bypass": {
+      "disabled": 0,
+      "nonfinite": 0,
+      "overrun": 0,
+      "slack": 0
+     },
+     "choice_epochs": {
+      "max_us": 68.26600292697549,
+      "mean_us": 25.256520818800457,
+      "n": 5620,
+      "p50_us": 25.34450322855264,
+      "p99_us": 38.45120067126126
+     },
+     "network_disabled": false,
+     "utility": "v4_qnet_6d5026a7b46f"
+    }
+   },
+   "wall_s": 6.600590903995908
+  },
+  {
+   "busy_pids": [
+    602213,
+    602214,
+    602215,
+    602216
+   ],
+   "commit_check": {
+    "max_us": 180.38500274997205,
+    "mean_us": 55.147542408667505,
+    "n": 5000,
+    "outcomes": {
+     "accepted": 4926,
+     "expired_before_commit": 274
+    },
+    "p50_us": 65.54750143550336,
+    "p99_us": 89.8221264651512
+   },
+   "foreign_cpu_before": {
+    "min_share_of_one_core": 0.05,
+    "processes": [
+     {
+      "cmdline": "/usr/lib/x86_64-linux-gnu/webkit2gtk-4.1/WebKitWebProcess 4 37",
+      "comm": "WebKitWebProces",
+      "cpu_share": 0.2356,
+      "pid": 522182
+     },
+     {
+      "cmdline": "/opt/todesk/bin/ToDesk",
+      "comm": "ToDesk",
+      "cpu_share": 0.1325,
+      "pid": 567251
+     },
+     {
+      "cmdline": "/opt/todesk/bin/ToDesk_Service",
+      "comm": "ToDesk_Service",
+      "cpu_share": 0.1178,
+      "pid": 542289
+     },
+     {
+      "cmdline": "/usr/bin/gnome-shell --mode=ubuntu",
+      "comm": "gnome-shell",
+      "cpu_share": 0.108,
+      "pid": 4232
+     },
+     {
+      "cmdline": "/opt/todesk/bin/ToDesk_Session --localPort=35600 --isVideoSession=true",
+      "comm": "ToDesk_Session",
+      "cpu_share": 0.0736,
+      "pid": 588740
+     }
+    ],
+    "sample_s": 2.0,
+    "total_cpu_share": 0.6675
+   },
+   "lease": {
+    "max_us": 3205.205997801386,
+    "mean_us": 588.9445754030021,
+    "n": 5000,
+    "p50_us": 558.7025007116608,
+    "p99_us": 1498.084182967432
+   },
+   "load": 4,
+   "loadavg_end": [
+    1.0751953125,
+    1.28857421875,
+    2.94677734375
+   ],
+   "loadavg_start": [
+    0.55908203125,
+    1.19189453125,
+    2.9248046875
+   ],
+   "qnet_call": {
+    "v4_qnet_1c3d57e3d8e7": {
+     "budget_s": 0.0001,
+     "max_us": 15.506011550314724,
+     "mean_us": 7.74334070738405,
+     "n": 20000,
+     "overrun_rate": 0.0,
+     "overruns": 0,
+     "p50_us": 7.673996151424944,
+     "p99_us": 10.55918066413139,
+     "would_disable_at_call": null
+    },
+    "v4_qnet_5d8ffd7cf7dd": {
+     "budget_s": 0.0001,
+     "max_us": 14.420002116821706,
+     "mean_us": 7.726748975983355,
+     "n": 20000,
+     "overrun_rate": 0.0,
+     "overruns": 0,
+     "p50_us": 7.6669966802001,
+     "p99_us": 9.893203095998583,
+     "would_disable_at_call": null
+    },
+    "v4_qnet_6d5026a7b46f": {
+     "budget_s": 0.0001,
+     "max_us": 25.891989935189486,
+     "mean_us": 6.9487541062699165,
+     "n": 20000,
+     "overrun_rate": 0.0,
+     "overruns": 0,
+     "p50_us": 6.771995685994625,
+     "p99_us": 11.463009286671877,
+     "would_disable_at_call": null
+    }
+   },
+   "shield_decision": {
+    "heuristic": {
+     "all": {
+      "max_us": 22.598003852181137,
+      "mean_us": 12.191661037650192,
+      "n": 20000,
+      "p50_us": 12.436998076736927,
+      "p99_us": 15.670057182433075
+     },
+     "bypass": null,
+     "choice_epochs": {
+      "max_us": 21.325002308003604,
+      "mean_us": 12.14266160129755,
+      "n": 5620,
+      "p50_us": 12.484000762924552,
+      "p99_us": 15.564432687824594
+     },
+     "network_disabled": null,
+     "utility": "heuristic"
+    },
+    "v4_qnet_1c3d57e3d8e7": {
+     "all": {
+      "max_us": 76.30301115568727,
+      "mean_us": 16.628516377386404,
+      "n": 20000,
+      "p50_us": 13.564000255428255,
+      "p99_us": 29.746016371063888
+     },
+     "bypass": {
+      "disabled": 0,
+      "nonfinite": 0,
+      "overrun": 0,
+      "slack": 0
+     },
+     "choice_epochs": {
+      "max_us": 76.30301115568727,
+      "mean_us": 26.19545606991982,
+      "n": 5620,
+      "p50_us": 26.33200347190723,
+      "p99_us": 32.77036768849942
+     },
+     "network_disabled": false,
+     "utility": "v4_qnet_1c3d57e3d8e7"
+    },
+    "v4_qnet_5d8ffd7cf7dd": {
+     "all": {
+      "max_us": 99.52500113286078,
+      "mean_us": 18.94225228970754,
+      "n": 20000,
+      "p50_us": 14.182005543261766,
+      "p99_us": 50.01202764105983
+     },
+     "bypass": {
+      "disabled": 0,
+      "nonfinite": 0,
+      "overrun": 0,
+      "slack": 0
+     },
+     "choice_epochs": {
+      "max_us": 99.52500113286078,
+      "mean_us": 29.814406714979658,
+      "n": 5620,
+      "p50_us": 26.715497369877994,
+      "p99_us": 53.8480473915115
+     },
+     "network_disabled": false,
+     "utility": "v4_qnet_5d8ffd7cf7dd"
+    },
+    "v4_qnet_6d5026a7b46f": {
+     "all": {
+      "max_us": 63.51599586196244,
+      "mean_us": 16.353222537145484,
+      "n": 20000,
+      "p50_us": 13.508004485629499,
+      "p99_us": 28.475138533394762
+     },
+     "bypass": {
+      "disabled": 0,
+      "nonfinite": 0,
+      "overrun": 0,
+      "slack": 0
+     },
+     "choice_epochs": {
+      "max_us": 63.51599586196244,
+      "mean_us": 25.259714433384787,
+      "n": 5620,
+      "p50_us": 25.410503440070897,
+      "p99_us": 31.10826059128159
+     },
+     "network_disabled": false,
+     "utility": "v4_qnet_6d5026a7b46f"
+    }
+   },
+   "wall_s": 6.719745548005449
+  },
+  {
+   "busy_pids": [
+    602225,
+    602226,
+    602227,
+    602228,
+    602229,
+    602230,
+    602231,
+    602232
+   ],
+   "commit_check": {
+    "max_us": 230.25499831419438,
+    "mean_us": 102.50903624109924,
+    "n": 5000,
+    "outcomes": {
+     "accepted": 4926,
+     "expired_before_commit": 274
+    },
+    "p50_us": 124.69850480556488,
+    "p99_us": 149.92548836744396
+   },
+   "foreign_cpu_before": {
+    "min_share_of_one_core": 0.05,
+    "processes": [
+     {
+      "cmdline": "/usr/lib/x86_64-linux-gnu/webkit2gtk-4.1/WebKitWebProcess 4 37",
+      "comm": "WebKitWebProces",
+      "cpu_share": 0.2408,
+      "pid": 522182
+     },
+     {
+      "cmdline": "/opt/todesk/bin/ToDesk",
+      "comm": "ToDesk",
+      "cpu_share": 0.1327,
+      "pid": 567251
+     },
+     {
+      "cmdline": "/usr/bin/gnome-shell --mode=ubuntu",
+      "comm": "gnome-shell",
+      "cpu_share": 0.1278,
+      "pid": 4232
+     },
+     {
+      "cmdline": "/opt/todesk/bin/ToDesk_Service",
+      "comm": "ToDesk_Service",
+      "cpu_share": 0.1229,
+      "pid": 542289
+     },
+     {
+      "cmdline": "/opt/todesk/bin/ToDesk_Session --localPort=35600 --isVideoSession=true",
+      "comm": "ToDesk_Session",
+      "cpu_share": 0.0639,
+      "pid": 588740
+     }
+    ],
+    "sample_s": 2.0,
+    "total_cpu_share": 0.6881
+   },
+   "lease": {
+    "max_us": 3604.896002798341,
+    "mean_us": 1231.0427391523262,
+    "n": 5000,
+    "p50_us": 1150.554497144185,
+    "p99_us": 3157.062630780274
+   },
+   "load": 8,
+   "loadavg_end": [
+    2.826171875,
+    1.662109375,
+    3.03369140625
+   ],
+   "loadavg_start": [
+    1.06884765625,
+    1.28369140625,
+    2.93603515625
+   ],
+   "qnet_call": {
+    "v4_qnet_1c3d57e3d8e7": {
+     "budget_s": 0.0001,
+     "max_us": 26.51299291756004,
+     "mean_us": 16.762598508648807,
+     "n": 20000,
+     "overrun_rate": 0.0,
+     "overruns": 0,
+     "p50_us": 16.678008250892162,
+     "p99_us": 19.755985849769786,
+     "would_disable_at_call": null
+    },
+    "v4_qnet_5d8ffd7cf7dd": {
+     "budget_s": 0.0001,
+     "max_us": 31.768999178893864,
+     "mean_us": 16.55130248545902,
+     "n": 20000,
+     "overrun_rate": 0.0,
+     "overruns": 0,
+     "p50_us": 16.482503269799054,
+     "p99_us": 19.574009493226185,
+     "would_disable_at_call": null
+    },
+    "v4_qnet_6d5026a7b46f": {
+     "budget_s": 0.0001,
+     "max_us": 32.449999707750976,
+     "mean_us": 15.430895306053571,
+     "n": 20000,
+     "overrun_rate": 0.0,
+     "overruns": 0,
+     "p50_us": 15.356999938376248,
+     "p99_us": 18.248059932375316,
+     "would_disable_at_call": null
+    }
+   },
+   "shield_decision": {
+    "heuristic": {
+     "all": {
+      "max_us": 43.513005948625505,
+      "mean_us": 22.69299199251691,
+      "n": 20000,
+      "p50_us": 23.339503968600184,
+      "p99_us": 27.054159581894027
+     },
+     "bypass": null,
+     "choice_epochs": {
+      "max_us": 30.25498881470412,
+      "mean_us": 22.515253503280743,
+      "n": 5620,
+      "p50_us": 23.328997485805303,
+      "p99_us": 27.19810116104782
+     },
+     "network_disabled": null,
+     "utility": "heuristic"
+    },
+    "v4_qnet_1c3d57e3d8e7": {
+     "all": {
+      "max_us": 68.06600140407681,
+      "mean_us": 30.22207808244275,
+      "n": 20000,
+      "p50_us": 24.380002287216485,
+      "p99_us": 52.03526045079339
+     },
+     "bypass": {
+      "disabled": 0,
+      "nonfinite": 0,
+      "overrun": 0,
+      "slack": 0
+     },
+     "choice_epochs": {
+      "max_us": 68.06600140407681,
+      "mean_us": 47.7717022849222,
+      "n": 5620,
+      "p50_us": 48.57000021729618,
+      "p99_us": 53.3540005562827
+     },
+     "network_disabled": false,
+     "utility": "v4_qnet_1c3d57e3d8e7"
+    },
+    "v4_qnet_5d8ffd7cf7dd": {
+     "all": {
+      "max_us": 68.84700269438326,
+      "mean_us": 30.23330239011557,
+      "n": 20000,
+      "p50_us": 24.358501832466573,
+      "p99_us": 52.306040743133046
+     },
+     "bypass": {
+      "disabled": 0,
+      "nonfinite": 0,
+      "overrun": 0,
+      "slack": 0
+     },
+     "choice_epochs": {
+      "max_us": 68.84700269438326,
+      "mean_us": 47.8566077077352,
+      "n": 5620,
+      "p50_us": 48.6310018459335,
+      "p99_us": 53.70933518861421
+     },
+     "network_disabled": false,
+     "utility": "v4_qnet_5d8ffd7cf7dd"
+    },
+    "v4_qnet_6d5026a7b46f": {
+     "all": {
+      "max_us": 78.95599992480129,
+      "mean_us": 29.796406070818193,
+      "n": 20000,
+      "p50_us": 24.26000719424337,
+      "p99_us": 50.78335729194799
+     },
+     "bypass": {
+      "disabled": 0,
+      "nonfinite": 0,
+      "overrun": 0,
+      "slack": 0
+     },
+     "choice_epochs": {
+      "max_us": 78.95599992480129,
+      "mean_us": 46.51488895410775,
+      "n": 5620,
+      "p50_us": 47.27899795398116,
+      "p99_us": 52.187620458425954
+     },
+     "network_disabled": false,
+     "utility": "v4_qnet_6d5026a7b46f"
+    }
+   },
+   "wall_s": 13.00917553700856
+  },
+  {
+   "busy_pids": [
+    602238,
+    602239,
+    602240,
+    602241,
+    602242,
+    602243,
+    602244,
+    602245,
+    602246,
+    602247,
+    602248,
+    602249,
+    602250,
+    602251,
+    602252
+   ],
+   "commit_check": {
+    "max_us": 514.2309964867309,
+    "mean_us": 91.93176447006408,
+    "n": 5000,
+    "outcomes": {
+     "accepted": 4926,
+     "expired_before_commit": 274
+    },
+    "p50_us": 111.28599726362154,
+    "p99_us": 141.79484292981218
+   },
+   "foreign_cpu_before": {
+    "min_share_of_one_core": 0.05,
+    "processes": [
+     {
+      "cmdline": "/opt/todesk/bin/ToDesk",
+      "comm": "ToDesk",
+      "cpu_share": 0.1281,
+      "pid": 567251
+     },
+     {
+      "cmdline": "/opt/todesk/bin/ToDesk_Service",
+      "comm": "ToDesk_Service",
+      "cpu_share": 0.1035,
+      "pid": 542289
+     },
+     {
+      "cmdline": "/usr/bin/gnome-shell --mode=ubuntu",
+      "comm": "gnome-shell",
+      "cpu_share": 0.0936,
+      "pid": 4232
+     },
+     {
+      "cmdline": "/opt/todesk/bin/ToDesk_Session --localPort=35600 --isVideoSession=true",
+      "comm": "ToDesk_Session",
+      "cpu_share": 0.0739,
+      "pid": 588740
+     }
+    ],
+    "sample_s": 2.0,
+    "total_cpu_share": 0.3991
+   },
+   "lease": {
+    "max_us": 5836.342999828048,
+    "mean_us": 1097.6086181937717,
+    "n": 5000,
+    "p50_us": 1042.5254949950613,
+    "p99_us": 2784.854261262808
+   },
+   "load": 15,
+   "loadavg_end": [
+    5.89892578125,
+    2.39794921875,
+    3.2529296875
+   ],
+   "loadavg_start": [
+    2.826171875,
+    1.662109375,
+    3.03369140625
+   ],
+   "qnet_call": {
+    "v4_qnet_1c3d57e3d8e7": {
+     "budget_s": 0.0001,
+     "max_us": 69.02699533384293,
+     "mean_us": 15.940310458245222,
+     "n": 20000,
+     "overrun_rate": 0.0,
+     "overruns": 0,
+     "p50_us": 16.39299443922937,
+     "p99_us": 19.164199184160648,
+     "would_disable_at_call": null
+    },
+    "v4_qnet_5d8ffd7cf7dd": {
+     "budget_s": 0.0001,
+     "max_us": 98.25899905990809,
+     "mean_us": 13.02546596925822,
+     "n": 20000,
+     "overrun_rate": 0.0,
+     "overruns": 0,
+     "p50_us": 12.980992323718965,
+     "p99_us": 15.258013154380022,
+     "would_disable_at_call": null
+    },
+    "v4_qnet_6d5026a7b46f": {
+     "budget_s": 0.0001,
+     "max_us": 107.96499554999173,
+     "mean_us": 14.58506224953453,
+     "n": 20000,
+     "overrun_rate": 5e-05,
+     "overruns": 1,
+     "p50_us": 14.482997357845306,
+     "p99_us": 17.280996107729152,
+     "would_disable_at_call": null
+    }
+   },
+   "shield_decision": {
+    "heuristic": {
+     "all": {
+      "max_us": 122.8239998454228,
+      "mean_us": 22.988707908370998,
+      "n": 20000,
+      "p50_us": 23.41800427529961,
+      "p99_us": 27.39307092269881
+     },
+     "bypass": null,
+     "choice_epochs": {
+      "max_us": 122.8239998454228,
+      "mean_us": 22.902291579759478,
+      "n": 5620,
+      "p50_us": 23.485998099204153,
+      "p99_us": 27.457796095404806
+     },
+     "network_disabled": null,
+     "utility": "heuristic"
+    },
+    "v4_qnet_1c3d57e3d8e7": {
+     "all": {
+      "max_us": 248.3709977241233,
+      "mean_us": 30.877100612269714,
+      "n": 20000,
+      "p50_us": 25.06650344002992,
+      "p99_us": 54.87325790454629
+     },
+     "bypass": {
+      "disabled": 0,
+      "nonfinite": 0,
+      "overrun": 1,
+      "slack": 0
+     },
+     "choice_epochs": {
+      "max_us": 248.3709977241233,
+      "mean_us": 48.45905254975714,
+      "n": 5620,
+      "p50_us": 48.68650285061449,
+      "p99_us": 59.57295346888714
+     },
+     "network_disabled": false,
+     "utility": "v4_qnet_1c3d57e3d8e7"
+    },
+    "v4_qnet_5d8ffd7cf7dd": {
+     "all": {
+      "max_us": 131.25099940225482,
+      "mean_us": 30.957488764397567,
+      "n": 20000,
+      "p50_us": 25.214001652784646,
+      "p99_us": 52.84411949105559
+     },
+     "bypass": {
+      "disabled": 0,
+      "nonfinite": 0,
+      "overrun": 0,
+      "slack": 0
+     },
+     "choice_epochs": {
+      "max_us": 93.94600056111813,
+      "mean_us": 48.50036734541103,
+      "n": 5620,
+      "p50_us": 48.932997742667794,
+      "p99_us": 58.96991002373398
+     },
+     "network_disabled": false,
+     "utility": "v4_qnet_5d8ffd7cf7dd"
+    },
+    "v4_qnet_6d5026a7b46f": {
+     "all": {
+      "max_us": 78.09899398125708,
+      "mean_us": 30.358561922912486,
+      "n": 20000,
+      "p50_us": 25.164001272059977,
+      "p99_us": 52.247182902647154
+     },
+     "bypass": {
+      "disabled": 0,
+      "nonfinite": 0,
+      "overrun": 0,
+      "slack": 0
+     },
+     "choice_epochs": {
+      "max_us": 78.09899398125708,
+      "mean_us": 46.423076045263585,
+      "n": 5620,
+      "p50_us": 46.722503611817956,
+      "p99_us": 57.44891474023462
+     },
+     "network_disabled": false,
+     "utility": "v4_qnet_6d5026a7b46f"
+    }
+   },
+   "wall_s": 12.306154234000132
+  }
+ ],
+ "plan": {
+  "blocking_processes": [],
+  "busy_command": [
+   "/home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python",
+   "-I",
+   "-B",
+   "-c",
+   "import os, sys, time\nparent, end = os.getppid(), time.monotonic() + float(sys.argv[1])\nwhile os.getppid() == parent and time.monotonic() < end:\n    for _ in range(20000):\n        pass\n",
+   "3600.0"
+  ],
+  "busy_max_s": 3600.0,
+  "components": {
+   "commit_check": "5000 V3Runtime._try_commit on the same candidates",
+   "lease": "5000 ShieldedHeuristicPolicy.validity (lease_wall_s), envelope outputs/framelease_v4/envelopes/B0.json",
+   "qnet_call": "20000 calls per network (QUtility timed region), overrun rate vs B_pi",
+   "shield_decision": "20000 ShieldedHeuristicPolicy.decide per utility (heuristic + 3 networks), decision_wall_s"
+  },
+  "cpu_affinity": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "estimated_wall_s_without_contention": 88.0,
+  "foreign_cpu": {
+   "min_share_of_one_core": 0.05,
+   "processes": [
+    {
+     "cmdline": "/usr/lib/x86_64-linux-gnu/webkit2gtk-4.1/WebKitWebProcess 4 37",
+     "comm": "WebKitWebProces",
+     "cpu_share": 0.1871,
+     "pid": 522182
+    },
+    {
+     "cmdline": "/usr/bin/gnome-shell --mode=ubuntu",
+     "comm": "gnome-shell",
+     "cpu_share": 0.128,
+     "pid": 4232
+    },
+    {
+     "cmdline": "/opt/todesk/bin/ToDesk",
+     "comm": "ToDesk",
+     "cpu_share": 0.128,
+     "pid": 567251
+    },
+    {
+     "cmdline": "/opt/todesk/bin/ToDesk_Service",
+     "comm": "ToDesk_Service",
+     "cpu_share": 0.1133,
+     "pid": 542289
+    },
+    {
+     "cmdline": "/opt/todesk/bin/ToDesk_Session --localPort=35600 --isVideoSession=true",
+     "comm": "ToDesk_Session",
+     "cpu_share": 0.0788,
+     "pid": 588740
+    }
+   ],
+   "sample_s": 2.0,
+   "total_cpu_share": 0.6352
+  },
+  "loads": [
+   0,
+   4,
+   8,
+   15
+  ],
+  "networks": [
+   {
+    "a_det_depth": 1,
+    "budget_s": 0.0001,
+    "family": "fqi",
+    "feature_columns": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "file_sha256": "b98de0ea0c0e55a3fa7c9a8accd8780b72f0ae9bc62c19bdf95f1e66e7f390f9",
+    "layers": [
+     [
+      16,
+      64
+     ],
+     [
+      64,
+      64
+     ],
+     [
+      64,
+      2
+     ]
+    ],
+    "n_inputs": 16,
+    "name": "v4_qnet_5d8ffd7cf7dd",
+    "path": "outputs/framelease_v4/rl_freeze/qnet_fqi.json",
+    "supported": [
+     true,
+     true
+    ],
+    "weights_sha256": "5d8ffd7cf7ddd365011dd740a2b2e518732ae0c3d62374628443713fc47ebc29"
+   },
+   {
+    "a_det_depth": 1,
+    "budget_s": 0.0001,
+    "family": "bandit",
+    "feature_columns": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "file_sha256": "d70c979df81780ac9e97eb36b8b88d7e52bbc71c19d5d84b32174d8c5b2018a7",
+    "layers": [
+     [
+      16,
+      64
+     ],
+     [
+      64,
+      64
+     ],
+     [
+      64,
+      2
+     ]
+    ],
+    "n_inputs": 16,
+    "name": "v4_qnet_1c3d57e3d8e7",
+    "path": "outputs/framelease_v4/rl_freeze/qnet_bandit.json",
+    "supported": [
+     true,
+     true
+    ],
+    "weights_sha256": "1c3d57e3d8e7671fcff43fdc4a2debf5afc08013fa028f60abe46156489e4145"
+   },
+   {
+    "a_det_depth": 1,
+    "budget_s": 0.0001,
+    "family": "fqi_nolease",
+    "feature_columns": [
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "file_sha256": "757d7b99c76d5f69217acf50b3633d407555f2346492736447c58ea6b5cfdc23",
+    "layers": [
+     [
+      10,
+      64
+     ],
+     [
+      64,
+      64
+     ],
+     [
+      64,
+      2
+     ]
+    ],
+    "n_inputs": 10,
+    "name": "v4_qnet_6d5026a7b46f",
+    "path": "outputs/framelease_v4/rl_freeze/qnet_fqi_nolease.json",
+    "supported": [
+     true,
+     true
+    ],
+    "weights_sha256": "6d5026a7b46f6ddf7d4d7462a1919af0b6375c43228a539dd50ef2dee48c3fba"
+   }
+  ],
+  "out": "/home/kang/Desktop/DAC/outputs/framelease_v4/stress/s1_registered_20261115T124141Z.json",
+  "scenes": {
+   "dir": "outputs/framelease_v2/c1_sweep/merged_20clips_20261108T0052/clips",
+   "every": 9,
+   "max_clips": 20,
+   "n": 469,
+   "source": "c1_sweep"
+  },
+  "settle_s": 2.0,
+  "states": {
+   "generator": "stress_bench.synthetic_states (kappa 1.0/1.5/2.0, depth 1-10, D* - t in [-0.3, 2.5] s, active candidate in 97%, D_cand = D* in half, newer frames 0-24)",
+   "n": 2000,
+   "seed": 20261111,
+   "source": "synthetic"
+  },
+  "test": "S1",
+  "would_refuse_busy_loads": false
+ },
+ "protocol": "framelease_v4/PROTOCOL.md Sec. 7.6 (Table II-B stress tests); Eq. 5 / Eq. 8 / Eq. 9 of Sec. 2.4; Sec. 5.7 (budgeted CPU policy execution); Sec. 6.4",
+ "provenance": {
+  "argv": [
+   "framelease_v4/protocol/stress_bench.py",
+   "s1",
+   "--registered",
+   "--states",
+   "synthetic",
+   "--qnet",
+   "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_freeze/qnet_fqi.json",
+   "--qnet",
+   "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_freeze/qnet_bandit.json",
+   "--qnet",
+   "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_freeze/qnet_fqi_nolease.json",
+   "--envelope",
+   "outputs/framelease_v4/envelopes/B0.json",
+   "--accept-foreign-cpu"
+  ],
+  "code_sha256": {
+   "framelease_v2/latency_agent.py": "285f2fc4f328d360dba2aecd84bbb7fc81c072c964ee793b2a43362e7c467bfc",
+   "framelease_v3/runtime/v3_commit.py": "72892940f22b610da3c2f6b7c47fd69020a09977fc394201ae85ec1c54c79987",
+   "framelease_v3/runtime/v3_lease.py": "64d56c95e9b6c2aac23ceb35d494f0054bd5b48a6cd9f84528afabc587d471b3",
+   "framelease_v3/runtime/v3_scheduler.py": "c64e97d9ba2fc578ca8fa6142998939ca4e6f82f2ded189894134ab0ac71217b",
+   "framelease_v3/runtime/v3_shield.py": "138d6b8b186e2397b8d1a13a12711150d42fad214509271ff777052d867b2a84",
+   "framelease_v4/arms/runtime_v4.py": "a316f2fa201d24f7c31c2022ff8116c18e6b64f36f973b79ef6d2612710c626b",
+   "framelease_v4/protocol/stress_bench.py": "0cff7b56e6fc09686601f06ff919bde29de17336d6342b9c66ea23bb617d04c2",
+   "framelease_v4/rl/behaviour.py": "3ba13de1569b79dadf3a2019ec6495ff1ae1f4113a8d9f2e72b69e987dba8345",
+   "framelease_v4/rl/features.py": "537ee597e34f3e8ab44ae7e3f08f35293a81e6fd266a9e838774a34cca40e6e3",
+   "framelease_v4/rl/qnet.py": "53bbf8c69124519c6bb2133961695aa4f238c6d52e325f0d8e7de53008d23f3f"
+  },
+  "cpu": "Intel(R) Core(TM) i5-14490F",
+  "cuda_visible_devices": "",
+  "finished_utc": "20261115T124237Z",
+  "loadavg": [
+   0.5361328125,
+   1.22021484375,
+   2.96240234375
+  ],
+  "loadavg_end": [
+   5.89892578125,
+   2.39794921875,
+   3.2529296875
+  ],
+  "niceness": 10,
+  "nproc": 16,
+  "numpy": "1.23.4",
+  "python": "3.10.22",
+  "threads": {
+   "MKL_NUM_THREADS": "1",
+   "OMP_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1"
+  },
+  "utc": "20261115T124144Z"
+ },
+ "registered": true,
+ "schema": "framelease_v4.stress_bench/1",
+ "shared_cpu": false,
+ "test": "S1"
+}

@@ -1,0 +1,46 @@
+apply_locked: copies of the sealed files and of both baselines in outputs/framelease_v4/amendment_a17/attempt_20261116T155350_15754
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /home/kang/Desktop/DAC/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3
+manifest difference: new [] / left [] / changed []
+composed PROTOCOL.md sha256 cf6f50821c772ff8af0b7c5cf609243c9ef3ffd2eccbf414c6f9d233a7c59a65
+registration --seal -> 0 | sealed: PROTOCOL.md cf6f50821c772ff8af0b7c5cf609243c9ef3ffd2eccbf414c6f9d233a7c59a65, manifest 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+PROTOCOL cf6f50821c772ff8af0b7c5cf609243c9ef3ffd2eccbf414c6f9d233a7c59a65 MANIFEST 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3 221 files; newly cited manifest files: []
+**Amendment A17, 2026-11-16 15:54 (Beijing time): the 505 test jobs cut by Amendment A12 run now, by the user's
+decision; their analysis gets its own freeze; the cut analysis of Amendments A13-A16 stays as frozen; no job line,
+criterion or analysis rule changes.**
+* Decision. On 2026-11-16 at about 15:35 the user asked to run the experiments that the cut of Amendment A12 left out.
+  Amendment A12 ("Later runs") keeps the cut lines in the registered job files and states that running them is a new
+  amendment with its own freeze and analysis. This is that amendment.
+* Jobs. The six registered job files of the test freeze are in `outputs/framelease_v4/queue_p4/jobs.d` at their G6
+  sha256 since the analysis freeze of Amendment A13: `b11_ti_main.jsonl`
+  (`54e551df44f30a02277e91849f1e40390cd77ffca7e59256edc98b3f5cd4a6df`), `b12_f3_k.jsonl`
+  (`8ba8a4e5f6874860f9fefae81d836ccbdd297ac6a801a67663d6a5322507311b`), `b13_a_lease.jsonl`
+  (`6b906bc220d74fdf8fb5bfce287465e608fd378b22869af6d188ec411d37bd2a`), `b14_a_rl.jsonl`
+  (`a73491e47ab5cb3fcba868a0e5e6bf7f34c5ad6a09ea3fde8cd11d18ef623e31`), `b15_s_seed12.jsonl`
+  (`bd77e5ed172bc834b63a4fa188cae97f92047f8072a45b92e738aad52cffd207`) and `b16_s_risk.jsonl`
+  (`83fe874f000340d6ee15509c35c7829bd03a6612a75a181e82c0b26ab36a156b`). The runner of `outputs/framelease_v4/queue_p4`
+  is launched again on them (`launch_queue.sh` in its own user scope with OOMPolicy=continue, as Amendment A12
+  states); it skips every job with a final record, so the 127 jobs kept by Amendment A12 do not run again (126 ok and
+  the timeout of `v4p4_fl_original_k1.0_s11_r23658`, final after its registered retry), and the 505 cut jobs run in
+  the registered order of the files: Table I 210, Fig. 3 160, Table II-A lease panel 19 and RL panel 40, seed-12
+  replicates 56, `fl_risk` 20. The `STOP` file that the analysis freeze wrote into the queue is moved aside for this
+  launch. The phase driver stays stopped (`phase_driver/STOP`); its gates G7 and G8 are carried out by the coordinating
+  session with the registered tools, as under Amendment A12.
+* Interim looks. The results on the 14 routes of Amendment A12 are frozen, verified and known (Amendments A13-A16).
+  For the runs of this amendment, Sec. 9.11 applies anew: before their analysis freeze only job health, timing and disk
+  are examined, and no result of a new run is summarized across arms.
+* Freeze and analysis. When every job of the six files is final and the runner has exited, a second analysis-freeze
+  record is written by `aggregate_v4.py --write-freeze-record` (trigger all_final, no cut) into a new
+  `outputs/framelease_v4/analysis/final_<stamp>/`, entered by its sha256 in a dated Sec. 13 entry; the registered
+  analysis (Amendments A3, A10) and the independent verifications (Amendment A10 use rule 4, Amendment A11 with the
+  resolution rule of Amendment A16) follow, each result in its own dated entry. The cut analysis
+  (`outputs/framelease_v4/analysis/final_20261116T091445/analysis_freeze.json`,
+  `fdda348027092724f74bf10cf0b5e33ed3219ffbfe5cfe6a57ac8aa9e4bd7c05`) and its outputs stay
+  unchanged; the paper states which analysis every result comes from.
+* Manifest and seal after this amendment: `MANIFEST.sha256`, 221 files, sha256
+  `0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3`, sealed with this entry.
+
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

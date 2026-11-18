@@ -1,0 +1,15 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B framelease_v4/analysis/aggregate_v4.py --queue outputs/framelease_v4/queue_p1 --specs outputs/framelease_v4/p1_jobs/FULL --out outputs/framelease_v4/analysis/final_20261116T091445/agg_p1
+271 job lines, 270 rows for analysis -> outputs/framelease_v4/analysis/final_20261116T091445/agg_p1
+outcomes: {'ok': 270, 'sim_failure': 1}
+code check: {'None': 1, 'PASS': 270}
+missing reasons: {'None': 270, 'sim_failure': 1}
+commit audit (R-2): PASS, 286 run directories audited, 0 withheld (Sec. 9.11), 70136 accepted commits of 82967 offers, violations {'deadline': 0, 'margin': 0, 'version': 0, 'cancelled': 0, 'not_gate_accepted': 0}, log mismatches 0
+R-3 age_only k1.0: 67 runs, fast prefix not PASS 0, charged prefix FLAG 0, background load {'within': 66, 'above': 1, 'below': 0}, prefix p50/kappa {'min': 0.4161470794677734, 'median': 0.41724127197265626, 'max': 0.42972723388671874}, config {'PASS': 67, 'FAIL': 0, 'UNCHECKED': 0}
+R-3 event_triggered k1.0: 67 runs, fast prefix not PASS 0, charged prefix FLAG 0, background load {'within': 60, 'above': 0, 'below': 7}, prefix p50/kappa {'min': 0.41560165405273436, 'median': 0.4167139892578125, 'max': 0.4220297393798828}, config {'PASS': 67, 'FAIL': 0, 'UNCHECKED': 0}
+R-3 fast_only k1.0: 23 runs, fast prefix not PASS 0, charged prefix FLAG 0, background load {'within': 16, 'above': 7, 'below': 0}, prefix p50/kappa {'min': 0.41612152099609373, 'median': 0.41973696899414065, 'max': 0.4759981994628906}, config {'PASS': 23, 'FAIL': 0, 'UNCHECKED': 0}
+R-3 fixed_deep k1.0: 23 runs, fast prefix not PASS 0, charged prefix FLAG 0, background load {'within': 15, 'above': 8, 'below': 0}, prefix p50/kappa {'min': 0.4163926239013672, 'median': 0.4190023651123047, 'max': 0.46850880432128905}, config {'PASS': 23, 'FAIL': 0, 'UNCHECKED': 0}
+R-3 fl_behaviour k1.0: 1 runs, fast prefix not PASS 0, charged prefix FLAG 0, background load {'within': 1, 'above': 0, 'below': 0}, prefix p50/kappa {'min': 0.41744003295898435, 'median': 0.41744003295898435, 'max': 0.41744003295898435}, config {'PASS': 1, 'FAIL': 0, 'UNCHECKED': 0}
+R-3 fl_heuristic k1.0: 88 runs, fast prefix not PASS 0, charged prefix FLAG 0, background load {'within': 81, 'above': 5, 'below': 2}, prefix p50/kappa {'min': 0.41584181213378907, 'median': 0.4177904739379883, 'max': 0.4328076171875}, config {'PASS': 88, 'FAIL': 0, 'UNCHECKED': 0}
+R-3 fl_original k1.0: 1 runs, fast prefix not PASS 0, charged prefix FLAG 0, background load {'within': 1, 'above': 0, 'below': 0}, prefix p50/kappa {'min': 0.41771109008789065, 'median': 0.41771109008789065, 'max': 0.41771109008789065}, config {'PASS': 1, 'FAIL': 0, 'UNCHECKED': 0}
+interim guard (Sec. 9.11): pre_freeze, 0 guarded rows (0 test-route), 0 released, 0 health-only, notes {}
+TIME 335.97 s, max RSS 312036 KB

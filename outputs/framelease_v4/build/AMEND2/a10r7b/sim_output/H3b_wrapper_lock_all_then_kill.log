@@ -1,0 +1,24 @@
+apply_locked: exit 92 (output /tmp/A10A11/fix2/sim_tree/treeH3b/outputs/framelease_v4/amendment_a10/apply.out)
+cp: 无法创建普通文件 'framelease_v4/.PROTOCOL.md.entrytmp': 权限不够
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/fix2/sim_tree/treeH3b/outputs/framelease_v4/amendment_a10/attempt_20261115T103734_358897
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/A10A11/fix2/sim_tree/treeH3b/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+manifest difference: new [] / left [] / changed []
+composed PROTOCOL.md sha256 f1b9d4a0d251dbc657f85de83de8d034c037a96ac3627ef90af4615b1d83542c
+inject: SEAL.sha256 read only, registration/ not writable (lock_all_then_kill), killed before --seal
+Traceback (most recent call last):
+  File "/tmp/A10A11/fix2/sim_tree/treeH3b/framelease_v4/protocol/registration.py", line 185, in <module>
+    raise SystemExit(main())
+  File "/tmp/A10A11/fix2/sim_tree/treeH3b/framelease_v4/protocol/registration.py", line 179, in main
+    pro, man = seal()
+  File "/tmp/A10A11/fix2/sim_tree/treeH3b/framelease_v4/protocol/registration.py", line 143, in seal
+    SEAL.write_text(f'{pro_sha}  {_key(PROTOCOL)}\n{man_sha}  {_key(MANIFEST)}\n', encoding='utf-8')
+  File "/home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/pathlib.py", line 1154, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+  File "/home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+PermissionError: [Errno 13] Permission denied: '/tmp/A10A11/fix2/sim_tree/treeH3b/outputs/framelease_v4/registration/SEAL.sha256'
+apply_locked: ROLL BACK FAILED: SEAL.sha256 does not match PROTOCOL.md and MANIFEST.sha256; restore the copies in /tmp/A10A11/fix2/sim_tree/treeH3b/outputs/framelease_v4/amendment_a10/attempt_20261115T103734_358897 by hand at once
+manifest: OK
+seal framelease_v4/PROTOCOL.md: CHANGED
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

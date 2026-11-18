@@ -1,0 +1,93 @@
+{
+ "rule": "Table I: the first 14 routes of the registered order of b11_ti_main.jsonl; every other block: its first k routes, in the block's registered order, among those 14 routes",
+ "S": [
+  "26458",
+  "2790",
+  "23658",
+  "2390",
+  "2084",
+  "2204",
+  "2115",
+  "2050",
+  "3248",
+  "17563",
+  "3464",
+  "2509",
+  "2286",
+  "3561"
+ ],
+ "blocks": {
+  "b11_ti_main": {
+   "routes": [
+    "26458",
+    "2790",
+    "23658",
+    "2390",
+    "2084",
+    "2204",
+    "2115",
+    "2050",
+    "3248",
+    "17563",
+    "3464",
+    "2509",
+    "2286",
+    "3561"
+   ],
+   "jobs_kept": 98,
+   "jobs_registered": 308,
+   "sha256_registered": "54e551df44f30a02277e91849f1e40390cd77ffca7e59256edc98b3f5cd4a6df",
+   "sha256_reduced": "f2ca9523bebe100ea7f81c94705c85f8529b3efc6deb3bc8709548b6165c4b76"
+  },
+  "b12_f3_k": {
+   "routes": [
+    "3248",
+    "2390"
+   ],
+   "jobs_kept": 16,
+   "jobs_registered": 176,
+   "sha256_registered": "8ba8a4e5f6874860f9fefae81d836ccbdd297ac6a801a67663d6a5322507311b",
+   "sha256_reduced": "f109356426295d766cbdf2b16ecb7e46c1a34fbd1e5e7fa2f54595198e0c1e91"
+  },
+  "b13_a_lease": {
+   "routes": [
+    "2050",
+    "2204",
+    "2286"
+   ],
+   "jobs_kept": 3,
+   "jobs_registered": 22,
+   "sha256_registered": "6b906bc220d74fdf8fb5bfce287465e608fd378b22869af6d188ec411d37bd2a",
+   "sha256_reduced": "d8553d2fad38ebf93245315497ab7ea92e500d70dd60812ecb8b966eab0e0b2c"
+  },
+  "b14_a_rl": {
+   "routes": [
+    "3248",
+    "2509"
+   ],
+   "jobs_kept": 4,
+   "jobs_registered": 44,
+   "sha256_registered": "a73491e47ab5cb3fcba868a0e5e6bf7f34c5ad6a09ea3fde8cd11d18ef623e31",
+   "sha256_reduced": "29b3040630d1597818486db8f5767af18e3ceea155308d56e45ddd64c9a97508"
+  },
+  "b15_s_seed12": {
+   "routes": [
+    "2050"
+   ],
+   "jobs_kept": 4,
+   "jobs_registered": 60,
+   "sha256_registered": "bd77e5ed172bc834b63a4fa188cae97f92047f8072a45b92e738aad52cffd207",
+   "sha256_reduced": "bed17136118812267838bd8d869460d43db9d366c34ab37d465c0e7f7b166dd5"
+  },
+  "b16_s_risk": {
+   "routes": [
+    "2286",
+    "3248"
+   ],
+   "jobs_kept": 2,
+   "jobs_registered": 22,
+   "sha256_registered": "83fe874f000340d6ee15509c35c7829bd03a6612a75a181e82c0b26ab36a156b",
+   "sha256_reduced": "c1bb5723ab8ab2a0771a1579b0c0b427c8a98bb909a1805608b356a19593bc57"
+  }
+ }
+}

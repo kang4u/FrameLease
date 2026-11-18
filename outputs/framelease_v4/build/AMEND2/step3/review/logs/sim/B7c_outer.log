@@ -1,0 +1,17 @@
+amend_step3.sh 2026-11-15T05:03:28+08:00: root /tmp/AMEND3_review/tree; transaction directory /tmp/AMEND3_review/runs/B7c
+inputs: step3_txn.py 86f69e70c31edfc49e95cb07b55d62a4afc07e7b05e0e058b724407ed6c36ea0,
+        step3_spec.json 89836a6f2e01ab0e99effb4467bc20fdb86059bcfb4689aeddceadb878c4cfcd
+== 1. pre-check (no lock)
+registration.py --verify (exit 1): manifest: 1 files differ: [('framelease_v4/analysis/verify_table1_extra.py', 'a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa', '27ceb0bd600a7c802024ee28a5caaa9d44fbff832c585f92a734d98da4bcedff')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registered baseline: 153 files; in the sealed manifest at their sha256 and unchanged in the tree: yes
+P1 driver entries: Tuning freeze line 2211, D1 summary line 2221; outputs/framelease_v4/tuning/d1/FULL_d1_summary.json sha256 53d8c97a185d52870358e3341d6e698dcf8fe136425aa7bd1eb0f9b065923cb2 cited by the D1 summary entry
+check_drafts.py exit 0: all checks passed
+dry composition: 2835 lines; entries A3 193 lines, A9 43 lines, A7 53 lines, A4 74 lines, OP 114 lines; 40 files become registered
+precheck: passed (dry files in /tmp/AMEND3_review/runs/B7c/precheck)
+== 3. locked part (framelease_v4/.protocol.lock, wait up to 600 s)
+lock held 2026-11-15T05:03:34+08:00; time stamp of the five entries: 2026-11-15 05:03
+sealed state copied into /tmp/AMEND3_review/runs/B7c: PROTOCOL.md 216b5d90a4d321b4cf205b4685e1400bd82c28b2da683479323264a02a1e21a3, MANIFEST.sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+registration.py --write-manifest --force (exit 0): wrote /tmp/AMEND3_review/tree/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d
+post-manifest check (step 3.2): OK
+new manifest: 221 files, sha256 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d; new in it: none; changed since the seal (unregistered): ['framelease_v4/analysis/verify_table1_extra.py']
+PROTOCOL.md written: sha256 b16f52e5eef03d6c37d0870c3aa10dfe34b5385ce7c5c971f1d035f31f0e11aa (2835 lines)

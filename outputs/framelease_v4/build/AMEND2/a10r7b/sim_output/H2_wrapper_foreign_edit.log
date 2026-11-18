@@ -1,0 +1,11 @@
+apply_locked: exit 93 (output /tmp/A10A11/fix2/sim_tree/treeH2/outputs/framelease_v4/amendment_a10/apply.out)
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/fix2/sim_tree/treeH2/outputs/framelease_v4/amendment_a10/attempt_20261115T103703_358577
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/A10A11/fix2/sim_tree/treeH2/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+manifest difference: new [] / left [] / changed []
+composed PROTOCOL.md sha256 f1b9d4a0d251dbc657f85de83de8d034c037a96ac3627ef90af4615b1d83542c
+inject: appended a line to PROTOCOL.md, killed before --seal
+apply_locked: PROTOCOL.md (sha256 e72745957af3a2c0d77085dd128d6c8c368788d574bae10153af67458d749b48) was neither the sealed copy nor the text the applier composed (kept as /tmp/A10A11/fix2/sim_tree/treeH2/outputs/framelease_v4/amendment_a10/attempt_20261115T103703_358577/PROTOCOL.unexpected.md): ROLLED BACK to the copies in /tmp/A10A11/fix2/sim_tree/treeH2/outputs/framelease_v4/amendment_a10/attempt_20261115T103703_358577 (nothing applied)
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

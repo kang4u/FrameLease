@@ -1,0 +1,154 @@
+test_fixture_ends_in_flight (r2_test_adversarial_nk.OnVerifierOutput) ... ok
+test_in_flight_cross_check_of_any_size_gap (r2_test_adversarial_nk.OnVerifierOutput)
+GAP (should-fix S1) on the verifier's output: runs.csv gpu_busy_recomputed_s 0.01 s and ... ok
+test_in_flight_run_with_gpu_usage_above_the_bounds_holds (r2_test_adversarial_nk.OnVerifierOutput) ... ok
+test_not_ok_runner_with_used_row_holds (r2_test_adversarial_nk.OnVerifierOutput) ... ok
+test_valid_run_dropped_by_a_failed_metric_step_gap (r2_test_adversarial_nk.OnVerifierOutput)
+GAP (must-fix M1) on the verifier's output: the runner reports 'result_with_warnings' (a valid record); ... FAIL
+test_analysis_read_values_without_a_class_holds (r2_test_adversarial_nk.Synthetic)
+A value the analysis reads that differs for a reason no convention explains stays unexplained, wherever it ... FAIL
+test_in_flight_gpu_difference_of_any_size_gap (r2_test_adversarial_nk.Synthetic)
+GAP (should-fix S1): for the GPU cross-check columns the class checks the direction (registered below the ... ok
+test_in_flight_run_where_the_analysis_value_differs_holds (r2_test_adversarial_nk.Synthetic)
+In a run that ended with a job in flight: gpu_usage (analysis) below the recomputed lower bound like the ... ok
+test_missing_or_altered_inputs_holds (r2_test_adversarial_nk.Synthetic) ... ok
+test_not_ok_job_whose_row_is_used_holds (r2_test_adversarial_nk.Synthetic) ... ok
+test_not_ok_record_with_an_ok_runner_outcome_gap (r2_test_adversarial_nk.Synthetic)
+GAP (must-fix M1): the runner's 'result_with_warnings' is an OK outcome (framelease_v2/gpu_queue.py and ... test_duplicate_runs_csv_rows (r3_test_new_nk.OnVerifierOutput)
+NEW counter-example 2. Two runs.csv rows for one job. A used row whose values differ stays unexplained in ... ok
+test_two_queues_read_in_another_order_gap (r3_test_new_nk.OnVerifierOutput)
+NEW counter-example 1. The same job holds a final record in two queues: 'timeout' in q_z, 'ok' in q_a. The ... verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 2 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 2; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r2_f1_adv_vt_s1y_lydu/out_size
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 3 (1 in values the analysis reads)
+  runs.csv                 compared     43  differences     3  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 3; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r2_f1_adv_vt_s1y_lydu/out_above
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 67, differences 43 (8 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     43  differences    41  (analysis-read 8; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 43; in values the analysis reads: unclassified 8; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r2_f1_adv_vt_s1y_lydu/out_used
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 67, differences 43 (0 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     43  differences    41  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 43; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r2_f1_adv_vt_s1y_lydu/out_rww
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 2 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 110, differences 44 (1 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     86  differences    42  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 44; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r3_f1_new_vt_xecl9aih/out_dup_bad_first
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 2 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 110, differences 44 (1 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     86  differences    42  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 44; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r3_f1_new_vt_xecl9aih/out_dup_bad_last
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 2 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 110, differences 43 (0 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     86  differences    41  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 43; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r3_f1_new_vt_xecl9aih/out_dup_good_first
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 2 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 110, differences 43 (0 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     86  differences    41  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 43; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r3_f1_new_vt_xecl9aih/out_dup_good_last
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 46, differences 43 (0 in values the analysis reads)
+ERROR
+test_commits_without_in_flight_boundaries_holds (r3_test_new_nk.Synthetic) ... ok
+test_not_ok_record_still_holds_its_mechanism (r3_test_new_nk.Synthetic)
+The P1 case (runner 'timeout', runs.csv 'sim_failure', analysis_use False, cells empty) and 'agent_crashed' ... ok
+test_release_checks_holds (r3_test_new_nk.Synthetic) ... ok
+test_round2_m1_counter_examples_now_fail_holds (r3_test_new_nk.Synthetic)
+Round-2 M1 inverted: runner 'result_with_warnings', ' ok ', 'OK' or no outcome with runs.csv outcome 'ok' or ... ok
+
+======================================================================
+ERROR: test_two_queues_read_in_another_order_gap (r3_test_new_nk.OnVerifierOutput)
+NEW counter-example 1. The same job holds a final record in two queues: 'timeout' in q_z, 'ok' in q_a. The
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r3_test_new.py", line 196, in test_two_queues_read_in_another_order_gap
+    rep = self.verify('order', [qz, qa], [self.empty_row()])
+  File "/home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r3_test_new.py", line 187, in verify
+    return R.report(out)
+  File "/home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r4_without_new_key.py", line 27, in report
+    rep = orig(out_dir)
+  File "/home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/a10r7b/f1/f1_class_report.py", line 448, in report
+    outcomes, rows = runner_outcomes(queues), runs_csv_rows(runs_csv)
+  File "/home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/a10r7b/f1/f1_class_report.py", line 280, in runner_outcomes
+    raise SystemExit("input error: job ids with 'end' records in more than one recorded status.jsonl (the final "
+SystemExit: input error: job ids with 'end' records in more than one recorded status.jsonl (the final record would depend on the order of the queues): ['job1']
+
+======================================================================
+FAIL: test_valid_run_dropped_by_a_failed_metric_step_gap (r2_test_adversarial_nk.OnVerifierOutput)
+GAP (must-fix M1) on the verifier's output: the runner reports 'result_with_warnings' (a valid record);
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py", line 320, in test_valid_run_dropped_by_a_failed_metric_step_gap
+    self.assertGreater(rep['differences_by_class']['not_ok_record'], 30)
+AssertionError: 0 not greater than 30
+
+======================================================================
+FAIL: test_analysis_read_values_without_a_class_holds (r2_test_adversarial_nk.Synthetic)
+A value the analysis reads that differs for a reason no convention explains stays unexplained, wherever it
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py", line 147, in test_analysis_read_values_without_a_class_holds
+    self.assertEqual((rep['outcome'], rep['release']), ('verification failure', 'verification failure'))
+AssertionError: Tuples differ: ('verification failure', 'not final') != ('verification failure', 'verification failure')
+
+First differing element 1:
+'not final'
+'verification failure'
+
+- ('verification failure', 'not final')
+?                           ^^^^
+
++ ('verification failure', 'verification failure')
+?                           ^^^^  +++++ ++ + +++
+
+
+======================================================================
+FAIL: test_not_ok_record_with_an_ok_runner_outcome_gap (r2_test_adversarial_nk.Synthetic) (case='result_with_warnings')
+GAP (must-fix M1): the runner's 'result_with_warnings' is an OK outcome (framelease_v2/gpu_queue.py and
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py", line 203, in test_not_ok_record_with_an_ok_runner_outcome_gap
+    self.assertEqual(rep['differences_by_class']['not_ok_record'], 2)
+AssertionError: 0 != 2
+
+======================================================================
+FAIL: test_not_ok_record_with_an_ok_runner_outcome_gap (r2_test_adversarial_nk.Synthetic) (case='no outcome')
+GAP (must-fix M1): the runner's 'result_with_warnings' is an OK outcome (framelease_v2/gpu_queue.py and
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py", line 203, in test_not_ok_record_with_an_ok_runner_outcome_gap
+    self.assertEqual(rep['differences_by_class']['not_ok_record'], 2)
+AssertionError: 0 != 2
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.399s
+
+FAILED (failures=4, errors=1)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     43  differences    41  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 43; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r3_f1_new_vt_xecl9aih/out_order
+FAILED/ERRORS: ['test_analysis_read_values_without_a_class_holds', 'test_not_ok_record_with_an_ok_runner_outcome_gap', 'test_two_queues_read_in_another_order_gap', 'test_valid_run_dropped_by_a_failed_metric_step_gap']

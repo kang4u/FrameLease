@@ -1,0 +1,358 @@
+............................                         [100%]
+==================================== PASSES ====================================
+_________________________ H1Matrix.test_agg_round_trip _________________________
+---------------------------- Captured stdout setup -----------------------------
+verification NOT_COMPARED (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 0, differences 0 {}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+outputs: /tmp/tmpaq3w4qj6/out
+----------------------------- Captured stdout call -----------------------------
+verification AGREE (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 4333, differences 0 {"agg:arm_summary.csv": {"compared": 35, "differences": 0}, "agg:runs.csv": {"compared": 4298, "differences": 0}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+outputs: /tmp/tmpaq3w4qj6/agg/v1
+verification DIFFER (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 4333, differences 2 {"agg:arm_summary.csv": {"compared": 35, "differences": 0}, "agg:runs.csv": {"compared": 4298, "differences": 2}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+outputs: /tmp/tmpaq3w4qj6/agg/v2
+verification DIFFER (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 4333, differences 1 {"agg:arm_summary.csv": {"compared": 35, "differences": 0}, "agg:runs.csv": {"compared": 4298, "differences": 1}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+outputs: /tmp/tmpaq3w4qj6/agg/v3
+verification DIFFER (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 4021, differences 2 {"agg:arm_summary.csv": {"compared": 29, "differences": 1}, "agg:runs.csv": {"compared": 3992, "differences": 1}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+outputs: /tmp/tmpaq3w4qj6/agg/v4
+verification DIFFER (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 4299, differences 1 {"agg:arm_summary.csv": {"compared": 1, "differences": 1}, "agg:runs.csv": {"compared": 4298, "differences": 0}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+outputs: /tmp/tmpaq3w4qj6/agg/v5
+----------------------------- Captured stderr call -----------------------------
+ERROR (exit 2): /tmp/tmpaq3w4qj6/agg/runs.csv has no job column
+____________ H1Matrix.test_comparisons_round_trip_and_perturbation _____________
+----------------------------- Captured stdout call -----------------------------
+verification AGREE (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 1755, differences 0 {"analysis:analysis.json decisions.H1": {"compared": 34, "differences": 0}, "analysis:conditions.csv": {"compared": 301, "differences": 0}, "analysis:family_H1.csv": {"compared": 76, "differences": 0}, "analysis:family_S-coll.csv": {"compared": 76, "differences": 0}, "analysis:paired_differences.csv": {"compared": 1040, "differences": 0}, "analysis:secondary.csv": {"compared": 228, "differences": 0}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+development: the compared analysis output has status 'development'
+outputs: /tmp/tmpaq3w4qj6/cmp/v1
+verification DIFFER (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 1755, differences 6 {"analysis:analysis.json decisions.H1": {"compared": 34, "differences": 2}, "analysis:conditions.csv": {"compared": 301, "differences": 0}, "analysis:family_H1.csv": {"compared": 76, "differences": 4}, "analysis:family_S-coll.csv": {"compared": 76, "differences": 0}, "analysis:paired_differences.csv": {"compared": 1040, "differences": 0}, "analysis:secondary.csv": {"compared": 228, "differences": 0}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+development: the compared analysis output has status 'development'
+outputs: /tmp/tmpaq3w4qj6/cmp/v2
+verification DIFFER (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 1755, differences 6 {"analysis:analysis.json decisions.H1": {"compared": 34, "differences": 2}, "analysis:conditions.csv": {"compared": 301, "differences": 0}, "analysis:family_H1.csv": {"compared": 76, "differences": 4}, "analysis:family_S-coll.csv": {"compared": 76, "differences": 0}, "analysis:paired_differences.csv": {"compared": 1040, "differences": 0}, "analysis:secondary.csv": {"compared": 228, "differences": 0}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+development: the compared analysis output has status 'development'
+outputs: /tmp/tmpaq3w4qj6/cmp/v3
+verification DIFFER (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 1755, differences 42 {"analysis:analysis.json decisions.H1": {"compared": 34, "differences": 0}, "analysis:conditions.csv": {"compared": 301, "differences": 42}, "analysis:family_H1.csv": {"compared": 76, "differences": 0}, "analysis:family_S-coll.csv": {"compared": 76, "differences": 0}, "analysis:paired_differences.csv": {"compared": 1040, "differences": 0}, "analysis:secondary.csv": {"compared": 228, "differences": 0}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+development: the compared analysis output has status 'development'
+outputs: /tmp/tmpaq3w4qj6/cmp/absent0
+verification DIFFER (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 1755, differences 42 {"analysis:analysis.json decisions.H1": {"compared": 34, "differences": 0}, "analysis:conditions.csv": {"compared": 301, "differences": 42}, "analysis:family_H1.csv": {"compared": 76, "differences": 0}, "analysis:family_S-coll.csv": {"compared": 76, "differences": 0}, "analysis:paired_differences.csv": {"compared": 1040, "differences": 0}, "analysis:secondary.csv": {"compared": 228, "differences": 0}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+development: the compared analysis output has status 'development'
+outputs: /tmp/tmpaq3w4qj6/cmp/absent1
+verification DIFFER (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 1755, differences 16 {"analysis:analysis.json decisions.H1": {"compared": 34, "differences": 0}, "analysis:conditions.csv": {"compared": 301, "differences": 0}, "analysis:family_H1.csv": {"compared": 76, "differences": 16}, "analysis:family_S-coll.csv": {"compared": 76, "differences": 0}, "analysis:paired_differences.csv": {"compared": 1040, "differences": 0}, "analysis:secondary.csv": {"compared": 228, "differences": 0}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+development: the compared analysis output has status 'development'
+outputs: /tmp/tmpaq3w4qj6/cmp/absent2
+verification DIFFER (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 1755, differences 4 {"analysis:analysis.json decisions.H1": {"compared": 34, "differences": 0}, "analysis:conditions.csv": {"compared": 301, "differences": 0}, "analysis:family_H1.csv": {"compared": 76, "differences": 0}, "analysis:family_S-coll.csv": {"compared": 76, "differences": 4}, "analysis:paired_differences.csv": {"compared": 1040, "differences": 0}, "analysis:secondary.csv": {"compared": 228, "differences": 0}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+development: the compared analysis output has status 'development'
+outputs: /tmp/tmpaq3w4qj6/cmp/absent3
+verification DIFFER (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 1755, differences 12 {"analysis:analysis.json decisions.H1": {"compared": 34, "differences": 0}, "analysis:conditions.csv": {"compared": 301, "differences": 0}, "analysis:family_H1.csv": {"compared": 76, "differences": 0}, "analysis:family_S-coll.csv": {"compared": 76, "differences": 0}, "analysis:paired_differences.csv": {"compared": 1040, "differences": 0}, "analysis:secondary.csv": {"compared": 228, "differences": 12}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+development: the compared analysis output has status 'development'
+outputs: /tmp/tmpaq3w4qj6/cmp/absent4
+verification DIFFER (development): 307 job lines {"usable": 307}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 43, mean 1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, improves
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 43, mean 0.3953, p 0.0137182 (exact_dp_rounded), Holm 0.0274364, improves
+H1 fl_full_minus_age_only_k1.0_s11_all: n 43, mean 0.0000, p 1 (exact_dp_rounded), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 43, mean -1.0000, p 2.27374e-13 (exact_dp_rounded), Holm 9.09495e-13, worse
+findings: {"finding_1": true, "finding_2": false}
+comparisons: 716, differences 1 {"analysis:analysis.json decisions.H1": {"compared": 34, "differences": 0}, "analysis:conditions.csv": {"compared": 301, "differences": 0}, "analysis:family_H1.csv": {"compared": 76, "differences": 0}, "analysis:family_S-coll.csv": {"compared": 76, "differences": 0}, "analysis:paired_differences.csv": {"compared": 1, "differences": 1}, "analysis:secondary.csv": {"compared": 228, "differences": 0}}
+development: route table /tmp/tmpaq3w4qj6/route_table.json is not the registered split
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+development: the compared analysis output has status 'development'
+outputs: /tmp/tmpaq3w4qj6/cmp/absent5
+uuuuuu
+____________________________ H1Matrix.test_outputs _____________________________
+----------------------------- Captured stderr call -----------------------------
+ERROR (exit 2): /tmp/tmpaq3w4qj6/out already holds verification.json, runs.csv, contrasts.csv, table_i.csv, paired.csv, comparisons.csv, differences.csv, SHA256SUMS (use --force)
+__________________ Guard.test_csv_and_analysis_inputs_guarded __________________
+----------------------------- Captured stdout call -----------------------------
+verification NOT_COMPARED (development): 1 job lines {"usable": 1}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_age_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+findings: {"finding_1": false, "finding_2": false}
+comparisons: 0, differences 0 {}
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+development: per-run values from a CSV (--runs), not from the run directories
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+outputs: /tmp/tmp35o8m2vb/o4
+----------------------------- Captured stderr call -----------------------------
+REFUSED (exit 4): test-route input {"agg_rows": 0, "analysis_test_input_rows": 0, "job_lines": 0, "route_table": 0, "runs_csv_rows": 1} before the analysis freeze: no analysis-freeze record (--analysis-freeze)
+REFUSED (exit 4): test-route input {"agg_rows": 0, "analysis_test_input_rows": 0, "job_lines": 0, "route_table": 0, "runs_csv_rows": 1} before the analysis freeze: no analysis-freeze record (--analysis-freeze)
+REFUSED (exit 4): test-route input {"agg_rows": 0, "analysis_test_input_rows": 3, "job_lines": 0, "route_table": 0, "runs_csv_rows": 0} before the analysis freeze: no analysis-freeze record (--analysis-freeze)
+REFUSED (exit 4): test-route input {"agg_rows": 0, "analysis_test_input_rows": 0, "job_lines": 0, "route_table": 1, "runs_csv_rows": 0} before the analysis freeze: no analysis-freeze record (--analysis-freeze)
+ERROR (exit 2): /tmp/tmp35o8m2vb/runs.csv has no route_id column
+ERROR (exit 2): FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmp35o8m2vb/missing.csv'
+_____________________ Guard.test_freeze_record_vocabulary ______________________
+----------------------------- Captured stdout call -----------------------------
+verification NOT_COMPARED (development): 1 job lines {"usable": 1}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_age_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+findings: {"finding_1": false, "finding_2": false}
+comparisons: 2, differences 0 {"freeze record": {"compared": 2, "differences": 0}}
+development: PROTOCOL.md / seal from the test options --protocol / --seal (/tmp/tmpvf2sfx01/PROTOCOL.md, /tmp/tmpvf2sfx01/SEAL.sha256), not the registered ones
+development: route table /tmp/tmpvf2sfx01/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+outputs: /tmp/tmpvf2sfx01/voc0
+verification NOT_COMPARED (development): 1 job lines {"no_valid_record": 1}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_age_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+findings: {"finding_1": false, "finding_2": false}
+comparisons: 2, differences 0 {"freeze record": {"compared": 2, "differences": 0}}
+development: PROTOCOL.md / seal from the test options --protocol / --seal (/tmp/tmpvf2sfx01/PROTOCOL.md, /tmp/tmpvf2sfx01/SEAL.sha256), not the registered ones
+development: route table /tmp/tmpvf2sfx01/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+outputs: /tmp/tmpvf2sfx01/voc1
+verification NOT_COMPARED (development): 1 job lines {"no_valid_record": 1}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_age_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+findings: {"finding_1": false, "finding_2": false}
+comparisons: 2, differences 0 {"freeze record": {"compared": 2, "differences": 0}}
+development: PROTOCOL.md / seal from the test options --protocol / --seal (/tmp/tmpvf2sfx01/PROTOCOL.md, /tmp/tmpvf2sfx01/SEAL.sha256), not the registered ones
+development: route table /tmp/tmpvf2sfx01/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+outputs: /tmp/tmpvf2sfx01/voc2
+verification DIFFER (development): 1 job lines {"no_valid_record": 1}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_age_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+findings: {"finding_1": false, "finding_2": false}
+comparisons: 2, differences 1 {"freeze record": {"compared": 2, "differences": 1}}
+development: PROTOCOL.md / seal from the test options --protocol / --seal (/tmp/tmpvf2sfx01/PROTOCOL.md, /tmp/tmpvf2sfx01/SEAL.sha256), not the registered ones
+development: route table /tmp/tmpvf2sfx01/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+outputs: /tmp/tmpvf2sfx01/voc3
+verification DIFFER (development): 1 job lines {"no_valid_record": 1}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_age_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+findings: {"finding_1": false, "finding_2": false}
+comparisons: 2, differences 1 {"freeze record": {"compared": 2, "differences": 1}}
+development: PROTOCOL.md / seal from the test options --protocol / --seal (/tmp/tmpvf2sfx01/PROTOCOL.md, /tmp/tmpvf2sfx01/SEAL.sha256), not the registered ones
+development: route table /tmp/tmpvf2sfx01/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+outputs: /tmp/tmpvf2sfx01/voc4
+verification DIFFER (development): 1 job lines {"usable": 1}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_age_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+findings: {"finding_1": false, "finding_2": false}
+comparisons: 2, differences 1 {"freeze record": {"compared": 2, "differences": 1}}
+development: PROTOCOL.md / seal from the test options --protocol / --seal (/tmp/tmpvf2sfx01/PROTOCOL.md, /tmp/tmpvf2sfx01/SEAL.sha256), not the registered ones
+development: route table /tmp/tmpvf2sfx01/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+outputs: /tmp/tmpvf2sfx01/voc5
+uuuuuu
+______________________ Guard.test_invalid_records_refused ______________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuu
+----------------------------- Captured stderr call -----------------------------
+REFUSED (exit 4): analysis-freeze record /tmp/tmpmxdn79yc/freeze.json (sha256 35d2bd5026519a79a7059024d3d49874e60d9b81eb0a7aa2b543ae87c38d6fb2) is not valid: its sha256 35d2bd5026519a79a7059024d3d49874e60d9b81eb0a7aa2b543ae87c38d6fb2 is not cited in Sec. 13 of /tmp/tmpmxdn79yc/PROTOCOL.md
+REFUSED (exit 4): analysis-freeze record /tmp/tmpmxdn79yc/freeze.json (sha256 35d2bd5026519a79a7059024d3d49874e60d9b81eb0a7aa2b543ae87c38d6fb2) is not valid: PROTOCOL.md (sha256 9d4cb48bc2d9df99532851378475ef899d3fe95fd369f3380e2acb3c59115f41) is not the sealed version (0000000000000000000000000000000000000000000000000000000000000000)
+REFUSED (exit 4): analysis-freeze record /tmp/tmpmxdn79yc/freeze.json (sha256 b35b2ced4d5064314d4219c8242420b44b1a7583860f1c4058f6a7ccfbbf7122) is not valid: not an analysis-freeze record (schema framelease_v4.analysis_freeze/1)
+REFUSED (exit 4): analysis-freeze record /tmp/tmpmxdn79yc/freeze.json (sha256 664998d8ebe90105ee26307b80345f4e4723324a62b13f3911917ca79e6cf720) is not valid: route_split_sha256 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff is not the given route split /tmp/tmpmxdn79yc/route_table.json (584a96bb0226edae984f2637ba27930f844e404cd97960481b8ebc41f2ea4a2e)
+REFUSED (exit 4): analysis-freeze record /tmp/tmpmxdn79yc/freeze.json (sha256 41bfd923a9ea47d422257000c430900b8a7bc00dc4fbd1b89e7e3c933b9248b4) is not valid: trigger 'cut' is neither all_final nor a cut with its cut_amendment
+REFUSED (exit 4): the analysis-freeze record does not cover the input: job v4p4_fl_full_k1.0_s11_r940000 is not in the record
+REFUSED (exit 4): the analysis-freeze record does not cover the input: job v4p4_fl_full_k1.0_s11_r940000: the run of its final runner record (ok, /tmp/tmpmxdn79yc/w/runs_root/fl_full/runs/run00001) is not the recorded run (ok, /tmp/tmpmxdn79yc/other)
+REFUSED (exit 4): the analysis-freeze record does not cover the input: job file /tmp/tmpmxdn79yc/w/queue/jobs.d/b11_ti_main.jsonl changed after the freeze (sha256 958d0090414386982decef336a4424c2dbdf3191e2e45063fb93183ea980e31a, record 0000000000000000000000000000000000000000000000000000000000000000)
+_________________________ Guard.test_protected_out_dir _________________________
+----------------------------- Captured stderr call -----------------------------
+ERROR (exit 2): --out outputs/framelease_v4/queue_p1/r7_should_not_exist lies in a protected directory (outputs/framelease_v4/queue_)
+_________ Guard.test_record_run_without_runner_record_is_a_difference __________
+----------------------------- Captured stdout call -----------------------------
+verification DIFFER (development): 1 job lines {"pending": 1}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_age_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+findings: {"finding_1": false, "finding_2": false}
+comparisons: 2, differences 2 {"freeze record": {"compared": 2, "differences": 2}}
+development: PROTOCOL.md / seal from the test options --protocol / --seal (/tmp/tmpevtlgkiz/PROTOCOL.md, /tmp/tmpevtlgkiz/SEAL.sha256), not the registered ones
+development: route table /tmp/tmpevtlgkiz/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+outputs: /tmp/tmpevtlgkiz/o5
+_____________ Guard.test_refused_without_record_and_before_reading _____________
+----------------------------- Captured stdout call -----------------------------
+verification NOT_COMPARED (development): 1 job lines {"unreadable official_results.json": 1}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_age_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+findings: {"finding_1": false, "finding_2": false}
+comparisons: 0, differences 0 {}
+development: route table /tmp/tmpg5gr2717/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+development: no analysis-freeze record: no test-route result was read (Sec. 9.11)
+outputs: /tmp/tmpg5gr2717/o_dev
+----------------------------- Captured stderr call -----------------------------
+REFUSED (exit 4): test-route input {"agg_rows": 0, "analysis_test_input_rows": 0, "job_lines": 0, "route_table": 1, "runs_csv_rows": 0} before the analysis freeze: no analysis-freeze record (--analysis-freeze)
+REFUSED (exit 4): test-route input {"agg_rows": 0, "analysis_test_input_rows": 0, "job_lines": 1, "route_table": 0, "runs_csv_rows": 0} before the analysis freeze: no analysis-freeze record (--analysis-freeze)
+______ Guard.test_registered_test_route_never_released_under_test_options ______
+----------------------------- Captured stderr call -----------------------------
+REFUSED (exit 4): registered test-route input {"agg_rows": 0, "analysis_test_input_rows": 0, "job_lines": 1, "runs_csv_rows": 0} under the test options --protocol / --seal (/tmp/tmpy0kfzdft/PROTOCOL.md, /tmp/tmpy0kfzdft/SEAL.sha256): never released (Sec. 9.11; the registered PROTOCOL.md and SEAL.sha256 are needed)
+REFUSED (exit 4): registered test-route input {"agg_rows": 0, "analysis_test_input_rows": 0, "job_lines": 1, "runs_csv_rows": 0} under the test options --protocol / --seal (/tmp/tmpy0kfzdft/PROTOCOL.md, /tmp/tmpy0kfzdft/SEAL.sha256): never released (Sec. 9.11; the registered PROTOCOL.md and SEAL.sha256 are needed)
+________________________ Guard.test_valid_record_grants ________________________
+----------------------------- Captured stdout call -----------------------------
+verification NOT_COMPARED (development): 1 job lines {"usable": 1}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_age_only_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 0, mean NA, p NA (no data), Holm NA, no data
+findings: {"finding_1": false, "finding_2": false}
+comparisons: 2, differences 0 {"freeze record": {"compared": 2, "differences": 0}}
+development: PROTOCOL.md / seal from the test options --protocol / --seal (/tmp/tmpovrm8o2x/PROTOCOL.md, /tmp/tmpovrm8o2x/SEAL.sha256), not the registered ones
+development: route table /tmp/tmpovrm8o2x/route_table.json is not the registered split
+development: settings are not the registered ones (n_boot 2000, mc_flips 2000)
+outputs: /tmp/tmpovrm8o2x/out
+=========================== short test summary info ============================
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Statistics::test_bootstrap_and_windows
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Statistics::test_dp_cap_marks_only_that_contrast
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Statistics::test_dp_known_answers_n44
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Statistics::test_enumeration_and_dp_equal_brute_force
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Statistics::test_grid_rounding_ties
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Statistics::test_holm_and_labels
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Statistics::test_mc_close_to_exact
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Statistics::test_window_width
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::RawRuns::test_code_and_config_checks
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::RawRuns::test_consistency_notes
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::RawRuns::test_final_record_selection
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::RawRuns::test_unreadable_files_are_reasons
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::RawRuns::test_values_known_answers
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::H1Matrix::test_agg_round_trip
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::H1Matrix::test_comparisons_round_trip_and_perturbation
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::H1Matrix::test_exit_and_status
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::H1Matrix::test_h1_known_answers
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::H1Matrix::test_outputs
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::H1Matrix::test_s_coll_and_secondary
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::H1Matrix::test_table_i_cells
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Guard::test_csv_and_analysis_inputs_guarded
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Guard::test_freeze_record_vocabulary
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Guard::test_invalid_records_refused
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Guard::test_protected_out_dir
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Guard::test_record_run_without_runner_record_is_a_difference
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Guard::test_refused_without_record_and_before_reading
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Guard::test_registered_test_route_never_released_under_test_options
+PASSED framelease_v4/analysis/tests/test_verify_independent.py::Guard::test_valid_record_grants
+28 passed, 20 subtests passed in 13.87s
+wall 14.12 s, max RSS 74756 KB, exit 0

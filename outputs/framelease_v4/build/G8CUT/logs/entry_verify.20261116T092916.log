@@ -1,0 +1,3 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B outputs/framelease_v4/build/G8CUT/g8_lib.py result-entry --kind verify --name A14 --verify-dir outputs/framelease_v4/verification/final_20261116T091445
+outputs/framelease_v4/build/G8CUT/entries/A14_entry.md (13 lines), outputs/framelease_v4/build/G8CUT/entries/A14_spec.json; line problems: []
+TIME 0.09 s, max RSS 33448 KB

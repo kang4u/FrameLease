@@ -1,0 +1,9 @@
+{
+ "rc": 0,
+ "verify": "manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK",
+ "refresh_changed_sha256_adopted": [
+  "framelease_v4/protocol/p3_rl.py"
+ ],
+ "gate_code_check_pending": false,
+ "new_sha256_cited_in_PROTOCOL": false
+}

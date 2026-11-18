@@ -1,0 +1,38 @@
+........                                                [100%]
+==================================== PASSES ====================================
+____________________ Synthetic.test_counter_examples_holds _____________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuuuuuuuuu
+___________________ Synthetic.test_genuine_rows_in_the_class ___________________
+----------------------------- Captured stdout call -----------------------------
+uu
+___________ OnVerifierOutput.test_genuine_pairing_rows_are_the_class ___________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 6 run dirs (6 recomputed), 6 runs.csv rows (6 used, 0 of them without raw logs), 6 used analysis cells; comparisons 414, differences 8 (8 in values the analysis reads)
+  analysis                 compared      6  differences     6  (analysis-read 6; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     10  differences     2  (analysis-read 2; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    258  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     14  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared    126  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 8; in values the analysis reads: unclassified 8; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r4_f1_pair_vt_huvolu6_/out_genuine
+_ OnVerifierOutput.test_wrongly_dropped_pair_fails_through_the_contrast_row_holds _
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 6 run dirs (6 recomputed), 6 runs.csv rows (6 used, 0 of them without raw logs), 6 used analysis cells; comparisons 411, differences 10 (10 in values the analysis reads)
+  analysis                 compared      6  differences     6  (analysis-read 6; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared      7  differences     3  (analysis-read 3; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    258  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     14  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared    126  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 10; in values the analysis reads: unclassified 10; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r4_f1_pair_vt_huvolu6_/out_dropped
+=========================== short test summary info ============================
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r4_test_pairing.py::Synthetic::test_analysis_file_integrity_holds
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r4_test_pairing.py::Synthetic::test_condition_outside_the_contrast_gap
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r4_test_pairing.py::Synthetic::test_counter_examples_holds
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r4_test_pairing.py::Synthetic::test_genuine_rows_in_the_class
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r4_test_pairing.py::Synthetic::test_job_in_two_recorded_queues_stops_holds
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r4_test_pairing.py::OnVerifierOutput::test_fixture
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r4_test_pairing.py::OnVerifierOutput::test_genuine_pairing_rows_are_the_class
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r4_test_pairing.py::OnVerifierOutput::test_wrongly_dropped_pair_fails_through_the_contrast_row_holds
+8 passed, 17 subtests passed in 0.45s

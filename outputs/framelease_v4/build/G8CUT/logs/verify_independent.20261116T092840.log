@@ -1,0 +1,10 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B framelease_v4/analysis/verify_independent.py --queue outputs/framelease_v4/queue_p4 --analysis-freeze outputs/framelease_v4/analysis/final_20261116T091445/analysis_freeze.json --agg outputs/framelease_v4/analysis/final_20261116T091445/agg_p4 --analysis outputs/framelease_v4/analysis/final_20261116T091445/analysis --out outputs/framelease_v4/verification/final_20261116T091445
+verification AGREE (final): 632 job lines {"no_valid_record": 1, "pending": 505, "usable": 126}
+H1 fl_full_minus_fixed_deep_k1.0_s11_all: n 14, mean 3.9202, p 0.539062 (exact_enumeration), Holm 1, inconclusive
+H1 fl_full_minus_fast_only_k1.0_s11_all: n 14, mean -3.5225, p 0.699219 (exact_enumeration), Holm 1, inconclusive
+H1 fl_full_minus_age_only_k1.0_s11_all: n 14, mean 3.1285, p 0.734375 (exact_enumeration), Holm 1, inconclusive
+H1 fl_full_minus_event_triggered_k1.0_s11_all: n 14, mean -0.5539, p 0.94043 (exact_enumeration), Holm 1, inconclusive
+findings: {"finding_1": false, "finding_2": false}
+comparisons: 5215, differences 0 {"agg:arm_summary.csv": {"compared": 115, "differences": 0}, "agg:runs.csv": {"compared": 2776, "differences": 0}, "analysis:analysis.json decisions.H1": {"compared": 34, "differences": 0}, "analysis:analysis.json interim_guard": {"compared": 1, "differences": 0}, "analysis:conditions.csv": {"compared": 301, "differences": 0}, "analysis:family_H1.csv": {"compared": 76, "differences": 0}, "analysis:family_S-coll.csv": {"compared": 76, "differences": 0}, "analysis:paired_differences.csv": {"compared": 344, "differences": 0}, "analysis:secondary.csv": {"compared": 228, "differences": 0}, "freeze record": {"compared": 1264, "differences": 0}}
+outputs: outputs/framelease_v4/verification/final_20261116T091445
+TIME 1.47 s, max RSS 93940 KB

@@ -1,0 +1,111 @@
+{
+ "schema": "framelease_v4.f1_class/3",
+ "verification": "/tmp/A10A11/r7bfix/verify_p1_rundirs",
+ "inputs_sha256": {
+  "SHA256SUMS": "289f3e522c3ce5552b5432c45b8221a495207e612608de668535a06059ba4f56",
+  "cause_plans.csv": "16965f45b8fcf117e60d75e8c157d297e5f0e8d8e6e65f70d7c5fd43464a9d4e",
+  "differences.csv": "5e2141291be3a7f42c204703631bdbaec21faf129b0126a66e7acaa20ff14d2e",
+  "runs_recomputed.csv": "c3c9eb9bae7a8ec895abbbc04d641c2a048f7b8aba93058a7a92586a37add05e",
+  "table1_extra.json": "31d796d7f71785d126f803d789751af4455c2db4c97bf8c60dbec3e31febc5e9"
+ },
+ "sha256sums": "OK: the four inputs equal SHA256SUMS",
+ "status": "development",
+ "verdict": "AGREE",
+ "comparisons": 5523,
+ "differences": 0,
+ "differences_by_cause": {},
+ "analysis_differences_by_cause": {},
+ "agree_within_bounds_by_cause": {},
+ "differences_by_class": {
+  "F1": 0,
+  "F3": 0,
+  "in_flight": 0,
+  "not_ok_record": 0,
+  "undefined_metric_pairing": 0,
+  "unexplained": 0
+ },
+ "class_F1": {
+  "differences": 0,
+  "analysis_differences": 0,
+  "differences_without_abs_diff": 0,
+  "runs": 0,
+  "runs_per_arm": {},
+  "run_list": [],
+  "largest_abs_diff": [],
+  "agree_within_bounds": 0,
+  "plans": {
+   "plans": 47,
+   "run_dirs": 26
+  }
+ },
+ "class_F3": {
+  "differences": 0,
+  "analysis_differences": 0,
+  "differences_without_abs_diff": 0,
+  "runs": 0,
+  "runs_per_arm": {},
+  "run_list": [],
+  "largest_abs_diff": [],
+  "by_cause": {},
+  "agree_within_bounds": 0,
+  "plans": {
+   "plans": 2,
+   "run_dirs": 2
+  }
+ },
+ "class_in_flight": {
+  "differences": 0,
+  "analysis_differences": 0,
+  "differences_without_abs_diff": 0,
+  "runs": 0,
+  "runs_per_arm": {},
+  "run_list": [],
+  "largest_abs_diff": [],
+  "runs_ending_with_job_in_flight": 36,
+  "runs_recomputed": 272
+ },
+ "class_not_ok_record": {
+  "differences": 0,
+  "analysis_differences": 0,
+  "differences_without_abs_diff": 0,
+  "runs": 0,
+  "runs_per_arm": {},
+  "run_list": [],
+  "largest_abs_diff": [],
+  "jobs": {},
+  "sources": {
+   "runner_records": [],
+   "runs_csv": null
+  }
+ },
+ "class_undefined_metric_pairing": {
+  "differences": 0,
+  "analysis_differences": 0,
+  "differences_without_abs_diff": 0,
+  "runs": 0,
+  "runs_per_arm": {},
+  "run_list": [],
+  "largest_abs_diff": [],
+  "by_metric_and_arm": {},
+  "by_contrast": {},
+  "source": null
+ },
+ "unexplained": {
+  "differences": 0,
+  "analysis_differences": 0,
+  "differences_without_abs_diff": 0,
+  "runs": 0,
+  "runs_per_arm": {},
+  "run_list": [],
+  "largest_abs_diff": [],
+  "by_cause": {},
+  "by_column": {}
+ },
+ "outcome": "AGREE",
+ "release_checks": {
+  "status_final": false,
+  "registered_verifier": true,
+  "runs_csv_values_false": true
+ },
+ "release": "not final"
+}

@@ -1,0 +1,11 @@
+A 0 tree seal: FAIL manifest: 2 files differ: [('framelease_v4/analysis/tests/test_verify_table1_extra.py', 'c3bf160c7d5a6203c40577928acbb16c799677e73e0b4c11222f0041d3c553cd', 'f0e74336e2244eea7136f3a94475ab0d96d5dfcd4b7fe0d8f97308877ac50154'), ('framelease_v4/analysis/verify_table1_extra.py', 'a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa', 'f77b2dcf34484d2537a4c22d804912f0c155c3e3c26a576f433b9f4f73d83c27')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+A 1 A10 check: PASS exit 0
+A 2 A10 apply: PASS PROTOCOL f65ac44196461d1cb199e851b578b8a80a64c881b38af2b4c4cf206b71e21a16 MANIFEST 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3 221 files; newly cited manifest files: ['framelease_v4/analysis/analyze_v4.py', 'framelease_v4/analysis/figures_tables.py', 'framelease_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_analyze_v4.py', 'framelease_v4/analysis/tests/tes
+A 3 seal after A10: PASS manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+A 4 parsers after A10: PASS analyze_v4.py cited by A10; G8 registration waits []
+A 4b review of the R7B fixes: PASS the real review file (linked)
+A 5 A11 check (phase baseline not refreshed after A10): PASS exit 0
+A 6 A11 apply: PASS PROTOCOL 8ccf9a606cd995a2c50c6d2b6a290e545350317fc5e6fedbf055f3945e83c932 MANIFEST 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3 221 files; newly cited manifest files: ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']
+A 7 seal after A11: PASS manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+A 8 parsers after A11: PASS {"framelease_v4/analysis/analyze_v4.py": "A10", "framelease_v4/analysis/verify_table1_extra.py": "A11", "framelease_v4/analysis/tests/test_verify_table1_extra.py": "A11"}
+A 9 diff written: PASS 552 diff lines

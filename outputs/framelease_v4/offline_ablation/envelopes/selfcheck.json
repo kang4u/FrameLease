@@ -1,0 +1,15 @@
+{
+ "max_abs_diff": {
+  "T_q80 vs gate2 E0_q80_ORIG": 0.0,
+  "T_q90 vs gate2 E0_q90_ORIG": 0.0,
+  "T_q95 vs gate2 E0_q95_ORIG": 0.0,
+  "T_q99 vs gate2 E0_q99_ORIG": 0.0,
+  "T_q99.5 vs gate2 E0_q99.5_ORIG": 0.0,
+  "V2file vs gate2 E0orig_q95_ORIG": 0.0
+ },
+ "pass": true,
+ "train_pairs": {
+  "vehicle": 4596,
+  "pedestrian": 194
+ }
+}

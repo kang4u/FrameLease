@@ -1,0 +1,107 @@
+{
+ "context": {
+  "val_all": {
+   "plans": 5417.0,
+   "conflicts": 909.0,
+   "oracle_continuity_fast": 0.8960679342809673,
+   "oracle_continuity_meas": 0.8654236662359239
+  },
+  "train_all": {
+   "plans": 1004.0,
+   "conflicts": 12.0,
+   "oracle_continuity_fast": 0.9960159362549801,
+   "oracle_continuity_meas": 0.9920318725099602
+  },
+  "val_no_static_v0": {
+   "plans": 5149.0,
+   "conflicts": 641.0,
+   "oracle_continuity_fast": 0.9427073218100602,
+   "oracle_continuity_meas": 0.9104680520489415
+  },
+  "train_no_static_v0": {
+   "plans": 1004.0,
+   "conflicts": 12.0,
+   "oracle_continuity_fast": 0.9960159362549801,
+   "oracle_continuity_meas": 0.9920318725099602
+  },
+  "val_conflicts_Vsuf_zero": 378,
+  "val_conflicts_by_status": {
+   "confident": 782,
+   "low_confidence": 63,
+   "undetected": 40,
+   "absent_at_capture": 24
+  },
+  "val_conflicts_BI": 300,
+  "val_static_v0": 268,
+  "val_static_v0_BI": 232,
+  "invalid_detection_plans_val": 0
+ },
+ "needs": {
+  "fast": 0.964,
+  "meas": 1.842
+ },
+ "T_c": 0.5,
+ "Hbar": 2.5,
+ "alphas": [
+  0.02,
+  0.05,
+  0.1,
+  0.15,
+  0.2,
+  0.3
+ ],
+ "nested_alphas": [
+  0.05,
+  0.1
+ ],
+ "boot": {
+  "n": 2000,
+  "seed": 20261109
+ },
+ "designs": {
+  "AGE": "Age-Only",
+  "GLOBAL": "Global-Margin (v2)",
+  "SUFFIX": "Suffix-Aligned (Eq. 1-3)",
+  "GLOBAL_c2": "Global-Margin, v2 2.0 s cap",
+  "GLOBAL_TAU": "Whole-horizon minimum of Eq. 1 (same tau-indexed envelope as Suffix)",
+  "AGE_ncF": "AGE capped at the fast need",
+  "AGE_ncM": "AGE capped at the meas need",
+  "GLOBAL_ncF": "GLOBAL capped at the fast need",
+  "GLOBAL_ncM": "GLOBAL capped at the meas need",
+  "SUFFIX_ncF": "SUFFIX capped at the fast need",
+  "SUFFIX_ncM": "SUFFIX capped at the meas need",
+  "GLOBAL_TAU_ncF": "GLOBAL_TAU capped at the fast need",
+  "GLOBAL_TAU_ncM": "GLOBAL_TAU capped at the meas need",
+  "GLOBAL_L": "Global-Margin, LOCO-36 envelopes",
+  "SUFFIX_L": "Suffix-Aligned, LOCO-36 envelopes"
+ },
+ "n_candidates": {
+  "AGE": 51,
+  "GLOBAL": 53,
+  "SUFFIX": 53,
+  "GLOBAL_c2": 53,
+  "GLOBAL_TAU": 53,
+  "GLOBAL_L": 50,
+  "SUFFIX_L": 50,
+  "AGE_ncF": 51,
+  "AGE_ncM": 51,
+  "GLOBAL_ncF": 53,
+  "GLOBAL_ncM": 53,
+  "SUFFIX_ncF": 53,
+  "SUFFIX_ncM": 53,
+  "GLOBAL_TAU_ncF": 53,
+  "GLOBAL_TAU_ncM": 53
+ },
+ "code_sha256": {
+  "framelease_v4/offline/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "framelease_v4/offline/analyze.py": "bf7d1a4b32d8e0eb00042ac70107b58915c9838ca661fa6a4615dd6e6aa1c594",
+  "framelease_v4/offline/checks.py": "f1ec35739b8815b23c673db1e590a928e111d15a10d161982439cdaa8c23cb01",
+  "framelease_v4/offline/common.py": "7773801a871b2b9355f985a8a351b045f34a42a8d1b895ddb33c5137b598eb86",
+  "framelease_v4/offline/envelopes_v4.py": "9bec6a36bf90f2510b82bd3458da489e2713e59cea6fa469f267e838dfea0f00",
+  "framelease_v4/offline/fig1_data.py": "c1542e54602a7f5f05b7f2663e3f54152d69b8281af0d8ab3da021e56d6d5813",
+  "framelease_v4/offline/make_readme.py": "08c1136c6030383369c46bfdee5be0818d70f35405733a4b836c3f6204d2a155",
+  "framelease_v4/offline/stage_frames.py": "51db2882a9bbe659bb36b3960da4af647d47387c8699937e2f6200221eb8a9f6",
+  "framelease_v4/offline/tests/test_offline.py": "1bf9962e1ca25d7606aef81b46e0765cf80c8501a9da2384ebdbc0d5b584f0b5"
+ },
+ "wall_s": 4.753484487533569
+}

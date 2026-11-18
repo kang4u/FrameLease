@@ -1,0 +1,175 @@
+#!/bin/bash
+# The step-3 simulation, end to end, on a scratch copy (/tmp/AMEND3/tree). Writes only under /tmp/AMEND3/.
+#   taskset -c 12-15 nice -n 19 ionice -c 3 bash outputs/framelease_v4/build/AMEND2/step3/sim/run_simulation.sh
+# Cases (logs in /tmp/AMEND3/logs/NN_*.log; a summary line per case in /tmp/AMEND3/logs/summary.txt):
+#  01 pre-check before the fake P1 end: STOP (P1_DONE.json, the P1 entries)
+#  02 fake P1 end (sim/fake_p1_end.py: tuning freeze + D1 summary entries by the P1 driver's own transaction)
+#  03 pre-check: passed
+#  04-06 the transaction with an injected failure (post_manifest, before_seal, seal_fail): STOP, state restored
+#  06b SIGTERM after PROTOCOL.md was written: STOP, state restored; 06c SIGKILL there: the journal stays at
+#     'protocol'; 06d step3_txn.py restore brings the sealed state back
+#  07 a registered file changed in the scratch tree, `locked` run without the pre-check: the post-manifest check of
+#     step 3.2 stops it, the sealed manifest is restored
+#  08 the transaction: PASS (pre-check, locked part, post-checks)
+#  09 a second run: STOP at the pre-check (the amendments are entered)
+#  10 write_d1_decision.py: refusals, --dry-run, the write; phase_driver.py --dry-run then plans the G1 entry
+#  11 the project tree: PROTOCOL.md, MANIFEST.sha256 and SEAL.sha256 unchanged by the simulation
+set -u -o pipefail
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 CUDA_VISIBLE_DEVICES=''
+REAL=/home/kang/Desktop/DAC
+HERE="$(cd -- "$(dirname -- "$(readlink -f -- "${BASH_SOURCE[0]}")")/.." && pwd)"
+SIM=/tmp/AMEND3
+T="$SIM/tree"
+L="$SIM/logs"
+R="$SIM/runs"
+P=(taskset -c 12-15 nice -n 19 ionice -c 3)
+PY="$REAL/.conda-unidrive-linux/bin/python"
+TXN=("${P[@]}" "$PY" -I -B "$HERE/step3_txn.py")
+rm -rf "$L" "$R"
+mkdir -p "$L" "$R"
+S="$L/summary.txt"
+real_before="$(cd "$REAL" && sha256sum framelease_v4/PROTOCOL.md outputs/framelease_v4/registration/MANIFEST.sha256 \
+    outputs/framelease_v4/registration/SEAL.sha256)"
+note() { echo "$*" | tee -a "$S"; }
+state() { (cd "$T" && sha256sum framelease_v4/PROTOCOL.md outputs/framelease_v4/registration/MANIFEST.sha256 \
+    outputs/framelease_v4/registration/SEAL.sha256 outputs/framelease_v4/registration/REGISTRATION.json | cut -c1-16 | tr '\n' ' '); }
+seals() { "${P[@]}" "$PY" -I -B "$T/framelease_v4/protocol/registration.py" --verify | grep -c '^seal .*: OK$'; }
+expect() {   # name, wanted exit, actual exit, extra condition (0 = ok)
+    if [ "$3" -eq "$2" ] && [ "${4:-0}" -eq 0 ]; then note "PASS $1 (exit $3)"; else note "FAIL $1 (exit $3, wanted $2, extra $4)"; fi
+}
+
+note "simulation $(date -Iseconds); step3_txn.py $(sha256sum "$HERE/step3_txn.py" | cut -c1-16), spec $(sha256sum "$HERE/step3_spec.json" | cut -c1-16)"
+"${P[@]}" bash "$HERE/sim/make_scratch.sh" "$T" > "$L/00_make_scratch.log" 2>&1
+note "00 scratch tree: $(tail -1 "$L/00_make_scratch.log")"
+
+"${P[@]}" bash "$HERE/amend_step3.sh" --root "$T" --precheck-only --work "$R/01" > "$L/01_precheck_before_p1_end.log" 2>&1
+rc=$?
+grep -q 'P1_DONE.json does not exist' "$L/01_precheck_before_p1_end.log"; x=$?
+expect "01 pre-check before the P1 end stops" 1 $rc $x
+
+"${P[@]}" "$PY" -I -B "$HERE/sim/fake_p1_end.py" "$T" > "$L/02_fake_p1_end.log" 2>&1
+rc=$?
+expect "02 fake P1 end" 0 $rc
+note "   seals after the fake P1 end: $(seals) of 2 OK; state $(state)"
+
+"${P[@]}" bash "$HERE/amend_step3.sh" --root "$T" --precheck-only --work "$R/03" > "$L/03_precheck.log" 2>&1
+expect "03 pre-check after the P1 end" 0 $?
+
+# an unregistered development file changes (as code in development may), so that the new manifest differs from the
+# sealed one and every restore below has a manifest to restore
+echo '# changed by the step-3 simulation (unregistered file)' >> "$T/framelease_v4/analysis/verify_table1_extra.py"
+note "   unregistered file changed in the scratch tree: framelease_v4/analysis/verify_table1_extra.py"
+for f in post_manifest before_seal seal_fail; do
+    n=$([ $f = post_manifest ] && echo 04 || ([ $f = before_seal ] && echo 05 || echo 06))
+    before="$(state)"
+    AMEND_STEP3_FAULT=$f "${P[@]}" bash "$HERE/amend_step3.sh" --root "$T" --work "$R/${n}_$f" > "$L/${n}_fault_$f.log" 2>&1
+    rc=$?
+    after="$(state)"
+    [ "$before" = "$after" ] && [ "$(seals)" -eq 2 ]; x=$?
+    expect "$n injected failure $f: STOP, PROTOCOL.md / MANIFEST / SEAL / REGISTRATION.json as before, both seals OK" 1 $rc $x
+done
+
+before="$(state)"
+AMEND_STEP3_FAULT=signal_before_seal "${P[@]}" bash "$HERE/amend_step3.sh" --root "$T" --work "$R/06b_signal" \
+    > "$L/06b_fault_signal.log" 2>&1
+rc=$?
+[ "$before" = "$(state)" ] && [ "$(seals)" -eq 2 ] && grep -q 'signal 15 during the transaction' "$L/06b_fault_signal.log"
+x=$?
+expect "06b SIGTERM after PROTOCOL.md was written: STOP, state restored, both seals OK" 1 $rc $x
+AMEND_STEP3_FAULT=kill_before_seal "${P[@]}" bash "$HERE/amend_step3.sh" --root "$T" --work "$R/06c_kill" \
+    > "$L/06c_fault_kill.log" 2>&1
+rc=$?
+[ "$before" != "$(state)" ] && grep -q '"step": "protocol"' "$R/06c_kill/journal.json"; x=$?
+expect "06c SIGKILL after PROTOCOL.md was written: STOP, PROTOCOL.md left unsealed, journal at 'protocol'" 137 $rc $x
+"${TXN[@]}" restore --root "$T" --work "$R/06c_kill" > "$L/06d_restore.log" 2>&1
+rc=$?
+[ "$before" = "$(state)" ] && [ "$(seals)" -eq 2 ]; x=$?
+expect "06d step3_txn.py restore after the kill: the sealed state is back, both seals OK" 0 $rc $x
+
+before="$(state)"
+cp "$T/framelease_v4/protocol/p1_driver.py" "$SIM/p1_driver.py.keep"
+echo '# changed by the step-3 simulation (case 07)' >> "$T/framelease_v4/protocol/p1_driver.py"
+mkdir -p "$R/07"
+"${TXN[@]}" locked --root "$T" --work "$R/07" --datetime '2026-11-15 08:30' > "$L/07_registered_file_changed.log" 2>&1
+rc=$?
+cp "$SIM/p1_driver.py.keep" "$T/framelease_v4/protocol/p1_driver.py"
+after="$(state)"
+grep -q "post-manifest check (step 3.2): \['framelease_v4/protocol/p1_driver.py'\]" "$L/07_registered_file_changed.log"; x=$?
+[ "$before" = "$after" ] && [ "$x" -eq 0 ]; x=$?
+expect "07 registered file changed: the post-manifest check stops, the sealed manifest is restored" 1 $rc $x
+"${P[@]}" "$PY" -I -B "$T/framelease_v4/protocol/registration.py" --verify > "$L/07b_verify_after_revert.log" 2>&1
+note "   after reverting the file: $(tr '\n' ' ' < "$L/07b_verify_after_revert.log" | cut -c1-200)"
+
+before="$(state)"
+"${P[@]}" bash "$HERE/amend_step3.sh" --root "$T" --work "$R/08_transaction" > "$L/08_transaction.log" 2>&1
+rc=$?
+grep -q '^PASS: ' "$L/08_transaction.log"; x=$?
+expect "08 the transaction (pre-check, locked part, post-check)" 0 $rc $x
+note "   state before $before"
+note "   state after  $(state)"
+
+"${P[@]}" bash "$HERE/amend_step3.sh" --root "$T" --precheck-only --work "$R/09" > "$L/09_second_run.log" 2>&1
+rc=$?
+grep -q 'Amendment A3 is entered already' "$L/09_second_run.log"; x=$?
+expect "09 a second run stops at the pre-check" 1 $rc $x
+
+D="$SIM/d1"
+rm -rf "$D"
+mkdir -p "$D"
+printf '%s\n' 'Every P1 block is final on the training routes; the tuning freeze fixes L* = B0, d* = 1 and the' \
+    'Event-Triggered point s_hb2.0 (simulation text).' > "$D/ok.txt"
+printf '%s\n' 'Continue. Each amendment gets the date and time.' > "$D/anchor.txt"
+printf '%s\n' 'Continue; the AI agrees.' > "$D/authorship.txt"
+W=("${P[@]}" "$PY" -I -B "$HERE/write_d1_decision.py" --root "$T")
+"${W[@]}" --decision continue --rationale-file "$D/anchor.txt" > "$L/10a_anchor.log" 2>&1
+expect "10a rationale with the anchor phrase refused" 1 $?
+"${W[@]}" --decision continue --rationale-file "$D/authorship.txt" > "$L/10b_authorship.log" 2>&1
+expect "10b rationale naming its writer refused" 1 $?
+J="$T/outputs/framelease_v4/tuning/d1/FULL_d1_summary.json"
+cp "$J" "$SIM/d1_summary.keep"
+echo ' ' >> "$J"
+"${W[@]}" --decision continue --rationale-file "$D/ok.txt" > "$L/10c_summary_changed.log" 2>&1
+expect "10c D1 summary not the one the entry cites: refused" 1 $?
+cp "$SIM/d1_summary.keep" "$J"
+"${W[@]}" --decision continue --rationale-file "$D/ok.txt" --dry-run > "$L/10d_dry_run.log" 2>&1
+rc=$?
+[ ! -e "$T/outputs/framelease_v4/phase_driver/D1_DECISION.json" ]; x=$?
+expect "10d --dry-run prints the JSON, writes nothing" 0 $rc $x
+"${W[@]}" --decision continue --rationale-file "$D/ok.txt" > "$L/10e_write.log" 2>&1
+rc=$?
+[ -f "$T/outputs/framelease_v4/phase_driver/D1_DECISION.json" ] && \
+    [ -z "$(ls -A "$T/outputs/framelease_v4/phase_driver" | grep -v '^D1_DECISION.json$')" ]; x=$?
+expect "10e decision written (temporary file renamed; nothing else in phase_driver/)" 0 $rc $x
+"${W[@]}" --decision stop --rationale-file "$D/ok.txt" > "$L/10f_second_write.log" 2>&1
+expect "10f a second decision refused" 1 $?
+"${P[@]}" "$PY" -I -B "$T/framelease_v4/protocol/phase_driver.py" --dry-run > "$L/10g_phase_driver_dry_run.log" 2>&1
+rc=$?
+grep -qE '^  G0 +passed' "$L/10g_phase_driver_dry_run.log" && grep -q 'record G1 D1 decision' "$L/10g_phase_driver_dry_run.log"
+x=$?
+expect "10g phase_driver.py --dry-run: G0 passed, G1 would record the decision" 0 $rc $x
+[ -z "$(ls -A "$T/outputs/framelease_v4/phase_driver" | grep -v '^D1_DECISION.json$')" ]; x=$?
+expect "10h the dry run wrote nothing into phase_driver/" 0 0 $x
+
+real_after="$(cd "$REAL" && sha256sum framelease_v4/PROTOCOL.md outputs/framelease_v4/registration/MANIFEST.sha256 \
+    outputs/framelease_v4/registration/SEAL.sha256)"
+"${P[@]}" "$PY" -I -B - "$REAL" > "$L/11_project_tree.log" 2>&1 <<'PYEOF'
+import subprocess, sys
+root = sys.argv[1]
+text = open(f'{root}/framelease_v4/PROTOCOL.md', encoding='utf-8').read()
+marks = ['**Amendment A3,', '**Amendment A9,', '**Amendment A7,', '**Amendment A4,',
+         '(Beijing time): the phase driver of Phases 2-7', 'sealed with this entry', 'simulation']
+found = [m for m in marks[:5] if m in text]
+out = subprocess.run([f'{root}/.conda-unidrive-linux/bin/python', '-I', '-B', f'{root}/framelease_v4/protocol/registration.py',
+                      '--verify'], capture_output=True, text=True).stdout
+seals = out.count(': OK') - out.count('manifest: OK')
+p1 = [ln.split('**')[1] for ln in text.splitlines() if ln.startswith('* **') and '(Beijing time). Selection' in ln]
+print('entries of this item in the project PROTOCOL.md:', found or 'none')
+print('project registration.py --verify:', ' | '.join(out.strip().splitlines()))
+print('P1 driver stage entries now:', p1)
+sys.exit(0 if not found and seals == 2 else 1)
+PYEOF
+x=$?
+if [ "$real_before" = "$real_after" ]; then how='unchanged'; else how='changed by the P1 stage driver only (its own entry)'; fi
+expect "11 the project tree: none of the five entries in its PROTOCOL.md, both seals OK; PROTOCOL.md $how" 0 0 $x
+note "   $(tr '\n' ' ' < "$L/11_project_tree.log" | cut -c1-400)"
+note "simulation end $(date -Iseconds): $(grep -c '^PASS' "$S") PASS, $(grep -c '^FAIL' "$S") FAIL"

@@ -1,0 +1,2 @@
+step3_txn.py locked 2026-11-15T06:21:56+0800 (pid 247171): root /tmp/AMEND3/tree, work /tmp/AMEND3/runs/15b
+STOPPED before any change: --datetime 2026-11-16 06:21 is later than the current time (2026-11-15 06:21, Beijing time)

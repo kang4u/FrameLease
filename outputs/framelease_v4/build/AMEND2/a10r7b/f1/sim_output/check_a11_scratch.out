@@ -1,0 +1,9 @@
+A11: 252 lines, 27 placeholders, 2 framelease_v4 files cited by sha256; apply_entry_stream.py would count 2 newly cited manifest files: ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']
+A11 in-place text found 0x in /tmp/A10A11/f1/PROTOCOL.sealed.md now (1x after A10)
+note: A10 is not in PROTOCOL.md: simulated (check_drafts.fill, A10 in-place texts, entry before the anchor)
+note: simulated texts written to /tmp/A10A11/f1/sim
+note: --write-manifest changes the sealed sha256 of ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']
+OPEN: Amendment A10 is not in PROTOCOL.md yet (A11 is applied after A10)
+OPEN: application test log outputs/framelease_v4/amendment_a11/pytest_verify_table1_extra.log ('71 passed, 67 subtests passed in 4.92s') is older than a file of must_equal: rerun apply_entry_stream.py A11_spec.json --tests
+OPEN: application test log outputs/framelease_v4/amendment_a11/pytest_review_r7b.log ('14 passed, 2 subtests passed in 4.01s') is older than a file of must_equal: rerun apply_entry_stream.py A11_spec.json --tests
+checks passed; 3 open precondition(s): not ready for application

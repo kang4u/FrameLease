@@ -1,0 +1,7 @@
+framelease_v4/analysis/tests/test_aggregate_v4.py: 34
+framelease_v4/analysis/tests/test_commit_audit.py: 15
+framelease_v4/analysis/tests/test_extra_metrics.py: 10
+framelease_v4/analysis/tests/test_interim_guard.py: 11
+framelease_v4/analysis/tests/test_manipulation.py: 11
+framelease_v4/arms/tests/test_metrics_realized_keys.py: 2
+

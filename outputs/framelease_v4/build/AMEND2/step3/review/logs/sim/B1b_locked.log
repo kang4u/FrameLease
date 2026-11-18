@@ -1,0 +1,6 @@
+sealed state copied into /tmp/AMEND3_review/runs/B1b: PROTOCOL.md baa422d5f3b3f6cc6a0262cb133720f9e80b11c1babbb32cc5e8a156305149ed, MANIFEST.sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+registration.py --write-manifest --force (exit 0): wrote /tmp/AMEND3_review/tree/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d
+post-manifest check (step 3.2): OK
+new manifest: 221 files, sha256 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d; new in it: none; changed since the seal (unregistered): ['framelease_v4/analysis/verify_table1_extra.py']
+FAILURE before the seal: composition: in-place text of A4 (Sec. 8.3, the lead sentence) found 2 times
+restore: restored ['outputs/framelease_v4/registration/MANIFEST.sha256']; registration.py --verify: manifest: 1 files differ: [('framelease_v4/analysis/verify_table1_extra.py', 'a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa', '27ceb0bd600a7c802024ee28a5caaa9d44fbff832c585f92a734d98da4bcedff')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK -> sealed state OK

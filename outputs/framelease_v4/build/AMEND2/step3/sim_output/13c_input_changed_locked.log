@@ -1,0 +1,2 @@
+step3_txn.py locked 2026-11-15T06:21:32+0800 (pid 246906): root /tmp/AMEND3/tree, work /tmp/AMEND3/runs/13c
+STOPPED before any change: outputs/framelease_v4/amendment_a3/pytest_arms_ext.log: sha256 69b00dba2b251ef8 != ffbd12d131a0f569 (prepared / OP_spec.json): the file changed after the preparation; a changed file carries its review, then make_step3_spec.py is run again

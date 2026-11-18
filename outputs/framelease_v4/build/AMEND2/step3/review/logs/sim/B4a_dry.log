@@ -1,0 +1,23 @@
+phase_driver --dry-run 2026-11-15T05:01:35+0800 (changes nothing; a check tool runs without --write)
+root:     /tmp/AMEND3_review/tree
+protocol: framelease_v4/PROTOCOL.md sha256 20304b12f4a321d1de5162de50bdb3b735b3da049fb067960b6f9eb465946372; MANIFEST 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d (221 files); seal OK; heading **Phase gates (P2-P7, FULL).** absent (created at the first entry, before line 2741: "Each amendment gets the date and time ..."); entries: none; P1 driver entries: ['age_s1', 'd1', 'event_s1', 'event_s2', 'freeze', 'heur_s1', 'heur_s2', 'lease_s1', 'lease_s2']; amendments: ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'A9']
+queue:    outputs/framelease_v4/queue_p2: 0 jobs, 0 final, 0 pending; runner.lock "None"; STOP False, PAUSE False
+queue:    outputs/framelease_v4/queue_p4: 0 jobs, 0 final, 0 pending; runner.lock "None"; STOP False, PAUSE False
+analysis: outputs/framelease_v4/analysis/final_*: none; analysis code registered for G8: no (Sec. 13.2 does not cite framelease_v4/analysis/analyze_v4.py (sha256 10d7ea4f9516725cd94932a0618bbe5cc6a20bae60b49f4004013b3682cee54c): the amendment that registers the analysis code (PROTOCOL Sec. 9.12) is not entered yet)
+driver:   another driver running: False; ALERT.txt False; STOP False; P1_DONE.json True; D1_DECISION.json False; P2_STOPPED.json False; PHASES_DONE.json False; open record transaction: False
+priority: closed-loop job running: True; tool prefix ['taskset', '-c', '12-15', 'nice', '-n', '19', 'ionice', '-c2', '-n7']
+tools:    constants consistent with p1_driver p2_jobs p2_check p3_rl stress_bench test_jobs test_freeze interim_guard aggregate_v4: yes; outside framelease_v4/ (registration not checked, refused in the project tree): none
+cycle (as the driver would run it now):
+  ran (3.0 s, exit 0): taskset -c 12-15 nice -n 19 ionice -c2 -n7 /tmp/AMEND3_review/tree/.conda-unidrive-linux/bin/python -I -B framelease_v4/protocol/registration.py --verify
+  G0 passed: P1 done, P1 entries ['freeze', 'd1'], amendments ['A3', 'A4', 'A7', 'A9']; seal OK, manifest OK
+gates:
+  G0  passed       seal OK, manifest OK
+  G1  waiting      waiting for outputs/framelease_v4/phase_driver/D1_DECISION.json (the coordinating session's D1 decision under the delegation of 2026-11-14)
+  G2  blocked      waits for G1
+  G3  blocked      waits for G1
+  G4  blocked      waits for G1
+  G5  blocked      waits for G1
+  G6  blocked      waits for G1
+  G7  blocked      waits for G1
+  G8  blocked      waits for G1
+would do now: nothing; waiting at G1 (re-checked every 300 s)

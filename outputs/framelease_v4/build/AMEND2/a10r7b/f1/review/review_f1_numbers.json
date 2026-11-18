@@ -1,0 +1,286 @@
+{
+ "all_272": {
+  "analysis_scope_rows": [],
+  "by_cause": {},
+  "by_cause_scope": {},
+  "differences": 0,
+  "f1_other_targets": {},
+  "f1_per_column": {},
+  "f1_rows": 0,
+  "f1_runs_csv_jobs": 0,
+  "f1_runs_per_arm": {},
+  "unclassified_by_column": {},
+  "unclassified_other_by_column": {},
+  "unclassified_other_runs": 0,
+  "unclassified_r23659": 0,
+  "unclassified_timed_out_job_by_target": {}
+ },
+ "all_272_f1_run_dirs_per_arm": {
+  "age_only": 6,
+  "event_triggered": 6,
+  "fast_only": 5,
+  "fixed_deep": 4,
+  "fl_heuristic": 5
+ },
+ "all_272_plans": {
+  "by_cause": {
+   "F1": 47,
+   "F3": 2
+  },
+  "capture_offset_above_1e9": 67860,
+  "capture_offset_above_1e9_frac": 0.9838061962683213,
+  "capture_offset_max": 2.9727816581726074e-06,
+  "capture_offset_median": 5.699694156646729e-07,
+  "capture_offset_min": 7.450580569168253e-10,
+  "capture_offset_negative": 0,
+  "cause_plans_rows": 49,
+  "f1_capture_grid_offset_s": [
+   1.3932585751774695e-07,
+   1.9937753563681326e-06
+  ],
+  "f1_conflict_miss_ours/registered": {
+   "True/": 3
+  },
+  "f1_plans": 47,
+  "f1_run_dirs": 26,
+  "f1_sample_minus_last_row_s": [
+   1.3932585751774695e-07,
+   1.9937753563681326e-06
+  ],
+  "f1_status_transitions": {
+   "clear->log_censored": 44,
+   "conflict->log_censored": 3
+  },
+  "f1_t_last_row_on_grid": true,
+  "plans": 68977
+ },
+ "all_272_runs": 272,
+ "snapshot": {
+  "analysis_scope_rows": [
+   {
+    "cause": "F1",
+    "field": "eir",
+    "key": "v4p1_fast_only_k1.0_s11_r1792",
+    "ours": "0.22815533980582525",
+    "target": "runs.csv",
+    "their_field": "realized_invalid_tick_ratio",
+    "theirs": "0.20631067961165048"
+   }
+  ],
+  "by_cause": {
+   "": 110,
+   "F1": 26
+  },
+  "by_cause_scope": {
+   "F1|analysis": 1,
+   "F1|record": 25,
+   "|record": 110
+  },
+  "differences": 136,
+  "f1_jobs_analysis_use": {
+   "True": 19
+  },
+  "f1_jobs_arm_mismatch": [],
+  "f1_jobs_protocol_arm": {
+   "event_triggered": 6,
+   "fast_only": 5,
+   "fixed_deep": 4,
+   "fl_heuristic": 4
+  },
+  "f1_other_targets": {},
+  "f1_per_column": {
+   "arm_summary.csv|realized_invalid_tick_ratio|realized_invalid_tick_ratio": {
+    "key": "fast_only/fast_only/1.0/11.0/P1/ref",
+    "max_abs": 0.0009929390997352044,
+    "ours": "0.11020683117922499",
+    "rows": 1,
+    "theirs": "0.10921389207948978"
+   },
+   "runs.csv|conflict_plans|realized_conflict_plans": {
+    "key": "v4p1_fixed_deep_k1.0_s11_r2539",
+    "max_abs": 1.0,
+    "ours": "21",
+    "rows": 2,
+    "theirs": "20"
+   },
+   "runs.csv|eir_invalid_ticks|realized_invalid_ticks": {
+    "key": "v4p1_fast_only_k1.0_s11_r1792",
+    "max_abs": 9.0,
+    "ours": "94",
+    "rows": 1,
+    "theirs": "85"
+   },
+   "runs.csv|eir|realized_invalid_tick_ratio": {
+    "key": "v4p1_fast_only_k1.0_s11_r1792",
+    "max_abs": 0.021844660194174775,
+    "ours": "0.22815533980582525",
+    "rows": 1,
+    "theirs": "0.20631067961165048"
+   },
+   "runs.csv|log_censored_plans|realized_log_censored_plans": {
+    "key": "v4p1_event_triggered_v2_hb2.0_k1.0_s11_r23659",
+    "max_abs": 10.0,
+    "ours": "6",
+    "rows": 19,
+    "theirs": "16"
+   },
+   "runs.csv|misses|realized_misses": {
+    "key": "v4p1_fixed_deep_k1.0_s11_r2539",
+    "max_abs": 1.0,
+    "ours": "21",
+    "rows": 2,
+    "theirs": "20"
+   }
+  },
+  "f1_rows": 26,
+  "f1_runs_csv_jobs": 19,
+  "f1_runs_per_arm": {
+   "event_triggered": 6,
+   "fast_only": 5,
+   "fixed_deep": 4,
+   "fl_heuristic": 4
+  },
+  "r1792_recomputed": {
+   "eir": "0.22815533980582525",
+   "eir_f1": "0.20631067961165048",
+   "eir_invalid_ticks": "94",
+   "eir_invalid_ticks_f1": "85",
+   "f1_plans": "1",
+   "track_ticks": "412"
+  },
+  "r1792_registered": {
+   "analysis_use": "True",
+   "protocol_arm": "fast_only",
+   "realized_invalid_tick_ratio": "0.20631067961165048",
+   "realized_invalid_ticks": "85",
+   "route_id": "1792"
+  },
+  "r1792_rows": [
+   {
+    "cause": "F1",
+    "field": "conflict_plans",
+    "ours": "17",
+    "scope": "record",
+    "their_field": "realized_conflict_plans",
+    "theirs": "16"
+   },
+   {
+    "cause": "F1",
+    "field": "misses",
+    "ours": "17",
+    "scope": "record",
+    "their_field": "realized_misses",
+    "theirs": "16"
+   },
+   {
+    "cause": "F1",
+    "field": "eir_invalid_ticks",
+    "ours": "94",
+    "scope": "record",
+    "their_field": "realized_invalid_ticks",
+    "theirs": "85"
+   },
+   {
+    "cause": "F1",
+    "field": "eir",
+    "ours": "0.22815533980582525",
+    "scope": "analysis",
+    "their_field": "realized_invalid_tick_ratio",
+    "theirs": "0.20631067961165048"
+   },
+   {
+    "cause": "F1",
+    "field": "log_censored_plans",
+    "ours": "2",
+    "scope": "record",
+    "their_field": "realized_log_censored_plans",
+    "theirs": "3"
+   }
+  ],
+  "unclassified_by_column": {
+   "runner result|result.action_age_p50_s": 1,
+   "runner result|result.fallback_tick_ratio": 1,
+   "runs.csv|action_age_mean_s": 1,
+   "runs.csv|action_age_p50_s": 1,
+   "runs.csv|action_age_p95_s": 1,
+   "runs.csv|choice_epochs": 1,
+   "runs.csv|commits": 8,
+   "runs.csv|committed_plans": 1,
+   "runs.csv|cuda_s_per_s": 1,
+   "runs.csv|deadline_miss_ratio": 2,
+   "runs.csv|deadline_miss_ratio_after_first_commit": 1,
+   "runs.csv|decision_epochs": 1,
+   "runs.csv|dmr": 1,
+   "runs.csv|dmr_ticks": 1,
+   "runs.csv|expired_ratio": 1,
+   "runs.csv|expired_ratio_after_first_commit": 1,
+   "runs.csv|fallback_by_reason": 1,
+   "runs.csv|fallback_episodes": 1,
+   "runs.csv|fallback_ticks": 1,
+   "runs.csv|first_commit_s": 1,
+   "runs.csv|first_tick_s": 1,
+   "runs.csv|gpu_busy_in_span_s": 1,
+   "runs.csv|gpu_busy_recomputed_s": 32,
+   "runs.csv|gpu_usage": 1,
+   "runs.csv|gpu_usage_recomputed": 32,
+   "runs.csv|last_tick_s": 1,
+   "runs.csv|max_age_s": 1,
+   "runs.csv|p_both": 1,
+   "runs.csv|realized_available": 1,
+   "runs.csv|realized_conflict_plans": 1,
+   "runs.csv|realized_invalid_tick_ratio": 1,
+   "runs.csv|realized_invalid_ticks": 1,
+   "runs.csv|realized_log_censored_plans": 1,
+   "runs.csv|realized_misses": 1,
+   "runs.csv|realized_v0_plans": 1,
+   "runs.csv|shield_epochs": 1,
+   "runs.csv|sim_span_s": 1,
+   "runs.csv|ticks": 1,
+   "runs.csv|ticks_after_first_commit": 1,
+   "runs.csv|track_ticks": 1
+  },
+  "unclassified_other_by_column": {
+   "runs.csv|commits": 7,
+   "runs.csv|gpu_busy_recomputed_s": 31,
+   "runs.csv|gpu_usage_recomputed": 31
+  },
+  "unclassified_other_runs": 31,
+  "unclassified_r23659": 48,
+  "unclassified_timed_out_job_by_target": {
+   "runner result": 2,
+   "runs.csv": 39
+  }
+ },
+ "snapshot_plans": {
+  "by_cause": {
+   "F1": 40,
+   "F3": 1
+  },
+  "capture_offset_above_1e9": 55875,
+  "capture_offset_above_1e9_frac": 0.982124024467412,
+  "capture_offset_max": 2.9727816581726074e-06,
+  "capture_offset_median": 5.908310356517177e-07,
+  "capture_offset_min": 7.450580569168253e-10,
+  "capture_offset_negative": 0,
+  "cause_plans_rows": 41,
+  "f1_capture_grid_offset_s": [
+   1.3932585751774695e-07,
+   1.1764466734121015e-06
+  ],
+  "f1_conflict_miss_ours/registered": {
+   "True/": 2
+  },
+  "f1_plans": 40,
+  "f1_run_dirs": 19,
+  "f1_sample_minus_last_row_s": [
+   1.3932585751774695e-07,
+   1.1764466734121015e-06
+  ],
+  "f1_status_transitions": {
+   "clear->log_censored": 38,
+   "conflict->log_censored": 2
+  },
+  "f1_t_last_row_on_grid": true,
+  "plans": 56892
+ }
+}

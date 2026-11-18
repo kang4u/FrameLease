@@ -1,0 +1,49 @@
+{
+ "A": {
+  "rc": [
+   0,
+   0
+  ],
+  "newly": [
+   "_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_analyze_v4.py', 'framelease_v4/analysis/tests/test_figures_tables.py', 'framelease_v4/analysis/tests/test_prop1_coverage.py', 'framelease_v4/analysis/tests/test_verify_independent.py', 'framelease_v4/analysis/verify_independent.py']",
+   "PROTOCOL c8acbff7f92641bef15c62b622653e794441775a5c1b1ed9a41b6fa8d3f83df4 MANIFEST 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033 221 files; newly cited manifest files: ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']"
+  ],
+  "verify": "manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK"
+ },
+ "D": {
+  "rc": 1,
+  "stop": [
+   "STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/analysis/commit_audit.py']"
+  ],
+  "unchanged": true
+ },
+ "E": {
+  "rc": 95,
+  "note": [
+   "apply_locked: sealed, but registration.py --verify does not read manifest OK and both seals OK"
+  ]
+ },
+ "F2": {
+  "rc": 137,
+  "note": [
+   "apply_locked: PROTOCOL.md holds the entry but is not sealed; the rewritten manifest (the one the entry names) is kept: seal it now under the lock (RUNBOOK.md Sec. 1)"
+  ],
+  "hand_seal_rc": 0,
+  "verify": "manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK",
+  "sealed_manifest_is_the_one_the_entry_names": true
+ },
+ "G_applier_alone_utc": [
+  "STOP: the local time zone is UTC+0000, not Beijing time (+0800), which the entry states"
+ ],
+ "G_wrapper": {
+  "rc": 0,
+  "title": "**Amendment A10, 2026-11-15 09:04 (Beijing time): registrati",
+  "local_now": "2026-11-15 09:05"
+ },
+ "H": {
+  "A10_rc": 0,
+  "A11_check": [
+   "STOP: template problem: ['* **G3 P2 data manifest** (2026-11-15 12:00, Beijing time). Probe.'] / starts '**Amendment A11, {{datetime}} (Beijing t' / anchor phrase 0 times"
+  ]
+ }
+}

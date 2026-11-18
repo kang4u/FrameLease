@@ -1,0 +1,45 @@
+A 0 tree seal: PASS manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+A 1 A10 check: PASS exit 0
+A 2 A10 apply: PASS PROTOCOL 9d105aa63fa21a93d8050c93f42621f9a3dbe9f415f41c1a5bf520d2e375f506 MANIFEST 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033 221 files; newly cited manifest files: ['framelease_v4/analysis/analyze_v4.py', 'framelease_v4/analysis/figures_tables.py', 'framelease_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_analyze_v4.py', 'framelease_v4/analysis/tests/tes
+A 3 seal after A10: PASS manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+A 4 parsers after A10: PASS analyze_v4.py cited by A10; G8 registration waits []
+A 4b review of the R7B fixes: PASS a stand-in in the tree
+A 5 A11 check (phase baseline not refreshed after A10): PASS exit 0
+A 6 A11 apply: PASS PROTOCOL 96d905a8e0d54340f467ee1e8a67f1123588ba7144da98f483b055f1df3b17a3 MANIFEST 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033 221 files; newly cited manifest files: ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']
+A 7 seal after A11: PASS manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+A 8 parsers after A11: PASS {"framelease_v4/analysis/analyze_v4.py": "A10", "framelease_v4/analysis/verify_table1_extra.py": "A11", "framelease_v4/analysis/tests/test_verify_table1_extra.py": "A11"}
+A 9 diff written: PASS 457 diff lines
+B 1 A11 before A10 stops: PASS STOP: in-place text found 0 times: '**Verification.** Before any number enters the paper, an independent session rec'
+C 1 A10 apply: PASS exit 0
+C 2 A11 without the review file stops at the pre-check: PASS exit 1; STOP: placeholders without a value (unknown kind, missing file, or a test log the spec does not run): ['sha256:outputs/framelease_v4/build/R7B/rereview/REVIEW.m; state unchanged True; seal check: manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+D 1 apply_locked.sh A10: PASS apply_locked: exit 0 (output /tmp/A10A11/recheck1/sim_tree/treeD/outputs/framelease_v4/amendment_a10/apply.out)
+D 2 killed after --write-manifest: the wrapper restores the sealed manifest: PASS exit 137; state unchanged True; seal check: manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+D 3 A11 again: sealed: PASS exit 0; manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+E 1 append framelease_v4/analysis/commit_audit.py (P1 baseline False, phase baseline True): PASS check exit 1, wrapper exit 1; STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/analysis/commit_audit.py']
+E 2 append framelease_v4/protocol/p3_rl.py (P1 baseline False, phase baseline True): PASS check exit 1, wrapper exit 1; STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/protocol/p3_rl.py']
+E 3 remove framelease_v4/arms_ext/tests/test_drift_guard.py (P1 baseline False, phase baseline True): PASS check exit 1, wrapper exit 1; STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/arms_ext/tests/test_drift_guard.py']
+E 4 remove framelease_v4/rl/RL_PROTOCOL.md (P1 baseline True, phase baseline True): PASS check exit 1, wrapper exit 1; STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/rl/RL_PROTOCOL.md']
+E 5 every file restored: A10 sealed: PASS apply_locked: exit 0 (output /tmp/A10A11/recheck1/sim_tree/treeE/outputs/framelease_v4/amendment_a10/apply.out)
+F 1 killed before --seal: the wrapper seals with the manifest the entry names (exit 94): PASS exit 94; entry names 1ea365bc6e0f, manifest now 1ea365bc6e0f, before 4bfe7451a41b; manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+F 2 registered file changed after --write-manifest: exit 95: PASS apply_locked: exit 95 (output /tmp/A10A11/recheck1/sim_tree/treeF2/outputs/framelease_v4/amendment_a10/apply.out)
+G 1 TZ=UTC: the applier alone stops: PASS STOP: the local time zone is UTC+0000, not Beijing time (+0800), which the entry states
+G 2 framelease_v4/.PROTOCOL.md.entrytmp exists: wrapper exit 96, check stops: PASS wrapper exit 96, check exit 1
+G 3 outputs/framelease_v4/phase_driver/protocol_txn.json exists: wrapper exit 96, check stops: PASS wrapper exit 96, check exit 1
+G 4 outputs/framelease_v4/phase_driver/ALERT.txt exists: wrapper exit 96, check stops: PASS wrapper exit 96, check exit 1
+G 5 outputs/framelease_v4/p1_driver/protocol_txn.json exists: wrapper exit 96, check stops: PASS wrapper exit 96, check exit 1
+G 6 outputs/framelease_v4/p1_driver/ALERT.txt exists: wrapper exit 96, check stops: PASS wrapper exit 96, check exit 1
+G 7 caller TZ=UTC: the wrapper stamps Beijing time: PASS exit 0; title '**Amendment A10, 2026-11-15 11:18 (Beijing time): registrati'
+G 8 template line '* **G3 P2 data manifest** (2026-11-15 12': check stops: PASS STOP: template problem: ['* **G3 P2 data manifest** (2026-11-15 12:00, Beijing time). Probe.'] / starts '**Amendment A11, {{datetime}} (Beijing t' / a
+G 9 template line '**Amendment A12, 2026-11-15 12:00 (Beiji': check stops: PASS STOP: template problem: ['**Amendment A12, 2026-11-15 12:00 (Beijing time): probe.**'] / starts '**Amendment A11, {{datetime}} (Beijing t' / anchor ph
+G 10 template line '**Phase gates (P2-P7, FULL).**': check stops: PASS STOP: template problem: ['**Phase gates (P2-P7, FULL).**'] / starts '**Amendment A11, {{datetime}} (Beijing t' / anchor phrase 0 times
+G 11 template line '* Probe. Each amendment gets the date an': check stops: PASS STOP: template problem: [] / starts '**Amendment A11, {{datetime}} (Beijing t' / anchor phrase 1 times
+G 12 template restored: check passes: PASS exit 0
+H 1 the seal impossible after the kill: rolled back (exit 93), the sealed state of before: PASS exit 93; manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+H 2 PROTOCOL.md edited by another hand before the kill: kept, rolled back (exit 93): PASS exit 93; manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+H 3a seal impossible and the roll-back stopped at the manifest: exit 92, "ROLL BACK INCOMPLETE", seal matching True: PASS exit 92; seal matches True; ['apply_locked: ROLL BACK INCOMPLETE: a copy failed part-way; SEAL.sha256 matches PROTOCOL.md and MANIFEST.sha256 now; compare every file with the copies in /tmp/A10A11/recheck1/sim_tree/treeH3a/outputs/framelease_v4/amendment_a10/attempt_20261115T111930_377765']
+H 3b seal impossible and the roll-back stopped at the first file: exit 92, "ROLL BACK FAILED", seal matching False: PASS exit 92; seal matches False; ['apply_locked: ROLL BACK FAILED: SEAL.sha256 does not match PROTOCOL.md and MANIFEST.sha256; restore the copies in /tmp/A10A11/recheck1/sim_tree/treeH3b/outputs/framelease_v4/amendment_a10/attempt_20261115T111943_377913 by hand at once']
+H 4 exit 94, then the wrapper again: STOP (exit 1); two attempt directories, the first with the sealed files before A10 and both baselines: PASS exit 94 then 1; ['attempt_20261115T111956_378033', 'attempt_20261115T112009_378147']; ['MANIFEST.sha256', 'PROTOCOL.md', 'REGISTRATION.json', 'SEAL.sha256', 'apply.out', 'p1_registered_baseline.json', 'phase_registered_baseline.json', 'verify.out']
+H 4b post_check A10 exit 3, the refresh adds exactly the 8 A10 files, post_check exit 0, gate_g1: PASS post_check 3 -> 0; refresh {"mode": "refresh", "result": {"files": 207, "new": ["framelease_v4/analysis/analyze_v4.py", "framelease_v4/analysis/figures_tables.py", "framelease_v4/analysis; g1 {'mode': 'g1', 'result': 'done'}
+H 5 an empty file in scope sealed by the applier before this fix pass: post_check fails: PASS wrapper exit 0; post_check exit 1: FAIL: the phase driver registers ['framelease_v4/analysis/analyze_v4.py', 'framelease_v4/analysis/figures_tables.py', 'framelease_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_ana
+ALL EXPECTED
+exit 0

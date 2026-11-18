@@ -1,0 +1,324 @@
+{
+ "alert": null,
+ "attention": [],
+ "current_gate": "G7",
+ "disk_free_gib": 99.58,
+ "driver": {
+  "cycle": 33,
+  "interval_s": 300.0,
+  "mode": "run",
+  "pid": 601439,
+  "script": "/home/kang/Desktop/DAC/framelease_v4/protocol/phase_driver.py",
+  "started": "2026-11-15T20:22:17+0800",
+  "status": "stopped"
+ },
+ "files": {
+  "alert": "outputs/framelease_v4/phase_driver/ALERT.txt",
+  "decision": "outputs/framelease_v4/phase_driver/D1_DECISION.json",
+  "done": "outputs/framelease_v4/phase_driver/PHASES_DONE.json",
+  "log": "outputs/framelease_v4/phase_driver/driver.log",
+  "p2_stopped": "outputs/framelease_v4/phase_driver/P2_STOPPED.json",
+  "txn": "outputs/framelease_v4/phase_driver/protocol_txn.json"
+ },
+ "gates": {
+  "G0": {
+   "entry": null,
+   "files": {},
+   "note": "passed (the G1 entry exists)",
+   "status": "passed",
+   "times": {
+    "passed": "2026-11-15T06:42:45+0800"
+   }
+  },
+  "G1": {
+   "entry": {
+    "line": 2762,
+    "when": "2026-11-15 06:42"
+   },
+   "files": {
+    "d1_summary_sha256": "d8c0a76eba80c0c5d4faf93346146ff3db59d162d27636c2411cd206a09a2fb3",
+    "decision": "outputs/framelease_v4/phase_driver/D1_DECISION.json",
+    "decision_value": "continue",
+    "sha256": "95f3f9903900ed2e182f88964173129b7d1c5504179cb8f7e19ee88d99cc264e"
+   },
+   "note": "D1 = continue, recorded",
+   "status": "passed",
+   "times": {
+    "recorded": "2026-11-15T06:42:55+0800"
+   }
+  },
+  "G2": {
+   "entry": {
+    "line": 2789,
+    "when": "2026-11-15 06:43"
+   },
+   "files": {
+    "check": "outputs/framelease_v4/p2_jobs/FULL/b10_rl_data.check.json",
+    "check_sha256": "b7b5abc98d9c9dde88affce7d74230d430f43048d0f2489c2f65b2b563b11fe1",
+    "copied": "2026-11-15T06:43:17+0800",
+    "copied_to": "outputs/framelease_v4/queue_p2/jobs.d/b10_rl_data.jsonl",
+    "generated": "2026-11-15T06:43:07+0800",
+    "job_file": "outputs/framelease_v4/p2_jobs/FULL/b10_rl_data.jsonl",
+    "sha256": "7974792f11ce322f192230e8c871228b44828db988bfcb6251cdd04a18670089",
+    "stage_spec": "outputs/framelease_v4/p2_jobs/FULL/b10_rl_data.stage.json",
+    "stage_spec_sha256": "7ffd399284486b529e416a416ec27885bc6ceb6ecfb12c7bc72c1d465d00a9be",
+    "tuning_freeze_sha256": "652fcbdbf0a6adb498aa0691fcaaffb097fcd680b4bf40235a28639aed69b930"
+   },
+   "note": "recorded and queued in outputs/framelease_v4/queue_p2",
+   "status": "passed",
+   "times": {}
+  },
+  "G3": {
+   "entry": {
+    "line": 2809,
+    "when": "2026-11-15 20:13"
+   },
+   "files": {},
+   "note": "recorded",
+   "status": "passed",
+   "times": {}
+  },
+  "G4": {
+   "code": {
+    "files": 26,
+    "missing": [],
+    "not_checked": [],
+    "registered": true,
+    "unregistered": []
+   },
+   "entry": {
+    "line": 2823,
+    "when": "2026-11-15 20:28"
+   },
+   "files": {
+    "calibration": "outputs/framelease_v4/build/phase_driver/p3_calibration.json",
+    "calibration_sha256": "36b42cb9a01cf95d6394a357b3bd16196b03b456cc8678d9984bdf43d4c7539e",
+    "n_jobs": 10,
+    "n_jobs_note": null,
+    "options": {
+     "distill_shortfall": "deploy_best"
+    },
+    "options_file": "outputs/framelease_v4/phase_driver/P3_OPEN_CASES.json",
+    "rl_freeze": "outputs/framelease_v4/rl_freeze/rl_freeze.json",
+    "sha256": "a9e08c1931ea8cc6ab0f74111fa8bfb6a0b043ed44606fe0e7657c2d254db31d",
+    "workers": {
+     "bandit": 10,
+     "fqi": 10,
+     "fqi_nolease": 10
+    }
+   },
+   "note": "RL freeze recorded",
+   "status": "passed",
+   "times": {}
+  },
+  "G5": {
+   "code": {
+    "files": 1,
+    "missing": [],
+    "not_checked": [],
+    "registered": true,
+    "unregistered": []
+   },
+   "entry": {
+    "line": 2858,
+    "when": "2026-11-15 20:42"
+   },
+   "files": {
+    "s1": {
+     "report": "outputs/framelease_v4/stress/s1_registered_20261115T124141Z.json",
+     "sha256": "c04d06a20e9686878fb0a6c91dcd5b33cc77cbee2ed14d034f8b6b03f2fc5673"
+    },
+    "s2": {
+     "report": "outputs/framelease_v4/stress/s2_registered_20261115T123104Z.json",
+     "sha256": "80b3c1b046febeed565544cc30a526683b6e43328e79fd1397629f4ad6d7ef12"
+    },
+    "s2_relative": {
+     "report": "outputs/framelease_v4/stress/s2_relative_registered_20261115T123118Z.json",
+     "sha256": "53f2f89d691e0ef305a7acc0023aabd15a8d0d5926a5ef5279803f30ca23a92a"
+    },
+    "s3": {
+     "report": "outputs/framelease_v4/stress/s3_registered_20261115T122819Z.json",
+     "sha256": "90b0393cbfef9ab76821271134479d7dc80aa645042cf623f43e26f54a98c6d4"
+    }
+   },
+   "note": "stress reports recorded",
+   "status": "passed",
+   "times": {}
+  },
+  "G6": {
+   "code": {
+    "files": 14,
+    "missing": [],
+    "not_checked": [],
+    "registered": true,
+    "unregistered": []
+   },
+   "entry": {
+    "line": 2882,
+    "when": "2026-11-15 20:43"
+   },
+   "files": {
+    "index": "outputs/framelease_v4/test_jobs/FULL/index.json",
+    "index_sha256": "34c528abc28688b816f2704bd1630ecf8dca15706d66ccf8ca933cd4e228a9ce",
+    "manifest": "outputs/framelease_v4/test_freeze/MANIFEST.sha256",
+    "manifest_sha256": "69aae833d875d64003b3729ea83a386bcc0ce61f23da767b9cc03103763b2a93",
+    "record": "outputs/framelease_v4/test_freeze/test_freeze.json",
+    "sha256": "e9e2d309fefd49209d1303356328049f8c0e89534f1b0cfaffffea82ed1ba633"
+   },
+   "note": "test freeze recorded; P4-P6 queued in outputs/framelease_v4/queue_p4, runner launched",
+   "progress": {
+    "final": 28,
+    "jobs": 632,
+    "pending": 604
+   },
+   "status": "passed",
+   "times": {}
+  },
+  "G7": {
+   "entry": null,
+   "files": {},
+   "note": "28 of 632 P4-P6 jobs final (job health only, PROTOCOL Sec. 9.11)",
+   "progress": {
+    "checked": "2026-11-15T23:14:02+0800",
+    "final": 28,
+    "jobs": 632,
+    "pause_file": false,
+    "pending": 604,
+    "per_job_file": {
+     "b11_ti_main.jsonl": {
+      "final": 28,
+      "jobs": 308,
+      "registered": true,
+      "tier": 3
+     },
+     "b12_f3_k.jsonl": {
+      "final": 0,
+      "jobs": 176,
+      "registered": true,
+      "tier": 4
+     },
+     "b13_a_lease.jsonl": {
+      "final": 0,
+      "jobs": 22,
+      "registered": true,
+      "tier": 5
+     },
+     "b14_a_rl.jsonl": {
+      "final": 0,
+      "jobs": 44,
+      "registered": true,
+      "tier": 5
+     },
+     "b15_s_seed12.jsonl": {
+      "final": 0,
+      "jobs": 60,
+      "registered": true,
+      "tier": 6
+     },
+     "b16_s_risk.jsonl": {
+      "final": 0,
+      "jobs": 22,
+      "registered": true,
+      "tier": 6
+     }
+    },
+    "runner_alive": true,
+    "stop_file": false
+   },
+   "status": "running",
+   "times": {
+    "started": "2026-11-15T20:43:59+0800"
+   }
+  },
+  "G8": {
+   "entry": null,
+   "files": {},
+   "note": "waits for G7",
+   "status": "blocked",
+   "times": {}
+  }
+ },
+ "priority": {
+  "closed_loop_active": true,
+  "tool_prefix": [
+   "taskset",
+   "-c",
+   "12-15",
+   "nice",
+   "-n",
+   "19",
+   "ionice",
+   "-c2",
+   "-n7"
+  ]
+ },
+ "queue": {
+  "final": 28,
+  "job_files": {
+   "b11_ti_main.jsonl": {
+    "final": 28,
+    "jobs": 308,
+    "sha256": "54e551df44f30a02277e91849f1e40390cd77ffca7e59256edc98b3f5cd4a6df"
+   },
+   "b12_f3_k.jsonl": {
+    "final": 0,
+    "jobs": 176,
+    "sha256": "8ba8a4e5f6874860f9fefae81d836ccbdd297ac6a801a67663d6a5322507311b"
+   },
+   "b13_a_lease.jsonl": {
+    "final": 0,
+    "jobs": 22,
+    "sha256": "6b906bc220d74fdf8fb5bfce287465e608fd378b22869af6d188ec411d37bd2a"
+   },
+   "b14_a_rl.jsonl": {
+    "final": 0,
+    "jobs": 44,
+    "sha256": "a73491e47ab5cb3fcba868a0e5e6bf7f34c5ad6a09ea3fde8cd11d18ef623e31"
+   },
+   "b15_s_seed12.jsonl": {
+    "final": 0,
+    "jobs": 60,
+    "sha256": "bd77e5ed172bc834b63a4fa188cae97f92047f8072a45b92e738aad52cffd207"
+   },
+   "b16_s_risk.jsonl": {
+    "final": 0,
+    "jobs": 22,
+    "sha256": "83fe874f000340d6ee15509c35c7829bd03a6612a75a181e82c0b26ab36a156b"
+   }
+  },
+  "jobs": 632,
+  "last_runner_exit": null,
+  "last_runner_start": {
+   "pid": 603070,
+   "utc": "2026-11-15T12:43:57+00:00"
+  },
+  "path": "outputs/framelease_v4/queue_p4",
+  "pause_file": false,
+  "pending": 604,
+  "runner_alive": true,
+  "runner_pid": 603070,
+  "stop_file": false
+ },
+ "registered_baseline": {
+  "file": "outputs/framelease_v4/phase_driver/registered_baseline.json",
+  "from_manifest_sha256": "0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3",
+  "registered_files": 207,
+  "saved": true,
+  "seeded_from": "outputs/framelease_v4/p1_driver/registered_baseline.json",
+  "updated": "2026-11-15T20:43:55+0800"
+ },
+ "registration": {
+  "manifest": "outputs/framelease_v4/registration/MANIFEST.sha256",
+  "manifest_files": 221,
+  "manifest_sha256": "0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3",
+  "protocol": "framelease_v4/PROTOCOL.md",
+  "protocol_sha256": "e51c0ceb19dcbf868a5af4a049993e9e9aad793fb5dc3d1d2c13e3dd87fabcca",
+  "seal_manifest": "0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3",
+  "seal_ok": true,
+  "seal_protocol": "e51c0ceb19dcbf868a5af4a049993e9e9aad793fb5dc3d1d2c13e3dd87fabcca"
+ },
+ "schema": "framelease_v4.phase_driver_state/1",
+ "tool": null,
+ "updated": "2026-11-15T23:14:15+0800",
+ "variant": "FULL"
+}

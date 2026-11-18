@@ -1,0 +1,4 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/AMEND3/a10r7b/sim_tree/apply_entry_scratch_treeB.py outputs/framelease_v4/build/AMEND2/a10r7b/A11_spec.json
+(exit 1)
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: in-place text found 0 times: '**Verification.** Before any number enters the paper, an independent session rec'

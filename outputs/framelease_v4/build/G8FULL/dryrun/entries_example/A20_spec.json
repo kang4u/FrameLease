@@ -1,0 +1,12 @@
+{
+ "name": "A20",
+ "template": "outputs/framelease_v4/build/G8FULL/entries/A20_entry.md",
+ "tests": [],
+ "inplace": [],
+ "must_equal": {
+  "outputs/framelease_v4/verification/final_20261117T161912_table1_extra/SHA256SUMS": "e5bb585543574d421523710a39fcfa60e1273592963e590945c7d6c79f1f28d9",
+  "outputs/framelease_v4/verification/final_20261117T161912_table1_extra/table1_extra.json": "4b183daab079f3469f56bafd0ff0f53b35fdb1529eb06b693163a13b88d228f5",
+  "outputs/framelease_v4/verification/final_20261117T161912_table1_extra_f1_class.json": "429d9d541401c0f1c809e3068f029b94ffcb3808b6b6c9176800b2508fcacc26"
+ },
+ "max_new_registered": 0
+}

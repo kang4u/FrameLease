@@ -1,0 +1,62 @@
+{
+ "target_in_p1_baseline": false,
+ "target_in_phase_baseline": true,
+ "phase_only_registered_files": 46,
+ "verify_before": {
+  "manifest_ok": false,
+  "seal_lines": [
+   [
+    "framelease_v4/PROTOCOL.md",
+    "OK"
+   ],
+   [
+    "outputs/framelease_v4/registration/MANIFEST.sha256",
+    "OK"
+   ]
+  ],
+  "all_ok": false,
+  "text": "manifest: 1 files differ: [('framelease_v4/analysis/commit_audit.py', '7439a4eac0986cad6a25b7395975a0411b7483944a988d68dabb656bd2544ec7', '63e9952c65133e34e2dc30bb68e451d1db1685143b2055ef3b53cb703bebe273')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK"
+ },
+ "check": [
+  "check: pre-checks passed"
+ ],
+ "apply_rc": 0,
+ "verify_after": {
+  "manifest_ok": true,
+  "seal_lines": [
+   [
+    "framelease_v4/PROTOCOL.md",
+    "OK"
+   ],
+   [
+    "outputs/framelease_v4/registration/MANIFEST.sha256",
+    "OK"
+   ]
+  ],
+  "all_ok": true,
+  "text": "manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK"
+ },
+ "sealed_manifest_has_new_sha": true,
+ "phase_refresh": {
+  "added": [
+   "framelease_v4/analysis/analyze_v4.py",
+   "framelease_v4/analysis/figures_tables.py",
+   "framelease_v4/analysis/prop1_coverage.py",
+   "framelease_v4/analysis/tests/test_analyze_v4.py",
+   "framelease_v4/analysis/tests/test_figures_tables.py",
+   "framelease_v4/analysis/tests/test_prop1_coverage.py",
+   "framelease_v4/analysis/tests/test_verify_independent.py",
+   "framelease_v4/analysis/verify_independent.py"
+  ],
+  "changed_sha256_adopted": [
+   "framelease_v4/analysis/commit_audit.py"
+  ]
+ },
+ "control_p1_file": {
+  "rc": 1,
+  "stop": [
+   "STOP: registered files differ from the sealed manifest: ['framelease_v4/arms/realized.py']"
+  ],
+  "unchanged": true
+ }
+}

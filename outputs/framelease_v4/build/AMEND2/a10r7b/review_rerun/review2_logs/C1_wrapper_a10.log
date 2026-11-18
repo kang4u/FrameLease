@@ -1,0 +1,276 @@
+(exit 0, 15.9 s)
+apply_locked: exit 0 (output /tmp/A10A11/applier/treeC/outputs/framelease_v4/amendment_a10/apply.out)
+
+--- apply.out
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeC/outputs/framelease_v4/amendment_a10/attempt_20261115T104827_364451
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/A10A11/applier/treeC/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+manifest difference: new [] / left [] / changed []
+composed PROTOCOL.md sha256 0402e972e5eed03bc6dc374318a66f123efcef672048d56f2ce40e2856333893
+registration --seal -> 0 | sealed: PROTOCOL.md 0402e972e5eed03bc6dc374318a66f123efcef672048d56f2ce40e2856333893, manifest 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+PROTOCOL 0402e972e5eed03bc6dc374318a66f123efcef672048d56f2ce40e2856333893 MANIFEST 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033 221 files; newly cited manifest files: ['framelease_v4/analysis/analyze_v4.py', 'framelease_v4/analysis/figures_tables.py', 'framelease_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_analyze_v4.py', 'framelease_v4/analysis/tests/test_figures_tables.py', 'framelease_v4/analysis/tests/test_prop1_coverage.py', 'framelease_v4/analysis/tests/test_verify_independent.py', 'framelease_v4/analysis/verify_independent.py']
+**Amendment A10, 2026-11-15 10:48 (Beijing time): registration of the analysis code: the analysis script, the
+Proposition-1 coverage, the figure and table generator and the independent verification (Sec. 9.12; no effect on any
+run, job file, selection or criterion).**
+* Cause. Sec. 9.12 requires the sha256 of the analysis code in Sec. 13 before the analysis freeze. Amendment A3
+  registers the aggregator (GAP_AUDIT rows R-1 to R-3: `framelease_v4/analysis/__init__.py`, `aggregate_v4.py`,
+  `commit_audit.py`, `extra_metrics.py`, `interim_guard.py`, `manipulation.py`) and leaves the analysis script, the
+  Proposition-1 coverage and the figure and table generators to their own entry. The phase driver (operational
+  addition) holds the analysis freeze, gate G8, until an amendment cites the sha256 of `analyze_v4.py`. Each file
+  below was built against `outputs/framelease_v4/p1_driver/GAP_AUDIT.md` Sec. 3.7 and reviewed independently
+  (`outputs/framelease_v4/build/<item>/review/REVIEW.md`): R4 GO_WITH_FIXES, R5 GO, R6 GO_WITH_FIXES, R7
+  GO_WITH_FIXES. Every must-fix item is applied; the second step of R7 must-fix 4 is replaced by the verification
+  scope rule below. This entry registers the four files and their tests. From this entry on, a change of any of them
+  is an amendment.
+* Change: the files, their roles and the PROTOCOL sections they implement.
+
+  | file | role | PROTOCOL | GAP_AUDIT | review |
+  |---|---|---|---|---|
+  | `framelease_v4/analysis/analyze_v4.py` | the registered analysis: the families H1, S-coll, S-dmr, H2, H3, F3, H4-cl and RL-abl with `sign_flip_test`, `bootstrap_ci`, `holm` and `label_directional` of `framelease_v2/analyze_closed_loop.py` (its sha256 checked against Sec. 12.2), the uncorrected secondary rows, the descriptive contrasts (noise floor, seed 12, RL gain by ability, kappa and seed, the depth contrast of Fig. 1, `fl_risk`), per scenario and per ability, the per-condition columns of Table I, Fig. 3 and Table II-A, the sensitivity, H4 offline, H5, the overhead quantities of Table II-B, the manipulation checks and the missing data; the Sec. 9.11 guard on the command line and in the Python API | 6, 7.2-7.6, 9.1-9.13 | R-4 | `build/R4/review/REVIEW.md`: GO_WITH_FIXES; must-fix 1-2 and should-fix 1-5 applied |
+  | `framelease_v4/analysis/prop1_coverage.py` | Proposition-1 coverage of the deployed E* (L* of the cited tuning freeze, and the `fl_risk` point when L* = B0) on the 32 VAL clips: per-tau and whole-path coverage per class from `framelease_v3/envelopes.py` `clip_samples`, `iso_inside` and `coverage_summary` on the merged 37-clip view; clip bootstrap, 2000 resamples, seed 20261109; checks of the inputs, the envelope link, the gate2 reproduction and the pooled counts | 1.3, 4.3, 7.4, 9.13 | R-5 | `build/R5/review/REVIEW.md`: GO; should-fix S1-S5 not applied (below), S6 is this entry |
+  | `framelease_v4/analysis/figures_tables.py` | Fig. 1 (with the scenario-type companion), Fig. 3, Table I, Table II-A, Table II-B and the training-route operating-point table with their captions, from the analysis outputs, the offline outputs, the coverage, the RL freeze, the stress reports and the D1 summary only; every shown number in `numbers.json` with its source file, field and row; the Sec. 9.11 permission check of every source; 'registered' only when every used source is registered | 4.8, 7.1-7.6, 9.8, 9.9, 9.11, 9.13 | R-6 | `build/R6/review/REVIEW.md`: GO_WITH_FIXES; must-fix 1-4 applied, should-fix items applied except those named below |
+  | `framelease_v4/analysis/verify_independent.py` | the Sec. 9.12 verification: H1 and its findings, S-coll, the secondary SR, RC and infractions/km contrasts and the Table I cells DS (with its CI), SR, RC, collisions/km (route mean and pooled) and infractions/km recomputed from the job files, the runner's final records and the run directories they name; standard library and numpy only (it imports no project module and reads no analysis source); compared with the outputs of `aggregate_v4.py` and `analyze_v4.py` under tolerances fixed in its docstring | 6.1, 9.1-9.3, 9.8, 9.11, 9.12 | R-7 | `build/R7/review/REVIEW.md`: GO_WITH_FIXES; must-fix 1-3 and step 1 of must-fix 4 applied; should-fix items applied except the comparison with `numbers.json` |
+
+* Use of the registered files (fixed by this entry).
+  1. Analysis. After the analysis freeze is entered, `analyze_v4.py` runs on the aggregation of the freeze
+     (`outputs/framelease_v4/analysis/final_<stamp>/`) with `--analysis-freeze`, `--required-job-files` (the tier 3-6
+     job files of the test freeze), `--rl-freeze`, `--offline` (`outputs/framelease_v4/offline_ablation`, written before
+     registration) and `--s3` (the registered S3 report), into `final_<stamp>/analysis/`. Its output counts as
+     registered only when every condition the script states holds (the registered route table and settings, aggregations
+     as the only inputs, the record checked against the registered job files, an RL freeze with a decisive P_both label,
+     the offline outputs at their registered location, the registered S3 run, a determined H5 label, the location
+     above); any other run is 'development' and lists why. The script reads a test-route row only under a valid
+     analysis-freeze record and with its own sha256 cited in Sec. 13 (this entry).
+  2. Figures and tables of the paper: `figures_tables.py --require-registered` on registered sources only. Any other
+     run carries the development stamp in every figure, table and caption and never enters the paper.
+  3. Proposition-1 coverage: `prop1_coverage.py` with the cited tuning freeze on the 32 VAL clips with the registered
+     bootstrap; `figures_tables.py` counts a coverage run as registered only in that setting.
+  4. Verification (Sec. 9.12): the procedure of the `verify_independent.py` docstring. An independent session
+     (Sec. 9.12) runs it after the analysis freeze is entered, with the record, the freeze's aggregation and analysis
+     and one `--queue` per queue the aggregation covers. AGREE releases H1 and its findings and the verified Table I
+     columns; on DIFFER every difference is resolved and its cause entered in Sec. 13 before any of these numbers
+     enters the paper. The sha256 of `verification.json` is entered in its own dated Sec. 13 entry. The other Table I
+     columns follow deviation 9.
+* Deviations from GAP_AUDIT and PROTOCOL recorded by the reviews (PROTOCOL governs; none changes a run, a pin or a
+  criterion).
+  1. Development data (Sec. 9.12: "written and tested on synthetic CSVs only"). No test-route run existed or was
+     read. The values were used to check the code, never to choose a metric, a rule or a parameter. Every execution
+     on real data from 2026-11-14 to the application of this entry read its inputs only; each is listed with its time
+     (2026-11-14 unless a date is given) and its output directory (`build/` stands for `outputs/framelease_v4/build/`).
+     * `analyze_v4.py`: synthetic CSVs (unit tests; the synthetic 632-row matrix of item R4, kept as
+       `build/R7/dev/syn_r4/`) and the development aggregation of P1 training-route runs `build/AGG/smoke_D` of
+       Amendment A9: a load check (07:35) and six command-line runs (07:40, 07:47 and 08:05 into scratch directories
+       under /tmp; 08:14, 08:16 and 08:42, the last with the final code and `--force`, into
+       `build/R4/smoke_train_D/`), with no test-route row and every family at n 0; its H4 functions on the offline
+       outputs written before registration (07:59, a scratch script). Its tests read these offline outputs and the
+       development S3 report `build/STRESS/s3_dev_report_v2.json` at every run.
+     * `prop1_coverage.py`: synthetic samples, envelopes and freezes, and the real inputs of its item, the 32 VAL
+       clips of the offline stage (recorded dataset clips, not routes; Sec. 7.4 ran on them before registration) and
+       the registered envelopes: a check on the 15 gate2 VAL clips (08:54), a 3-clip run into /tmp (08:55), three
+       runs into `build/R5/dev_run/` (08:56, 09:00 and 09:02, the last with the final code) and the full and subset
+       runs of its review into scratch directories (09:03-09:14). Its tests recompute the coverage of the 32 VAL
+       clips into a temporary directory at every run and compare it with `build/R5/dev_run/`.
+     * `figures_tables.py`: a synthetic analysis on synthetic route ids (`build/R6/dev_run/`) and training-route
+       sources: the analysis `build/R4/smoke_train_D/`, the R5 coverage run, a development RL freeze from the pilot
+       runs, development stress reports and a development D1 summary computed read-only from `queue_p1` at 10:09
+       (`build/R6/dev_inputs/d1/`), rendered into /tmp (09:45; the training-route table alone at 10:10) and into
+       `build/R6/dev/` (10:29 and 11:25, the last with the final code); from 09:25 on, the offline outputs written
+       before registration and the v2 matrix (Sec. 11.1, items 1 and 4-5), which its tests also read at every run.
+     * `analyze_v4.py` and `figures_tables.py` on 2026-11-15, 01:24 to 03:33: item FILL0 (the fill of the paper's
+       placeholders, `build/FILL0/`) and its review ran both on synthetic aggregations through the harness of
+       `tests/test_figures_tables.py`, into scratch directories under /tmp (`/tmp/FILL0/`, `/tmp/review_FILL0/`, the
+       temporary directories of the FILL0 tests); with the default `--offline` both read the offline outputs written
+       before registration, as their own tests do at every run.
+     * `verify_independent.py`: two synthetic matrices (`build/R7/dev/syn_r4/`, `build/R7/dev/syn_varied/`) and a
+       copy of the `queue_p1` runner records made at 11:46 with the run directories they name
+       (`build/R7/dev/p1_snapshot/`: 172 job lines, 139 usable training-route runs): runs into
+       `build/R7/dev/verify_p1/` (11:50, 12:00 and 12:31, the last with the final code), a tie-rate check of the DS
+       values with its rounding function (12:02), and, into scratch directories, the determinism runs and the import
+       and file audit of its review (12:02-12:15) and the rerun of that audit (12:31).
+     * The aggregator (`aggregate_v4.py` and the modules it imports), in addition to the runs of Amendment A9: on
+       `build/R7/dev/p1_snapshot/` into `build/R7/dev/agg_p1/` (11:46-11:50; 0 test-route rows); two runs with
+       `--write-freeze-record` on copies of the 7 P1-0 smoke job lines of route 18305 under /tmp (11:33 and 11:57),
+       whose development analysis-freeze records (`build/R7/dev/scratch/freeze_probe_all_final.json`,
+       `freeze_probe_cut.json`) no entry cites, so neither is valid; the earlier `commit_audit.py` (sha256
+       `96dd22c4...bff279`, a copy under /tmp) and the current one (the rule of finding 1) on the 48 audited
+       `fl_heuristic` runs of `build/R7/dev/agg_p1/` (14:09 and 14:10, `build/AGG/step0_reaudit/`); and, as the
+       comparison target of the second independent script of deviation 9, on the same snapshot (14:50-14:55,
+       `build/R7B/dev/agg_now/`) and on a copy of the `queue_p1` runner records made at 22:03
+       (`build/R7B/dev/p1_snap_2203/`; 22:04-22:08, `build/R7B/dev/agg_snap_2203/`), each written under /tmp and
+       then copied into `build/R7B/dev/`.
+  2. Values of data that existed before registration were computed during development. The H4 offline label (Sec. 9.4;
+     `build/R4/smoke_train_D/h4_offline.csv`: all 12 rows 'inconclusive'), the Table II-A offline panel and Fig. 1
+     (a)-(b) from the offline outputs written before registration (Sec. 11.1 item 5 records that only their column
+     headers, not their values, were viewed before registration), and the Proposition-1 coverage of E5, E10 and B0 on
+     the 32 VAL clips. The H4 rule, the coverage definitions and their bootstraps are those of Secs. 7.4 and 9.4; no
+     selection reads these values (the lease operating point is selected on closed-loop training DS, Secs. 4.2-4.9).
+  3. Output location (Sec. 9.12: outputs go to `final_<stamp>/` with a sha256 manifest). The aggregation of the
+     analysis freeze occupies `final_<stamp>/` with its own `SHA256SUMS`; the analysis writes into
+     `final_<stamp>/analysis/` with its own `SHA256SUMS` and refuses a directory that holds an aggregation.
+  4. Collisions per km (Sec. 6.1). The route-level value (`collisions_per_km`) is used by the paired contrasts and
+     S-coll. The arm-level value is the pooled ratio (`collisions_per_km_pooled`): the sum of collisions over the sum
+     of km driven with the 0.001 km floor per route, over the routes with both values, with a route-cluster
+     percentile bootstrap (routes resampled, the ratio of sums per resample; 10,000 resamples, a fresh
+     `default_rng(20261110)`, the draws of `bootstrap_ci`; 95%). Table I shows the pooled value and its interval.
+  5. Sign-flip test (Sec. 9.1). The Monte Carlo cross-check (Sec. 9.1 names no seed) uses 200,000 sign vectors with
+     the registered v4 seed 20261110; decisions use the exact p. Beyond 2^23 bins the registered `sign_flip_test`
+     coarsens its DP grid (1-2-5 steps); `analyze_v4.py` reports the grid used next to the registered one (`dp_grid`,
+     `dp_grid_registered`), and the verification reports its own p on that grid as a diagnostic.
+  6. H4 offline (Sec. 9.4: "If an offline output lacks a paired quantity, the v4 analysis script computes it from
+     `per_clip_selected.csv` with the same bootstrap"). `per_clip_selected.csv` holds the TRAIN-selected candidates only
+     (subset all, alpha 0.05, AGE, GLOBAL and SUFFIX) and cannot supply a nested quantity; utilization cannot be pooled
+     from it (the positives are not recorded). The script uses it only within that scope, reports any other missing
+     quantity as missing with its reason, and recomputes every in-scope `paired.csv` row as a check (30 TRAIN rows
+     agree, maximum difference 5.0e-6). On the offline outputs of Sec. 11.1 item 5 `paired.csv` supplies all 12 H4 rows.
+     The secondary rows are the full crossing of Sec. 9.4's variations (2 comparisons x 2 risk levels x 3 quantities: 1
+     primary and 11 secondary rows); 7 of them combine two or more variations; each is secondary and uses the same rule.
+  7. H5 (Sec. 9.5 has the labels supported and contradicted). 'undetermined' marks incomplete evidence (an input
+     without the commit audit, runs withheld by the interim-look guard, a phase not covered, no registered S3 report)
+     and makes the run 'development'; the registered analysis has a determined label. A run the audit could not
+     check leaves condition 1 unmet: status ERROR, or NO_LOG (neither `jobs.jsonl` nor `events.jsonl`) when the
+     `runs.csv` row that selects the run records commits or no row records them; every NO_LOG run is listed.
+  8. Table II-B (Sec. 7.6). `analyze_v4.py` reports the panel-B log quantities per condition as distributions of the
+     per-run values (per-run quantiles are never pooled across runs); `figures_tables.py` renders Table II-B with S1-S4.
+  9. Verification scope (Sec. 9.12: "recomputes the H1 contrasts and the Table I columns"). `verify_independent.py`
+     recomputes DS, SR, RC, collisions/km and infractions/km. GPU usage, DMR, action age p50 and p95, fallback ratio,
+     EIR, P_both and the closed-loop R_cond of the notes are registered results (Secs. 7.2, 9.13) and are recomputed
+     by a second independent script from the run directories (Secs. 6.2-6.4, including the realized validity of the
+     actor boxes behind EIR, R_cond and P_both). That script is registered by its own amendment before the analysis
+     freeze and runs after it next to `verify_independent.py`; these columns enter the paper once its result is
+     entered in Sec. 13.
+  10. Verification statistics. The DP rounds `d / grid` with `numpy.rint`, the rounding of the registered
+      `sign_flip_test`; the two decimal readings of "rounded" are reported at exact half-grid ties as diagnostics. A
+      missing p counts as 1 in Holm and has no adjusted p. With the registered resamples and seed on both sides every
+      bootstrap endpoint is judged to 1e-9. A DP support above 40,000,001 states makes that contrast 'not computable'.
+      Every expected file, column and field is compared; an absent one is a difference.
+  11. Figure layout (Sec. 7.1: panel (a) offline, the error against observation age and the Fast@Fresh - Deep@Old
+      contrast against kappa; panel (b) closed loop, Fixed Deep - Fast Only per scenario type and per ability). Fig. 1
+      has the offline panels (a) error against observation age and (b) Fast@Fresh - Deep@Old against kappa, and the
+      closed-loop panel (c) Fixed Deep - Fast Only by ability next to the earlier measurement; the per-scenario-type
+      difference (44 named rows) is a companion figure in the supplement (Sec. 9.13).
+  12. Results that `figures_tables.py` does not render: the secondary offline protocols of Sec. 7.4, the uncorrected
+      secondary rows of Sec. 9.3 (`secondary.csv`), the replicates and the noise floor (Sec. 9.6; `descriptive.csv`)
+      and the manipulation checks beyond the background-load counts (Sec. 9.7; `analysis.json`). They enter the
+      supplement from these files (Sec. 9.13). Compact main-text variants of Tables II-A and II-B are not built.
+* Known limitations accepted (review should-fix items not applied; none affects a registered number or the Sec. 9.11
+  guard of a command-line run).
+  * `prop1_coverage.py`: in the Python API, `compute(routes=...)` replaces the registered test-route set instead of
+    adding to it, and route ids are compared as strings (R5 S1, S2; the command line always uses the registered
+    split, and no clip is on a test route); `CODE_FILES` omits `framelease_v3/suffix_lease_eval.py` and
+    `framelease_v4/arms/metrics_v4.py` (S5; the reused code outside the manifest is fixed by its sha256 under
+    "Evidence"). A run outside the registered setting carries no marker of its own (S3); `figures_tables.py` treats
+    it as development.
+  * `verify_independent.py`: the rendered Table I is not compared with `numbers.json`; `figures_tables.py` traces
+    every printed number to its source row instead. The review tests `GuardRecordVocabulary` (a registered test
+    route under a copy of PROTOCOL.md) and `ForgedProtocolCopy` exclude each other: under the registered rule the
+    first is refused; on a synthetic test route the same three cases pass
+    (`build/R7/fix/test_review_R7_vocab_synthetic.py`).
+* Reporting rules for Proposition 1 (R5 review S4). With the coverage, the paper states: the lambda of E5 and E10 was
+  selected on the same 32 VAL clips (the in-sample row of `frontier.csv`, Sec. 4.3), so the VAL coverage is not held
+  out with respect to lambda; the coverage is conditional on a confident detection matched within 2 m and within
+  50 m of the LiDAR, so missed actors lie outside it; whole-path coverage counts the recorded taus of each pair only;
+  the pedestrian intervals rest on 6 clip clusters.
+* Findings of the development runs carried to the analysis freeze (files of Amendment A3; this entry changes none).
+  1. Commit audit, null margins. On `build/R7/dev/agg_p1` the commit audit (R-2) of the version of `commit_audit.py`
+     used there (sha256 `96dd22c4...bff279`) reported FAIL with 12,958 'margin' violations in 38 of the 48 audited
+     `fl_heuristic` runs of the stages `lease_s1` and `lease_s2` (violations: B0 8,179, E10 2,625, E5 2,154); the
+     development aggregations `build/AGG/smoke_B`, `smoke_C` and `smoke_D` of 2026-11-11 (P1-0 smoke and `ref` runs
+     only; 4,109 accepted commits) were PASS. Every flagged commit is an accepted commit whose logged margin is null
+     (+inf) and whose validity record has n_relevant > 0, n_computed 0 and reason `horizon_cap`: the lease prefilter
+     (`framelease_v3/runtime/v3_lease.py`) computed no agent because the distance lower bound of every relevant agent
+     keeps its margin above delta, so the lease is the horizon cap and the margin at the commit is +inf. That version
+     accepted a null margin only when the record named no relevant agent (n_relevant 0 or reason
+     `no_relevant_agents`). The rule was settled in `commit_audit.py` before Amendment A3, which registers it
+     (departure 6): a null commit margin passes where the validity record names no relevant agent, or has reason
+     `horizon_cap` and n_computed 0 (the lease prefilter showed g > delta for every relevant agent, so M = +inf); any
+     other null margin with a relevant agent is a violation. Under this rule the re-audit of the 48 runs
+     (`build/AGG/step0_reaudit/`) finds 0 violations (47 PASS, 1 NO_LOG), and the development aggregations
+     `build/R7B/dev/agg_now/` and `agg_snap_2203/` (184 and 194 audited runs) are PASS. H5 is decided by the
+     registered commit audit.
+  2. Kilometres of a run with RC 0. In `build/R7/dev/agg_p1/` the aggregator's `runs.csv` holds `km_driven` 0.0 for
+     the smoke run of `fl_heuristic` on route 18305 (RC 0), where Sec. 6.1 floors km at 0.001 (the one difference
+     of `build/R7/dev/verify_p1/`); its collisions/km and infractions/km agree with the verification. The floor was
+     added to `runs.csv` in `aggregate_v4.py` before Amendment A3, which registers it: `build/R7B/dev/agg_snap_2203/`
+     holds 0.001 for that run, the value that collisions/km, infractions/km and the pooled ratio use.
+  3. Run selection without a runner record. For a job whose runner records are absent (a probe with its status lines
+     removed) the aggregator selects a run from the job's output directory and the freeze record lists it; the
+     verification reads the runner's final record only and lists such a job as a 'freeze record' difference. At the
+     analysis freeze every job of `queue_p4` has a final runner record (gate G8).
+* In-place text.
+  * Sec. 4.1, the status sentence of Amendment A3: "the analysis script, the Proposition-1 coverage and the figure and
+    table generators remain required before the analysis freeze" becomes "the analysis script, the Proposition-1
+    coverage, the figure and table generator and the independent verification script are registered by Amendment
+    A10".
+  * Sec. 9.4, the last sentence, ends: "... with the same bootstrap, within that file's scope (TRAIN-selected
+    candidates, subset all, alpha 0.05); a nested quantity comes from `paired.csv` only (Amendment A10)."
+  * Sec. 9.12, "**Code.**", the last sentence ends: "... before the analysis freeze (the aggregator: Amendment A3; the
+    analysis code: Amendment A10)."; then a new paragraph before "**Freeze.**":
+    "**Analysis code (Amendment A10).** `analyze_v4.py`, `prop1_coverage.py`, `figures_tables.py` and
+    `verify_independent.py` (`framelease_v4/analysis/`) are registered by Amendment A10. Besides synthetic data, they
+    were run read-only during development on training-route aggregations, the offline VAL clips and P1 run
+    directories, never on a test-route run."
+  * Sec. 9.12, "**Freeze.**", the last sentence ends: "..., with a sha256 manifest; the analysis writes into its
+    subdirectory `analysis/` with its own manifest (Amendment A10)."
+  * Sec. 9.12, "**Verification.**", ends: "... from the raw run directories (Amendment A10:
+    `framelease_v4/analysis/verify_independent.py` recomputes DS, SR, RC, collisions/km and infractions/km; a second
+    script, registered by its own amendment before the analysis freeze, recomputes the other Table I columns, which
+    enter the paper once its result is entered in Sec. 13)."
+* Scope. No run, job file, pin, stage selection, freeze or criterion changes. No job line pins these files and no
+  agent process imports them. The analysis-freeze record freezes the aggregator modules (Amendment A3); the analysis
+  script checks its own citation (this entry) before it reads any test-route row; G8 of the phase driver waits for
+  this entry. This entry precedes the analysis freeze.
+* Files (sha256).
+
+  | file | sha256 |
+  |---|---|
+  | `framelease_v4/analysis/analyze_v4.py` | `10d7ea4f9516725cd94932a0618bbe5cc6a20bae60b49f4004013b3682cee54c` |
+  | `framelease_v4/analysis/prop1_coverage.py` | `ffaee8ddf74e707901208d1d28ad0f692fefda2a4f4ce24f9e36e6eba1c852c0` |
+  | `framelease_v4/analysis/figures_tables.py` | `bd4ed54c60fbc5259aeb2ed56f5301ad612c3006fd4172f06b889f2ea0c2118c` |
+  | `framelease_v4/analysis/verify_independent.py` | `4935152684abcfdaef547438772bb041f323344dcbfe636d41b2a161ff149bff` |
+  | `framelease_v4/analysis/tests/test_analyze_v4.py` | `1a59a3e044478d56a0bb1700d756bfcf80f9c4b2e4b1c38c83fa2a111780564c` |
+  | `framelease_v4/analysis/tests/test_prop1_coverage.py` | `fa72530489076fe1620002e77997abbae46b9f602b8cf39c987de8206a0d1bd3` |
+  | `framelease_v4/analysis/tests/test_figures_tables.py` | `8b61b3b35933e1f4dbc33c682462a6533500158013053182ab0aae6281ae793e` |
+  | `framelease_v4/analysis/tests/test_verify_independent.py` | `c647f9091c99944fa6d39e97e2f8c7283a819aeb820e668ae512885f2ff77823` |
+
+* Evidence (outside the manifest; fixed by these sha256). Reviews: `outputs/framelease_v4/build/R4/review/REVIEW.md`
+  (`4cfda4da4ff9efe19fc69c5583f297e8fdf0fab15bf83ddc994480c43601832f`), `build/R5/review/REVIEW.md`
+  (`4dbdb3fe1bea1ca387036ed4ab2a4225b8e84fdd8e65be913bfd4f9922fd7fb2`), `build/R6/review/REVIEW.md`
+  (`40b29a2cfb0fbfde1961870da96d3bca71d60088ef1c56a249c3c62fbb137abf`), `build/R7/review/REVIEW.md`
+  (`e4333416adefd2109ccf7f574ab2ce06ab22a41a1c4f5410f22c7688772e4917`). Output manifests of the development runs:
+  `build/R4/smoke_train_D/SHA256SUMS` (`375c92331006f0aac9a0a30ff39698a082d0d2758596daa49dedb27c55c3470d`),
+  `build/R5/dev_run/SHA256SUMS` (`ccb795dc4db10fbbd9a0ede6005c467c328623ed1f6f715b783116a1d516fa56`),
+  `build/R6/dev/SHA256SUMS` (`931ca0644b7690c72db4c9650eb19ee96e6e091fd160f180a3989f42ab3c77dd`),
+  `build/R6/dev_run/SHA256SUMS` (`503766a2d9bca8adf5eec080fc5eb320b72c8ed78dcd884929571f352e2e100f`),
+  `build/R7/dev/agg_p1/SHA256SUMS` (`672a57ee3b336fa494eb7825b3aa99c8964f9be19f8bdf2435c059ce4233786b`),
+  `build/R7/dev/verify_p1/SHA256SUMS` (`5824a84f4bfbcdc20353bc538e02d124c7459d53e7503d3c5ac815e7b9f63442`),
+  `build/R7/dev/syn_r4/verify/SHA256SUMS` (`a9a4f543bbd3efad4fadc8c9e735c6e3896fb19457b532b0b70a5f0e45171071`),
+  `build/R7/dev/syn_varied/verify/SHA256SUMS`
+  (`ea082386a43bdd2794cd4144681d6046ee76923dc7b14a295a4771542227f232`),
+  `build/AGG/step0_reaudit/SHA256SUMS` (`1977399e03f0a77fa16c18dbd4be8a6676f9760242f2b08742da61ce302683ed`),
+  `build/R7B/dev/agg_now/SHA256SUMS` (`b88ba6693f3e69a9094d2c9b7ecc38b880bea5fc6728a99e5acb3a4da9ab4cbb`),
+  `build/R7B/dev/agg_snap_2203/SHA256SUMS`
+  (`f7c93dcee758cc424279fa8397eae25369794d9441df81c51eb934f17fec73dc`). Code that the coverage reuses
+  outside the registration manifest, equal to the sha256 recorded in
+  `outputs/framelease_v3/gate2_offline/gate2_20261109/config.json` (R5 review Sec. 3): `framelease_v3/envelopes.py`
+  (`4b50e33d5abcf1e791fe87d84039cdc560be313827db457ef7160968e633307c`), `framelease_v2/calibration.py`
+  (`eb69bae0a64ece0fabc4c5133d18985f9d83f7c41fc3b42dca39e789f6193e2b`) and `framelease_v3/suffix_lease_eval.py`
+  (`48417c1fc9ce6d0e7d604da1292f6a002ab266c500f9226b4cd17fbbf490691c`).
+* Tests (CPU; logs in `outputs/framelease_v4/amendment_a10/`):
+  * `tests/test_analyze_v4.py`: 48 passed, 107 subtests passed in 15.82s
+    (`pytest_analyze_v4.log`, `f5f11f8a3805df55d382fe3baff22928a494515a692ea4fd2bbd32eb1db812fa`);
+  * `tests/test_prop1_coverage.py`: 22 passed in 20.11s
+    (`pytest_prop1_coverage.log`, `5283125b70b52b289e9817cb657095c6347f43b4347ba2184abf1c2bad1fb76a`);
+  * `tests/test_figures_tables.py`: 50 passed, 422 warnings in 23.87s
+    (`pytest_figures_tables.log`, `7ccb719fe1f603cc75385ce8b9495b57da9ad7cc1455d81a89df6b140fd77176`);
+  * `tests/test_verify_independent.py`: 28 passed, 20 subtests passed in 14.23s
+    (`pytest_verify_independent.log`, `cf768b093163bfca3def6ac61e834457b72a5c4e3e23a77d37133c236e4f8bab`).
+
+  At drafting (2026-11-14): 48 passed and 107 subtests; 22 passed; 50 passed; 28 passed and 20 subtests
+  (`outputs/framelease_v4/build/AMEND2/logs/`).
+* Manifest and seal after this amendment: `MANIFEST.sha256`, 221 files, sha256
+  `4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033`, sealed with this entry.
+
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

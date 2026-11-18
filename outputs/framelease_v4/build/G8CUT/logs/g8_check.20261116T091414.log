@@ -1,0 +1,21 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B outputs/framelease_v4/build/G8CUT/g8_lib.py check --expect reduced
+{
+ "analysis_dirs": [],
+ "cut_lines": 505,
+ "cut_lines_with_runner_record": 0,
+ "jobs_d": [
+  "reduced"
+ ],
+ "kept_final": 127,
+ "kept_lines": 127,
+ "kept_pending": 0,
+ "last_runner_exit": "2026-11-16T01:12:24+00:00",
+ "problems": [],
+ "registered_lines": 632,
+ "runner_alive": false,
+ "runner_lock_held": false,
+ "stop_file": false,
+ "waits": []
+}
+CHECK: READY (reduced)
+TIME 0.17 s, max RSS 33432 KB

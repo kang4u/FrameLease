@@ -1,0 +1,6 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/AMEND3/a10r7b/rsim/work/ttree_apply_entry_scratch.py /tmp/AMEND3/a10r7b/rsim/work/A10_spec.json --tests
+(exit 0)
+outputs/framelease_v4/amendment_a10/pytest_analyze_v4.log exit 0 | 48 passed, 107 subtests passed in 15.12s
+outputs/framelease_v4/amendment_a10/pytest_prop1_coverage.log exit 1 | 1 failed, 21 passed in 19.96s
+outputs/framelease_v4/amendment_a10/pytest_figures_tables.log exit 0 | 50 passed, 422 warnings in 23.50s
+outputs/framelease_v4/amendment_a10/pytest_verify_independent.log exit 0 | 28 passed, 20 subtests passed in 14.25s

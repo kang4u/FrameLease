@@ -1,0 +1,14 @@
+{
+ "name": "A21",
+ "template": "outputs/framelease_v4/build/G8FULL/entries/A21_entry.md",
+ "tests": [],
+ "inplace": [],
+ "must_equal": {
+  "outputs/framelease_v4/analysis/final_20261117T161912/agg_p4/runs.csv": "8d095d06dd6f9075876a04262eebda0e68bb6a251c31ca40eec893203831ed82",
+  "outputs/framelease_v4/analysis/final_20261117T161912/analysis/paired_differences.csv": "0b788578736ee07af67f272ec9add704622eb15b741501753197e11eecae0ea8",
+  "outputs/framelease_v4/verification/final_20261117T161912_table1_extra/differences.csv": "a371a37b2165c46f0a70681f9bbe3d9ce40406d291c7dad7679dad1703533f66",
+  "outputs/framelease_v4/verification/final_20261117T161912_table1_extra/runs_recomputed.csv": "cd658cf9cd14844f1942f3ee642961db889f34154a6e45b298f2eec3c81184f0",
+  "outputs/framelease_v4/verification/final_20261117T161912_table1_extra_f1_class.json": "429d9d541401c0f1c809e3068f029b94ffcb3808b6b6c9176800b2508fcacc26"
+ },
+ "max_new_registered": 0
+}

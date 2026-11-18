@@ -1,0 +1,11 @@
+--- a/requirements/runtime.txt
++++ b/requirements/runtime.txt
+@@ -1,6 +1,6 @@
+ lyft_dataset_sdk
+-networkx>=2.2,<2.3
+-numba==0.53.0
++networkx==2.5
++numba==0.60.0
+ numpy
+ nuscenes-devkit
+ plyfile

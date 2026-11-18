@@ -1,0 +1,2 @@
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: the local time zone is UTC+0000, not Beijing time (+0800), which the entry states

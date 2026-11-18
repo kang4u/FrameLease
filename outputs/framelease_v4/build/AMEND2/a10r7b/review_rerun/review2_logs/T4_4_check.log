@@ -1,0 +1,4 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/A10A11/applier/apply_entry_scratch_treeT4.py outputs/framelease_v4/build/AMEND2/final/A10_spec.json
+(exit 1, 6.4 s)
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: template problem: ['**Phase gates (P2-P7, FULL).**'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times

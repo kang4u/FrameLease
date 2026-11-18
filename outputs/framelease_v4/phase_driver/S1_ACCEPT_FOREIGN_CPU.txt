@@ -1,0 +1,9 @@
+Foreign CPU load accepted for the registered S1 run (coordinating session, 2026-11-15, under the user's delegation of
+the phase gates of 2026-11-14).
+
+The driver's sample at the first S1 attempt (20:33) names only the remote-desktop session of the machine's user and
+the desktop shell: ToDesk 0.13 core, ToDesk_Service 0.10 core, gnome-shell 0.09 core, ToDesk_Session 0.05 core, about
+0.37 of one core in total on a 16-thread host. These processes keep the user's remote access to the machine and are
+not stopped. No process of this project runs besides the stress bench. The load is small against the registered S1
+levels (0, 4, 8 and 15 background processes) and is recorded with every attempt in phase_driver/s1_guard.json; the G5 entry cites this
+file, and the paper states the load next to the load-0 results of S1.

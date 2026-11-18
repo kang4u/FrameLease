@@ -1,0 +1,6 @@
+A11: 154 lines, 18 placeholders, 2 framelease_v4 files cited by sha256; apply_entry.py would count 2 newly cited manifest files: ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']
+A11 in-place text found 0x in /home/kang/Desktop/DAC/framelease_v4/PROTOCOL.md now (1x after A10)
+note: A10 is not in PROTOCOL.md: simulated (check_drafts.fill, A10 in-place texts, entry before the anchor)
+OPEN: Amendment A10 is not in PROTOCOL.md yet (A11 is applied after A10)
+OPEN: outputs/framelease_v4/build/R7B/rereview/REVIEW.md (the review of the R7B fixes, named in the template) does not exist yet
+checks passed; 2 open precondition(s): not ready for application

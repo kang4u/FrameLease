@@ -1,0 +1,11 @@
+{
+ "name": "A19",
+ "template": "outputs/framelease_v4/build/G8FULL/entries/A19_entry.md",
+ "tests": [],
+ "inplace": [],
+ "must_equal": {
+  "outputs/framelease_v4/verification/final_20261117T161912/SHA256SUMS": "7899238ed0571459fcb283a5c0528bf9b0e65bea830c2af2f4d7a61e6ae2fa2e",
+  "outputs/framelease_v4/verification/final_20261117T161912/verification.json": "6857ed6f4690401c74f57025430e985bb8721d25d610999636b6af1959a6cbf9"
+ },
+ "max_new_registered": 0
+}

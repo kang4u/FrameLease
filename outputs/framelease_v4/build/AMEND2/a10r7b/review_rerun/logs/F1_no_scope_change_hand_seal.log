@@ -1,0 +1,3 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/AMEND3/a10r7b/rsim/treeF1/framelease_v4/protocol/registration.py --seal
+(exit 0)
+sealed: PROTOCOL.md 2e80a59e58ba8dcd7bfac9619d617879455ce0298c0f274e168ee6ec22602d22, manifest 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033

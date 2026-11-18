@@ -1,0 +1,87 @@
+{
+ "deviations": [],
+ "finished_utc": "20261115T122748Z",
+ "host": {
+  "cpu_count": 16,
+  "loadavg": [
+   4.8955078125,
+   6.97705078125,
+   5.955078125
+  ],
+  "n_jobs": 10,
+  "threads": {
+   "MKL_NUM_THREADS": "1",
+   "OMP_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1"
+  }
+ },
+ "inputs": {
+  "<out>/dataset/episodes.json": "499273b39f4599d365efb2a77210e01d868578878d49d130868ea6a9ebc23c57",
+  "<out>/dataset/epochs.npz": "7b1217c238d1e21d04a322e65ba298153fb00f0aa5878172bcb9693c985d6b33",
+  "<out>/dataset/manifest.json": "5a204cf7f7546951b886383f0f3c40dff6977edbd6f1a24be8d7a55cff3b17c5",
+  "<out>/dataset/transitions.npz": "9cfb6d749eb1a5e4c523d6502497a56ae968acb4bd447ab1ae08fa6893430e2a",
+  "<out>/select_fqi_nolease.json": "cb4aeefdb76389d676fdcd10c45d903adcd5ada0425351a59564d89daf41614c"
+ },
+ "mode": "production",
+ "outputs": {
+  "<out>/refit_fqi_nolease.joblib": "8d3ecb6eaa16130502ae8cb2bf1faf76f35bf056e58d3a179f6200248ba685d9",
+  "<out>/refit_fqi_nolease.json": "24f214880722468f7cc5c709e1f88e2e79e67f7f790b055834b0ca4d58095da6"
+ },
+ "params": {
+  "code_sha256": {
+   "p3_rl.py": "10a8590d511a9ab4858b87a93ad41e3a2961ad7a17af626bf27aedc781eab94b",
+   "protocol/p2_check.py": "830482d14745cfdc5f53b2cb498cd8628903a09ec85e355120ff54bf1433eb4b",
+   "protocol/p2_jobs.py": "104408ee6f096f1ca16b72230ba1c8eb5e85623b0c675cfcadd63630bea97377",
+   "rl/README.md": "4b128c4ba411c1e3dae4db02753dc11c3fb42d3361ccde098cbc1b3480544a0e",
+   "rl/RL_PROTOCOL.md": "c12b935b740494fda4c54d6c162d7d8776a0a29bfe84e5b3ec14b482d1bf2557",
+   "rl/__init__.py": "d807a3471e4dc141ebc039956af55eb7d28ea6718b2229b0d6d9ecdb24bc1f46",
+   "rl/agent_entry.py": "d51a0166501b32cb16869ed938e96426cce6cc876e73bf90870ef72df1791fdc",
+   "rl/behaviour.py": "3ba13de1569b79dadf3a2019ec6495ff1ae1f4113a8d9f2e72b69e987dba8345",
+   "rl/bench_qnet.py": "54346d14a0f3709453c48ff4c2d5f9aedfa47f4634ef60e9ef632d882c518597",
+   "rl/collection_plan.py": "6c8bd36ef0f49aa82b06abc82b94e37da7e9860570626b6a79f8ccf6ad1c9bc0",
+   "rl/common.py": "c24efb4cff385df6e456b63eda06a7bbab3fa7f4a8ecd852d19b36a085ae330f",
+   "rl/dataset.py": "45606d2b741311e8f451326ca11cf12a47983fa1ab1c1aba3e7039936baeb488",
+   "rl/features.py": "537ee597e34f3e8ab44ae7e3f08f35293a81e6fd266a9e838774a34cca40e6e3",
+   "rl/ope.py": "dace32b90d3f7bcc636b1a285bf1a255cad9d8e9983e542b98bb6dbee586fac8",
+   "rl/prefix_score.py": "e461d8914701621a3e5a6f94c71e29d358c38a1d29b992fe11b3eb581dbae159",
+   "rl/qnet.py": "53bbf8c69124519c6bb2133961695aa4f238c6d52e325f0d8e7de53008d23f3f",
+   "rl/run_closed_loop_rl.py": "e37121e8fc7cc584997a55028757d38d084078645d1ab9891f8683e2985c317c",
+   "rl/smoke.py": "738492baab73a81ffd42175d3874b3a55be2e64c6f1360a58b3e9dea445888bd",
+   "rl/tests/helpers_rl.py": "c30d275beea4e4b364a4f377fcc9a389ef29c5a70fc7cfa682f4fae07ca599e8",
+   "rl/tests/test_features_behaviour.py": "c681ab3dc4d579d0bfc35f251f6307310eff4e6cf50db75ca153574dcccab888",
+   "rl/tests/test_launcher_plan.py": "8e906200a49c32533f1ae960058dd9a4d296c21c0dcf5365c364edb39afd0136",
+   "rl/tests/test_learning.py": "e68d160eb26e2035870839bfd617366d35df09e1c35c02f00f93adc48ea34f43",
+   "rl/tests/test_ope_support.py": "53b9b4c47095bad992a37c3f1e1a3012edd2307cf5ba1998d86e32ce48d76175",
+   "rl/tests/test_prefix_dataset.py": "1c4420ef9208497d33a7f17ea52a85e50bd0565064ad4bbeef59fbe5b7083f3f",
+   "rl/tests/test_qnet_entry.py": "45d971b96422f8e40d86f7d82af3bf9981a941fdeed9b6e41792cfee3b487147",
+   "rl/trainers.py": "fb595d7fe0f684cccd7f5b347fd9762d9fd25eddf1222a3aeb51e16c397c44c8"
+  },
+  "d_star": 1,
+  "family": "fqi_nolease",
+  "mode": "production",
+  "variant": "FULL"
+ },
+ "previous": {
+  "sha256": "215bfba9e561b6a2e4520e3b2ae502e30dc9b54985013a1cb3600740e96c178d",
+  "stage": "select_fqi_nolease"
+ },
+ "result": {
+  "label": "fqi_nolease_K128_leaf40_beta0_d1",
+  "model_bytes": 604603,
+  "n_samples": [
+   982,
+   5609
+  ],
+  "n_transitions": 6591,
+  "supported": [
+   true,
+   true
+  ],
+  "train_deviation_rate": 0.6768320436959491
+ },
+ "schema": "framelease_v4.p3_rl_stage/1",
+ "script": "framelease_v4/protocol/p3_rl.py",
+ "stage": "refit_fqi_nolease",
+ "started_utc": "20261115T122712Z",
+ "wall_s": 36.49
+}

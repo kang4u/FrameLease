@@ -1,0 +1,32 @@
+apply_locked: copies of the sealed files and of both baselines in outputs/framelease_v4/amendment_a15/attempt_20261116T093415_898648
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /home/kang/Desktop/DAC/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3
+manifest difference: new [] / left [] / changed []
+composed PROTOCOL.md sha256 8862d185db924368021664b43bba56cd59b9faffcf3e2b792722a90a381cf584
+registration --seal -> 0 | sealed: PROTOCOL.md 8862d185db924368021664b43bba56cd59b9faffcf3e2b792722a90a381cf584, manifest 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+PROTOCOL 8862d185db924368021664b43bba56cd59b9faffcf3e2b792722a90a381cf584 MANIFEST 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3 221 files; newly cited manifest files: []
+**Amendment A15, 2026-11-16 09:34 (Beijing time): result of the independent recomputation of the Table I columns GPU
+usage, DMR, action age, fallback ratio, EIR and P_both and of the closed-loop R_cond (Sec. 9.12; Amendment A11, use
+rules 1-3); no run, job line, criterion or analysis rule changes.**
+* Run. An independent session ran `framelease_v4/analysis/verify_table1_extra.py` (sha256
+  `f77b2dcf34484d2537a4c22d804912f0c155c3e3c26a576f433b9f4f73d83c27`) after the analysis freeze, with the record,
+  `--queue outputs/framelease_v4/queue_p4`, the released aggregation and the analysis, into
+  `outputs/framelease_v4/verification/final_20261116T091445_table1_extra`, and the class report
+  `outputs/framelease_v4/build/AMEND2/a10r7b/f1/f1_class_report.py` (sha256
+  `ac82d65a9f4507a779dce5632e166b79e9d4c8d83f6c2b014ca27561e29145b6`) on that directory.
+* Result. `outputs/framelease_v4/verification/final_20261116T091445_table1_extra/table1_extra.json` (sha256
+  `2f5c8cbbe249bfaa8cd53abca327a6c155d87a8d846a7a7516fcccb40bbb4139`): status final, verdict DIFFER; `SHA256SUMS` sha256
+  `9bad4595e777270f154b526f37b7a987cc37e01a4e02b54de614a9e061f4b7a4`; class report
+  `outputs/framelease_v4/verification/final_20261116T091445_table1_extra_f1_class.json` (sha256
+  `e90fe3fff420a87032b5fc08a745ab6e198c870a0d66216ff28cfe0217929151`): outcome verification failure, release
+  verification failure; differences per class: F1 105, F3 0, in_flight 46, not_ok_record 40, undefined_metric_pairing
+  76, unexplained 28.
+* Use. A difference without a pre-specified class is a verification failure: each such difference is resolved and its
+  cause entered in Sec. 13 before any of these numbers enters the paper (use rule 2; Amendment A10, use rule 4).
+* Manifest and seal after this entry: `MANIFEST.sha256`, 221 files, sha256
+  `0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3`, sealed with this entry.
+
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

@@ -1,0 +1,13 @@
+kappa,seed,metric,n_routes,mean_diff,ci95_lo,ci95_hi,p_two_sided,p_method,decision,role,source
+1,11,driving_score,44,9.09264,0.0300456,18.4895,0.0665081,exact_dp_rounded,inconclusive,primary,contrasts.csv:H2_fixed_deep_minus_fast_only_k1.0/driving_score
+1,11,route_completion,44,-1.15273,-11.3435,9.05989,0.828112,exact_dp_rounded,supported: no meaningful difference,primary,contrasts.csv:H2_fixed_deep_minus_fast_only_k1.0/route_completion
+1,11,action_age_p50_s,44,0.206818,0.196591,0.217045,1.13687e-13,exact_dp_rounded,,primary,contrasts.csv:H2_fixed_deep_minus_fast_only_k1.0/action_age_p50_s
+1,12,driving_score,15,3.90633,-13.2338,21.1314,0.669556,exact_enumeration,inconclusive,secondary,contrasts.csv:H2_fixed_deep_minus_fast_only_k1.0_s12/driving_score
+1,12,route_completion,15,0.310667,-14.5787,15.2073,0.96875,exact_enumeration,inconclusive,secondary,contrasts.csv:H2_fixed_deep_minus_fast_only_k1.0_s12/route_completion
+1,12,action_age_p50_s,15,0.21,0.183333,0.236667,6.10352e-05,exact_enumeration,,secondary,contrasts.csv:H2_fixed_deep_minus_fast_only_k1.0_s12/action_age_p50_s
+1.5,11,driving_score,44,6.46781,-2.70566,15.6356,0.186786,exact_dp_rounded,inconclusive,secondary,contrasts.csv:H2_fixed_deep_minus_fast_only_k1.5/driving_score
+1.5,11,route_completion,44,0.482955,-6.85667,8.26551,0.903356,exact_dp_rounded,supported: no meaningful difference,secondary,contrasts.csv:H2_fixed_deep_minus_fast_only_k1.5/route_completion
+1.5,11,action_age_p50_s,44,0.203409,0.186932,0.219318,1.13687e-13,exact_dp_rounded,,secondary,contrasts.csv:H2_fixed_deep_minus_fast_only_k1.5/action_age_p50_s
+2,11,driving_score,11,-11.176,-28.4934,6.74831,,not computed (exploratory arm; CLOSED_LOOP_RESULTS.md reports exact sign-flip p = 0.2471),exploratory,exploratory,per_route_by_scenario.csv fixed_deep_k2.0_s11 - closed_loop_runs.csv fast_only_k2.0_s11
+1,11,driving_score_on_kappa2_routes,11,18.8358,3.78779,35.9041,,not computed (descriptive subset),descriptive,descriptive,"per_route_by_scenario.csv, routes of the kappa 2.0 arm, k1.0_s11"
+1.5,11,driving_score_on_kappa2_routes,11,13.0296,-2.60527,31.0497,,not computed (descriptive subset),descriptive,descriptive,"per_route_by_scenario.csv, routes of the kappa 2.0 arm, k1.5_s11"

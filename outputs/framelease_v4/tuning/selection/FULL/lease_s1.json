@@ -1,0 +1,642 @@
+{
+ "candidates": [
+  {
+   "arm": "fl_heuristic",
+   "envelope": {
+    "config": "T_x0.60",
+    "label": "E5",
+    "path": "outputs/framelease_v4/envelopes/E5.json",
+    "sha256": "21d0b4a441cf80e32e4f04ddeb9bf309b5a0a74c9495652fd04a88331c47df3a"
+   },
+   "name": "E5",
+   "order": 0,
+   "policy_params": {
+    "utility": "heuristic"
+   },
+   "tag": "E5_d10"
+  },
+  {
+   "arm": "fl_heuristic",
+   "envelope": {
+    "config": "T_x0.30",
+    "label": "E10",
+    "path": "outputs/framelease_v4/envelopes/E10.json",
+    "sha256": "bf61635ba3a38b7a307a4e1e4db4ad0541d7afc65cfd9afc432f9f054e1a2229"
+   },
+   "name": "E10",
+   "order": 1,
+   "policy_params": {
+    "utility": "heuristic"
+   },
+   "tag": "E10_d10"
+  },
+  {
+   "arm": "fl_heuristic",
+   "envelope": {
+    "config": "T_x0.00",
+    "label": "B0",
+    "path": "outputs/framelease_v4/envelopes/B0.json",
+    "sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927"
+   },
+   "name": "B0",
+   "order": 2,
+   "policy_params": {
+    "utility": "heuristic"
+   },
+   "tag": "B0_d10"
+  }
+ ],
+ "complete": true,
+ "dropped_routes": {
+  "23659": [
+   "B0: queue: timeout (None)"
+  ]
+ },
+ "final": false,
+ "finality": "runner records (--queue)",
+ "flags": [],
+ "grid": "lease",
+ "job_file": "outputs/framelease_v4/p1_jobs/FULL/b02_lease_s1.jsonl",
+ "job_file_sha256": "24223de6aa8998b80df23dfbe17369c18c22f82fc55f825442424b5c9bf268e7",
+ "kept_routes": [
+  "1792",
+  "2215",
+  "2539",
+  "2715",
+  "2943",
+  "3184",
+  "3514",
+  "4937",
+  "24211",
+  "25863"
+ ],
+ "pending": [],
+ "provisional": false,
+ "queue": "outputs/framelease_v4/queue_p1",
+ "ranking": [
+  "B0",
+  "E5",
+  "E10"
+ ],
+ "routes": [
+  "1792",
+  "2215",
+  "2539",
+  "2715",
+  "2943",
+  "3184",
+  "3514",
+  "4937",
+  "23659",
+  "24211",
+  "25863"
+ ],
+ "rule": "stage 1 of successive halving: top ceil(3/2) = 2 by mean DS on T22a kept routes; ties to the earlier candidate",
+ "schema": "framelease_v4.p1_selection/1",
+ "script_sha256": "146b8b1a3f75a467a7a21f1080a0b7c46b5e8a8500fe85c311487b6d9f12c867",
+ "stage": "lease_s1",
+ "stage_no": 1,
+ "stage_spec": "outputs/framelease_v4/p1_jobs/FULL/b02_lease_s1.stage.json",
+ "stage_spec_sha256": "d5b9089688f713a61ed7736353eb5cdc41cf36085cfab4e5734d140967188c04",
+ "survivors": [
+  "E5",
+  "B0"
+ ],
+ "table": [
+  {
+   "arm": "fl_heuristic",
+   "candidate": "E5",
+   "envelope": {
+    "config": "T_x0.60",
+    "label": "E5",
+    "path": "outputs/framelease_v4/envelopes/E5.json",
+    "sha256": "21d0b4a441cf80e32e4f04ddeb9bf309b5a0a74c9495652fd04a88331c47df3a"
+   },
+   "mean_ds": 44.27448430000001,
+   "n": 10,
+   "order": 0,
+   "outcomes": {
+    "ok": 11
+   },
+   "per_route": {
+    "1792": {
+     "attempts_found": 1,
+     "ds": 85.72,
+     "job": "v4p1_fl_heuristic_E5_d10_k1.0_s11_r1792",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E5_d10/runs/20261111T175533_66d2ef37",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "2215": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_fl_heuristic_E5_d10_k1.0_s11_r2215",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E5_d10/runs/20261111T184251_1a0419d0",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "23659": {
+     "attempts_found": 1,
+     "ds": 69.49607,
+     "job": "v4p1_fl_heuristic_E5_d10_k1.0_s11_r23659",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E5_d10/runs/20261113T204027_d64187e3",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "24211": {
+     "attempts_found": 1,
+     "ds": 80.313215,
+     "job": "v4p1_fl_heuristic_E5_d10_k1.0_s11_r24211",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E5_d10/runs/20261111T174206_ef8e7946",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "2539": {
+     "attempts_found": 1,
+     "ds": 13.068,
+     "job": "v4p1_fl_heuristic_E5_d10_k1.0_s11_r2539",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E5_d10/runs/20261111T163129_4b7d5b15",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "25863": {
+     "attempts_found": 1,
+     "ds": 20.98,
+     "job": "v4p1_fl_heuristic_E5_d10_k1.0_s11_r25863",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E5_d10/runs/20261113T202942_94e0a677",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "2715": {
+     "attempts_found": 1,
+     "ds": 17.37,
+     "job": "v4p1_fl_heuristic_E5_d10_k1.0_s11_r2715",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E5_d10/runs/20261113T215321_4fe2109f",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "2943": {
+     "attempts_found": 1,
+     "ds": 50.35,
+     "job": "v4p1_fl_heuristic_E5_d10_k1.0_s11_r2943",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E5_d10/runs/20261111T173059_6a975166",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "3184": {
+     "attempts_found": 1,
+     "ds": 40.896267,
+     "job": "v4p1_fl_heuristic_E5_d10_k1.0_s11_r3184",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E5_d10/runs/20261111T185957_35dc0e29",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "3514": {
+     "attempts_found": 1,
+     "ds": 1.86,
+     "job": "v4p1_fl_heuristic_E5_d10_k1.0_s11_r3514",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E5_d10/runs/20261113T201437_9a981195",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "4937": {
+     "attempts_found": 1,
+     "ds": 32.187361,
+     "job": "v4p1_fl_heuristic_E5_d10_k1.0_s11_r4937",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E5_d10/runs/20261111T191232_e0a417d6",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    }
+   },
+   "policy_params": {
+    "utility": "heuristic"
+   },
+   "reused_from": null,
+   "tag": "E5_d10"
+  },
+  {
+   "arm": "fl_heuristic",
+   "candidate": "E10",
+   "envelope": {
+    "config": "T_x0.30",
+    "label": "E10",
+    "path": "outputs/framelease_v4/envelopes/E10.json",
+    "sha256": "bf61635ba3a38b7a307a4e1e4db4ad0541d7afc65cfd9afc432f9f054e1a2229"
+   },
+   "mean_ds": 35.3005031,
+   "n": 10,
+   "order": 1,
+   "outcomes": {
+    "ok": 11
+   },
+   "per_route": {
+    "1792": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_fl_heuristic_E10_d10_k1.0_s11_r1792",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E10_d10/runs/20261111T180853_dbd959b2",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2215": {
+     "attempts_found": 1,
+     "ds": 20.685818,
+     "job": "v4p1_fl_heuristic_E10_d10_k1.0_s11_r2215",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E10_d10/runs/20261111T182051_1b00a152",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "23659": {
+     "attempts_found": 1,
+     "ds": 77.88,
+     "job": "v4p1_fl_heuristic_E10_d10_k1.0_s11_r23659",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E10_d10/runs/20261113T204407_c6ec447f",
+     "setup_failures": 0,
+     "status": "Failed - Agent deviated from the route"
+    },
+    "24211": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_fl_heuristic_E10_d10_k1.0_s11_r24211",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E10_d10/runs/20261111T175252_3cf332d9",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2539": {
+     "attempts_found": 1,
+     "ds": 37.8,
+     "job": "v4p1_fl_heuristic_E10_d10_k1.0_s11_r2539",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E10_d10/runs/20261111T165126_7a3d7b8c",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "25863": {
+     "attempts_found": 1,
+     "ds": 15.59145,
+     "job": "v4p1_fl_heuristic_E10_d10_k1.0_s11_r25863",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E10_d10/runs/20261113T203545_e71e76d8",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "2715": {
+     "attempts_found": 1,
+     "ds": 18.12,
+     "job": "v4p1_fl_heuristic_E10_d10_k1.0_s11_r2715",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E10_d10/runs/20261113T213431_167348e5",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "2943": {
+     "attempts_found": 1,
+     "ds": 50.35,
+     "job": "v4p1_fl_heuristic_E10_d10_k1.0_s11_r2943",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E10_d10/runs/20261111T171754_92523a02",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "3184": {
+     "attempts_found": 1,
+     "ds": 9.477,
+     "job": "v4p1_fl_heuristic_E10_d10_k1.0_s11_r3184",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E10_d10/runs/20261111T190531_49ef7e6f",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "3514": {
+     "attempts_found": 2,
+     "ds": 1.86,
+     "job": "v4p1_fl_heuristic_E10_d10_k1.0_s11_r3514",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 2,
+      "counted": 2,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E10_d10/runs/20261113T195045_de3865c6",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "4937": {
+     "attempts_found": 1,
+     "ds": 39.120763,
+     "job": "v4p1_fl_heuristic_E10_d10_k1.0_s11_r4937",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E10_d10/runs/20261111T192428_c91fd635",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    }
+   },
+   "policy_params": {
+    "utility": "heuristic"
+   },
+   "reused_from": null,
+   "tag": "E10_d10"
+  },
+  {
+   "arm": "fl_heuristic",
+   "candidate": "B0",
+   "envelope": {
+    "config": "T_x0.00",
+    "label": "B0",
+    "path": "outputs/framelease_v4/envelopes/B0.json",
+    "sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927"
+   },
+   "mean_ds": 52.4450736,
+   "n": 10,
+   "order": 2,
+   "outcomes": {
+    "ok": 10,
+    "sim_failure": 1
+   },
+   "per_route": {
+    "1792": {
+     "attempts_found": 1,
+     "ds": 36.0,
+     "job": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r1792",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10/runs/20261111T181226_13b04a0c",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2215": {
+     "attempts_found": 1,
+     "ds": 20.734807,
+     "job": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2215",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10/runs/20261111T183142_d6619d3c",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "23659": {
+     "attempts_found": 2,
+     "cause": "queue: timeout (None)",
+     "ds": null,
+     "job": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r23659",
+     "outcome": "sim_failure",
+     "queue": {
+      "attempts": 2,
+      "counted": 2,
+      "final_outcome": "timeout"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10/runs/20261113T211057_8e97dbe3",
+     "setup_failures": 0
+    },
+    "24211": {
+     "attempts_found": 1,
+     "ds": 50.0,
+     "job": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r24211",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10/runs/20261111T173943_59a5e62a",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2539": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2539",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10/runs/20261111T171152_6f5c25c0",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "25863": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r25863",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10/runs/20261113T202629_1f565954",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2715": {
+     "attempts_found": 1,
+     "ds": 14.928,
+     "job": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2715",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10/runs/20261113T214646_46fcac92",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "2943": {
+     "attempts_found": 1,
+     "ds": 45.217279,
+     "job": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2943",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10/runs/20261111T172641_b5f0548b",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3184": {
+     "attempts_found": 1,
+     "ds": 69.243837,
+     "job": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r3184",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10/runs/20261111T185729_0bd63aa0",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3514": {
+     "attempts_found": 1,
+     "ds": 2.35,
+     "job": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r3514",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10/runs/20261113T200251_aec5c10a",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "4937": {
+     "attempts_found": 1,
+     "ds": 85.976813,
+     "job": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r4937",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10/runs/20261111T193618_9b195571",
+     "setup_failures": 0,
+     "status": "Completed"
+    }
+   },
+   "policy_params": {
+    "utility": "heuristic"
+   },
+   "reused_from": null,
+   "tag": "B0_d10"
+  }
+ ],
+ "variant": "FULL",
+ "warnings": [],
+ "written": "2026-11-14T06:06:08+0800"
+}

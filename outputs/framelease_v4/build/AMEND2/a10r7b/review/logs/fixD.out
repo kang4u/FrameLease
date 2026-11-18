@@ -1,0 +1,5 @@
+registration --verify -> 1 | manifest: 1 files differ: [('framelease_v4/analysis/commit_audit.py', '7439a4eac0986cad6a25b7395975a0411b7483944a988d68dabb656bd2544ec7', '72d8c67cbb3f887731d0e74afb3159065bc254375a8961db81dbe01aa1bf6ce1')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: registered files differ from the sealed manifest: ['framelease_v4/analysis/commit_audit.py']
+manifest: 1 files differ: [('framelease_v4/analysis/commit_audit.py', '7439a4eac0986cad6a25b7395975a0411b7483944a988d68dabb656bd2544ec7', '72d8c67cbb3f887731d0e74afb3159065bc254375a8961db81dbe01aa1bf6ce1')]
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

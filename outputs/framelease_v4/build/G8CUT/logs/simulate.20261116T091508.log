@@ -1,0 +1,13 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B outputs/framelease_v4/build/G8CUT/g8_lib.py simulate --dir outputs/framelease_v4/analysis/final_20261116T091445 --name A13
+{
+ "composed_sha256": "3fbed7f7e451326da4a789519fd41e20220dea25df95d2c2272f024c2b4ae543",
+ "load_freeze_on_copy": {
+  "sha256": "fdda348027092724f74bf10cf0b5e33ed3219ffbfe5cfe6a57ac8aa9e4bd7c05",
+  "trigger": "cut",
+  "cut_amendment": "A12",
+  "registered": false
+ },
+ "problems": []
+}
+SIMULATE: OK
+TIME 0.18 s, max RSS 52332 KB

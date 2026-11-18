@@ -1,0 +1,16 @@
+A 0 tree seal: PASS manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+A 1 A10 check: PASS exit 0
+A 2 A10 apply: PASS PROTOCOL 203cdb6b3dbb19acefcb346be84b091d11a1999ca3f8f4d8475ad6a726410899 MANIFEST 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033 221 files; newly cited manifest files: ['framelease_v4/analysis/analyze_v4.py', 'framelease_v4/analysis/figures_tables.py', 'framelease_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_analyze_v4.py', 'framelease_v4/analysis/tests/tes
+A 3 seal after A10: PASS manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+A 4 parsers after A10: PASS analyze_v4.py cited by A10; G8 registration waits []
+A 4b review of the R7B fixes: PASS a stand-in in the tree
+A 5 A11 check: PASS exit 0
+A 6 A11 apply: PASS PROTOCOL b3be9c18d810334e095f516a48e34c391293d1f5bb41389ebe155d6282fa008b MANIFEST 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033 221 files; newly cited manifest files: ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']
+A 7 seal after A11: PASS manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+A 8 parsers after A11: PASS {"framelease_v4/analysis/analyze_v4.py": "A10", "framelease_v4/analysis/verify_table1_extra.py": "A11", "framelease_v4/analysis/tests/test_verify_table1_extra.py": "A11"}
+A 9 diff written: PASS 448 diff lines
+B 1 A11 before A10 stops: PASS STOP: in-place text found 0 times: '**Verification.** Before any number enters the paper, an independent session rec'
+C 1 A10 apply: PASS exit 0
+C 2 A11 without the review file fails in the fill: PASS exit 1; PROTOCOL.md unchanged; manifest rewritten identical; seal check after it: manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+D 1 apply_locked.sh A10: PASS apply_locked: exit 0 (output /tmp/AMEND3/a10r7b/sim_tree/treeD/outputs/framelease_v4/amendment_a10/apply.out)
+D 2 apply_locked.sh restores the sealed manifest: PASS exit 1; seal check: manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

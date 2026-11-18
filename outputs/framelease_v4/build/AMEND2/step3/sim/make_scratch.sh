@@ -1,0 +1,50 @@
+#!/bin/bash
+# Build the scratch tree of the step-3 simulation (default /tmp/AMEND3/tree; refuses any other place than /tmp/AMEND3/).
+# Read only on the project. Real copies: framelease_v4/ (without __pycache__; registration.py and both drivers find
+# their root from their own path, so the copy is its own root), outputs/framelease_v4/registration/ and p1_driver/,
+# p1_jobs/ (the P1 job files, always registered: the simulation alters one), the step-2 test logs amendment_a3/,
+# amendment_a7/ and operational_phase_driver/ (the simulation alters one), build/AMEND/ and build/AMEND2/ (the drafts
+# and the transaction directory; without step3/review/), tuning/d1/ (empty; the fake D1 summary).
+# Symlinks (read only): every other entry of the project root, of outputs/ and of outputs/framelease_v4/ and build/,
+# and tuning/selection/. Never linked: the runner's queues (queue_*: no lock test may touch them) and
+# pipeline_state.json (the P1 driver's state).
+set -euo pipefail
+SRC=/home/kang/Desktop/DAC
+DST="${1:-/tmp/AMEND3/tree}"
+case "$DST" in /tmp/AMEND3/?*) ;; *) echo "refused: $DST is not under /tmp/AMEND3/"; exit 2 ;; esac
+rm -rf "$DST"
+mkdir -p "$DST"
+for e in "$SRC"/* "$SRC"/.[!.]*; do
+    n="$(basename "$e")"
+    case "$n" in framelease_v4|outputs) continue ;; esac
+    ln -s "$e" "$DST/$n"
+done
+rsync -a --exclude __pycache__ "$SRC/framelease_v4/" "$DST/framelease_v4/"
+mkdir -p "$DST/outputs/framelease_v4"
+for e in "$SRC"/outputs/*; do
+    n="$(basename "$e")"
+    [ "$n" = framelease_v4 ] || ln -s "$e" "$DST/outputs/$n"
+done
+V="$SRC/outputs/framelease_v4"
+for e in "$V"/*; do
+    n="$(basename "$e")"
+    case "$n" in
+        registration|p1_driver|p1_jobs|amendment_a3|amendment_a7|operational_phase_driver)
+            rsync -a "$e/" "$DST/outputs/framelease_v4/$n/" ;;
+        build|tuning|phase_driver|queue_*|pipeline_state.json) ;;
+        *) ln -s "$e" "$DST/outputs/framelease_v4/$n" ;;
+    esac
+done
+mkdir -p "$DST/outputs/framelease_v4/build" "$DST/outputs/framelease_v4/tuning/d1"
+for e in "$V"/build/*; do
+    n="$(basename "$e")"
+    case "$n" in
+        AMEND|AMEND2)
+            rsync -a --exclude 'txn_*' --exclude '/step3/review' "$e/" "$DST/outputs/framelease_v4/build/$n/" ;;
+        *) ln -s "$e" "$DST/outputs/framelease_v4/build/$n" ;;
+    esac
+done
+ln -s "$V/tuning/selection" "$DST/outputs/framelease_v4/tuning/selection"
+n="$(find "$DST" -maxdepth 1 | wc -l)"
+echo "scratch tree $DST: $n root entries; framelease_v4 $(du -sh "$DST/framelease_v4" | cut -f1)"
+find "$DST" -type l -lname '*queue_*' | head -3

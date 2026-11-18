@@ -1,0 +1,8 @@
+{
+ "schema": "framelease_v4.d1_decision/1",
+ "decision": "continue",
+ "rationale": "Every P1 block is final on the training routes; the tuning freeze fixes L* = B0, d* = 1 and the Event-Triggered point s_hb2.0 (simulation text).",
+ "d1_summary_sha256": "9095a11a7daaa4a982206af657829e43d475043d3102559f4c2ef137b6c8aa37",
+ "decided": "2026-11-15T06:22:48+0800",
+ "by": "the coordinating session"
+}

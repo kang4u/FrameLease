@@ -1,0 +1,740 @@
+{
+ "inputs_sha256": {
+  "outputs/framelease_v4/build/R7B/dev/agg_snap_2203/runs.csv": "9ee8c078e0178c91c408f2cfc95312c15c2077e8b7b08e7ff9f789e9b2c39c5d",
+  "outputs/framelease_v4/build/R7B/dev/p1_snap_2203/status.jsonl": "3d8164ad10c9837dea18602e6655724959f1a2a5c8dcc1c582c2d3b2ba54ddc2"
+ },
+ "rates": {
+  "F1": {
+   "127": 12.18450184501845,
+   "308": 29.549815498154985,
+   "98": 9.402214022140221,
+   "p13": 0.7305002818218174,
+   "p14": 0.7563563433444475,
+   "p44": 0.9881788721732204
+  },
+  "F1_pct": 0.0959409594095941,
+  "F3": {
+   "127": 0.46863468634686345,
+   "308": 1.136531365313653,
+   "98": 0.36162361623616235,
+   "p98": 0.3039212401667568
+  },
+  "in_flight": {
+   "127": [
+    16.808823529411764,
+    21.872222222222224
+   ],
+   "308": [
+    40.76470588235294,
+    53.044444444444444
+   ],
+   "98": [
+    12.970588235294118,
+    16.877777777777776
+   ],
+   "pct": [
+    0.17222222222222222,
+    0.1323529411764706
+   ]
+  },
+  "not_ok": {
+   "308": 1.711111111111111,
+   "98": 0.5444444444444444
+  }
+ },
+ "rundirs_272": {
+  "agree_within_inflight_bounds": 60,
+  "agree_within_validity_bounds": 0,
+  "analysis_by_cause": {},
+  "analysis_differences": 0,
+  "by_cause": {},
+  "by_target": {
+   "summary.json": {
+    "compared": 5523,
+    "differences": 0
+   }
+  },
+  "cause_plans": {
+   "F1": 47,
+   "F3": 2
+  },
+  "cause_plans_f1_status": {
+   "clear->log_censored": 44,
+   "conflict->log_censored": 3
+  },
+  "classes": {
+   "F1": {
+    "analysis": 0,
+    "columns": {},
+    "jobs": [],
+    "n": 0,
+    "runs": 0,
+    "runs_per_arm": {}
+   },
+   "F3": {
+    "analysis": 0,
+    "columns": {},
+    "jobs": [],
+    "n": 0,
+    "runs": 0,
+    "runs_per_arm": {}
+   },
+   "in_flight": {
+    "analysis": 0,
+    "columns": {},
+    "jobs": [],
+    "n": 0,
+    "runs": 0,
+    "runs_per_arm": {}
+   },
+   "not_ok_record": {
+    "analysis": 0,
+    "columns": {},
+    "jobs": [],
+    "n": 0,
+    "runs": 0,
+    "runs_per_arm": {}
+   },
+   "unexplained": {
+    "analysis": 0,
+    "columns": {},
+    "jobs": [],
+    "n": 0,
+    "runs": 0,
+    "runs_per_arm": {}
+   }
+  },
+  "compared": 5523,
+  "differences": 0,
+  "dir": "/tmp/A10A11/r7bfix/verify_p1_rundirs",
+  "f1_plans": 47,
+  "f1_run_dirs": 26,
+  "f3_plans": 2,
+  "f3_run_dirs": 2,
+  "rows": 0,
+  "run_dirs": {
+   "f1_plans": 47,
+   "f3_plans": 2,
+   "jobs_matched": 0,
+   "not_recomputable": [
+    "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E10_d10/runs/20261111T193852_ee1fc967"
+   ],
+   "raw_data_checks": {},
+   "recomputed": 271,
+   "run_dirs": 272,
+   "runner_jobs": 0,
+   "runs_csv_rows": 0,
+   "runs_with_f1_plans": 26,
+   "runs_with_f3_plans": 2,
+   "used_rows": 0,
+   "used_rows_without_raw_logs": 0,
+   "used_rows_without_raw_logs_by_reason": {},
+   "used_rows_without_raw_logs_jobs": []
+  },
+  "runs_ending_in_flight": 36,
+  "runs_recomputed_rows": 272,
+  "runs_with_inflight_commits": 8,
+  "runs_with_inflight_gpu_boundaries": 36,
+  "sha256sums": {
+   "cause_plans.csv": true,
+   "differences.csv": true,
+   "plans.csv": true,
+   "runs_recomputed.csv": true,
+   "table1_extra.json": true
+  },
+  "status": "development",
+  "validity_available": 271,
+  "verdict": "AGREE",
+  "within_bounds_by_cause": {}
+ },
+ "snapshot": {
+  "agree_within_inflight_bounds": 136,
+  "agree_within_validity_bounds": 6,
+  "analysis_by_cause": {
+   "F1": 1
+  },
+  "analysis_differences": 1,
+  "by_cause": {
+   "F1": 26,
+   "unclassified": 110
+  },
+  "by_target": {
+   "arm_summary.csv": {
+    "compared": 220,
+    "differences": 1
+   },
+   "runner": {
+    "compared": 180,
+    "differences": 0
+   },
+   "runner result": {
+    "compared": 360,
+    "differences": 2
+   },
+   "runs.csv": {
+    "compared": 7740,
+    "differences": 133
+   },
+   "summary.json": {
+    "compared": 3759,
+    "differences": 0
+   }
+  },
+  "cause_plans": {
+   "F1": 40,
+   "F3": 1
+  },
+  "cause_plans_f1_status": {
+   "clear->log_censored": 38,
+   "conflict->log_censored": 2
+  },
+  "classes": {
+   "F1": {
+    "analysis": 1,
+    "columns": {
+     "arm_summary.csv|realized_invalid_tick_ratio": {
+      "at": [
+       "fast_only/fast_only/1.0/11.0/P1/ref",
+       "0.11020683117922499",
+       "0.10921389207948978",
+       "record"
+      ],
+      "max": 0.0009929390997352044,
+      "n": 1,
+      "without": 0
+     },
+     "runs.csv|realized_conflict_plans": {
+      "at": [
+       "v4p1_fixed_deep_k1.0_s11_r2539",
+       "21",
+       "20",
+       "record"
+      ],
+      "max": 1.0,
+      "n": 2,
+      "without": 0
+     },
+     "runs.csv|realized_invalid_tick_ratio": {
+      "at": [
+       "v4p1_fast_only_k1.0_s11_r1792",
+       "0.22815533980582525",
+       "0.20631067961165048",
+       "analysis"
+      ],
+      "max": 0.021844660194174775,
+      "n": 1,
+      "without": 0
+     },
+     "runs.csv|realized_invalid_ticks": {
+      "at": [
+       "v4p1_fast_only_k1.0_s11_r1792",
+       "94",
+       "85",
+       "record"
+      ],
+      "max": 9.0,
+      "n": 1,
+      "without": 0
+     },
+     "runs.csv|realized_log_censored_plans": {
+      "at": [
+       "v4p1_event_triggered_v2_hb2.0_k1.0_s11_r23659",
+       "6",
+       "16",
+       "record"
+      ],
+      "max": 10.0,
+      "n": 19,
+      "without": 0
+     },
+     "runs.csv|realized_misses": {
+      "at": [
+       "v4p1_fixed_deep_k1.0_s11_r2539",
+       "21",
+       "20",
+       "record"
+      ],
+      "max": 1.0,
+      "n": 2,
+      "without": 0
+     }
+    },
+    "jobs": [
+     "v4p1_event_triggered_s_hb1.0_k1.0_s11_r2539",
+     "v4p1_event_triggered_s_hb1.0_k1.0_s11_r2715",
+     "v4p1_event_triggered_s_hb2.0_k1.0_s11_r2215",
+     "v4p1_event_triggered_s_hb2.0_k1.0_s11_r24211",
+     "v4p1_event_triggered_s_hb2.0_k1.0_s11_r3514",
+     "v4p1_event_triggered_v2_hb2.0_k1.0_s11_r23659",
+     "v4p1_fast_only_k1.0_s11_r1792",
+     "v4p1_fast_only_k1.0_s11_r2844",
+     "v4p1_fast_only_k1.0_s11_r3090",
+     "v4p1_fast_only_k1.0_s11_r3749",
+     "v4p1_fast_only_k1.0_s11_r4937",
+     "v4p1_fixed_deep_k1.0_s11_r2215",
+     "v4p1_fixed_deep_k1.0_s11_r2539",
+     "v4p1_fixed_deep_k1.0_s11_r2943",
+     "v4p1_fixed_deep_k1.0_s11_r4937",
+     "v4p1_fl_heuristic_B0_d10_k1.0_s11_r17569",
+     "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2215",
+     "v4p1_fl_heuristic_B0_d4_k1.0_s11_r24211",
+     "v4p1_fl_heuristic_E5_d10_k1.0_s11_r2943"
+    ],
+    "n": 26,
+    "runs": 19,
+    "runs_per_arm": {
+     "event_triggered": 6,
+     "fast_only": 5,
+     "fixed_deep": 4,
+     "fl_heuristic": 4
+    }
+   },
+   "F3": {
+    "analysis": 0,
+    "columns": {},
+    "jobs": [],
+    "n": 0,
+    "runs": 0,
+    "runs_per_arm": {}
+   },
+   "in_flight": {
+    "analysis": 0,
+    "columns": {
+     "runs.csv|commits": {
+      "at": [
+       "v4p1_fl_heuristic_E5_d10_k1.0_s11_r2215",
+       "990",
+       "983",
+       "record"
+      ],
+      "max": 7.0,
+      "n": 7,
+      "without": 0
+     },
+     "runs.csv|gpu_busy_recomputed_s": {
+      "at": [
+       "v4p1_fixed_deep_k1.0_s11_r3514",
+       "199.46672369872857",
+       "199.25441957855261",
+       "record"
+      ],
+      "max": 0.21230412017595768,
+      "n": 31,
+      "without": 0
+     },
+     "runs.csv|gpu_usage_recomputed": {
+      "at": [
+       "v4p1_fixed_deep_k1.0_s11_r23659",
+       "0.9944482886002559",
+       "0.9808777027498328",
+       "record"
+      ],
+      "max": 0.013570585850423145,
+      "n": 31,
+      "without": 0
+     }
+    },
+    "jobs": [
+     "v4p1_event_triggered_s_hb1.0_k1.0_s11_r25863",
+     "v4p1_event_triggered_s_hb1.0_k1.0_s11_r3373",
+     "v4p1_event_triggered_s_hb2.0_k1.0_s11_r2397",
+     "v4p1_event_triggered_s_hb2.0_k1.0_s11_r24330",
+     "v4p1_event_triggered_s_hb2.0_k1.0_s11_r2844",
+     "v4p1_event_triggered_v2_hb1.0_k1.0_s11_r23659",
+     "v4p1_event_triggered_v2_hb2.0_k1.0_s11_r23659",
+     "v4p1_event_triggered_v2_hb2.0_k1.0_s11_r4937",
+     "v4p1_fast_only_k1.0_s11_r24330",
+     "v4p1_fast_only_k1.0_s11_r3514",
+     "v4p1_fixed_deep_k1.0_s11_r2215",
+     "v4p1_fixed_deep_k1.0_s11_r23659",
+     "v4p1_fixed_deep_k1.0_s11_r23910",
+     "v4p1_fixed_deep_k1.0_s11_r2643",
+     "v4p1_fixed_deep_k1.0_s11_r2715",
+     "v4p1_fixed_deep_k1.0_s11_r2844",
+     "v4p1_fixed_deep_k1.0_s11_r2943",
+     "v4p1_fixed_deep_k1.0_s11_r3184",
+     "v4p1_fixed_deep_k1.0_s11_r3514",
+     "v4p1_fixed_deep_k1.0_s11_r3749",
+     "v4p1_fixed_deep_k1.0_s11_r4937",
+     "v4p1_fl_heuristic_B0_d10_k1.0_s11_r17569",
+     "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2086",
+     "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2397",
+     "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2539",
+     "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2943",
+     "v4p1_fl_heuristic_B0_d4_k1.0_s11_r1792",
+     "v4p1_fl_heuristic_B0_d4_k1.0_s11_r24211",
+     "v4p1_fl_heuristic_E10_d10_k1.0_s11_r24211",
+     "v4p1_fl_heuristic_E5_d10_k1.0_s11_r2215",
+     "v4p1smoke_fl_original_k1.0_s11_r18305"
+    ],
+    "n": 69,
+    "runs": 31,
+    "runs_per_arm": {
+     "event_triggered": 8,
+     "fast_only": 2,
+     "fixed_deep": 11,
+     "fl_heuristic": 9,
+     "fl_original": 1
+    }
+   },
+   "not_ok_record": {
+    "analysis": 0,
+    "columns": {
+     "runner result|result.action_age_p50_s": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runner result|result.fallback_tick_ratio": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|action_age_mean_s": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|action_age_p50_s": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|action_age_p95_s": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|choice_epochs": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|commits": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|committed_plans": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|cuda_s_per_s": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|deadline_miss_ratio": {
+      "at": null,
+      "max": null,
+      "n": 2,
+      "without": 2
+     },
+     "runs.csv|deadline_miss_ratio_after_first_commit": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|decision_epochs": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|dmr": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|dmr_ticks": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|expired_ratio": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|expired_ratio_after_first_commit": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|fallback_by_reason": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|fallback_episodes": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|fallback_ticks": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|first_commit_s": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|first_tick_s": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|gpu_busy_in_span_s": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|gpu_busy_recomputed_s": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|gpu_usage": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|gpu_usage_recomputed": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|last_tick_s": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|max_age_s": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|p_both": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|realized_available": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|realized_conflict_plans": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|realized_invalid_tick_ratio": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|realized_invalid_ticks": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|realized_log_censored_plans": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|realized_misses": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|realized_v0_plans": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|shield_epochs": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|sim_span_s": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|ticks": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|ticks_after_first_commit": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     },
+     "runs.csv|track_ticks": {
+      "at": null,
+      "max": null,
+      "n": 1,
+      "without": 1
+     }
+    },
+    "jobs": [
+     "v4p1_fl_heuristic_B0_d10_k1.0_s11_r23659"
+    ],
+    "n": 41,
+    "runs": 1,
+    "runs_per_arm": {
+     "fl_heuristic": 1
+    }
+   },
+   "unexplained": {
+    "analysis": 0,
+    "columns": {},
+    "jobs": [],
+    "n": 0,
+    "runs": 0,
+    "runs_per_arm": {}
+   }
+  },
+  "compared": 12259,
+  "differences": 136,
+  "dir": "outputs/framelease_v4/build/R7B/dev/verify_p1_snap_2203_d",
+  "f1_jobs_analysis_use": {
+   "v4p1_event_triggered_s_hb1.0_k1.0_s11_r2539": "True",
+   "v4p1_event_triggered_s_hb1.0_k1.0_s11_r2715": "True",
+   "v4p1_event_triggered_s_hb2.0_k1.0_s11_r2215": "True",
+   "v4p1_event_triggered_s_hb2.0_k1.0_s11_r24211": "True",
+   "v4p1_event_triggered_s_hb2.0_k1.0_s11_r3514": "True",
+   "v4p1_event_triggered_v2_hb2.0_k1.0_s11_r23659": "True",
+   "v4p1_fast_only_k1.0_s11_r1792": "True",
+   "v4p1_fast_only_k1.0_s11_r2844": "True",
+   "v4p1_fast_only_k1.0_s11_r3090": "True",
+   "v4p1_fast_only_k1.0_s11_r3749": "True",
+   "v4p1_fast_only_k1.0_s11_r4937": "True",
+   "v4p1_fixed_deep_k1.0_s11_r2215": "True",
+   "v4p1_fixed_deep_k1.0_s11_r2539": "True",
+   "v4p1_fixed_deep_k1.0_s11_r2943": "True",
+   "v4p1_fixed_deep_k1.0_s11_r4937": "True",
+   "v4p1_fl_heuristic_B0_d10_k1.0_s11_r17569": "True",
+   "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2215": "True",
+   "v4p1_fl_heuristic_B0_d4_k1.0_s11_r24211": "True",
+   "v4p1_fl_heuristic_E5_d10_k1.0_s11_r2943": "True"
+  },
+  "f1_jobs_arm_runs_csv": [
+   "event_triggered",
+   "fast_only",
+   "fixed_deep",
+   "fl_heuristic"
+  ],
+  "f1_plans": 40,
+  "f1_run_dirs": 19,
+  "f3_plans": 1,
+  "f3_run_dirs": 1,
+  "not_ok_jobs": {
+   "v4p1_fl_heuristic_B0_d10_k1.0_s11_r23659": {
+    "analysis_use": "False",
+    "missing_reason": "sim_failure",
+    "outcome": "sim_failure",
+    "run_dir": "",
+    "runner": [
+     "timeout",
+     2,
+     true
+    ],
+    "selected_run_set": true
+   }
+  },
+  "rows": 136,
+  "run_dirs": {
+   "f1_plans": 40,
+   "f3_plans": 1,
+   "jobs_matched": 180,
+   "not_recomputable": [],
+   "raw_data_checks": {},
+   "recomputed": 180,
+   "run_dirs": 180,
+   "runner_jobs": 181,
+   "runs_csv_rows": 194,
+   "runs_with_f1_plans": 19,
+   "runs_with_f3_plans": 1,
+   "used_rows": 179,
+   "used_rows_without_raw_logs": 0,
+   "used_rows_without_raw_logs_by_reason": {},
+   "used_rows_without_raw_logs_jobs": []
+  },
+  "runner_not_ok_final": {
+   "v4p1_fl_heuristic_B0_d10_k1.0_s11_r23659": [
+    "timeout",
+    2,
+    true
+   ],
+   "v4p1_fl_heuristic_B0_d4_k1.0_s11_r2539": [
+    "interrupted",
+    1,
+    false
+   ]
+  },
+  "runs_csv_analysis_use": 179,
+  "runs_csv_rows": 194,
+  "runs_ending_in_flight": 31,
+  "runs_recomputed_rows": 180,
+  "runs_with_inflight_commits": 7,
+  "runs_with_inflight_gpu_boundaries": 31,
+  "sha256sums": {
+   "cause_plans.csv": true,
+   "differences.csv": true,
+   "plans.csv": true,
+   "runs_recomputed.csv": true,
+   "table1_extra.json": true
+  },
+  "status": "development",
+  "validity_available": 180,
+  "verdict": "DIFFER",
+  "within_bounds_by_cause": {
+   "F3": 3
+  }
+ }
+}

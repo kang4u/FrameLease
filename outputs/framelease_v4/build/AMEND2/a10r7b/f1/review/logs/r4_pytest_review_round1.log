@@ -1,0 +1,104 @@
+..FF.F.                                                                  [100%]
+=================================== FAILURES ===================================
+_______________ ClassReportOnVerifierOutput.test_pinned_versions _______________
+
+self = <test_review_f1_class_report.ClassReportOnVerifierOutput testMethod=test_pinned_versions>
+
+    def test_pinned_versions(self):
+        for path, want in PINNED.items():
+>           self.assertEqual(_sha(path), want, path)
+E           AssertionError: 'ac82d65a9f4507a779dce5632e166b79e9d4c8d83f6c2b014ca27561e29145b6' != '3ef60e91b792e6d11880822d3fe303c6b64709141feec81cec79b99d3344f0aa'
+E           - ac82d65a9f4507a779dce5632e166b79e9d4c8d83f6c2b014ca27561e29145b6
+E           + 3ef60e91b792e6d11880822d3fe303c6b64709141feec81cec79b99d3344f0aa
+E            : /home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/a10r7b/f1/f1_class_report.py
+
+outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py:120: AssertionError
+_________ ClassReportOnVerifierOutput.test_release_ignores_status_gap __________
+
+self = <test_review_f1_class_report.ClassReportOnVerifierOutput testMethod=test_release_ignores_status_gap>
+
+    def test_release_ignores_status_gap(self):
+        """table1_extra.json of this synthetic run has status 'development'; the release is formed all the same."""
+        self.assertNotEqual(self.rep['status'], 'final')
+>       self.assertIn(self.rep['release'], ('AGREE', 'class F1 only', 'verification failure'))
+E       AssertionError: 'not final' not found in ('AGREE', 'class F1 only', 'verification failure')
+
+outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py:182: AssertionError
+_________ ClassReportOnVerifierOutput.test_sha256sums_not_checked_gap __________
+
+self = <test_review_f1_class_report.ClassReportOnVerifierOutput testMethod=test_sha256sums_not_checked_gap>
+
+    def test_sha256sums_not_checked_gap(self):
+        """The rows without a cause removed from differences.csv and from the counts of table1_extra.json: the
+        directory's SHA256SUMS no longer matches, the report reads 'class F1 only' all the same."""
+        d = tempfile.mkdtemp(prefix='review_f1a11_tamper_', dir='/tmp')
+        try:
+            for n in os.listdir(self.out):
+                shutil.copy(os.path.join(self.out, n), d)
+            keep = [r for r in self.diffs if r['cause'] == 'F1']
+            with open(os.path.join(d, 'differences.csv'), 'w', newline='', encoding='utf-8') as fh:
+                w = csv.DictWriter(fh, list(self.diffs[0].keys()))
+                w.writeheader()
+                w.writerows(keep)
+            with open(os.path.join(d, 'table1_extra.json'), encoding='utf-8') as fh:
+                t1 = json.load(fh)
+            t1['comparisons']['differences_by_cause'] = {'F1': len(keep)}
+            t1['comparisons']['analysis_differences_by_cause'] = {
+                'F1': sum(r['scope'] == 'analysis' for r in keep)}
+            with open(os.path.join(d, 'table1_extra.json'), 'w', encoding='utf-8') as fh:
+                json.dump(t1, fh)
+            with open(os.path.join(d, 'SHA256SUMS'), encoding='utf-8') as fh:
+                sums = dict(reversed(ln.rstrip('\n').split('  ', 1)) for ln in fh if '  ' in ln)
+            self.assertNotEqual(sums['differences.csv'], _sha(os.path.join(d, 'differences.csv')))
+>           self.assertEqual(R.report(d)['release'], 'class F1 only')
+
+outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py:175: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+outputs/framelease_v4/build/AMEND2/a10r7b/f1/f1_class_report.py:417: in report
+    paths, shas = checked_inputs(out_dir)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+out_dir = '/tmp/review_f1a11_tamper_k92bj1l1'
+
+    def checked_inputs(out_dir):
+        """The paths of the four inputs after the check against SHA256SUMS; the sha256 of every file read."""
+        paths = {n: os.path.join(out_dir, n) for n in INPUTS + (SUMS,)}
+        missing = [n for n, p in paths.items() if not os.path.isfile(p)]
+        if missing:
+            raise SystemExit('input error: %s lacks %s' % (out_dir, missing))
+        listed = {}
+        with open(paths[SUMS], encoding='utf-8') as fh:
+            for ln in fh:
+                digest, sep, name = ln.rstrip('\n').partition('  ')
+                if sep:
+                    listed[name] = digest
+        shas = {n: sha256(p) for n, p in paths.items()}
+        bad = ['%s %s' % (n, 'not listed' if n not in listed else 'differs (%s listed, %s now)'
+                          % (listed[n][:12], shas[n][:12])) for n in INPUTS if listed.get(n) != shas[n]]
+        if bad:
+>           raise SystemExit('input error: the inputs do not match %s of %s: %s' % (SUMS, out_dir, '; '.join(bad)))
+E           SystemExit: input error: the inputs do not match SHA256SUMS of /tmp/review_f1a11_tamper_k92bj1l1: differences.csv differs (90b0d3ea2086 listed, 6feedce8242e now); table1_extra.json differs (d316e5ab2b67 listed, f7550a4ce1f6 now)
+
+outputs/framelease_v4/build/AMEND2/a10r7b/f1/f1_class_report.py:360: SystemExit
+==================================== PASSES ====================================
+____ ClassReportOnVerifierOutput.test_analysis_columns_separated_by_metric _____
+---------------------------- Captured stdout setup -----------------------------
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 242, differences 50 (24 in values the analysis reads)
+  analysis                 compared      4  differences     4  (analysis-read 4; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared      8  differences     2  (analysis-read 2; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared      8  differences     4  (analysis-read 4; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     22  differences     8  (analysis-read 8; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     7  (analysis-read 2; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared      7  differences     4  (analysis-read 4; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences    21  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: F1 19, unclassified 31; in values the analysis reads: F1 14, unclassified 10; agreements within bounds at the value under a convention: none; plans changed by F1: 1 in 1 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/review_f1a11_85socawz/out
+=========================== short test summary info ============================
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_analysis_columns_separated_by_metric
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_one_side_empty_gap
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_runs_per_arm_from_runs_csv
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_verifier_differs_and_counts_agree
+FAILED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_pinned_versions
+FAILED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_release_ignores_status_gap
+FAILED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_sha256sums_not_checked_gap
+3 failed, 4 passed in 0.33s

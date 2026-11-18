@@ -1,0 +1,13 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/a10r7b/post_check.py A10 --root /tmp/AMEND3/a10r7b/rsim/treeE_phase_only
+(exit 1)
+registration --verify: manifest: 1 files differ: [('framelease_v4/analysis/manipulation.py', '78f18dacf323832ef16684b0b81a2ba03b2ffb00186259780d1bafe7e656cbd0', '31f44b382a9ca4e0b4680c4cdb1b37146a98d2f8af5ca810f7e13ead984ad0f9')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+amendment titles at lines: {'A10': [2810], 'A11': []}
+first Sec. 13.2 line citing framelease_v4/analysis/analyze_v4.py: 3024 (A10)
+G8 analysis_registration waits: ["the analysis modules ['framelease_v4/analysis/manipulation.py'] are missing or at a sha256 that PROTOCOL.md does not cite (not registered)"]
+in-place text 1: new 1x, old 0x 
+in-place text 2: new 1x, old 0x 
+in-place text 3: new 1x, old 0x 
+in-place text 4: new 1x, old 0x 
+in-place text 5: new 1x, old 0x 
+phase driver baseline: pending refresh for 8 files (the driver refreshes at its next cycle)
+FAIL: registration.py --verify; analysis_registration waits

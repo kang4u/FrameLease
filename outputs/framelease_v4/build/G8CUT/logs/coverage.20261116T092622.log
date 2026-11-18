@@ -1,0 +1,43 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B framelease_v4/analysis/prop1_coverage.py --tuning-freeze outputs/framelease_v4/tuning/selection.json --out outputs/framelease_v4/analysis/final_20261116T091445/coverage
+[1/32] BlockedIntersection_Town03_Route135_Weather5: 1611 matched pairs (1 s)
+[2/32] ControlLoss_Town04_Route170_Weather14: 3924 matched pairs (3 s)
+[3/32] ControlLoss_Town10HD_Route378_Weather14: 1413 matched pairs (3 s)
+[4/32] CrossingBicycleFlow_Town12_Route977_Weather15: 4762 matched pairs (5 s)
+[5/32] DynamicObjectCrossing_Town01_Route3_Weather3: 608 matched pairs (5 s)
+[6/32] DynamicObjectCrossing_Town02_Route11_Weather11: 408 matched pairs (6 s)
+[7/32] HardBreakRoute_Town01_Route32_Weather6: 928 matched pairs (6 s)
+[8/32] HighwayCutIn_Town12_Route1029_Weather15: 464 matched pairs (7 s)
+[9/32] HighwayExit_Town06_Route312_Weather0: 656 matched pairs (7 s)
+[10/32] InterurbanActorFlow_Town12_Route1291_Weather1: 136 matched pairs (7 s)
+[11/32] InterurbanAdvancedActorFlow_Town06_Route324_Weather2: 232 matched pairs (8 s)
+[12/32] InvadingTurn_Town02_Route95_Weather9: 69 matched pairs (8 s)
+[13/32] LaneChange_Town06_Route307_Weather21: 1577 matched pairs (8 s)
+[14/32] MergerIntoSlowTrafficV2_Town12_Route857_Weather25: 473 matched pairs (8 s)
+[15/32] MergerIntoSlowTraffic_Town06_Route317_Weather5: 755 matched pairs (9 s)
+[16/32] NonSignalizedJunctionLeftTurnEnterFlow_Town12_Route949_Weather13: 122 matched pairs (9 s)
+[17/32] NonSignalizedJunctionLeftTurn_Town07_Route342_Weather3: 258 matched pairs (9 s)
+[18/32] NonSignalizedJunctionRightTurn_Town03_Route126_Weather18: 917 matched pairs (10 s)
+[19/32] OppositeVehicleRunningRedLight_Town04_Route180_Weather23: 245 matched pairs (10 s)
+[20/32] OppositeVehicleTakingPriority_Town04_Route214_Weather6: 370 matched pairs (10 s)
+[21/32] ParkingCrossingPedestrian_Town13_Route545_Weather25: 897 matched pairs (11 s)
+[22/32] ParkingCutIn_Town13_Route1343_Weather1: 921 matched pairs (11 s)
+[23/32] ParkingExit_Town12_Route922_Weather12: 891 matched pairs (12 s)
+[24/32] PedestrianCrossing_Town13_Route747_Weather19: 3609 matched pairs (13 s)
+[25/32] SignalizedJunctionLeftTurnEnterFlow_Town13_Route657_Weather2: 1041 matched pairs (14 s)
+[26/32] SignalizedJunctionRightTurn_Town03_Route118_Weather14: 630 matched pairs (14 s)
+[27/32] StaticCutIn_Town05_Route226_Weather18: 1603 matched pairs (15 s)
+[28/32] VanillaNonSignalizedTurnEncounterStopsign_Town12_Route979_Weather9: 175 matched pairs (15 s)
+[29/32] VehicleTurningRoutePedestrian_Town15_Route445_Weather11: 708 matched pairs (15 s)
+[30/32] VehicleTurningRoutePedestrian_Town15_Route481_Weather19: 123 matched pairs (15 s)
+[31/32] VehicleTurningRoute_Town15_Route504_Weather10: 599 matched pairs (16 s)
+[32/32] YieldToEmergencyVehicle_Town04_Route166_Weather10: 2654 matched pairs (17 s)
+Proposition-1 coverage on 32 VAL clips -> outputs/framelease_v4/analysis/final_20261116T091445/coverage
+deployed E*: tuning_freeze: ['E5', 'B0'] (roles {'E5': 'fl_risk', 'E10': 'not deployed', 'B0': 'L*'})
+  E5   fl_risk      vehicle    pairs  33289  path[0,3s] 0.525 [0.475, 0.575]  sample 0.816  per-tau 0:0.706 0.5:0.808 1:0.834 1.5:0.825 2:0.826 2.5:0.825 3:0.831
+  E5   fl_risk      pedestrian pairs    490  path[0,3s] 0.812 [0.701, 0.930]  sample 0.921  per-tau 0:0.935 0.5:0.955 1:0.947 1.5:0.925 2:0.918 2.5:0.877 3:0.840
+  E10  not deployed vehicle    pairs  33289  path[0,3s] 0.193 [0.140, 0.250]  sample 0.579  per-tau 0:0.379 0.5:0.512 1:0.574 1.5:0.620 2:0.639 2.5:0.640 3:0.644
+  E10  not deployed pedestrian pairs    490  path[0,3s] 0.543 [0.453, 0.733]  sample 0.743  per-tau 0:0.712 0.5:0.765 1:0.754 1.5:0.759 2:0.731 2.5:0.721 3:0.676
+  B0   L*           vehicle    pairs  33289  path[0,3s] 0.000 [0.000, 0.000]  sample 0.000  per-tau 0:0.000 0.5:0.000 1:0.000 1.5:0.000 2:0.000 2.5:0.000 3:0.000
+  B0   L*           pedestrian pairs    490  path[0,3s] 0.000 [0.000, 0.000]  sample 0.000  per-tau 0:0.000 0.5:0.000 1:0.000 1.5:0.000 2:0.000 2.5:0.000 3:0.000
+checks: {'inputs': True, 'envelope_link': True, 'gate2': True, 'pooled': True}; interim guard: pre_freeze, 0 guarded clips
+TIME 17.42 s, max RSS 118308 KB

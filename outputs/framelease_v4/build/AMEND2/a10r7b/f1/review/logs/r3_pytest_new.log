@@ -1,0 +1,65 @@
+......                                             [100%]
+==================================== PASSES ====================================
+____________ Synthetic.test_not_ok_record_still_holds_its_mechanism ____________
+----------------------------- Captured stdout call -----------------------------
+uu
+_____________________ Synthetic.test_release_checks_holds ______________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuu
+___________ Synthetic.test_round2_m1_counter_examples_now_fail_holds ___________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuuuuuu
+________________ OnVerifierOutput.test_duplicate_runs_csv_rows _________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 2 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 110, differences 44 (1 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     86  differences    42  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 44; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r3_f1_new_vt_o1z3tu_h/out_dup_bad_first
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 2 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 110, differences 44 (1 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     86  differences    42  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 44; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r3_f1_new_vt_o1z3tu_h/out_dup_bad_last
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 2 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 110, differences 43 (0 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     86  differences    41  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 43; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r3_f1_new_vt_o1z3tu_h/out_dup_good_first
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 2 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 110, differences 43 (0 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     86  differences    41  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 43; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r3_f1_new_vt_o1z3tu_h/out_dup_good_last
+uu
+__________ OnVerifierOutput.test_two_queues_read_in_another_order_gap __________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 46, differences 43 (0 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     43  differences    41  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 43; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r3_f1_new_vt_o1z3tu_h/out_order
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 46, differences 43 (0 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     43  differences    41  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 43; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r3_f1_new_vt_o1z3tu_h/out_one
+=========================== short test summary info ============================
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r3_test_new.py::Synthetic::test_commits_without_in_flight_boundaries_holds
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r3_test_new.py::Synthetic::test_not_ok_record_still_holds_its_mechanism
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r3_test_new.py::Synthetic::test_release_checks_holds
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r3_test_new.py::Synthetic::test_round2_m1_counter_examples_now_fail_holds
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r3_test_new.py::OnVerifierOutput::test_duplicate_runs_csv_rows
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r3_test_new.py::OnVerifierOutput::test_two_queues_read_in_another_order_gap
+6 passed, 22 subtests passed in 0.32s
+0.60 s 62784 KB

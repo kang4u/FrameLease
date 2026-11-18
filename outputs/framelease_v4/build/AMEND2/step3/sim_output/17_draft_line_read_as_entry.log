@@ -1,0 +1,14 @@
+amend_step3.sh 2026-11-15T06:22:03+08:00 (pid 247267): root /tmp/AMEND3/tree; transaction directory /tmp/AMEND3/runs/17
+inputs: step3_txn.py a778ad618c0a587a2a73fa8d3bae564bcac4945ec8f4ddbf3157b3b61fc703a0,
+        step3_spec.json 5ffa420793cb394fe6cd148663254c9d67a25dbf7ca016ae0c789ca48cba9142
+== 1. pre-check (no lock)
+step3_txn.py precheck 2026-11-15T06:22:03+0800 (pid 247284): root /tmp/AMEND3/tree, work /tmp/AMEND3/runs/17/precheck
+registration.py --verify (exit 1): manifest: 1 files differ: [('framelease_v4/analysis/verify_table1_extra.py', 'a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa', 'd416bdedd8eb7ed4f19b03bdc559da2f4589dfd208e9b687f22545a6dfaaf4af')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registered baseline: 153 files; in the sealed manifest at their sha256 and unchanged in the tree: yes
+P1 job files: 37 in the sealed manifest; unchanged in the tree: yes
+P1 driver entries: Tuning freeze line 2211, D1 summary line 2221; outputs/framelease_v4/tuning/d1/FULL_d1_summary.json sha256 9095a11a7daaa4a982206af657829e43d475043d3102559f4c2ef137b6c8aa37 cited by the D1 summary entry
+check_drafts.py exit 0: all checks passed
+PROBLEM: outputs/framelease_v4/build/AMEND/AMENDMENTS_DRAFT.md: sha256 0adcb1b7c00e2a77 != 81e5376eaad29c59 (prepared / OP_spec.json): the file changed after the preparation; a changed file carries its review, then make_step3_spec.py is run again
+PROBLEM: dry fill: A9: line 42 reads as a driver entry
+precheck: 2 problem(s) (dry files in /tmp/AMEND3/runs/17/precheck)
+STOP: pre-check failed (exit 1); nothing was changed. See /tmp/AMEND3/runs/17/amend_step3.log

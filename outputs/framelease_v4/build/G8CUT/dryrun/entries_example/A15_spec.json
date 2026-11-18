@@ -1,0 +1,12 @@
+{
+ "name": "A15",
+ "template": "outputs/framelease_v4/build/G8CUT/entries/A15_entry.md",
+ "tests": [],
+ "inplace": [],
+ "must_equal": {
+  "outputs/framelease_v4/verification/final_20261116T002530_table1_extra/SHA256SUMS": "b54e95353f8590223d5e1d4c89c0ae059089faee122b81be5a1a57292a576730",
+  "outputs/framelease_v4/verification/final_20261116T002530_table1_extra/table1_extra.json": "190a0e4bd91c229fa9943111fbcf1842baf1eba3b643d5fafa7915bfb32d97ca",
+  "outputs/framelease_v4/verification/final_20261116T002530_table1_extra_f1_class.json": "b975dcfac8995d4eaa962b5155428f60fdec6244ea8c265b90c1bb80eb3a2a6f"
+ },
+ "max_new_registered": 0
+}

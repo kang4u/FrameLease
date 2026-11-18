@@ -1,0 +1,62 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B outputs/framelease_v4/build/G8CUT/g8_lib.py record --dir outputs/framelease_v4/analysis/final_20261116T091445
+{
+ "code": {
+  "framelease_v4/analysis/aggregate_v4.py": "ee13c90b91bf44ad59d0a3c7e60bf93d65964785ed386d3e81c44fea0f5e4b96",
+  "framelease_v4/analysis/commit_audit.py": "7439a4eac0986cad6a25b7395975a0411b7483944a988d68dabb656bd2544ec7",
+  "framelease_v4/analysis/extra_metrics.py": "53050f6bed5aa48054d5217832fb84ed4089b3ae80e8fdcf965769af2af79c4c",
+  "framelease_v4/analysis/interim_guard.py": "5453a3573e7cca958cad1bc1c44d53995a11e034e251bba634fe09390efed9c7",
+  "framelease_v4/analysis/manipulation.py": "78f18dacf323832ef16684b0b81a2ba03b2ffb00186259780d1bafe7e656cbd0"
+ },
+ "cut_amendment": "A12",
+ "frozen": "2026-11-16T09:15:07+0800",
+ "guard": {
+  "guarded_rows": 632,
+  "health_only_rows": 632,
+  "status": "pre_freeze",
+  "test_route_rows": 632
+ },
+ "outcomes": {
+  "cut": 505,
+  "ok": 126,
+  "sim_failure": 1
+ },
+ "per_file": {
+  "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl": {
+   "cut": 210,
+   "ok": 97,
+   "sim_failure": 1
+  },
+  "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl": {
+   "cut": 160,
+   "ok": 16
+  },
+  "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl": {
+   "cut": 19,
+   "ok": 3
+  },
+  "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl": {
+   "cut": 40,
+   "ok": 4
+  },
+  "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl": {
+   "cut": 56,
+   "ok": 4
+  },
+  "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl": {
+   "cut": 20,
+   "ok": 2
+  }
+ },
+ "problems": [],
+ "record": "outputs/framelease_v4/analysis/final_20261116T091445/analysis_freeze.json",
+ "required": "outputs/framelease_v4/analysis/final_20261116T091445/required_job_files.json",
+ "required_sha256": "f58321692f998d7e33f713aee2f212f54f8e7699babc0f13310bcfdb71521d6d",
+ "route_split_sha256": "555f6869cb62d89082efc0fefc8f125ee133b16fd36a6fcf9f68bb1269fa527e",
+ "runner_exit": "2026-11-16T01:12:24+00:00",
+ "sha256": "fdda348027092724f74bf10cf0b5e33ed3219ffbfe5cfe6a57ac8aa9e4bd7c05",
+ "sha256sums": "outputs/framelease_v4/analysis/final_20261116T091445/SHA256SUMS",
+ "sha256sums_sha256": "335317294a5d8d20af3f62f0b4eaeae5dce8a7454475b8a99b9d291e9d254ad3",
+ "trigger": "cut"
+}
+RECORD: OK
+TIME 0.24 s, max RSS 50988 KB

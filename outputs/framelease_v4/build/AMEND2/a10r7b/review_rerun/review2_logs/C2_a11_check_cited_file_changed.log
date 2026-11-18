@@ -1,0 +1,4 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/A10A11/applier/apply_entry_scratch_treeC.py outputs/framelease_v4/build/AMEND2/a10r7b/A11_spec.json
+(exit 1, 6.2 s)
+registration --verify -> 1 | manifest: 1 files differ: [('framelease_v4/analysis/analyze_v4.py', '10d7ea4f9516725cd94932a0618bbe5cc6a20bae60b49f4004013b3682cee54c', '43d26bef8f1c5c75c46bd51f74ba24fbbb32ca95256c1e993df294e7f37d11b5')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/analysis/analyze_v4.py']

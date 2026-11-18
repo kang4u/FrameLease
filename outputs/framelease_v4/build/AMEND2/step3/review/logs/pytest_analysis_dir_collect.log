@@ -1,0 +1,62 @@
+framelease_v4/analysis/tests/test_aggregate_v4.py: 34
+framelease_v4/analysis/tests/test_analyze_v4.py: 48
+framelease_v4/analysis/tests/test_commit_audit.py: 15
+framelease_v4/analysis/tests/test_extra_metrics.py: 10
+framelease_v4/analysis/tests/test_figures_tables.py: 50
+framelease_v4/analysis/tests/test_interim_guard.py: 11
+framelease_v4/analysis/tests/test_manipulation.py: 11
+framelease_v4/analysis/tests/test_prop1_coverage.py: 22
+framelease_v4/analysis/tests/test_verify_independent.py: 28
+framelease_v4/analysis/tests/test_verify_table1_extra.py: 71
+framelease_v4/arms/tests/test_metrics_realized_keys.py: 2
+
+=============================== warnings summary ===============================
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:66
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:66: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._family)
+
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:70
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:70: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._size)
+
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:74
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:74: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._name)
+
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:78
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:78: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._value)
+
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:85
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._families)
+
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:92
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:92: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._point_sizes)
+
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:102
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:102: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._property)
+
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:127
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:127
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:127
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:127
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:127
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:127: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    self._parser.parseString(pattern)
+
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:134
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:134
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:134
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:134
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:134
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:134: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    self._parser.resetCache()
+
+.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/_mathtext.py:30
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/_mathtext.py:30: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html

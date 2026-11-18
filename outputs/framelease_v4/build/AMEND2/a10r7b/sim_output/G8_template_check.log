@@ -1,0 +1,4 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/A10A11/fix2/sim_tree/apply_entry_scratch_treeG.py outputs/framelease_v4/build/AMEND2/a10r7b/A11_spec.json
+(exit 1)
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: template problem: ['* **G3 P2 data manifest** (2026-11-15 12:00, Beijing time). Probe.'] / starts '**Amendment A11, {{datetime}} (Beijing t' / anchor phrase 0 times

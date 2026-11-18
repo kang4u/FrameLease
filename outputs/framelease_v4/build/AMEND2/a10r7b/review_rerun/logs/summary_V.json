@@ -1,0 +1,32 @@
+{
+ "p1_baseline": {
+  "in_p1_baseline": true,
+  "in_phase_baseline": true,
+  "rc": 1,
+  "sealed_manifest_lists_it": true,
+  "verify": "manifest: 1 files differ: [('framelease_v4/rl/RL_PROTOCOL.md', 'c12b935b740494fda4c54d6c162d7d8776a0a29bfe84e5b3ec14b482d1bf2557', 'unreadable (No such file or directory)')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK",
+  "phase_refresh_keeps_it": true
+ },
+ "p1_baseline_fix": {
+  "rc": 1,
+  "stop": [
+   "STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/rl/RL_PROTOCOL.md']"
+  ],
+  "unchanged": true
+ },
+ "phase_only": {
+  "in_p1_baseline": false,
+  "in_phase_baseline": true,
+  "rc": 1,
+  "sealed_manifest_lists_it": true,
+  "verify": "manifest: 1 files differ: [('framelease_v4/arms_ext/tests/test_drift_guard.py', 'fdd3ff374c1cbf54b3f9a009d9d0b662e4ab9ecf61723350a24700aaef142115', 'unreadable (No such file or directory)')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK",
+  "phase_refresh_keeps_it": true
+ },
+ "phase_only_fix": {
+  "rc": 1,
+  "stop": [
+   "STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/arms_ext/tests/test_drift_guard.py']"
+  ],
+  "unchanged": true
+ }
+}

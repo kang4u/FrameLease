@@ -1,0 +1,27 @@
+...........                             [100%]
+==================================== PASSES ====================================
+__________________ PerRun.test_freeze_values_per_protocol_arm __________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuuuuuuuuu
+________ PerRun.test_health_only_rows_withhold_the_depths_of_lease_arms ________
+----------------------------- Captured stdout call -----------------------------
+uuu
+___________ PerRun.test_idle_band_edges_are_the_sec_9_7_pilot_range ____________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuuu
+_________________ PerRun.test_prefix_band_and_background_load __________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuu
+=========================== short test summary info ============================
+PASSED framelease_v4/analysis/tests/test_manipulation.py::PerRun::test_depth_limit
+PASSED framelease_v4/analysis/tests/test_manipulation.py::PerRun::test_expiry_rule
+PASSED framelease_v4/analysis/tests/test_manipulation.py::PerRun::test_freeze_values_per_protocol_arm
+PASSED framelease_v4/analysis/tests/test_manipulation.py::PerRun::test_health_only_rows_withhold_the_depths_of_lease_arms
+PASSED framelease_v4/analysis/tests/test_manipulation.py::PerRun::test_idle_band_edges_are_the_sec_9_7_pilot_range
+PASSED framelease_v4/analysis/tests/test_manipulation.py::PerRun::test_idle_band_source_quotes_sec_9_7
+PASSED framelease_v4/analysis/tests/test_manipulation.py::PerRun::test_prefix_band_and_background_load
+PASSED framelease_v4/analysis/tests/test_manipulation.py::ConfigCheck::test_phases_and_freeze
+PASSED framelease_v4/analysis/tests/test_manipulation.py::AcrossRuns::test_kappa_scaling
+PASSED framelease_v4/analysis/tests/test_manipulation.py::AcrossRuns::test_p_both_on_common_routes
+PASSED framelease_v4/analysis/tests/test_manipulation.py::AcrossRuns::test_summary_withholds_outcome_parts_of_health_only_rows
+11 passed, 33 subtests passed in 0.17s

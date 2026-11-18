@@ -1,0 +1,137 @@
+{
+ "all_dry_runs_ok": true,
+ "job_file": "outputs/framelease_v4/p1_jobs/P1-0/b00_smoke.jsonl",
+ "job_file_sha256": "32c6d0b5e813fc0b26e41c5a0228683d0366a92081209537192731878928e2c2",
+ "lines": [
+  {
+   "agent_runtime_config_sha256": "a93455ef2b5e2904fb2d5eb32d7f6e4f3d3e9ef4aa2850a3a05fbada5502ff9e",
+   "dry_run": {
+    "arm": "fixed_deep_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2600,
+     2601,
+     2602,
+     8600
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1smoke_fixed_deep_k1.0_s11_r18305",
+   "ok": true,
+   "problems": [],
+   "utility": null
+  },
+  {
+   "agent_runtime_config_sha256": "6551821845600b01def05cb469593ccb3b24e144686128f1afdc151536f4d5a2",
+   "dry_run": {
+    "arm": "fast_only_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2610,
+     2611,
+     2612,
+     8610
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1smoke_fast_only_k1.0_s11_r18305",
+   "ok": true,
+   "problems": [],
+   "utility": null
+  },
+  {
+   "agent_runtime_config_sha256": "1d69e7ed850b26f8e5be636acda315d3f84f6a0a68a57d4cf9fa567e7d2c5ce7",
+   "dry_run": {
+    "arm": "age_only_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2620,
+     2621,
+     2622,
+     8620
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1smoke_age_only_A2.0_d4_k1.0_s11_r18305",
+   "ok": true,
+   "problems": [],
+   "utility": "v4_adet_d4"
+  },
+  {
+   "agent_runtime_config_sha256": "8256556c53585c650132e48f9c184c606d8b9389d659946b044fa3f427b5c8b3",
+   "dry_run": {
+    "arm": "event_triggered_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2630,
+     2631,
+     2632,
+     8630
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1smoke_event_triggered_v2_hb2.0_k1.0_s11_r18305",
+   "ok": true,
+   "problems": [],
+   "utility": null
+  },
+  {
+   "agent_runtime_config_sha256": "e6a821d2f4e39aa670f12f8a77fb1fa365e975339945af434e8473b7884f10e9",
+   "dry_run": {
+    "arm": "fl_original_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2600,
+     2601,
+     2602,
+     8600
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1smoke_fl_original_k1.0_s11_r18305",
+   "ok": true,
+   "problems": [],
+   "utility": null
+  },
+  {
+   "agent_runtime_config_sha256": "c7c6d1a66c9866dec84f27bcee89b0a71e6b91d092bec89b9a7ac1a7533189b6",
+   "dry_run": {
+    "arm": "fl_heuristic_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2610,
+     2611,
+     2612,
+     8610
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1smoke_fl_heuristic_E5_d10_k1.0_s11_r18305",
+   "ok": true,
+   "problems": [],
+   "utility": "heuristic"
+  },
+  {
+   "agent_runtime_config_sha256": "224db4b95a2eb5ebba44e6fccb72d208f3d6b4d3d19ddf2bc59fc93aaf2ecfb0",
+   "dry_run": {
+    "arm": "fl_behaviour_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2620,
+     2621,
+     2622,
+     8620
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1smoke_fl_behaviour_E5_eps0.300_k1.0_s11_r18305",
+   "ok": true,
+   "problems": [],
+   "utility": "v4_eps0.300_seed2607171771015655460"
+  }
+ ],
+ "n_lines": 7,
+ "problems": [],
+ "schema": "framelease_v4.p1_check/1",
+ "script_sha256": "d953cb18b92f6f3d627e3e13b9cf5c685abbffbd8a845feb8db31203c1825fad"
+}

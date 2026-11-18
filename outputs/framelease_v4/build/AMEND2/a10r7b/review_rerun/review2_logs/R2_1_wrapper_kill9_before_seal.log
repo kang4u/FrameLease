@@ -1,0 +1,16 @@
+(exit 94, 12.9 s)
+apply_locked: exit 94 (output /tmp/A10A11/applier/treeR2/outputs/framelease_v4/amendment_a10/apply.out)
+bash: 第 48 行： 366947 已杀死                  $X "$PY" -u -I -B "$APPLIER" "$SPEC" --apply >> "$OUT/apply.out" 2>&1
+
+--- apply.out
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeR2/outputs/framelease_v4/amendment_a10/attempt_20261115T105311_366940
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/A10A11/applier/treeR2/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+manifest difference: new [] / left [] / changed []
+composed PROTOCOL.md sha256 f1d0a9e1bfda3f77c8da9a1afe563b888af947698f637034cc31201f2d80dd69
+inject: SIGKILL before --seal (PROTOCOL.md written)
+sealed: PROTOCOL.md f1d0a9e1bfda3f77c8da9a1afe563b888af947698f637034cc31201f2d80dd69, manifest 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+apply_locked: PROTOCOL.md held the entry unsealed: SEALED it with the manifest the entry names
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

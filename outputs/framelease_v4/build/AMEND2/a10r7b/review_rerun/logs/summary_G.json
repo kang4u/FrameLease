@@ -1,0 +1,24 @@
+{
+ "rc": 0,
+ "title": "**Amendment A10, 2026-11-15 09:02 (Beijing time): registration of the analysis c",
+ "gate_times": {
+  "d1_decision": "2026-11-15 06:42",
+  "p2_jobs": "2026-11-15 06:43"
+ },
+ "parsers_accept": true,
+ "verify": {
+  "manifest_ok": true,
+  "seal_lines": [
+   [
+    "framelease_v4/PROTOCOL.md",
+    "OK"
+   ],
+   [
+    "outputs/framelease_v4/registration/MANIFEST.sha256",
+    "OK"
+   ]
+  ],
+  "all_ok": true,
+  "text": "manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK"
+ }
+}

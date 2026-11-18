@@ -1,0 +1,380 @@
+{
+ "analysis_cells": {
+  "problems": [],
+  "used_cells": 126,
+  "value_sources": {
+   "raw": 1008
+  }
+ },
+ "analysis_columns": {
+  "action_age_p50_s": "action_age_p50_s",
+  "action_age_p95_s": "action_age_p95_s",
+  "dmr": "dmr",
+  "eir": "realized_invalid_tick_ratio",
+  "fallback_ratio": "deadline_miss_ratio",
+  "gpu_usage": "gpu_usage",
+  "p_both": "p_both",
+  "r_cond": "realized_r_cond"
+ },
+ "causes": {
+  "conventions": {
+   "F1": "a plan sample on the last actor-log row later than its time by more than 1e-9 s lies outside the log: a conflict first found there and a clear plan ending there count as log-censored",
+   "F1+F3": "both conventions F1 and F3",
+   "F3": "V by linear interpolation of the minimum clearance (box distance - d_safe) between the bracketing samples j - 1 and j (V_lin; tau_j when sample j - 1 has no actor or c_{j-1} <= c_j)"
+  },
+  "order": [
+   "F1",
+   "F3",
+   "F1+F3"
+  ],
+  "rule": "a difference whose other side agrees with the value formed under a convention of the registered implementation (the first in this order; the same tolerances, bounds under that convention) carries it as its cause and remains a difference"
+ },
+ "comparisons": {
+  "agree_within_bounds_by_cause": {},
+  "agree_within_inflight_bounds": 213,
+  "agree_within_validity_bounds": 0,
+  "analysis_differences": 196,
+  "analysis_differences_by_cause": {
+   "F1": 92,
+   "unclassified": 104
+  },
+  "by_target": {
+   "analysis.json": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 0,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 0,
+    "analysis_differences_by_cause": {},
+    "compared": 188,
+    "differences": 0,
+    "differences_by_cause": {}
+   },
+   "analysis.json:descriptive": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 0,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 0,
+    "analysis_differences_by_cause": {},
+    "compared": 14,
+    "differences": 0,
+    "differences_by_cause": {}
+   },
+   "analysis.json:families/S-dmr": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 0,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 0,
+    "analysis_differences_by_cause": {},
+    "compared": 33,
+    "differences": 0,
+    "differences_by_cause": {}
+   },
+   "analysis.json:per_ability": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 0,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 0,
+    "analysis_differences_by_cause": {},
+    "compared": 288,
+    "differences": 0,
+    "differences_by_cause": {}
+   },
+   "analysis.json:secondary": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 28,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 30,
+    "analysis_differences_by_cause": {
+     "F1": 30
+    },
+    "compared": 812,
+    "differences": 30,
+    "differences_by_cause": {
+     "F1": 30
+    }
+   },
+   "arm_summary.csv": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 3,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 0,
+    "analysis_differences_by_cause": {},
+    "compared": 230,
+    "differences": 1,
+    "differences_by_cause": {
+     "F1": 1
+    }
+   },
+   "conditions.csv": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 18,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 4,
+    "analysis_differences_by_cause": {
+     "F1": 4
+    },
+    "compared": 1280,
+    "differences": 4,
+    "differences_by_cause": {
+     "F1": 4
+    }
+   },
+   "descriptive.csv": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 0,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 0,
+    "analysis_differences_by_cause": {},
+    "compared": 14,
+    "differences": 0,
+    "differences_by_cause": {}
+   },
+   "family_S-dmr.csv": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 0,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 0,
+    "analysis_differences_by_cause": {},
+    "compared": 33,
+    "differences": 0,
+    "differences_by_cause": {}
+   },
+   "paired_differences.csv": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 50,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 128,
+    "analysis_differences_by_cause": {
+     "F1": 24,
+     "unclassified": 104
+    },
+    "compared": 6472,
+    "differences": 128,
+    "differences_by_cause": {
+     "F1": 24,
+     "unclassified": 104
+    }
+   },
+   "per_ability.csv": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 0,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 0,
+    "analysis_differences_by_cause": {},
+    "compared": 288,
+    "differences": 0,
+    "differences_by_cause": {}
+   },
+   "per_scenario.csv": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 11,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 2,
+    "analysis_differences_by_cause": {
+     "F1": 2
+    },
+    "compared": 5814,
+    "differences": 2,
+    "differences_by_cause": {
+     "F1": 2
+    }
+   },
+   "runner": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 0,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 0,
+    "analysis_differences_by_cause": {},
+    "compared": 127,
+    "differences": 0,
+    "differences_by_cause": {}
+   },
+   "runner result": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 0,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 0,
+    "analysis_differences_by_cause": {},
+    "compared": 254,
+    "differences": 2,
+    "differences_by_cause": {
+     "unclassified": 2
+    }
+   },
+   "runs.csv": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 43,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 2,
+    "analysis_differences_by_cause": {
+     "F1": 2
+    },
+    "compared": 5461,
+    "differences": 98,
+    "differences_by_cause": {
+     "F1": 14,
+     "unclassified": 84
+    }
+   },
+   "secondary.csv": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 28,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 30,
+    "analysis_differences_by_cause": {
+     "F1": 30
+    },
+    "compared": 812,
+    "differences": 30,
+    "differences_by_cause": {
+     "F1": 30
+    }
+   },
+   "summary.json": {
+    "agree_within_bounds_by_cause": {},
+    "agree_within_inflight_bounds": 32,
+    "agree_within_validity_bounds": 0,
+    "analysis_differences": 0,
+    "analysis_differences_by_cause": {},
+    "compared": 2646,
+    "differences": 0,
+    "differences_by_cause": {}
+   }
+  },
+  "compared": 24766,
+  "differences": 295,
+  "differences_by_cause": {
+   "F1": 105,
+   "unclassified": 190
+  }
+ },
+ "created": "2026-11-16T09:29:16+0800",
+ "definitions": "(per run; the route is the unit; arm-level values are means over routes).\n* Ticks are the rows of ticks.jsonl; t is the row's `sim_s`; dt is the median tick spacing (20 Hz control). A tick\n  commands the control period [t, t + dt), so the run spans [t_first, t_last + dt] simulated seconds.\n* GPU usage = |union of the cost-model intervals of prefixes and flow steps| within the span / span. A prefix occupies\n  [launch_s, launch_s + timeline_cost_s] and a flow step [launch_s, launch_s + timeline_cost_s] (jobs.jsonl). A job\n  still running at the end has no jobs.jsonl row: its prefix is [prefix_end_s - prefix_timeline_s, prefix_end_s] of\n  its 'job_start' event, and each later step quantum shown in the ticks' 'gpu' field (phase 'step') occupies\n  [end of the job's previous quantum, busy_until_s]. CUDA-seconds per second = GPU usage / kappa.\n* The committed action at tick t is the last accepted commit ('commit' event) with commit_s <= t (time comparisons at\n  1e-6 s: a commit logged up to 1 microsecond after the tick time is the tick's, as the runtime applies it). The first\n  commit is the earliest such commit_s.\n* DMR = ticks with t >= first commit at which the committed action is not valid / those ticks. Valid: t < deadline_s\n  for the lease arms (shield arms and Original FrameLease); t - capture_s < max_age_s (config runtime) for Fixed Deep,\n  Fast Only and Event-Triggered. A committed action without a finite deadline or capture time is invalid; before the\n  first commit there is none. The all-ticks variant divides the ticks without a valid committed action by all ticks;\n  the expired-only variants count the ticks whose committed action exists and has expired.\n* Fallback ratio = ticks in control mode 'fallback' (full-brake fallback) / all ticks, before the first plan included.\n  Fallback episodes = maximal runs of consecutive fallback ticks.\n* Action age = t - capture_s of the committed action, over tracked ticks (control mode 'track'); p50 / p95 by linear\n  interpolation (numpy.percentile default); also the mean.\n* P_both = decision rows (kind 'decision', depth >= 1, shield evaluated: 'shield' present) with |feasible| = 2 / those\n  rows (Sec. 5.1 decision epochs); None for an arm without a shield. The run value enters the route mean; the pooled\n  value (sum of choice epochs / sum of shield epochs) is reported next to it.\n* Committed plans (Sec. 6.3) are the accepted commits. The plan of a commit (job_id, depth) is the 'plan' of the\n  jobs.jsonl step of that job at that depth: 6 waypoints at tau = 0.5, 1.0, ..., 3.0 s in the capture LiDAR frame\n  (x right, y forward), the LiDAR origin (0, 0) at tau = 0. A commit of a job without a jobs.jsonl row (still running\n  at the end of the run) has no logged plan.\n* True capture pose: the hero transform of the actor-log row at capture_s (within 1 ms; else linear between the\n  bracketing rows at most 0.2 s apart), right-handed (y -> -y, yaw -> -yaw). The capture LiDAR lies 0.39 m behind\n  the hero origin (official LIDAR2EGO: LiDAR x = ego right, y = ego forward).\n* Ego footprint: the lease footprint of the standard validity definition (Eqs. 1-3). The plan is sampled every 0.05 s,\n  tau_j = 0.05 j, j = 0..60, from the LiDAR origin (0, 0) at tau = 0 (linear between the waypoints). The body heading\n  at sample j is the direction of p(tau_{j+1}) - p(tau_{j-1}) (at the last sample p(tau_60) - p(tau_59)); a\n  displacement slower than 0.5 m/s over its span keeps the previous sample's heading, one pointing backward of it\n  reverses (heading = travel + pi); at tau = 0 the heading is the capture heading. The ego box rides rigidly on the\n  LiDAR: the `_ego_shape` of the run's lease parameter file (config.json `agent_config.lease_params_path`: half length,\n  half width, centre offset in the LiDAR frame; forward_yaw_rad, the direction of the length axis, pi / 2 when absent),\n  else the documented Bench2Drive hero box (half sizes 2.4462 x 0.9184 m, centre 0.3837 m ahead of the LiDAR). A named\n  lease parameter file that cannot be read, or whose forward_yaw_rad is not pi / 2 (length axis along LiDAR +y, the\n  only reading implemented here), leaves the run without Sec. 6.3 values.\n* Actor boxes at t_k + tau (t_k = capture_s): the vehicle and walker boxes (catalog ext and off; the row's location\n  and yaw) of the actor-log row of that time (within 1 ms), else linear between the bracketing rows at most 0.2 s\n  apart (yaw along the shorter arc); an actor present in only one of the two rows is held at its logged pose over the\n  half interval nearer to that row. A sample without such rows, or whose row lists no actors (ego-only row after full\n  decimation), is unknown.\n* V. The first sample j at which the footprint comes within d_safe = 0.5 m of an actor box (box-to-box distance\n  <= d_safe; 0 when they overlap) brackets the first crossing in (tau_{j-1}, tau_j]. V is the first crossing time in\n  that bracket: the footprint pose moves linearly between the two samples (heading along the shorter arc) and the\n  actor boxes linearly between their states at the two samples (with the same hold rule); a 5 ms scan locates the\n  crossing and bisection refines it to 1e-4 s (V is the conflicting end of the final bracket, V_lo its clear end).\n  V = 0 when sample 0 conflicts. An unknown sample before the first conflicting sample censors the plan\n  ('log-censored'); a plan without a conflicting sample among 61 known samples is clear. A conflict plan has an\n  uncensored V. V_suf = clip(V - T_c, 0, H_bar), T_c = 0.5 s, H_bar = 2.5 s.\n* EIR = tracked ticks whose committed action is a conflict plan at age t - capture_s >= V_suf, divided by the tracked\n  ticks (mode 'track'). Closed-loop R_cond = conflict plans with H > V_suf / conflict plans, H = deadline_s -\n  capture_s of the commit (the lease, or the age cap of the age-rule arms); None without conflict plans. Plans with\n  V = 0 are counted on their own, and R_cond is also given without them. Age and tick times are compared at 1e-6 s.\n  Tracked ages are multiples of the 0.05 s tick (to microseconds), so EIR depends on the bracketing sample of V only.\n* Bounds of these values. A plan that cannot be evaluated (no logged plan, no capture pose, a non-finite plan, no\n  deadline) or whose first unknown sample lies before the last tick may hide a conflict (u such plans). A conflict plan\n  with |H - V_suf| < 1e-3 s lies on the miss rule within the time resolution of V: r_- of them count as misses, r_+ do\n  not. The 1e-3 s band covers the bisection resolution of V (1e-4 s) only; the clearance interpolation of the\n  registered implementation is convention F3 below, not a bound. The counts of conflict plans lie in [c, c + u], of\n  misses in [m - r_-, m + r_+ + u], and R_cond in [(m - r_-) / (c + u), (m + r_+ + u) / (c + u)] (c conflict plans,\n  m misses; likewise without the V = 0 plans). The upper bound of EIR also counts as invalid the tracked ticks on\n  unevaluable plans, on a bounded log-censored plan those at an age of at least clip(tau_unknown - T_c, 0, H_bar), and\n  the ticks whose age lies between the V_suf of the clear and of the conflicting bracket end.\n* Conventions of the registered implementation (causes of differences; Sec. 6.3 findings about registered files). Two\n  conventions of the registered implementation give Sec. 6.3 values other than these definitions. The values under\n  each (F1, F3, and both: F1+F3) are formed here from the same plans, with bounds formed in the same way, so that a\n  difference can carry its cause; the values of this script stay those defined above.\n  * F1: a plan sample t_k + tau_j that lands on the last actor-log row (within 1 ms) later than the row's time by more\n    than 1e-9 s lies outside the log. A conflict plan whose first conflicting sample is that sample, and a clear plan\n    whose last sample (tau 3.0) is that sample, count as log-censored there: no conflict, no miss, none of its tracked\n    ticks invalid, no bound.\n  * F3: V is tau_{j-1} + 0.05 c_{j-1} / (c_{j-1} - c_j) from the minimum clearances c (least box distance to a vehicle\n    or walker minus d_safe) at the bracketing samples j - 1 and j; V = tau_j when sample j - 1 has no such actor or\n    c_{j-1} <= c_j (V_lin). The miss rule and EIR follow with V_lin; the 1e-3 s band applies around its V_suf.",
+ "elapsed_s": 34.34,
+ "guard": {
+  "argv": [
+   "framelease_v4/analysis/verify_table1_extra.py",
+   "--analysis-freeze",
+   "outputs/framelease_v4/analysis/final_20261116T091445",
+   "--queue",
+   "outputs/framelease_v4/queue_p4",
+   "--agg",
+   "outputs/framelease_v4/analysis/final_20261116T091445/agg_p4",
+   "--analysis",
+   "outputs/framelease_v4/analysis/final_20261116T091445/analysis",
+   "--out",
+   "outputs/framelease_v4/verification/final_20261116T091445_table1_extra"
+  ],
+  "decision": "granted",
+  "freeze": {
+   "frozen": "2026-11-16T09:15:07+0800",
+   "jobs": 632,
+   "path": "outputs/framelease_v4/analysis/final_20261116T091445/analysis_freeze.json",
+   "protocol": "framelease_v4/PROTOCOL.md",
+   "seal": "outputs/framelease_v4/registration/SEAL.sha256",
+   "sha256": "fdda348027092724f74bf10cf0b5e33ed3219ffbfe5cfe6a57ac8aa9e4bd7c05",
+   "split": "outputs/framelease_v4/protocol/route_split.json",
+   "trigger": "cut"
+  },
+  "inputs_naming_a_route": 21213,
+  "inputs_without_a_route": 0,
+  "problems": [],
+  "registered_test_route_inputs": 21213,
+  "runs_csv_values": false,
+  "schema": "framelease_v4.verify_table1_extra/1/guard",
+  "synthetic_test_route_inputs": 0,
+  "test_options": {
+   "protocol": null,
+   "route_split": null,
+   "seal": null
+  },
+  "time": "2026-11-16T09:28:43+0800"
+ },
+ "inputs": {
+  "outputs/framelease_v4/analysis/final_20261116T091445/agg_p4/arm_summary.csv": "f6285cef0a506549bffe3879d933fb1741ce97fd9f37af8f39c0d80264d372b3",
+  "outputs/framelease_v4/analysis/final_20261116T091445/agg_p4/runs.csv": "0c0f5d2dec0345c0a30dbab63c272189f584018ecf6bff280dd550d5e109fd1d",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/analysis.json": "e581bdcad297775b523670579cb6db167d930235b37c75e82ec7cc9096d03ffd",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/cells.csv": "a67e832cc88cda4fa8144bf961d6c09324c4f76d0c4bd12c0854bfe5a7b8c62b",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/conditions.csv": "f86b23105ed4879dbb11fe887be7fbb567b7d7d36c22f30e73f373b0a4c23f28",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/descriptive.csv": "f3543c8b507bb72ca7a996784da51341363ba77d4154cda2eef923ccada87de2",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/family_S-dmr.csv": "b18465f1820de452af4d4c8c29248586b5377a4e5c587caf6313133abdd66645",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/paired_differences.csv": "8f3e3d038c6e435875b39b7060b0ff6f928762c19c3c29621c1a7684d662a47b",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/per_ability.csv": "307cf5a4a49bd0544ded21d9c28d824cc8d5b52f88ecd29e7cebe84e8cd18a78",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/per_scenario.csv": "8ab1de3463b407e404bf8d9db309027c735ef9e1a9c255054772661df2c67e58",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/secondary.csv": "daa49d6ecd5cf1375f21d14ee270cfa701d61cb39253a3527abae8189ccdec63",
+  "outputs/framelease_v4/queue_p4/status.jsonl": "4550f0e35b2a25ab87be929cf86ea214501ed7c65fa21dfc635727d134b84460"
+ },
+ "options": {
+  "runs_csv_values": false,
+  "write_plans": false
+ },
+ "registered_grid": {
+  "fraction": 0.0001,
+  "fraction_free": 0.0001,
+  "ratio": 0.0001,
+  "seconds": 0.001
+ },
+ "runs": {
+  "f1_plans": 8,
+  "f3_plans": 0,
+  "jobs_matched": 127,
+  "not_recomputable": [],
+  "raw_data_checks": {},
+  "recomputed": 127,
+  "run_dirs": 127,
+  "runner_jobs": 127,
+  "runs_csv_rows": 632,
+  "runs_with_f1_plans": 8,
+  "runs_with_f3_plans": 0,
+  "used_rows": 126,
+  "used_rows_without_raw_logs": 0,
+  "used_rows_without_raw_logs_by_reason": {},
+  "used_rows_without_raw_logs_jobs": []
+ },
+ "schema": "framelease_v4.verify_table1_extra/1",
+ "scope": {
+  "analysis_outputs_compared": [
+   "conditions.csv",
+   "secondary.csv",
+   "family_S-dmr.csv",
+   "descriptive.csv",
+   "paired_differences.csv",
+   "per_scenario.csv",
+   "per_ability.csv",
+   "analysis.json secondary",
+   "analysis.json descriptive",
+   "analysis.json families",
+   "analysis.json per_ability",
+   "analysis.json overhead",
+   "analysis.json decisions.H1.finding_2.gpu_usage_descriptive",
+   "analysis.json manipulation.analysed_runs.p_both_shared_shield"
+  ],
+  "not_verified_here": [
+   "CIs and p-values of the contrasts of these metrics (S-dmr and the secondary rows)",
+   "the ability membership of the per_ability rows (official mapping)",
+   "closed-loop lease utilization and premature expiry (Sec. 6.3; not Table I columns)"
+  ],
+  "verified": [
+   "GPU usage",
+   "CUDA-s per s",
+   "DMR (from the first commit on; all-ticks and expired-only variants)",
+   "action age p50 / p95",
+   "fallback ratio and episodes",
+   "P_both",
+   "EIR (executed-invalid tick rate, Sec. 6.3)",
+   "closed-loop R_cond (and without the V = 0 plans)",
+   "conflict plans, misses, V = 0 plans, log-censored plans, invalid ticks",
+   "the same Sec. 6.3 values under the conventions F1 and F3 of the registered implementation (the cause of a difference)"
+  ]
+ },
+ "script": "framelease_v4/analysis/verify_table1_extra.py",
+ "script_sha256": "f77b2dcf34484d2537a4c22d804912f0c155c3e3c26a576f433b9f4f73d83c27",
+ "status": "final",
+ "tolerances": {
+  "fraction": 1e-06,
+  "fraction_free": 1e-09,
+  "ratio": 1e-06,
+  "seconds": 1e-06
+ },
+ "verdict": "DIFFER"
+}

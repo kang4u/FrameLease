@@ -1,0 +1,31 @@
+{
+ "name": "A11",
+ "note": "Amendment A11 (item R7B); apply after Amendment A10 (its in-place text is the A10 Verification text); RUNBOOK: outputs/framelease_v4/build/AMEND2/a10r7b/RUNBOOK.md",
+ "template": "outputs/framelease_v4/build/AMEND2/a10r7b/A11_entry.md",
+ "tests": [
+  {
+   "log": "outputs/framelease_v4/amendment_a11/pytest_verify_table1_extra.log",
+   "argv": [
+    "framelease_v4/analysis/tests/test_verify_table1_extra.py"
+   ]
+  },
+  {
+   "log": "outputs/framelease_v4/amendment_a11/pytest_review_r7b.log",
+   "argv": [
+    "outputs/framelease_v4/build/R7B/review/test_review_r7b.py"
+   ]
+  }
+ ],
+ "inplace": [
+  {
+   "old": "**Verification.** Before any number enters the paper, an independent session recomputes the H1 contrasts and the\nTable I columns from the raw run directories (Amendment A10: `framelease_v4/analysis/verify_independent.py`\nrecomputes DS, SR, RC, collisions/km and infractions/km; a second script, registered by its own amendment before\nthe analysis freeze, recomputes the other Table I columns, which enter the paper once its result is entered in\nSec. 13).\n",
+   "new": "**Verification.** Before any number enters the paper, an independent session recomputes the H1 contrasts and the Table I\ncolumns from the raw run directories (Amendment A10: `framelease_v4/analysis/verify_independent.py` recomputes DS, SR,\nRC, collisions/km and infractions/km; Amendment A11: `framelease_v4/analysis/verify_table1_extra.py` recomputes GPU\nusage, DMR, action age p50 and p95, fallback ratio, EIR, P_both and the closed-loop R_cond, which enter the paper once\nits result is entered in Sec. 13).\n"
+  }
+ ],
+ "must_equal": {
+  "framelease_v4/analysis/verify_table1_extra.py": "a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa",
+  "framelease_v4/analysis/tests/test_verify_table1_extra.py": "c3bf160c7d5a6203c40577928acbb16c799677e73e0b4c11222f0041d3c553cd",
+  "outputs/framelease_v4/build/R7B/review/test_review_r7b.py": "63c4359d5cf4991a4904bac1f1c95b4519856d84e4e96431182496b1b45ce0d0"
+ },
+ "max_new_registered": 2
+}

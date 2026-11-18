@@ -1,0 +1,11 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B framelease_v4/analysis/aggregate_v4.py --queue outputs/framelease_v4/queue_p2 --specs outputs/framelease_v4/p2_jobs/FULL --out outputs/framelease_v4/analysis/final_20261116T091445/agg_p2
+132 job lines, 132 rows for analysis -> outputs/framelease_v4/analysis/final_20261116T091445/agg_p2
+outcomes: {'ok': 132}
+code check: {'PASS': 132}
+missing reasons: {'None': 132}
+commit audit (R-2): PASS, 133 run directories audited, 0 withheld (Sec. 9.11), 8061 accepted commits of 18103 offers, violations {'deadline': 0, 'margin': 0, 'version': 0, 'cancelled': 0, 'not_gate_accepted': 0}, log mismatches 0
+R-3 fl_behaviour k1.0: 44 runs, fast prefix not PASS 0, charged prefix FLAG 0, background load {'within': 44, 'above': 0, 'below': 0}, prefix p50/kappa {'min': 0.4161389007568359, 'median': 0.41832489013671875, 'max': 0.4224700012207031}, config {'PASS': 0, 'FAIL': 0, 'UNCHECKED': 44}
+R-3 fl_behaviour k1.5: 44 runs, fast prefix not PASS 0, charged prefix FLAG 0, background load {'within': 41, 'above': 3, 'below': 0}, prefix p50/kappa {'min': 0.416187240600586, 'median': 0.4187839584350586, 'max': 0.44037733459472655}, config {'PASS': 0, 'FAIL': 0, 'UNCHECKED': 44}
+R-3 fl_behaviour k2.0: 44 runs, fast prefix not PASS 0, charged prefix FLAG 0, background load {'within': 41, 'above': 3, 'below': 0}, prefix p50/kappa {'min': 0.41606591796875, 'median': 0.4183245086669922, 'max': 0.4529384765625}, config {'PASS': 0, 'FAIL': 0, 'UNCHECKED': 44}
+interim guard (Sec. 9.11): pre_freeze, 0 guarded rows (0 test-route), 0 released, 0 health-only, notes {}
+TIME 150.77 s, max RSS 205988 KB

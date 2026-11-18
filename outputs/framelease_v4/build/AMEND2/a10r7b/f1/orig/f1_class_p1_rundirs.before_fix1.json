@@ -1,0 +1,34 @@
+{
+ "schema": "framelease_v4.f1_class/1",
+ "verification": "/tmp/A10A11/r7bfix/verify_p1_rundirs",
+ "inputs_sha256": {
+  "cause_plans.csv": "16965f45b8fcf117e60d75e8c157d297e5f0e8d8e6e65f70d7c5fd43464a9d4e",
+  "differences.csv": "5e2141291be3a7f42c204703631bdbaec21faf129b0126a66e7acaa20ff14d2e",
+  "runs_recomputed.csv": "c3c9eb9bae7a8ec895abbbc04d641c2a048f7b8aba93058a7a92586a37add05e",
+  "table1_extra.json": "31d796d7f71785d126f803d789751af4455c2db4c97bf8c60dbec3e31febc5e9"
+ },
+ "status": "development",
+ "verdict": "AGREE",
+ "comparisons": 5523,
+ "differences": 0,
+ "differences_by_cause": {},
+ "analysis_differences_by_cause": {},
+ "class_F1": {
+  "differences": 0,
+  "analysis_differences": 0,
+  "runs": 0,
+  "runs_per_arm": {},
+  "run_list": [],
+  "largest_abs_diff": [],
+  "plans": {
+   "plans": 47,
+   "run_dirs": 26
+  }
+ },
+ "other_causes": {
+  "differences": 0,
+  "by_cause": {},
+  "analysis_differences": 0
+ },
+ "release": "AGREE"
+}

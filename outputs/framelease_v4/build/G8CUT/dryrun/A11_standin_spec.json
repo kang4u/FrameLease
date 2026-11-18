@@ -1,0 +1,8 @@
+{
+ "name": "A11",
+ "template": "outputs/framelease_v4/build/G8CUT/dryrun/A11_standin_entry.md",
+ "tests": [],
+ "inplace": [],
+ "must_equal": {},
+ "max_new_registered": 2
+}

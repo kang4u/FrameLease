@@ -1,0 +1,13 @@
+(exit 1, 12.8 s)
+apply_locked: exit 1 (output /tmp/A10A11/applier/treeX13/outputs/framelease_v4/amendment_a10/apply.out)
+
+--- apply.out
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeX13/outputs/framelease_v4/amendment_a10/attempt_20261115T105244_366681
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/A10A11/applier/treeX13/outputs/framelease_v4/registration/MANIFEST.sha256: 222 files, sha256 8e6a69cfbeccd3531c50658fe24b62b913c8e484a8e7c288da7cebdbd5a7b77f
+manifest difference: new ['framelease_v4/zz_empty_probe.py'] / left [] / changed []
+STOP: the composed PROTOCOL.md would register ['framelease_v4/analysis/analyze_v4.py', 'framelease_v4/analysis/figures_tables.py', 'framelease_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_analyze_v4.py', 'framelease_v4/analysis/tests/test_figures_tables.py', 'framelease_v4/analysis/tests/test_prop1_coverage.py', 'framelease_v4/analysis/tests/test_verify_independent.py', 'framelease_v4/analysis/verify_independent.py', 'framelease_v4/zz_empty_probe.py'], the template cites ['framelease_v4/analysis/analyze_v4.py', 'framelease_v4/analysis/figures_tables.py', 'framelease_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_analyze_v4.py', 'framelease_v4/analysis/tests/test_figures_tables.py', 'framelease_v4/analysis/tests/test_prop1_coverage.py', 'framelease_v4/analysis/tests/test_verify_independent.py', 'framelease_v4/analysis/verify_independent.py'] (at most 8)
+apply_locked: PROTOCOL.md unchanged; RESTORED the sealed manifest
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

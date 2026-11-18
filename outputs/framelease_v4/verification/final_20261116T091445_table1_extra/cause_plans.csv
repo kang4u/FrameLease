@@ -1,0 +1,9 @@
+run_dir,commit_index,job_id,depth,capture_s,cause,status,status_registered,j,j_last_row,t_sample,t_last_row,V,V_lin,H,miss,miss_registered,tracked_ticks,invalid_ticks,invalid_ticks_registered
+outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261116T001621_588b10bb,129,258,1,114.70000170916319,F1,clear,log_censored,,60,117.70000170916319,117.7,,,2.5,,,8,0,0
+outputs/framelease_v4/matrix/age_only/runs/20261115T191748_35947532,94,95,1,41.600000619888306,F1,clear,log_censored,,60,44.600000619888306,44.6,,,1.0,,,9,0,0
+outputs/framelease_v4/matrix/event_triggered/runs/20261115T201940_fb0795f2,265,73,1,37.500000558793545,F1,clear,log_censored,,60,40.500000558793545,40.5,,,3.0,,,9,0,0
+outputs/framelease_v4/matrix/fixed_deep/runs/20261115T181409_a52f1ce4,317,318,10,197.00000293552876,F1,clear,log_censored,,60,200.00000293552876,200.0,,,3.0,,,12,0,0
+outputs/framelease_v4/matrix/fixed_deep/runs/20261115T220533_a54636e9,34,35,10,20.700000308454037,F1,clear,log_censored,,60,23.700000308454037,23.7,,,3.0,,,12,0,0
+outputs/framelease_v4/matrix/fl_full/runs/20261115T201138_7f246ed2,71,35,1,15.900000236928463,F1,conflict,log_censored,33,33,17.55000023692846,17.55,1.6257812500000002,1.6257044124215114,2.5,True,,24,11,0
+outputs/framelease_v4/matrix/fl_full/runs/20261115T204007_7cc9ade8,205,444,1,197.00000293552876,F1,clear,log_censored,,60,200.00000293552876,200.0,,,0.5046374337036639,,,1,0,0
+outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T190459_f0fc3e9a,73,119,1,52.60000078380108,F1,clear,log_censored,,60,55.60000078380108,55.6,,,1.1554457007443233,,,9,0,0

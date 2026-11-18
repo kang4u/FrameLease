@@ -1,0 +1,5 @@
+parent pid 213911 pgid 213911 sid 213910
+child pid 213918 pgid 213911
+child got SIGTERM at 05:22:05
+parent got SIGTERM at 05:22:05.800360404
+parent ended

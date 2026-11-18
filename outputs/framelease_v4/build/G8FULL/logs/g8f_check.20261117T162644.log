@@ -1,0 +1,43 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B outputs/framelease_v4/build/G8FULL/g8f_lib.py check --expect final
+{
+ "final": 301,
+ "first_freeze": {
+  "analysis_outputs_lines_checked": 61,
+  "cited_files_compared": 12,
+  "load_freeze": {
+   "cut_amendment": "A12",
+   "registered": true,
+   "trigger": "cut"
+  },
+  "sha256sums_checked": [
+   "outputs/framelease_v4/analysis/final_20261116T091445/SHA256SUMS",
+   "outputs/framelease_v4/analysis/final_20261116T091445/agg_p1/SHA256SUMS",
+   "outputs/framelease_v4/analysis/final_20261116T091445/agg_p2/SHA256SUMS",
+   "outputs/framelease_v4/analysis/final_20261116T091445/agg_p4/SHA256SUMS",
+   "outputs/framelease_v4/analysis/final_20261116T091445/analysis/SHA256SUMS",
+   "outputs/framelease_v4/analysis/final_20261116T091445/coverage/SHA256SUMS",
+   "outputs/framelease_v4/analysis/final_20261116T091445/figures/SHA256SUMS",
+   "outputs/framelease_v4/verification/final_20261116T091445/SHA256SUMS",
+   "outputs/framelease_v4/verification/final_20261116T091445_table1_extra/SHA256SUMS"
+  ],
+  "standin": false
+ },
+ "first_freeze_final_jobs": 127,
+ "job_lines": 632,
+ "last_runner_exit": null,
+ "last_runner_start": "2026-11-17T07:06:29+00:00",
+ "new_analysis_dirs": [],
+ "next_amendment": "A18",
+ "pending": 331,
+ "problems": [],
+ "runner_alive": true,
+ "runner_lock_held": true,
+ "stop_file": false,
+ "waits": [
+  "331 job lines without a final runner record",
+  "a runner holds outputs/framelease_v4/queue_p4 (pid 14451, lock held True)"
+ ]
+}
+CHECK: NOT FINAL (wait)
+Command exited with non-zero status 3
+TIME 0.35 s, max RSS 46060 KB

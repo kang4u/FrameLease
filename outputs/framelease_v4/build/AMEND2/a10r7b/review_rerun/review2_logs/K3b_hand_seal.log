@@ -1,0 +1,3 @@
+$ flock -w 60 /tmp/A10A11/applier/treeK3/framelease_v4/.protocol.lock /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/A10A11/applier/treeK3/framelease_v4/protocol/registration.py --seal
+(exit 0, 0.0 s)
+sealed: PROTOCOL.md c70166fc6b726f3ceddc923ac08fce7e08d3dd1a77a58463cacd8dfba32a9237, manifest 692002a1bb775209d1c128dc65ee7baf1db9b13d9e8a3f3e37786cf63de0421c

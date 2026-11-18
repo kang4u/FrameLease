@@ -1,0 +1,10 @@
+(exit 1, 6.4 s)
+apply_locked: exit 1 (output /tmp/A10A11/applier/treeR/outputs/framelease_v4/amendment_a10/apply.out)
+
+--- apply.out
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: CHANGED | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: the seal does not verify
+apply_locked: PROTOCOL.md unchanged; the manifest equals the sealed one
+manifest: OK
+seal framelease_v4/PROTOCOL.md: CHANGED
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

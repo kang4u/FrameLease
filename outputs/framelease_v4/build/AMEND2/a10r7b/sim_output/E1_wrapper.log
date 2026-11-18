@@ -1,0 +1,8 @@
+apply_locked: exit 1 (output /tmp/A10A11/fix2/sim_tree/treeE/outputs/framelease_v4/amendment_a10/apply.out)
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/fix2/sim_tree/treeE/outputs/framelease_v4/amendment_a10/attempt_20261115T103403_356977
+registration --verify -> 1 | manifest: 1 files differ: [('framelease_v4/analysis/commit_audit.py', '7439a4eac0986cad6a25b7395975a0411b7483944a988d68dabb656bd2544ec7', 'b77e344c4749c5c5dbe6acd419cbee0cba2ff6e7a81daf41587cecefd11dc4d4')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/analysis/commit_audit.py']
+apply_locked: PROTOCOL.md unchanged; the manifest equals the sealed one
+manifest: 1 files differ: [('framelease_v4/analysis/commit_audit.py', '7439a4eac0986cad6a25b7395975a0411b7483944a988d68dabb656bd2544ec7', 'b77e344c4749c5c5dbe6acd419cbee0cba2ff6e7a81daf41587cecefd11dc4d4')]
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

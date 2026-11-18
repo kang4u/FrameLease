@@ -1,0 +1,158 @@
+F.........F                                          [100%]
+=================================== FAILURES ===================================
+__________ Synthetic.test_analysis_read_values_without_a_class_holds ___________
+
+self = <r2_test_adversarial.Synthetic testMethod=test_analysis_read_values_without_a_class_holds>
+
+    def test_analysis_read_values_without_a_class_holds(self):
+        """A value the analysis reads that differs for a reason no convention explains stays unexplained, wherever it
+        sits (runs.csv, conditions.csv, per_scenario.csv, secondary.csv), and so do an unknown cause, an absent column
+        and an arm_summary.csv value without a cause."""
+        diffs = [drow('runs.csv', 'job_b', 'eir', 'realized_invalid_tick_ratio', '0.25', '0.2', scope='analysis'),
+                 drow('conditions.csv', 'fixed_deep_k1.0_s11/all/eir', 'mean', 'mean', '0.12', '0.11',
+                      scope='analysis'),
+                 drow('per_scenario.csv', 'fixed_deep_k1.0_s11/2', 'r_cond', 'r_cond', '0.5', '', scope='analysis'),
+                 drow('secondary.csv', 'a_minus_b/dmr', 'mean_a', 'mean_a', '0.3', '0.2', scope='analysis'),
+                 drow('runs.csv', 'job_b', 'misses', 'realized_misses', '3', '2', cause='F2'),
+                 dict(drow('runs.csv', '*', None, 'gpu_usage_recomputed', '', ''), status='absent'),
+                 drow('arm_summary.csv', 'fixed_deep/x', 'realized_invalid_tick_ratio', 'realized_invalid_tick_ratio',
+                      '0.12', '0.11')]
+        rep = self.report(diffs)
+        self.assertEqual(rep['differences_by_class'],
+                         {'F1': 0, 'F3': 0, 'in_flight': 0, 'not_ok_record': 0, 'unexplained': 7})
+        self.assertEqual(rep['unexplained']['analysis_differences'], 4)
+>       self.assertEqual((rep['outcome'], rep['release']), ('verification failure', 'verification failure'))
+E       AssertionError: Tuples differ: ('verification failure', 'not final') != ('verification failure', 'verification failure')
+E       
+E       First differing element 1:
+E       'not final'
+E       'verification failure'
+E       
+E       - ('verification failure', 'not final')
+E       ?                           ^^^^
+E       
+E       + ('verification failure', 'verification failure')
+E       ?                           ^^^^  +++++ ++ + +++
+
+outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py:147: AssertionError
+_ Synthetic.test_not_ok_record_with_an_ok_runner_outcome_gap (case='result_with_warnings') _
+
+self = <r2_test_adversarial.Synthetic testMethod=test_not_ok_record_with_an_ok_runner_outcome_gap>
+
+    def test_not_ok_record_with_an_ok_runner_outcome_gap(self):
+        """GAP (must-fix M1): the runner's 'result_with_warnings' is an OK outcome (framelease_v2/gpu_queue.py and
+        select_stage.OK_OUTCOMES: a valid record), and aggregate_v4.job_row then runs run_fields (runs.csv outcome
+        'ok'). Empty cells there come from a failed metric step (missing_reason 'no_metrics'), not from the early
+        return of a job that is not ok; the class report still puts them in not_ok_record because it compares the
+        runner outcome with the literal 'ok' and never reads the runs.csv outcome. A final record without an
+        outcome is absorbed the same way."""
+        diffs = [drow('runs.csv', 'job_a', 'dmr', 'dmr', '0.25', ''),
+                 drow('runs.csv', 'job_a', 'ticks', 'ticks', '3256', '')]
+        for name, rec in (('result_with_warnings', {'outcome': 'result_with_warnings'}), ('no outcome', {})):
+            with self.subTest(case=name):
+                inputs = self.records([dict({'event': 'end', 'id': 'job_a', 'final': True}, **rec)],
+                                      [{'job': 'job_a', 'outcome': 'ok', 'analysis_use': 'False',
+                                        'missing_reason': 'no_metrics', 'dmr': '', 'ticks': ''}])
+                rep = self.report(diffs, inputs=inputs)
+>               self.assertEqual(rep['differences_by_class']['not_ok_record'], 2)
+E               AssertionError: 0 != 2
+
+outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py:203: AssertionError
+_ Synthetic.test_not_ok_record_with_an_ok_runner_outcome_gap (case='no outcome') _
+
+self = <r2_test_adversarial.Synthetic testMethod=test_not_ok_record_with_an_ok_runner_outcome_gap>
+
+    def test_not_ok_record_with_an_ok_runner_outcome_gap(self):
+        """GAP (must-fix M1): the runner's 'result_with_warnings' is an OK outcome (framelease_v2/gpu_queue.py and
+        select_stage.OK_OUTCOMES: a valid record), and aggregate_v4.job_row then runs run_fields (runs.csv outcome
+        'ok'). Empty cells there come from a failed metric step (missing_reason 'no_metrics'), not from the early
+        return of a job that is not ok; the class report still puts them in not_ok_record because it compares the
+        runner outcome with the literal 'ok' and never reads the runs.csv outcome. A final record without an
+        outcome is absorbed the same way."""
+        diffs = [drow('runs.csv', 'job_a', 'dmr', 'dmr', '0.25', ''),
+                 drow('runs.csv', 'job_a', 'ticks', 'ticks', '3256', '')]
+        for name, rec in (('result_with_warnings', {'outcome': 'result_with_warnings'}), ('no outcome', {})):
+            with self.subTest(case=name):
+                inputs = self.records([dict({'event': 'end', 'id': 'job_a', 'final': True}, **rec)],
+                                      [{'job': 'job_a', 'outcome': 'ok', 'analysis_use': 'False',
+                                        'missing_reason': 'no_metrics', 'dmr': '', 'ticks': ''}])
+                rep = self.report(diffs, inputs=inputs)
+>               self.assertEqual(rep['differences_by_class']['not_ok_record'], 2)
+E               AssertionError: 0 != 2
+
+outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py:203: AssertionError
+_____ OnVerifierOutput.test_valid_run_dropped_by_a_failed_metric_step_gap ______
+
+self = <r2_test_adversarial.OnVerifierOutput testMethod=test_valid_run_dropped_by_a_failed_metric_step_gap>
+
+    def test_valid_run_dropped_by_a_failed_metric_step_gap(self):
+        """GAP (must-fix M1) on the verifier's output: the runner reports 'result_with_warnings' (a valid record);
+        aggregate_v4.py selects the run (outcome 'ok', run_dir set) but its metric step failed: analysis_use False,
+        missing_reason 'no_metrics', every metric empty, so the route leaves Table I. Every difference lands in class
+        not_ok_record and the report releases the columns."""
+        row = self._empty_row(run_dir=self.run_dir, selected_run=self.run_dir, outcome='ok', analysis_use='False',
+                              missing_reason='no_metrics')
+        rep = self.verify('rww', row, outcome='result_with_warnings')
+>       self.assertGreater(rep['differences_by_class']['not_ok_record'], 30)
+E       AssertionError: 0 not greater than 30
+
+outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py:320: AssertionError
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 67, differences 43 (0 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     43  differences    41  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 43; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r2_f1_adv_vt_09wxd79w/out_rww
+==================================== PASSES ====================================
+_____ Synthetic.test_in_flight_run_where_the_analysis_value_differs_holds ______
+----------------------------- Captured stdout call -----------------------------
+uu
+________________ Synthetic.test_missing_or_altered_inputs_holds ________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuuuuuuu
+______________ Synthetic.test_not_ok_job_whose_row_is_used_holds _______________
+----------------------------- Captured stdout call -----------------------------
+uuu
+__________ Synthetic.test_not_ok_record_with_an_ok_runner_outcome_gap __________
+----------------------------- Captured stdout call -----------------------------
+uu
+_________ OnVerifierOutput.test_in_flight_cross_check_of_any_size_gap __________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 2 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 2; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r2_f1_adv_vt_09wxd79w/out_size
+__ OnVerifierOutput.test_in_flight_run_with_gpu_usage_above_the_bounds_holds ___
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 3 (1 in values the analysis reads)
+  runs.csv                 compared     43  differences     3  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 3; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r2_f1_adv_vt_09wxd79w/out_above
+___________ OnVerifierOutput.test_not_ok_runner_with_used_row_holds ____________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 67, differences 43 (8 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     43  differences    41  (analysis-read 8; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 43; in values the analysis reads: unclassified 8; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/r2_f1_adv_vt_09wxd79w/out_used
+=========================== short test summary info ============================
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py::Synthetic::test_in_flight_gpu_difference_of_any_size_gap
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py::Synthetic::test_in_flight_run_where_the_analysis_value_differs_holds
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py::Synthetic::test_missing_or_altered_inputs_holds
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py::Synthetic::test_not_ok_job_whose_row_is_used_holds
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py::Synthetic::test_not_ok_record_with_an_ok_runner_outcome_gap
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py::OnVerifierOutput::test_fixture_ends_in_flight
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py::OnVerifierOutput::test_in_flight_cross_check_of_any_size_gap
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py::OnVerifierOutput::test_in_flight_run_with_gpu_usage_above_the_bounds_holds
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py::OnVerifierOutput::test_not_ok_runner_with_used_row_holds
+FAILED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py::Synthetic::test_analysis_read_values_without_a_class_holds
+SUBFAILED(case='result_with_warnings') outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py::Synthetic::test_not_ok_record_with_an_ok_runner_outcome_gap
+SUBFAILED(case='no outcome') outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py::Synthetic::test_not_ok_record_with_an_ok_runner_outcome_gap
+FAILED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/r2_test_adversarial.py::OnVerifierOutput::test_valid_run_dropped_by_a_failed_metric_step_gap
+4 failed, 9 passed, 18 subtests passed in 0.34s

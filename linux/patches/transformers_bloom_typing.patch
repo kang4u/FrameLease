@@ -1,0 +1,11 @@
+--- a/src/transformers/models/bloom/configuration_bloom.py
++++ b/src/transformers/models/bloom/configuration_bloom.py
+@@ -16,7 +16,7 @@
+ 
+ from collections import OrderedDict
+ from collections.abc import Mapping
+-from typing import TYPE_CHECKING, Any, Optional
++from typing import TYPE_CHECKING, Any, Optional, List
+ 
+ from packaging import version
+ 

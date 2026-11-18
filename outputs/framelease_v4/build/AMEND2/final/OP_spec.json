@@ -1,0 +1,27 @@
+{
+ "name": "OP",
+ "note": "apply_entry.py --tests only: the transaction is the manual one of APPLY_PLAN2.md Sec. 3 (apply_entry.py requires a title \"**Amendment <name>,\"; --check and --apply stop at the template check)",
+ "template": "outputs/framelease_v4/build/AMEND2/final/OP_phase_driver_entry.md",
+ "tests": [
+  {
+   "log": "outputs/framelease_v4/operational_phase_driver/pytest_phase_driver.log",
+   "argv": [
+    "framelease_v4/protocol/tests/test_phase_driver.py"
+   ]
+  },
+  {
+   "log": "outputs/framelease_v4/operational_phase_driver/pytest_review_phase.log",
+   "argv": [
+    "outputs/framelease_v4/build/PHASE/review/test_review_phase.py"
+   ]
+  }
+ ],
+ "inplace": [],
+ "must_equal": {
+  "framelease_v4/protocol/phase_driver.py": "2bf4147c610751c8380f55c59d10f889ce7062849c56351ebbaa8fac1ac7c994",
+  "framelease_v4/protocol/start_phase_driver.sh": "5c70674fbf043bd4eb5fec9236b0a5fca2123bc5087bf12ddf75bac3c171a0ca",
+  "framelease_v4/protocol/tests/test_phase_driver.py": "b4e5bc442cc1374b8e6af7761644021afe14536122fe8b3e79e023d55dbacf63",
+  "outputs/framelease_v4/build/PHASE/review/test_review_phase.py": "c475f4f745d3de88208c8e7c0b994373526ffc6e0821bf20194f6a226bfa8cb4"
+ },
+ "max_new_registered": 3
+}

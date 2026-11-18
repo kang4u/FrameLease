@@ -1,0 +1,59 @@
+== 2026-11-15 11:47:10 +0800
+== check mode A10 on the project (read only)
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+check: pre-checks passed
+time 6.41 s, max RSS 18756 kB
+== check_drafts.py
+exit 0
+A10 in-place found 1x now: '**Verification.** Before any number enters the paper, an independent s'
+A10 in-place found 1x now: 'Status (Amendment A3): the `fl_global_shield` lease of item 1, the agg'
+all checks passed
+5
+== derive_inplace5.py --spec
+exit 0
+spec outputs/framelease_v4/build/AMEND2/final/A10_spec.json: in-place text 5 equals the derived text
+== evidence sha256sum -c
+exit 0
+== RUNBOOK Sec. 1 precondition 1
+  ls: cannot access 'outputs/framelease_v4/phase_driver/ALERT.txt': No such file or directory
+  ls: cannot access 'outputs/framelease_v4/phase_driver/protocol_txn.json': No such file or directory
+  ls: cannot access 'outputs/framelease_v4/p1_driver/ALERT.txt': No such file or directory
+  ls: cannot access 'outputs/framelease_v4/p1_driver/protocol_txn.json': No such file or directory
+  ls: cannot access 'framelease_v4/.PROTOCOL.md.entrytmp': No such file or directory
+OK
+== RUNBOOK Sec. 1 precondition 3 (PROGRESS files changed after 2026-11-15 11:05)
+-- outputs/framelease_v4/build/AMEND2/a10r7b/review2/PROGRESS.md: 5 matching lines
+== the reviewed files (sha256)
+7d86e576f2c8413f  outputs/framelease_v4/build/AMEND2/a10r7b/apply_entry_stream.py
+8e87f0c20d05cc5e  outputs/framelease_v4/build/AMEND2/a10r7b/apply_entry_stream.diff
+1de9b701aabfc7ec  outputs/framelease_v4/build/AMEND2/a10r7b/apply_locked.sh
+7b08460b0fd96ec2  outputs/framelease_v4/build/AMEND2/a10r7b/post_check.py
+59b7a83ce99b98f5  outputs/framelease_v4/build/AMEND2/a10r7b/sim_tree.py
+125a28838c7bea6c  outputs/framelease_v4/build/AMEND2/a10r7b/RUNBOOK.md
+9790c164405f432a  outputs/framelease_v4/build/AMEND2/final/A10_entry.md
+b1de9f6a976da98d  outputs/framelease_v4/build/AMEND2/final/A10_spec.json
+03bfb7f44e89cbc4  outputs/framelease_v4/build/AMEND2/AMENDMENTS2_DRAFT.md
+== registration and driver state
+ca54d359b4b92279  framelease_v4/PROTOCOL.md
+4bfe7451a41b8530  outputs/framelease_v4/registration/MANIFEST.sha256
+b8d516d174833bba  outputs/framelease_v4/registration/SEAL.sha256
+c0ee0217feb762c0  outputs/framelease_v4/registration/REGISTRATION.json
+73add832c97b234a  framelease_v4/PIPELINE_STATE.md
+df4435e144ff93af  outputs/framelease_v4/p1_driver/registered_baseline.json
+cfe58aa1679d31cf  outputs/framelease_v4/phase_driver/registered_baseline.json
+2026-11-15 06:43:14.345812687 +0800 framelease_v4/PROTOCOL.md
+2026-11-15 06:43:14.391711908 +0800 outputs/framelease_v4/registration/SEAL.sha256
+2026-11-15 06:48:19.366732241 +0800 outputs/framelease_v4/phase_driver/registered_baseline.json
+2026-11-15 06:48:19.374416442 +0800 outputs/framelease_v4/phase_driver/driver.log
+ 256142    05:04:35 /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B framelease_v4/protocol/phase_driver.py
+no ALERT, protocol_txn, STOP or PAUSE file
+== __pycache__ and empty files under framelease_v4/
+3
+8
+framelease_v4/offline/__init__.py
+framelease_v4/.protocol.lock
+== registration.py --verify
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+exit 0

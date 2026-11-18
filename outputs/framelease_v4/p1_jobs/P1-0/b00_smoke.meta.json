@@ -1,0 +1,47 @@
+{
+ "arms": [
+  "fixed_deep",
+  "fast_only",
+  "age_only",
+  "event_triggered",
+  "fl_original",
+  "fl_heuristic",
+  "fl_behaviour"
+ ],
+ "behaviour": {
+  "eps": 0.3,
+  "seed": 2607171771015655460,
+  "seed_rule": "collection_plan.behaviour_seed(route, kappa, rep=0)",
+  "utility": "v4_eps0.300_seed2607171771015655460"
+ },
+ "block": "smoke",
+ "block_no": 0,
+ "check": "framelease_v4/protocol/check_smoke.py (the PROTOCOL Sec. 8.1 P1-0 criteria; registered before any smoke run existed)",
+ "job_file": "outputs/framelease_v4/p1_jobs/P1-0/b00_smoke.jsonl",
+ "job_file_sha256": "32c6d0b5e813fc0b26e41c5a0228683d0366a92081209537192731878928e2c2",
+ "n_lines": 7,
+ "purpose": "first real-CARLA runs of the v4 agent (V4Runtime, fast prefix, actor-box log, decision rows, utility registration in the agent process) for every arm kind before any tuning run; infrastructure check only, never used for selection or RL data",
+ "route": "18305",
+ "route_row": {
+  "dev_route": false,
+  "index": 31,
+  "length_m": 134.0,
+  "pilot_route": true,
+  "route_id": "18305",
+  "scenario_type": "ParkingCutIn",
+  "subsets": {
+   "RL": true,
+   "T22": false,
+   "T22a": false,
+   "T22b": false
+  },
+  "test_route_of_type": "1711",
+  "town": "Town12"
+ },
+ "schema": "framelease_v4.p1_smoke/1",
+ "utilities": {
+  "age_only": "v4_adet_d4",
+  "fl_behaviour": "v4_eps0.300_seed2607171771015655460",
+  "fl_heuristic": "heuristic"
+ }
+}

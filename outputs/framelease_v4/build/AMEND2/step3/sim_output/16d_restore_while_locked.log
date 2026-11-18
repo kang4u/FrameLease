@@ -1,0 +1,2 @@
+step3_txn.py restore 2026-11-15T06:22:42+0800 (pid 247808): root /tmp/AMEND3/tree, work /tmp/AMEND3/stale/08_pending
+STOP: the journal says 'verified': the transaction was sealed; run `postcheck`, never `restore`; nothing is restored

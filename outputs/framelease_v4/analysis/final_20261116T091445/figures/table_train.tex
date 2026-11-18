@@ -1,0 +1,63 @@
+% framelease_v4/analysis/figures_tables.py: generated; every number is listed in numbers.json
+\begin{table*}[t]
+\centering
+\caption{Training-route operating points of the tuned arms and the references}
+\label{tab:train_operating_points}
+\footnotesize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{llccccccccccc}
+\toprule
+Candidate & Arm & \begin{tabular}[b]{@{}c@{}}Valid \\{} runs\end{tabular} & \begin{tabular}[b]{@{}c@{}}Kept \\{} routes\end{tabular} & \begin{tabular}[b]{@{}c@{}}DS \\{} (kept)\end{tabular} & \begin{tabular}[b]{@{}c@{}}DS \\{} (valid)\end{tabular} & RC & \begin{tabular}[b]{@{}c@{}}SR \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Fallback \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}DMR \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}EIR \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}$R_\mathrm{cond}$ \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}$P_\mathrm{both}$ \\{} (\%)\end{tabular} \\
+\midrule
+\multicolumn{13}{@{}l}{\textit{ref: references (untuned, Table I settings), stage 0, T22; 22/22 routes kept, 0 jobs pending}} \\
+fixed\_deep & Fixed Deep & 22 & 22 & 46.0 & 46.0 & 79.8 & 4.5 & 2.2 & 0.0 & 35.78 & 100.0 & -- \\
+fast\_only & Fast Only & 22 & 22 & 75.5 & 75.5 & 93.8 & 45.5 & 2.1 & 0.0 & 10.92 & 100.0 & -- \\
+\midrule
+\multicolumn{13}{@{}l}{\textit{lease\_s1: lease operating point (FrameLease + Heuristic, d = 10), stage 1, T22a; 10/11 routes kept, 0 jobs pending}} \\
+E5\_d10$^+$ & FL + Heuristic & 11 & 10 & 44.3 & 46.6 & 60.0 & 9.1 & 74.6 & 74.5 & 8.80 & 61.5 & 52.7 \\
+E10\_d10 & FL + Heuristic & 11 & 10 & 35.3 & 39.2 & 48.8 & 9.1 & 50.6 & 50.2 & 8.23 & 70.9 & 68.9 \\
+B0\_d10$^+$ & FL + Heuristic & 10 & 10 & 52.4 & 52.4 & 76.2 & 20.0 & 29.0 & 27.7 & 13.91 & 91.2 & 76.1 \\
+\midrule
+\multicolumn{13}{@{}l}{\textit{event\_s1: Event-Triggered (theta, A\_hb), stage 1, T22a; 11/11 routes kept, 0 jobs pending}} \\
+v2\_hb2.0 & Event-Triggered & 11 & 11 & 56.3 & 56.3 & 89.9 & 0.0 & 1.9 & 0.0 & 11.00 & 100.0 & -- \\
+v2\_hb1.0 & Event-Triggered & 11 & 11 & 60.5 & 60.5 & 90.6 & 18.2 & 1.8 & 0.0 & 18.75 & 100.0 & -- \\
+s\_hb2.0$^+$ & Event-Triggered & 11 & 11 & 63.0 & 63.0 & 99.7 & 36.4 & 1.6 & 0.0 & 22.82 & 100.0 & -- \\
+s\_hb1.0$^+$ & Event-Triggered & 11 & 11 & 61.4 & 61.4 & 100.0 & 18.2 & 2.0 & 0.0 & 23.73 & 100.0 & -- \\
+\midrule
+\multicolumn{13}{@{}l}{\textit{lease\_s2: lease operating point (FrameLease + Heuristic, d = 10), stage 2, T22b; 11/11 routes kept, 0 jobs pending}} \\
+E5\_d10 & FL + Heuristic & 11 & 11 & 37.6 & 37.6 & 46.4 & 0.0 & 80.2 & 79.8 & 4.04 & 17.4 & 33.6 \\
+B0\_d10$^\ast$ & FL + Heuristic & 11 & 11 & 47.8 & 47.8 & 62.8 & 27.3 & 32.9 & 32.1 & 7.17 & 84.2 & 83.0 \\
+\midrule
+\multicolumn{13}{@{}l}{\textit{event\_s2: Event-Triggered (theta, A\_hb), stage 2, T22b; 11/11 routes kept, 0 jobs pending}} \\
+s\_hb2.0$^\ast$ & Event-Triggered & 11 & 11 & 60.3 & 60.3 & 90.5 & 18.2 & 1.7 & 0.0 & 29.15 & 100.0 & -- \\
+s\_hb1.0 & Event-Triggered & 11 & 11 & 56.5 & 56.5 & 90.8 & 18.2 & 1.8 & 0.0 & 27.08 & 100.0 & -- \\
+\midrule
+\multicolumn{13}{@{}l}{\textit{heur\_s1: heuristic depth d at L*, stage 1, T22a; 10/11 routes kept, 0 jobs pending}} \\
+B0\_d10$^+$ & FL + Heuristic & 10 & 10 & 52.4 & 52.4 & 76.2 & 20.0 & 29.0 & 27.7 & 13.91 & 91.2 & 76.1 \\
+B0\_d4 & FL + Heuristic & 11 & 10 & 50.0 & 48.8 & 76.5 & 9.1 & 36.8 & 35.6 & 9.22 & 80.9 & 64.8 \\
+B0\_d1$^+$ & FL + Heuristic & 11 & 10 & 65.0 & 68.2 & 88.2 & 27.3 & 27.3 & 25.8 & 6.90 & 66.0 & 39.2 \\
+\midrule
+\multicolumn{13}{@{}l}{\textit{heur\_s2: heuristic depth d at L*, stage 2, T22b; 11/11 routes kept, 0 jobs pending}} \\
+B0\_d10 & FL + Heuristic & 11 & 11 & 47.8 & 47.8 & 62.8 & 27.3 & 32.9 & 32.1 & 7.17 & 84.2 & 83.0 \\
+B0\_d1$^\ast$ & FL + Heuristic & 11 & 11 & 49.9 & 49.9 & 69.9 & 9.1 & 45.8 & 44.9 & 7.07 & 38.2 & 20.3 \\
+\midrule
+\multicolumn{13}{@{}l}{\textit{age\_s1: Age-Only threshold A at d*, stage 1, T22a; 11/11 routes kept, 0 jobs pending}} \\
+A1.0\_d1$^+$ & Age-Only & 11 & 11 & 67.8 & 67.8 & 100.0 & 27.3 & 2.3 & 0.3 & 15.32 & 73.0 & 28.6 \\
+A1.5\_d1 & Age-Only & 11 & 11 & 63.3 & 63.3 & 92.1 & 27.3 & 1.9 & 0.0 & 13.74 & 75.1 & 97.9 \\
+A2.0\_d1 & Age-Only & 11 & 11 & 63.2 & 63.2 & 99.7 & 18.2 & 1.9 & 0.0 & 15.48 & 89.3 & 100.0 \\
+A2.5\_d1$^+$ & Age-Only & 11 & 11 & 63.6 & 63.6 & 89.9 & 18.2 & 1.9 & 0.0 & 19.47 & 100.0 & 100.0 \\
+\midrule
+\multicolumn{13}{@{}l}{\textit{age\_s2: Age-Only threshold A at d*, stage 2, T22b; 11/11 routes kept, 0 jobs pending}} \\
+A1.0\_d1$^\ast$ & Age-Only & 11 & 11 & 60.2 & 60.2 & 90.1 & 27.3 & 3.5 & 1.6 & 14.72 & 85.0 & 10.8 \\
+A2.5\_d1 & Age-Only & 11 & 11 & 52.7 & 52.7 & 87.9 & 9.1 & 1.9 & 0.0 & 21.24 & 100.0 & 100.0 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\parbox{\textwidth}{\footnotesize
+Training routes only (T22 = T22a + T22b; no test route). DS (kept): the selection statistic, mean DS over the routes the stage kept (an agent crash counts 0); the other columns are means over the valid runs, $R_\mathrm{cond}$ pooled over runs (misses / conflict plans) and $P_\mathrm{both}$ pooled over shield decision epochs. $^\ast$ selected; $^+$ survivor of the stage selection. --: no value. 
+Run outcomes other than ok: lease\_s1 B0\_d10: sim\_failure 1; heur\_s1 B0\_d10: sim\_failure 1. 
+Dropped routes: lease\_s1 route 23659 (B0: queue: timeout (None)); heur\_s1 route 23659 (d10: queue: timeout (None)). 
+Set-up failure flags (the registered rule still drops those routes for every candidate): none. 
+Tuning freeze: L\_star \{"config": "T\_x0.00", "envelope\_path": "outputs/framelease\_v4/envelopes/B0.json", "envelope\_sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927", "label": "B0", "validity": "std"\}; d\_star \{"d": 1, "utility": "v4\_adet\_d1"\}; A\_star \{"age\_lease\_s": 1.0\}; event\_star \{"candidate": "s\_hb2.0", "policy\_params": \{"det\_shift\_m": 1.0, "heartbeat\_s": 2.0, "speed\_delta\_mps": 0.5, "yaw\_delta\_rad": 0.05\}\}; fl\_risk \{"lease\_point": "E5", "rule": "L* = B0: fl\_risk runs the better of E5 / E10 by mean DS on lease\_s1 (T22a), ties earlier"\}; sha256 "652fcbdbf0a6adb498aa0691fcaaffb097fcd680b4bf40235a28639aed69b930".
+}
+\end{table*}

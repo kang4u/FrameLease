@@ -1,0 +1,186 @@
+{
+ "block": "age_s2",
+ "block_no": 9,
+ "candidates": [
+  {
+   "arm": "age_only",
+   "envelope": null,
+   "jobs": {
+    "17569": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A1.0_d1_k1.0_s11_r17569",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1"
+    },
+    "2086": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A1.0_d1_k1.0_s11_r2086",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1"
+    },
+    "23910": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A1.0_d1_k1.0_s11_r23910",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1"
+    },
+    "2397": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A1.0_d1_k1.0_s11_r2397",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1"
+    },
+    "24330": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A1.0_d1_k1.0_s11_r24330",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1"
+    },
+    "2643": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A1.0_d1_k1.0_s11_r2643",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1"
+    },
+    "28093": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A1.0_d1_k1.0_s11_r28093",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1"
+    },
+    "2844": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A1.0_d1_k1.0_s11_r2844",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1"
+    },
+    "3090": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A1.0_d1_k1.0_s11_r3090",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1"
+    },
+    "3373": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A1.0_d1_k1.0_s11_r3373",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1"
+    },
+    "3749": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A1.0_d1_k1.0_s11_r3749",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1"
+    }
+   },
+   "name": "A1.0",
+   "order": 0,
+   "policy_params": {
+    "age_lease_s": 1.0,
+    "utility": "v4_adet_d1"
+   },
+   "reused_from": null,
+   "tag": "A1.0_d1"
+  },
+  {
+   "arm": "age_only",
+   "envelope": null,
+   "jobs": {
+    "17569": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A2.5_d1_k1.0_s11_r17569",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1"
+    },
+    "2086": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A2.5_d1_k1.0_s11_r2086",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1"
+    },
+    "23910": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A2.5_d1_k1.0_s11_r23910",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1"
+    },
+    "2397": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A2.5_d1_k1.0_s11_r2397",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1"
+    },
+    "24330": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A2.5_d1_k1.0_s11_r24330",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1"
+    },
+    "2643": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A2.5_d1_k1.0_s11_r2643",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1"
+    },
+    "28093": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A2.5_d1_k1.0_s11_r28093",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1"
+    },
+    "2844": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A2.5_d1_k1.0_s11_r2844",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1"
+    },
+    "3090": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A2.5_d1_k1.0_s11_r3090",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1"
+    },
+    "3373": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A2.5_d1_k1.0_s11_r3373",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1"
+    },
+    "3749": {
+     "block": "age_s2",
+     "id": "v4p1_age_only_A2.5_d1_k1.0_s11_r3749",
+     "output_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1"
+    }
+   },
+   "name": "A2.5",
+   "order": 3,
+   "policy_params": {
+    "age_lease_s": 2.5,
+    "utility": "v4_adet_d1"
+   },
+   "reused_from": null,
+   "tag": "A2.5_d1"
+  }
+ ],
+ "final_stage": true,
+ "grid": "age",
+ "inputs": {
+  "outputs/framelease_v4/tuning/selection/FULL/age_s1.json": "88fa28271484e92758978b5b1ddcdeba42567fa1a7979715eedddc5bad31acdc"
+ },
+ "job_file": "outputs/framelease_v4/p1_jobs/FULL/b09_age_s2.jsonl",
+ "job_file_sha256": "8a1dd8879dd5a2f8db14e61b624eeeebc39cd4d19e2869dc569fb95b79e31efd",
+ "n_candidates": 2,
+ "n_lines": 22,
+ "previous_stage": "age_s1",
+ "route_order": [
+  "3373",
+  "2397",
+  "28093",
+  "3749",
+  "24330",
+  "3090",
+  "2643",
+  "2086",
+  "2844",
+  "23910",
+  "17569"
+ ],
+ "route_set": "T22b",
+ "routes": [
+  "2086",
+  "2397",
+  "2643",
+  "2844",
+  "3090",
+  "3373",
+  "3749",
+  "17569",
+  "23910",
+  "24330",
+  "28093"
+ ],
+ "rules": "PROTOCOL Sec. 4.2 (select_stage.py)",
+ "schema": "framelease_v4.p1_stage/1",
+ "stage": 2,
+ "survive": null,
+ "variant": "FULL"
+}

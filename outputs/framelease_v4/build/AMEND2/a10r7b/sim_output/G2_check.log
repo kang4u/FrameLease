@@ -1,0 +1,3 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/A10A11/fix2/sim_tree/apply_entry_scratch_treeG.py outputs/framelease_v4/build/AMEND2/final/A10_spec.json
+(exit 1)
+STOP: framelease_v4/.PROTOCOL.md.entrytmp exists: the temporary file of an interrupted application (RUNBOOK.md Sec. 1)

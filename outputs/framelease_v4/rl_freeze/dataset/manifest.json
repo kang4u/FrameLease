@@ -1,0 +1,758 @@
+{
+ "actions": {
+  "REFINE": 0,
+  "REFRESH": 1
+ },
+ "code_sha256": {
+  "__init__.py": "d807a3471e4dc141ebc039956af55eb7d28ea6718b2229b0d6d9ecdb24bc1f46",
+  "agent_entry.py": "d51a0166501b32cb16869ed938e96426cce6cc876e73bf90870ef72df1791fdc",
+  "behaviour.py": "3ba13de1569b79dadf3a2019ec6495ff1ae1f4113a8d9f2e72b69e987dba8345",
+  "bench_qnet.py": "54346d14a0f3709453c48ff4c2d5f9aedfa47f4634ef60e9ef632d882c518597",
+  "collection_plan.py": "6c8bd36ef0f49aa82b06abc82b94e37da7e9860570626b6a79f8ccf6ad1c9bc0",
+  "common.py": "c24efb4cff385df6e456b63eda06a7bbab3fa7f4a8ecd852d19b36a085ae330f",
+  "dataset.py": "45606d2b741311e8f451326ca11cf12a47983fa1ab1c1aba3e7039936baeb488",
+  "features.py": "537ee597e34f3e8ab44ae7e3f08f35293a81e6fd266a9e838774a34cca40e6e3",
+  "ope.py": "dace32b90d3f7bcc636b1a285bf1a255cad9d8e9983e542b98bb6dbee586fac8",
+  "prefix_score.py": "e461d8914701621a3e5a6f94c71e29d358c38a1d29b992fe11b3eb581dbae159",
+  "qnet.py": "53bbf8c69124519c6bb2133961695aa4f238c6d52e325f0d8e7de53008d23f3f",
+  "run_closed_loop_rl.py": "e37121e8fc7cc584997a55028757d38d084078645d1ab9891f8683e2985c317c",
+  "smoke.py": "738492baab73a81ffd42175d3874b3a55be2e64c6f1360a58b3e9dea445888bd",
+  "trainers.py": "fb595d7fe0f684cccd7f5b347fd9762d9fd25eddf1222a3aeb51e16c397c44c8"
+ },
+ "created_utc": "20261115T121354Z",
+ "eval_covariates": [
+  "rc_so_far",
+  "penalty_so_far",
+  "sim_s"
+ ],
+ "feature_columns_all": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15
+ ],
+ "feature_columns_no_lease": [
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15
+ ],
+ "features": [
+  {
+   "hi": 3.0,
+   "index": 0,
+   "lease_derived": true,
+   "lo": -3.0,
+   "meaning": "s_lease = D* - t: slack of the active (committed) candidate; missing = no active candidate",
+   "missing": -3.0,
+   "name": "lease_slack_s"
+  },
+  {
+   "hi": 3.0,
+   "index": 1,
+   "lease_derived": true,
+   "lo": -3.0,
+   "meaning": "D_cand - t: slack of the running job's newest candidate",
+   "missing": -3.0,
+   "name": "cand_slack_s"
+  },
+  {
+   "hi": 3.0,
+   "index": 2,
+   "lease_derived": true,
+   "lo": -3.0,
+   "meaning": "D* - lhs_REFINE of Eq. 5 (shield margin of REFINE)",
+   "missing": -3.0,
+   "name": "refine_margin_s"
+  },
+  {
+   "hi": 3.0,
+   "index": 3,
+   "lease_derived": true,
+   "lo": -3.0,
+   "meaning": "D* - lhs_REFRESH of Eq. 5 (shield margin of REFRESH)",
+   "missing": -3.0,
+   "name": "refresh_margin_s"
+  },
+  {
+   "hi": 10.0,
+   "index": 4,
+   "lease_derived": true,
+   "lo": -5.0,
+   "meaning": "min over the suffix grid of the conservative margin g (lease envelope); missing = no relevant agent",
+   "missing": 10.0,
+   "name": "min_g_m"
+  },
+  {
+   "hi": 3.0,
+   "index": 5,
+   "lease_derived": true,
+   "lo": 0.0,
+   "meaning": "first-failure time tau* of the lease; missing = no crossing (T_pred)",
+   "missing": 3.0,
+   "name": "tau_star_s"
+  },
+  {
+   "hi": 3.0,
+   "index": 6,
+   "lease_derived": false,
+   "lo": 0.0,
+   "meaning": "age of the running job's observation, t - t_k (refinement keeps t_k)",
+   "missing": 3.0,
+   "name": "obs_age_s"
+  },
+  {
+   "hi": 10.0,
+   "index": 7,
+   "lease_derived": false,
+   "lo": 1.0,
+   "meaning": "refinement progress: flow steps completed by the running job",
+   "missing": 1.0,
+   "name": "depth"
+  },
+  {
+   "hi": 5.0,
+   "index": 8,
+   "lease_derived": false,
+   "lo": 0.0,
+   "meaning": "refinement progress: max plan change of the last step (0 at depth 1)",
+   "missing": 0.0,
+   "name": "plan_delta_m"
+  },
+  {
+   "hi": 3.0,
+   "index": 9,
+   "lease_derived": false,
+   "lo": 0.0,
+   "meaning": "age of the active candidate's observation; missing = none",
+   "missing": 3.0,
+   "name": "active_age_s"
+  },
+  {
+   "hi": 60.0,
+   "index": 10,
+   "lease_derived": false,
+   "lo": 0.0,
+   "meaning": "frames captured since the running job's observation",
+   "missing": 0.0,
+   "name": "newer_frames"
+  },
+  {
+   "hi": 0.5,
+   "index": 11,
+   "lease_derived": false,
+   "lo": 0.0,
+   "meaning": "runtime latency bound of one refinement quantum (p99, kappa-scaled)",
+   "missing": 0.02,
+   "name": "L_refine_s"
+  },
+  {
+   "hi": 3.0,
+   "index": 12,
+   "lease_derived": false,
+   "lo": 0.0,
+   "meaning": "runtime latency bound of a refresh (prefix + step 1 + boundaries)",
+   "missing": 1.0,
+   "name": "L_refresh_s"
+  },
+  {
+   "hi": 4.0,
+   "index": 13,
+   "lease_derived": false,
+   "lo": 0.5,
+   "meaning": "GPU budget: contention scale of the simulated GPU (cost = kappa x CUDA)",
+   "missing": 1.0,
+   "name": "kappa"
+  },
+  {
+   "hi": 30.0,
+   "index": 14,
+   "lease_derived": false,
+   "lo": 0.0,
+   "meaning": "ego speed at the running job's observation",
+   "missing": 0.0,
+   "name": "ego_speed_mps"
+  },
+  {
+   "hi": 50.0,
+   "index": 15,
+   "lease_derived": false,
+   "lo": 0.0,
+   "meaning": "relevant detected agents (vehicles / pedestrians) of the candidate",
+   "missing": 0.0,
+   "name": "n_relevant"
+  }
+ ],
+ "identity_all_ok": true,
+ "inputs": [
+  {
+   "official_results_sha256": "e3c47388701163130a59efae1d75b5b0839c53ae61fe2974bcf49e837e32e3bb",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T013827_993c31c4"
+  },
+  {
+   "official_results_sha256": "3dd3c47eaff382dfcaa504a505c0cffa98acf4e22e9821807ee7c992daefc0e1",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T040020_ae60fa31"
+  },
+  {
+   "official_results_sha256": "6ef23f35eb4d2bc7f524cef3c11a792a4ecb149c1eb3682b882d4c8d00f86ea4",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T051504_4f570cfa"
+  },
+  {
+   "official_results_sha256": "1f57fa21ee88b5fbc1440df8e14d9e01d3a64c5fcb95dbfe1ac8fb39cc717f6f",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T035340_ee97a380"
+  },
+  {
+   "official_results_sha256": "5ecc43a69f5dc7735e85e132531b2a81edbc157c8d705ffde867bde48245a245",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T000325_41171550"
+  },
+  {
+   "official_results_sha256": "0a5d6f5db1b5f00056d4d35f60a25259725e5d93bb3aacce25259eec2f29fe5d",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T061810_b4456612"
+  },
+  {
+   "official_results_sha256": "2376576795fdf3e6b04d9f7b8852eb292deb960806fd1227a2434532f66f5288",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T093837_62a7e23c"
+  },
+  {
+   "official_results_sha256": "daa4d7e41c44f54a6b923f92623875c0b822304b8220e46a682de8123fe39ee7",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T004348_890ee2b8"
+  },
+  {
+   "official_results_sha256": "8e3fa35739e062ff232503d9b59c525679763cca51266cdff5480e8e37fce067",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T103238_6d996bc1"
+  },
+  {
+   "official_results_sha256": "2b585a21548c509d32bfd6394e798765b2320b29a0aa31e34c168822b9feb7ce",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T052442_414b7c74"
+  },
+  {
+   "official_results_sha256": "f8c41c8fec446aae262856427f3ae7b89f34552d2763b614de35bbd348b8b177",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T063350_43376ade"
+  },
+  {
+   "official_results_sha256": "3206c4d778df17d69d108140e1109979b69fe7c1f97d4a322e8d7862b55ded35",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T070221_9542ad26"
+  },
+  {
+   "official_results_sha256": "651f771f11c6c9de6fd70f28b48b9265c0d0739ac0acb1a6f81c60ea5f97d9a2",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T031715_7467a3e2"
+  },
+  {
+   "official_results_sha256": "26afe017bb58443242560cc8d7804c48209ed0b12688fc55ae24f90947c6219b",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T104329_9a233c7c"
+  },
+  {
+   "official_results_sha256": "3c44d5ef79690362ba2ecc4a57d3bbb1bea5963bd0d735264b2c8fd0c35eba23",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T074841_e2ab1cd2"
+  },
+  {
+   "official_results_sha256": "2e3a8016c01a46aeb926a72e66bcaa44cdfc35c3a4bddfd84a8532ecd0e451f2",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261114T224321_4704d28b"
+  },
+  {
+   "official_results_sha256": "75252579e3d01de4f993bc1967315ef35782fa4f7894a83e4cdf6ba57f6058bd",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T021702_a89c742c"
+  },
+  {
+   "official_results_sha256": "7d9ea4862cfa7b106bf8aa6bc983578c4f6fa07f1c0ca4b73766d5248a336655",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T054010_e1862c96"
+  },
+  {
+   "official_results_sha256": "472f1298d7272a8799d4994d96ca9d54c53fc685b85ef795dc6952d20a62b251",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T110016_d25e19dc"
+  },
+  {
+   "official_results_sha256": "0d457500dc181abffacee050ce06074f4fb5b4dc9105e283556dc8a64525071e",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T082348_91833351"
+  },
+  {
+   "official_results_sha256": "111a320d67b2142594192011d19b3e88414dae2b47a60851721188d186ab467a",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T011247_d1d1e286"
+  },
+  {
+   "official_results_sha256": "6bc189ac5baeddc461d9ca241ded14ea359e0444b32084c742a912280c66c074",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T054856_5f6d21bd"
+  },
+  {
+   "official_results_sha256": "8e6f8020cd43571d9b4c9efa75987f3b946a4a4c7b4d654054c10b8c80f1bab5",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T013145_6fdfb5b6"
+  },
+  {
+   "official_results_sha256": "4461cd9a4699bed4c0997d4ffbdfbcf761104c509f538395a179246b06ab2605",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T045518_9b0a5cd4"
+  },
+  {
+   "official_results_sha256": "92a99f70c47d3cc2b90f90be72c4ab540c1c66e40383478faaee5fd9b4cd1c5d",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T113057_3e9636c2"
+  },
+  {
+   "official_results_sha256": "d912ed3d1a4d50cc92a3574b3669891ffcf80c7e42bf6a3f2bf0c58c565083af",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T030232_166cae12"
+  },
+  {
+   "official_results_sha256": "0617d7d8838ab0fb1cbb5398adb2566a040223aed2dea109d1fb645b20598ef2",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T095035_c4953318"
+  },
+  {
+   "official_results_sha256": "f219a065ff2444c38f9fb6605832ab3792cfd3d7aa6709e975895c1d38206128",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T092204_cf47c529"
+  },
+  {
+   "official_results_sha256": "05ef70ec2b85f5c920276d48ac5accbd3cadc02b13f2feed59a2b0423609977d",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T120813_d48c8757"
+  },
+  {
+   "official_results_sha256": "3646bc056a4e4b545db06ee76f279a6ee0a2adaad19bf3aa7bf95ac5df9f1f8b",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T024756_ac379205"
+  },
+  {
+   "official_results_sha256": "2233c620130907bea0144a5967ce0f22df9ed3904a3e3ad2fc757fbd7f1db10d",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T023023_572f16e9"
+  },
+  {
+   "official_results_sha256": "19fe7416b9d7332d9facfe9402e7ba57a437cd5bd53c457721f04fbe8872509b",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261114T232012_308b7c87"
+  },
+  {
+   "official_results_sha256": "4d4dac9ae4d470d2749ca68ca0682c1611b506602cdba462ca01b8d0817e7eba",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261114T235421_4b70f61b"
+  },
+  {
+   "official_results_sha256": "cfc60dc1b41517e5de04ce72b66050320ee9eee1e3a714a86fa16b28adaef1b0",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T113947_928ebbf3"
+  },
+  {
+   "official_results_sha256": "3f2d63d1afa751d6a36abef01a9f4090f4f1bb1577d1d431e453cacb1fce8dfd",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T034507_0a2d5e28"
+  },
+  {
+   "official_results_sha256": "7c635a8b74de7e5225c1210d6832618e4db14817c864c6c5efacfe8cf8bc8b9e",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T080214_43f832e1"
+  },
+  {
+   "official_results_sha256": "5eb1ce702061075765ab2a0660e082c9ae4bc1f162cc85d35a65750c1252d813",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T014504_ccc2d6f6"
+  },
+  {
+   "official_results_sha256": "23f1709bc037fd0dfa996af630c4d8331a393e9a86c28380392ff452fd68af1d",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T114600_00455d72"
+  },
+  {
+   "official_results_sha256": "8d5414c18b042c2ad6fc5707957f8fbf9cab52bba92f1baf59bc821b819dffea",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T020227_44ed215f"
+  },
+  {
+   "official_results_sha256": "ffc0cef880b28f4da62a71c224503e86bea0a6dc5e08af90a93754e731091341",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T055944_f96aa9eb"
+  },
+  {
+   "official_results_sha256": "3c032f59f426352285c9e1bef8fb93f44011a43758a1278a936e40d7db3987c3",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T010349_af180c87"
+  },
+  {
+   "official_results_sha256": "8551514a66d3711a22200dbc2a93b750fc70fef77079d541c0cf2253cbd5617f",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T083148_08773fc8"
+  },
+  {
+   "official_results_sha256": "c124a3c6da5e958d73bccac0a51697f44a16d66de6216cc479136919eb8e4ec8",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T083743_1518bd48"
+  },
+  {
+   "official_results_sha256": "458f01600d50e14a663b4cd3bedd0d35c0725c66a49920aefd081f5209b20cb8",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.0/runs/20261115T075755_ad88d6ef"
+  },
+  {
+   "official_results_sha256": "652704caaa3506ddf3c34c8fbeff99f7683b1731a10e43b0bf0dd1bd3ce3668f",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T014159_b1d5bc8f"
+  },
+  {
+   "official_results_sha256": "bb65554febd0f15b4c4600b428c8aaa8b7b3e7619e34eae2478aad024e099c33",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T041252_95106642"
+  },
+  {
+   "official_results_sha256": "876b98392f3984dee5d2f59510a2c412c804fdfcd7b34145d809b09de1ab571b",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T051910_b78a5f93"
+  },
+  {
+   "official_results_sha256": "7b3446c1c35bb6b46a04ad1eae65362b1ac301cc1498873bee809a3fbdc8dcaf",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T035707_3a35e9b1"
+  },
+  {
+   "official_results_sha256": "b284de7cee71caa79e3691edd9634c47298bd03d9cc7a59f451549fc616ee5cb",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T001018_1f0dbd67"
+  },
+  {
+   "official_results_sha256": "e09e78d3b3bd504559bc8ccc6a48da93f51e9ce3d7a91286118e0e54c195d142",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T061214_ae7a79bf"
+  },
+  {
+   "official_results_sha256": "def0b70abf6e3d87f16f49567dcb31cebd02a35ba3a57936e9451d449c8a4ed7",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T094459_b6549621"
+  },
+  {
+   "official_results_sha256": "9808e12bc62c1bccd898cf60078fdf4707639a81adb4c9ccf72ff21ef300a0ae",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T002447_629ee80e"
+  },
+  {
+   "official_results_sha256": "95437dbf2bb39028d05f92f040f206d558338556f59d261dae23f016f8d96708",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T101556_1028be10"
+  },
+  {
+   "official_results_sha256": "7a48c523f3d59fd7825140e08fbb8c453398591df2816d7aa9996b9eed5c0f70",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T052807_1332b299"
+  },
+  {
+   "official_results_sha256": "63f18382ab5393061d47664d0e7f36ffcb539ef86c783c8aca5f3a432cfdeb0c",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T064911_09c031fa"
+  },
+  {
+   "official_results_sha256": "50055ee417d3fb2da4700de10884178960412c652a1e6ecdf41cdbd47c83cc64",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T071447_35b0e187"
+  },
+  {
+   "official_results_sha256": "8ba7949b4be6c3c77ebc96104031441cf5ed387cb6add4edbc198d9f964186b2",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T032037_df4a5136"
+  },
+  {
+   "official_results_sha256": "16222132a7dc1a526826fa785c1ecd22b834882b826d15ecba287a10717efa7c",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T104749_e61ea109"
+  },
+  {
+   "official_results_sha256": "c417bfcb3c9253d80966696d8ebd2f6db33473a3b71666ff8948999287e2731f",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T073640_e3009c54"
+  },
+  {
+   "official_results_sha256": "dae2da5cdb91846566d8f91e8fad5a731f326ab1a16bfe2912fe5064f2e35e4a",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261114T225632_cf520b8f"
+  },
+  {
+   "official_results_sha256": "9de325059c51958d0c9f95ec7adf96c7cfd4c53d745c40baba22e9e9c485bf30",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T022559_bba87c8d"
+  },
+  {
+   "official_results_sha256": "0c3793e00db7aa80b02fa210bea3524231c75be2048c5c8f121ee5b0d70539c2",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T053423_b0a4d186"
+  },
+  {
+   "official_results_sha256": "c33bd1fefa93e5fb66bb3e548622bf3f05b4d004d0f67c419745009b601b0f0b",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T110354_7b80c34e"
+  },
+  {
+   "official_results_sha256": "717498d27386ee59d60efa840c5a9bffbd3a3e8518ff9ccfd9509cdf41be541c",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T081506_38c80bb3"
+  },
+  {
+   "official_results_sha256": "1817d786d06f24d2a6c6938e7ac2a6deb5ba08714f41da367ed927968f2171db",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T011831_a57d5817"
+  },
+  {
+   "official_results_sha256": "890b2a114dfbf0f45a1c4182b56c6a4456c3d231b1368c481fd8cfd2dd0f0178",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T055516_150ce15b"
+  },
+  {
+   "official_results_sha256": "89775c03369e3781b6372e7e901dc3c7e465e306e2ca9b2c9897b88d0f7840f4",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T012531_524b6e63"
+  },
+  {
+   "official_results_sha256": "878e220e0bf8bcc49525de0d80e3e1fa2b94b066d558dfda059316fff040b3d6",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T043324_f76b3899"
+  },
+  {
+   "official_results_sha256": "75fdfe7c1e77f506e84269dc94db8b23a1c225978d190998b0b232a00ea31d31",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T111122_5d722a87"
+  },
+  {
+   "official_results_sha256": "fd08c1887c3f1af56f1baf65f0022d58684543fe30b4bdee5922916f1e1acf3d",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T030859_83767118"
+  },
+  {
+   "official_results_sha256": "a117c2be0ad0bc13494495e2754121b014789ae20c6b59b39b93f6d16941453f",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T100201_fb6d84eb"
+  },
+  {
+   "official_results_sha256": "ea8e751b90f52ae0faf2795fa1e4688e8b3087243828890b8ce01d87aae1237c",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T085940_9ea92248"
+  },
+  {
+   "official_results_sha256": "a6d96b82cc8c261fbcbc6e803601d522f76ac79fe5406343ac903b4a7f890924",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T120249_95cb5c22"
+  },
+  {
+   "official_results_sha256": "cc35fb5312c9fd6ea2ab7da2fca419f9ec3577329eb216623890454253dc6d8f",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T023858_491a524c"
+  },
+  {
+   "official_results_sha256": "c83636d3c6fce8a4fdb6f8e8b2ffeef8271afc14bfa8517b286e179f8dc79cf4",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T023303_fc98d010"
+  },
+  {
+   "official_results_sha256": "1cde41d42b95c95cdc1ffd8ef0e6c86f7bb6e7ccd52e5acf3126bf30dc6e1440",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261114T230234_5cb41546"
+  },
+  {
+   "official_results_sha256": "4da18e033f3a1421c65ecd51a0f543377002239147efdcd4fada43bb7d9032a8",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261114T235655_4d1a8fc7"
+  },
+  {
+   "official_results_sha256": "31ccc06a745fea72ada5874d6cf1104a6bb116ce5fd7fc99c8b2eb6a440dea4b",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T114259_8bde4c9a"
+  },
+  {
+   "official_results_sha256": "f00f133a8dc6c596b81620fd7bd423cb2879db3059c8665f256790c40a79cd49",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T033037_3dcf4462"
+  },
+  {
+   "official_results_sha256": "2dcca2ac317106a71e59a60bb5f092bf072ef6f1ef9fd53ca696449fce5695fc",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T080931_aba989f1"
+  },
+  {
+   "official_results_sha256": "b969aac2b2ce3089ea680dff675eed990f9d79de9ce9ab47cd2cfbd2b8946e4a",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T014747_4fa49e04"
+  },
+  {
+   "official_results_sha256": "73530f27f129c2dbcf0f4240ea2331fc79bb5dbe026884e409e1d928efb6b63b",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T115253_2fb01197"
+  },
+  {
+   "official_results_sha256": "7ed504a096ab8f5cb8c85b4e6673af4a682882cd05f55a31200fe5ef2cbd8521",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T015213_2f7d55e8"
+  },
+  {
+   "official_results_sha256": "13cc599d04a184f8967ed91cbe9a8f45460a7f381b20afb99f333b04c921e071",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T060729_9b78a046"
+  },
+  {
+   "official_results_sha256": "2b7a51fdac5fce5123121326244de131ca6e3a400da49f2f4f0e64f05e918f04",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T010717_60b05e2e"
+  },
+  {
+   "official_results_sha256": "c253248fa532378208821980a84bf723994e336070254c5f6d52c819a2fb7ba9",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T083417_eaa7db9e"
+  },
+  {
+   "official_results_sha256": "52300c951aaf2fb23edd03b10047c92aaba02e84728c9c889b94e7b463e8c40e",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T084128_f45411ee"
+  },
+  {
+   "official_results_sha256": "e6f2c8d843bae3f376bf2b4ea77fd3e72c5047b937a5e5cad34af3b896c42501",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k1.5/runs/20261115T080007_9ef9c417"
+  },
+  {
+   "official_results_sha256": "2425d86f4146f03ef469910116abdef7e62557ca487861798121644888489462",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T013429_822f7a1a"
+  },
+  {
+   "official_results_sha256": "a8d05cd664afe3f65d4d60dfa91e2946c0e1b8e5d6373327c7eed7aa5345de29",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T042347_23d0a623"
+  },
+  {
+   "official_results_sha256": "a01c374331bb51dfb5eaeceb6c32f72cff74f065249bd5fdcb035bafb337ed5f",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T050844_18d1ca8e"
+  },
+  {
+   "official_results_sha256": "7b1c055cf2e0a988746e0f76ce13603f3738d13e9d5ee73152f985b771a1de05",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T034756_91520509"
+  },
+  {
+   "official_results_sha256": "11923a5a7ad82723931c9fe37422a5c476f665744a4f90583c498c8433981012",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T001630_aecd78d5"
+  },
+  {
+   "official_results_sha256": "fbd0b220f252138abfc1484faa8e77076116dbe50449e6b946a6c059102a2661",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T061514_1a0b8620"
+  },
+  {
+   "official_results_sha256": "63bc9e3fd86b4d49524f3cae6201c1cdad30c9902275c822d22af6bbace6803f",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T093537_930b603c"
+  },
+  {
+   "official_results_sha256": "f26f64f88f3c8c487b5e7eacaa865857fb2f9df1d26577e8ae00cc59aedc7c7c",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T004001_a45a6714"
+  },
+  {
+   "official_results_sha256": "7b80d7f94c3b02ca3973ca999e37435ee3b521f1c15978d14a54f40f47c57419",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T102036_505ed913"
+  },
+  {
+   "official_results_sha256": "330f44f48d5fe5c11c4a76b833c07c41f89399462bd5060761844be5ca8758db",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T053111_e0ff196d"
+  },
+  {
+   "official_results_sha256": "f4bfa6fb20e344d8a9b00d72899d85608ba82dab8e310cfae77b2d20b7e1612a",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T062122_f590c0be"
+  },
+  {
+   "official_results_sha256": "6400cdfd37944d444b9ecb2da5e134b96315933bf1aba47877bbf5e8ddde7af1",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T072622_6bbee12e"
+  },
+  {
+   "official_results_sha256": "25a780ab3892f9ec1c6be9db49410c037c9bfbda341182a3d5aa6a11b7c21fb4",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T032545_b56014b0"
+  },
+  {
+   "official_results_sha256": "283cc75df099ea52affb9cce88bd62d64939859488dcfd9939d32b18d9a3cd17",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T103905_0949a6d4"
+  },
+  {
+   "official_results_sha256": "2354e0cefaec41870ddb00ad1e2c1bf02402f54672135cfeb55a9cee45bf608c",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T074319_49241ffa"
+  },
+  {
+   "official_results_sha256": "567b92585555a776ece66c934cda7a0586a4ea37e7c36a693f095bbf6d9cf9a3",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261114T225935_b7a6f6dc"
+  },
+  {
+   "official_results_sha256": "3c66b442326ac2a8387c61282bc705e9f59fdc4ac31c27d82da78b0968a56bdc",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T020534_bed743fa"
+  },
+  {
+   "official_results_sha256": "d6ebd3e2041f745d475a0552896ecd1212020d09e5ecd10a56ca31d46b649173",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T053704_e37c82ed"
+  },
+  {
+   "official_results_sha256": "35b8241fab8ddf391cf7b20b7061155791d692ffffa61988efbfc0f6cdc25141",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T110758_00476faa"
+  },
+  {
+   "official_results_sha256": "e8a99aa6972d622713d39ce1104ebec7e8554e6207fb0b1e9f90dca3912f5925",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T081937_4987101e"
+  },
+  {
+   "official_results_sha256": "ef7ad9d90637e66aa70dcb8852d76ad384774c47f8318b29cd40fa5b575210a5",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T012059_c84e6115"
+  },
+  {
+   "official_results_sha256": "ec9135648a2739b281f85024d9ba3d08c83a5c9265ad6a4304c61c86ae4d4c6e",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T054259_857acd0d"
+  },
+  {
+   "official_results_sha256": "8646c85d9cdb0348579b96af84ac866a7c18e2a85883571de1f24e3094a08306",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T012842_4941d4ac"
+  },
+  {
+   "official_results_sha256": "c09d84905f1eafe1708b0fbe2f5deffb9dfd9c46cbc704ab7f3d367356116815",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T044453_4c548612"
+  },
+  {
+   "official_results_sha256": "1d6a40a157ddbab0cd9abaa097b459b8a329e3a62c3029b6a042dc0238cf0df4",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T112143_1d9fe642"
+  },
+  {
+   "official_results_sha256": "5ca5af7b3d492058352f1716132abf4c383216ac86d99d44caca9df7673562ee",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T025449_a76937ea"
+  },
+  {
+   "official_results_sha256": "2e44884a38d75dca4cabe9d4db0cc33be23ff28260c1415dbbd3e1a94df8fac3",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T101152_c957e091"
+  },
+  {
+   "official_results_sha256": "19a3003aa8f3189730a2c9c24b9e6df68b61e4c0ad0964a925d3c9a201bc199f",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T091107_ace6c7e2"
+  },
+  {
+   "official_results_sha256": "cae003b900bc307eaba6037c2f4084c97b1373c6b25011465e1f60f70228420b",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T120528_5a0ca4fb"
+  },
+  {
+   "official_results_sha256": "32b97e93ba13d3fdf02a895e87e103e59f6fcbd299c37b6ab2f32262199de266",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T024212_eb74fbe7"
+  },
+  {
+   "official_results_sha256": "b75fb79451d6e5b4c8b8844e5966fc83382172c373373ace7e8666a0bb7f093a",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T023551_8a4c3913"
+  },
+  {
+   "official_results_sha256": "1d1ac17af3bb7f7fa4c4b6910dd8d9c6e6f2112c72d80fdab140155dc91141b3",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261114T231147_f7f809b5"
+  },
+  {
+   "official_results_sha256": "c5562966839522007b948069046f168bf9e2acf45ad68cd6616d0dd61cf0ed27",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261114T234715_173aa98e"
+  },
+  {
+   "official_results_sha256": "3e8a489479d294d43f8082cb88fa0849d6f5d6e562c839f4dadd52ae40f1c0d6",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T113641_ab582c50"
+  },
+  {
+   "official_results_sha256": "3ab69ddb034c19115d0d91f20921ef1dd9f0159dc04de9c40e2afb0c80239674",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T033332_3e73461d"
+  },
+  {
+   "official_results_sha256": "f317b6a1780c6ce59446ad93f0d4523382a5807c1cfe153931c706570cdffc4e",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T081215_2f8821b3"
+  },
+  {
+   "official_results_sha256": "590420fdea639b0722cb972080e7d942812dc223b4984c4b0dbe639e2c2ba85e",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T015003_39497a68"
+  },
+  {
+   "official_results_sha256": "58ee797cc56cec35f43c3f5519e2eab29aac9bccae5d00458b5fee4983b45d86",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T115509_f50225af"
+  },
+  {
+   "official_results_sha256": "da8fd55f8a3ae346ae3724e488a4531f1401201b27385bdd94d0d493d8f0f6a8",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T015555_95d6fedb"
+  },
+  {
+   "official_results_sha256": "b3a00f82abc5316fd9d8fb6827a83ed43f84eafefc3bf3253b8b1f52c0171f8d",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T061005_4e6a42f9"
+  },
+  {
+   "official_results_sha256": "ca4ca7477f9dc126ef2cc33db35989f424446bacb4b37647baeebd6698c971e8",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T010056_105725de"
+  },
+  {
+   "official_results_sha256": "482983968509d9d4ddf671f6ea86378dcb108074f12dbe91262a3a3398859cf3",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T082841_e68ad39a"
+  },
+  {
+   "official_results_sha256": "07e1d8036308dbc25cf86f5a934b387d7d85e15650787b5fc0c232e0213a065c",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T085055_a2ed28de"
+  },
+  {
+   "official_results_sha256": "385912f88b9a2cde46515915ab91b4e1e5117d5c1587d2e10229c6a521494842",
+   "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_data/k2.0/runs/20261115T075544_6c8d6b12"
+  }
+ ],
+ "lease_derived": [
+  "lease_slack_s",
+  "cand_slack_s",
+  "refine_margin_s",
+  "refresh_margin_s",
+  "min_g_m",
+  "tau_star_s"
+ ],
+ "n_episodes": 132,
+ "n_transitions": 6591,
+ "reward": "S(t) = RC(t) x P(t) (prefix_score.py); r_n = S(t_{n+1}) - S(t_n); last r = DS - S(t_N)",
+ "reward_mode": "prefix",
+ "schema": "framelease_v4.rl_dataset/1",
+ "test_route_guard": {
+  "allow_test": false,
+  "n_test_routes": 44,
+  "test_episodes": 0
+ },
+ "windows_s": [
+  0.5,
+  1.0,
+  2.0
+ ]
+}

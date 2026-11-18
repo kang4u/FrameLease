@@ -1,0 +1,195 @@
+{
+ "block": "heur_s2",
+ "block_no": 7,
+ "candidates": [
+  {
+   "arm": "fl_heuristic",
+   "envelope": {
+    "config": "T_x0.00",
+    "label": "B0",
+    "path": "outputs/framelease_v4/envelopes/B0.json",
+    "sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927"
+   },
+   "jobs": {
+    "17569": {
+     "block": "lease_s2",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r17569",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s2/fl_heuristic_B0_d10"
+    },
+    "2086": {
+     "block": "lease_s2",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2086",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s2/fl_heuristic_B0_d10"
+    },
+    "23910": {
+     "block": "lease_s2",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r23910",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s2/fl_heuristic_B0_d10"
+    },
+    "2397": {
+     "block": "lease_s2",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2397",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s2/fl_heuristic_B0_d10"
+    },
+    "24330": {
+     "block": "lease_s2",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r24330",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s2/fl_heuristic_B0_d10"
+    },
+    "2643": {
+     "block": "lease_s2",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2643",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s2/fl_heuristic_B0_d10"
+    },
+    "28093": {
+     "block": "lease_s2",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r28093",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s2/fl_heuristic_B0_d10"
+    },
+    "2844": {
+     "block": "lease_s2",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2844",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s2/fl_heuristic_B0_d10"
+    },
+    "3090": {
+     "block": "lease_s2",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r3090",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s2/fl_heuristic_B0_d10"
+    },
+    "3373": {
+     "block": "lease_s2",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r3373",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s2/fl_heuristic_B0_d10"
+    },
+    "3749": {
+     "block": "lease_s2",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r3749",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s2/fl_heuristic_B0_d10"
+    }
+   },
+   "name": "d10",
+   "order": 0,
+   "policy_params": {
+    "utility": "heuristic"
+   },
+   "reused_from": "lease_s2",
+   "tag": "B0_d10"
+  },
+  {
+   "arm": "fl_heuristic",
+   "envelope": {
+    "config": "T_x0.00",
+    "label": "B0",
+    "path": "outputs/framelease_v4/envelopes/B0.json",
+    "sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927"
+   },
+   "jobs": {
+    "17569": {
+     "block": "heur_s2",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r17569",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s2/fl_heuristic_B0_d1"
+    },
+    "2086": {
+     "block": "heur_s2",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2086",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s2/fl_heuristic_B0_d1"
+    },
+    "23910": {
+     "block": "heur_s2",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r23910",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s2/fl_heuristic_B0_d1"
+    },
+    "2397": {
+     "block": "heur_s2",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2397",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s2/fl_heuristic_B0_d1"
+    },
+    "24330": {
+     "block": "heur_s2",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r24330",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s2/fl_heuristic_B0_d1"
+    },
+    "2643": {
+     "block": "heur_s2",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2643",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s2/fl_heuristic_B0_d1"
+    },
+    "28093": {
+     "block": "heur_s2",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r28093",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s2/fl_heuristic_B0_d1"
+    },
+    "2844": {
+     "block": "heur_s2",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2844",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s2/fl_heuristic_B0_d1"
+    },
+    "3090": {
+     "block": "heur_s2",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r3090",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s2/fl_heuristic_B0_d1"
+    },
+    "3373": {
+     "block": "heur_s2",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r3373",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s2/fl_heuristic_B0_d1"
+    },
+    "3749": {
+     "block": "heur_s2",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r3749",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s2/fl_heuristic_B0_d1"
+    }
+   },
+   "name": "d1",
+   "order": 2,
+   "policy_params": {
+    "utility": "v4_adet_d1"
+   },
+   "reused_from": null,
+   "tag": "B0_d1"
+  }
+ ],
+ "final_stage": true,
+ "grid": "heur",
+ "inputs": {
+  "outputs/framelease_v4/p1_jobs/FULL/b04_lease_s2.stage.json": "a8fdcdc93fcd65d9681e79a1d125f8b01b54a9ef5a285419654519f39c8e4932",
+  "outputs/framelease_v4/tuning/selection/FULL/heur_s1.json": "03d1145dba118b22806a0246fbca35d41338a815a9e9cb9f8d4d79ca2e230914"
+ },
+ "job_file": "outputs/framelease_v4/p1_jobs/FULL/b07_heur_s2.jsonl",
+ "job_file_sha256": "9eb9b7b8bacaaeb27e2f24f99a83644676b0184756847a22f3263b3374c9a14c",
+ "n_candidates": 2,
+ "n_lines": 11,
+ "previous_stage": "heur_s1",
+ "route_order": [
+  "24330",
+  "3090",
+  "17569",
+  "3749",
+  "3373",
+  "28093",
+  "2397",
+  "23910",
+  "2844",
+  "2086",
+  "2643"
+ ],
+ "route_set": "T22b",
+ "routes": [
+  "2086",
+  "2397",
+  "2643",
+  "2844",
+  "3090",
+  "3373",
+  "3749",
+  "17569",
+  "23910",
+  "24330",
+  "28093"
+ ],
+ "rules": "PROTOCOL Sec. 4.2 (select_stage.py)",
+ "schema": "framelease_v4.p1_stage/1",
+ "stage": 2,
+ "survive": null,
+ "variant": "FULL"
+}

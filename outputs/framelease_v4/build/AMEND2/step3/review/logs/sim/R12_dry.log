@@ -1,0 +1,8 @@
+{
+ "schema": "framelease_v4.d1_decision/1",
+ "decision": "continue",
+ "rationale": "Every P1 block is final on the training routes (simulation text of the review).",
+ "d1_summary_sha256": "53d8c97a185d52870358e3341d6e698dcf8fe136425aa7bd1eb0f9b065923cb2",
+ "decided": "2026-11-15T05:07:32+0800",
+ "by": "coordinating session"
+}

@@ -1,0 +1,5 @@
+(exit 96, 0.0 s)
+apply_locked: exit 96 (output /tmp/A10A11/applier/treeD/outputs/framelease_v4/amendment_a10/apply.out)
+
+--- apply.out
+apply_locked: outputs/framelease_v4/phase_driver/protocol_txn.json exists: nothing applied

@@ -1,0 +1,4 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/A10A11/fix2/sim_tree/apply_entry_scratch_treeE.py outputs/framelease_v4/build/AMEND2/final/A10_spec.json
+(exit 1)
+registration --verify -> 1 | manifest: 1 files differ: [('framelease_v4/rl/RL_PROTOCOL.md', 'c12b935b740494fda4c54d6c162d7d8776a0a29bfe84e5b3ec14b482d1bf2557', 'unreadable (No such file or directory)')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/rl/RL_PROTOCOL.md']

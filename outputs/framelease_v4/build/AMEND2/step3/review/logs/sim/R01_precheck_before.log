@@ -1,0 +1,13 @@
+amend_step3.sh 2026-11-15T04:59:00+08:00: root /tmp/AMEND3_review/tree; transaction directory /tmp/AMEND3_review/runs/R01
+inputs: step3_txn.py 86f69e70c31edfc49e95cb07b55d62a4afc07e7b05e0e058b724407ed6c36ea0,
+        step3_spec.json 89836a6f2e01ab0e99effb4467bc20fdb86059bcfb4689aeddceadb878c4cfcd
+== 1. pre-check (no lock)
+registration.py --verify (exit 0): manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registered baseline: 153 files; in the sealed manifest at their sha256 and unchanged in the tree: yes
+check_drafts.py exit 0: all checks passed
+dry composition: 2816 lines; entries A3 193 lines, A9 43 lines, A7 53 lines, A4 74 lines, OP 114 lines; 40 files become registered
+PROBLEM: outputs/framelease_v4/p1_driver/P1_DONE.json does not exist (P1 has not ended)
+PROBLEM: outputs/framelease_v4/p1_driver/driver.lock names a live p1_driver.py process
+PROBLEM: Sec. 13.2 has no P1 driver entry ['Tuning freeze', 'D1 summary']
+precheck: 3 problem(s) (dry files in /tmp/AMEND3_review/runs/R01/precheck)
+STOP: pre-check failed (exit 1); nothing was changed. See /tmp/AMEND3_review/runs/R01/amend_step3.log

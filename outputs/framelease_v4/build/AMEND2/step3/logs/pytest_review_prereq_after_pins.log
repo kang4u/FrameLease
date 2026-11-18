@@ -1,0 +1,42 @@
+...................                            [100%]
+==================================== PASSES ====================================
+_ ConstraintsTest.test_changed_files_are_development_files_at_the_reported_sha256 _
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuu
+_______ ConstraintsTest.test_drafting_fixtures_are_the_drafting_versions _______
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuu
+____ P3rlTest.test_reason_on_a_dataset_lacking_refresh_in_one_training_fold ____
+----------------------------- Captured stdout call -----------------------------
+uuu
+______________ DeployCheckMutationTest.test_fails_on_real_defects ______________
+----------------------------- Captured stdout call -----------------------------
+uuu
+_ DeployCheckMutationTest.test_passes_with_overruns_and_with_a_disabled_instance _
+----------------------------- Captured stdout call -----------------------------
+uu
+_____ StressTest.test_registered_grid_report_is_byte_identical_old_and_new _____
+----------------------------- Captured stdout call -----------------------------
+uu
+=========================== short test summary info ============================
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::ConstraintsTest::test_changed_files_are_development_files_at_the_reported_sha256
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::ConstraintsTest::test_drafting_fixtures_are_the_drafting_versions
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::AggTest::test_classification_differs_only_in_the_added_sliver
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::AggTest::test_code_change_of_manipulation_is_the_band_only
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::AggTest::test_code_change_of_the_aggregator_is_the_schema_only
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::AggTest::test_idle_band_is_the_sec_9_7_pilot_range
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::AggTest::test_test_stage_specs_load_now_and_were_refused_before
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::AggTest::test_the_ref_runs_of_the_validity_note
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::P3rlTest::test_code_change_scope
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::P3rlTest::test_no_reference_to_the_removed_branch
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::P3rlTest::test_not_selectable_reason_causes
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::P3rlTest::test_reason_on_a_dataset_lacking_refresh_in_one_training_fold
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::DeployCheckMutationTest::test_fails_on_real_defects
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::DeployCheckMutationTest::test_passes_unmodified
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::DeployCheckMutationTest::test_passes_with_overruns_and_with_a_disabled_instance
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::StressTest::test_registered_grid_report_is_byte_identical_old_and_new
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::StressTest::test_relative_grid_is_the_a7b_grid
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::StressTest::test_the_a7_log_ends_with_no_failure
+PASSED outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py::StressTest::test_the_supplementary_report_cannot_pass_as_the_registered_s2
+19 passed, 26 subtests passed in 19.01s
+wall 19.39 s, max RSS 132920 kB

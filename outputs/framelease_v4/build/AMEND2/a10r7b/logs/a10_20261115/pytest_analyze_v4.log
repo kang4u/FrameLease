@@ -1,0 +1,214 @@
+................................................                                                              [100%]
+==================================== PASSES ====================================
+____________________ Registered.test_families_as_registered ____________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuu
+____________________________ Registered.test_labels ____________________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuu
+_________________ Statistics.test_rows_equal_the_v2_functions __________________
+----------------------------- Captured stdout call -----------------------------
+uuuu
+________________ Families.test_e_families_use_e_and_their_kappa ________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuu
+____________________ Guard.test_conditions_after_the_freeze ____________________
+----------------------------- Captured stdout call -----------------------------
+uuuuu
+___________ Guard.test_test_route_rows_are_refused_before_the_freeze ___________
+----------------------------- Captured stdout call -----------------------------
+uuuu
+_________________________ CommandLine.test_end_to_end __________________________
+----------------------------- Captured stdout call -----------------------------
+development analysis -> /tmp/tmpmlx7a4zh/out: 132 rows from 1 inputs; scope: no test-route row (synthetic or training-route input)
+interim guard (Sec. 9.11): pre_freeze, 0 test-route rows, 132 usable rows, 0 released
+DEVELOPMENT: route table synthetic test routes is not the registered split
+DEVELOPMENT: settings Settings(n_boot=200, boot_seed=20261110, mc_flips=2000, mc_seed=20261110) differ from the registered Settings(n_boot=10000, boot_seed=20261110, mc_flips=200000, mc_seed=20261110)
+DEVELOPMENT: no analysis-freeze record: a pre-freeze run, no test-route row was read (Sec. 9.11)
+DEVELOPMENT: no RL freeze (--rl-freeze): no Sec. 5.8 P_both label, the H2 RL benefit is undetermined (Sec. 9.13)
+DEVELOPMENT: no S3 report: H5 not judged (Sec. 9.5)
+DEVELOPMENT: H5 'undetermined', which is not a registered label (Sec. 9.5: supported / contradicted): /tmp/tmpmlx7a4zh/agg: aggregate.json has no commit audit; no S3 report given (--s3)
+DEVELOPMENT: output directory /tmp/tmpmlx7a4zh/out is not inside outputs/framelease_v4/analysis/final_<stamp>/ (Sec. 9.12)
+H1 (primary, driving_score, Holm over 4): fl_full - fixed_deep k1.0 all n 44/44 improves; fl_full - fast_only k1.0 all n 44/44 improves; fl_full - age_only k1.0 all n 0/44 no data; fl_full - event_triggered k1.0 all n 0/44 no data
+S-coll (secondary, collisions_per_km, Holm over 4): fl_full - fixed_deep k1.0 all n 44/44 inconclusive; fl_full - fast_only k1.0 all n 44/44 inconclusive; fl_full - age_only k1.0 all n 0/44 no data; fl_full - event_triggered k1.0 all n 0/44 no data
+S-dmr (secondary, dmr, Holm over 4): fl_full - fixed_deep k1.0 all n 44/44 inconclusive; fl_full - fast_only k1.0 all n 44/44 inconclusive; fl_full - age_only k1.0 all n 0/44 no data; fl_full - event_triggered k1.0 all n 0/44 no data
+H2 (secondary, driving_score, single test): fl_full - fl_heuristic k1.0 all n 0/44 no data
+H3 (secondary, driving_score, Holm over 2): fl_heuristic - fl_original k1.0 all n 0/44 no data; fl_full - fl_original k1.0 all n 0/44 no data
+F3 (secondary, driving_score, Holm over 4): fl_full - fixed_deep k1.5 E n 0/22 no data; fl_full - fast_only k1.5 E n 0/22 no data; fl_full - fixed_deep k2.0 E n 0/22 no data; fl_full - fast_only k2.0 E n 0/22 no data
+H4-cl (secondary, driving_score, Holm over 2): fl_heuristic - fl_global_shield k1.0 E n 0/22 no data; fl_heuristic - age_only k1.0 E n 0/22 no data
+RL-abl (secondary, driving_score, Holm over 2): fl_full - fl_bandit k1.0 E n 0/22 no data; fl_full - fl_fqi_nolease k1.0 E n 0/22 no data
+H1 finding 1: may be stated; finding 2: not stated: both no data
+H2 RL benefit (Sec. 9.13): undetermined: no RL freeze given (the Sec. 5.8 P_both label)
+H4 offline (Sec. 9.4; pre-specified in code, executed before registration): inconclusive; SUFFIX - GLOBAL continuity 0.0101532 [-0.0475703, 0.0555289], R_cond 0.00110011 [-0.0264945, 0.0331107]
+H5 (Sec. 9.5): undetermined; commit-audit violations 0, S3 violations 0, unaudited runs 0; /tmp/tmpmlx7a4zh/agg: aggregate.json has no commit audit; no S3 report given (--s3)
+descriptive (Secs. 7.5, 9.6): fixed_deep_minus_fixed_deep_k1.0_s11-12_R driving_score n 0/15; fast_only_minus_fast_only_k1.0_s11-12_R driving_score n 0/15; fl_heuristic_minus_fl_heuristic_k1.0_s11-12_R driving_score n 0/15; fl_full_minus_fl_full_k1.0_s11-12_R driving_score n 0/15; fl_full_minus_fixed_deep_k1.0_s12_R driving_score n 0/15; fl_full_minus_fast_only_k1.0_s12_R driving_score n 0/15; fl_full_minus_fl_heuristic_k1.0_s12_R driving_score n 0/15; fl_full_minus_fixed_deep_k1.0_s11_R driving_score n 15/15; fl_full_minus_fast_only_k1.0_s11_R driving_score n 15/15; fl_full_minus_fl_heuristic_k1.0_s11_R driving_score n 0/15; fl_full_minus_fl_heuristic_k1.0_s11_E driving_score n 0/22; fl_full_minus_fl_heuristic_k1.5_s11_E driving_score n 0/22; fl_full_minus_fl_heuristic_k2.0_s11_E driving_score n 0/22; fl_full_minus_fixed_deep_k1.0_s11_E driving_score n 22/22; fl_full_minus_fast_only_k1.0_s11_E driving_score n 22/22; fixed_deep_minus_fast_only_k1.0_s11_all driving_score n 44/44; fixed_deep_minus_fast_only_k1.5_s11_E driving_score n 0/22; fixed_deep_minus_fast_only_k2.0_s11_E driving_score n 0/22; fl_risk_minus_fl_heuristic_k1.0_s11_E driving_score n 0/22
+missing data (Sec. 9.8): 31 rows complete, 193 with dropped routes (cells.csv, analysis.json missing_data)
+development analysis -> /tmp/tmpmlx7a4zh/out: 132 rows from 1 inputs; scope: no test-route row (synthetic or training-route input)
+interim guard (Sec. 9.11): pre_freeze, 0 test-route rows, 132 usable rows, 0 released
+DEVELOPMENT: route table synthetic test routes is not the registered split
+DEVELOPMENT: settings Settings(n_boot=200, boot_seed=20261110, mc_flips=2000, mc_seed=20261110) differ from the registered Settings(n_boot=10000, boot_seed=20261110, mc_flips=200000, mc_seed=20261110)
+DEVELOPMENT: no analysis-freeze record: a pre-freeze run, no test-route row was read (Sec. 9.11)
+DEVELOPMENT: no RL freeze (--rl-freeze): no Sec. 5.8 P_both label, the H2 RL benefit is undetermined (Sec. 9.13)
+DEVELOPMENT: no S3 report: H5 not judged (Sec. 9.5)
+DEVELOPMENT: H5 'undetermined', which is not a registered label (Sec. 9.5: supported / contradicted): /tmp/tmpmlx7a4zh/agg: aggregate.json has no commit audit; no S3 report given (--s3)
+DEVELOPMENT: output directory /tmp/tmpmlx7a4zh/out is not inside outputs/framelease_v4/analysis/final_<stamp>/ (Sec. 9.12)
+H1 (primary, driving_score, Holm over 4): fl_full - fixed_deep k1.0 all n 44/44 improves; fl_full - fast_only k1.0 all n 44/44 improves; fl_full - age_only k1.0 all n 0/44 no data; fl_full - event_triggered k1.0 all n 0/44 no data
+S-coll (secondary, collisions_per_km, Holm over 4): fl_full - fixed_deep k1.0 all n 44/44 inconclusive; fl_full - fast_only k1.0 all n 44/44 inconclusive; fl_full - age_only k1.0 all n 0/44 no data; fl_full - event_triggered k1.0 all n 0/44 no data
+S-dmr (secondary, dmr, Holm over 4): fl_full - fixed_deep k1.0 all n 44/44 inconclusive; fl_full - fast_only k1.0 all n 44/44 inconclusive; fl_full - age_only k1.0 all n 0/44 no data; fl_full - event_triggered k1.0 all n 0/44 no data
+H2 (secondary, driving_score, single test): fl_full - fl_heuristic k1.0 all n 0/44 no data
+H3 (secondary, driving_score, Holm over 2): fl_heuristic - fl_original k1.0 all n 0/44 no data; fl_full - fl_original k1.0 all n 0/44 no data
+F3 (secondary, driving_score, Holm over 4): fl_full - fixed_deep k1.5 E n 0/22 no data; fl_full - fast_only k1.5 E n 0/22 no data; fl_full - fixed_deep k2.0 E n 0/22 no data; fl_full - fast_only k2.0 E n 0/22 no data
+H4-cl (secondary, driving_score, Holm over 2): fl_heuristic - fl_global_shield k1.0 E n 0/22 no data; fl_heuristic - age_only k1.0 E n 0/22 no data
+RL-abl (secondary, driving_score, Holm over 2): fl_full - fl_bandit k1.0 E n 0/22 no data; fl_full - fl_fqi_nolease k1.0 E n 0/22 no data
+H1 finding 1: may be stated; finding 2: not stated: both no data
+H2 RL benefit (Sec. 9.13): undetermined: no RL freeze given (the Sec. 5.8 P_both label)
+H4 offline (Sec. 9.4; pre-specified in code, executed before registration): inconclusive; SUFFIX - GLOBAL continuity 0.0101532 [-0.0475703, 0.0555289], R_cond 0.00110011 [-0.0264945, 0.0331107]
+H5 (Sec. 9.5): undetermined; commit-audit violations 0, S3 violations 0, unaudited runs 0; /tmp/tmpmlx7a4zh/agg: aggregate.json has no commit audit; no S3 report given (--s3)
+descriptive (Secs. 7.5, 9.6): fixed_deep_minus_fixed_deep_k1.0_s11-12_R driving_score n 0/15; fast_only_minus_fast_only_k1.0_s11-12_R driving_score n 0/15; fl_heuristic_minus_fl_heuristic_k1.0_s11-12_R driving_score n 0/15; fl_full_minus_fl_full_k1.0_s11-12_R driving_score n 0/15; fl_full_minus_fixed_deep_k1.0_s12_R driving_score n 0/15; fl_full_minus_fast_only_k1.0_s12_R driving_score n 0/15; fl_full_minus_fl_heuristic_k1.0_s12_R driving_score n 0/15; fl_full_minus_fixed_deep_k1.0_s11_R driving_score n 15/15; fl_full_minus_fast_only_k1.0_s11_R driving_score n 15/15; fl_full_minus_fl_heuristic_k1.0_s11_R driving_score n 0/15; fl_full_minus_fl_heuristic_k1.0_s11_E driving_score n 0/22; fl_full_minus_fl_heuristic_k1.5_s11_E driving_score n 0/22; fl_full_minus_fl_heuristic_k2.0_s11_E driving_score n 0/22; fl_full_minus_fixed_deep_k1.0_s11_E driving_score n 22/22; fl_full_minus_fast_only_k1.0_s11_E driving_score n 22/22; fixed_deep_minus_fast_only_k1.0_s11_all driving_score n 44/44; fixed_deep_minus_fast_only_k1.5_s11_E driving_score n 0/22; fixed_deep_minus_fast_only_k2.0_s11_E driving_score n 0/22; fl_risk_minus_fl_heuristic_k1.0_s11_E driving_score n 0/22
+missing data (Sec. 9.8): 31 rows complete, 193 with dropped routes (cells.csv, analysis.json missing_data)
+----------------------------- Captured stderr call -----------------------------
+REFUSED: /tmp/tmpmlx7a4zh/out already holds outputs (use --force to replace them)
+ERROR: /tmp/tmpmlx7a4zh/agg: ['runs.csv'] differ from SHA256SUMS (changed after the aggregation)
+______________________ CommandLine.test_end_to_end_part_b ______________________
+----------------------------- Captured stdout call -----------------------------
+development analysis -> /tmp/tmpjijjsw1m/out: 103 rows from 1 inputs; scope: no test-route row (synthetic or training-route input)
+interim guard (Sec. 9.11): pre_freeze, 0 test-route rows, 103 usable rows, 0 released
+DEVELOPMENT: route table synthetic test routes is not the registered split
+DEVELOPMENT: settings Settings(n_boot=200, boot_seed=20261110, mc_flips=2000, mc_seed=20261110) differ from the registered Settings(n_boot=10000, boot_seed=20261110, mc_flips=200000, mc_seed=20261110)
+DEVELOPMENT: no analysis-freeze record: a pre-freeze run, no test-route row was read (Sec. 9.11)
+DEVELOPMENT: no RL freeze (--rl-freeze): no Sec. 5.8 P_both label, the H2 RL benefit is undetermined (Sec. 9.13)
+DEVELOPMENT: offline outputs from /tmp/tmpjijjsw1m/off, not outputs/framelease_v4/offline_ablation
+DEVELOPMENT: H5 'undetermined', which is not a registered label (Sec. 9.5: supported / contradicted): phases without audited runs in the input: ['P1-0', 'P1', 'P2', 'P5', 'P6']
+DEVELOPMENT: output directory /tmp/tmpjijjsw1m/out is not inside outputs/framelease_v4/analysis/final_<stamp>/ (Sec. 9.12)
+H1 (primary, driving_score, Holm over 4): fl_full - fixed_deep k1.0 all n 44/44 inconclusive; fl_full - fast_only k1.0 all n 0/44 no data; fl_full - age_only k1.0 all n 0/44 no data; fl_full - event_triggered k1.0 all n 0/44 no data
+S-coll (secondary, collisions_per_km, Holm over 4): fl_full - fixed_deep k1.0 all n 44/44 inconclusive; fl_full - fast_only k1.0 all n 0/44 no data; fl_full - age_only k1.0 all n 0/44 no data; fl_full - event_triggered k1.0 all n 0/44 no data
+S-dmr (secondary, dmr, Holm over 4): fl_full - fixed_deep k1.0 all n 44/44 inconclusive; fl_full - fast_only k1.0 all n 0/44 no data; fl_full - age_only k1.0 all n 0/44 no data; fl_full - event_triggered k1.0 all n 0/44 no data
+H2 (secondary, driving_score, single test): fl_full - fl_heuristic k1.0 all n 0/44 no data
+H3 (secondary, driving_score, Holm over 2): fl_heuristic - fl_original k1.0 all n 0/44 no data; fl_full - fl_original k1.0 all n 0/44 no data
+F3 (secondary, driving_score, Holm over 4): fl_full - fixed_deep k1.5 E n 0/22 no data; fl_full - fast_only k1.5 E n 0/22 no data; fl_full - fixed_deep k2.0 E n 0/22 no data; fl_full - fast_only k2.0 E n 0/22 no data
+H4-cl (secondary, driving_score, Holm over 2): fl_heuristic - fl_global_shield k1.0 E n 0/22 no data; fl_heuristic - age_only k1.0 E n 0/22 no data
+RL-abl (secondary, driving_score, Holm over 2): fl_full - fl_bandit k1.0 E n 0/22 no data; fl_full - fl_fqi_nolease k1.0 E n 0/22 no data
+H1 finding 1: mixed (not stated): fixed_deep inconclusive, fast_only no data; finding 2: not stated: both no data
+H2 RL benefit (Sec. 9.13): undetermined: no RL freeze given (the Sec. 5.8 P_both label)
+H4 offline (Sec. 9.4; pre-specified in code, executed before registration): supported; SUFFIX - GLOBAL continuity 0.030000000000000002 [0.01, 0.05], R_cond 0.0 [-0.01, 0.01]
+H5 (Sec. 9.5): undetermined; commit-audit violations 0, S3 violations 0, unaudited runs 0; phases without audited runs in the input: ['P1-0', 'P1', 'P2', 'P5', 'P6']
+descriptive (Secs. 7.5, 9.6): fixed_deep_minus_fixed_deep_k1.0_s11-12_R driving_score n 0/15; fast_only_minus_fast_only_k1.0_s11-12_R driving_score n 0/15; fl_heuristic_minus_fl_heuristic_k1.0_s11-12_R driving_score n 0/15; fl_full_minus_fl_full_k1.0_s11-12_R driving_score n 15/15; fl_full_minus_fixed_deep_k1.0_s12_R driving_score n 0/15; fl_full_minus_fast_only_k1.0_s12_R driving_score n 0/15; fl_full_minus_fl_heuristic_k1.0_s12_R driving_score n 0/15; fl_full_minus_fixed_deep_k1.0_s11_R driving_score n 15/15; fl_full_minus_fast_only_k1.0_s11_R driving_score n 0/15; fl_full_minus_fl_heuristic_k1.0_s11_R driving_score n 0/15; fl_full_minus_fl_heuristic_k1.0_s11_E driving_score n 0/22; fl_full_minus_fl_heuristic_k1.5_s11_E driving_score n 0/22; fl_full_minus_fl_heuristic_k2.0_s11_E driving_score n 0/22; fl_full_minus_fixed_deep_k1.0_s11_E driving_score n 22/22; fl_full_minus_fast_only_k1.0_s11_E driving_score n 0/22; fixed_deep_minus_fast_only_k1.0_s11_all driving_score n 0/44; fixed_deep_minus_fast_only_k1.5_s11_E driving_score n 0/22; fixed_deep_minus_fast_only_k2.0_s11_E driving_score n 0/22; fl_risk_minus_fl_heuristic_k1.0_s11_E driving_score n 0/22
+missing data (Sec. 9.8): 16 rows complete, 208 with dropped routes (cells.csv, analysis.json missing_data)
+uuuuu
+----------------------------- Captured stderr call -----------------------------
+ERROR: /tmp/tmpjijjsw1m/off/per_clip_selected.csv: no offline output (Sec. 9.4)
+ERROR: /tmp/tmpjijjsw1m/x.json: not an S3 report of stress_bench.py (schema framelease_v4.stress_bench/1, test S3)
+__________________________ CommandLine.test_refusals ___________________________
+----------------------------- Captured stderr call -----------------------------
+REFUSED (interim-look guard, logged in /tmp/tmpvrifz2k0/out/interim_guard.jsonl): 1 test-route rows in the input (e.g. syn_fl_full_k1.0_s11_r14194 on route 14194) and no valid analysis-freeze record (PROTOCOL Sec. 9.11: no test-route result is examined before the analysis freeze, except job health, timing and disk; such reads are never summarized across arms)
+REFUSED: framelease_v4/analysis/_analyze_v4_test_never_created: the aggregator never writes there (PROTECTED)
+_______________ KnownAnswers.test_dp_equals_enumeration_small_n ________________
+----------------------------- Captured stdout call -----------------------------
+uuu [ 58%]
+u
+______________ DescriptiveParts.test_noise_floor_and_seed12_known ______________
+----------------------------- Captured stdout call -----------------------------
+uu
+________________ DescriptiveParts.test_rl_gain_breakdown_known _________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuu
+______________________ DescriptiveParts.test_sensitivity _______________________
+----------------------------- Captured stdout call -----------------------------
+uuuu
+____________________ H4Offline.test_per_clip_fallback_known ____________________
+----------------------------- Captured stdout call -----------------------------
+uu
+_______________________ H4Offline.test_rule_known_cases ________________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuuu
+__________________________ H5AndChecks.test_h5_labels __________________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuuuuu
+_________________ ReviewFixes.test_api_cannot_narrow_the_guard _________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuu
+______________ ReviewFixes.test_development_reasons_and_location _______________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuuuuuuu [ 91%]
+_______________________ ReviewFixes.test_h5_no_log_runs ________________________
+----------------------------- Captured stdout call -----------------------------
+uuuu
+__________ ReviewFixes.test_out_dir_holding_an_aggregation_is_refused __________
+----------------------------- Captured stdout call -----------------------------
+development analysis -> /tmp/tmpn7yvu9_d/final_x/analysis: 44 rows from 1 inputs; scope: no test-route row (synthetic or training-route input)
+interim guard (Sec. 9.11): pre_freeze, 0 test-route rows, 44 usable rows, 0 released
+DEVELOPMENT: route table synthetic test routes is not the registered split
+DEVELOPMENT: settings Settings(n_boot=200, boot_seed=20261110, mc_flips=2000, mc_seed=20261110) differ from the registered Settings(n_boot=10000, boot_seed=20261110, mc_flips=200000, mc_seed=20261110)
+DEVELOPMENT: no analysis-freeze record: a pre-freeze run, no test-route row was read (Sec. 9.11)
+DEVELOPMENT: no RL freeze (--rl-freeze): no Sec. 5.8 P_both label, the H2 RL benefit is undetermined (Sec. 9.13)
+DEVELOPMENT: no S3 report: H5 not judged (Sec. 9.5)
+DEVELOPMENT: H5 'undetermined', which is not a registered label (Sec. 9.5: supported / contradicted): /tmp/tmpn7yvu9_d/final_x: aggregate.json has no commit audit; no S3 report given (--s3)
+DEVELOPMENT: output directory /tmp/tmpn7yvu9_d/final_x/analysis is not inside outputs/framelease_v4/analysis/final_<stamp>/ (Sec. 9.12)
+H1 (primary, driving_score, Holm over 4): fl_full - fixed_deep k1.0 all n 0/44 no data; fl_full - fast_only k1.0 all n 0/44 no data; fl_full - age_only k1.0 all n 0/44 no data; fl_full - event_triggered k1.0 all n 0/44 no data
+S-coll (secondary, collisions_per_km, Holm over 4): fl_full - fixed_deep k1.0 all n 0/44 no data; fl_full - fast_only k1.0 all n 0/44 no data; fl_full - age_only k1.0 all n 0/44 no data; fl_full - event_triggered k1.0 all n 0/44 no data
+S-dmr (secondary, dmr, Holm over 4): fl_full - fixed_deep k1.0 all n 0/44 no data; fl_full - fast_only k1.0 all n 0/44 no data; fl_full - age_only k1.0 all n 0/44 no data; fl_full - event_triggered k1.0 all n 0/44 no data
+H2 (secondary, driving_score, single test): fl_full - fl_heuristic k1.0 all n 0/44 no data
+H3 (secondary, driving_score, Holm over 2): fl_heuristic - fl_original k1.0 all n 0/44 no data; fl_full - fl_original k1.0 all n 0/44 no data
+F3 (secondary, driving_score, Holm over 4): fl_full - fixed_deep k1.5 E n 0/22 no data; fl_full - fast_only k1.5 E n 0/22 no data; fl_full - fixed_deep k2.0 E n 0/22 no data; fl_full - fast_only k2.0 E n 0/22 no data
+H4-cl (secondary, driving_score, Holm over 2): fl_heuristic - fl_global_shield k1.0 E n 0/22 no data; fl_heuristic - age_only k1.0 E n 0/22 no data
+RL-abl (secondary, driving_score, Holm over 2): fl_full - fl_bandit k1.0 E n 0/22 no data; fl_full - fl_fqi_nolease k1.0 E n 0/22 no data
+H1 finding 1: not stated: both no data; finding 2: not stated: both no data
+H2 RL benefit (Sec. 9.13): undetermined: no RL freeze given (the Sec. 5.8 P_both label)
+H4 offline (Sec. 9.4; pre-specified in code, executed before registration): inconclusive; SUFFIX - GLOBAL continuity 0.0101532 [-0.0475703, 0.0555289], R_cond 0.00110011 [-0.0264945, 0.0331107]
+H5 (Sec. 9.5): undetermined; commit-audit violations 0, S3 violations 0, unaudited runs 0; /tmp/tmpn7yvu9_d/final_x: aggregate.json has no commit audit; no S3 report given (--s3)
+descriptive (Secs. 7.5, 9.6): fixed_deep_minus_fixed_deep_k1.0_s11-12_R driving_score n 0/15; fast_only_minus_fast_only_k1.0_s11-12_R driving_score n 0/15; fl_heuristic_minus_fl_heuristic_k1.0_s11-12_R driving_score n 0/15; fl_full_minus_fl_full_k1.0_s11-12_R driving_score n 0/15; fl_full_minus_fixed_deep_k1.0_s12_R driving_score n 0/15; fl_full_minus_fast_only_k1.0_s12_R driving_score n 0/15; fl_full_minus_fl_heuristic_k1.0_s12_R driving_score n 0/15; fl_full_minus_fixed_deep_k1.0_s11_R driving_score n 0/15; fl_full_minus_fast_only_k1.0_s11_R driving_score n 0/15; fl_full_minus_fl_heuristic_k1.0_s11_R driving_score n 0/15; fl_full_minus_fl_heuristic_k1.0_s11_E driving_score n 0/22; fl_full_minus_fl_heuristic_k1.5_s11_E driving_score n 0/22; fl_full_minus_fl_heuristic_k2.0_s11_E driving_score n 0/22; fl_full_minus_fixed_deep_k1.0_s11_E driving_score n 0/22; fl_full_minus_fast_only_k1.0_s11_E driving_score n 0/22; fixed_deep_minus_fast_only_k1.0_s11_all driving_score n 0/44; fixed_deep_minus_fast_only_k1.5_s11_E driving_score n 0/22; fixed_deep_minus_fast_only_k2.0_s11_E driving_score n 0/22; fl_risk_minus_fl_heuristic_k1.0_s11_E driving_score n 0/22
+missing data (Sec. 9.8): 0 rows complete, 224 with dropped routes (cells.csv, analysis.json missing_data)
+uu
+----------------------------- Captured stderr call -----------------------------
+REFUSED: /tmp/tmpn7yvu9_d/final_x holds an aggregation (aggregate.json), whose SHA256SUMS the analysis would replace: write the analysis into a directory inside it (e.g. final_<stamp>/analysis)
+REFUSED: /tmp/tmpn7yvu9_d/final_x holds an aggregation (aggregate.json), whose SHA256SUMS the analysis would replace: write the analysis into a directory inside it (e.g. final_<stamp>/analysis)
+=========================== short test summary info ============================
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Registered::test_families_as_registered
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Registered::test_labels
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Registered::test_metric_grids
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Registered::test_route_table_is_sec_3_1
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Registered::test_v2_functions_are_the_registered_ones
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Statistics::test_exact_p_against_independent_counts
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Statistics::test_grid_per_metric
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Statistics::test_registered_counts_once
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Statistics::test_rows_equal_the_v2_functions
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Families::test_duplicate_and_inconsistent_cells
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Families::test_e_families_use_e_and_their_kappa
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Families::test_h1_labels_holm_and_findings
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Families::test_h2_and_the_p_both_rule
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Families::test_lower_is_better
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Families::test_missing_p_counts_as_one
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Families::test_pairwise_complete_and_missing_metric
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Families::test_secondary_rows
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Families::test_worse_and_not_stated
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Guard::test_a_development_record_end_to_end
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Guard::test_conditions_after_the_freeze
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::Guard::test_test_route_rows_are_refused_before_the_freeze
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::CommandLine::test_end_to_end
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::CommandLine::test_end_to_end_part_b
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::CommandLine::test_inputs
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::CommandLine::test_refusals
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::CommandLine::test_training_route_aggregation
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::KnownAnswers::test_bootstrap_determinism
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::KnownAnswers::test_dp_equals_enumeration_small_n
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::KnownAnswers::test_holm_by_hand
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::KnownAnswers::test_planted_effect_null_and_holm_by_hand
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::DescriptiveParts::test_definitions
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::DescriptiveParts::test_noise_floor_and_seed12_known
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::DescriptiveParts::test_per_scenario_and_conditions
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::DescriptiveParts::test_rl_gain_breakdown_known
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::DescriptiveParts::test_sensitivity
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::H4Offline::test_per_clip_fallback_known
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::H4Offline::test_real_offline_outputs
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::H4Offline::test_rule_known_cases
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::H4Offline::test_secondary_orientation
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::H5AndChecks::test_h5_labels
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::H5AndChecks::test_manipulation_overhead_and_missing
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::H5AndChecks::test_real_development_s3_report
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::ReviewFixes::test_api_cannot_narrow_the_guard
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::ReviewFixes::test_development_reasons_and_location
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::ReviewFixes::test_h5_no_log_runs
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::ReviewFixes::test_out_dir_holding_an_aggregation_is_refused
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::ReviewFixes::test_overhead_panel_b
+PASSED framelease_v4/analysis/tests/test_analyze_v4.py::ReviewFixes::test_pooled_collisions_per_km_known
+48 passed, 107 subtests passed in 16.12s

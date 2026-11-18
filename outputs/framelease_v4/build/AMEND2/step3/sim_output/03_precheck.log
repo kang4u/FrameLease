@@ -1,0 +1,13 @@
+amend_step3.sh 2026-11-15T06:17:54+08:00 (pid 244875): root /tmp/AMEND3/tree; transaction directory /tmp/AMEND3/runs/03
+inputs: step3_txn.py a778ad618c0a587a2a73fa8d3bae564bcac4945ec8f4ddbf3157b3b61fc703a0,
+        step3_spec.json 5ffa420793cb394fe6cd148663254c9d67a25dbf7ca016ae0c789ca48cba9142
+== 1. pre-check (no lock)
+step3_txn.py precheck 2026-11-15T06:17:54+0800 (pid 244892): root /tmp/AMEND3/tree, work /tmp/AMEND3/runs/03/precheck
+registration.py --verify (exit 0): manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registered baseline: 153 files; in the sealed manifest at their sha256 and unchanged in the tree: yes
+P1 job files: 37 in the sealed manifest; unchanged in the tree: yes
+P1 driver entries: Tuning freeze line 2211, D1 summary line 2221; outputs/framelease_v4/tuning/d1/FULL_d1_summary.json sha256 9095a11a7daaa4a982206af657829e43d475043d3102559f4c2ef137b6c8aa37 cited by the D1 summary entry
+check_drafts.py exit 0: all checks passed
+dry composition: 2836 lines; entries A3 193 lines, A9 43 lines, A7 54 lines, A4 74 lines, OP 114 lines; 40 files become registered
+precheck: passed (dry files in /tmp/AMEND3/runs/03/precheck)
+PASS: pre-check passed (--precheck-only; nothing was changed)

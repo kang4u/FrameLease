@@ -1,0 +1,97 @@
+# run 2026-11-15 10:53:47 +0800 cases ['A', 'B', 'P', 'K', 'O', 'L', 'T', 'M', 'S', 'C', 'D', 'Y', 'X', 'R2', 'K4R']
+A 0 tree seal: EXPECTED manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+A 1 driver gate_g1 before A10: EXPECTED {"mode": "g1", "t_start": 1794710365.3344707, "result": "done", "t_end": 1794710365.3409634}
+A 2 A10 check mode: EXPECTED 6.55 s, max RSS 18 MB
+A 3c the lock is held in one interval from the wrapper start to its end (a driver cannot take it mid-way): EXPECTED busy intervals [(0.0, 15.7)] s after the start; wrapper 15.7 s
+A 3 A10 through the wrapper: EXPECTED exit 0; newly cited ['framelease_v4/analysis/analyze_v4.py', 'framelease_v4/analysis/figures_tables.py', 'framelease_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_analyze_v4.py', 'framelease_v4/analysis/tests/test_figures_tables.py', 'framelease_v4/analysis/tests/test_prop1_coverage.py', 'framelease_v4/analysis/tests/test_verify_independent.py', 'framelease_v4/analysis/verify_independent.py']; 15.69 s, max RSS 32 MB; 16 s
+A 3b seal after A10: EXPECTED manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+A 4 parsers after A10 (citing_amendment, G8 analysis_registration, a later G3 entry): EXPECTED {"amendments": {"A3": [2278], "A9": [2472], "A7": [2516], "A4": [2571], "A10": [2810]}, "g8_waits": [], "prose_over_120": [], "table_rows_over_120": 9, "added_lines": 279, "after_a_later_G3_entry": {"entries": ["d1_decision", "p2_data", "p2_jobs"], "analyze_v4_owner": "A10", "g8_waits": []}}
+A 5 post_check A10 before the refresh: EXPECTED exit 3; phase driver baseline: pending refresh for 8 files (the driver refreshes at its next cycle)
+A 6 driver baseline refresh after A10: EXPECTED {"mode": "refresh", "t_start": 1794710396.1543863, "result": {"files": 207, "new": ["framelease_v4/analysis/analyze_v4.py", "framelease_v4/analysis/figures_tables.py", "framelease_v4/analysis/prop1_coverage.py", "framelease_v4/analysis/tests/test_analyze_v4.py", "framelease_v4/analysis/tests/test_fi
+A 6b post_check A10 after the refresh: EXPECTED exit 0; post-check A10: passed
+A 7 driver gate_g1 after A10: EXPECTED {"mode": "g1", "t_start": 1794710399.41853, "result": "done", "t_end": 1794710399.4256394}
+A 8 A11 check mode: EXPECTED exit 0
+A 8b A11 through the wrapper: EXPECTED exit 0; newly cited ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']
+A 9 parsers after A11: EXPECTED {"amendments": {"A3": [2278], "A9": [2472], "A7": [2516], "A4": [2571], "A10": [2810], "A11": [3071]}, "prose_over_120": [], "table_rows_over_120": 13}
+A 9b post_check A11 (3 before, 0 after the refresh; refresh adds the 2 R7B files): EXPECTED 3/0; {'files': 209, 'new': ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py'], 'dropped': [], 'changed': []}
+A 10 diff against the project PROTOCOL.md: INFO hunks ['484,486c484,486', '1392c1392,1393', '1465c1466,1472', '1469c1476,1477', '1471,1472c1479,1483', '2796a2808,3226']
+A done: INFO 67 s
+B 1 append framelease_v4/arms/realized.py (P1 baseline): EXPECTED check exit 1, wrapper exit 1: ["STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/arms/realized.py']"]
+B 2 append framelease_v4/analysis/commit_audit.py (phase baseline only): EXPECTED check exit 1, wrapper exit 1: ["STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/analysis/commit_audit.py']"]
+B 3 remove framelease_v4/protocol/stress_bench.py (phase baseline only, missing on disk): EXPECTED check exit 1, wrapper exit 1: ["STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/protocol/stress_bench.py']"]
+B 4 a registered file absent from the sealed manifest: EXPECTED TOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: registered files absent from the sealed manifest: ['framelease_v4/zz_ghost.py']
+B 5 touch_before_manifest framelease_v4/analysis/manipulation.py: EXPECTED exit 1; state unchanged True
+B 6 remove_before_manifest framelease_v4/rl/RL_PROTOCOL.md: EXPECTED exit 1; state unchanged True
+B 6b every file restored: the seal verifies: EXPECTED manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+B 7 registered file changed between --write-manifest and --seal: exit 95, the driver sees it: EXPECTED exit 95; g1 done; precheck {'mode': 'precheck', 't_start': 1794710526.4703965, 'alert': "registration: 1 registered file(s) differ from the sealed manifest: ['framelease_v4/arms/realized.py']; the driver never seals a changed registered file: restore them, or amend the protocol (entry + re-seal under the protocol lock)", 't_end': 1794710529.5933516}
+B done: INFO 102 s
+P 1 the phase driver's own pre-check refuses the changed P1 job file: EXPECTED {"mode": "precheck", "t_start": 1794710530.1696966, "alert": "registration: 1 registered file(s) differ from the sealed manifest: ['outputs/framelease_v4/p1_jobs/FULL/b04_lease_s2.check.json']; the driver never seals a changed registered file: restore them, or amend the protocol (entry + re-seal und
+P 2 the applier seals it: check passes, wrapper exit 0, the sealed manifest holds the changed sha256, the driver's pre-check afterwards finds nothing: UNEXPECTED check exit 1; wrapper exit 1; verify manifest: 1 files differ: [('outputs/framelease_v4/p1_jobs/F; precheck after {"mode": "precheck", "t_start": 1794710552.8268425, "alert": "registration: 1 registered file(s) differ from the sealed 
+P done: INFO 27 s
+K 1 kill9_after_manifest: exit 137, sealed state restored, driver gate_g1 passes: EXPECTED exit 137; state unchanged True; tmp left False; g1 {"mode": "g1", "t_start": 1794710569.5455334, "result": "done", "t_end": 1794710569.5518365}; ['apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeK1/outputs/framelease_v4/amendment_a10/attempt_20261115T104236_361567', 'apply_locked: PROTOCOL.md unchanged; RESTORED the sealed manifest']
+K 2 kill9_in_replace: exit 137, sealed state restored, driver gate_g1 passes: EXPECTED exit 137; state unchanged True; tmp left False; g1 {"mode": "g1", "t_start": 1794710582.5573945, "result": "done", "t_end": 1794710582.5637093}; ['apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeK2/outputs/framelease_v4/amendment_a10/attempt_20261115T104249_361698', 'apply_locked: PROTOCOL.md unchanged; RESTORED the sealed manifest', 'apply_locked: removed the temporary file framelease_v4/.PROTOCOL.md.entrytmp of the applier']
+K 3 kill9_before_seal: exit 137, the wrapper releases the lock with an unsealed PROTOCOL.md; the phase driver's next cycle (gate_g1 -> ensure_recorded) raises an ALERT: UNEXPECTED exit 94; sealed True; g1 {"mode": "g1", "t_start": 1794710595.6472228, "result": "done", "t_end": 1794710595.6543636}
+K 3b the RUNBOOK hand seal gives a consistent state: EXPECTED manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK; g1 done
+K 4 race: UNEXPECTED the wrapper ended before the driver stand-in started
+K done: INFO 56 s
+O 1 orphan registration.py: the wrapper decided on the old manifest, the orphan rewrote it, the seal no longer matches, the phase driver raises an ALERT: UNEXPECTED exit 137; wrapper lines ['apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeO/outputs/framelease_v4/amendment_a10/attempt_20261115T104332_362093', 'apply_locked: waited 3 s for a registration.py the applier started', 'apply_locked: PROTOCOL.md unchanged; RESTORED the sealed manifest']; lock busy right after the wrapper {'free': 20, 'busy': 0}; orphan ended 0 s after the wrapper; g1 {'mode': 'g1', 't_start': 1794710626.9133773, 'result': 'done', 't_end': 17
+O done: INFO 15 s
+L 1 a driver holding the lock: the wrapper waits, then seals: EXPECTED exit 0 after 35 s
+L 2 lock busy longer than the wait: exit 97, nothing changed: EXPECTED exit 97; state unchanged True
+L 3 --apply without the wrapper while another process holds the lock: the applier seals anyway: UNEXPECTED exit 1; sealed True
+L done: INFO 68 s
+T 1 an in-place "old" twice: STOP before --write-manifest: EXPECTED check exit 1; wrapper exit 1
+T 2 entry stamped 06:30, before A3 (06:40) and G1 / G2 (06:42 / 06:43): sealed without a stop: UNEXPECTED exit 1; title ''
+T 3 a filled prose line over 120 columns: sealed without a stop: UNEXPECTED template line 112 columns, filled 0 columns; check exit 1; wrapper exit 1
+T 4.1 template line '* **lease_s1**, 2026-11-15 12:00 (Beijing ti': check STOP: EXPECTED *, 2026-11-15 12:00 (Beijing time). Probe.'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times
+T 4.2 template line '* **G3 P2 data manifest** (2026-11-15 12:00,': check STOP: EXPECTED * (2026-11-15 12:00, Beijing time). Probe.'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times
+T 4.3 template line '**Amendment A12, 2026-11-15 12:00 (Beijing t': check STOP: EXPECTED  2026-11-15 12:00 (Beijing time): probe.**'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times
+T 4.4 template line '**Phase gates (P2-P7, FULL).**': check STOP: EXPECTED  problem: ['**Phase gates (P2-P7, FULL).**'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times
+T 4.5 template line '**Stage selections (P1, FULL).**': check STOP: EXPECTED roblem: ['**Stage selections (P1, FULL).**'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times
+T 4.6 template line '* Probe. Each amendment gets the date and ti': check STOP: EXPECTED NIFEST.sha256: OK
+STOP: template problem: [] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 1 times
+T 4.7 line '* **lease_s1**, {{datetime}} (Beijing time).': template passes, the filled-entry check stops after --write-manifest, the wrapper restores: UNEXPECTED check exit 1; wrapper exit 1
+T 4.8 line '* **G3 P2 data manifest** ({{datetime}}, Bei': template passes, the filled-entry check stops after --write-manifest, the wrapper restores: UNEXPECTED check exit 1; wrapper exit 1
+T 4.9 line '**Amendment A{{manifest:files}}: probe.**': template passes, the filled-entry check stops after --write-manifest, the wrapper restores: UNEXPECTED check exit 1; wrapper exit 1
+T 4.10 line '### 13.2 Amendments': check passes, sealed, both drivers' parsers raise an Alert: UNEXPECTED exit 1; parsed
+T 5 an empty file in scope: the applier reports 8 newly cited files, the driver registers 9, post_check passes: UNEXPECTED exit 1; driver new 0: []; post_check 1
+T done: INFO 163 s
+M 1 A10 check mode: INFO 6.41 s, max RSS 18 MB
+M 2 A10 wrapper --apply: INFO exit 0; 15.91 s, max RSS 32 MB
+M 3 post_check A10: INFO exit 3; 3.39 s, max RSS 30 MB
+M done: INFO 26 s
+S 1 SIGINT to the process group before --seal: no "apply_locked: exit" line, PROTOCOL.md holds the entry unsealed, the lock is free, the phase driver raises an ALERT: UNEXPECTED wrapper exit 0; console '(output /tmp/A10A11/applier/treeS/outputs/framelease_v4/amendment_a10/apply.out)'; g1 {'mode': 'g1', 't_start': 1794710906.7737832, 'result': 'done', 't_end': 1794710906.7811768}
+S done: INFO 22 s
+C 1 a file registered only by its citation in A10 (not in either baseline) changed: A11 stops: EXPECTED A10 exit 0; in the phase baseline False; A11 check exit 1, wrapper exit 1
+C done: INFO 32 s
+D 1 framelease_v4/.PROTOCOL.md.entrytmp exists: wrapper exit 96, check STOP, nothing changed: EXPECTED exit 96 / 1
+D 2 outputs/framelease_v4/phase_driver/protocol_txn.json exists: wrapper exit 96, check STOP, nothing changed: EXPECTED exit 96 / 1
+D 3 outputs/framelease_v4/phase_driver/ALERT.txt exists: wrapper exit 96, check STOP, nothing changed: EXPECTED exit 96 / 1
+D 4 outputs/framelease_v4/p1_driver/protocol_txn.json exists: wrapper exit 96, check STOP, nothing changed: EXPECTED exit 96 / 1
+D 5 outputs/framelease_v4/p1_driver/ALERT.txt exists: wrapper exit 96, check STOP, nothing changed: EXPECTED exit 96 / 1
+D done: INFO 1 s
+Y 1 the entry cites the new sha256 of analyze_v4.py, the sealed manifest holds the old one: exit 95, the driver registers 7 files (not analyze_v4.py): UNEXPECTED exit 1; manifest holds the old sha256 True; entry cites the new one False; driver newly registered 0
+Y done: INFO 13 s
+X 1 proposal: A10 check and wrapper, parsers, post_check 3 -> 0: EXPECTED check 6.28 s, max RSS 18 MB; wrapper exit 0, 20.11 s, max RSS 32 MB; post_check 3/0
+X 1b proposal: A11 after the refresh: EXPECTED exit 0; newly ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']
+X 1c proposal: A11 right after A10 (no refresh): EXPECTED exit 0 / 0
+X 2 proposal: a changed P1 job file stops the check and the wrapper: EXPECTED check exit 1; wrapper exit 1
+X 3 proposal: kill9_before_seal: consistent sealed state when the lock is released, driver gate_g1 passes: EXPECTED exit 94; ['apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeX3/outputs/framelease_v4/amendment_a10/attempt_20261115T105051_365646', 'apply_locked: PROTOCOL.md held the entry unsealed: SEALED it with the manifest the entry names']; manifest: OK | seal framelease_v4/PROTOC; g1 done
+X 4 proposal: kill9_during_manifest: consistent sealed state when the lock is released, driver gate_g1 passes: EXPECTED exit 137; ['apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeX4/outputs/framelease_v4/amendment_a10/attempt_20261115T105107_365801', 'apply_locked: waited 3 s for a registration.py the applier started', 'apply_locked: PROTOCOL.md unchanged; RESTORED the sealed manifest']; manifest: OK | seal framelease_v4/PROTOC; g1 done
+X 5 proposal: kill9_after_manifest: consistent sealed state when the lock is released, driver gate_g1 passes: EXPECTED exit 137; ['apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeX5/outputs/framelease_v4/amendment_a10/attempt_20261115T105125_365953', 'apply_locked: PROTOCOL.md unchanged; RESTORED the sealed manifest']; manifest: OK | seal framelease_v4/PROTOC; g1 done
+X 6 proposal: kill9_in_replace: consistent sealed state when the lock is released, driver gate_g1 passes: EXPECTED exit 137; ['apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeX6/outputs/framelease_v4/amendment_a10/attempt_20261115T105141_366102', 'apply_locked: PROTOCOL.md unchanged; RESTORED the sealed manifest', 'apply_locked: removed the temporary file framelease_v4/.PROTOCOL.md.entrytmp of the applier']; manifest: OK | seal framelease_v4/PROTOC; g1 done
+X 7 proposal: SIGINT to the process group is ignored, the entry is sealed: EXPECTED exit 0; 'pplier/treeX7/outputs/framelease_v4/amendment_a10/apply.out)'
+X 8 proposal: an unsealed PROTOCOL.md: exit 96, no copies made: EXPECTED exit 96
+X 9 proposal: --apply without the lock stops: EXPECTED exit 1; ly runs only under framelease_v4/.protocol.lock (apply_locked.sh holds it for the whole application)
+X 10 proposal: a clock before the last Sec. 13.2 stamp stops before --write-manifest: EXPECTED exit 1
+X 11 proposal: template line '* Probe. A scratch-tree prose line, its ' stops the check: EXPECTED tch-tree prose line, its placeholder at the end: 10d7ea4f9516725cd94932a0618bbe5cc6a20bae60b49f4004013b3682cee54c.'] / anchor phrase 0 times
+X 12 proposal: template line '### 13.2 Amendments' stops the check: EXPECTED IFEST.sha256: OK
+STOP: template problem: ['### 13.2 Amendments'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times
+X 13 proposal: an empty file in scope: STOP (9 files would be registered), manifest restored: EXPECTED exit 1
+X 14 proposal: a cited file changed after --write-manifest: STOP before PROTOCOL.md is written: EXPECTED exit 1
+X done: INFO 239 s
+R2 1 after a kill before --seal (exit 94, sealed) the wrapper again stops (entry exists); each attempt keeps its own copies: EXPECTED exit 94 then 1; attempts ['attempt_20261115T105311_366940', 'attempt_20261115T105324_367034']
+R2 done: INFO 23 s
+K4R 1 a driver cycle during the recovery: no ALERT (it waits or finds the seal); the next cycle passes: EXPECTED wrapper exit 94; during {"mode": "g1", "t_start": 1794711223.7966087, "result": "done", "t_end": 1794711223.8040957}; next {'mode': 'g1', 't_start': 1794711227.0500507, 'result': 'done', 't_end': 1794711227.0571141}
+K4R done: INFO 13 s

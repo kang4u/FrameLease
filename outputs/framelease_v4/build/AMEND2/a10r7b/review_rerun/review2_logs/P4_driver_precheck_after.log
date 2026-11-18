@@ -1,0 +1,3 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/A10A11/applier/drv.py precheck /tmp/A10A11/applier/treeP 5
+(exit 0, 3.4 s)
+{"mode": "precheck", "t_start": 1794710552.8268425, "alert": "registration: 1 registered file(s) differ from the sealed manifest: ['outputs/framelease_v4/p1_jobs/FULL/b04_lease_s2.check.json']; the driver never seals a changed registered file: restore them, or amend the protocol (entry + re-seal under the protocol lock)", "t_end": 1794710556.0961218}

@@ -1,0 +1,29 @@
+........................                                                 [100%]
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::EntryFormatTest::test_a7_variant_and_the_stress_runs
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::EntryFormatTest::test_constants_match_the_tools
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::EntryFormatTest::test_heading_after_the_p1_block_and_no_collision_with_p1_entries
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::EntryFormatTest::test_nested_entry_of_a_tool
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_analysis_freeze_alerts_and_crash_restart
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_crash_restart_idempotence
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_crash_restart_p3_to_p4
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_d1_stop_ends_the_driver
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_decision_on_another_d1_summary_alerts
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_dry_run_changes_nothing
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_full_chain_to_phases_done
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_g0_waits_without_alert
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_g1_waits_for_the_decision
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_launch_failure_alerts_without_fallback
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_p2_check_fail_and_missing_episodes
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_p3_open_case_and_missing_episodes
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_p4_job_health_and_runner_rules
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_protocol_lock_contention
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_refuses_to_run_niced_or_pinned
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_registered_and_unregistered_files
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_runner_rules
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_start_script_single_instance
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_stress_reports_and_the_s1_guard
+PASSED framelease_v4/protocol/tests/test_phase_driver.py::DriverTest::test_tool_priority
+24 passed in 162.95s (0:02:42)
+wall 163.21 s, max RSS 51328 KB, exit 0

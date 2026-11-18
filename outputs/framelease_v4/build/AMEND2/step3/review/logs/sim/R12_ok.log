@@ -1,0 +1,3 @@
+usage: write_d1_decision.py [-h] --decision {continue,stop} --rationale-file
+                            RATIONALE_FILE [--dry-run] [--root ROOT] [--by BY]
+write_d1_decision.py: error: argument --decision: invalid choice: 'maybe' (choose from 'continue', 'stop')

@@ -1,0 +1,77 @@
+{
+ "root": "/home/kang/Desktop/DAC",
+ "started": "2026-11-15T06:40:30+0800",
+ "steps": [
+  {
+   "step": "begin",
+   "time": "2026-11-15T06:40:30+0800",
+   "datetime": "2026-11-15 06:40",
+   "pid": 255917
+  },
+  {
+   "step": "copied",
+   "time": "2026-11-15T06:40:30+0800",
+   "copies": {
+    "framelease_v4/PROTOCOL.md": "33089c4fc6d22d687e95b5ddcea7bca3797de33b305b67b5193cd32564bac08f",
+    "outputs/framelease_v4/registration/MANIFEST.sha256": "4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033",
+    "outputs/framelease_v4/registration/SEAL.sha256": "dbe957519fc9231230784575c3ca87f9404e1150a42d94eae12b7053b4e1272c",
+    "outputs/framelease_v4/registration/REGISTRATION.json": "273d02276e3b7330bdff38d4861cd08e6b698941785cd505abe6bc4ef9e4d844"
+   },
+   "protocol_sha256": "33089c4fc6d22d687e95b5ddcea7bca3797de33b305b67b5193cd32564bac08f",
+   "manifest_sha256": "4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033"
+  },
+  {
+   "step": "manifest",
+   "time": "2026-11-15T06:40:33+0800",
+   "exit": 0,
+   "output": "wrote /home/kang/Desktop/DAC/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033",
+   "manifest_sha256": "4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033"
+  },
+  {
+   "step": "post_manifest_check",
+   "time": "2026-11-15T06:40:33+0800",
+   "result": "OK",
+   "p1_jobs": "OK"
+  },
+  {
+   "step": "filled",
+   "time": "2026-11-15T06:40:34+0800",
+   "problems": []
+  },
+  {
+   "step": "composed",
+   "time": "2026-11-15T06:40:34+0800",
+   "problems": [],
+   "protocol_after_sha256": "cf2b6c7c51f61106c8cb307704033ac4cd12844a67324c6ee61e8403eddca37d"
+  },
+  {
+   "step": "protocol",
+   "time": "2026-11-15T06:40:34+0800",
+   "protocol_sha256": "cf2b6c7c51f61106c8cb307704033ac4cd12844a67324c6ee61e8403eddca37d",
+   "inode": [
+    66312,
+    16677143,
+    1794696034031535098
+   ]
+  },
+  {
+   "step": "preseal_check",
+   "time": "2026-11-15T06:40:37+0800",
+   "problems": []
+  },
+  {
+   "step": "sealed",
+   "time": "2026-11-15T06:40:37+0800",
+   "protocol_sha256": "cf2b6c7c51f61106c8cb307704033ac4cd12844a67324c6ee61e8403eddca37d",
+   "manifest_sha256": "4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033"
+  },
+  {
+   "step": "verified",
+   "time": "2026-11-15T06:40:40+0800",
+   "output": "manifest: OK\nseal framelease_v4/PROTOCOL.md: OK\nseal outputs/framelease_v4/registration/MANIFEST.sha256: OK",
+   "registered_differ": [],
+   "unregistered_differ": []
+  }
+ ],
+ "step": "verified"
+}

@@ -1,0 +1,12 @@
+(exit 137, 12.8 s)
+apply_locked: exit 137 (output /tmp/A10A11/applier/treeR/outputs/framelease_v4/amendment_a10/apply.out)
+bash: 第 17 行： 335267 已杀死                  $X "$PY" -u -I -B "$APPLIER" "$SPEC" --apply > "$OUT/apply.out" 2>&1
+
+--- apply.out
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/A10A11/applier/treeR/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+inject: SIGKILL before --seal (PROTOCOL.md written)
+apply_locked: PROTOCOL.md holds the entry but is not sealed; the rewritten manifest (the one the entry names) is kept: seal it now under the lock (RUNBOOK.md Sec. 1)
+manifest: OK
+seal framelease_v4/PROTOCOL.md: CHANGED
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

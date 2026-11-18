@@ -1,0 +1,8 @@
+OP: 114 lines, 12 placeholders, 3 framelease_v4 files cited by sha256
+A10: 260 lines, 37 placeholders, 8 framelease_v4 files cited by sha256
+A10 in-place found 1x now: 'If an offline output lacks a paired quantity, the v4 analysis script c'
+A10 in-place found 1x now: 'freeze.\n\n**Freeze.** The analysis freeze happens when every registered'
+A10 in-place found 1x now: '`outputs/framelease_v4/analysis/final_<stamp>/`, with a sha256 manifes'
+A10 in-place found 1x now: '**Verification.** Before any number enters the paper, an independent s'
+A10 in-place found 1x now: 'Status (Amendment A3): the `fl_global_shield` lease of item 1, the agg'
+all checks passed

@@ -1,0 +1,12 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/a10r7b/post_check.py A10 --root /tmp/A10A11/applier/treeX1
+(exit 3, 3.2 s)
+registration --verify: manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+amendment titles at lines: {'A10': [2810], 'A11': []}
+first Sec. 13.2 line citing framelease_v4/analysis/analyze_v4.py: 3024 (A10)
+G8 analysis_registration waits: []
+in-place text 1: new 1x, old 0x 
+in-place text 2: new 1x, old 0x 
+in-place text 3: new 1x, old 0x 
+in-place text 4: new 1x, old 0x 
+in-place text 5: new 1x, old 0x 
+phase driver baseline: pending refresh for 8 files (the driver refreshes at its next cycle)

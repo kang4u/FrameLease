@@ -1,0 +1,7 @@
+{
+ "rc": 1,
+ "verify": "manifest: 1 files differ: [('framelease_v4/protocol/p3_rl.py', '10a8590d511a9ab4858b87a93ad41e3a2961ad7a17af626bf27aedc781eab94b', '272387b3b7a91ee764523f1fc7cfb36d4cdf20fc2544b40fb5e3b14740c10835')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK",
+ "refresh_changed_sha256_adopted": [],
+ "gate_code_check_pending": true,
+ "new_sha256_cited_in_PROTOCOL": false
+}

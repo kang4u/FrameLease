@@ -1,0 +1,2 @@
+step3_txn.py restore 2026-11-15T06:22:41+0800 (pid 247780): root /tmp/AMEND3/tree, work /tmp/AMEND3/stale/06c_copy
+STOP: restore refused: PROTOCOL.md (20ab7ffd490fd99e) is neither the sealed copy nor the text this transaction composed (a later edit or transaction)

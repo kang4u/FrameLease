@@ -1,0 +1,27 @@
+{
+ "name": "A13",
+ "template": "outputs/framelease_v4/build/G8CUT/entries/A13_entry.md",
+ "tests": [],
+ "inplace": [],
+ "must_equal": {
+  "framelease_v4/analysis/aggregate_v4.py": "ee13c90b91bf44ad59d0a3c7e60bf93d65964785ed386d3e81c44fea0f5e4b96",
+  "framelease_v4/analysis/analyze_v4.py": "10d7ea4f9516725cd94932a0618bbe5cc6a20bae60b49f4004013b3682cee54c",
+  "framelease_v4/analysis/commit_audit.py": "7439a4eac0986cad6a25b7395975a0411b7483944a988d68dabb656bd2544ec7",
+  "framelease_v4/analysis/extra_metrics.py": "53050f6bed5aa48054d5217832fb84ed4089b3ae80e8fdcf965769af2af79c4c",
+  "framelease_v4/analysis/interim_guard.py": "5453a3573e7cca958cad1bc1c44d53995a11e034e251bba634fe09390efed9c7",
+  "framelease_v4/analysis/manipulation.py": "78f18dacf323832ef16684b0b81a2ba03b2ffb00186259780d1bafe7e656cbd0",
+  "framelease_v4/analysis/verify_table1_extra.py": "f77b2dcf34484d2537a4c22d804912f0c155c3e3c26a576f433b9f4f73d83c27",
+  "outputs/framelease_v4/analysis/final_20261116T091445/SHA256SUMS": "335317294a5d8d20af3f62f0b4eaeae5dce8a7454475b8a99b9d291e9d254ad3",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis_freeze.json": "fdda348027092724f74bf10cf0b5e33ed3219ffbfe5cfe6a57ac8aa9e4bd7c05",
+  "outputs/framelease_v4/analysis/final_20261116T091445/required_job_files.json": "f58321692f998d7e33f713aee2f212f54f8e7699babc0f13310bcfdb71521d6d",
+  "outputs/framelease_v4/cut_20261115T231415/CUT_PLAN.json": "9285400b7af3b8f62f98f62d2cdcea31e68a2ab3a5c3b5e35692b99671af78e3",
+  "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl": "54e551df44f30a02277e91849f1e40390cd77ffca7e59256edc98b3f5cd4a6df",
+  "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl": "8ba8a4e5f6874860f9fefae81d836ccbdd297ac6a801a67663d6a5322507311b",
+  "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl": "6b906bc220d74fdf8fb5bfce287465e608fd378b22869af6d188ec411d37bd2a",
+  "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl": "a73491e47ab5cb3fcba868a0e5e6bf7f34c5ad6a09ea3fde8cd11d18ef623e31",
+  "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl": "bd77e5ed172bc834b63a4fa188cae97f92047f8072a45b92e738aad52cffd207",
+  "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl": "83fe874f000340d6ee15509c35c7829bd03a6612a75a181e82c0b26ab36a156b",
+  "outputs/framelease_v4/test_freeze/test_freeze.json": "e9e2d309fefd49209d1303356328049f8c0e89534f1b0cfaffffea82ed1ba633"
+ },
+ "max_new_registered": 0
+}

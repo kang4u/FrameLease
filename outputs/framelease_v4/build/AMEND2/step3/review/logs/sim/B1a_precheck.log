@@ -1,0 +1,12 @@
+amend_step3.sh 2026-11-15T04:59:51+08:00: root /tmp/AMEND3_review/tree; transaction directory /tmp/AMEND3_review/runs/B1a
+inputs: step3_txn.py 86f69e70c31edfc49e95cb07b55d62a4afc07e7b05e0e058b724407ed6c36ea0,
+        step3_spec.json 89836a6f2e01ab0e99effb4467bc20fdb86059bcfb4689aeddceadb878c4cfcd
+== 1. pre-check (no lock)
+registration.py --verify (exit 1): manifest: 1 files differ: [('framelease_v4/analysis/verify_table1_extra.py', 'a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa', '27ceb0bd600a7c802024ee28a5caaa9d44fbff832c585f92a734d98da4bcedff')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registered baseline: 153 files; in the sealed manifest at their sha256 and unchanged in the tree: yes
+P1 driver entries: Tuning freeze line 2211, D1 summary line 2221; outputs/framelease_v4/tuning/d1/FULL_d1_summary.json sha256 53d8c97a185d52870358e3341d6e698dcf8fe136425aa7bd1eb0f9b065923cb2 cited by the D1 summary entry
+check_drafts.py exit 0: all checks passed
+PROBLEM: in-place text of A4 (Sec. 8.3, the lead sentence) found 2 times
+PROBLEM: dry composition: in-place text of A4 (Sec. 8.3, the lead sentence) found 2 times
+precheck: 2 problem(s) (dry files in /tmp/AMEND3_review/runs/B1a/precheck)
+STOP: pre-check failed (exit 1); nothing was changed. See /tmp/AMEND3_review/runs/B1a/amend_step3.log

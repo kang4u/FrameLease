@@ -1,0 +1,15 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/a10r7b/post_check.py A10 --root /tmp/A10A11/applier/treeT5
+(exit 1, 3.3 s)
+registration --verify: manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+amendment titles at lines: {'A10': [], 'A11': []}
+first Sec. 13.2 line citing framelease_v4/analysis/analyze_v4.py: None (None)
+G8 analysis_registration waits: ['Sec. 13.2 does not cite framelease_v4/analysis/analyze_v4.py (sha256 10d7ea4f9516725cd94932a0618bbe5cc6a20bae60b49f4004013b3682cee54c): the amendment that registers the analysis code (PROTOCOL Sec. 9.12) is not entered yet']
+in-place text 1: new 0x, old 1x <- not applied as specified
+in-place text 2: new 0x, old 1x <- not applied as specified
+in-place text 3: new 0x, old 1x <- not applied as specified
+in-place text 4: new 0x, old 1x <- not applied as specified
+in-place text 5: new 0x, old 1x <- not applied as specified
+baseline before the amendment: outputs/framelease_v4/amendment_a10/attempt_20261115T104722_363811/phase_registered_baseline.json (199 files)
+refresh additions (sealed-manifest files outside that baseline whose sha256 PROTOCOL.md cites): 0 <- expected ['framelease_v4/analysis/analyze_v4.py', 'framelease_v4/analysis/figures_tables.py', 'framelease_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_analyze_v4.py', 'framelease_v4/analysis/tests/test_figures_tables.py', 'framelease_v4/analysis/tests/test_prop1_coverage.py', 'framelease_v4/analysis/tests/test_verify_independent.py', 'framelease_v4/analysis/verify_independent.py'], found []
+phase driver baseline: holds every file at its cited sha256
+FAIL: A10 read 0 times; framelease_v4/analysis/analyze_v4.py is first cited by None, not A10; analysis_registration waits; in-place text 1; in-place text 2; in-place text 3; in-place text 4; in-place text 5; the phase driver registers [], the amendment ['framelease_v4/analysis/analyze_v4.py', 'framelease_v4/analysis/figures_tables.py', 'framelease_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_analyze_v4.py', 'framelease_v4/analysis/tests/test_figures_tables.py', 'framelease_v4/analysis/tests/test_prop1_coverage.py', 'framelease_v4/analysis/tests/test_verify_independent.py', 'framelease_v4/analysis/verify_independent.py']; PROTOCOL.md does not cite framelease_v4/analysis/analyze_v4.py (10d7ea4f9516); PROTOCOL.md does not cite framelease_v4/analysis/prop1_coverage.py (ffaee8ddf74e); PROTOCOL.md does not cite framelease_v4/analysis/figures_tables.py (bd4ed54c60fb); PROTOCOL.md does not cite framelease_v4/analysis/verify_independent.py (4935152684ab); PROTOCOL.md does not cite framelease_v4/analysis/tests/test_analyze_v4.py (1a59a3e04447); PROTOCOL.md does not cite framelease_v4/analysis/tests/test_prop1_coverage.py (fa7253048907); PROTOCOL.md does not cite framelease_v4/analysis/tests/test_figures_tables.py (8b61b3b35933); PROTOCOL.md does not cite framelease_v4/analysis/tests/test_verify_independent.py (c647f9091c99)

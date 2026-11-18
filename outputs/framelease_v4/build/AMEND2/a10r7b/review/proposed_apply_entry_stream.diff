@@ -1,0 +1,37 @@
+--- a10r7b/apply_entry_stream.py
++++ proposed
+@@ -31,6 +31,10 @@
+ BASELINE = ROOT / 'outputs/framelease_v4/p1_driver/registered_baseline.json'
+ ANCHOR = 'Each amendment gets the date and time'
+ ENTRY_RE = re.compile(r'^\* \*\*(?P<label>[^*]+)\*\*, (?P<when>\d{4}-\d{2}-\d{2} \d{2}:\d{2}) \(')
++PHASE_BASELINE = ROOT / 'outputs/framelease_v4/phase_driver/registered_baseline.json'
++PHASE_ENTRY_RE = re.compile(r'^\* \*\*(?P<gate>G\d) (?P<label>[^*]+)\*\* \((?P<when>\d{4}-\d{2}-\d{2} \d{2}:\d{2}), ')  # phase_driver.ENTRY_RE
++AMEND_RE = re.compile(r'^\*\*Amendment (?P<id>A\d+[a-z]?)[,:.]? ')        # phase_driver.AMEND_RE
++DRIVER_HEADINGS = ('**Stage selections (P1, FULL).**', '**Phase gates (P2-P7, FULL).**')
+ 
+ 
+ def sha(p):
+@@ -82,6 +86,8 @@
+ if p.stdout.count('seal framelease_v4/PROTOCOL.md: OK') != 1 or 'MANIFEST.sha256: OK' not in p.stdout:
+     die('the seal does not verify')
+ base = json.loads(BASELINE.read_text())['files']
++if PHASE_BASELINE.is_file():           # every file registered after P1 (A3, the phase driver, ...) as well
++    base = {**base, **json.loads(PHASE_BASELINE.read_text())['files']}
+ sealed = manifest()
+ reg_differ = [k for k, v in sealed.items() if k in base and (ROOT / k).is_file() and sha(ROOT / k) != v]
+ if reg_differ:
+@@ -106,9 +112,13 @@
+ if text.count(ANCHOR) != 1:
+     die('anchor not unique')
+ tmpl = Path(ROOT / spec['template']).read_text(encoding='utf-8').strip('\n') + '\n'
+-bad = [ln for ln in tmpl.splitlines() if ln.startswith(('## ', ANCHOR)) or ENTRY_RE.match(ln)]
++bad = [ln for ln in tmpl.splitlines()[1:] if ln.startswith(('## ', ANCHOR)) or ENTRY_RE.match(ln)
++       or PHASE_ENTRY_RE.match(ln) or AMEND_RE.match(ln) or ln.strip() in DRIVER_HEADINGS]
+ if bad or not tmpl.startswith(title):
+     die(f'template problem: {bad[:3]} / starts {tmpl[:40]!r}')
++if time.strftime('%z') != '+0800':
++    die(f'the local time zone is UTC{time.strftime("%z")}, not Beijing time (+0800); '
++        'the entry says Beijing time')
+ if mode != '--apply':
+     print('check: pre-checks passed')
+     sys.exit(0)

@@ -1,0 +1,3 @@
+entries of this item in the project PROTOCOL.md: none
+project registration.py --verify: manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+P1 driver stage entries now: ['lease_s1', 'event_s1', 'lease_s2', 'event_s2', 'heur_s1', 'heur_s2', 'age_s1']

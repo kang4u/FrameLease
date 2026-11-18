@@ -1,0 +1,2 @@
+step3_txn.py locked 2026-11-15T06:21:56+0800 (pid 247153): root /tmp/AMEND3/tree, work /tmp/AMEND3/runs/15a
+STOPPED before any change: --datetime 2026-11-14 00:00 is earlier than the latest time stamp of Sec. 13.2 (2026-11-15 06:17): the entries of Sec. 13.2 stand in the order of application

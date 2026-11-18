@@ -1,0 +1,49 @@
+{
+ "p1_entries": [
+  "lease_s1",
+  "event_s1",
+  "lease_s2",
+  "event_s2",
+  "heur_s1",
+  "heur_s2",
+  "age_s1",
+  "age_s2",
+  "freeze",
+  "d1"
+ ],
+ "phase_entries": [
+  "d1_decision",
+  "p2_jobs"
+ ],
+ "amendments": {
+  "A3": [
+   2278
+  ],
+  "A9": [
+   2472
+  ],
+  "A7": [
+   2516
+  ],
+  "A4": [
+   2571
+  ],
+  "A10": [
+   2810
+  ],
+  "A11": [
+   3065
+  ]
+ },
+ "first_citing_line_owner": {
+  "framelease_v4/analysis/analyze_v4.py": "A10",
+  "framelease_v4/analysis/verify_table1_extra.py": "A11",
+  "framelease_v4/analysis/tests/test_verify_table1_extra.py": "A11"
+ },
+ "G8_analysis_registration_waits": [],
+ "phase_entries_after_a_gate": [
+  "d1_decision",
+  "p2_jobs",
+  "p2_data"
+ ]
+}

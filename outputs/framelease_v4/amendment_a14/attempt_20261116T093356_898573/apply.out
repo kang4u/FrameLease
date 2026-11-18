@@ -1,0 +1,25 @@
+apply_locked: copies of the sealed files and of both baselines in outputs/framelease_v4/amendment_a14/attempt_20261116T093356_898573
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /home/kang/Desktop/DAC/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3
+manifest difference: new [] / left [] / changed []
+composed PROTOCOL.md sha256 3b1a674523cec3a92dcfcf0df5f024ef85cac5dee50b0d938a28c744f034ee5f
+registration --seal -> 0 | sealed: PROTOCOL.md 3b1a674523cec3a92dcfcf0df5f024ef85cac5dee50b0d938a28c744f034ee5f, manifest 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+PROTOCOL 3b1a674523cec3a92dcfcf0df5f024ef85cac5dee50b0d938a28c744f034ee5f MANIFEST 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3 221 files; newly cited manifest files: []
+**Amendment A14, 2026-11-16 09:34 (Beijing time): result of the independent verification of H1 and of the Table I
+columns DS, SR, RC, collisions/km and infractions/km (Sec. 9.12; Amendment A10, use rule 4); no run, job line, criterion
+or analysis rule changes.**
+* Run. An independent session ran `framelease_v4/analysis/verify_independent.py` (sha256
+  `4935152684abcfdaef547438772bb041f323344dcbfe636d41b2a161ff149bff`) after the analysis freeze, with the record, the
+  released aggregation, the analysis and `--queue outputs/framelease_v4/queue_p4`, into
+  `outputs/framelease_v4/verification/final_20261116T091445`.
+* Result. `outputs/framelease_v4/verification/final_20261116T091445/verification.json` (sha256
+  `0ffc81044fec32ed5f8d9c5a601c7820a00728cd6b26e0cd7442bb6dfb3706e7`): status final, verdict AGREE, differences 0;
+  `SHA256SUMS` sha256 `a50c7b57ae44001e5d8e0436800a9c8d45466d232907328817f6a175aa173cc8`. AGREE releases H1 and its
+  findings and the verified Table I columns (use rule 4).
+* Manifest and seal after this entry: `MANIFEST.sha256`, 221 files, sha256
+  `0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3`, sealed with this entry.
+
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

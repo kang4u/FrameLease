@@ -1,0 +1,8 @@
+step3_txn.py precheck 2026-11-15T06:40:24+0800 (pid 255899): root /home/kang/Desktop/DAC, work /home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/step3/txn_20261115T064024/precheck
+registration.py --verify (exit 0): manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registered baseline: 153 files; in the sealed manifest at their sha256 and unchanged in the tree: yes
+P1 job files: 37 in the sealed manifest; unchanged in the tree: yes
+P1 driver entries: Tuning freeze line 2221, D1 summary line 2229; outputs/framelease_v4/tuning/d1/FULL_d1_summary.json sha256 d8c0a76eba80c0c5d4faf93346146ff3db59d162d27636c2411cd206a09a2fb3 cited by the D1 summary entry
+check_drafts.py exit 0: all checks passed
+dry composition: 2844 lines; entries A3 193 lines, A9 43 lines, A7 54 lines, A4 74 lines, OP 114 lines; 40 files become registered
+precheck: passed (dry files in /home/kang/Desktop/DAC/outputs/framelease_v4/build/AMEND2/step3/txn_20261115T064024/precheck)

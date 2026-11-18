@@ -1,0 +1,15 @@
+{
+ "name": "A16",
+ "template": "outputs/framelease_v4/build/G8CUT/entries/A16_entry.md",
+ "tests": [],
+ "inplace": [],
+ "must_equal": {
+  "outputs/framelease_v4/analysis/final_20261116T091445/agg_p4/runs.csv": "0c0f5d2dec0345c0a30dbab63c272189f584018ecf6bff280dd550d5e109fd1d",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/paired_differences.csv": "8f3e3d038c6e435875b39b7060b0ff6f928762c19c3c29621c1a7684d662a47b",
+  "outputs/framelease_v4/rl_freeze/rl_freeze.json": "a9e08c1931ea8cc6ab0f74111fa8bfb6a0b043ed44606fe0e7657c2d254db31d",
+  "outputs/framelease_v4/verification/final_20261116T091445_table1_extra/differences.csv": "60aae07289fe354669cd9d7ad2254faef799bc06acb7c99a289fdcbbc631314f",
+  "outputs/framelease_v4/verification/final_20261116T091445_table1_extra/runs_recomputed.csv": "1be46e784a1d9d52f942cc30a3021b4e323bc26f93ccaf4d95d087cf5d08468d",
+  "outputs/framelease_v4/verification/final_20261116T091445_table1_extra_f1_class.json": "e90fe3fff420a87032b5fc08a745ab6e198c870a0d66216ff28cfe0217929151"
+ },
+ "max_new_registered": 0
+}

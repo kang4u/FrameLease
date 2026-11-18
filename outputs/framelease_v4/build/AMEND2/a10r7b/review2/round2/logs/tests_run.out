@@ -1,0 +1,6 @@
+A10 pytest_analyze_v4.log: exit 0, 15.6 s | now: 48 passed, 107 subtests passed in 15.16s | project log: 48 passed, 107 subtests passed in 15.70s
+A10 pytest_prop1_coverage.log: exit 0, 20.0 s | now: 22 passed in 19.67s | project log: 22 passed in 20.01s
+A10 pytest_figures_tables.log: exit 0, 24.4 s | now: 50 passed, 422 warnings in 23.93s | project log: 50 passed, 422 warnings in 25.19s
+A10 pytest_verify_independent.log: exit 0, 15.1 s | now: 28 passed, 20 subtests passed in 14.78s | project log: 28 passed, 20 subtests passed in 13.82s
+A11 pytest_verify_table1_extra.log: exit 0, 5.3 s | now: 71 passed, 67 subtests passed in 4.98s | project log: 71 passed, 67 subtests passed in 4.92s
+A11 pytest_review_r7b.log: exit 0, 4.4 s | now: 14 passed, 2 subtests passed in 4.12s | project log: 14 passed, 2 subtests passed in 4.01s

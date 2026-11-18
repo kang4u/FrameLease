@@ -1,0 +1,14 @@
+$ flock -w 60 /tmp/AMEND3/a10r7b/sim_tree/treeC/framelease_v4/.protocol.lock /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/AMEND3/a10r7b/sim_tree/apply_entry_scratch.py outputs/framelease_v4/build/AMEND2/a10r7b/A11_spec.json --apply
+(exit 1)
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/AMEND3/a10r7b/sim_tree/treeC/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+Traceback (most recent call last):
+  File "/tmp/AMEND3/a10r7b/sim_tree/apply_entry_scratch.py", line 138, in <module>
+    entry = re.sub(r'\{\{([^}]+)\}\}', sub, tmpl)
+  File "/home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/re.py", line 209, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+  File "/tmp/AMEND3/a10r7b/sim_tree/apply_entry_scratch.py", line 132, in sub
+    return sha(ROOT / key.split(':', 1)[1])
+  File "/tmp/AMEND3/a10r7b/sim_tree/apply_entry_scratch.py", line 38, in sha
+    with open(p, 'rb') as fh:
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/AMEND3/a10r7b/sim_tree/treeC/outputs/framelease_v4/build/R7B/rereview/REVIEW.md'

@@ -1,0 +1,9 @@
+hunks: 7 (in-place 6, insertion before the anchor 1)
+added lines: 522; over 120 columns (tables excepted): 0; with a placeholder brace: 0
+inserted titles: ['A3', 'A9', 'A7', 'A4', 'OP']; time stamps: ['2026-11-15 06:22']
+manifest clauses: 5; all cite the sealed manifest (221 files, 8c50b99209af9648): True
+path / sha256 pairs: 61; wrong: none
+newly registered: 40; equal to the 40 of the spec: True
+A7 names its test log with the directory: True
+SEAL.sha256 holds PROTOCOL.md and MANIFEST.sha256: True
+check_result: all checks hold

@@ -1,0 +1,113 @@
+{
+ "inputs_sha256": {
+  "snapshot": {
+   "differences.csv": "88102ad6f7a9e0a7e660952ebef0e6b099037250b78a4a3946ddd56c4de5e8b9",
+   "runs_recomputed.csv": "3bef875bd7f14deb27df19617ce1914b6626e82e098cd7e89415b07431f1af65",
+   "plans.csv": "3f01946edf5363c40404d2eaf6975e1c27d7b42e995878c18c696c962ba0f7ce"
+  },
+  "rundirs": {
+   "runs_recomputed.csv": "c3c9eb9bae7a8ec895abbbc04d641c2a048f7b8aba93058a7a92586a37add05e",
+   "plans.csv": "9eb9e2926c7953f8066f102d98ee4d8334b538d6de61dee61b6a401dbc91bc4d"
+  }
+ },
+ "snapshot_without_cause": {
+  "differences": 110,
+  "timed_out_job": {
+   "job": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r23659",
+   "by_target": {
+    "runner result": 2,
+    "runs.csv": 39
+   },
+   "cells": 41
+  },
+  "other": {
+   "by_column": {
+    "runs.csv|commits": 7,
+    "runs.csv|gpu_busy_recomputed_s": 31,
+    "runs.csv|gpu_usage_recomputed": 31
+   },
+   "cells": 69,
+   "jobs": 31,
+   "runs": 31,
+   "runs_with_inflight_gpu_boundaries": 31,
+   "other_jobs_with_r23659": {
+    "v4p1_event_triggered_v2_hb1.0_k1.0_s11_r23659": 2,
+    "v4p1_event_triggered_v2_hb2.0_k1.0_s11_r23659": 3,
+    "v4p1_fixed_deep_k1.0_s11_r23659": 2
+   }
+  },
+  "runs_recomputed": 180,
+  "runs_with_inflight_gpu_boundaries": 31
+ },
+ "capture_offsets": {
+  "snapshot": {
+   "plans": 56892,
+   "min": 7.450580569168253e-10,
+   "median": 5.908310356517177e-07,
+   "max": 2.9727816581726074e-06,
+   "below_grid": 0,
+   "above_1e-9": 55875,
+   "above_1e-9_fraction": 0.982124024467412
+  },
+  "rundirs": {
+   "plans": 68977,
+   "min": 7.450580569168253e-10,
+   "median": 5.699694156646729e-07,
+   "max": 2.9727816581726074e-06,
+   "below_grid": 0,
+   "above_1e-9": 67860,
+   "above_1e-9_fraction": 0.9838061962683213
+  }
+ },
+ "unevaluable": {
+  "snapshot": {
+   "runs_with_unevaluable_plans": 8,
+   "of_them_log_censored_bounds_not_a_point": 8,
+   "examples": {
+    "outputs/framelease_v4/tuning/event_s1/event_triggered_v2_hb2.0/runs/20261113T232433_660a5812": {
+     "plans_unevaluable": "7",
+     "log_censored_plans": "6",
+     "log_censored_plans_bounds": "[6, 13]",
+     "route_id": "23659"
+    },
+    "outputs/framelease_v4/tuning/event_s1/event_triggered_v2_hb2.0/runs/20261114T001724_b944e3d5": {
+     "plans_unevaluable": "3",
+     "log_censored_plans": "14",
+     "log_censored_plans_bounds": "[14, 17]",
+     "route_id": "4937"
+    },
+    "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb2.0/runs/20261114T053040_048ab105": {
+     "plans_unevaluable": "7",
+     "log_censored_plans": "5",
+     "log_censored_plans_bounds": "[5, 12]",
+     "route_id": "2844"
+    }
+   }
+  },
+  "rundirs": {
+   "runs_with_unevaluable_plans": 14,
+   "of_them_log_censored_bounds_not_a_point": 13,
+   "examples": {
+    "outputs/framelease_v4/tuning/age_s1/age_only_A1.0_d1/runs/20261114T170604_8e2546ba": {
+     "plans_unevaluable": "11",
+     "log_censored_plans": "7",
+     "log_censored_plans_bounds": "[7, 11]",
+     "route_id": "23659"
+    },
+    "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1/runs/20261114T204424_91850e90": {
+     "plans_unevaluable": "5",
+     "log_censored_plans": "0",
+     "log_censored_plans_bounds": "[0, 5]",
+     "route_id": "3749"
+    },
+    "outputs/framelease_v4/tuning/event_s1/event_triggered_v2_hb2.0/runs/20261113T230101_8adfeca9": {
+     "plans_unevaluable": "50",
+     "log_censored_plans": "20",
+     "log_censored_plans_bounds": "[20, 50]",
+     "route_id": "23659"
+    }
+   }
+  },
+  "rundirs_runs": 272
+ }
+}

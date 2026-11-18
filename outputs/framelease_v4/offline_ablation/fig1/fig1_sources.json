@@ -1,0 +1,13 @@
+{
+ "outputs/framelease_v2/c1_analysis/merged20_W1.0_pub/surface.csv": "bff1a2092d19bdd2798851346126ded271e28d0b561d7af4d4c8c6fd578fef74",
+ "outputs/framelease_v2/c1_analysis/merged20_W0.5_pub/surface.csv": "f0b02bb5b16f23db004aaceff34a41017243141c91e372421a555a86ffd13760",
+ "outputs/framelease_v2/c1_analysis/merged20_W1.0_pub/headline.csv": "b07d2475d348891d5f3d861c5fca7856d442eae15c7f4c33d1ec18cc8772cddf",
+ "outputs/framelease_v2/c1_analysis/merged20_W0.5_kappafine_pub/headline.csv": "36808b7c5f413e3b8138b1ba1c38c5b455ef11dcc47db0dbaa6c8d220e6e3716",
+ "outputs/framelease_v2/c1_analysis/merged20_W1.0_pub/summary.json": "ca5495c4a003f865fab0b7a80b63c68529589c0a20eb5dabff8ea2c437fdf0c5",
+ "outputs/framelease_v2/c1_analysis/paper_figure_merged20/c1_age_vs_depth_data.csv": "1f8e63eb716c705918f6ba20153d1b3f6d00c2820885a7a47ff035a4322846f1",
+ "outputs/framelease_v2/closed_loop_matrix/final_20261108T2222/analysis/per_route_by_scenario.csv": "10d305041cfb6d5f40ee8a116d5ae77e0c823de8d6e4b62227a07dde3e77db98",
+ "outputs/framelease_v2/closed_loop_matrix/final_20261108T2222/analysis/contrasts.csv": "4324a5d6d34e6c73011e139d714a76ffefa57dcde707b50f2318e46c86177d51",
+ "outputs/framelease_v2/closed_loop_matrix/exploratory_20261109T0030/closed_loop_runs.csv": "7d19bc51527d946568f97abc7c33814c64020358d5d7545cd33d9648b7e3d917",
+ "third_party/UniDriveVLA-linux/Bench2Drive/bench2drive/tools/ability_benchmark.py": "86d93698f68d836230cc93be72cba4f1b7e501c146425a424288c9bbacd2c686",
+ "outputs/framelease_v2/closed_loop_matrix/routes.json": "09f581de9828bae882d6ca29e7d61cbe70a49ef12a684bc1b8469e717fac73f2"
+}

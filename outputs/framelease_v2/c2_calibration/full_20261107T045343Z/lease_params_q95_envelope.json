@@ -1,0 +1,58 @@
+{
+  "_ego_shape": {
+    "center_offset_xy": [
+      8.705262644070899e-06,
+      0.3870177238313772
+    ],
+    "forward_yaw_rad": 1.5707963267948966,
+    "half_length_m": 2.44619083404541,
+    "half_width_m": 0.9183566570281982
+  },
+  "_meta": {
+    "abar_source": "envelope of measured CV footprint error quantile over D",
+    "clips": [
+      "ControlLoss_Town11_Route401_Weather11",
+      "HardBreakRoute_Town11_Route50_Weather23",
+      "ParkingCrossingPedestrian_Town12_Route953_Weather9",
+      "PedestrianCrossing_Town12_Route867_Weather9",
+      "StaticCutIn_Town03_Route149_Weather19"
+    ],
+    "created": "2026-11-07T13:48:02+0800",
+    "notes": [],
+    "other_group": "max(vehicle, pedestrian); no ground-truth class to calibrate against",
+    "quantile": 0.95,
+    "run_dir": "/home/kang/Desktop/DAC/outputs/framelease_v2/c2_calibration/full_20261107T045343Z",
+    "sigma_source": "footprint",
+    "sweep": "/home/kang/Desktop/DAC/outputs/framelease_v2/c1_sweep/full_20261107T045343Z",
+    "synthetic_sweep": false
+  },
+  "abar_mps2": {
+    "other": 1.4922098397955257,
+    "pedestrian": 0.0,
+    "vehicle": 1.4922098397955257
+  },
+  "d_safe_m": 0.5,
+  "dt_s": 0.05,
+  "h_max_s": 2.0,
+  "horizon_s": 3.0,
+  "low_conf_mode": "cap",
+  "low_score_floor": 0.1,
+  "margin_mode": "global",
+  "min_speed_mps": 0.5,
+  "relevant_groups": [
+    "vehicle",
+    "pedestrian"
+  ],
+  "reserve_m": 0.2,
+  "score_threshold": 0.3,
+  "sigma_m": {
+    "other": 1.4594600468751093,
+    "pedestrian": 1.4594600468751093,
+    "vehicle": 1.1597859115756042
+  },
+  "vbar_mps": {
+    "other": 1.8386714193308709,
+    "pedestrian": 0.9670395080118115,
+    "vehicle": 1.8386714193308709
+  }
+}

@@ -1,0 +1,799 @@
+{
+ "candidates": [
+  {
+   "arm": "age_only",
+   "envelope": null,
+   "name": "A1.0",
+   "order": 0,
+   "policy_params": {
+    "age_lease_s": 1.0,
+    "utility": "v4_adet_d1"
+   },
+   "tag": "A1.0_d1"
+  },
+  {
+   "arm": "age_only",
+   "envelope": null,
+   "name": "A1.5",
+   "order": 1,
+   "policy_params": {
+    "age_lease_s": 1.5,
+    "utility": "v4_adet_d1"
+   },
+   "tag": "A1.5_d1"
+  },
+  {
+   "arm": "age_only",
+   "envelope": null,
+   "name": "A2.0",
+   "order": 2,
+   "policy_params": {
+    "age_lease_s": 2.0,
+    "utility": "v4_adet_d1"
+   },
+   "tag": "A2.0_d1"
+  },
+  {
+   "arm": "age_only",
+   "envelope": null,
+   "name": "A2.5",
+   "order": 3,
+   "policy_params": {
+    "age_lease_s": 2.5,
+    "utility": "v4_adet_d1"
+   },
+   "tag": "A2.5_d1"
+  }
+ ],
+ "complete": true,
+ "dropped_routes": {},
+ "final": false,
+ "finality": "runner records (--queue)",
+ "flags": [],
+ "grid": "age",
+ "job_file": "outputs/framelease_v4/p1_jobs/FULL/b08_age_s1.jsonl",
+ "job_file_sha256": "1cb6404a9c147ae60ad29fee9125222a9089efb7a2b15e11dddf3a414785b5a2",
+ "kept_routes": [
+  "1792",
+  "2215",
+  "2539",
+  "2715",
+  "2943",
+  "3184",
+  "3514",
+  "4937",
+  "23659",
+  "24211",
+  "25863"
+ ],
+ "pending": [],
+ "provisional": false,
+ "queue": "outputs/framelease_v4/queue_p1",
+ "ranking": [
+  "A1.0",
+  "A2.5",
+  "A1.5",
+  "A2.0"
+ ],
+ "routes": [
+  "1792",
+  "2215",
+  "2539",
+  "2715",
+  "2943",
+  "3184",
+  "3514",
+  "4937",
+  "23659",
+  "24211",
+  "25863"
+ ],
+ "rule": "stage 1 of successive halving: top ceil(4/2) = 2 by mean DS on T22a kept routes; ties to the earlier candidate",
+ "schema": "framelease_v4.p1_selection/1",
+ "script_sha256": "146b8b1a3f75a467a7a21f1080a0b7c46b5e8a8500fe85c311487b6d9f12c867",
+ "stage": "age_s1",
+ "stage_no": 1,
+ "stage_spec": "outputs/framelease_v4/p1_jobs/FULL/b08_age_s1.stage.json",
+ "stage_spec_sha256": "e8b892854118e414542da3b6359dc2fa1b0b6a627c08fbf49d56594f2b9e791e",
+ "survivors": [
+  "A1.0",
+  "A2.5"
+ ],
+ "table": [
+  {
+   "arm": "age_only",
+   "candidate": "A1.0",
+   "envelope": null,
+   "mean_ds": 67.76745790909091,
+   "n": 11,
+   "order": 0,
+   "outcomes": {
+    "ok": 11
+   },
+   "per_route": {
+    "1792": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r1792",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.0_d1/runs/20261114T190617_ed58bde4",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2215": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r2215",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.0_d1/runs/20261114T192217_ba6ca6d0",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "23659": {
+     "attempts_found": 2,
+     "ds": 87.842037,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r23659",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 2,
+      "counted": 2,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.0_d1/runs/20261114T172935_27d04a94",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "24211": {
+     "attempts_found": 1,
+     "ds": 50.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r24211",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.0_d1/runs/20261114T181635_a44bd3d9",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2539": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r2539",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.0_d1/runs/20261114T175226_5f5b9f08",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "25863": {
+     "attempts_found": 1,
+     "ds": 65.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r25863",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.0_d1/runs/20261114T201337_045b7877",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2715": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r2715",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.0_d1/runs/20261114T200344_f7e23216",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2943": {
+     "attempts_found": 1,
+     "ds": 21.6,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r2943",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.0_d1/runs/20261114T180540_07d02fc3",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3184": {
+     "attempts_found": 1,
+     "ds": 65.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r3184",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.0_d1/runs/20261114T194149_a6e8f296",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3514": {
+     "attempts_found": 1,
+     "ds": 36.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r3514",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.0_d1/runs/20261114T185706_28887f60",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "4937": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r4937",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.0_d1/runs/20261114T182356_7dffcbd3",
+     "setup_failures": 0,
+     "status": "Completed"
+    }
+   },
+   "policy_params": {
+    "age_lease_s": 1.0,
+    "utility": "v4_adet_d1"
+   },
+   "reused_from": null,
+   "tag": "A1.0_d1"
+  },
+  {
+   "arm": "age_only",
+   "candidate": "A1.5",
+   "envelope": null,
+   "mean_ds": 63.26991436363637,
+   "n": 11,
+   "order": 1,
+   "outcomes": {
+    "ok": 11
+   },
+   "per_route": {
+    "1792": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A1.5_d1_k1.0_s11_r1792",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.5_d1/runs/20261114T190917_e44608be",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2215": {
+     "attempts_found": 1,
+     "ds": 41.291058,
+     "job": "v4p1_age_only_A1.5_d1_k1.0_s11_r2215",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.5_d1/runs/20261114T192854_c4744643",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "23659": {
+     "attempts_found": 1,
+     "ds": 56.42355,
+     "job": "v4p1_age_only_A1.5_d1_k1.0_s11_r23659",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.5_d1/runs/20261114T173202_3dbd57e4",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "24211": {
+     "attempts_found": 1,
+     "ds": 32.5,
+     "job": "v4p1_age_only_A1.5_d1_k1.0_s11_r24211",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.5_d1/runs/20261114T181905_d689d465",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2539": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_age_only_A1.5_d1_k1.0_s11_r2539",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.5_d1/runs/20261114T173917_35838504",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "25863": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A1.5_d1_k1.0_s11_r25863",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.5_d1/runs/20261114T201715_f9d537d5",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2715": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_age_only_A1.5_d1_k1.0_s11_r2715",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.5_d1/runs/20261114T195149_e05b6353",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2943": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_age_only_A1.5_d1_k1.0_s11_r2943",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.5_d1/runs/20261114T181008_bdbcb520",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3184": {
+     "attempts_found": 1,
+     "ds": 80.0,
+     "job": "v4p1_age_only_A1.5_d1_k1.0_s11_r3184",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.5_d1/runs/20261114T194433_261c53bc",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3514": {
+     "attempts_found": 1,
+     "ds": 5.75445,
+     "job": "v4p1_age_only_A1.5_d1_k1.0_s11_r3514",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.5_d1/runs/20261114T183446_ecbc5595",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "4937": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A1.5_d1_k1.0_s11_r4937",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A1.5_d1/runs/20261114T182634_3021cff3",
+     "setup_failures": 0,
+     "status": "Completed"
+    }
+   },
+   "policy_params": {
+    "age_lease_s": 1.5,
+    "utility": "v4_adet_d1"
+   },
+   "reused_from": null,
+   "tag": "A1.5_d1"
+  },
+  {
+   "arm": "age_only",
+   "candidate": "A2.0",
+   "envelope": null,
+   "mean_ds": 63.19662718181819,
+   "n": 11,
+   "order": 2,
+   "outcomes": {
+    "ok": 11
+   },
+   "per_route": {
+    "1792": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_age_only_A2.0_d1_k1.0_s11_r1792",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.0_d1/runs/20261114T190013_5e8a766d",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2215": {
+     "attempts_found": 1,
+     "ds": 42.0,
+     "job": "v4p1_age_only_A2.0_d1_k1.0_s11_r2215",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.0_d1/runs/20261114T193539_f3c7cc7b",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "23659": {
+     "attempts_found": 1,
+     "ds": 97.989135,
+     "job": "v4p1_age_only_A2.0_d1_k1.0_s11_r23659",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.0_d1/runs/20261114T173429_21591eac",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "24211": {
+     "attempts_found": 1,
+     "ds": 50.0,
+     "job": "v4p1_age_only_A2.0_d1_k1.0_s11_r24211",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.0_d1/runs/20261114T182133_24794ff5",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2539": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A2.0_d1_k1.0_s11_r2539",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.0_d1/runs/20261114T174330_f9138d29",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "25863": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A2.0_d1_k1.0_s11_r25863",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.0_d1/runs/20261114T200655_273a459f",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2715": {
+     "attempts_found": 1,
+     "ds": 36.0,
+     "job": "v4p1_age_only_A2.0_d1_k1.0_s11_r2715",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.0_d1/runs/20261114T195500_ea590579",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2943": {
+     "attempts_found": 1,
+     "ds": 34.066871,
+     "job": "v4p1_age_only_A2.0_d1_k1.0_s11_r2943",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.0_d1/runs/20261114T175628_5ec58583",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3184": {
+     "attempts_found": 1,
+     "ds": 52.0,
+     "job": "v4p1_age_only_A2.0_d1_k1.0_s11_r3184",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.0_d1/runs/20261114T194658_4a95c829",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3514": {
+     "attempts_found": 1,
+     "ds": 63.05,
+     "job": "v4p1_age_only_A2.0_d1_k1.0_s11_r3514",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.0_d1/runs/20261114T184721_61aba6df",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "4937": {
+     "attempts_found": 1,
+     "ds": 60.056893,
+     "job": "v4p1_age_only_A2.0_d1_k1.0_s11_r4937",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.0_d1/runs/20261114T182910_ef44719c",
+     "setup_failures": 0,
+     "status": "Completed"
+    }
+   },
+   "policy_params": {
+    "age_lease_s": 2.0,
+    "utility": "v4_adet_d1"
+   },
+   "reused_from": null,
+   "tag": "A2.0_d1"
+  },
+  {
+   "arm": "age_only",
+   "candidate": "A2.5",
+   "envelope": null,
+   "mean_ds": 63.55304918181818,
+   "n": 11,
+   "order": 3,
+   "outcomes": {
+    "ok": 11
+   },
+   "per_route": {
+    "1792": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r1792",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.5_d1/runs/20261114T190317_f764c44c",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2215": {
+     "attempts_found": 1,
+     "ds": 23.921508,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r2215",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.5_d1/runs/20261114T191219_13a78e00",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "23659": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r23659",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.5_d1/runs/20261114T173655_69ecea66",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "24211": {
+     "attempts_found": 1,
+     "ds": 50.0,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r24211",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.5_d1/runs/20261114T181409_e0600799",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2539": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r2539",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.5_d1/runs/20261114T174754_8fe7de58",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "25863": {
+     "attempts_found": 1,
+     "ds": 97.622836,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r25863",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.5_d1/runs/20261114T201020_a8eec9d3",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2715": {
+     "attempts_found": 1,
+     "ds": 20.334,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r2715",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.5_d1/runs/20261114T195816_6d85a44c",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "2943": {
+     "attempts_found": 1,
+     "ds": 58.02776,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r2943",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.5_d1/runs/20261114T180114_e0fddf63",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3184": {
+     "attempts_found": 1,
+     "ds": 80.0,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r3184",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.5_d1/runs/20261114T194926_a5748bf2",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3514": {
+     "attempts_found": 1,
+     "ds": 61.06462,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r3514",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.5_d1/runs/20261114T185355_65cb4938",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "4937": {
+     "attempts_found": 1,
+     "ds": 48.112817,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r4937",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s1/age_only_A2.5_d1/runs/20261114T183152_9e99c343",
+     "setup_failures": 0,
+     "status": "Completed"
+    }
+   },
+   "policy_params": {
+    "age_lease_s": 2.5,
+    "utility": "v4_adet_d1"
+   },
+   "reused_from": null,
+   "tag": "A2.5_d1"
+  }
+ ],
+ "variant": "FULL",
+ "warnings": [],
+ "written": "2026-11-15T04:21:15+0800"
+}

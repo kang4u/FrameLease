@@ -1,0 +1,68 @@
+{
+ "phase_only": {
+  "rc": 95,
+  "wrapper_line": [
+   "apply_locked: exit 95 (output /tmp/AMEND3/a10r7b/rsim/treeE_phase_only/outputs/framelease_v4/amendment_a10/apply.out)"
+  ],
+  "final_verify_in_apply_out": [
+   "manifest: 1 files differ: [('framelease_v4/analysis/manipulation.py', '78f18dacf323832ef16684b0b81a2ba03b2ffb00186259780d1bafe7e656cbd0', '31f44b382a9ca4e0b4680c4cdb1b37146a98d2f8af5ca810f7e13ead984ad0f9')]",
+   "seal framelease_v4/PROTOCOL.md: OK",
+   "seal outputs/framelease_v4/registration/MANIFEST.sha256: OK"
+  ],
+  "sealed": true,
+  "verify_now": {
+   "manifest_ok": false,
+   "seal_lines": [
+    [
+     "framelease_v4/PROTOCOL.md",
+     "OK"
+    ],
+    [
+     "outputs/framelease_v4/registration/MANIFEST.sha256",
+     "OK"
+    ]
+   ],
+   "all_ok": false,
+   "text": "manifest: 1 files differ: [('framelease_v4/analysis/manipulation.py', '78f18dacf323832ef16684b0b81a2ba03b2ffb00186259780d1bafe7e656cbd0', '31f44b382a9ca4e0b4680c4cdb1b37146a98d2f8af5ca810f7e13ead984ad0f9')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK"
+  },
+  "post_check": [
+   1,
+   [
+    "FAIL: registration.py --verify; analysis_registration waits"
+   ]
+  ]
+ },
+ "p1_baseline": {
+  "rc": 95,
+  "wrapper_line": [
+   "apply_locked: exit 95 (output /tmp/AMEND3/a10r7b/rsim/treeE_p1_baseline/outputs/framelease_v4/amendment_a10/apply.out)"
+  ],
+  "final_verify_in_apply_out": [
+   "manifest: 1 files differ: [('framelease_v4/arms/realized.py', 'ad00b08d837d683fce4f6d97daf48a21eea113afdefdf64058c54905d2b2a337', '259c1fb175351f5bd19d93d616334d44a6c64bf2a7192793a31cb87c7f2d03b7')]",
+   "seal framelease_v4/PROTOCOL.md: OK",
+   "seal outputs/framelease_v4/registration/MANIFEST.sha256: OK"
+  ],
+  "sealed": true,
+  "verify_now": {
+   "manifest_ok": false,
+   "seal_lines": [
+    [
+     "framelease_v4/PROTOCOL.md",
+     "OK"
+    ],
+    [
+     "outputs/framelease_v4/registration/MANIFEST.sha256",
+     "OK"
+    ]
+   ],
+   "all_ok": false,
+   "text": "manifest: 1 files differ: [('framelease_v4/arms/realized.py', 'ad00b08d837d683fce4f6d97daf48a21eea113afdefdf64058c54905d2b2a337', '259c1fb175351f5bd19d93d616334d44a6c64bf2a7192793a31cb87c7f2d03b7')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK"
+  },
+  "post_check": [
+   1,
+   [
+    "FAIL: registration.py --verify"
+   ]
+  ]
+ }
+}

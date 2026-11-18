@@ -1,0 +1,22 @@
+(exit -2)
+
+--- apply.out
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/A10A11/applier/treeS/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+inject: SIGINT to the process group before --seal (as Ctrl-C would)
+Traceback (most recent call last):
+  File "/tmp/A10A11/applier/inject.py", line 67, in <module>
+    runpy.run_path(applier, run_name='__main__')
+  File "/home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/tmp/A10A11/applier/apply_entry_scratch_treeS.py", line 213, in <module>
+    p = reg('--seal')
+  File "/tmp/A10A11/applier/apply_entry_scratch_treeS.py", line 71, in reg
+    p = subprocess.run(REG + list(flags), cwd=ROOT, capture_output=True, text=True)
+  File "/tmp/A10A11/applier/inject.py", line 33, in patched
+    os.killpg(os.getpgrp(), signal.SIGINT)
+KeyboardInterrupt

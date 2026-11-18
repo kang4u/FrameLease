@@ -1,0 +1,268 @@
+{
+ "block": "heur_s1",
+ "block_no": 6,
+ "candidates": [
+  {
+   "arm": "fl_heuristic",
+   "envelope": {
+    "config": "T_x0.00",
+    "label": "B0",
+    "path": "outputs/framelease_v4/envelopes/B0.json",
+    "sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927"
+   },
+   "jobs": {
+    "1792": {
+     "block": "lease_s1",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r1792",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10"
+    },
+    "2215": {
+     "block": "lease_s1",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2215",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10"
+    },
+    "23659": {
+     "block": "lease_s1",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r23659",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10"
+    },
+    "24211": {
+     "block": "lease_s1",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r24211",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10"
+    },
+    "2539": {
+     "block": "lease_s1",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2539",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10"
+    },
+    "25863": {
+     "block": "lease_s1",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r25863",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10"
+    },
+    "2715": {
+     "block": "lease_s1",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2715",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10"
+    },
+    "2943": {
+     "block": "lease_s1",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r2943",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10"
+    },
+    "3184": {
+     "block": "lease_s1",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r3184",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10"
+    },
+    "3514": {
+     "block": "lease_s1",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r3514",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10"
+    },
+    "4937": {
+     "block": "lease_s1",
+     "id": "v4p1_fl_heuristic_B0_d10_k1.0_s11_r4937",
+     "output_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_B0_d10"
+    }
+   },
+   "name": "d10",
+   "order": 0,
+   "policy_params": {
+    "utility": "heuristic"
+   },
+   "reused_from": "lease_s1",
+   "tag": "B0_d10"
+  },
+  {
+   "arm": "fl_heuristic",
+   "envelope": {
+    "config": "T_x0.00",
+    "label": "B0",
+    "path": "outputs/framelease_v4/envelopes/B0.json",
+    "sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927"
+   },
+   "jobs": {
+    "1792": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d4_k1.0_s11_r1792",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d4"
+    },
+    "2215": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d4_k1.0_s11_r2215",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d4"
+    },
+    "23659": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d4_k1.0_s11_r23659",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d4"
+    },
+    "24211": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d4_k1.0_s11_r24211",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d4"
+    },
+    "2539": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d4_k1.0_s11_r2539",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d4"
+    },
+    "25863": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d4_k1.0_s11_r25863",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d4"
+    },
+    "2715": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d4_k1.0_s11_r2715",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d4"
+    },
+    "2943": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d4_k1.0_s11_r2943",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d4"
+    },
+    "3184": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d4_k1.0_s11_r3184",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d4"
+    },
+    "3514": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d4_k1.0_s11_r3514",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d4"
+    },
+    "4937": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d4_k1.0_s11_r4937",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d4"
+    }
+   },
+   "name": "d4",
+   "order": 1,
+   "policy_params": {
+    "utility": "v4_adet_d4"
+   },
+   "reused_from": null,
+   "tag": "B0_d4"
+  },
+  {
+   "arm": "fl_heuristic",
+   "envelope": {
+    "config": "T_x0.00",
+    "label": "B0",
+    "path": "outputs/framelease_v4/envelopes/B0.json",
+    "sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927"
+   },
+   "jobs": {
+    "1792": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r1792",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d1"
+    },
+    "2215": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2215",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d1"
+    },
+    "23659": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r23659",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d1"
+    },
+    "24211": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r24211",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d1"
+    },
+    "2539": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2539",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d1"
+    },
+    "25863": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r25863",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d1"
+    },
+    "2715": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2715",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d1"
+    },
+    "2943": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2943",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d1"
+    },
+    "3184": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r3184",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d1"
+    },
+    "3514": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r3514",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d1"
+    },
+    "4937": {
+     "block": "heur_s1",
+     "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r4937",
+     "output_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d1"
+    }
+   },
+   "name": "d1",
+   "order": 2,
+   "policy_params": {
+    "utility": "v4_adet_d1"
+   },
+   "reused_from": null,
+   "tag": "B0_d1"
+  }
+ ],
+ "final_stage": false,
+ "grid": "heur",
+ "inputs": {
+  "outputs/framelease_v4/p1_jobs/FULL/b02_lease_s1.stage.json": "d5b9089688f713a61ed7736353eb5cdc41cf36085cfab4e5734d140967188c04",
+  "outputs/framelease_v4/tuning/selection/FULL/lease_s2.json": "bc2f7299f438309d99ddfb6017ab86d1593e996247e50456c51b747e0a332351"
+ },
+ "job_file": "outputs/framelease_v4/p1_jobs/FULL/b06_heur_s1.jsonl",
+ "job_file_sha256": "57711230b7c3ca45a065d22c1e2babef36a21c86dd648937785c5e7936ac7cba",
+ "n_candidates": 3,
+ "n_lines": 22,
+ "previous_stage": null,
+ "route_order": [
+  "2215",
+  "24211",
+  "23659",
+  "1792",
+  "2539",
+  "4937",
+  "2943",
+  "3184",
+  "3514",
+  "25863",
+  "2715"
+ ],
+ "route_set": "T22a",
+ "routes": [
+  "1792",
+  "2215",
+  "2539",
+  "2715",
+  "2943",
+  "3184",
+  "3514",
+  "4937",
+  "23659",
+  "24211",
+  "25863"
+ ],
+ "rules": "PROTOCOL Sec. 4.2 (select_stage.py)",
+ "schema": "framelease_v4.p1_stage/1",
+ "stage": 1,
+ "survive": 2,
+ "variant": "FULL"
+}

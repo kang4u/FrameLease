@@ -1,0 +1,16 @@
+{
+ "name": "A12",
+ "template": "outputs/framelease_v4/build/AMEND2/cut/A12_entry.md",
+ "tests": [],
+ "inplace": [],
+ "must_equal": {
+  "outputs/framelease_v4/cut_20261115T231415/CUT_PLAN.json": "9285400b7af3b8f62f98f62d2cdcea31e68a2ab3a5c3b5e35692b99671af78e3",
+  "outputs/framelease_v4/cut_20261115T231415/jobs_reduced/b11_ti_main.jsonl": "f2ca9523bebe100ea7f81c94705c85f8529b3efc6deb3bc8709548b6165c4b76",
+  "outputs/framelease_v4/cut_20261115T231415/jobs_reduced/b12_f3_k.jsonl": "f109356426295d766cbdf2b16ecb7e46c1a34fbd1e5e7fa2f54595198e0c1e91",
+  "outputs/framelease_v4/cut_20261115T231415/jobs_reduced/b13_a_lease.jsonl": "d8553d2fad38ebf93245315497ab7ea92e500d70dd60812ecb8b966eab0e0b2c",
+  "outputs/framelease_v4/cut_20261115T231415/jobs_reduced/b14_a_rl.jsonl": "29b3040630d1597818486db8f5767af18e3ceea155308d56e45ddd64c9a97508",
+  "outputs/framelease_v4/cut_20261115T231415/jobs_reduced/b15_s_seed12.jsonl": "bed17136118812267838bd8d869460d43db9d366c34ab37d465c0e7f7b166dd5",
+  "outputs/framelease_v4/cut_20261115T231415/jobs_reduced/b16_s_risk.jsonl": "c1bb5723ab8ab2a0771a1579b0c0b427c8a98bb909a1805608b356a19593bc57"
+ },
+ "max_new_registered": 0
+}

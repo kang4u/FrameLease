@@ -1,0 +1,61 @@
+{
+ "suffix_vs_gate2_max_abs_s": {
+  "T_q80": 4.985470619889298e-06,
+  "T_q90": 4.998459976590652e-06,
+  "T_q95": 4.998684853152469e-06,
+  "T_q99": 4.995307591348919e-06,
+  "T_q99.5": 4.908632800670887e-06,
+  "V2file": 4.983554875437335e-06,
+  "T_x0.00": 4.9676927429409545e-06
+ },
+ "V_vs_gate2_max_abs_s": 4.9881823538378e-06,
+ "global_v2file_cap2_vs_v2_c2eval_max_abs_s": 4.9354168025761425e-06,
+ "n_compared_gate2": 2447,
+ "n_compared_v2": 2447,
+ "frame_sets_equal_gate2": true,
+ "frame_sets_equal_v2": true,
+ "counts": {
+  "new17": {
+   "plans": 2970,
+   "conflicts": 663,
+   "v0": 291,
+   "v0_static": 264
+  },
+  "val15": {
+   "plans": 2447,
+   "conflicts": 246,
+   "v0": 26,
+   "v0_static": 4
+  },
+  "train": {
+   "plans": 1004,
+   "conflicts": 12,
+   "v0": 1,
+   "v0_static": 0
+  },
+  "val32": {
+   "plans": 5417,
+   "conflicts": 909,
+   "v0": 317,
+   "v0_static": 268
+  }
+ },
+ "metrics_vs_gate2_max_abs": {
+  "V2file vs E0orig_q95_ORIG": 2.7642276412276345e-08,
+  "T_q80 vs E0_q80_ORIG": 4.683285655948666e-07,
+  "T_q95 vs E0_q95_ORIG": 1.93706579498798e-07,
+  "T_x0.00 vs B0_q0_NONE": 3.293829179407126e-07
+ },
+ "counts_expected": {
+  "val15": {
+   "plans": 2447,
+   "conflicts": 246
+  },
+  "new17": {
+   "plans": 2970,
+   "conflicts": 663
+  }
+ },
+ "tolerance_s": 2e-05,
+ "pass": true
+}

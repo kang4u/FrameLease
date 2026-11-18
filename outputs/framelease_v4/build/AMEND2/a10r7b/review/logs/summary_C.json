@@ -1,0 +1,31 @@
+{
+ "A10_inplace_overlap": [],
+ "old_twice": {
+  "rc": 1,
+  "stop": [
+   "STOP: in-place text found 2 times: 'Status (Amendment A3): the `fl_global_shield` lease of item 1, the aggregator of'"
+  ],
+  "unchanged": true,
+  "verify": {
+   "manifest_ok": true,
+   "seal_lines": [
+    [
+     "framelease_v4/PROTOCOL.md",
+     "OK"
+    ],
+    [
+     "outputs/framelease_v4/registration/MANIFEST.sha256",
+     "OK"
+    ]
+   ],
+   "all_ok": true,
+   "text": "manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK"
+  }
+ },
+ "derive_on_doubled": [
+  1,
+  [
+   "FAIL: Sec. 4.1 holds 2 paragraphs that start with \"Status (Amendment A3):\" (exactly 1 expected; Amendment A3 inserts it)"
+  ]
+ ]
+}

@@ -1,0 +1,3867 @@
+{
+ "compared_analysis": {
+  "guard_status": "frozen",
+  "route_table_registered": true,
+  "schema": "framelease_v4.analyze/1",
+  "script_sha256": "10d7ea4f9516725cd94932a0618bbe5cc6a20bae60b49f4004013b3682cee54c",
+  "settings": {
+   "alpha": 0.05,
+   "boot_seed": 20261110,
+   "enum_max_n": 22,
+   "labels": {
+    "contradicted": "worse",
+    "inconclusive": "inconclusive",
+    "no data": "no data",
+    "supported": "improves"
+   },
+   "mc_flips": 200000,
+   "mc_seed": 20261110,
+   "n_boot": 10000,
+   "registered": true
+  },
+  "status": "registered",
+  "test_input_rows": 632
+ },
+ "comparisons": {
+  "by_target": {
+   "agg:arm_summary.csv": {
+    "compared": 115,
+    "differences": 0
+   },
+   "agg:runs.csv": {
+    "compared": 2776,
+    "differences": 0
+   },
+   "analysis:analysis.json decisions.H1": {
+    "compared": 34,
+    "differences": 0
+   },
+   "analysis:analysis.json interim_guard": {
+    "compared": 1,
+    "differences": 0
+   },
+   "analysis:conditions.csv": {
+    "compared": 301,
+    "differences": 0
+   },
+   "analysis:family_H1.csv": {
+    "compared": 76,
+    "differences": 0
+   },
+   "analysis:family_S-coll.csv": {
+    "compared": 76,
+    "differences": 0
+   },
+   "analysis:paired_differences.csv": {
+    "compared": 344,
+    "differences": 0
+   },
+   "analysis:secondary.csv": {
+    "compared": 228,
+    "differences": 0
+   },
+   "freeze record": {
+    "compared": 1264,
+    "differences": 0
+   }
+  },
+  "differences": 0,
+  "n": 5215
+ },
+ "created": "2026-11-16T09:28:41+0800",
+ "development_reasons": [],
+ "h1": {
+  "contrasts": [
+   {
+    "a": "fl_full_k1.0_s11",
+    "b": "fixed_deep_k1.0_s11",
+    "better": "higher",
+    "ci90": [
+     -5.892022671428571,
+     13.645440596428573
+    ],
+    "ci95": [
+     -7.642410578571428,
+     15.47410849464286
+    ],
+    "contrast": "fl_full_minus_fixed_deep_k1.0_s11_all",
+    "correction": "Holm over 4",
+    "dropped_routes": {
+     "14194": "a: pending; b: pending",
+     "14842": "a: pending; b: pending",
+     "1711": "a: pending; b: pending",
+     "1773": "a: pending; b: pending",
+     "17752": "a: pending; b: pending",
+     "1790": "a: pending; b: pending",
+     "1825": "a: pending; b: pending",
+     "1852": "a: pending; b: pending",
+     "1956": "a: pending; b: pending",
+     "2082": "a: pending; b: pending",
+     "2127": "a: pending; b: pending",
+     "2144": "a: pending; b: pending",
+     "2164": "a: pending; b: pending",
+     "2201": "a: pending; b: pending",
+     "2273": "a: pending; b: pending",
+     "23695": "a: pending; b: pending",
+     "2373": "a: pending; b: pending",
+     "23771": "a: pending; b: pending",
+     "23901": "a: pending; b: pending",
+     "2416": "a: pending; b: pending",
+     "2534": "a: pending; b: pending",
+     "2664": "a: pending; b: pending",
+     "2709": "a: pending; b: pending",
+     "28087": "a: pending; b: pending",
+     "28099": "a: pending; b: pending",
+     "3086": "a: pending; b: pending",
+     "3364": "a: pending; b: pending",
+     "3436": "a: pending; b: pending",
+     "3540": "a: pending; b: pending",
+     "3936": "a: pending; b: pending"
+    },
+    "family": "H1",
+    "grid": 0.01,
+    "label": "inconclusive",
+    "mean": 3.9201654285714294,
+    "mean_a": 59.60436428571428,
+    "mean_b": 55.68419885714286,
+    "metric": "driving_score",
+    "n": 14,
+    "n_expected": 44,
+    "n_negative": 3,
+    "n_positive": 6,
+    "n_zero": 5,
+    "other": "fixed_deep",
+    "p_adjusted": 1.0,
+    "p_mc": 0.5379773101134494,
+    "p_method": "exact_enumeration",
+    "p_two_sided": 0.5390625,
+    "rounding_ties": 0
+   },
+   {
+    "a": "fl_full_k1.0_s11",
+    "b": "fast_only_k1.0_s11",
+    "better": "higher",
+    "ci90": [
+     -17.839323567857146,
+     10.377673721428563
+    ],
+    "ci95": [
+     -20.457540578571425,
+     12.842008128571427
+    ],
+    "contrast": "fl_full_minus_fast_only_k1.0_s11_all",
+    "correction": "Holm over 4",
+    "dropped_routes": {
+     "14194": "a: pending; b: pending",
+     "14842": "a: pending; b: pending",
+     "1711": "a: pending; b: pending",
+     "1773": "a: pending; b: pending",
+     "17752": "a: pending; b: pending",
+     "1790": "a: pending; b: pending",
+     "1825": "a: pending; b: pending",
+     "1852": "a: pending; b: pending",
+     "1956": "a: pending; b: pending",
+     "2082": "a: pending; b: pending",
+     "2127": "a: pending; b: pending",
+     "2144": "a: pending; b: pending",
+     "2164": "a: pending; b: pending",
+     "2201": "a: pending; b: pending",
+     "2273": "a: pending; b: pending",
+     "23695": "a: pending; b: pending",
+     "2373": "a: pending; b: pending",
+     "23771": "a: pending; b: pending",
+     "23901": "a: pending; b: pending",
+     "2416": "a: pending; b: pending",
+     "2534": "a: pending; b: pending",
+     "2664": "a: pending; b: pending",
+     "2709": "a: pending; b: pending",
+     "28087": "a: pending; b: pending",
+     "28099": "a: pending; b: pending",
+     "3086": "a: pending; b: pending",
+     "3364": "a: pending; b: pending",
+     "3436": "a: pending; b: pending",
+     "3540": "a: pending; b: pending",
+     "3936": "a: pending; b: pending"
+    },
+    "family": "H1",
+    "grid": 0.01,
+    "label": "inconclusive",
+    "mean": -3.5224885000000006,
+    "mean_a": 59.60436428571428,
+    "mean_b": 63.126852785714284,
+    "metric": "driving_score",
+    "n": 14,
+    "n_expected": 44,
+    "n_negative": 5,
+    "n_positive": 6,
+    "n_zero": 3,
+    "other": "fast_only",
+    "p_adjusted": 1.0,
+    "p_mc": 0.6981515092424538,
+    "p_method": "exact_enumeration",
+    "p_two_sided": 0.69921875,
+    "rounding_ties": 0
+   },
+   {
+    "a": "fl_full_k1.0_s11",
+    "b": "age_only_k1.0_s11",
+    "better": "higher",
+    "ci90": [
+     -11.240270996428572,
+     16.34673401071428
+    ],
+    "ci95": [
+     -13.764576758928568,
+     18.63223119107142
+    ],
+    "contrast": "fl_full_minus_age_only_k1.0_s11_all",
+    "correction": "Holm over 4",
+    "dropped_routes": {
+     "14194": "a: pending; b: pending",
+     "14842": "a: pending; b: pending",
+     "1711": "a: pending; b: pending",
+     "1773": "a: pending; b: pending",
+     "17752": "a: pending; b: pending",
+     "1790": "a: pending; b: pending",
+     "1825": "a: pending; b: pending",
+     "1852": "a: pending; b: pending",
+     "1956": "a: pending; b: pending",
+     "2082": "a: pending; b: pending",
+     "2127": "a: pending; b: pending",
+     "2144": "a: pending; b: pending",
+     "2164": "a: pending; b: pending",
+     "2201": "a: pending; b: pending",
+     "2273": "a: pending; b: pending",
+     "23695": "a: pending; b: pending",
+     "2373": "a: pending; b: pending",
+     "23771": "a: pending; b: pending",
+     "23901": "a: pending; b: pending",
+     "2416": "a: pending; b: pending",
+     "2534": "a: pending; b: pending",
+     "2664": "a: pending; b: pending",
+     "2709": "a: pending; b: pending",
+     "28087": "a: pending; b: pending",
+     "28099": "a: pending; b: pending",
+     "3086": "a: pending; b: pending",
+     "3364": "a: pending; b: pending",
+     "3436": "a: pending; b: pending",
+     "3540": "a: pending; b: pending",
+     "3936": "a: pending; b: pending"
+    },
+    "family": "H1",
+    "grid": 0.01,
+    "label": "inconclusive",
+    "mean": 3.1285227857142863,
+    "mean_a": 59.60436428571428,
+    "mean_b": 56.4758415,
+    "metric": "driving_score",
+    "n": 14,
+    "n_expected": 44,
+    "n_negative": 5,
+    "n_positive": 6,
+    "n_zero": 3,
+    "other": "age_only",
+    "p_adjusted": 1.0,
+    "p_mc": 0.7327263363683182,
+    "p_method": "exact_enumeration",
+    "p_two_sided": 0.734375,
+    "rounding_ties": 0
+   },
+   {
+    "a": "fl_full_k1.0_s11",
+    "b": "event_triggered_k1.0_s11",
+    "better": "higher",
+    "ci90": [
+     -12.038442217857142,
+     11.100814982142857
+    ],
+    "ci95": [
+     -14.137336578571425,
+     13.250797696428567
+    ],
+    "contrast": "fl_full_minus_event_triggered_k1.0_s11_all",
+    "correction": "Holm over 4",
+    "dropped_routes": {
+     "14194": "a: pending; b: pending",
+     "14842": "a: pending; b: pending",
+     "1711": "a: pending; b: pending",
+     "1773": "a: pending; b: pending",
+     "17752": "a: pending; b: pending",
+     "1790": "a: pending; b: pending",
+     "1825": "a: pending; b: pending",
+     "1852": "a: pending; b: pending",
+     "1956": "a: pending; b: pending",
+     "2082": "a: pending; b: pending",
+     "2127": "a: pending; b: pending",
+     "2144": "a: pending; b: pending",
+     "2164": "a: pending; b: pending",
+     "2201": "a: pending; b: pending",
+     "2273": "a: pending; b: pending",
+     "23695": "a: pending; b: pending",
+     "2373": "a: pending; b: pending",
+     "23771": "a: pending; b: pending",
+     "23901": "a: pending; b: pending",
+     "2416": "a: pending; b: pending",
+     "2534": "a: pending; b: pending",
+     "2664": "a: pending; b: pending",
+     "2709": "a: pending; b: pending",
+     "28087": "a: pending; b: pending",
+     "28099": "a: pending; b: pending",
+     "3086": "a: pending; b: pending",
+     "3364": "a: pending; b: pending",
+     "3436": "a: pending; b: pending",
+     "3540": "a: pending; b: pending",
+     "3936": "a: pending; b: pending"
+    },
+    "family": "H1",
+    "grid": 0.01,
+    "label": "inconclusive",
+    "mean": -0.5539254999999993,
+    "mean_a": 59.60436428571428,
+    "mean_b": 60.158289785714295,
+    "metric": "driving_score",
+    "n": 14,
+    "n_expected": 44,
+    "n_negative": 6,
+    "n_positive": 5,
+    "n_zero": 3,
+    "other": "event_triggered",
+    "p_adjusted": 1.0,
+    "p_mc": 0.9399953000234998,
+    "p_method": "exact_enumeration",
+    "p_two_sided": 0.9404296875,
+    "rounding_ties": 0
+   }
+  ],
+  "findings": {
+   "finding_1": false,
+   "finding_2": false
+  }
+ },
+ "independence": "imports only the standard library and numpy; neither imports nor reads framelease_v4/analysis/* or framelease_v4/arms/metrics_v4.py (only their outputs)",
+ "inputs": {
+  "framelease_v4/PROTOCOL.md": "3fbed7f7e451326da4a789519fd41e20220dea25df95d2c2272f024c2b4ae543",
+  "outputs/framelease_v4/analysis/final_20261116T091445/agg_p4/SHA256SUMS": "ed115dee5dae60664f2fa24f93e30be6b3161dae7ba44a070c1f5cb9e28a8682",
+  "outputs/framelease_v4/analysis/final_20261116T091445/agg_p4/aggregate.json": "0dd728db5047df7a06b79fb8c5b85623fb2c68856e7b4aa39d1b9e9234d679e0",
+  "outputs/framelease_v4/analysis/final_20261116T091445/agg_p4/arm_summary.csv": "f6285cef0a506549bffe3879d933fb1741ce97fd9f37af8f39c0d80264d372b3",
+  "outputs/framelease_v4/analysis/final_20261116T091445/agg_p4/runs.csv": "0c0f5d2dec0345c0a30dbab63c272189f584018ecf6bff280dd550d5e109fd1d",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/analysis.json": "e581bdcad297775b523670579cb6db167d930235b37c75e82ec7cc9096d03ffd",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/conditions.csv": "f86b23105ed4879dbb11fe887be7fbb567b7d7d36c22f30e73f373b0a4c23f28",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/family_H1.csv": "597bb28231b4480eb0148bc542f39d2948f80f639237e9fbbb005a74b9ff8367",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/family_S-coll.csv": "18f3e2463833f57f4df6ee6311dcb980954db101a5664bf3b5d243b7582aea85",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/paired_differences.csv": "8f3e3d038c6e435875b39b7060b0ff6f928762c19c3c29621c1a7684d662a47b",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis/secondary.csv": "daa49d6ecd5cf1375f21d14ee270cfa701d61cb39253a3527abae8189ccdec63",
+  "outputs/framelease_v4/analysis/final_20261116T091445/analysis_freeze.json": "fdda348027092724f74bf10cf0b5e33ed3219ffbfe5cfe6a57ac8aa9e4bd7c05",
+  "outputs/framelease_v4/protocol/route_split.json": "555f6869cb62d89082efc0fefc8f125ee133b16fd36a6fcf9f68bb1269fa527e",
+  "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl": "54e551df44f30a02277e91849f1e40390cd77ffca7e59256edc98b3f5cd4a6df",
+  "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl": "8ba8a4e5f6874860f9fefae81d836ccbdd297ac6a801a67663d6a5322507311b",
+  "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl": "6b906bc220d74fdf8fb5bfce287465e608fd378b22869af6d188ec411d37bd2a",
+  "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl": "a73491e47ab5cb3fcba868a0e5e6bf7f34c5ad6a09ea3fde8cd11d18ef623e31",
+  "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl": "bd77e5ed172bc834b63a4fa188cae97f92047f8072a45b92e738aad52cffd207",
+  "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl": "83fe874f000340d6ee15509c35c7829bd03a6612a75a181e82c0b26ab36a156b",
+  "outputs/framelease_v4/queue_p4/status.jsonl": "4550f0e35b2a25ab87be929cf86ea214501ed7c65fa21dfc635727d134b84460"
+ },
+ "interim_guard": {
+  "decision": "granted (valid analysis-freeze record)",
+  "freeze_record": "outputs/framelease_v4/analysis/final_20261116T091445/analysis_freeze.json",
+  "freeze_sha256": "fdda348027092724f74bf10cf0b5e33ed3219ffbfe5cfe6a57ac8aa9e4bd7c05",
+  "frozen": "2026-11-16T09:15:07+0800",
+  "mode": "registered PROTOCOL.md and seal",
+  "rule": "PROTOCOL Sec. 9.11: no test-route result is examined before the analysis freeze",
+  "test_route_input": {
+   "agg_rows": 632,
+   "analysis_test_input_rows": 632,
+   "job_lines": 632,
+   "runs_csv_rows": 0
+  },
+  "trigger": "cut"
+ },
+ "other_cells": {
+  "fast_only_k1.0_s12": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      25.437848975490635,
+      25.437848975490635
+     ],
+     "ci95": [
+      25.437848975490635,
+      25.437848975490635
+     ],
+     "max": 25.437848975490635,
+     "mean": 25.437848975490635,
+     "median": 25.437848975490635,
+     "min": 25.437848975490635,
+     "n": 1
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      25.437848975490635,
+      25.437848975490635
+     ],
+     "ci95": [
+      25.437848975490635,
+      25.437848975490635
+     ],
+     "denominator_sum": 0.078623,
+     "mean": 25.437848975490635,
+     "n": 1,
+     "nan_replicates": 0,
+     "numerator_sum": 2.0
+    },
+    "driving_score": {
+     "ci90": [
+      33.094161,
+      33.094161
+     ],
+     "ci95": [
+      33.094161,
+      33.094161
+     ],
+     "max": 33.094161,
+     "mean": 33.094161,
+     "median": 33.094161,
+     "min": 33.094161,
+     "n": 1
+    },
+    "infractions_per_km": {
+     "ci90": [
+      38.15677346323595,
+      38.15677346323595
+     ],
+     "ci95": [
+      38.15677346323595,
+      38.15677346323595
+     ],
+     "max": 38.15677346323595,
+     "mean": 38.15677346323595,
+     "median": 38.15677346323595,
+     "min": 38.15677346323595,
+     "n": 1
+    },
+    "route_completion": {
+     "ci90": [
+      100.0,
+      100.0
+     ],
+     "ci95": [
+      100.0,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 100.0,
+     "median": 100.0,
+     "min": 100.0,
+     "n": 1
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 1
+    }
+   },
+   "n_routes": 1,
+   "routes_used": [
+    "2050"
+   ]
+  },
+  "fast_only_k1.5_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      19.294478262219506,
+      68.8561653405916
+     ],
+     "ci95": [
+      19.294478262219506,
+      68.8561653405916
+     ],
+     "max": 68.8561653405916,
+     "mean": 44.07532180140555,
+     "median": 44.07532180140555,
+     "min": 19.294478262219506,
+     "n": 2
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      19.294478262219506,
+      68.8561653405916
+     ],
+     "ci95": [
+      19.294478262219506,
+      68.8561653405916
+     ],
+     "denominator_sum": 0.13896646610000002,
+     "mean": 50.37186449688382,
+     "n": 2,
+     "nan_replicates": 0,
+     "numerator_sum": 7.0
+    },
+    "driving_score": {
+     "ci90": [
+      2.194205,
+      51.961
+     ],
+     "ci95": [
+      2.194205,
+      51.961
+     ],
+     "max": 51.961,
+     "mean": 27.077602499999998,
+     "median": 27.077602499999998,
+     "min": 2.194205,
+     "n": 2
+    },
+    "infractions_per_km": {
+     "ci90": [
+      19.294478262219506,
+      80.33219289735686
+     ],
+     "ci95": [
+      19.294478262219506,
+      80.33219289735686
+     ],
+     "max": 80.33219289735686,
+     "mean": 49.81333557978819,
+     "median": 49.81333557978819,
+     "min": 19.294478262219506,
+     "n": 2
+    },
+    "route_completion": {
+     "ci90": [
+      65.45,
+      79.94
+     ],
+     "ci95": [
+      65.45,
+      79.94
+     ],
+     "max": 79.94,
+     "mean": 72.695,
+     "median": 72.695,
+     "min": 65.45,
+     "n": 2
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    }
+   },
+   "n_routes": 2,
+   "routes_used": [
+    "2390",
+    "3248"
+   ]
+  },
+  "fast_only_k2.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      7.511060035902867,
+      28.71719590917571
+     ],
+     "ci95": [
+      7.511060035902867,
+      28.71719590917571
+     ],
+     "max": 28.71719590917571,
+     "mean": 18.11412797253929,
+     "median": 18.11412797253929,
+     "min": 7.511060035902867,
+     "n": 2
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      7.511060035902867,
+      28.71719590917571
+     ],
+     "ci95": [
+      7.511060035902867,
+      28.71719590917571
+     ],
+     "denominator_sum": 0.16795934140000002,
+     "mean": 11.907643738831663,
+     "n": 2,
+     "nan_replicates": 0,
+     "numerator_sum": 2.0
+    },
+    "driving_score": {
+     "ci90": [
+      25.281704,
+      48.107817
+     ],
+     "ci95": [
+      25.281704,
+      48.107817
+     ],
+     "max": 48.107817,
+     "mean": 36.6947605,
+     "median": 36.6947605,
+     "min": 25.281704,
+     "n": 2
+    },
+    "infractions_per_km": {
+     "ci90": [
+      15.022120071805734,
+      57.43439181835142
+     ],
+     "ci95": [
+      15.022120071805734,
+      57.43439181835142
+     ],
+     "max": 57.43439181835142,
+     "mean": 36.22825594507858,
+     "median": 36.22825594507858,
+     "min": 15.022120071805734,
+     "n": 2
+    },
+    "route_completion": {
+     "ci90": [
+      53.71,
+      100.0
+     ],
+     "ci95": [
+      53.71,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 76.855,
+     "median": 76.855,
+     "min": 53.71,
+     "n": 2
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    }
+   },
+   "n_routes": 2,
+   "routes_used": [
+    "2390",
+    "3248"
+   ]
+  },
+  "fixed_deep_k1.0_s12": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      19.37088712723929,
+      19.37088712723929
+     ],
+     "ci95": [
+      19.37088712723929,
+      19.37088712723929
+     ],
+     "max": 19.37088712723929,
+     "mean": 19.37088712723929,
+     "median": 19.37088712723929,
+     "min": 19.37088712723929,
+     "n": 1
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      19.37088712723929,
+      19.37088712723929
+     ],
+     "ci95": [
+      19.37088712723929,
+      19.37088712723929
+     ],
+     "denominator_sum": 0.0516238618,
+     "mean": 19.37088712723929,
+     "n": 1,
+     "nan_replicates": 0,
+     "numerator_sum": 1.0
+    },
+    "driving_score": {
+     "ci90": [
+      36.187406,
+      36.187406
+     ],
+     "ci95": [
+      36.187406,
+      36.187406
+     ],
+     "max": 36.187406,
+     "mean": 36.187406,
+     "median": 36.187406,
+     "min": 36.187406,
+     "n": 1
+    },
+    "infractions_per_km": {
+     "ci90": [
+      38.74177425447858,
+      38.74177425447858
+     ],
+     "ci95": [
+      38.74177425447858,
+      38.74177425447858
+     ],
+     "max": 38.74177425447858,
+     "mean": 38.74177425447858,
+     "median": 38.74177425447858,
+     "min": 38.74177425447858,
+     "n": 1
+    },
+    "route_completion": {
+     "ci90": [
+      65.66,
+      65.66
+     ],
+     "ci95": [
+      65.66,
+      65.66
+     ],
+     "max": 65.66,
+     "mean": 65.66,
+     "median": 65.66,
+     "min": 65.66,
+     "n": 1
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 1
+    }
+   },
+   "n_routes": 1,
+   "routes_used": [
+    "2050"
+   ]
+  },
+  "fixed_deep_k1.5_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      21.676940940556616,
+      35.08645569339917
+     ],
+     "ci95": [
+      21.676940940556616,
+      35.08645569339917
+     ],
+     "max": 35.08645569339917,
+     "mean": 28.38169831697789,
+     "median": 28.38169831697789,
+     "min": 21.676940940556616,
+     "n": 2
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      21.676940940556616,
+      35.08645569339917
+     ],
+     "ci95": [
+      21.676940940556616,
+      35.08645569339917
+     ],
+     "denominator_sum": 0.0746329969,
+     "mean": 26.797798334157477,
+     "n": 2,
+     "nan_replicates": 0,
+     "numerator_sum": 2.0
+    },
+    "driving_score": {
+     "ci90": [
+      20.79,
+      28.574
+     ],
+     "ci95": [
+      20.79,
+      28.574
+     ],
+     "max": 28.574,
+     "mean": 24.682000000000002,
+     "median": 24.682000000000002,
+     "min": 20.79,
+     "n": 2
+    },
+    "infractions_per_km": {
+     "ci90": [
+      21.676940940556616,
+      35.08645569339917
+     ],
+     "ci95": [
+      21.676940940556616,
+      35.08645569339917
+     ],
+     "max": 35.08645569339917,
+     "mean": 28.38169831697789,
+     "median": 28.38169831697789,
+     "min": 21.676940940556616,
+     "n": 2
+    },
+    "route_completion": {
+     "ci90": [
+      34.65,
+      43.96
+     ],
+     "ci95": [
+      34.65,
+      43.96
+     ],
+     "max": 43.96,
+     "mean": 39.305,
+     "median": 39.305,
+     "min": 34.65,
+     "n": 2
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    }
+   },
+   "n_routes": 2,
+   "routes_used": [
+    "2390",
+    "3248"
+   ]
+  },
+  "fixed_deep_k2.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      29.66453410704134,
+      45.633153617805554
+     ],
+     "ci95": [
+      29.66453410704134,
+      45.633153617805554
+     ],
+     "max": 45.633153617805554,
+     "mean": 37.64884386242345,
+     "median": 37.64884386242345,
+     "min": 29.66453410704134,
+     "n": 2
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      29.66453410704134,
+      45.633153617805554
+     ],
+     "ci95": [
+      29.66453410704134,
+      45.633153617805554
+     ],
+     "denominator_sum": 0.14495864919999998,
+     "mean": 34.49259514760986,
+     "n": 2,
+     "nan_replicates": 0,
+     "numerator_sum": 5.0
+    },
+    "driving_score": {
+     "ci90": [
+      15.920602,
+      19.597073
+     ],
+     "ci95": [
+      15.920602,
+      19.597073
+     ],
+     "max": 19.597073,
+     "mean": 17.758837500000002,
+     "median": 17.758837500000002,
+     "min": 15.920602,
+     "n": 2
+    },
+    "infractions_per_km": {
+     "ci90": [
+      39.55271214272179,
+      68.44973042670833
+     ],
+     "ci95": [
+      39.55271214272179,
+      68.44973042670833
+     ],
+     "max": 68.44973042670833,
+     "mean": 54.00122128471506,
+     "median": 54.00122128471506,
+     "min": 39.55271214272179,
+     "n": 2
+    },
+    "route_completion": {
+     "ci90": [
+      67.6,
+      75.96
+     ],
+     "ci95": [
+      67.6,
+      75.96
+     ],
+     "max": 75.96,
+     "mean": 71.78,
+     "median": 71.78,
+     "min": 67.6,
+     "n": 2
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    }
+   },
+   "n_routes": 2,
+   "routes_used": [
+    "2390",
+    "3248"
+   ]
+  },
+  "fl_bandit_k1.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "denominator_sum": 0.135084,
+     "mean": 0.0,
+     "n": 2,
+     "nan_replicates": 0,
+     "numerator_sum": 0.0
+    },
+    "driving_score": {
+     "ci90": [
+      0.0,
+      100.0
+     ],
+     "ci95": [
+      0.0,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 50.0,
+     "median": 50.0,
+     "min": 0.0,
+     "n": 2
+    },
+    "infractions_per_km": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    },
+    "route_completion": {
+     "ci90": [
+      0.0,
+      100.0
+     ],
+     "ci95": [
+      0.0,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 50.0,
+     "median": 50.0,
+     "min": 0.0,
+     "n": 2
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      1.0
+     ],
+     "ci95": [
+      0.0,
+      1.0
+     ],
+     "max": 1.0,
+     "mean": 0.5,
+     "median": 0.5,
+     "min": 0.0,
+     "n": 2
+    }
+   },
+   "n_routes": 2,
+   "routes_used": [
+    "2509",
+    "3248"
+   ]
+  },
+  "fl_fqi_nolease_k1.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "denominator_sum": 0.1522039457,
+     "mean": 0.0,
+     "n": 2,
+     "nan_replicates": 0,
+     "numerator_sum": 0.0
+    },
+    "driving_score": {
+     "ci90": [
+      13.61,
+      100.0
+     ],
+     "ci95": [
+      13.61,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 56.805,
+     "median": 56.805,
+     "min": 13.61,
+     "n": 2
+    },
+    "infractions_per_km": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    },
+    "route_completion": {
+     "ci90": [
+      13.61,
+      100.0
+     ],
+     "ci95": [
+      13.61,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 56.805,
+     "median": 56.805,
+     "min": 13.61,
+     "n": 2
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      1.0
+     ],
+     "ci95": [
+      0.0,
+      1.0
+     ],
+     "max": 1.0,
+     "mean": 0.5,
+     "median": 0.5,
+     "min": 0.0,
+     "n": 2
+    }
+   },
+   "n_routes": 2,
+   "routes_used": [
+    "2509",
+    "3248"
+   ]
+  },
+  "fl_full_k1.0_s12": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      36.61702745860175,
+      36.61702745860175
+     ],
+     "ci95": [
+      36.61702745860175,
+      36.61702745860175
+     ],
+     "max": 36.61702745860175,
+     "mean": 36.61702745860175,
+     "median": 36.61702745860175,
+     "min": 36.61702745860175,
+     "n": 1
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      36.61702745860175,
+      36.61702745860175
+     ],
+     "ci95": [
+      36.61702745860175,
+      36.61702745860175
+     ],
+     "denominator_sum": 0.054619398099999994,
+     "mean": 36.61702745860175,
+     "n": 1,
+     "nan_replicates": 0,
+     "numerator_sum": 2.0
+    },
+    "driving_score": {
+     "ci90": [
+      24.467439,
+      24.467439
+     ],
+     "ci95": [
+      24.467439,
+      24.467439
+     ],
+     "max": 24.467439,
+     "mean": 24.467439,
+     "median": 24.467439,
+     "min": 24.467439,
+     "n": 1
+    },
+    "infractions_per_km": {
+     "ci90": [
+      54.925541187902624,
+      54.925541187902624
+     ],
+     "ci95": [
+      54.925541187902624,
+      54.925541187902624
+     ],
+     "max": 54.925541187902624,
+     "mean": 54.925541187902624,
+     "median": 54.925541187902624,
+     "min": 54.925541187902624,
+     "n": 1
+    },
+    "route_completion": {
+     "ci90": [
+      69.47,
+      69.47
+     ],
+     "ci95": [
+      69.47,
+      69.47
+     ],
+     "max": 69.47,
+     "mean": 69.47,
+     "median": 69.47,
+     "min": 69.47,
+     "n": 1
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 1
+    }
+   },
+   "n_routes": 1,
+   "routes_used": [
+    "2050"
+   ]
+  },
+  "fl_full_k1.5_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      0.0,
+      15.424005922818274
+     ],
+     "ci95": [
+      0.0,
+      15.424005922818274
+     ],
+     "max": 15.424005922818274,
+     "mean": 7.712002961409137,
+     "median": 7.712002961409137,
+     "min": 0.0,
+     "n": 2
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      0.0,
+      15.424005922818274
+     ],
+     "ci95": [
+      0.0,
+      15.424005922818274
+     ],
+     "denominator_sum": 0.0699597745,
+     "mean": 14.293928291607058,
+     "n": 2,
+     "nan_replicates": 0,
+     "numerator_sum": 1.0
+    },
+    "driving_score": {
+     "ci90": [
+      3.85,
+      65.0
+     ],
+     "ci95": [
+      3.85,
+      65.0
+     ],
+     "max": 65.0,
+     "mean": 34.425,
+     "median": 34.425,
+     "min": 3.85,
+     "n": 2
+    },
+    "infractions_per_km": {
+     "ci90": [
+      0.0,
+      15.424005922818274
+     ],
+     "ci95": [
+      0.0,
+      15.424005922818274
+     ],
+     "max": 15.424005922818274,
+     "mean": 7.712002961409137,
+     "median": 7.712002961409137,
+     "min": 0.0,
+     "n": 2
+    },
+    "route_completion": {
+     "ci90": [
+      3.85,
+      100.0
+     ],
+     "ci95": [
+      3.85,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 51.925,
+     "median": 51.925,
+     "min": 3.85,
+     "n": 2
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    }
+   },
+   "n_routes": 2,
+   "routes_used": [
+    "2390",
+    "3248"
+   ]
+  },
+  "fl_full_k2.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      0.0,
+      31.973478281132405
+     ],
+     "ci95": [
+      0.0,
+      31.973478281132405
+     ],
+     "max": 31.973478281132405,
+     "mean": 15.986739140566202,
+     "median": 15.986739140566202,
+     "min": 0.0,
+     "n": 2
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      0.0,
+      31.973478281132405
+     ],
+     "ci95": [
+      0.0,
+      31.973478281132405
+     ],
+     "denominator_sum": 0.03440464110000001,
+     "mean": 29.06584600296847,
+     "n": 2,
+     "nan_replicates": 0,
+     "numerator_sum": 1.0
+    },
+    "driving_score": {
+     "ci90": [
+      2.35,
+      24.704601
+     ],
+     "ci95": [
+      2.35,
+      24.704601
+     ],
+     "max": 24.704601,
+     "mean": 13.5273005,
+     "median": 13.5273005,
+     "min": 2.35,
+     "n": 2
+    },
+    "infractions_per_km": {
+     "ci90": [
+      0.0,
+      63.94695656226481
+     ],
+     "ci95": [
+      0.0,
+      63.94695656226481
+     ],
+     "max": 63.94695656226481,
+     "mean": 31.973478281132405,
+     "median": 31.973478281132405,
+     "min": 0.0,
+     "n": 2
+    },
+    "route_completion": {
+     "ci90": [
+      2.35,
+      48.24
+     ],
+     "ci95": [
+      2.35,
+      48.24
+     ],
+     "max": 48.24,
+     "mean": 25.295,
+     "median": 25.295,
+     "min": 2.35,
+     "n": 2
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    }
+   },
+   "n_routes": 2,
+   "routes_used": [
+    "2390",
+    "3248"
+   ]
+  },
+  "fl_global_shield_k1.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      3.1724881824815205,
+      66.05099710755258
+     ],
+     "ci95": [
+      0.0,
+      94.31776338760659
+     ],
+     "max": 94.31776338760659,
+     "mean": 34.61174264501705,
+     "median": 9.517464547444561,
+     "min": 0.0,
+     "n": 3
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      3.8121959773708047,
+      48.94683140282402
+     ],
+     "ci95": [
+      0.0,
+      94.31776338760659
+     ],
+     "denominator_sum": 0.22610282669999998,
+     "mean": 22.113832334498632,
+     "n": 3,
+     "nan_replicates": 0,
+     "numerator_sum": 5.0
+    },
+    "driving_score": {
+     "ci90": [
+      24.962182666666667,
+      74.87532800000001
+     ],
+     "ci95": [
+      7.443274,
+      82.312992
+     ],
+     "max": 82.312992,
+     "mean": 49.91875533333333,
+     "median": 60.0,
+     "min": 7.443274,
+     "n": 3
+    },
+    "infractions_per_km": {
+     "ci90": [
+      10.584617860878147,
+      98.5574048835217
+     ],
+     "ci95": [
+      9.517464547444561,
+      141.47664508140988
+     ],
+     "max": 141.47664508140988,
+     "mean": 54.571011372199926,
+     "median": 12.718924487745317,
+     "min": 9.517464547444561,
+     "n": 3
+    },
+    "route_completion": {
+     "ci90": [
+      71.99333333333334,
+      100.0
+     ],
+     "ci95": [
+      57.99,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 85.99666666666667,
+     "median": 100.0,
+     "min": 57.99,
+     "n": 3
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 3
+    }
+   },
+   "n_routes": 3,
+   "routes_used": [
+    "2050",
+    "2204",
+    "2286"
+   ]
+  },
+  "fl_heuristic_k1.0_s12": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 1
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "denominator_sum": 0.078623,
+     "mean": 0.0,
+     "n": 1,
+     "nan_replicates": 0,
+     "numerator_sum": 0.0
+    },
+    "driving_score": {
+     "ci90": [
+      98.913723,
+      98.913723
+     ],
+     "ci95": [
+      98.913723,
+      98.913723
+     ],
+     "max": 98.913723,
+     "mean": 98.913723,
+     "median": 98.913723,
+     "min": 98.913723,
+     "n": 1
+    },
+    "infractions_per_km": {
+     "ci90": [
+      12.718924487745317,
+      12.718924487745317
+     ],
+     "ci95": [
+      12.718924487745317,
+      12.718924487745317
+     ],
+     "max": 12.718924487745317,
+     "mean": 12.718924487745317,
+     "median": 12.718924487745317,
+     "min": 12.718924487745317,
+     "n": 1
+    },
+    "route_completion": {
+     "ci90": [
+      100.0,
+      100.0
+     ],
+     "ci95": [
+      100.0,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 100.0,
+     "median": 100.0,
+     "min": 100.0,
+     "n": 1
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 1
+    }
+   },
+   "n_routes": 1,
+   "routes_used": [
+    "2050"
+   ]
+  },
+  "fl_heuristic_k1.5_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "denominator_sum": 0.068961247,
+     "mean": 0.0,
+     "n": 2,
+     "nan_replicates": 0,
+     "numerator_sum": 0.0
+    },
+    "driving_score": {
+     "ci90": [
+      3.1,
+      100.0
+     ],
+     "ci95": [
+      3.1,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 51.55,
+     "median": 51.55,
+     "min": 3.1,
+     "n": 2
+    },
+    "infractions_per_km": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    },
+    "route_completion": {
+     "ci90": [
+      3.1,
+      100.0
+     ],
+     "ci95": [
+      3.1,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 51.55,
+     "median": 51.55,
+     "min": 3.1,
+     "n": 2
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      1.0
+     ],
+     "ci95": [
+      0.0,
+      1.0
+     ],
+     "max": 1.0,
+     "mean": 0.5,
+     "median": 0.5,
+     "min": 0.0,
+     "n": 2
+    }
+   },
+   "n_routes": 2,
+   "routes_used": [
+    "2390",
+    "3248"
+   ]
+  },
+  "fl_heuristic_k2.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      0.0,
+      36.257653791298246
+     ],
+     "ci95": [
+      0.0,
+      36.257653791298246
+     ],
+     "max": 36.257653791298246,
+     "mean": 18.128826895649123,
+     "median": 18.128826895649123,
+     "min": 0.0,
+     "n": 2
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      0.0,
+      36.257653791298246
+     ],
+     "ci95": [
+      0.0,
+      36.257653791298246
+     ],
+     "denominator_sum": 0.030709103100000003,
+     "mean": 32.563634201351846,
+     "n": 2,
+     "nan_replicates": 0,
+     "numerator_sum": 1.0
+    },
+    "driving_score": {
+     "ci90": [
+      2.35,
+      23.980745
+     ],
+     "ci95": [
+      2.35,
+      23.980745
+     ],
+     "max": 23.980745,
+     "mean": 13.1653725,
+     "median": 13.1653725,
+     "min": 2.35,
+     "n": 2
+    },
+    "infractions_per_km": {
+     "ci90": [
+      0.0,
+      72.51530758259649
+     ],
+     "ci95": [
+      0.0,
+      72.51530758259649
+     ],
+     "max": 72.51530758259649,
+     "mean": 36.257653791298246,
+     "median": 36.257653791298246,
+     "min": 0.0,
+     "n": 2
+    },
+    "route_completion": {
+     "ci90": [
+      2.35,
+      42.54
+     ],
+     "ci95": [
+      2.35,
+      42.54
+     ],
+     "max": 42.54,
+     "mean": 22.445,
+     "median": 22.445,
+     "min": 2.35,
+     "n": 2
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    }
+   },
+   "n_routes": 2,
+   "routes_used": [
+    "2390",
+    "3248"
+   ]
+  },
+  "fl_risk_k1.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "denominator_sum": 0.1101957745,
+     "mean": 0.0,
+     "n": 2,
+     "nan_replicates": 0,
+     "numerator_sum": 0.0
+    },
+    "driving_score": {
+     "ci90": [
+      3.85,
+      100.0
+     ],
+     "ci95": [
+      3.85,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 51.925,
+     "median": 51.925,
+     "min": 3.85,
+     "n": 2
+    },
+    "infractions_per_km": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 2
+    },
+    "route_completion": {
+     "ci90": [
+      3.85,
+      100.0
+     ],
+     "ci95": [
+      3.85,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 51.925,
+     "median": 51.925,
+     "min": 3.85,
+     "n": 2
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      1.0
+     ],
+     "ci95": [
+      0.0,
+      1.0
+     ],
+     "max": 1.0,
+     "mean": 0.5,
+     "median": 0.5,
+     "min": 0.0,
+     "n": 2
+    }
+   },
+   "n_routes": 2,
+   "routes_used": [
+    "2286",
+    "3248"
+   ]
+  }
+ },
+ "outputs": {
+  "comparisons.csv": "93b96754f14f8327ee7df88149f36d91728e5ac1e4632e01b4a07ed07ee32958",
+  "contrasts.csv": "7d1df3179460bb872286342d040a87f0730bfcdeaf0074ed904a05945d395b7b",
+  "differences.csv": "439c8c73940ba42dd36d37bc37b9ac99e281b1bc9e93c31fcbad2b69de9bcb9a",
+  "paired.csv": "6cb9b0f2ccef0a204fbfd205697c6cafb09717535ebbca3b6cdc1d302dd5fbd7",
+  "runs.csv": "ed5d5b0ed5dc298fe1235fafb840cf1327b57a1b1c42540fa46ab8973b3f105a",
+  "table_i.csv": "bea29faca7884ef91fb97bb13d194e4b63492c91b3da5dd9e1dae06cbd69eaa6"
+ },
+ "queues": [
+  {
+   "queue": "outputs/framelease_v4/queue_p4",
+   "status_sha256": "4550f0e35b2a25ab87be929cf86ea214501ed7c65fa21dfc635727d134b84460",
+   "unparsed_status_lines": 0
+  }
+ ],
+ "route_table": {
+  "n_test": 44,
+  "path": "outputs/framelease_v4/protocol/route_split.json",
+  "registered": true,
+  "sha256": "555f6869cb62d89082efc0fefc8f125ee133b16fd36a6fcf9f68bb1269fa527e"
+ },
+ "runs": {
+  "by_status": {
+   "no_valid_record": 1,
+   "pending": 505,
+   "usable": 126
+  },
+  "consistency_notes": [],
+  "job_lines": 632
+ },
+ "s_coll": [
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "fixed_deep_k1.0_s11",
+   "better": "lower",
+   "ci90": [
+    -17.50984662899183,
+    2.0348927040153244
+   ],
+   "ci95": [
+    -19.646277423506174,
+    3.5262120136271076
+   ],
+   "contrast": "fl_full_minus_fixed_deep_k1.0_s11_all",
+   "correction": "Holm over 4",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "S-coll",
+   "grid": 0.01,
+   "label": "inconclusive",
+   "mean": -7.119236037660565,
+   "mean_a": 13.409411865618301,
+   "mean_b": 20.52864790327887,
+   "metric": "collisions_per_km",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 6,
+   "n_positive": 2,
+   "n_zero": 6,
+   "other": "fixed_deep",
+   "p_adjusted": 1.0,
+   "p_mc": 0.28957355213223934,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 0.2890625,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "fast_only_k1.0_s11",
+   "better": "lower",
+   "ci90": [
+    -3.910639013001658,
+    10.493508996285813
+   ],
+   "ci95": [
+    -4.9474846157302315,
+    12.21841342806753
+   ],
+   "contrast": "fl_full_minus_fast_only_k1.0_s11_all",
+   "correction": "Holm over 4",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "S-coll",
+   "grid": 0.01,
+   "label": "inconclusive",
+   "mean": 2.9700500389528317,
+   "mean_a": 13.409411865618301,
+   "mean_b": 10.43936182666547,
+   "metric": "collisions_per_km",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 4,
+   "n_positive": 4,
+   "n_zero": 6,
+   "other": "fast_only",
+   "p_adjusted": 1.0,
+   "p_mc": 0.5702521487392563,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 0.5703125,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "age_only_k1.0_s11",
+   "better": "lower",
+   "ci90": [
+    -10.136790747537264,
+    2.788833612446473
+   ],
+   "ci95": [
+    -11.495179396567272,
+    3.895852389452505
+   ],
+   "contrast": "fl_full_minus_age_only_k1.0_s11_all",
+   "correction": "Holm over 4",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "S-coll",
+   "grid": 0.01,
+   "label": "inconclusive",
+   "mean": -3.521643465344346,
+   "mean_a": 13.409411865618301,
+   "mean_b": 16.931055330962643,
+   "metric": "collisions_per_km",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 5,
+   "n_positive": 4,
+   "n_zero": 5,
+   "other": "age_only",
+   "p_adjusted": 1.0,
+   "p_mc": 0.3995630021849891,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 0.40234375,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "event_triggered_k1.0_s11",
+   "better": "lower",
+   "ci90": [
+    -3.869108705865741,
+    9.297271552932322
+   ],
+   "ci95": [
+    -4.701549858216478,
+    10.849004095982592
+   ],
+   "contrast": "fl_full_minus_event_triggered_k1.0_s11_all",
+   "correction": "Holm over 4",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "S-coll",
+   "grid": 0.01,
+   "label": "inconclusive",
+   "mean": 2.026377969782242,
+   "mean_a": 13.409411865618301,
+   "mean_b": 11.38303389583606,
+   "metric": "collisions_per_km",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 5,
+   "n_positive": 5,
+   "n_zero": 4,
+   "other": "event_triggered",
+   "p_adjusted": 1.0,
+   "p_mc": 0.7356463217683912,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 0.736328125,
+   "rounding_ties": 0
+  }
+ ],
+ "schema": "framelease_v4.verify_independent/1",
+ "scope": {
+  "not_verified": [
+   "GPU usage",
+   "DMR",
+   "action age p50",
+   "action age p95",
+   "fallback ratio",
+   "EIR",
+   "P_both",
+   "closed-loop R_cond (note)"
+  ],
+  "rule": "the not_verified Table I columns are not recomputed here and may not enter the paper on this verification (Sec. 9.12)",
+  "verified": [
+   "DS (mean, 95% CI)",
+   "SR",
+   "RC (note)",
+   "collisions/km (pooled, route-cluster CI; route mean)",
+   "infractions/km (route mean)",
+   "H1 contrasts and findings",
+   "S-coll",
+   "SR / RC / infractions/km contrasts (secondary)"
+  ]
+ },
+ "script": "framelease_v4/analysis/verify_independent.py",
+ "script_sha256": "4935152684abcfdaef547438772bb041f323344dcbfe636d41b2a161ff149bff",
+ "secondary": [
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "fixed_deep_k1.0_s11",
+   "better": "higher",
+   "ci90": [
+    0.0,
+    0.21428571428571427
+   ],
+   "ci95": [
+    0.0,
+    0.21428571428571427
+   ],
+   "contrast": "fl_full_minus_fixed_deep_k1.0_s11_all",
+   "correction": "none",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "secondary",
+   "grid": 0.0001,
+   "label": "inconclusive",
+   "mean": 0.07142857142857142,
+   "mean_a": 0.21428571428571427,
+   "mean_b": 0.14285714285714285,
+   "metric": "success",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 0,
+   "n_positive": 1,
+   "n_zero": 13,
+   "other": "fixed_deep",
+   "p_adjusted": 1.0,
+   "p_mc": 1.0,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 1.0,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "fast_only_k1.0_s11",
+   "better": "higher",
+   "ci90": [
+    -0.2857142857142857,
+    0.14285714285714285
+   ],
+   "ci95": [
+    -0.2857142857142857,
+    0.14285714285714285
+   ],
+   "contrast": "fl_full_minus_fast_only_k1.0_s11_all",
+   "correction": "none",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "secondary",
+   "grid": 0.0001,
+   "label": "inconclusive",
+   "mean": -0.07142857142857142,
+   "mean_a": 0.21428571428571427,
+   "mean_b": 0.2857142857142857,
+   "metric": "success",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 2,
+   "n_positive": 1,
+   "n_zero": 11,
+   "other": "fast_only",
+   "p_adjusted": 1.0,
+   "p_mc": 1.0,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 1.0,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "age_only_k1.0_s11",
+   "better": "higher",
+   "ci90": [
+    -0.2857142857142857,
+    0.14285714285714285
+   ],
+   "ci95": [
+    -0.2857142857142857,
+    0.14285714285714285
+   ],
+   "contrast": "fl_full_minus_age_only_k1.0_s11_all",
+   "correction": "none",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "secondary",
+   "grid": 0.0001,
+   "label": "inconclusive",
+   "mean": -0.07142857142857142,
+   "mean_a": 0.21428571428571427,
+   "mean_b": 0.2857142857142857,
+   "metric": "success",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 2,
+   "n_positive": 1,
+   "n_zero": 11,
+   "other": "age_only",
+   "p_adjusted": 1.0,
+   "p_mc": 1.0,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 1.0,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "event_triggered_k1.0_s11",
+   "better": "higher",
+   "ci90": [
+    0.0,
+    0.21428571428571427
+   ],
+   "ci95": [
+    0.0,
+    0.21428571428571427
+   ],
+   "contrast": "fl_full_minus_event_triggered_k1.0_s11_all",
+   "correction": "none",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "secondary",
+   "grid": 0.0001,
+   "label": "inconclusive",
+   "mean": 0.07142857142857142,
+   "mean_a": 0.21428571428571427,
+   "mean_b": 0.14285714285714285,
+   "metric": "success",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 0,
+   "n_positive": 1,
+   "n_zero": 13,
+   "other": "event_triggered",
+   "p_adjusted": 1.0,
+   "p_mc": 1.0,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 1.0,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "fixed_deep_k1.0_s11",
+   "better": "higher",
+   "ci90": [
+    -20.445892857142855,
+    9.18642857142857
+   ],
+   "ci95": [
+    -23.328178571428555,
+    11.969178571428563
+   ],
+   "contrast": "fl_full_minus_fixed_deep_k1.0_s11_all",
+   "correction": "none",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "secondary",
+   "grid": 0.01,
+   "label": "inconclusive",
+   "mean": -5.782857142857145,
+   "mean_a": 76.5,
+   "mean_b": 82.28285714285713,
+   "metric": "route_completion",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 4,
+   "n_positive": 3,
+   "n_zero": 7,
+   "other": "fixed_deep",
+   "p_adjusted": 0.515625,
+   "p_mc": 0.5154074229628852,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 0.515625,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "fast_only_k1.0_s11",
+   "better": "higher",
+   "ci90": [
+    -29.851428571428574,
+    -0.5214285714285732
+   ],
+   "ci95": [
+    -32.652857142857144,
+    1.7507142857142861
+   ],
+   "contrast": "fl_full_minus_fast_only_k1.0_s11_all",
+   "correction": "none",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "secondary",
+   "grid": 0.01,
+   "label": "inconclusive",
+   "mean": -14.054285714285713,
+   "mean_a": 76.5,
+   "mean_b": 90.55428571428571,
+   "metric": "route_completion",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 3,
+   "n_positive": 2,
+   "n_zero": 9,
+   "other": "fast_only",
+   "p_adjusted": 0.25,
+   "p_mc": 0.24911875440622797,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 0.25,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "age_only_k1.0_s11",
+   "better": "higher",
+   "ci90": [
+    -30.11285714285714,
+    0.3778571428571418
+   ],
+   "ci95": [
+    -32.988142857142854,
+    2.779285714285713
+   ],
+   "contrast": "fl_full_minus_age_only_k1.0_s11_all",
+   "correction": "none",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "secondary",
+   "grid": 0.01,
+   "label": "inconclusive",
+   "mean": -13.892142857142858,
+   "mean_a": 76.5,
+   "mean_b": 90.39214285714286,
+   "metric": "route_completion",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 4,
+   "n_positive": 2,
+   "n_zero": 8,
+   "other": "age_only",
+   "p_adjusted": 0.21875,
+   "p_mc": 0.21814890925545372,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 0.21875,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "event_triggered_k1.0_s11",
+   "better": "higher",
+   "ci90": [
+    -25.322857142857142,
+    0.4471428571428565
+   ],
+   "ci95": [
+    -28.619285714285716,
+    1.9789642857142684
+   ],
+   "contrast": "fl_full_minus_event_triggered_k1.0_s11_all",
+   "correction": "none",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "secondary",
+   "grid": 0.01,
+   "label": "inconclusive",
+   "mean": -11.270000000000001,
+   "mean_a": 76.5,
+   "mean_b": 87.77,
+   "metric": "route_completion",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 4,
+   "n_positive": 1,
+   "n_zero": 9,
+   "other": "event_triggered",
+   "p_adjusted": 0.3125,
+   "p_mc": 0.3112734436327818,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 0.3125,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "fixed_deep_k1.0_s11",
+   "better": "lower",
+   "ci90": [
+    -21.709363416146832,
+    1.5780213943146169
+   ],
+   "ci95": [
+    -24.119577397786234,
+    3.4617828990324
+   ],
+   "contrast": "fl_full_minus_fixed_deep_k1.0_s11_all",
+   "correction": "none",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "secondary",
+   "grid": 0.01,
+   "label": "inconclusive",
+   "mean": -9.383407563799782,
+   "mean_a": 18.63271043116794,
+   "mean_b": 28.016117994967722,
+   "metric": "infractions_per_km",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 6,
+   "n_positive": 2,
+   "n_zero": 6,
+   "other": "fixed_deep",
+   "p_adjusted": 0.2421875,
+   "p_mc": 0.24265378673106636,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 0.2421875,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "fast_only_k1.0_s11",
+   "better": "lower",
+   "ci90": [
+    -5.6813099661191,
+    13.431667445846552
+   ],
+   "ci95": [
+    -7.218865917960559,
+    15.685529503520943
+   ],
+   "contrast": "fl_full_minus_fast_only_k1.0_s11_all",
+   "correction": "none",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "secondary",
+   "grid": 0.01,
+   "label": "inconclusive",
+   "mean": 3.1279698542783767,
+   "mean_a": 18.63271043116794,
+   "mean_b": 15.504740576889564,
+   "metric": "infractions_per_km",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 4,
+   "n_positive": 4,
+   "n_zero": 6,
+   "other": "fast_only",
+   "p_adjusted": 0.7109375,
+   "p_mc": 0.7108614456927715,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 0.7109375,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "age_only_k1.0_s11",
+   "better": "lower",
+   "ci90": [
+    -13.926340457225953,
+    0.5183096962411108
+   ],
+   "ci95": [
+    -15.374175068844872,
+    1.8487343317853655
+   ],
+   "contrast": "fl_full_minus_age_only_k1.0_s11_all",
+   "correction": "none",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "secondary",
+   "grid": 0.01,
+   "label": "inconclusive",
+   "mean": -6.42798020809154,
+   "mean_a": 18.63271043116794,
+   "mean_b": 25.060690639259484,
+   "metric": "infractions_per_km",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 7,
+   "n_positive": 2,
+   "n_zero": 5,
+   "other": "age_only",
+   "p_adjusted": 0.1953125,
+   "p_mc": 0.19307903460482698,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 0.1953125,
+   "rounding_ties": 0
+  },
+  {
+   "a": "fl_full_k1.0_s11",
+   "b": "event_triggered_k1.0_s11",
+   "better": "lower",
+   "ci90": [
+    -11.406857422991676,
+    4.170430876807571
+   ],
+   "ci95": [
+    -12.568763483263318,
+    6.093406343658695
+   ],
+   "contrast": "fl_full_minus_event_triggered_k1.0_s11_all",
+   "correction": "none",
+   "dropped_routes": {
+    "14194": "a: pending; b: pending",
+    "14842": "a: pending; b: pending",
+    "1711": "a: pending; b: pending",
+    "1773": "a: pending; b: pending",
+    "17752": "a: pending; b: pending",
+    "1790": "a: pending; b: pending",
+    "1825": "a: pending; b: pending",
+    "1852": "a: pending; b: pending",
+    "1956": "a: pending; b: pending",
+    "2082": "a: pending; b: pending",
+    "2127": "a: pending; b: pending",
+    "2144": "a: pending; b: pending",
+    "2164": "a: pending; b: pending",
+    "2201": "a: pending; b: pending",
+    "2273": "a: pending; b: pending",
+    "23695": "a: pending; b: pending",
+    "2373": "a: pending; b: pending",
+    "23771": "a: pending; b: pending",
+    "23901": "a: pending; b: pending",
+    "2416": "a: pending; b: pending",
+    "2534": "a: pending; b: pending",
+    "2664": "a: pending; b: pending",
+    "2709": "a: pending; b: pending",
+    "28087": "a: pending; b: pending",
+    "28099": "a: pending; b: pending",
+    "3086": "a: pending; b: pending",
+    "3364": "a: pending; b: pending",
+    "3436": "a: pending; b: pending",
+    "3540": "a: pending; b: pending",
+    "3936": "a: pending; b: pending"
+   },
+   "family": "secondary",
+   "grid": 0.01,
+   "label": "inconclusive",
+   "mean": -4.161118403024397,
+   "mean_a": 18.63271043116794,
+   "mean_b": 22.793828834192336,
+   "metric": "infractions_per_km",
+   "n": 14,
+   "n_expected": 44,
+   "n_negative": 7,
+   "n_positive": 2,
+   "n_zero": 5,
+   "other": "event_triggered",
+   "p_adjusted": 0.4296875,
+   "p_mc": 0.4287678561607192,
+   "p_method": "exact_enumeration",
+   "p_two_sided": 0.4296875,
+   "rounding_ties": 0
+  }
+ ],
+ "settings": {
+  "alpha": 0.05,
+  "boot_seed": 20261110,
+  "enum_max_n": 22,
+  "grids": {
+   "collisions_per_km": 0.01,
+   "driving_score": 0.01,
+   "infractions_per_km": 0.01,
+   "route_completion": 0.01,
+   "success": 0.0001
+  },
+  "mc_flips": 200000,
+  "mc_seed": 20261110,
+  "n_boot": 10000,
+  "registered": true
+ },
+ "source": "run directories via the runner's final records",
+ "status": "final",
+ "table_i": {
+  "age_only_k1.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      8.633981370671867,
+      25.813982176322984
+     ],
+     "ci95": [
+      7.131228937519416,
+      27.618265162488974
+     ],
+     "max": 63.06760847628658,
+     "mean": 16.931055330962643,
+     "median": 8.416886588243045,
+     "min": 0.0,
+     "n": 14
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      6.453657958814912,
+      22.565124165194504
+     ],
+     "ci95": [
+      5.417433730890078,
+      24.32942606059399
+     ],
+     "denominator_sum": 1.3073667460999998,
+     "mean": 13.768133581258452,
+     "n": 14,
+     "nan_replicates": 0,
+     "numerator_sum": 18.0
+    },
+    "driving_score": {
+     "ci90": [
+      41.104158867857144,
+      72.17774874999998
+     ],
+     "ci95": [
+      38.24119810892858,
+      74.93597414999999
+     ],
+     "max": 100.0,
+     "mean": 56.4758415,
+     "median": 53.708838,
+     "min": 7.187525,
+     "n": 14
+    },
+    "infractions_per_km": {
+     "ci90": [
+      13.575358477856845,
+      37.126278171433235
+     ],
+     "ci95": [
+      11.621936244987944,
+      39.63681258906389
+     ],
+     "max": 75.6811301715439,
+     "mean": 25.060690639259484,
+     "median": 14.406347743297607,
+     "min": 0.0,
+     "n": 14
+    },
+    "route_completion": {
+     "ci90": [
+      81.47428571428573,
+      97.91071428571429
+     ],
+     "ci95": [
+      79.4592857142857,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 90.39214285714286,
+     "median": 100.0,
+     "min": 42.54,
+     "n": 14
+    },
+    "success": {
+     "ci90": [
+      0.07142857142857142,
+      0.5
+     ],
+     "ci95": [
+      0.07142857142857142,
+      0.5
+     ],
+     "max": 1.0,
+     "mean": 0.2857142857142857,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 14
+    }
+   },
+   "n_routes": 44,
+   "routes_used": [
+    "2050",
+    "2084",
+    "2115",
+    "2204",
+    "2286",
+    "2390",
+    "2509",
+    "2790",
+    "3248",
+    "3464",
+    "3561",
+    "17563",
+    "23658",
+    "26458"
+   ]
+  },
+  "event_triggered_k1.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      5.235750188068113,
+      17.981720749886563
+     ],
+     "ci95": [
+      4.327498172016336,
+      19.528711901303584
+     ],
+     "max": 41.021153241354796,
+     "mean": 11.38303389583606,
+     "median": 7.4845357158721395,
+     "min": 0.0,
+     "n": 14
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      4.074966564381882,
+      12.779651670265833
+     ],
+     "ci95": [
+      3.4596021015573863,
+      14.10046022024318
+     ],
+     "denominator_sum": 1.2782774633999998,
+     "mean": 7.823027696507851,
+     "n": 14,
+     "nan_replicates": 0,
+     "numerator_sum": 10.0
+    },
+    "driving_score": {
+     "ci90": [
+      48.63581810357143,
+      71.57474795357142
+     ],
+     "ci95": [
+      46.62331532499999,
+      73.52342243392854
+     ],
+     "max": 100.0,
+     "mean": 60.158289785714295,
+     "median": 60.0,
+     "min": 18.04714,
+     "n": 14
+    },
+    "infractions_per_km": {
+     "ci90": [
+      11.772828850348187,
+      34.975658886348995
+     ],
+     "ci95": [
+      9.876504629379902,
+      37.497401892660214
+     ],
+     "max": 75.0377325362115,
+     "mean": 22.793828834192336,
+     "median": 9.446613164044619,
+     "min": 0.0,
+     "n": 14
+    },
+    "route_completion": {
+     "ci90": [
+      76.735,
+      96.58571428571429
+     ],
+     "ci95": [
+      74.345,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 87.77,
+     "median": 100.0,
+     "min": 35.47,
+     "n": 14
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.2857142857142857
+     ],
+     "ci95": [
+      0.0,
+      0.35714285714285715
+     ],
+     "max": 1.0,
+     "mean": 0.14285714285714285,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 14
+    }
+   },
+   "n_routes": 44,
+   "routes_used": [
+    "2050",
+    "2084",
+    "2115",
+    "2204",
+    "2286",
+    "2390",
+    "2509",
+    "2790",
+    "3248",
+    "3464",
+    "3561",
+    "17563",
+    "23658",
+    "26458"
+   ]
+  },
+  "fast_only_k1.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      4.638854811621989,
+      17.028932220168066
+     ],
+     "ci95": [
+      3.6725944362428007,
+      18.265558170584693
+     ],
+     "max": 41.021153241354796,
+     "mean": 10.43936182666547,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 14
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      4.397349451923882,
+      17.868135457135352
+     ],
+     "ci95": [
+      3.3738814070673655,
+      19.27551979198187
+     ],
+     "denominator_sum": 1.3009937444,
+     "mean": 10.761004855143714,
+     "n": 14,
+     "nan_replicates": 0,
+     "numerator_sum": 14.0
+    },
+    "driving_score": {
+     "ci90": [
+      48.59693033214286,
+      77.22848096428572
+     ],
+     "ci95": [
+      46.23374611964286,
+      79.95694977857143
+     ],
+     "max": 100.0,
+     "mean": 63.126852785714284,
+     "median": 56.644371,
+     "min": 8.435278,
+     "n": 14
+    },
+    "infractions_per_km": {
+     "ci90": [
+      7.729179703329742,
+      23.902107325262396
+     ],
+     "ci95": [
+      6.599243856590448,
+      25.446580000125827
+     ],
+     "max": 54.69487098847306,
+     "mean": 15.504740576889564,
+     "median": 11.337346810281588,
+     "min": 0.0,
+     "n": 14
+    },
+    "route_completion": {
+     "ci90": [
+      81.75142857142858,
+      97.97142857142856
+     ],
+     "ci95": [
+      79.72285714285715,
+      100.0
+     ],
+     "max": 100.0,
+     "mean": 90.55428571428571,
+     "median": 100.0,
+     "min": 43.96,
+     "n": 14
+    },
+    "success": {
+     "ci90": [
+      0.07142857142857142,
+      0.5
+     ],
+     "ci95": [
+      0.07142857142857142,
+      0.5
+     ],
+     "max": 1.0,
+     "mean": 0.2857142857142857,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 14
+    }
+   },
+   "n_routes": 44,
+   "routes_used": [
+    "2050",
+    "2084",
+    "2115",
+    "2204",
+    "2286",
+    "2390",
+    "2509",
+    "2790",
+    "3248",
+    "3464",
+    "3561",
+    "17563",
+    "23658",
+    "26458"
+   ]
+  },
+  "fixed_deep_k1.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      8.426125697505535,
+      34.295601877523616
+     ],
+     "ci95": [
+      6.845354367150603,
+      37.08383690684495
+     ],
+     "max": 90.37486944559329,
+     "mean": 20.52864790327887,
+     "median": 8.514826536663904,
+     "min": 0.0,
+     "n": 14
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      6.528100280812162,
+      23.27051850616315
+     ],
+     "ci95": [
+      5.672105505756622,
+      25.525507785461727
+     ],
+     "denominator_sum": 1.1813144598999998,
+     "mean": 13.54423444656254,
+     "n": 14,
+     "nan_replicates": 0,
+     "numerator_sum": 16.0
+    },
+    "driving_score": {
+     "ci90": [
+      42.23589335714286,
+      69.0827547892857
+     ],
+     "ci95": [
+      39.85982052321429,
+      71.47348776428572
+     ],
+     "max": 100.0,
+     "mean": 55.68419885714286,
+     "median": 60.0,
+     "min": 4.415893,
+     "n": 14
+    },
+    "infractions_per_km": {
+     "ci90": [
+      14.12023907395916,
+      43.80722335457175
+     ],
+     "ci95": [
+      12.124386064963664,
+      47.348575730846456
+     ],
+     "max": 118.08834006526844,
+     "mean": 28.016117994967722,
+     "median": 11.958480436964297,
+     "min": 0.0,
+     "n": 14
+    },
+    "route_completion": {
+     "ci90": [
+      71.6231785714286,
+      91.85285714285715
+     ],
+     "ci95": [
+      69.60126785714286,
+      93.2201785714285
+     ],
+     "max": 100.0,
+     "mean": 82.28285714285713,
+     "median": 100.0,
+     "min": 30.26,
+     "n": 14
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.2857142857142857
+     ],
+     "ci95": [
+      0.0,
+      0.35714285714285715
+     ],
+     "max": 1.0,
+     "mean": 0.14285714285714285,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 14
+    }
+   },
+   "n_routes": 44,
+   "routes_used": [
+    "2050",
+    "2084",
+    "2115",
+    "2204",
+    "2286",
+    "2390",
+    "2509",
+    "2790",
+    "3248",
+    "3464",
+    "3561",
+    "17563",
+    "23658",
+    "26458"
+   ]
+  },
+  "fl_full_k1.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      5.458684016597828,
+      21.983787456896682
+     ],
+     "ci95": [
+      4.254526689775018,
+      23.87441372591627
+     ],
+     "max": 55.1878033497639,
+     "mean": 13.409411865618301,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 14
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      3.2125111727214675,
+      13.614699618679946
+     ],
+     "ci95": [
+      2.528456797537794,
+      15.09559903751416
+     ],
+     "denominator_sum": 1.0568547479,
+     "mean": 7.569630562663625,
+     "n": 14,
+     "nan_replicates": 0,
+     "numerator_sum": 8.0
+    },
+    "driving_score": {
+     "ci90": [
+      45.39426588571429,
+      74.064776025
+     ],
+     "ci95": [
+      42.719998564285724,
+      76.81319034642857
+     ],
+     "max": 100.0,
+     "mean": 59.60436428571428,
+     "median": 56.1,
+     "min": 8.8465,
+     "n": 14
+    },
+    "infractions_per_km": {
+     "ci90": [
+      9.395368696672836,
+      28.516624439397013
+     ],
+     "ci95": [
+      7.9665944259881325,
+      30.73801687195065
+     ],
+     "max": 68.44973042670833,
+     "mean": 18.63271043116794,
+     "median": 10.907332722490388,
+     "min": 0.0,
+     "n": 14
+    },
+    "route_completion": {
+     "ci90": [
+      62.13721428571429,
+      89.48142857142857
+     ],
+     "ci95": [
+      59.432857142857145,
+      91.61499999999997
+     ],
+     "max": 100.0,
+     "mean": 76.5,
+     "median": 100.0,
+     "min": 13.61,
+     "n": 14
+    },
+    "success": {
+     "ci90": [
+      0.07142857142857142,
+      0.42857142857142855
+     ],
+     "ci95": [
+      0.0,
+      0.42857142857142855
+     ],
+     "max": 1.0,
+     "mean": 0.21428571428571427,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 14
+    }
+   },
+   "n_routes": 44,
+   "routes_used": [
+    "2050",
+    "2084",
+    "2115",
+    "2204",
+    "2286",
+    "2390",
+    "2509",
+    "2790",
+    "3248",
+    "3464",
+    "3561",
+    "17563",
+    "23658",
+    "26458"
+   ]
+  },
+  "fl_heuristic_k1.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      4.199277722005953,
+      12.841433575234404
+     ],
+     "ci95": [
+      3.534986853911001,
+      13.792921950071632
+     ],
+     "max": 28.51157706884565,
+     "mean": 8.36521141044347,
+     "median": 3.729005697920706,
+     "min": 0.0,
+     "n": 14
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      4.165825711966009,
+      12.255982863257248
+     ],
+     "ci95": [
+      3.5641158590970887,
+      13.156866921208728
+     ],
+     "denominator_sum": 1.0258198804,
+     "mean": 7.798640046711264,
+     "n": 14,
+     "nan_replicates": 0,
+     "numerator_sum": 8.0
+    },
+    "driving_score": {
+     "ci90": [
+      38.9469264,
+      67.7570484642857
+     ],
+     "ci95": [
+      36.35416801071429,
+      70.53246945357141
+     ],
+     "max": 100.0,
+     "mean": 53.44592357142858,
+     "median": 52.1,
+     "min": 3.1,
+     "n": 14
+    },
+    "infractions_per_km": {
+     "ci90": [
+      8.312862774956024,
+      20.841310889095826
+     ],
+     "ci95": [
+      7.208725950925275,
+      22.21133275115304
+     ],
+     "max": 41.52169298358626,
+     "mean": 14.39322284576174,
+     "median": 9.78931823637521,
+     "min": 0.0,
+     "n": 14
+    },
+    "route_completion": {
+     "ci90": [
+      59.180499999999995,
+      89.30642857142857
+     ],
+     "ci95": [
+      56.01571428571429,
+      91.43299999999994
+     ],
+     "max": 100.0,
+     "mean": 75.26071428571429,
+     "median": 100.0,
+     "min": 3.1,
+     "n": 14
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.2857142857142857
+     ],
+     "ci95": [
+      0.0,
+      0.35714285714285715
+     ],
+     "max": 1.0,
+     "mean": 0.14285714285714285,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 14
+    }
+   },
+   "n_routes": 44,
+   "routes_used": [
+    "2050",
+    "2084",
+    "2115",
+    "2204",
+    "2286",
+    "2390",
+    "2509",
+    "2790",
+    "3248",
+    "3464",
+    "3561",
+    "17563",
+    "23658",
+    "26458"
+   ]
+  },
+  "fl_original_k1.0_s11": {
+   "metrics": {
+    "collisions_per_km": {
+     "ci90": [
+      0.0,
+      24.124413809312394
+     ],
+     "ci95": [
+      0.0,
+      24.124413809312394
+     ],
+     "max": 104.53912650702038,
+     "mean": 8.041471269770799,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 13
+    },
+    "collisions_per_km_pooled": {
+     "ci90": [
+      0.0,
+      20.89053235925233
+     ],
+     "ci95": [
+      0.0,
+      25.075445888042584
+     ],
+     "denominator_sum": 0.31587240820000007,
+     "mean": 6.331670472254941,
+     "n": 13,
+     "nan_replicates": 0,
+     "numerator_sum": 2.0
+    },
+    "driving_score": {
+     "ci90": [
+      15.39902,
+      37.2617512
+     ],
+     "ci95": [
+      13.871106538461541,
+      39.641693623076925
+     ],
+     "max": 84.775564,
+     "mean": 25.668320307692305,
+     "median": 16.62,
+     "min": 2.13,
+     "n": 13
+    },
+    "infractions_per_km": {
+     "ci90": [
+      0.0,
+      24.124413809312394
+     ],
+     "ci95": [
+      0.0,
+      25.70924475962246
+     ],
+     "max": 104.53912650702038,
+     "mean": 8.833886744925833,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 13
+    },
+    "route_completion": {
+     "ci90": [
+      16.653846153846153,
+      39.621692307692285
+     ],
+     "ci95": [
+      15.067692307692312,
+      42.14623076923077
+     ],
+     "max": 92.39,
+     "mean": 27.416153846153847,
+     "median": 21.59,
+     "min": 2.13,
+     "n": 13
+    },
+    "success": {
+     "ci90": [
+      0.0,
+      0.0
+     ],
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "max": 0.0,
+     "mean": 0.0,
+     "median": 0.0,
+     "min": 0.0,
+     "n": 13
+    }
+   },
+   "n_routes": 44,
+   "routes_used": [
+    "2050",
+    "2084",
+    "2115",
+    "2204",
+    "2286",
+    "2390",
+    "2509",
+    "2790",
+    "3248",
+    "3464",
+    "3561",
+    "17563",
+    "26458"
+   ]
+  }
+ },
+ "tolerances": {
+  "absent": "every expected file, column and field is compared; an absent one is a difference",
+  "bootstrap_exact": "both sides with the registered resamples and seed (n_boot 10000, boot_seed 20261110): each CI endpoint within 1e-09 (the bootstrap_window is reported in the note as a diagnostic)",
+  "bootstrap_window": "otherwise an endpoint at level p lies within [q(p - delta), q(p + delta)] (+-1e-9) of this script's own replicates, delta = 5 sqrt(p (1 - p) (1 / B_mine + 1 / B_theirs)) (= 5 sqrt(2 p (1 - p) / 10000) at the registered B)",
+  "exact": "counts, route sets, labels, statements, outcome classes equal; per-route values, means, sums, medians, minima, maxima, exact and Holm-adjusted p-values within 1e-09",
+  "monte_carlo": "|p_mc - p_exact| <= 5 sqrt(p_exact (1 - p_exact) / M) + 2 / (M + 1); an empty p_mc at n > 22 is a difference",
+  "stated": "in the module docstring before any comparison was run (bootstrap_exact fixed on 2026-11-14, before any test-route input)"
+ },
+ "verdict": "AGREE"
+}

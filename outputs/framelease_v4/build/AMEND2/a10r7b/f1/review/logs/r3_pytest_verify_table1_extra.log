@@ -1,0 +1,876 @@
+............................................... [ 54%]
+........................................                                                  [100%]
+==================================== PASSES ====================================
+___________________ RunLevel.test_absent_column_listed_once ____________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 2 runs.csv rows (2 used, 0 of them without raw logs), 0 used analysis cells; comparisons 106, differences 1 (0 in values the analysis reads)
+  runs.csv                 compared     85  differences     1  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_sf6csfnl/out
+_____________________________ RunLevel.test_agree ______________________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra AGREE (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 0 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_ae72lbqv/out
+__________________________ RunLevel.test_arm_summary ___________________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra AGREE (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 74, differences 0 (0 in values the analysis reads)
+  arm_summary.csv          compared     10  differences     0  (analysis-read 0; agree within in-flight GPU bounds 1, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_1p8ml498/out
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 74, differences 3 (0 in values the analysis reads)
+  arm_summary.csv          compared     10  differences     3  (analysis-read 0; agree within in-flight GPU bounds 1, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 3; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_1p8ml498/o2
+__________________ RunLevel.test_each_perturbation_is_listed ___________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (1 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_io5wq5x6/o_dmr
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (1 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_io5wq5x6/o_action_age_p95_s
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (1 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_io5wq5x6/o_p_both
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_io5wq5x6/o_fallback_episodes
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 2 (1 in values the analysis reads)
+  runs.csv                 compared     43  differences     2  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 2; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_io5wq5x6/o_deadline_miss_ratio
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_io5wq5x6/o_fallback_by_reason
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (1 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_io5wq5x6/o_realized_invalid_tick_ratio
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_io5wq5x6/o_realized_v0_plans
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (1 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_io5wq5x6/o_realized_r_cond
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_io5wq5x6/o_realized_log_censored_plans
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_io5wq5x6/o_committed_plans
+uuuuuuuuuuu
+__________ RunLevel.test_missing_summary_of_used_run_is_a_difference ___________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 44, differences 1 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared      1  differences     1  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_13a5nfnk/out
+verify_table1_extra AGREE (development): 1 run dirs (1 recomputed), 1 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 43, differences 0 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_13a5nfnk/o2
+_____________ RunLevel.test_numerical_noise_agrees_and_gpu_bounds ______________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra AGREE (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 0 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 2, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_u61qtehd/out
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (1 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_u61qtehd/o2
+_________________________ RunLevel.test_runner_records _________________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra AGREE (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 67, differences 0 (0 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x__f1noxxa/out
+verify_table1_extra DIFFER (development): 2 run dirs (2 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 86, differences 1 (0 in values the analysis reads)
+  runner                   compared      1  differences     1  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     42  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x__f1noxxa/o2
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 67, differences 2 (0 in values the analysis reads)
+  runner                   compared      1  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared      2  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 2; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x__f1noxxa/o3
+______________________ RunLevel.test_scope_of_differences ______________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 4 (2 in values the analysis reads)
+  runs.csv                 compared     43  differences     4  (analysis-read 2; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 4; in values the analysis reads: unclassified 2; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_5r538c2s/out
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_5r538c2s/o2
+____________________ RunLevel.test_summary_json_difference _____________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     1  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_4gsw7f2n/out
+____________ RunLevel.test_unrecomputable_used_run_is_a_difference _____________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (0 recomputed), 1 runs.csv rows (1 used, 1 of them without raw logs), 0 used analysis cells; comparisons 1, differences 1 (1 in values the analysis reads)
+  run logs                 compared      1  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_ltdfnoja/out
+verify_table1_extra AGREE (development): 1 run dirs (0 recomputed), 1 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 0, differences 0 (0 in values the analysis reads)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_ltdfnoja/o2
+___________________ RunLevel.test_used_rows_without_raw_logs ___________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 0 run dirs (0 recomputed), 3 runs.csv rows (2 used, 2 of them without raw logs), 0 used analysis cells; comparisons 1, differences 1 (1 in values the analysis reads)
+  run logs                 compared      1  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_shueu7ku/out
+______________________ AnalysisLevel.test_agree_from_raw _______________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra AGREE (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 696, differences 0 (0 in values the analysis reads)
+  analysis.json            compared     23  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_epiuaso5/out
+____________ AnalysisLevel.test_analysis_column_named_by_conditions ____________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra AGREE (development): 0 run dirs (0 recomputed), 4 runs.csv rows (4 used, 4 of them without raw logs), 4 used analysis cells; comparisons 440, differences 0 (0 in values the analysis reads)
+  analysis.json            compared     23  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_njja1zhj/out
+_________________ AnalysisLevel.test_condition_mean_difference _________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 696, differences 1 (1 in values the analysis reads)
+  analysis.json            compared     23  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_ylx7exf9/out
+_______________ AnalysisLevel.test_contrast_and_pair_differences _______________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 693, differences 2 (2 in values the analysis reads)
+  analysis.json            compared     23  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     61  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 2; in values the analysis reads: unclassified 2; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_6gbrs7je/out
+______________ AnalysisLevel.test_contrast_lists_and_descriptive _______________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 664, differences 3 (3 in values the analysis reads)
+  analysis.json            compared     23  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared      1  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 3; in values the analysis reads: unclassified 3; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_wr_u4ilf/out
+__________ AnalysisLevel.test_fallback_column_substitution_is_judged ___________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 696, differences 1 (1 in values the analysis reads)
+  analysis.json            compared     23  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_5oj2hn96/out
+________________ AnalysisLevel.test_new_analysis_files_required ________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 612, differences 4 (4 in values the analysis reads)
+  analysis                 compared      3  differences     3  (analysis-read 3; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json            compared     24  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 4; in values the analysis reads: unclassified 4; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_8v0qr7rj/out
+___________________ AnalysisLevel.test_overhead_differences ____________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 696, differences 2 (2 in values the analysis reads)
+  analysis.json            compared     23  differences     2  (analysis-read 2; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 2; in values the analysis reads: unclassified 2; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_qxh28s9h/out
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 690, differences 1 (1 in values the analysis reads)
+  analysis.json            compared     17  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_qxh28s9h/o2
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 683, differences 1 (1 in values the analysis reads)
+  analysis.json            compared     10  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_qxh28s9h/o3
+__________________ AnalysisLevel.test_per_ability_differences __________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 696, differences 3 (3 in values the analysis reads)
+  analysis.json            compared     23  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     2  (analysis-read 2; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 3; in values the analysis reads: unclassified 3; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_ejpvvhmb/out
+_________________ AnalysisLevel.test_per_scenario_differences __________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 687, differences 5 (5 in values the analysis reads)
+  analysis.json            compared     23  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     40  differences     5  (analysis-read 5; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 5; in values the analysis reads: unclassified 5; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_2a0rqfla/out
+________________ AnalysisLevel.test_runs_csv_values_without_raw ________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra AGREE (development): 0 run dirs (0 recomputed), 4 runs.csv rows (4 used, 4 of them without raw logs), 4 used analysis cells; comparisons 440, differences 0 (0 in values the analysis reads)
+  analysis.json            compared     23  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_9d5v6zay/out
+verify_table1_extra DIFFER (development): 0 run dirs (0 recomputed), 4 runs.csv rows (4 used, 4 of them without raw logs), 4 used analysis cells; comparisons 444, differences 4 (4 in values the analysis reads)
+  analysis.json            compared     23  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  run logs                 compared      4  differences     4  (analysis-read 4; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 4; in values the analysis reads: unclassified 4; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_9d5v6zay/o2
+verify_table1_extra AGREE (development): 0 run dirs (0 recomputed), 4 runs.csv rows (4 used, 4 of them without raw logs), 4 used analysis cells; comparisons 440, differences 0 (0 in values the analysis reads); per-run values from runs.csv (--runs-csv-values)
+  analysis.json            compared     23  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_9d5v6zay/o3
+______________ AnalysisLevel.test_sdmr_structure_and_missing_file ______________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 625, differences 2 (2 in values the analysis reads)
+  analysis                 compared      1  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json            compared     23  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     25  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 2; in values the analysis reads: unclassified 2; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_0xzj4eyg/out
+________ AnalysisLevel.test_unpaired_route_carries_no_value_comparison _________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 3 used analysis cells; comparisons 671, differences 125 (125 in values the analysis reads)
+  analysis.json            compared     23  differences     6  (analysis-read 6; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     5  (analysis-read 5; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     8  (analysis-read 8; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences    28  (analysis-read 28; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences    19  (analysis-read 19; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     5  (analysis-read 5; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     40  differences     8  (analysis-read 8; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     8  (analysis-read 8; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     48  differences     8  (analysis-read 8; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences    28  (analysis-read 28; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 125; in values the analysis reads: unclassified 125; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_ggvqlp8b/out
+_________________ AnalysisLevel.test_validity_metrics_compared _________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 696, differences 2 (2 in values the analysis reads)
+  analysis.json            compared     23  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     80  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared      7  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared     64  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared     16  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     49  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared     56  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     84  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 2; in values the analysis reads: unclassified 2; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_t7r87v57/out
+_________ Guard.test_analysis_json_and_dropped_route_lists_are_guarded _________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_wb7280g0/o_route_table
+  registered test routes: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_wb7280g0/o_cells_used
+  registered test routes: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_wb7280g0/o_cells_not_used
+  registered test routes: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_wb7280g0/o_dropped
+  registered test routes: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_wb7280g0/o_nested
+  registered test routes: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_wb7280g0/o_number
+  registered test routes: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_wb7280g0/o_dropped_text
+  registered test routes: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_wb7280g0/o_csv
+  registered test routes: no --analysis-freeze given
+uuuuuuu
+____________ Guard.test_analysis_outputs_without_routes_fail_closed ____________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 1 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_t4999jj_/o1
+  inputs without a route: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 2 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_t4999jj_/o2
+  inputs without a route: no --analysis-freeze given
+verify_table1_extra DIFFER (development): 0 run dirs (0 recomputed), 0 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 15, differences 15 (15 in values the analysis reads)
+  analysis                 compared      8  differences     8  (analysis-read 8; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json            compared      7  differences     7  (analysis-read 7; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 15; in values the analysis reads: unclassified 15; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_t4999jj_/o3
+_________________ Guard.test_analysis_route_lists_are_guarded __________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_93hor3_f/o_per_scenario.csv
+  registered test routes: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_93hor3_f/o_paired_differences.csv
+  registered test routes: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_93hor3_f/o_per_ability.csv
+  registered test routes: no --analysis-freeze given
+uuu
+______________________ Guard.test_cells_jobs_are_covered _______________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 1 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_xjhwvqn2/o1
+  synthetic test routes: cells.csv route 990001: job job_x is not in the record
+______________ Guard.test_failed_final_job_without_run_directory _______________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra AGREE (development): 1 run dirs (1 recomputed), 2 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 0 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_21nc3ajj/o1
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 4 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_21nc3ajj/o2
+  synthetic test routes: runs.csv route 990001: job job2 is recorded (agent_crashed) without a run directory but names one
+  synthetic test routes: run_dir route 990001: run directory /tmp/R7B/vt1x_21nc3ajj/crashed is not a recorded run
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 4 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_21nc3ajj/o3
+  synthetic test routes: 1 job entries without a recorded job file, a final outcome or (outcome ok) a run directory: ['job1']
+_________________ Guard.test_input_errors_and_protected_output _________________
+----------------------------- Captured stdout call -----------------------------
+uuuu
+----------------------------- Captured stderr call -----------------------------
+verify_table1_extra: input error: /tmp/R7B/vt1x_fi6azcjj/agg/runs.csv has no job column
+verify_table1_extra: input error: no status.jsonl in runner record directory /tmp/R7B/vt1x_fi6azcjj/noqueue
+verify_table1_extra: input error: refusing to write into outputs/framelease_v4/tuning/x (a directory this script never writes)
+verify_table1_extra: input error: refusing to write into outputs/framelease_v4/queue_p1/x (a directory this script never writes)
+verify_table1_extra: input error: refusing to write into framelease_v4/analysis/x (a directory this script never writes)
+verify_table1_extra: input error: refusing to write into outputs/framelease_v4/analysis/final_x/y (a directory this script never writes)
+________________ Guard.test_inputs_without_a_route_fail_closed _________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 1 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_ggdb8uod/o1
+  inputs without a route: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 1 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_ggdb8uod/o2
+  inputs without a route: no --analysis-freeze given
+verify_table1_extra AGREE (development): 0 run dirs (0 recomputed), 1 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 0, differences 0 (0 in values the analysis reads)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_ggdb8uod/o3
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 1 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_ggdb8uod/o4
+  inputs without a route: no --analysis-freeze given
+______________ Guard.test_record_covers_runner_and_runs_csv_jobs _______________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 2 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_ozb1tczf/o1
+  synthetic test routes: runs.csv route 990001: job job1 is not in the record
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 2 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_ozb1tczf/o2
+  synthetic test routes: runs.csv route 990001: run directory /tmp/R7B/vt1x_ozb1tczf/syn is not the recorded run of job job1
+  synthetic test routes: run_dir route 990001: run directory /tmp/R7B/vt1x_ozb1tczf/syn is not a recorded run
+verify_table1_extra AGREE (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 0 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_ozb1tczf/o3
+verify_table1_extra AGREE (development): 1 run dirs (1 recomputed), 2 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 0 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_ozb1tczf/o4
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 3 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_ozb1tczf/o5
+  synthetic test routes: runs.csv route 990001: job job1 is recorded as cut but names a run directory
+______ Guard.test_registered_test_route_never_released_under_test_options ______
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_csnb2ctc/out
+  registered test routes: route_split_sha256 is not the sha256 of outputs/framelease_v4/protocol/route_split.json
+  registered test routes: Sec. 13 of framelease_v4/PROTOCOL.md does not cite the record sha256 c82f528aa458a272af719ba4c34d7c983aeaceebebac58200d390fcb3cb0a8f5
+___________ Guard.test_registered_test_route_refused_without_freeze ____________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_q7ap6wyq/out
+  registered test routes: no --analysis-freeze given
+_______________ Guard.test_route_ids_in_decimal_text_are_guarded _______________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_3ope894t/o1
+  registered test routes: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_3ope894t/o2
+  registered test routes: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_3ope894t/o3
+  registered test routes: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_3ope894t/o4
+  registered test routes: no --analysis-freeze given
+__________________ Guard.test_runner_run_directory_is_covered __________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 2 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_64i9lb3z/o1
+  synthetic test routes: runner route 990001: run directory /tmp/R7B/vt1x_64i9lb3z/run_b is not the recorded run of job jA
+verify_table1_extra AGREE (development): 1 run dirs (1 recomputed), 0 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 21, differences 0 (0 in values the analysis reads)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_64i9lb3z/o2
+uu
+________________ Guard.test_runs_csv_test_route_flag_is_guarded ________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_7uvu7dd6/out
+  registered test routes: no --analysis-freeze given
+__________ Guard.test_runs_csv_values_refused_under_the_final_record ___________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra REFUSED (Sec. 9.11): 1 registered test-route inputs, 0 inputs without a route and 0 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_rl4435bt/o1
+  --runs-csv-values is a development option; the final verification (status final) recomputes every run directory
+verify_table1_extra AGREE (final): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 0 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_rl4435bt/o2
+verify_table1_extra AGREE (development): 0 run dirs (0 recomputed), 1 runs.csv rows (1 used, 1 of them without raw logs), 0 used analysis cells; comparisons 0, differences 0 (0 in values the analysis reads); per-run values from runs.csv (--runs-csv-values)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_rl4435bt/o3
+______________ Guard.test_synthetic_test_route_grant_and_refusals ______________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 1 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_216hoebf/o0
+  synthetic test routes: no --analysis-freeze given
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 1 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_216hoebf/o1
+  synthetic test routes: Sec. 13 of /tmp/R7B/vt1x_216hoebf/PROTOCOL_dev.md does not cite the record sha256 877ff8ba2b1fa32e9e9a6250c27f369bea489c6ab0c8e62339028af034857adb
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 1 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_216hoebf/o2
+  synthetic test routes: /tmp/R7B/vt1x_216hoebf/PROTOCOL_dev.md does not equal the sha256 its seal /tmp/R7B/vt1x_216hoebf/SEAL_dev.sha256 records
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 1 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_216hoebf/o3
+  synthetic test routes: schema 'other/1' is not 'framelease_v4.analysis_freeze/1'
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 1 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_216hoebf/o4
+  synthetic test routes: trigger cut without its amendment (cut_amendment)
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 1 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_216hoebf/o5
+  synthetic test routes: route_split_sha256 is not the sha256 of /tmp/R7B/vt1x_216hoebf/split.json
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 1 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_216hoebf/o6
+  synthetic test routes: analysis code /tmp/R7B/vt1x_216hoebf/nofile.py is not on disk at the recorded sha256
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 1 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_216hoebf/o7
+  synthetic test routes: 1 job entries without a recorded job file, a final outcome or (outcome ok) a run directory: ['j']
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 1 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_216hoebf/o12
+  synthetic test routes: no freeze time (frozen)
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 1 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_216hoebf/o13
+  synthetic test routes: job_files is not a non-empty {job file: sha256} mapping
+  synthetic test routes: 1 job entries without a recorded job file, a final outcome or (outcome ok) a run directory: ['j']
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 1 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_216hoebf/o8
+  synthetic test routes: run_dir route 990001: run directory /tmp/R7B/vt1x_216hoebf/syn is not a recorded run
+verify_table1_extra AGREE (development): 1 run dirs (1 recomputed), 0 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 21, differences 0 (0 in values the analysis reads)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_216hoebf/o9
+verify_table1_extra AGREE (development): 1 run dirs (1 recomputed), 0 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 21, differences 0 (0 in values the analysis reads)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_216hoebf/o10
+verify_table1_extra REFUSED (Sec. 9.11): 0 registered test-route inputs, 0 inputs without a route and 1 synthetic test-route inputs; nothing read; guard_log.jsonl in /tmp/R7B/vt1x_216hoebf/o11
+  synthetic test routes: Sec. 13 of framelease_v4/PROTOCOL.md does not cite the record sha256 877ff8ba2b1fa32e9e9a6250c27f369bea489c6ab0c8e62339028af034857adb
+uuuuuuuuu
+___________________ Validity.test_box_distance_known_answers ___________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuu
+___________________ Validity.test_conflict_time_miss_and_eir ___________________
+----------------------------- Captured stdout call -----------------------------
+uu
+______________ Validity.test_ego_box_of_the_lease_parameter_file _______________
+----------------------------- Captured stdout call -----------------------------
+uu
+_____________ Validity.test_lateral_centre_offset_of_the_lease_box _____________
+----------------------------- Captured stdout call -----------------------------
+uu
+________________ Validity.test_lease_s_of_the_commit_is_checked ________________
+----------------------------- Captured stdout call -----------------------------
+uu
+__________________ Validity.test_moving_actor_and_handedness ___________________
+----------------------------- Captured stdout call -----------------------------
+uuuu
+__________________________ Validity.test_plans_output __________________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 22 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences    21  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 22; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_rz1m5xd1/out
+________________ Validity.test_runs_csv_comparison_with_bounds _________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 63, differences 52 (5 in values the analysis reads)
+  runs.csv                 compared     42  differences    31  (analysis-read 5; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences    21  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 52; in values the analysis reads: unclassified 5; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_n_qyt61r/o1
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 63, differences 52 (5 in values the analysis reads)
+  runs.csv                 compared     42  differences    31  (analysis-read 5; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 4)
+  summary.json             compared     21  differences    21  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 52; in values the analysis reads: unclassified 5; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_n_qyt61r/o2
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 63, differences 54 (6 in values the analysis reads)
+  runs.csv                 compared     42  differences    33  (analysis-read 6; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences    21  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 54; in values the analysis reads: unclassified 6; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_n_qyt61r/o3
+verify_table1_extra AGREE (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 0 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_n_qyt61r/o4
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (1 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 1; in values the analysis reads: unclassified 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_n_qyt61r/o5
+_______ Causes.test_agreement_within_bounds_at_the_value_of_a_convention _______
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra AGREE (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 0 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 3)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: none; in values the analysis reads: none; agreements within bounds at the value under a convention: F3 3; plans changed by F1: 0 in 0 run directories, by F3: 1 in 1 run directories
+outputs: /tmp/R7B/vt1x_jhvwh24c/out
+_____________ Causes.test_analysis_and_arm_summary_values_under_f1 _____________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 2 run dirs (2 recomputed), 2 runs.csv rows (2 used, 0 of them without raw logs), 2 used analysis cells; comparisons 155, differences 19 (13 in values the analysis reads)
+  analysis                 compared      7  differences     7  (analysis-read 7; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  arm_summary.csv          compared     10  differences     1  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  conditions.csv           compared     10  differences     4  (analysis-read 4; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared     86  differences     7  (analysis-read 2; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     42  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: F1 12, unclassified 7; in values the analysis reads: F1 6, unclassified 7; agreements within bounds at the value under a convention: none; plans changed by F1: 1 in 1 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_3mjw7qgx/out
+____________________ Causes.test_difference_without_a_cause ____________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 2 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 2; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 1 in 1 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_dheax40o/out
+_______________________ Causes.test_f1_and_f3_in_one_run _______________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 7 (2 in values the analysis reads)
+  runs.csv                 compared     43  differences     7  (analysis-read 2; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: F1 4, F1+F3 3; in values the analysis reads: F1 1, F1+F3 1; agreements within bounds at the value under a convention: none; plans changed by F1: 1 in 1 run directories, by F3: 1 in 1 run directories
+outputs: /tmp/R7B/vt1x_jtia29s_/out
+_______________ Causes.test_f1_clear_plan_ending_on_the_last_row _______________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 1 (0 in values the analysis reads)
+  runs.csv                 compared     43  differences     1  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: F1 1; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 1 in 1 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_bidc98_5/out
+___________________ Causes.test_f1_conflict_on_the_last_row ____________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 7 (2 in values the analysis reads)
+  runs.csv                 compared     43  differences     7  (analysis-read 2; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: F1 7; in values the analysis reads: F1 2; agreements within bounds at the value under a convention: none; plans changed by F1: 1 in 1 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_p0hhnml7/out
+_________________ Causes.test_f1_needs_the_offset_and_the_row __________________
+----------------------------- Captured stdout call -----------------------------
+uuuu
+____________________ Causes.test_f3_clearance_interpolation ____________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 1 runs.csv rows (1 used, 0 of them without raw logs), 0 used analysis cells; comparisons 64, differences 3 (1 in values the analysis reads)
+  runs.csv                 compared     43  differences     3  (analysis-read 1; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: F3 3; in values the analysis reads: F3 1; agreements within bounds at the value under a convention: none; plans changed by F1: 0 in 0 run directories, by F3: 1 in 1 run directories
+outputs: /tmp/R7B/vt1x_9grpv2c2/out
+________________________ Causes.test_plans_are_not_kept ________________________
+----------------------------- Captured stdout call -----------------------------
+verify_table1_extra DIFFER (development): 1 run dirs (1 recomputed), 0 runs.csv rows (0 used, 0 of them without raw logs), 0 used analysis cells; comparisons 21, differences 21 (0 in values the analysis reads)
+  summary.json             compared     21  differences    21  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: unclassified 21; in values the analysis reads: none; agreements within bounds at the value under a convention: none; plans changed by F1: 1 in 1 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/R7B/vt1x_iuvzb08w/out
+_____________________ Decoder.test_cut_and_invalid_members _____________________
+----------------------------- Captured stdout call -----------------------------
+uuu [ 96%]
+uuuuu
+____________________ RealSmokeRuns.test_agree_with_summary _____________________
+----------------------------- Captured stdout call -----------------------------
+uuuuuuuuuuuuuu
+=========================== short test summary info ============================
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::KnownAnswers::test_age_rule_arm_uses_max_age_not_deadline
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::KnownAnswers::test_commit_logged_just_after_the_tick
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::KnownAnswers::test_fallback_validity_identity_checks
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::KnownAnswers::test_lease_arm_deadline_rule_and_shield_rows_in_rule_arm
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::KnownAnswers::test_lease_arm_known_answers
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::KnownAnswers::test_no_inflight_job_is_exact
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::KnownAnswers::test_raw_data_checks
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::KnownAnswers::test_unknown_arm_and_missing_log_are_problems
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::RunLevel::test_absent_column_listed_once
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::RunLevel::test_agree
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::RunLevel::test_arm_summary
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::RunLevel::test_each_perturbation_is_listed
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::RunLevel::test_missing_summary_of_used_run_is_a_difference
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::RunLevel::test_numerical_noise_agrees_and_gpu_bounds
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::RunLevel::test_runner_records
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::RunLevel::test_scope_of_differences
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::RunLevel::test_summary_json_difference
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::RunLevel::test_unrecomputable_used_run_is_a_difference
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::RunLevel::test_used_rows_without_raw_logs
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_agree_from_raw
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_analysis_column_named_by_conditions
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_condition_mean_difference
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_contrast_and_pair_differences
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_contrast_lists_and_descriptive
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_fallback_column_substitution_is_judged
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_new_analysis_files_required
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_overhead_differences
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_per_ability_differences
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_per_scenario_differences
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_runs_csv_values_without_raw
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_sdmr_structure_and_missing_file
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_unpaired_route_carries_no_value_comparison
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisLevel::test_validity_metrics_compared
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisJsonSections::test_gpu_descriptive
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisJsonSections::test_p_both_shared_shield
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::AnalysisJsonSections::test_parse_contrast_and_condition_parts
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_analysis_json_and_dropped_route_lists_are_guarded
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_analysis_outputs_without_routes_fail_closed
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_analysis_route_lists_are_guarded
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_cells_jobs_are_covered
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_failed_final_job_without_run_directory
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_input_errors_and_protected_output
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_inputs_without_a_route_fail_closed
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_record_covers_runner_and_runs_csv_jobs
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_registered_test_route_never_released_under_test_options
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_registered_test_route_refused_without_freeze
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_route_ids_in_decimal_text_are_guarded
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_runner_run_directory_is_covered
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_runs_csv_test_route_flag_is_guarded
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_runs_csv_values_refused_under_the_final_record
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Guard::test_synthetic_test_route_grant_and_refusals
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_box_distance_known_answers
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_capture_offsets_and_the_last_actor_log_row
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_conflict_time_miss_and_eir
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_ego_box_of_the_lease_parameter_file
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_eir_ticks_within_the_resolution_of_v
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_footprint_placement_and_heading_conventions
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_h_is_deadline_minus_capture
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_heading_hold_threshold
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_heading_interpolation_across_pi_in_the_bracket
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_interpolated_poses_and_held_actors
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_interpolation_censoring_and_bounds
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_lateral_centre_offset_of_the_lease_box
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_lease_s_of_the_commit_is_checked
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_lidar_offset_of_a_turning_plan
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_moving_actor_and_handedness
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_plans_output
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_runs_csv_comparison_with_bounds
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_unlogged_plan_truncated_and_missing_log
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_v0_bound_and_a_first_unknown_sample_at_the_last_tick
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Validity::test_v0_walker_static_prop_and_hero
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Causes::test_agreement_within_bounds_at_the_value_of_a_convention
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Causes::test_analysis_and_arm_summary_values_under_f1
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Causes::test_cause_rules
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Causes::test_difference_without_a_cause
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Causes::test_f1_and_f3_in_one_run
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Causes::test_f1_clear_plan_ending_on_the_last_row
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Causes::test_f1_conflict_on_the_last_row
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Causes::test_f1_needs_the_offset_and_the_row
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Causes::test_f3_clearance_interpolation
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Causes::test_plans_are_not_kept
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Decoder::test_actor_log_with_a_cut_last_member
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Decoder::test_complete_members_equal_gzip_decompress
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Decoder::test_cut_and_invalid_members
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Independence::test_imports_are_stdlib_and_numpy_only
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::Independence::test_no_reference_to_the_checked_implementations
+PASSED framelease_v4/analysis/tests/test_verify_table1_extra.py::RealSmokeRuns::test_agree_with_summary
+87 passed, 80 subtests passed in 6.45s

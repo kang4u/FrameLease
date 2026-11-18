@@ -1,0 +1,1072 @@
+{
+ "schema": "framelease_v2.closed_loop_matrix/1",
+ "routes_xml": "third_party/UniDriveVLA-linux/Bench2Drive/bench2drive/leaderboard/data/bench2drive220.xml",
+ "routes_xml_sha256": "ffff24b3a2b8584632730fb42de7cb6036af780c3952cfef08ee8cf96a712f88",
+ "excluded_routes": {
+  "2086": "development route of the closed-loop smoke test (routes_debug.xml)"
+ },
+ "selection_rule": "one route per scenario type: lowest route id of the type, excluded ids skipped; list sorted by route id",
+ "subsets": {
+  "all": "every route",
+  "even": "index % 2 == 0",
+  "core11": "index % 4 == 0",
+  "rep15": "index % 3 == 0"
+ },
+ "order_seed": 20261107,
+ "port_base": 2500,
+ "arms": {
+  "fixed_deep_k1.0_s11": {
+   "policy": "fixed_deep",
+   "kappa": 1.0,
+   "seed": 11,
+   "runtime_params": {
+    "max_age_s": 3.0
+   },
+   "lease_params": null,
+   "expected_max_age_s": 3.0,
+   "wall_cap_s": 1500,
+   "description": "Fixed Deep (10 flow steps), kappa 1.0"
+  },
+  "fast_only_k1.0_s11": {
+   "policy": "fast_only",
+   "kappa": 1.0,
+   "seed": 11,
+   "runtime_params": {
+    "max_age_s": 3.0
+   },
+   "lease_params": null,
+   "expected_max_age_s": 3.0,
+   "wall_cap_s": 1500,
+   "description": "Fast Only (1 flow step), kappa 1.0"
+  },
+  "oracle_sync_s11": {
+   "policy": "oracle_sync",
+   "kappa": 1.0,
+   "seed": 11,
+   "runtime_params": null,
+   "lease_params": null,
+   "expected_max_age_s": null,
+   "wall_cap_s": 6600,
+   "description": "official synchronous zero-latency agent (world paused for the full model every tick)"
+  },
+  "fixed_deep_k1.5_s11": {
+   "policy": "fixed_deep",
+   "kappa": 1.5,
+   "seed": 11,
+   "runtime_params": {
+    "max_age_s": 3.0
+   },
+   "lease_params": null,
+   "expected_max_age_s": 3.0,
+   "wall_cap_s": 1500,
+   "description": "Fixed Deep, kappa 1.5"
+  },
+  "fast_only_k1.5_s11": {
+   "policy": "fast_only",
+   "kappa": 1.5,
+   "seed": 11,
+   "runtime_params": {
+    "max_age_s": 3.0
+   },
+   "lease_params": null,
+   "expected_max_age_s": 3.0,
+   "wall_cap_s": 1500,
+   "description": "Fast Only, kappa 1.5"
+  },
+  "fixed_deep_k2.0_s11": {
+   "policy": "fixed_deep",
+   "kappa": 2.0,
+   "seed": 11,
+   "runtime_params": {
+    "max_age_s": 3.0
+   },
+   "lease_params": null,
+   "expected_max_age_s": 3.0,
+   "wall_cap_s": 1500,
+   "description": "Fixed Deep, kappa 2.0"
+  },
+  "framelease_q95env_k1.0_s11": {
+   "policy": "framelease",
+   "kappa": 1.0,
+   "seed": 11,
+   "runtime_params": null,
+   "lease_params": "outputs/framelease_v2/c2_calibration/full_20261107T045343Z/lease_params_q95_envelope.json",
+   "expected_max_age_s": 2.0,
+   "wall_cap_s": 1500,
+   "description": "FrameLease, pre-registered AVL bounds lease_params_q95_envelope.json (global margin, reserve 0.2 m, H_max 2.0 s; runtime max_age_s = H_max), kappa 1.0"
+  },
+  "fixed_deep_k1.0_s12": {
+   "policy": "fixed_deep",
+   "kappa": 1.0,
+   "seed": 12,
+   "runtime_params": {
+    "max_age_s": 3.0
+   },
+   "lease_params": null,
+   "expected_max_age_s": 3.0,
+   "wall_cap_s": 1500,
+   "description": "Fixed Deep, kappa 1.0, seed 12"
+  },
+  "fast_only_k1.0_s12": {
+   "policy": "fast_only",
+   "kappa": 1.0,
+   "seed": 12,
+   "runtime_params": {
+    "max_age_s": 3.0
+   },
+   "lease_params": null,
+   "expected_max_age_s": 3.0,
+   "wall_cap_s": 1500,
+   "description": "Fast Only, kappa 1.0, seed 12"
+  },
+  "fixed_deep_age2.0_k1.0_s11": {
+   "policy": "fixed_deep",
+   "kappa": 1.0,
+   "seed": 11,
+   "runtime_params": {
+    "max_age_s": 2.0
+   },
+   "lease_params": null,
+   "expected_max_age_s": 2.0,
+   "wall_cap_s": 1500,
+   "description": "Fixed Deep, kappa 1.0, max_age_s 2.0 (cap ablation: the lease arm's H_max)"
+  }
+ },
+ "tiers": [
+  {
+   "tier": 1,
+   "file": "10_tier1.jsonl",
+   "groups": [
+    {
+     "subset": "all",
+     "arms": [
+      "fixed_deep_k1.0_s11",
+      "fast_only_k1.0_s11"
+     ]
+    }
+   ],
+   "jobs": 88
+  },
+  {
+   "tier": 2,
+   "file": "20_tier2.jsonl",
+   "groups": [
+    {
+     "subset": "even",
+     "arms": [
+      "oracle_sync_s11"
+     ]
+    }
+   ],
+   "jobs": 22
+  },
+  {
+   "tier": 3,
+   "file": "30_tier3.jsonl",
+   "groups": [
+    {
+     "subset": "all",
+     "arms": [
+      "fixed_deep_k1.5_s11",
+      "fast_only_k1.5_s11"
+     ]
+    }
+   ],
+   "jobs": 88
+  },
+  {
+   "tier": 4,
+   "file": "40_tier4.jsonl",
+   "groups": [
+    {
+     "subset": "core11",
+     "arms": [
+      "fixed_deep_k2.0_s11",
+      "framelease_q95env_k1.0_s11"
+     ]
+    }
+   ],
+   "jobs": 22
+  },
+  {
+   "tier": 5,
+   "file": "50_tier5.jsonl",
+   "groups": [
+    {
+     "subset": "rep15",
+     "arms": [
+      "fixed_deep_k1.0_s12",
+      "fast_only_k1.0_s12"
+     ]
+    },
+    {
+     "subset": "core11",
+     "arms": [
+      "fixed_deep_age2.0_k1.0_s11"
+     ]
+    }
+   ],
+   "jobs": 41
+  }
+ ],
+ "code_pins": {
+  "framelease_v2/run_closed_loop.py": "7876025b56fe18d220366d86c50feff5bf280565162e73129e15448c12cde425",
+  "framelease_v2/latency_agent.py": "285f2fc4f328d360dba2aecd84bbb7fc81c072c964ee793b2a43362e7c467bfc",
+  "framelease_v2/policies.py": "5fb8d34d8b405a668b2286452f0ec8a66b867d909b76c7c30998b779f97f6074",
+  "framelease_v2/lease.py": "d3895edfd8d8640a8514ebe8c7eb3b0efb9c32847e3614158a4562c59fe466b6",
+  "framelease_v2/geometry.py": "b26ccab28d00219b18d9dd59bce112f54917ba05c9f293cbb6357288b7954006",
+  "framelease_v2/unidrive_boxes.py": "ee2b2cea1a2496ac54b3b301399de352dde0fc9cf6c9ecebb1b676525aaec97b",
+  "framelease_common.py": "4f7328974c88703caf17d709cb238f28de543e698b8ad9ca3b4a9ae23a8ee576",
+  "stage02_real_vla.py": "a98abe92c6cf5f8ec38106ac20241bb9c4ccc61fd8ec40527dd7da8dca24fcbc",
+  "stage05_carla_closed_loop.py": "0a6142eed3b057c1c8b1ee037c25fb18750d35a575488a0992517c3a3a7d9a0b",
+  "linux/env.sh": "208260089a7726972b2b6114b4acd4cab2bd751bc989567bb70102bcc1f02e23",
+  "third_party/UniDriveVLA-linux/Bench2Drive/bench2drive/leaderboard/leaderboard/leaderboard_evaluator.py": "5cbd28779050575dcd8f86f7b0805d0791ff41000319d83e16379e902bbe358f",
+  "third_party/UniDriveVLA-linux/Bench2Drive/bench2drive/leaderboard/team_code/unidrivevla_b2d_agent.py": "96d347c1b0eacc6a5036670595b1baaed2654dd2c44e1a674564617ccae8d284",
+  "third_party/UniDriveVLA-linux/Bench2Drive/bench2drive/leaderboard/team_code/pid_controller.py": "2276269fca0befdf31a34cd3e22052495e0eac34dcbbab54ada1dea6ff71c6d6",
+  "third_party/UniDriveVLA-linux/Bench2Drive/projects/configs/unidrivevla_b2d_stage2_unified_2b.py": "39aaf2d834165d9d9a19867720b03c8817381e1b5d7111f9412c924bd2eff4af",
+  "third_party/UniDriveVLA-linux/Bench2Drive/bench2drive/leaderboard/data/bench2drive220.xml": "ffff24b3a2b8584632730fb42de7cb6036af780c3952cfef08ee8cf96a712f88",
+  "outputs/framelease_v2/c2_calibration/full_20261107T045343Z/lease_params_q95_envelope.json": "00c62aad25d041312d6ba1918d6fb5ecb41c3ea1259f58be5977abcb3cce10e8"
+ },
+ "routes": [
+  {
+   "route_id": "1711",
+   "scenario_type": "ParkingCutIn",
+   "town": "Town12",
+   "lowest_id_of_type": "1711",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "1711",
+    "18305",
+    "18311",
+    "18356",
+    "24759"
+   ],
+   "index": 0,
+   "subsets": [
+    "all",
+    "even",
+    "core11",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "1773",
+   "scenario_type": "ParkedObstacle",
+   "town": "Town12",
+   "lowest_id_of_type": "1773",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "1773",
+    "2554",
+    "24757",
+    "25318",
+    "25383"
+   ],
+   "index": 1,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "1790",
+   "scenario_type": "HazardAtSideLane",
+   "town": "Town12",
+   "lowest_id_of_type": "1790",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "1790",
+    "1792",
+    "25300",
+    "25381",
+    "25439"
+   ],
+   "index": 2,
+   "subsets": [
+    "all",
+    "even"
+   ]
+  },
+  {
+   "route_id": "1825",
+   "scenario_type": "ConstructionObstacleTwoWays",
+   "town": "Town12",
+   "lowest_id_of_type": "1825",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "1825",
+    "1833",
+    "2606",
+    "20920",
+    "25424"
+   ],
+   "index": 3,
+   "subsets": [
+    "all",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "1852",
+   "scenario_type": "AccidentTwoWays",
+   "town": "Town12",
+   "lowest_id_of_type": "1852",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "1852",
+    "2643",
+    "3410",
+    "25845",
+    "25857"
+   ],
+   "index": 4,
+   "subsets": [
+    "all",
+    "even",
+    "core11"
+   ]
+  },
+  {
+   "route_id": "1956",
+   "scenario_type": "ParkingExit",
+   "town": "Town12",
+   "lowest_id_of_type": "1956",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "1956",
+    "3514",
+    "3520",
+    "26393",
+    "26435"
+   ],
+   "index": 5,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "2050",
+   "scenario_type": "SignalizedJunctionRightTurn",
+   "town": "Town12",
+   "lowest_id_of_type": "2050",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2050",
+    "4937",
+    "26956",
+    "26966",
+    "27018"
+   ],
+   "index": 6,
+   "subsets": [
+    "all",
+    "even",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "2082",
+   "scenario_type": "OppositeVehicleRunningRedLight",
+   "town": "Town12",
+   "lowest_id_of_type": "2082",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2082",
+    "2844",
+    "2847",
+    "26944",
+    "26950"
+   ],
+   "index": 7,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "2084",
+   "scenario_type": "NonSignalizedJunctionLeftTurn",
+   "town": "Town12",
+   "lowest_id_of_type": "2084",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2084",
+    "2086",
+    "2091",
+    "2881",
+    "26990"
+   ],
+   "index": 8,
+   "subsets": [
+    "all",
+    "even",
+    "core11"
+   ]
+  },
+  {
+   "route_id": "2115",
+   "scenario_type": "NonSignalizedJunctionRightTurn",
+   "town": "Town12",
+   "lowest_id_of_type": "2115",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2115",
+    "2903",
+    "3666",
+    "3670",
+    "3676"
+   ],
+   "index": 9,
+   "subsets": [
+    "all",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "2127",
+   "scenario_type": "OppositeVehicleTakingPriority",
+   "town": "Town12",
+   "lowest_id_of_type": "2127",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2127",
+    "2129",
+    "2143",
+    "2913",
+    "3697"
+   ],
+   "index": 10,
+   "subsets": [
+    "all",
+    "even"
+   ]
+  },
+  {
+   "route_id": "2144",
+   "scenario_type": "VehicleTurningRoute",
+   "town": "Town12",
+   "lowest_id_of_type": "2144",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2144",
+    "2943",
+    "3708",
+    "3712",
+    "3717"
+   ],
+   "index": 11,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "2164",
+   "scenario_type": "VehicleTurningRoutePedestrian",
+   "town": "Town12",
+   "lowest_id_of_type": "2164",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2164",
+    "3731",
+    "3737",
+    "10857",
+    "11381"
+   ],
+   "index": 12,
+   "subsets": [
+    "all",
+    "even",
+    "core11",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "2201",
+   "scenario_type": "EnterActorFlow",
+   "town": "Town12",
+   "lowest_id_of_type": "2201",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2201",
+    "3749",
+    "11715",
+    "11755",
+    "27506"
+   ],
+   "index": 13,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "2204",
+   "scenario_type": "BlockedIntersection",
+   "town": "Town12",
+   "lowest_id_of_type": "2204",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2204",
+    "2215",
+    "2989",
+    "27494",
+    "27532"
+   ],
+   "index": 14,
+   "subsets": [
+    "all",
+    "even"
+   ]
+  },
+  {
+   "route_id": "2273",
+   "scenario_type": "MergerIntoSlowTraffic",
+   "town": "Town12",
+   "lowest_id_of_type": "2273",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2273",
+    "2283",
+    "3048",
+    "3785",
+    "3800"
+   ],
+   "index": 15,
+   "subsets": [
+    "all",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "2286",
+   "scenario_type": "HighwayCutIn",
+   "town": "Town12",
+   "lowest_id_of_type": "2286",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2286",
+    "3072",
+    "3074",
+    "3080",
+    "3813"
+   ],
+   "index": 16,
+   "subsets": [
+    "all",
+    "even",
+    "core11"
+   ]
+  },
+  {
+   "route_id": "2373",
+   "scenario_type": "VanillaSignalizedTurnEncounterRedLight",
+   "town": "Town12",
+   "lowest_id_of_type": "2373",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2373",
+    "3144",
+    "3865",
+    "3869",
+    "3876"
+   ],
+   "index": 17,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "2390",
+   "scenario_type": "VanillaNonSignalizedTurn",
+   "town": "Town12",
+   "lowest_id_of_type": "2390",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2390",
+    "2397",
+    "2403",
+    "3178",
+    "3890"
+   ],
+   "index": 18,
+   "subsets": [
+    "all",
+    "even",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "2416",
+   "scenario_type": "VanillaNonSignalizedTurnEncounterStopsign",
+   "town": "Town12",
+   "lowest_id_of_type": "2416",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2416",
+    "3184",
+    "3189",
+    "3904",
+    "3905"
+   ],
+   "index": 19,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "2509",
+   "scenario_type": "ConstructionObstacle",
+   "town": "Town12",
+   "lowest_id_of_type": "2509",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2509",
+    "2513",
+    "24367",
+    "24785",
+    "24795"
+   ],
+   "index": 20,
+   "subsets": [
+    "all",
+    "even",
+    "core11"
+   ]
+  },
+  {
+   "route_id": "2534",
+   "scenario_type": "Accident",
+   "town": "Town12",
+   "lowest_id_of_type": "2534",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2534",
+    "2539",
+    "3307",
+    "24240",
+    "24816"
+   ],
+   "index": 21,
+   "subsets": [
+    "all",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "2664",
+   "scenario_type": "ParkedObstacleTwoWays",
+   "town": "Town12",
+   "lowest_id_of_type": "2664",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2664",
+    "2668",
+    "3457",
+    "25865",
+    "25896"
+   ],
+   "index": 22,
+   "subsets": [
+    "all",
+    "even"
+   ]
+  },
+  {
+   "route_id": "2709",
+   "scenario_type": "StaticCutIn",
+   "town": "Town12",
+   "lowest_id_of_type": "2709",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2709",
+    "2715",
+    "25358",
+    "26396",
+    "26405"
+   ],
+   "index": 23,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "2790",
+   "scenario_type": "InvadingTurn",
+   "town": "Town12",
+   "lowest_id_of_type": "2790",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "2790",
+    "2802",
+    "3564",
+    "3572",
+    "3575"
+   ],
+   "index": 24,
+   "subsets": [
+    "all",
+    "even",
+    "core11",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "3086",
+   "scenario_type": "CrossingBicycleFlow",
+   "town": "Town12",
+   "lowest_id_of_type": "3086",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "3086",
+    "3090",
+    "3093",
+    "3099",
+    "3100"
+   ],
+   "index": 25,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "3248",
+   "scenario_type": "ParkingCrossingPedestrian",
+   "town": "Town13",
+   "lowest_id_of_type": "3248",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "3248",
+    "3255",
+    "18252",
+    "24206",
+    "24294"
+   ],
+   "index": 26,
+   "subsets": [
+    "all",
+    "even"
+   ]
+  },
+  {
+   "route_id": "3364",
+   "scenario_type": "YieldToEmergencyVehicle",
+   "town": "Town13",
+   "lowest_id_of_type": "3364",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "3364",
+    "3373",
+    "3378",
+    "3380",
+    "25378"
+   ],
+   "index": 27,
+   "subsets": [
+    "all",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "3436",
+   "scenario_type": "HazardAtSideLaneTwoWays",
+   "town": "Town13",
+   "lowest_id_of_type": "3436",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "3436",
+    "24258",
+    "25854",
+    "25951",
+    "25955"
+   ],
+   "index": 28,
+   "subsets": [
+    "all",
+    "even",
+    "core11"
+   ]
+  },
+  {
+   "route_id": "3464",
+   "scenario_type": "VehicleOpensDoorTwoWays",
+   "town": "Town13",
+   "lowest_id_of_type": "3464",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "3464",
+    "3472",
+    "3476",
+    "3482",
+    "25928"
+   ],
+   "index": 29,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "3540",
+   "scenario_type": "HardBreakRoute",
+   "town": "Town13",
+   "lowest_id_of_type": "3540",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "3540",
+    "24330",
+    "24781",
+    "26406",
+    "26456"
+   ],
+   "index": 30,
+   "subsets": [
+    "all",
+    "even",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "3561",
+   "scenario_type": "ControlLoss",
+   "town": "Town13",
+   "lowest_id_of_type": "3561",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "3561",
+    "24340",
+    "24784",
+    "24841",
+    "26418"
+   ],
+   "index": 31,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "3936",
+   "scenario_type": "SignalizedJunctionLeftTurn",
+   "town": "Town12",
+   "lowest_id_of_type": "3936",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "3936",
+    "4183",
+    "4468",
+    "4669",
+    "4683"
+   ],
+   "index": 32,
+   "subsets": [
+    "all",
+    "even",
+    "core11"
+   ]
+  },
+  {
+   "route_id": "14194",
+   "scenario_type": "PedestrianCrossing",
+   "town": "Town12",
+   "lowest_id_of_type": "14194",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "14194",
+    "25863",
+    "27515",
+    "27529",
+    "27582"
+   ],
+   "index": 33,
+   "subsets": [
+    "all",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "14842",
+   "scenario_type": "VanillaSignalizedTurnEncounterGreenLight",
+   "town": "Town12",
+   "lowest_id_of_type": "14842",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "14842",
+    "14862",
+    "14909",
+    "25968",
+    "25975"
+   ],
+   "index": 34,
+   "subsets": [
+    "all",
+    "even"
+   ]
+  },
+  {
+   "route_id": "17563",
+   "scenario_type": "SequentialLaneChange",
+   "town": "Town12",
+   "lowest_id_of_type": "17563",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "17563",
+    "17569",
+    "17598",
+    "17635",
+    "17655"
+   ],
+   "index": 35,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "17752",
+   "scenario_type": "DynamicObjectCrossing",
+   "town": "Town12",
+   "lowest_id_of_type": "17752",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "17752",
+    "24211",
+    "24224",
+    "24252",
+    "24333"
+   ],
+   "index": 36,
+   "subsets": [
+    "all",
+    "even",
+    "core11",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "23658",
+   "scenario_type": "HighwayExit",
+   "town": "Town12",
+   "lowest_id_of_type": "23658",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "23658",
+    "23659",
+    "23670",
+    "23687",
+    "24041"
+   ],
+   "index": 37,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "23695",
+   "scenario_type": "InterurbanAdvancedActorFlow",
+   "town": "Town13",
+   "lowest_id_of_type": "23695",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "23695",
+    "23700",
+    "23708",
+    "24071",
+    "24078"
+   ],
+   "index": 38,
+   "subsets": [
+    "all",
+    "even"
+   ]
+  },
+  {
+   "route_id": "23771",
+   "scenario_type": "MergerIntoSlowTrafficV2",
+   "town": "Town12",
+   "lowest_id_of_type": "23771",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "23771",
+    "24092",
+    "26394",
+    "26401",
+    "26408"
+   ],
+   "index": 39,
+   "subsets": [
+    "all",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "23901",
+   "scenario_type": "InterurbanActorFlow",
+   "town": "Town13",
+   "lowest_id_of_type": "23901",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "23901",
+    "23910",
+    "23918",
+    "23930",
+    "24098"
+   ],
+   "index": 40,
+   "subsets": [
+    "all",
+    "even",
+    "core11"
+   ]
+  },
+  {
+   "route_id": "26458",
+   "scenario_type": "T_Junction",
+   "town": "Town07",
+   "lowest_id_of_type": "26458",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "26458",
+    "28035",
+    "28048",
+    "28111",
+    "28154"
+   ],
+   "index": 41,
+   "subsets": [
+    "all"
+   ]
+  },
+  {
+   "route_id": "28087",
+   "scenario_type": "NonSignalizedJunctionLeftTurnEnterFlow",
+   "town": "Town04",
+   "lowest_id_of_type": "28087",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "28087",
+    "28093",
+    "28210",
+    "28219",
+    "28229"
+   ],
+   "index": 42,
+   "subsets": [
+    "all",
+    "even",
+    "rep15"
+   ]
+  },
+  {
+   "route_id": "28099",
+   "scenario_type": "SignalizedJunctionLeftTurnEnterFlow",
+   "town": "Town04",
+   "lowest_id_of_type": "28099",
+   "substituted_for_excluded": null,
+   "routes_of_type": [
+    "28099",
+    "28198",
+    "28241",
+    "28243",
+    "28330"
+   ],
+   "index": 43,
+   "subsets": [
+    "all"
+   ]
+  }
+ ]
+}

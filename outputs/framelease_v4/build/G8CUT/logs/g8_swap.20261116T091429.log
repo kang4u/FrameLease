@@ -1,0 +1,41 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B outputs/framelease_v4/build/G8CUT/g8_lib.py swap
+{
+ "analysis_dirs": [],
+ "cut_lines": 505,
+ "cut_lines_with_runner_record": 0,
+ "jobs_d": [
+  "reduced"
+ ],
+ "kept_final": 127,
+ "kept_lines": 127,
+ "kept_pending": 0,
+ "last_runner_exit": "2026-11-16T01:12:24+00:00",
+ "problems": [],
+ "registered_lines": 632,
+ "runner_alive": false,
+ "runner_lock_held": false,
+ "stop_file": false,
+ "waits": []
+}
+CHECK: READY (reduced)
+SWAP: done; outputs/framelease_v4/queue_p4/STOP written; the six registered job files are in jobs.d at their G6 sha256
+{
+ "analysis_dirs": [],
+ "cut_lines": 505,
+ "cut_lines_with_runner_record": 0,
+ "jobs_d": [
+  "registered"
+ ],
+ "kept_final": 127,
+ "kept_lines": 127,
+ "kept_pending": 0,
+ "last_runner_exit": "2026-11-16T01:12:24+00:00",
+ "problems": [],
+ "registered_lines": 632,
+ "runner_alive": false,
+ "runner_lock_held": false,
+ "stop_file": true,
+ "waits": []
+}
+CHECK: READY (registered)
+TIME 0.24 s, max RSS 36488 KB

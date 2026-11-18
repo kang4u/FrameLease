@@ -1,0 +1,2 @@
+REFUSED: the "D1 summary" entry (line 2249) does not cite 3621914e428f693a633f618fb4884118d8338c675535cf234861d2b19f05337f, the sha256 of outputs/framelease_v4/tuning/d1/FULL_d1_summary.json
+REFUSED: outputs/framelease_v4/p1_driver/P1_DONE.json records the D1 summary sha256 9095a11a7daaa4a982206af657829e43d475043d3102559f4c2ef137b6c8aa37, not 3621914e428f693a633f618fb4884118d8338c675535cf234861d2b19f05337f

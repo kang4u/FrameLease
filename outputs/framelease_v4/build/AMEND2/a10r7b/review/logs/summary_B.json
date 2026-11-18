@@ -1,0 +1,22 @@
+{
+ "rc": 1,
+ "stop": [
+  "STOP: in-place text found 0 times: '**Verification.** Before any number enters the paper, an independent session rec'"
+ ],
+ "unchanged": true,
+ "verify": {
+  "manifest_ok": true,
+  "seal_lines": [
+   [
+    "framelease_v4/PROTOCOL.md",
+    "OK"
+   ],
+   [
+    "outputs/framelease_v4/registration/MANIFEST.sha256",
+    "OK"
+   ]
+  ],
+  "all_ok": true,
+  "text": "manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK"
+ }
+}

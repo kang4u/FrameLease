@@ -1,0 +1,15 @@
+{
+ "A10_rc": 0,
+ "A11_check_with_gate_line": [
+  "check: pre-checks passed"
+ ],
+ "A11_apply_rc": 0,
+ "phase_entries_read": {
+  "d1_decision": 2762,
+  "p2_jobs": 2789,
+  "p2_data": 3183
+ },
+ "A11_title_line": [
+  3065
+ ]
+}

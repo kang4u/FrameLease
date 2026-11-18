@@ -1,0 +1,77 @@
+A 0: PASS EXPECTED | 0 tree seal | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+A 1: PASS EXPECTED | 1 driver gate_g1 before A10 | {"mode": "g1", "t_start": 1794710365.3344707, "result": "done", "t_end": 1794710365.3409634}
+A 2: PASS EXPECTED | 2 A10 check mode | 6.55 s, max RSS 18 MB
+A 3c: PASS EXPECTED | 3c the lock is held in one interval from the wrapper start to its end (a driver cannot tak | busy intervals [(0.0, 15.7)] s after the start; wrapper 15.7 s
+A 3: PASS EXPECTED | 3 A10 through the wrapper | exit 0; newly cited ['framelease_v4/analysis/analyze_v4.py', 'framelease_v4/analysis/figures_tables.py', 'framelease_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_analyze_v4.py', 
+A 3b: PASS EXPECTED | 3b seal after A10 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+A 4: PASS EXPECTED | 4 parsers after A10 (citing_amendment, G8 analysis_registration, a later G3 entry) | {"amendments": {"A3": [2278], "A9": [2472], "A7": [2516], "A4": [2571], "A10": [2810]}, "g8_waits": [], "prose_over_120": [], "table_rows_over_120": 9, "added_lines": 279, "after_a_later_G3_entry": {"
+A 5: PASS EXPECTED | 5 post_check A10 before the refresh | exit 3; phase driver baseline: pending refresh for 8 files (the driver refreshes at its next cycle)
+A 6: PASS EXPECTED | 6 driver baseline refresh after A10 | {"mode": "refresh", "t_start": 1794710396.1543863, "result": {"files": 207, "new": ["framelease_v4/analysis/analyze_v4.py", "framelease_v4/analysis/figures_tables.py", "framelease_v4/analysis/prop1_co
+A 6b: PASS EXPECTED | 6b post_check A10 after the refresh | exit 0; post-check A10: passed
+A 7: PASS EXPECTED | 7 driver gate_g1 after A10 | {"mode": "g1", "t_start": 1794710399.41853, "result": "done", "t_end": 1794710399.4256394}
+A 8: PASS EXPECTED | 8 A11 check mode | exit 0
+A 8b: PASS EXPECTED | 8b A11 through the wrapper | exit 0; newly cited ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']
+A 9: PASS EXPECTED | 9 parsers after A11 | {"amendments": {"A3": [2278], "A9": [2472], "A7": [2516], "A4": [2571], "A10": [2810], "A11": [3071]}, "prose_over_120": [], "table_rows_over_120": 13}
+A 9b: PASS EXPECTED | 9b post_check A11 (3 before, 0 after the refresh; refresh adds the 2 R7B files) | 3/0; {'files': 209, 'new': ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py'], 'dropped': [], 'changed': []}
+B 1: PASS EXPECTED | 1 append framelease_v4/arms/realized.py (P1 baseline) | check exit 1, wrapper exit 1: ["STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/arms/realized.py']"]
+B 2: PASS EXPECTED | 2 append framelease_v4/analysis/commit_audit.py (phase baseline only) | check exit 1, wrapper exit 1: ["STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/analysis/commit_audit.py']"]
+B 3: PASS EXPECTED | 3 remove framelease_v4/protocol/stress_bench.py (phase baseline only, missing on disk) | check exit 1, wrapper exit 1: ["STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/protocol/stress_bench.py']"]
+B 4: PASS EXPECTED | 4 a registered file absent from the sealed manifest | TOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: registered files absent from the sealed manifest: ['framelease_v4/zz_ghost.py']
+B 5: PASS EXPECTED | 5 touch_before_manifest framelease_v4/analysis/manipulation.py | exit 1; state unchanged True
+B 6: PASS EXPECTED | 6 remove_before_manifest framelease_v4/rl/RL_PROTOCOL.md | exit 1; state unchanged True
+B 6b: PASS EXPECTED | 6b every file restored: the seal verifies | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+B 7: PASS EXPECTED | 7 registered file changed between --write-manifest and --seal: exit 95, the driver sees it | exit 95; g1 done; precheck {'mode': 'precheck', 't_start': 1794710526.4703965, 'alert': "registration: 1 registered file(s) differ from the sealed manifest: ['framelease_v4/arms/realized.py']; the dri
+P 1: PASS EXPECTED | 1 the phase driver's own pre-check refuses the changed P1 job file | {"mode": "precheck", "t_start": 1794710530.1696966, "alert": "registration: 1 registered file(s) differ from the sealed manifest: ['outputs/framelease_v4/p1_jobs/FULL/b04_lease_s2.check.json']; the dr
+P 2: PASS UNEXPECTED (the review's defect no longer reproduces); P2_check.log: ok; P3_wrapper.log: ok; P4_driver_precheck_after.log: ok | 2 the applier seals it: check passes, wrapper exit 0, the sealed manifest holds the change | check exit 1; wrapper exit 1; verify manifest: 1 files differ: [('outputs/framelease_v4/p1_jobs/F; precheck after {"mode": "precheck", "t_start": 1794710552.8268425, "alert": "registration: 1 register
+K 1: PASS EXPECTED | 1 kill9_after_manifest: exit 137, sealed state restored, driver gate_g1 passes | exit 137; state unchanged True; tmp left False; g1 {"mode": "g1", "t_start": 1794710569.5455334, "result": "done", "t_end": 1794710569.5518365}; ['apply_locked: copies of the sealed files and of both 
+K 2: PASS EXPECTED | 2 kill9_in_replace: exit 137, sealed state restored, driver gate_g1 passes | exit 137; state unchanged True; tmp left False; g1 {"mode": "g1", "t_start": 1794710582.5573945, "result": "done", "t_end": 1794710582.5637093}; ['apply_locked: copies of the sealed files and of both 
+K 3: PASS UNEXPECTED (the review's defect no longer reproduces); K3_wrapper_kill9_before_seal.log: ok; K3_driver_g1.log: ok | 3 kill9_before_seal: exit 137, the wrapper releases the lock with an unsealed PROTOCOL.md; | exit 94; sealed True; g1 {"mode": "g1", "t_start": 1794710595.6472228, "result": "done", "t_end": 1794710595.6543636}
+K 3b: PASS EXPECTED | 3b the RUNBOOK hand seal gives a consistent state | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK; g1 done
+K 4: PASS UNEXPECTED (the review's defect no longer reproduces);  | 4 race | the wrapper ended before the driver stand-in started
+O 1: PASS UNEXPECTED (the review's defect no longer reproduces); O1_wrapper_kill9_during_manifest.log: ok; O3_driver_g1.log: ok | 1 orphan registration.py: the wrapper decided on the old manifest, the orphan rewrote it,  | exit 137; wrapper lines ['apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeO/outputs/framelease_v4/amendment_a10/attempt_20261115T104332_362093', 'apply_locked
+L 1: PASS EXPECTED | 1 a driver holding the lock: the wrapper waits, then seals | exit 0 after 35 s
+L 2: PASS EXPECTED | 2 lock busy longer than the wait: exit 97, nothing changed | exit 97; state unchanged True
+L 3: PASS UNEXPECTED (the review's defect no longer reproduces); L3_apply_without_wrapper_lock_held.log: ok | 3 --apply without the wrapper while another process holds the lock: the applier seals anyw | exit 1; sealed True
+T 1: PASS EXPECTED | 1 an in-place "old" twice: STOP before --write-manifest | check exit 1; wrapper exit 1
+T 2: PASS UNEXPECTED (the review's defect no longer reproduces); T2_wrapper_early_clock.log: ok | 2 entry stamped 06:30, before A3 (06:40) and G1 / G2 (06:42 / 06:43): sealed without a sto | exit 1; title ''
+T 3: PASS UNEXPECTED (the review's defect no longer reproduces); T3_check_long_line.log: ok; T3_wrapper_long_line.log: ok | 3 a filled prose line over 120 columns: sealed without a stop | template line 112 columns, filled 0 columns; check exit 1; wrapper exit 1
+T 4.1: PASS EXPECTED | 4.1 template line '* **lease_s1**, 2026-11-15 12:00 (Beijing ti': check STOP | *, 2026-11-15 12:00 (Beijing time). Probe.'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times
+T 4.2: PASS EXPECTED | 4.2 template line '* **G3 P2 data manifest** (2026-11-15 12:00,': check STOP | * (2026-11-15 12:00, Beijing time). Probe.'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times
+T 4.3: PASS EXPECTED | 4.3 template line '**Amendment A12, 2026-11-15 12:00 (Beijing t': check STOP |  2026-11-15 12:00 (Beijing time): probe.**'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times
+T 4.4: PASS EXPECTED | 4.4 template line '**Phase gates (P2-P7, FULL).**': check STOP |  problem: ['**Phase gates (P2-P7, FULL).**'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times
+T 4.5: PASS EXPECTED | 4.5 template line '**Stage selections (P1, FULL).**': check STOP | roblem: ['**Stage selections (P1, FULL).**'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times
+T 4.6: PASS EXPECTED | 4.6 template line '* Probe. Each amendment gets the date and ti': check STOP | NIFEST.sha256: OK
+STOP: template problem: [] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 1 times
+T 4.7: PASS UNEXPECTED (the review's defect no longer reproduces); T4_7_check.log: ok; T4_7_wrapper.log: ok | 4.7 line '* **lease_s1**, {{datetime}} (Beijing time).': template passes, the filled-entry | check exit 1; wrapper exit 1
+T 4.8: PASS UNEXPECTED (the review's defect no longer reproduces); T4_8_check.log: ok; T4_8_wrapper.log: ok | 4.8 line '* **G3 P2 data manifest** ({{datetime}}, Bei': template passes, the filled-entry | check exit 1; wrapper exit 1
+T 4.9: PASS UNEXPECTED (the review's defect no longer reproduces); T4_9_check.log: ok; T4_9_wrapper.log: ok | 4.9 line '**Amendment A{{manifest:files}}: probe.**': template passes, the filled-entry ch | check exit 1; wrapper exit 1
+T 4.10: PASS UNEXPECTED (the review's defect no longer reproduces); T4_10_check.log: ok; T4_10_wrapper.log: ok | 4.10 line '### 13.2 Amendments': check passes, sealed, both drivers' parsers raise an Aler | exit 1; parsed
+T 5: PASS UNEXPECTED (the review's defect no longer reproduces); T5_wrapper_empty_file.log: ok | 5 an empty file in scope: the applier reports 8 newly cited files, the driver registers 9, | exit 1; driver new 0: []; post_check 1
+S 1: PASS UNEXPECTED (the review's defect no longer reproduces); S1_wrapper_sigint_group.log: ok; S2_driver_g1.log: ok | 1 SIGINT to the process group before --seal: no "apply_locked: exit" line, PROTOCOL.md hol | wrapper exit 0; console '(output /tmp/A10A11/applier/treeS/outputs/framelease_v4/amendment_a10/apply.out)'; g1 {'mode': 'g1', 't_start': 1794710906.7737832, 'result': 'done', 't_end': 1794710906.78117
+C 1: PASS EXPECTED | 1 a file registered only by its citation in A10 (not in either baseline) changed: A11 stop | A10 exit 0; in the phase baseline False; A11 check exit 1, wrapper exit 1
+D 1: PASS EXPECTED | 1 framelease_v4/.PROTOCOL.md.entrytmp exists: wrapper exit 96, check STOP, nothing changed | exit 96 / 1
+D 2: PASS EXPECTED | 2 outputs/framelease_v4/phase_driver/protocol_txn.json exists: wrapper exit 96, check STOP | exit 96 / 1
+D 3: PASS EXPECTED | 3 outputs/framelease_v4/phase_driver/ALERT.txt exists: wrapper exit 96, check STOP, nothin | exit 96 / 1
+D 4: PASS EXPECTED | 4 outputs/framelease_v4/p1_driver/protocol_txn.json exists: wrapper exit 96, check STOP, n | exit 96 / 1
+D 5: PASS EXPECTED | 5 outputs/framelease_v4/p1_driver/ALERT.txt exists: wrapper exit 96, check STOP, nothing c | exit 96 / 1
+Y 1: PASS UNEXPECTED (the review's defect no longer reproduces); Y1_wrapper_touch_cited_after_manifest.log: ok; Y2_driver_refresh.log: ok | 1 the entry cites the new sha256 of analyze_v4.py, the sealed manifest holds the old one:  | exit 1; manifest holds the old sha256 True; entry cites the new one False; driver newly registered 0
+X 1: PASS EXPECTED | 1 proposal: A10 check and wrapper, parsers, post_check 3 -> 0 | check 6.28 s, max RSS 18 MB; wrapper exit 0, 20.11 s, max RSS 32 MB; post_check 3/0
+X 1b: PASS EXPECTED | 1b proposal: A11 after the refresh | exit 0; newly ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']
+X 1c: PASS EXPECTED | 1c proposal: A11 right after A10 (no refresh) | exit 0 / 0
+X 2: PASS EXPECTED | 2 proposal: a changed P1 job file stops the check and the wrapper | check exit 1; wrapper exit 1
+X 3: PASS EXPECTED | 3 proposal: kill9_before_seal: consistent sealed state when the lock is released, driver g | exit 94; ['apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeX3/outputs/framelease_v4/amendment_a10/attempt_20261115T105051_365646', 'apply_locked: PROTOCOL.md 
+X 4: PASS EXPECTED | 4 proposal: kill9_during_manifest: consistent sealed state when the lock is released, driv | exit 137; ['apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeX4/outputs/framelease_v4/amendment_a10/attempt_20261115T105107_365801', 'apply_locked: waited 3 s 
+X 5: PASS EXPECTED | 5 proposal: kill9_after_manifest: consistent sealed state when the lock is released, drive | exit 137; ['apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeX5/outputs/framelease_v4/amendment_a10/attempt_20261115T105125_365953', 'apply_locked: PROTOCOL.md
+X 6: PASS EXPECTED | 6 proposal: kill9_in_replace: consistent sealed state when the lock is released, driver ga | exit 137; ['apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeX6/outputs/framelease_v4/amendment_a10/attempt_20261115T105141_366102', 'apply_locked: PROTOCOL.md
+X 7: PASS EXPECTED | 7 proposal: SIGINT to the process group is ignored, the entry is sealed | exit 0; 'pplier/treeX7/outputs/framelease_v4/amendment_a10/apply.out)'
+X 8: PASS EXPECTED | 8 proposal: an unsealed PROTOCOL.md: exit 96, no copies made | exit 96
+X 9: PASS EXPECTED | 9 proposal: --apply without the lock stops | exit 1; ly runs only under framelease_v4/.protocol.lock (apply_locked.sh holds it for the whole application)
+X 10: PASS EXPECTED | 10 proposal: a clock before the last Sec. 13.2 stamp stops before --write-manifest | exit 1
+X 11: PASS EXPECTED | 11 proposal: template line '* Probe. A scratch-tree prose line, its ' stops the check | tch-tree prose line, its placeholder at the end: 10d7ea4f9516725cd94932a0618bbe5cc6a20bae60b49f4004013b3682cee54c.'] / anchor phrase 0 times
+X 12: PASS EXPECTED | 12 proposal: template line '### 13.2 Amendments' stops the check | IFEST.sha256: OK
+STOP: template problem: ['### 13.2 Amendments'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times
+X 13: PASS EXPECTED | 13 proposal: an empty file in scope: STOP (9 files would be registered), manifest restored | exit 1
+X 14: PASS EXPECTED | 14 proposal: a cited file changed after --write-manifest: STOP before PROTOCOL.md is writt | exit 1
+R2 1: PASS EXPECTED | 1 after a kill before --seal (exit 94, sealed) the wrapper again stops (entry exists); eac | exit 94 then 1; attempts ['attempt_20261115T105311_366940', 'attempt_20261115T105324_367034']
+K4R 1: PASS EXPECTED | 1 a driver cycle during the recovery: no ALERT (it waits or finds the seal); the next cycl | wrapper exit 94; during {"mode": "g1", "t_start": 1794711223.7966087, "result": "done", "t_end": 1794711223.8040957}; next {'mode': 'g1', 't_start': 1794711227.0500507, 'result': 'done', 't_end': 1794

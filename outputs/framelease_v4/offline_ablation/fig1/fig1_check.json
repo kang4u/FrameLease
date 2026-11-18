@@ -1,0 +1,32 @@
+{
+ "c1_vs_paper_figure": {
+  "paper_figure_panel_a_points": 63,
+  "max_abs_diff_m": 4.440892098500626e-16
+ },
+ "closed_loop_vs_frozen_contrasts": {
+  "k1.0_s11": {
+   "n": 44,
+   "mean": 9.09263884090909,
+   "frozen_mean": 9.09263884090909,
+   "abs_diff": 0.0
+  },
+  "k1.0_s12": {
+   "n": 15,
+   "mean": 3.906333666666667,
+   "frozen_mean": 3.906333666666667,
+   "abs_diff": 0.0
+  },
+  "k1.5_s11": {
+   "n": 44,
+   "mean": 6.467805454545453,
+   "frozen_mean": 6.467805454545453,
+   "abs_diff": 0.0
+  },
+  "k2.0_s11": {
+   "n": 11,
+   "mean": -11.176007272727274,
+   "reported_in_CLOSED_LOOP_RESULTS": -11.176
+  }
+ },
+ "pass": true
+}

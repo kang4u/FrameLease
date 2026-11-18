@@ -1,0 +1,24 @@
+== registration.py --verify (2026-11-15T05:25:43+08:00)
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+== registered baseline
+baseline files: 153 differing: 0
+== sha256 now
+a848a349c2e6b954  framelease_v4/PROTOCOL.md
+4e424763c5cea4c3  outputs/framelease_v4/registration/MANIFEST.sha256
+10f07459c468c68f  outputs/framelease_v4/registration/SEAL.sha256
+13b19e7dd458c5a6  outputs/framelease_v4/registration/REGISTRATION.json
+== changed under framelease_v4/ since the review started
+== changed under outputs/framelease_v4/ since the review started (queue_p1 and tuning/ runs excluded)
+2026-11-15 05:21:32.1204211050 outputs/framelease_v4/p1_driver/driver.log
+2026-11-15 05:21:32.1702350310 outputs/framelease_v4/pipeline_state.json
+2026-11-15 05:21:32.1714238270 outputs/framelease_v4
+== tuning/ changes (P1 runs, listed by top directory)
+    277 age_s2/age_only_A1.0_d1
+    124 age_s2/age_only_A2.5_d1
+== __pycache__ / .pyc / .pytest_cache under framelease_v4/ and build/ newer than the start
+== empty files under framelease_v4/
+framelease_v4/.protocol.lock
+framelease_v4/offline/__init__.py
+== phase_driver dir exists: no; P1_DONE: no

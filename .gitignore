@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.ipynb_checkpoints/
+*.tmp
+*.lock
+/scratch/
+/tmp/
+# large or external artifacts (see docs/EXTERNAL_FILES.md)
+checkpoints/
+third_party/
+datasets/
+outputs/framelease_v4/matrix/
+outputs/framelease_v4/fig3/
+outputs/framelease_v4/ablation/
+outputs/framelease_v4/replicates/
+outputs/framelease_v4/queue_p4/
+outputs/framelease_v4/rl_data/k*/
+outputs/framelease_v4/tuning/*/
+!outputs/framelease_v4/tuning/selection/
+!outputs/framelease_v4/tuning/d1/
+!framelease_v4/.protocol.lock

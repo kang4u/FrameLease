@@ -1,0 +1,149 @@
+review cases rerun 2026-11-15T06:23:09+08:00; step3_txn.py a778ad618c0a587a, amend_step3.sh 978c9bddfb90f934, spec 5ffa420793cb394f; AMEND_STEP3_NOW=2026-11-15 23:59
+scratch tree /tmp/AMEND3/rv/tree: 88 root entries; framelease_v4 4.1M
+symlinks into queue dirs: 0
+=== case_00_setup (06:23:10)
+R01 precheck before P1 end: exit 1 ; 3 problems: PROBLEM: outputs/framelease_v4/p1_driver/P1_DONE.json does not exist (P1 has not ended)|PROBLEM: outputs/framelease_v4/p1_driver/driver.lock names a live p1_driver.py process|PROBLEM: Sec. 13.2 has no P1 driver entry ['Tuning freeze', 'D1 summary']|
+R02 fake P1 end: exit 0 ; seals OK: 2; state 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc 
+R03 precheck after P1 end: exit 0 ; last: PASS: pre-check passed (--precheck-only; nothing was changed)
+snapshot p1end saved; state 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; verify: manifest: 1 files differ: [('framelease_v4/analysis/verify_table1_extra.py', 'a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa', '27ceb0bd600a7c802024ee28a5caaa9d44fbff832c585f92a734d98da4bcedff')] seal framelease_v4/PROTOCOL.md: OK seal outputs/framelease_v4/registration/MANIFEST.sha256: OK 
+=== case_b1_twice (06:23:51)
+B1 setup: duplicate old text appended, re-sealed: sealed: PROTOCOL.md 2d89edae0004457bc119706378a782167cd2bce1; verify: eb0bd600a7c802024ee28a5caaa9d44fbff832c585f92a734d98da4bcedff')] seal framelease_v4/PROTOCOL.md: OK seal outputs/framelease_v4/registration/MANIFEST.sha256: OK 
+B1a precheck: exit 1; PROBLEM: in-place text of A4 (Sec. 8.3, the lead sentence) found 2 times|PROBLEM: dry composition: in-place text of A4 (Sec. 8.3, the lead sentence) found 2 times|
+B1b locked alone: exit 1; FAILURE before the seal: composition: in-place text of A4 (Sec. 8.3, the lead sentence) found 2 times|
+B1b state before 2d89edae0004457b 4bfe7451a41b8530 7052ab437fc67864 c3215ce028ab3e9a ; after 2d89edae0004457b 4bfe7451a41b8530 7052ab437fc67864 c3215ce028ab3e9a ; seals OK 2
+=== case_b2_regfile (06:24:11)
+B2a (framelease_v4/protocol/p1_driver.py changed after step post_manifest_check): locked exit 1; watcher: 06:24:14 appended to /tmp/AMEND3/rv/tree/framelease_v4/protocol/p1_driver.py after step post_manifest_check
+   last journal step: "step": "restored"
+   new manifest: 221 files, sha256 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d; new in it: none; changed since the seal (unregistered): ['framelease_v4/analysis/verify_table1_extra.p|FAILURE before the seal: pre-seal check: framelease_v4/protocol/p1_driver.py (registered) changed after --write-manifest|restore: restored ['framelease_v4/PROTOCOL.md', 'outputs/framelease_v4/registration/MANIFEST.sha256']; registration.py --verify: manifest: 2 files differ: [('framelease_v4/analysis/verify_table1_extra|
+   state before 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; after 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; seal lines OK 2
+   entries in PROTOCOL.md now: 0
+B2b (framelease_v4/analysis/commit_audit.py changed after step filled): locked exit 1; watcher: 06:24:28 appended to /tmp/AMEND3/rv/tree/framelease_v4/analysis/commit_audit.py after step filled
+   last journal step: "step": "restored"
+   new manifest: 221 files, sha256 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d; new in it: none; changed since the seal (unregistered): ['framelease_v4/analysis/verify_table1_extra.p|FAILURE before the seal: pre-seal check: framelease_v4/analysis/commit_audit.py (registered) changed after --write-manifest; framelease_v4/analysis/commit_audit.py is not at its prepared sha256 7439a4|restore: restored ['framelease_v4/PROTOCOL.md', 'outputs/framelease_v4/registration/MANIFEST.sha256']; registration.py --verify: manifest: 2 files differ: [('framelease_v4/analysis/commit_audit.py', '|
+   state before 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; after 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; seal lines OK 2
+   entries in PROTOCOL.md now: 0
+B2c (framelease_v4/analysis/commit_audit.py changed after step post_manifest_check): locked exit 1; watcher: 06:24:41 appended to /tmp/AMEND3/rv/tree/framelease_v4/analysis/commit_audit.py after step post_manifest_check
+   last journal step: "step": "restored"
+   new manifest: 221 files, sha256 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d; new in it: none; changed since the seal (unregistered): ['framelease_v4/analysis/verify_table1_extra.p|FAILURE before the seal: composition: the transaction would register 39 files, expected 40: ['framelease_v4/analysis/commit_audit.py']|restore: restored ['outputs/framelease_v4/registration/MANIFEST.sha256']; registration.py --verify: manifest: 2 files differ: [('framelease_v4/analysis/commit_audit.py', '7439a4eac0986cad6a25b7395975a|
+   state before 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; after 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; seal lines OK 2
+   entries in PROTOCOL.md now: 0
+=== case_b3_partial (06:24:47)
+B3 locked under ulimit -f 200: exit 1
+   FAILURE before the seal: OSError: [Errno 27] File too large|restore: restored ['outputs/framelease_v4/registration/MANIFEST.sha256']; registration.py --verify: manifest: 1 files differ: [('framelease_v4/analysis/verify_table1_extra.py', 'a8bf57b7c23f2c9e8746ab8af116490a215e3185a7|
+   last journal step: "step": "restored"
+   204800 PROTOCOL.new.md
+   172171 PROTOCOL.sealed.md
+   state before 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; after 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; seal lines OK 2
+=== case_b4_time (06:24:57)
+B4a --datetime '2026-11-14 00:00': locked exit 1; seal lines OK 2; D1 entry: '* **D1 summary**, 2026-11-15 06:23'; A3 entry: ''
+   phase_driver --dry-run exit 0:   G0  waiting      Sec. 13.2 has no entry of Amendment(s) ['A3', 'A4', 'A7', 'A9']|  G1  blocked      waits for G0|
+B4b --datetime '2026-13-45 99:99': locked exit 1; seal lines OK 2; D1 entry: '* **D1 summary**, 2026-11-15 06:23'; A3 entry: ''
+   phase_driver --dry-run exit 0:   G0  waiting      Sec. 13.2 has no entry of Amendment(s) ['A3', 'A4', 'A7', 'A9']|  G1  blocked      waits for G0|
+=== case_b5_b6 (06:25:04)
+B5 setup: summary now: 38 passed, 21 warnings, 1 xpassed, 3 deselected, 17 subtests passed, 4 rerun in 133.66s (0:02:13) after a full collection
+B5 locked: exit 1; seal lines OK 2
+grep: /tmp/AMEND3/rv/runs/B5/entry_A3.md: 没有那个文件或目录
+cat: '/tmp/AMEND3/rv/runs/B5/entry_*.md': No such file or directory
+   lines over 120 (non-table) in the five entries: 0; in new PROTOCOL.md: 38 (before: 38)
+B6a locked: exit 1; 
+   state before 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; after 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; seal lines OK 2
+B6b locked: exit 1; 
+   state before 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; after 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; seal lines OK 2
+B6c locked: exit 1; 
+   state before 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; after 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; seal lines OK 2
+=== case_b7_groupkill (06:25:18)
+B7a (SIGTERM to process group 250082): 06:25:29 sent SIGTERM to process group 250082 after step post_manifest_check; group 250082 empty after 3.1 s; members seen: ['bash', 'rv/tree/.conda-unidrive-linux/bin/python', 'tee']
+   journal steps: begin copied manifest post_manifest_check failed restored restored 
+   amend_step3.log tail: STOP: the transaction failed before the seal and was undone: PROTOCOL.md and MANIFEST.sha256 are|     restored and both seals verify (journal step 'restored'; nothing applied). Cause: the FAILURE|     line in /tmp/AMEND3/rv/runs/B7a/amend_step3.log; journal /tmp/AMEND3/rv/runs/B7a/journal.json|
+   outer log (stdout of the group): STOP: the transaction failed before the seal and was undone: PROTOCOL.md and MANIFEST.sha256 are|     restored and both seals verify (journal step 'restored'; nothing applied). Cause: the FAILURE|     line in /tmp/AMEND3/rv/runs/B7a/amend_step3.log; journal /tmp/AMEND3/rv/runs/B7a/journal.json|
+   state before 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; after 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; seal lines OK 2
+   verify: manifest: 1 files differ: [('framelease_v4/analysis/verify_t ... seal framelease_v4/PROTOCOL.md: OK seal outputs/framelease_v4/registration/MANIFEST.sha256: OK 
+B7b (SIGINT to process group 250314): 06:25:54 sent SIGINT to process group 250314 after step post_manifest_check; group 250314 empty after 3.2 s; members seen: ['bash', 'rv/tree/.conda-unidrive-linux/bin/python', 'tee']
+   journal steps: begin copied manifest post_manifest_check failed restored restored 
+   amend_step3.log tail: STOP: the transaction failed before the seal and was undone: PROTOCOL.md and MANIFEST.sha256 are|     restored and both seals verify (journal step 'restored'; nothing applied). Cause: the FAILURE|     line in /tmp/AMEND3/rv/runs/B7b/amend_step3.log; journal /tmp/AMEND3/rv/runs/B7b/journal.json|
+   outer log (stdout of the group): STOP: the transaction failed before the seal and was undone: PROTOCOL.md and MANIFEST.sha256 are|     restored and both seals verify (journal step 'restored'; nothing applied). Cause: the FAILURE|     line in /tmp/AMEND3/rv/runs/B7b/amend_step3.log; journal /tmp/AMEND3/rv/runs/B7b/journal.json|
+   state before 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; after 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; seal lines OK 2
+   verify: manifest: 1 files differ: [('framelease_v4/analysis/verify_t ... seal framelease_v4/PROTOCOL.md: OK seal outputs/framelease_v4/registration/MANIFEST.sha256: OK 
+=== case_b7b_groupkill (06:26:10)
+B7c (SIGTERM to process group 250578): 06:26:22 sent SIGTERM to process group 250578 after step protocol; group 250578 empty after 5.2 s; members seen: ['bash', 'rv/tree/.conda-unidrive-linux/bin/python', 'tee']
+   journal steps: begin copied manifest post_manifest_check filled composed protocol failed restored restored 
+   amend_step3.log tail: STOP: the transaction failed before the seal and was undone: PROTOCOL.md and MANIFEST.sha256 are|     restored and both seals verify (journal step 'restored'; nothing applied). Cause: the FAILURE|     line in /tmp/AMEND3/rv/runs/B7c/amend_step3.log; journal /tmp/AMEND3/rv/runs/B7c/journal.json|
+   outer log (stdout of the group): STOP: the transaction failed before the seal and was undone: PROTOCOL.md and MANIFEST.sha256 are|     restored and both seals verify (journal step 'restored'; nothing applied). Cause: the FAILURE|     line in /tmp/AMEND3/rv/runs/B7c/amend_step3.log; journal /tmp/AMEND3/rv/runs/B7c/journal.json|
+   state before 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; after 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; seal lines OK 2
+   verify: manifest: 1 files differ: [('framelease_v4/analysis/verify_t ... seal framelease_v4/PROTOCOL.md: OK seal outputs/framelease_v4/registration/MANIFEST.sha256: OK 
+B7d (SIGHUP to process group 250881): 06:26:51 sent SIGHUP to process group 250881 after step post_manifest_check; group 250881 empty after 3.2 s; members seen: ['bash', 'rv/tree/.conda-unidrive-linux/bin/python', 'tee']
+   journal steps: begin copied manifest post_manifest_check failed restored restored 
+   amend_step3.log tail: STOP: the transaction failed before the seal and was undone: PROTOCOL.md and MANIFEST.sha256 are|     restored and both seals verify (journal step 'restored'; nothing applied). Cause: the FAILURE|     line in /tmp/AMEND3/rv/runs/B7d/amend_step3.log; journal /tmp/AMEND3/rv/runs/B7d/journal.json|
+   outer log (stdout of the group): STOP: the transaction failed before the seal and was undone: PROTOCOL.md and MANIFEST.sha256 are|     restored and both seals verify (journal step 'restored'; nothing applied). Cause: the FAILURE|     line in /tmp/AMEND3/rv/runs/B7d/amend_step3.log; journal /tmp/AMEND3/rv/runs/B7d/journal.json|
+   state before 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; after 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; seal lines OK 2
+   verify: manifest: 1 files differ: [('framelease_v4/analysis/verify_t ... seal framelease_v4/PROTOCOL.md: OK seal outputs/framelease_v4/registration/MANIFEST.sha256: OK 
+=== case_r10_full (06:27:07)
+R10 transaction: exit 0; last line: PASS: Amendments A3, A9, A7 (A7b), A4 and the operational addition entered at 2026-11-15 06:27, one manifest, one seal;
+   wall 0:23.68; max RSS 42048 KB
+   lock held/released: lock held 2026-11-15T06:27:14+08:00; tim lock released 2026-11-15T06:27:24+08:00 
+   state before 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; after 0de039eb82fa3bc3 0772a80110247c4e 62a039d2b09d2deb 8b132901e3eb859e ; seal lines OK 2
+       G0 passed: P1 done, P1 entries ['freeze', 'd1'], amendments ['A3', 'A4', 'A7', 'A9']; seal OK, manifest OK
+       G0  passed       seal OK, manifest OK
+       G1  waiting      waiting for outputs/framelease_v4/phase_driver/D1_DECISION.json (the coordinating session's D1 decision under the delegation of 2
+       G2  blocked      waits for G1
+       G3  blocked      waits for G1
+       G4  blocked      waits for G1
+       G5  blocked      waits for G1
+       G6  blocked      waits for G1
+       G7  blocked      waits for G1
+       G8  blocked      waits for G1
+   G5 plan (phase_driver.stress_runs on the sealed PROTOCOL.md): ['s3', 's2', 's2_relative', 's1']; A7b read from the A7 text: True; s2_relative: framele
+   check_drafts.py on the new PROTOCOL.md (exit 0):
+   files registered by this transaction (manifest files outside the P1 baseline whose sha256 the sealed PROTOCOL.md cites and the earlier one did not): 4
+R11 second run (precheck-only): exit 1; 7 problems, e.g. PROBLEM: Amendment A3 is entered already (lines [2259])
+R11b second run (full): exit 1; state 0de039eb82fa3bc3 0772a80110247c4e 62a039d2b09d2deb 8b132901e3eb859e 
+snapshot step3done saved
+=== verify_result.py on R10 (06:27:47)
+hunks: 7
+  insert   old lines 482-481: -0 +5; first new line: ''
+  replace  old lines 1110-1110: -1 +6; first new line: '  * the Q-network bypass rate;'
+  replace  old lines 1230-1230: -1 +2; first new line: 'Every job carries `require_sha256` for (49 files, plus the envelope, t'
+  replace  old lines 1238-1239: -2 +11; first new line: '* the envelope file, for the arms with a lease (`fl_heuristic`, `fl_ri'
+  replace  old lines 1286-1290: -5 +12; first new line: 'As fixed for P2-P6 by Amendment A3:'
+  replace  old lines 1436-1437: -2 +3; first new line: '`framelease_v4/analysis/analyze_v4.py` (Secs. 9.1-9.9). Both are writt'
+  insert   before anchor (Sec. 13.2 insertion): -0 +483; first new line: '**Amendment A3, 2026-11-15 06:27 (Beijing time): registration of the P'
+added lines: 522 ; added non-table lines over 120 columns: 0
+placeholder braces in added lines: 0
+entry titles and stamps: [('A3', '2026-11-15 06:27'), ('A9', '2026-11-15 06:27'), ('A7', '2026-11-15 06:27'), ('A4', '2026-11-15 06:27'), ('', '2026-11-15 06:27')]
+manifest clauses: 5 all cite the sealed manifest: True
+path/sha256 pairs checked: 61 wrong: none
+newly registered by the new text: 40 == spec expected: True
+other manifest files whose sha256 the five entries cite: none
+=== case_r12_d1 (06:27:47)
+state 0de039eb82fa3bc3 0772a80110247c4e 62a039d2b09d2deb 8b132901e3eb859e ; seal lines OK 2
+R12 rationale 'claude', decision 'continue': exit 1; REFUSED: the rationale names who or what wrote it ('Claude')|
+R12 rationale 'empty', decision 'continue': exit 1; REFUSED: the rationale is empty|
+R12 rationale 'long', decision 'continue': exit 1; REFUSED: the rationale has 4001 characters as one line (at most 4000)|
+R12 rationale 'ok', decision 'maybe': exit 2; usage: write_d1_decision.py [-h] --decision {continue,stop} --rationale-file|                            RATIONALE_FILE [--dry-run] [--root ROOT] [--by BY]|
+R12 P1_DONE.json missing: exit 1; REFUSED: outputs/framelease_v4/p1_driver/P1_DONE.json records the D1 summary sha256 None, not 3371eb4442c8353422565d33583d418dc43c2867d3bdb3
+R12 --dry-run: exit 0; phase_driver/ exists: no
+   {
+    "schema": "framelease_v4.d1_decision/1",
+    "decision": "continue",
+    "rationale": "Every P1 block is final on the training routes (simulation text of the review).",
+    "d1_summary_sha256": "3371eb4442c8353422565d33583d418dc43c2867d3bdb3de8d15d9be1c189039",
+    "decided": "2026-11-15T06:27:51+0800",
+    "by": "the coordinating session"
+   }
+R12 write: exit 0; wrote outputs/framelease_v4/phase_driver/D1_DECISION.json: decision continue, sha256 6b53bba783bab08c2629e43b2b069fd8d71291a1e4b88655647cb1d852b34890; D1 summar; dir: D1_DECISION.json 
+R12 second write: exit 1; REFUSED: outputs/framelease_v4/phase_driver/D1_DECISION.json exists already: a decision is never replaced
+R13 phase_driver --dry-run: exit 0;   G0 passed: P1 done, P1 entries ['freeze', 'd1'], amendments ['A3', 'A4', 'A7', 'A9']; seal OK, man|  G0  passed       seal OK, manifest OK|  G1  dry          D1 = continue: not yet recorded|  G2  blocked      waits for G1|
+   14:      | * **G1 D1 decision** (2026-11-15 06:27, Beijing time). D1 (Sec. 4.8): **continue**.
+   phase_driver/ after the dry run: D1_DECISION.json 
+=== case_s_extra (06:27:55)
+X1 setup: verify before the change: manifest: 1 files differ: [('framelease_v4/analysis/verify_table1_extra.py', 'a8
+X1 b08_age_s1.jsonl changed (one newline appended); its sha256 is cited by the age_s1 entry: 1 time(s)
+X1 transaction: exit 1; STOP: pre-check failed (exit 1); nothing was changed. See /tmp/AMEND3/rv/runs/X1/amend_step3.log
+   precheck PROBLEM lines: 1
+   new manifest holds b08 at: 1cb6404a9c147ae6 (cited in PROTOCOL.md: 1cb6404a9c147ae6)
+   verify after: manifest: 2 files differ: [('framelease_v4/analysis/verify_table1_extra.py', 'a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa', '27ceb0bd600a7c802024ee28a5caaa9d44fbff832c585f92a734d9
+   phase_driver --dry-run:   G0  waiting      Sec. 13.2 has no entry of Amendment(s) ['A3', 'A4', 'A7', 'A9']
+X2 restore with the stale directory of B1b: exit 1; 
+   state before 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; after 719234e739228640 4bfe7451a41b8530 044595890c10075c 32e1d6d304cef3cc ; seal lines OK 2
+   amendments in PROTOCOL.md after: 0
+=== end 2026-11-15T06:28:12+08:00

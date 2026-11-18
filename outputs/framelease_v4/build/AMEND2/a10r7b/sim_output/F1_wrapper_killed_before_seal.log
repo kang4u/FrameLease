@@ -1,0 +1,11 @@
+apply_locked: exit 94 (output /tmp/A10A11/fix2/sim_tree/treeF1/outputs/framelease_v4/amendment_a10/apply.out)
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/fix2/sim_tree/treeF1/outputs/framelease_v4/amendment_a10/attempt_20261115T103519_357600
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/A10A11/fix2/sim_tree/treeF1/outputs/framelease_v4/registration/MANIFEST.sha256: 222 files, sha256 1ea365bc6e0f8267bf347c38ec302dd447fa8e0e1d6cbf557e3c28c65ecbfb88
+manifest difference: new ['framelease_v4/zz_scratch_probe.txt'] / left [] / changed []
+composed PROTOCOL.md sha256 642d55598e61322bb6306f0c15df33e99be3457eff86f01cad770b7af730c308
+sealed: PROTOCOL.md 642d55598e61322bb6306f0c15df33e99be3457eff86f01cad770b7af730c308, manifest 1ea365bc6e0f8267bf347c38ec302dd447fa8e0e1d6cbf557e3c28c65ecbfb88
+apply_locked: PROTOCOL.md held the entry unsealed: SEALED it with the manifest the entry names
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

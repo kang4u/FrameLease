@@ -1,0 +1,11 @@
+{
+ "name": "A14",
+ "template": "outputs/framelease_v4/build/G8CUT/entries/A14_entry.md",
+ "tests": [],
+ "inplace": [],
+ "must_equal": {
+  "outputs/framelease_v4/verification/final_20261116T002530/SHA256SUMS": "dd443b60be0cbb71218941983e3d493870d9dbe176c68049b95af11e4243bb3b",
+  "outputs/framelease_v4/verification/final_20261116T002530/verification.json": "49cd2b856f19aded6dd1ab9831a67640247ae7c88b1cd7675d76ac3cd64eb89b"
+ },
+ "max_new_registered": 0
+}

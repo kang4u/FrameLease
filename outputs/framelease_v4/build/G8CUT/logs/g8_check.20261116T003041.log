@@ -1,0 +1,27 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B outputs/framelease_v4/build/G8CUT/g8_lib.py check --expect reduced
+{
+ "analysis_dirs": [],
+ "cut_lines": 505,
+ "cut_lines_with_runner_record": 0,
+ "jobs_d": [
+  "reduced"
+ ],
+ "kept_final": 34,
+ "kept_lines": 127,
+ "kept_pending": 93,
+ "last_runner_exit": null,
+ "problems": [],
+ "registered_lines": 632,
+ "runner_alive": true,
+ "runner_lock_held": true,
+ "stop_file": false,
+ "waits": [
+  "93 kept jobs without a final runner record",
+  "a runner holds outputs/framelease_v4/queue_p4 (pid 665278, lock held True)",
+  "Amendment A11 found 0 times in Sec. 13.2",
+  "framelease_v4/analysis/verify_table1_extra.py is not cited at its sha256 (Amendment A11 not entered yet)"
+ ]
+}
+CHECK: NOT FINAL (wait)
+Command exited with non-zero status 3
+TIME 0.16 s, max RSS 33236 KB

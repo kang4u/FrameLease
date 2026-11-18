@@ -1,0 +1,4 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/A10A11/applier/apply_entry_scratch_treeX11.py outputs/framelease_v4/build/AMEND2/final/A10_spec.json
+(exit 1, 6.5 s)
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: filled entry (preview) problem: ['* Probe. A scratch-tree prose line, its placeholder at the end: 10d7ea4f9516725cd94932a0618bbe5cc6a20bae60b49f4004013b3682cee54c.'] / anchor phrase 0 times

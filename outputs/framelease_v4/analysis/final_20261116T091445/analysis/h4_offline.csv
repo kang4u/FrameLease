@@ -1,0 +1,13 @@
+role,variation,a,b,protocol,subset,need,need_s,alpha,metric,better,a_value,b_value,diff,lo,hi,source,missing,r_cond_diff,r_cond_lo,r_cond_hi,r_cond_missing,label
+primary,,SUFFIX,GLOBAL,nested,all,fast,0.964,0.05,continuity,higher,0.53129,0.521137,0.0101532,-0.0475703,0.0555289,paired.csv,,0.00110011,-0.0264945,0.0331107,,inconclusive
+secondary,utilization,SUFFIX,GLOBAL,nested,all,fast,0.964,0.05,utilization,higher,0.547777,0.544063,0.00371471,-0.0275267,0.034619,paired.csv,,0.00110011,-0.0264945,0.0331107,,inconclusive
+secondary,premature_refresh,SUFFIX,GLOBAL,nested,all,fast,0.964,0.05,premature_refresh,lower,0.409765,0.42192,-0.0121549,-0.0628279,0.0509797,paired.csv,,0.00110011,-0.0264945,0.0331107,,inconclusive
+secondary,R_cond <= 10%,SUFFIX,GLOBAL,nested,all,fast,0.964,0.1,continuity,higher,0.653867,0.670482,-0.0166144,-0.116093,0.0586282,paired.csv,,0.00330033,-0.079381,0.047163,,inconclusive
+secondary,R_cond <= 10%; utilization,SUFFIX,GLOBAL,nested,all,fast,0.964,0.1,utilization,higher,0.666566,0.694356,-0.0277899,-0.114348,0.0446644,paired.csv,,0.00330033,-0.079381,0.047163,,inconclusive
+secondary,R_cond <= 10%; premature_refresh,SUFFIX,GLOBAL,nested,all,fast,0.964,0.1,premature_refresh,lower,0.276473,0.25752,0.0189534,-0.0701438,0.124605,paired.csv,,0.00330033,-0.079381,0.047163,,inconclusive
+secondary,SUFFIX - AGE,SUFFIX,AGE,nested,all,fast,0.964,0.05,continuity,higher,0.53129,0.0,0.53129,0.406018,0.668421,paired.csv,,0.049505,0.0161972,0.128696,,inconclusive
+secondary,SUFFIX - AGE; utilization,SUFFIX,AGE,nested,all,fast,0.964,0.05,utilization,higher,0.547777,0.0,0.547777,0.423307,0.666954,paired.csv,,0.049505,0.0161972,0.128696,,inconclusive
+secondary,SUFFIX - AGE; premature_refresh,SUFFIX,AGE,nested,all,fast,0.964,0.05,premature_refresh,lower,0.409765,1.0,-0.590235,-0.716224,-0.462163,paired.csv,,0.049505,0.0161972,0.128696,,inconclusive
+secondary,SUFFIX - AGE; R_cond <= 10%,SUFFIX,AGE,nested,all,fast,0.964,0.1,continuity,higher,0.653867,0.0,0.653867,0.544266,0.768063,paired.csv,,0.10011,0.0483632,0.194848,,inconclusive
+secondary,SUFFIX - AGE; R_cond <= 10%; utilization,SUFFIX,AGE,nested,all,fast,0.964,0.1,utilization,higher,0.666566,0.0,0.666566,0.553878,0.771134,paired.csv,,0.10011,0.0483632,0.194848,,inconclusive
+secondary,SUFFIX - AGE; R_cond <= 10%; premature_refresh,SUFFIX,AGE,nested,all,fast,0.964,0.1,premature_refresh,lower,0.276473,1.0,-0.723527,-0.827339,-0.605541,paired.csv,,0.10011,0.0483632,0.194848,,inconclusive

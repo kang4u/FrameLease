@@ -1,0 +1,523 @@
+{
+ "schema": "framelease_v4.protocol.budget/3",
+ "planning": {
+  "s_per_run": 450.0,
+  "mb_per_run": 10.0,
+  "wall_cap_s": 1500.0,
+  "runner_floor_gib": 6.0
+ },
+ "measured": {
+  "pilot_jobs": 12,
+  "pilot_wall_s": {
+   "mean": 450.5,
+   "min": 173.1,
+   "p50": 259.8,
+   "max": 906.2
+  },
+  "pilot_runs_sized": 12,
+  "pilot_run_mb": {
+   "mean": 6.05,
+   "min": 2.23,
+   "max": 12.13
+  },
+  "v2_tier1_wall_unmodified_prefix": {
+   "jobs": 88,
+   "mean_s": 346.0
+  }
+ },
+ "default_variant": "FULL",
+ "variants": {
+  "FULL": {
+   "variant": "FULL",
+   "blocks": [
+    {
+     "phase": "P1-0",
+     "tier": 0,
+     "block": "smoke",
+     "description": "P1-0 real-CARLA smoke: fixed_deep, fast_only, age_only, event_triggered, fl_original, fl_heuristic at E5, behaviour policy at E5 x 1 training route outside T22 (18305)",
+     "runs": 7,
+     "gpu_h": 0.9,
+     "gpu_h_worst": 2.9,
+     "disk_gb": 0.07,
+     "gpu_h_exact": 0.875,
+     "disk_gb_exact": 0.07
+    },
+    {
+     "phase": "P1",
+     "tier": 1,
+     "block": "T-ref",
+     "description": "references, untuned: Fixed Deep and Fast Only x T22",
+     "runs": 44,
+     "gpu_h": 5.5,
+     "gpu_h_worst": 18.3,
+     "disk_gb": 0.44,
+     "gpu_h_exact": 5.5,
+     "disk_gb_exact": 0.44
+    },
+    {
+     "phase": "P1",
+     "tier": 1,
+     "block": "T-lease-s1",
+     "description": "lease grid {E5, E10, B0} x T22a (FL+H, d = 10, std validity)",
+     "runs": 33,
+     "gpu_h": 4.1,
+     "gpu_h_worst": 13.8,
+     "disk_gb": 0.33,
+     "gpu_h_exact": 4.125,
+     "disk_gb_exact": 0.33
+    },
+    {
+     "phase": "P1",
+     "tier": 1,
+     "block": "T-event-s1",
+     "description": "Event-Triggered grid, 4 candidates x T22a",
+     "runs": 44,
+     "gpu_h": 5.5,
+     "gpu_h_worst": 18.3,
+     "disk_gb": 0.44,
+     "gpu_h_exact": 5.5,
+     "disk_gb_exact": 0.44
+    },
+    {
+     "phase": "P1",
+     "tier": 1,
+     "block": "T-lease-s2",
+     "description": "lease grid, top 2 x T22b",
+     "runs": 22,
+     "gpu_h": 2.8,
+     "gpu_h_worst": 9.2,
+     "disk_gb": 0.22,
+     "gpu_h_exact": 2.75,
+     "disk_gb_exact": 0.22
+    },
+    {
+     "phase": "P1",
+     "tier": 1,
+     "block": "T-event-s2",
+     "description": "Event-Triggered grid, top 2 x T22b",
+     "runs": 22,
+     "gpu_h": 2.8,
+     "gpu_h_worst": 9.2,
+     "disk_gb": 0.22,
+     "gpu_h_exact": 2.75,
+     "disk_gb_exact": 0.22
+    },
+    {
+     "phase": "P1",
+     "tier": 1,
+     "block": "T-heur-s1",
+     "description": "heuristic d in {4, 1} x T22a at L* (d = 10 reused from the lease grid)",
+     "runs": 22,
+     "gpu_h": 2.8,
+     "gpu_h_worst": 9.2,
+     "disk_gb": 0.22,
+     "gpu_h_exact": 2.75,
+     "disk_gb_exact": 0.22
+    },
+    {
+     "phase": "P1",
+     "tier": 1,
+     "block": "T-heur-s2",
+     "description": "heuristic survivors without T22b runs x T22b (at most 2)",
+     "runs": 22,
+     "gpu_h": 2.8,
+     "gpu_h_worst": 9.2,
+     "disk_gb": 0.22,
+     "gpu_h_exact": 2.75,
+     "disk_gb_exact": 0.22
+    },
+    {
+     "phase": "P1",
+     "tier": 1,
+     "block": "T-age-s1",
+     "description": "Age-Only grid, 4 candidates x T22a (utility a_det^{d*})",
+     "runs": 44,
+     "gpu_h": 5.5,
+     "gpu_h_worst": 18.3,
+     "disk_gb": 0.44,
+     "gpu_h_exact": 5.5,
+     "disk_gb_exact": 0.44
+    },
+    {
+     "phase": "P1",
+     "tier": 1,
+     "block": "T-age-s2",
+     "description": "Age-Only grid, top 2 x T22b",
+     "runs": 22,
+     "gpu_h": 2.8,
+     "gpu_h_worst": 9.2,
+     "disk_gb": 0.22,
+     "gpu_h_exact": 2.75,
+     "disk_gb_exact": 0.22
+    },
+    {
+     "phase": "P2",
+     "tier": 2,
+     "block": "RL-data",
+     "description": "behaviour policy (eps 0.3) at L*, 44 training routes x kappa {1.0, 1.5, 2.0}",
+     "runs": 132,
+     "gpu_h": 16.5,
+     "gpu_h_worst": 55.0,
+     "disk_gb": 1.32,
+     "gpu_h_exact": 16.5,
+     "disk_gb_exact": 1.32
+    },
+    {
+     "phase": "P4",
+     "tier": 3,
+     "block": "TI-main",
+     "description": "Table I: 7 arms x 44 test routes, kappa 1.0, seed 11",
+     "runs": 308,
+     "gpu_h": 38.5,
+     "gpu_h_worst": 128.3,
+     "disk_gb": 3.08,
+     "gpu_h_exact": 38.5,
+     "disk_gb_exact": 3.08
+    },
+    {
+     "phase": "P5",
+     "tier": 4,
+     "block": "F3-k",
+     "description": "Fig. 3: 4 arms x kappa {1.5, 2.0} x subset E",
+     "runs": 176,
+     "gpu_h": 22.0,
+     "gpu_h_worst": 73.3,
+     "disk_gb": 1.76,
+     "gpu_h_exact": 22.0,
+     "disk_gb_exact": 1.76
+    },
+    {
+     "phase": "P6",
+     "tier": 5,
+     "block": "A-lease",
+     "description": "Table II-A closed loop: Global-Margin lease + shield + heuristic x E",
+     "runs": 22,
+     "gpu_h": 2.8,
+     "gpu_h_worst": 9.2,
+     "disk_gb": 0.22,
+     "gpu_h_exact": 2.75,
+     "disk_gb_exact": 0.22
+    },
+    {
+     "phase": "P6",
+     "tier": 5,
+     "block": "A-rl",
+     "description": "Table II-A RL: Bandit and FQI w/o lease features x E",
+     "runs": 44,
+     "gpu_h": 5.5,
+     "gpu_h_worst": 18.3,
+     "disk_gb": 0.44,
+     "gpu_h_exact": 5.5,
+     "disk_gb_exact": 0.44
+    },
+    {
+     "phase": "P6",
+     "tier": 6,
+     "block": "S-seed12",
+     "description": "seed-12 replicates: Fixed Deep, Fast Only, FL+H, Full FL x R",
+     "runs": 60,
+     "gpu_h": 7.5,
+     "gpu_h_worst": 25.0,
+     "disk_gb": 0.6,
+     "gpu_h_exact": 7.5,
+     "disk_gb_exact": 0.6
+    },
+    {
+     "phase": "P6",
+     "tier": 6,
+     "block": "S-risk",
+     "description": "conditional (only if L* = B0): fl_risk at the better of E5 / E10 x E",
+     "runs": 22,
+     "gpu_h": 2.8,
+     "gpu_h_worst": 9.2,
+     "disk_gb": 0.22,
+     "gpu_h_exact": 2.75,
+     "disk_gb_exact": 0.22
+    }
+   ],
+   "phases": {
+    "P1-0": {
+     "runs": 7,
+     "gpu_h": 0.9,
+     "gpu_h_worst": 2.9,
+     "disk_gb": 0.07,
+     "gpu_h_exact": 0.875,
+     "disk_gb_exact": 0.07,
+     "disk_prereq_gib": 15.8,
+     "disk_prereq_alone_gib": 6.1
+    },
+    "P1": {
+     "runs": 275,
+     "gpu_h": 34.4,
+     "gpu_h_worst": 114.6,
+     "disk_gb": 2.75,
+     "gpu_h_exact": 34.375,
+     "disk_gb_exact": 2.75,
+     "disk_prereq_gib": 15.7,
+     "disk_prereq_alone_gib": 8.6
+    },
+    "P2": {
+     "runs": 132,
+     "gpu_h": 16.5,
+     "gpu_h_worst": 55.0,
+     "disk_gb": 1.32,
+     "gpu_h_exact": 16.5,
+     "disk_gb_exact": 1.32,
+     "disk_prereq_gib": 13.2,
+     "disk_prereq_alone_gib": 7.3
+    },
+    "P4": {
+     "runs": 308,
+     "gpu_h": 38.5,
+     "gpu_h_worst": 128.3,
+     "disk_gb": 3.08,
+     "gpu_h_exact": 38.5,
+     "disk_gb_exact": 3.08,
+     "disk_prereq_gib": 11.9,
+     "disk_prereq_alone_gib": 8.9
+    },
+    "P5": {
+     "runs": 176,
+     "gpu_h": 22.0,
+     "gpu_h_worst": 73.3,
+     "disk_gb": 1.76,
+     "gpu_h_exact": 22.0,
+     "disk_gb_exact": 1.76,
+     "disk_prereq_gib": 9.1,
+     "disk_prereq_alone_gib": 7.7
+    },
+    "P6": {
+     "runs": 148,
+     "gpu_h": 18.5,
+     "gpu_h_worst": 61.7,
+     "disk_gb": 1.48,
+     "gpu_h_exact": 18.5,
+     "disk_gb_exact": 1.48,
+     "disk_prereq_gib": 7.4,
+     "disk_prereq_alone_gib": 7.4
+    }
+   },
+   "total": {
+    "runs": 1046,
+    "gpu_h": 130.8,
+    "gpu_h_worst": 435.8,
+    "disk_gb": 10.46,
+    "gpu_h_exact": 130.75,
+    "disk_gb_exact": 10.46
+   },
+   "without_smoke": {
+    "runs": 1039,
+    "gpu_h": 129.9,
+    "gpu_h_worst": 432.9,
+    "disk_gb": 10.39,
+    "gpu_h_exact": 129.875,
+    "disk_gb_exact": 10.39
+   },
+   "rules": "every figure from its own run count (exact, then rounded half up: GPU-h 0.1, GB 0.01); disk prerequisite = remaining runs x PLAN_MB_PER_RUN + the runner floor, rounded up to 0.1 GiB"
+  },
+  "TRIMMED": {
+   "variant": "TRIMMED",
+   "blocks": [
+    {
+     "phase": "P1-0",
+     "tier": 0,
+     "block": "smoke",
+     "description": "P1-0 real-CARLA smoke: fixed_deep, fast_only, age_only, event_triggered, fl_original, fl_heuristic at E5, behaviour policy at E5 x 1 training route outside T22 (18305)",
+     "runs": 7,
+     "gpu_h": 0.9,
+     "gpu_h_worst": 2.9,
+     "disk_gb": 0.07,
+     "gpu_h_exact": 0.875,
+     "disk_gb_exact": 0.07
+    },
+    {
+     "phase": "P1",
+     "tier": 1,
+     "block": "T-lease",
+     "description": "lease grid {E5, E10, B0} x T22a (FL+H, d = 10, std validity; one stage)",
+     "runs": 33,
+     "gpu_h": 4.1,
+     "gpu_h_worst": 13.8,
+     "disk_gb": 0.33,
+     "gpu_h_exact": 4.125,
+     "disk_gb_exact": 0.33
+    },
+    {
+     "phase": "P1",
+     "tier": 1,
+     "block": "T-event",
+     "description": "Event-Triggered (theta_v2, 2.0 s) and (theta_s, 1.0 s) x T22a",
+     "runs": 22,
+     "gpu_h": 2.8,
+     "gpu_h_worst": 9.2,
+     "disk_gb": 0.22,
+     "gpu_h_exact": 2.75,
+     "disk_gb_exact": 0.22
+    },
+    {
+     "phase": "P1",
+     "tier": 1,
+     "block": "T-heur",
+     "description": "heuristic d = 4 x T22a at L* (d = 10 reused from the lease grid)",
+     "runs": 11,
+     "gpu_h": 1.4,
+     "gpu_h_worst": 4.6,
+     "disk_gb": 0.11,
+     "gpu_h_exact": 1.375,
+     "disk_gb_exact": 0.11
+    },
+    {
+     "phase": "P1",
+     "tier": 1,
+     "block": "T-age",
+     "description": "Age-Only A in {1.0, 1.5, 2.0} s x T22a (utility a_det^{d*})",
+     "runs": 33,
+     "gpu_h": 4.1,
+     "gpu_h_worst": 13.8,
+     "disk_gb": 0.33,
+     "gpu_h_exact": 4.125,
+     "disk_gb_exact": 0.33
+    },
+    {
+     "phase": "P2",
+     "tier": 2,
+     "block": "RL-data",
+     "description": "behaviour policy (eps 0.3) at L*, the 22 training routes outside T22 x 2 behaviour seeds (rep 0 at kappa 1.0; rep 1 at kappa 1.5 / 2.0, alternating)",
+     "runs": 44,
+     "gpu_h": 5.5,
+     "gpu_h_worst": 18.3,
+     "disk_gb": 0.44,
+     "gpu_h_exact": 5.5,
+     "disk_gb_exact": 0.44
+    },
+    {
+     "phase": "P4",
+     "tier": 3,
+     "block": "TI-main",
+     "description": "Table I: 7 arms x 44 test routes, kappa 1.0, seed 11",
+     "runs": 308,
+     "gpu_h": 38.5,
+     "gpu_h_worst": 128.3,
+     "disk_gb": 3.08,
+     "gpu_h_exact": 38.5,
+     "disk_gb_exact": 3.08
+    },
+    {
+     "phase": "P5",
+     "tier": 4,
+     "block": "F3-k",
+     "description": "Fig. 3: 4 arms x kappa {1.5, 2.0} x subset C",
+     "runs": 88,
+     "gpu_h": 11.0,
+     "gpu_h_worst": 36.7,
+     "disk_gb": 0.88,
+     "gpu_h_exact": 11.0,
+     "disk_gb_exact": 0.88
+    },
+    {
+     "phase": "P6",
+     "tier": 5,
+     "block": "A-lease",
+     "description": "Table II-A closed loop: Global-Margin lease + shield + heuristic x C",
+     "runs": 11,
+     "gpu_h": 1.4,
+     "gpu_h_worst": 4.6,
+     "disk_gb": 0.11,
+     "gpu_h_exact": 1.375,
+     "disk_gb_exact": 0.11
+    },
+    {
+     "phase": "P6",
+     "tier": 5,
+     "block": "A-rl",
+     "description": "Table II-A RL: Bandit and FQI w/o lease features x C",
+     "runs": 22,
+     "gpu_h": 2.8,
+     "gpu_h_worst": 9.2,
+     "disk_gb": 0.22,
+     "gpu_h_exact": 2.75,
+     "disk_gb_exact": 0.22
+    }
+   ],
+   "phases": {
+    "P1-0": {
+     "runs": 7,
+     "gpu_h": 0.9,
+     "gpu_h_worst": 2.9,
+     "disk_gb": 0.07,
+     "gpu_h_exact": 0.875,
+     "disk_gb_exact": 0.07,
+     "disk_prereq_gib": 11.4,
+     "disk_prereq_alone_gib": 6.1
+    },
+    "P1": {
+     "runs": 99,
+     "gpu_h": 12.4,
+     "gpu_h_worst": 41.3,
+     "disk_gb": 0.99,
+     "gpu_h_exact": 12.375,
+     "disk_gb_exact": 0.99,
+     "disk_prereq_gib": 11.4,
+     "disk_prereq_alone_gib": 7.0
+    },
+    "P2": {
+     "runs": 44,
+     "gpu_h": 5.5,
+     "gpu_h_worst": 18.3,
+     "disk_gb": 0.44,
+     "gpu_h_exact": 5.5,
+     "disk_gb_exact": 0.44,
+     "disk_prereq_gib": 10.5,
+     "disk_prereq_alone_gib": 6.5
+    },
+    "P4": {
+     "runs": 308,
+     "gpu_h": 38.5,
+     "gpu_h_worst": 128.3,
+     "disk_gb": 3.08,
+     "gpu_h_exact": 38.5,
+     "disk_gb_exact": 3.08,
+     "disk_prereq_gib": 10.0,
+     "disk_prereq_alone_gib": 8.9
+    },
+    "P5": {
+     "runs": 88,
+     "gpu_h": 11.0,
+     "gpu_h_worst": 36.7,
+     "disk_gb": 0.88,
+     "gpu_h_exact": 11.0,
+     "disk_gb_exact": 0.88,
+     "disk_prereq_gib": 7.2,
+     "disk_prereq_alone_gib": 6.9
+    },
+    "P6": {
+     "runs": 33,
+     "gpu_h": 4.1,
+     "gpu_h_worst": 13.8,
+     "disk_gb": 0.33,
+     "gpu_h_exact": 4.125,
+     "disk_gb_exact": 0.33,
+     "disk_prereq_gib": 6.4,
+     "disk_prereq_alone_gib": 6.4
+    }
+   },
+   "total": {
+    "runs": 579,
+    "gpu_h": 72.4,
+    "gpu_h_worst": 241.3,
+    "disk_gb": 5.79,
+    "gpu_h_exact": 72.375,
+    "disk_gb_exact": 5.79
+   },
+   "without_smoke": {
+    "runs": 572,
+    "gpu_h": 71.5,
+    "gpu_h_worst": 238.3,
+    "disk_gb": 5.72,
+    "gpu_h_exact": 71.5,
+    "disk_gb_exact": 5.72
+   },
+   "rules": "every figure from its own run count (exact, then rounded half up: GPU-h 0.1, GB 0.01); disk prerequisite = remaining runs x PLAN_MB_PER_RUN + the runner floor, rounded up to 0.1 GiB"
+  }
+ }
+}

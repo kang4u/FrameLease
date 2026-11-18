@@ -1,0 +1,12 @@
+sealed state copied into /tmp/AMEND3_review/runs/B4a: PROTOCOL.md 216b5d90a4d321b4cf205b4685e1400bd82c28b2da683479323264a02a1e21a3, MANIFEST.sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+registration.py --write-manifest --force (exit 0): wrote /tmp/AMEND3_review/tree/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d
+post-manifest check (step 3.2): OK
+new manifest: 221 files, sha256 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d; new in it: none; changed since the seal (unregistered): ['framelease_v4/analysis/verify_table1_extra.py']
+PROTOCOL.md written: sha256 20304b12f4a321d1de5162de50bdb3b735b3da049fb067960b6f9eb465946372 (2835 lines)
+registration.py --seal (exit 0): sealed: PROTOCOL.md 20304b12f4a321d1de5162de50bdb3b735b3da049fb067960b6f9eb465946372, manifest 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d 
+registration.py --verify: manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+entry A3: 193 lines (/tmp/AMEND3_review/runs/B4a/entry_A3.md)
+entry A9: 43 lines (/tmp/AMEND3_review/runs/B4a/entry_A9.md)
+entry A7: 53 lines (/tmp/AMEND3_review/runs/B4a/entry_A7.md)
+entry A4: 74 lines (/tmp/AMEND3_review/runs/B4a/entry_A4.md)
+entry OP: 114 lines (/tmp/AMEND3_review/runs/B4a/entry_OP.md)

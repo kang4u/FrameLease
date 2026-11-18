@@ -1,0 +1,40 @@
+{
+ "_meta": {
+  "config": "T_x0.00",
+  "config_label": "0.00 x E0 q95 (TRAIN)",
+  "exported_by": "framelease_v4/offline/export_envelopes.py",
+  "form": "B_c(tau) = vbar_c tau + abar_c tau^2 / 2 + sigma_c",
+  "label": "B0",
+  "lambda": 0.0,
+  "of": "T_q95",
+  "rule": "B0: no envelope (lambda = 0), the availability end of the frontier",
+  "source": "outputs/framelease_v4/offline_ablation/envelopes/train_E0.json",
+  "source_sha256": "86821422482caa38ea69f7402ff47ba313c63a3890c97b370c3b625c01f8dff8",
+  "validity": "std (Eqs. 1-3; RA is an offline sensitivity only)"
+ },
+ "abar_mps2": {
+  "pedestrian": 0.0,
+  "vehicle": 0.0
+ },
+ "calibration_clips": [
+  "ControlLoss_Town11_Route401_Weather11",
+  "HardBreakRoute_Town11_Route50_Weather23",
+  "ParkingCrossingPedestrian_Town12_Route953_Weather9",
+  "PedestrianCrossing_Town12_Route867_Weather9",
+  "StaticCutIn_Town03_Route149_Weather19"
+ ],
+ "kind": "iso",
+ "n_pairs": {
+  "pedestrian": 194,
+  "vehicle": 4596
+ },
+ "protocol": "framelease_v4/PROTOCOL.md Sec. 4.3 lease operating point B0",
+ "sigma_m": {
+  "pedestrian": 0.0,
+  "vehicle": 0.0
+ },
+ "vbar_mps": {
+  "pedestrian": 0.0,
+  "vehicle": 0.0
+ }
+}

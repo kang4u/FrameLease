@@ -1,0 +1,1520 @@
+{
+ "arguments": {
+  "checks": [
+   "inputs",
+   "envelope_link",
+   "gate2",
+   "pooled"
+  ],
+  "clips": null,
+  "n_boot": 2000,
+  "seed": 20261109,
+  "tuning_freeze": "outputs/framelease_v4/tuning/selection.json"
+ },
+ "checks": {
+  "envelope_link": {
+   "base_vs_gate2": {
+    "T_q95": 0.0
+   },
+   "max_abs_diff": {
+    "B0": 0.0,
+    "E10": 0.0,
+    "E5": 0.0
+   },
+   "pass": true,
+   "problems": []
+  },
+  "gate2": {
+   "clips": 15,
+   "max_abs_diff": {
+    "B0_q0_NONE": 0.0,
+    "E0_q95_ORIG": 0.0,
+    "E0orig_q95_ORIG": 0.0
+   },
+   "pass": true,
+   "reference": "outputs/framelease_v3/gate2_offline/gate2_20261109/summary.json envelope_coverage_out_of_sample",
+   "sha256_mismatch": [],
+   "tolerance": 1e-12
+  },
+  "inputs": {
+   "clips": 32,
+   "mismatch": [],
+   "missing": [],
+   "pass": true
+  },
+  "pooled": {
+   "max_abs_diff": {
+    "B0": 0.0,
+    "E10": 0.0,
+    "E5": 0.0
+   },
+   "pass": true
+  }
+ },
+ "clips": {
+  "BlockedIntersection_Town03_Route135_Weather5": {
+   "dataset_split": "val",
+   "frames": 605,
+   "frames_after_warmup": 600,
+   "gt_sha256": "b52d49ed96ab9ff929848fb78fd15469c63fabc24759e6254b7f7a5a5d3abcae",
+   "npz_sha256": "aa253023b5aacc071b7269c07d87a94bfee8dd7b6cbb701cf6d40ce169ad501e",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 1611
+   },
+   "route_id": "135"
+  },
+  "ControlLoss_Town04_Route170_Weather14": {
+   "dataset_split": "val",
+   "frames": 356,
+   "frames_after_warmup": 351,
+   "gt_sha256": "98074ff16d5e69cf3b76a8e1751851cd40de829054a6447960f8bfbb4c12feb4",
+   "npz_sha256": "f076789161cd671cc91c417ae4cadac54ca2467984d5faec3d80d22f89b1771b",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 3924
+   },
+   "route_id": "170"
+  },
+  "ControlLoss_Town10HD_Route378_Weather14": {
+   "dataset_split": "val",
+   "frames": 205,
+   "frames_after_warmup": 200,
+   "gt_sha256": "eb3c30a842afb1659048bf3c6968c1a3c5e7b44e8ab0b00bad80b80ccdb19b47",
+   "npz_sha256": "557593861dbbbdfef1bbe61b3b958c4b5c8c04325a924ab84d33ed1622e94437",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 1413
+   },
+   "route_id": "378"
+  },
+  "CrossingBicycleFlow_Town12_Route977_Weather15": {
+   "dataset_split": "val",
+   "frames": 361,
+   "frames_after_warmup": 356,
+   "gt_sha256": "c28ad3e5a2a5fe43512cf8bcfacaa301e9c21e2ddc2b366f8b84a89fb4132816",
+   "npz_sha256": "6834215748ed74c475b2926fc32f3a43c64159d50c8a3caa131dab5ea529f471",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 4762
+   },
+   "route_id": "977"
+  },
+  "DynamicObjectCrossing_Town01_Route3_Weather3": {
+   "dataset_split": "val",
+   "frames": 191,
+   "frames_after_warmup": 186,
+   "gt_sha256": "18e1dbabb01b6b1ed3daaac90a435a186a81ec709fc73d6d0d4d9bece131d4c2",
+   "npz_sha256": "b883533e4d4aae72cb4000c1498a1a6bfbf5a4d992098376d796fb4093e2a878",
+   "pairs": {
+    "pedestrian": 50,
+    "vehicle": 558
+   },
+   "route_id": "3"
+  },
+  "DynamicObjectCrossing_Town02_Route11_Weather11": {
+   "dataset_split": "val",
+   "frames": 195,
+   "frames_after_warmup": 190,
+   "gt_sha256": "e8759f2eb68283bda08b8c5c9b41e78154cb061d9f5aceddbd3d2ee192803ae3",
+   "npz_sha256": "2eaabff7146bf748e6408a6fe22aedfeb36e61b40698b0524fd294537c126b3d",
+   "pairs": {
+    "pedestrian": 45,
+    "vehicle": 363
+   },
+   "route_id": "11"
+  },
+  "HardBreakRoute_Town01_Route32_Weather6": {
+   "dataset_split": "val",
+   "frames": 292,
+   "frames_after_warmup": 287,
+   "gt_sha256": "57998ae1f25e869bda0d638536bf174a3ad2b5871de04b456cb1e1ddaf4ca362",
+   "npz_sha256": "c18371793eadd097b8b0ac8473a8dba76d191ee0b70b71a9e498ac6ec9859883",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 928
+   },
+   "route_id": "32"
+  },
+  "HighwayCutIn_Town12_Route1029_Weather15": {
+   "dataset_split": "val",
+   "frames": 147,
+   "frames_after_warmup": 142,
+   "gt_sha256": "f793a8a44bb5c9750c39f5257bbce7b95ad78eec229bf2d9eac2027e65523454",
+   "npz_sha256": "a4ce3912b12e0ee82dccee9736fee77b4a1a94990aeb31afe499826aae0a50b1",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 464
+   },
+   "route_id": "1029"
+  },
+  "HighwayExit_Town06_Route312_Weather0": {
+   "dataset_split": "val",
+   "frames": 150,
+   "frames_after_warmup": 145,
+   "gt_sha256": "f921ac9dc99f69f075eb5c13936b5c1cd9d09de1234055cc6076d6a20a34eb39",
+   "npz_sha256": "54822be35a35b4a358816928430dcf272cf2ed96940481b86399afff72f48587",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 656
+   },
+   "route_id": "312"
+  },
+  "InterurbanActorFlow_Town12_Route1291_Weather1": {
+   "dataset_split": "val",
+   "frames": 120,
+   "frames_after_warmup": 115,
+   "gt_sha256": "b63a8b834c6031c83c6f8ed840627156dd62add6c1472c326f49e465fc1d18df",
+   "npz_sha256": "4b8f3498480594e888145a0767fecb896b1e45747e03820c2b846b6ed42e38da",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 136
+   },
+   "route_id": "1291"
+  },
+  "InterurbanAdvancedActorFlow_Town06_Route324_Weather2": {
+   "dataset_split": "val",
+   "frames": 152,
+   "frames_after_warmup": 147,
+   "gt_sha256": "a19cf048ceaf7bfc70102e41b064ea64b705caa7392d80af0d80c983383a18a6",
+   "npz_sha256": "db4df42b9a15fbef60c46b4a483c33c46a1c3aadcfed3b066f80da7c3e09ed87",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 232
+   },
+   "route_id": "324"
+  },
+  "InvadingTurn_Town02_Route95_Weather9": {
+   "dataset_split": "val",
+   "frames": 139,
+   "frames_after_warmup": 134,
+   "gt_sha256": "31343026c9d9eee8c30664b39898394afd6477c7e7b811d080cbf537749ff781",
+   "npz_sha256": "9de391a0f227831741a132a2a95d71875d462bbe3eef4e58ec27ea588129d528",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 69
+   },
+   "route_id": "95"
+  },
+  "LaneChange_Town06_Route307_Weather21": {
+   "dataset_split": "val",
+   "frames": 133,
+   "frames_after_warmup": 128,
+   "gt_sha256": "ed0e8ce70fbfbd577eb8a48199313d01b152dd009592acb9c45c3ef0de949777",
+   "npz_sha256": "10b40ffbc8e47ca256bfaeaac53f9e9c3a66d2ade984ff25c14a94e280bcae90",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 1577
+   },
+   "route_id": "307"
+  },
+  "MergerIntoSlowTrafficV2_Town12_Route857_Weather25": {
+   "dataset_split": "val",
+   "frames": 150,
+   "frames_after_warmup": 145,
+   "gt_sha256": "17135cada0d583aa91c63563eaff781eff4b982dd2b94586f1bd544826894c39",
+   "npz_sha256": "33938f98c1ac8a84425c2aa970b37341f88453e59616f1e98f2bda648f6c607c",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 473
+   },
+   "route_id": "857"
+  },
+  "MergerIntoSlowTraffic_Town06_Route317_Weather5": {
+   "dataset_split": "val",
+   "frames": 169,
+   "frames_after_warmup": 164,
+   "gt_sha256": "fd60a432eeba65512270ae6bebce9de9dd7bd52a2785fc948b676d0496914b0b",
+   "npz_sha256": "45ade70e29788d89b3cf3b8f6098484240ad17c62c594259048abb710891cd99",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 755
+   },
+   "route_id": "317"
+  },
+  "NonSignalizedJunctionLeftTurnEnterFlow_Town12_Route949_Weather13": {
+   "dataset_split": "val",
+   "frames": 67,
+   "frames_after_warmup": 62,
+   "gt_sha256": "1bdbb8089a7753ac3c672bf0e54a89b79d5022180511c6da17e04970b0ddfd58",
+   "npz_sha256": "9b0470c81ac4b3f7a4a0956f9a8e3c5882c1d64d6c91f78cec0609a817f37f66",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 122
+   },
+   "route_id": "949"
+  },
+  "NonSignalizedJunctionLeftTurn_Town07_Route342_Weather3": {
+   "dataset_split": "val",
+   "frames": 100,
+   "frames_after_warmup": 95,
+   "gt_sha256": "e70fa0930960e24763cd0f70c1615e98817f94425865e4fd1f3ba74546213a0a",
+   "npz_sha256": "7c27340515151ce6ed9085a7383a789dc5cd167e1c21cb948b33f93db5efd760",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 258
+   },
+   "route_id": "342"
+  },
+  "NonSignalizedJunctionRightTurn_Town03_Route126_Weather18": {
+   "dataset_split": "val",
+   "frames": 173,
+   "frames_after_warmup": 168,
+   "gt_sha256": "8367f4f10dd76a1c76cc31d457b76e94eecdcea78fb07bad8bc3d6638e4394c1",
+   "npz_sha256": "982353b1282cbe3dda72d2b89380b01be77658be90a70010130b6c4592986082",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 917
+   },
+   "route_id": "126"
+  },
+  "OppositeVehicleRunningRedLight_Town04_Route180_Weather23": {
+   "dataset_split": "val",
+   "frames": 153,
+   "frames_after_warmup": 148,
+   "gt_sha256": "07afa7122a4e9ef7bb70466a9c59f6665680d4720a7e889bd49c641ca1f0e261",
+   "npz_sha256": "38f05cc5619abe3b0d403c08e9c3dff4a7b476c53f918de266c028f528dadfae",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 245
+   },
+   "route_id": "180"
+  },
+  "OppositeVehicleTakingPriority_Town04_Route214_Weather6": {
+   "dataset_split": "val",
+   "frames": 136,
+   "frames_after_warmup": 131,
+   "gt_sha256": "f13194b0950d04c3bc2097bafc058b0c5457cedd95a73957ccd8b69b95adc0df",
+   "npz_sha256": "28503782c4cb760948d3835949192dba6fcf123fd96ec2a6334bf76c3d46726c",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 370
+   },
+   "route_id": "214"
+  },
+  "ParkingCrossingPedestrian_Town13_Route545_Weather25": {
+   "dataset_split": "val",
+   "frames": 204,
+   "frames_after_warmup": 199,
+   "gt_sha256": "80d2edfe334144d6b0bb9a454f4d4ce0739fcb9a33ba6dfe4ff2f7dc0e83c922",
+   "npz_sha256": "ea517dde6a50ad5362ae4bdcf9497c6509f45263e840b541ce2eaae0e12259ce",
+   "pairs": {
+    "pedestrian": 26,
+    "vehicle": 871
+   },
+   "route_id": "545"
+  },
+  "ParkingCutIn_Town13_Route1343_Weather1": {
+   "dataset_split": "val",
+   "frames": 209,
+   "frames_after_warmup": 204,
+   "gt_sha256": "cfbacd6fb8976ac7764d76436c58f5b69a83c1b788d9afb4d17a9983efe43ef2",
+   "npz_sha256": "01fe4c317d634f474c0554fa493fe3b5fd9d3b781e10038505538e9035aa975f",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 921
+   },
+   "route_id": "1343"
+  },
+  "ParkingExit_Town12_Route922_Weather12": {
+   "dataset_split": "val",
+   "frames": 201,
+   "frames_after_warmup": 196,
+   "gt_sha256": "e2aaf855e5511488163812ee4ef1574042cfeaa8869a81b1cbca0f85828d2b93",
+   "npz_sha256": "9b4d86bcb00fb080f8e7352dc71f6df3623a80e29be0dd9c3626ef2eafb853cf",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 891
+   },
+   "route_id": "922"
+  },
+  "PedestrianCrossing_Town13_Route747_Weather19": {
+   "dataset_split": "val",
+   "frames": 512,
+   "frames_after_warmup": 507,
+   "gt_sha256": "98335038816e4f8285ea7a75b56025c11d863fa52f671866af374bcb60a21ecb",
+   "npz_sha256": "316860500d96abf6bf02ddda3467bf8bfe1e28f93925b12d7e712f6720b4c351",
+   "pairs": {
+    "pedestrian": 298,
+    "vehicle": 3311
+   },
+   "route_id": "747"
+  },
+  "SignalizedJunctionLeftTurnEnterFlow_Town13_Route657_Weather2": {
+   "dataset_split": "val",
+   "frames": 137,
+   "frames_after_warmup": 132,
+   "gt_sha256": "f4ec52d5e0c71486fcff9dc851fe7bd243b931cdc43dbca1e121270782b93b82",
+   "npz_sha256": "4d26d200eea9b1f12459c64860fc0320777a5162e97fdd49e748a19a3fa62f71",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 1041
+   },
+   "route_id": "657"
+  },
+  "SignalizedJunctionRightTurn_Town03_Route118_Weather14": {
+   "dataset_split": "val",
+   "frames": 156,
+   "frames_after_warmup": 151,
+   "gt_sha256": "8fd172ad735b379e2b734039bc03139480dc2d492ac65e71e2603fe817ff09ba",
+   "npz_sha256": "3fcbe706cddc17ccd0112631c6f07b33bf2fcf4a6eaf9113c3276f7eec25a64c",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 630
+   },
+   "route_id": "118"
+  },
+  "StaticCutIn_Town05_Route226_Weather18": {
+   "dataset_split": "val",
+   "frames": 207,
+   "frames_after_warmup": 202,
+   "gt_sha256": "5b5818a5535570f79c88a7d4a460ef50562aefb66d46eabbc58feae6841fe7e6",
+   "npz_sha256": "50ebceba514f20b104791b6bf7ad7e5edbbae50ddbe8cbdd48f0929603170812",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 1603
+   },
+   "route_id": "226"
+  },
+  "VanillaNonSignalizedTurnEncounterStopsign_Town12_Route979_Weather9": {
+   "dataset_split": "val",
+   "frames": 97,
+   "frames_after_warmup": 92,
+   "gt_sha256": "99232058346655f3a3d98dc7eb2e8ed36189fd609a585b2b11026846bec2286b",
+   "npz_sha256": "29092140f50dcafa58b2f214ae5c83a3c2b6ec5832480cdcd144ed17f679e23f",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 175
+   },
+   "route_id": "979"
+  },
+  "VehicleTurningRoutePedestrian_Town15_Route445_Weather11": {
+   "dataset_split": "val",
+   "frames": 193,
+   "frames_after_warmup": 188,
+   "gt_sha256": "98e94855f83d520274f4f1bb9faae7a03ffa0d65fb333a9e3aa0982a09ee4b15",
+   "npz_sha256": "005f5d22310da71a57999f96baffbf8792681a198d036b99de60de499c352519",
+   "pairs": {
+    "pedestrian": 53,
+    "vehicle": 655
+   },
+   "route_id": "445"
+  },
+  "VehicleTurningRoutePedestrian_Town15_Route481_Weather19": {
+   "dataset_split": "val",
+   "frames": 120,
+   "frames_after_warmup": 115,
+   "gt_sha256": "d4ab4760a8cf5e9de642316f00695eb2d0e655764032056bcf48f84e43ae8a6e",
+   "npz_sha256": "1f53327f8687bccc0b3b73fb5d56e3b7c75e29db301ae2a35783b762527eb038",
+   "pairs": {
+    "pedestrian": 18,
+    "vehicle": 105
+   },
+   "route_id": "481"
+  },
+  "VehicleTurningRoute_Town15_Route504_Weather10": {
+   "dataset_split": "val",
+   "frames": 176,
+   "frames_after_warmup": 171,
+   "gt_sha256": "d1b5a0421850b4fcb4b18849cd9335b6a224f7c5801acdef5dcb9ff0038372ea",
+   "npz_sha256": "d85d15c1f6d2b22a33bf87f6981aa33f590446bca0f452bec2cca946557b3b0c",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 599
+   },
+   "route_id": "504"
+  },
+  "YieldToEmergencyVehicle_Town04_Route166_Weather10": {
+   "dataset_split": "val",
+   "frames": 331,
+   "frames_after_warmup": 326,
+   "gt_sha256": "ba2f863e347e973397be75e76ac24971a2f87ddf36fcc12c56102c096ddf56b1",
+   "npz_sha256": "3d704761af22edb7226a69cda6bed8779b925560f780640826e646bdaf8125b4",
+   "pairs": {
+    "pedestrian": 0,
+    "vehicle": 2654
+   },
+   "route_id": "166"
+  }
+ },
+ "code": {
+  "framelease_v2/calibration.py": "eb69bae0a64ece0fabc4c5133d18985f9d83f7c41fc3b42dca39e789f6193e2b",
+  "framelease_v2/geometry.py": "b26ccab28d00219b18d9dd59bce112f54917ba05c9f293cbb6357288b7954006",
+  "framelease_v3/envelopes.py": "4b50e33d5abcf1e791fe87d84039cdc560be313827db457ef7160968e633307c",
+  "framelease_v4/analysis/interim_guard.py": "5453a3573e7cca958cad1bc1c44d53995a11e034e251bba634fe09390efed9c7",
+  "framelease_v4/analysis/prop1_coverage.py": "ffaee8ddf74e707901208d1d28ad0f692fefda2a4f4ce24f9e36e6eba1c852c0",
+  "framelease_v4/offline/analyze.py": "bf7d1a4b32d8e0eb00042ac70107b58915c9838ca661fa6a4615dd6e6aa1c594",
+  "framelease_v4/offline/common.py": "7773801a871b2b9355f985a8a351b045f34a42a8d1b895ddb33c5137b598eb86",
+  "framelease_v4/protocol/p1_jobs.py": "d953cb18b92f6f3d627e3e13b9cf5c685abbffbd8a845feb8db31203c1825fad",
+  "framelease_v4/protocol/registration.py": "1f1cc02314635a674733e70cfc0729cb2815b50275d4e599fe263fce5568f1b8",
+  "framelease_v4/protocol/select_stage.py": "146b8b1a3f75a467a7a21f1080a0b7c46b5e8a8500fe85c311487b6d9f12c867"
+ },
+ "complete": true,
+ "coverage": {
+  "B0": {
+   "pedestrian": {
+    "n_pairs": 490,
+    "path_coverage_0_2.5s": {
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "coverage": 0.0,
+     "covered": 0,
+     "n": 490
+    },
+    "path_coverage_0_3s": {
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "coverage": 0.0,
+     "covered": 0,
+     "n": 490
+    },
+    "per_tau": {
+     "0": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 490
+     },
+     "0.5": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 463
+     },
+     "1": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 435
+     },
+     "1.5": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 398
+     },
+     "2": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 364
+     },
+     "2.5": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 326
+     },
+     "3": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 293
+     }
+    },
+    "sample_coverage_all_tau": {
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "coverage": 0.0,
+     "covered": 0,
+     "n": 24235
+    }
+   },
+   "vehicle": {
+    "n_pairs": 33289,
+    "path_coverage_0_2.5s": {
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "coverage": 0.0,
+     "covered": 0,
+     "n": 33289
+    },
+    "path_coverage_0_3s": {
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "coverage": 0.0,
+     "covered": 0,
+     "n": 33289
+    },
+    "per_tau": {
+     "0": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 33289
+     },
+     "0.5": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 32064
+     },
+     "1": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 30774
+     },
+     "1.5": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 29434
+     },
+     "2": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 28076
+     },
+     "2.5": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 26740
+     },
+     "3": {
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "coverage": 0.0,
+      "covered": 0,
+      "n": 25415
+     }
+    },
+    "sample_coverage_all_tau": {
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "coverage": 0.0,
+     "covered": 0,
+     "n": 1792891
+    }
+   }
+  },
+  "E10": {
+   "pedestrian": {
+    "n_pairs": 490,
+    "path_coverage_0_2.5s": {
+     "ci95": [
+      0.45454545454545453,
+      0.7333333333333333
+     ],
+     "coverage": 0.5591836734693878,
+     "covered": 274,
+     "n": 490
+    },
+    "path_coverage_0_3s": {
+     "ci95": [
+      0.45319710405037494,
+      0.7333333333333333
+     ],
+     "coverage": 0.5428571428571428,
+     "covered": 266,
+     "n": 490
+    },
+    "per_tau": {
+     "0": {
+      "ci95": [
+       0.6562400477707007,
+       0.7887829541350667
+      ],
+      "coverage": 0.7122448979591837,
+      "covered": 349,
+      "n": 490
+     },
+     "0.5": {
+      "ci95": [
+       0.5689382940108894,
+       0.8444444444444444
+      ],
+      "coverage": 0.7645788336933045,
+      "covered": 354,
+      "n": 463
+     },
+     "1": {
+      "ci95": [
+       0.5454545454545454,
+       0.8251748251748252
+      ],
+      "coverage": 0.7540229885057471,
+      "covered": 328,
+      "n": 435
+     },
+     "1.5": {
+      "ci95": [
+       0.559322033898305,
+       0.8571428571428571
+      ],
+      "coverage": 0.7587939698492462,
+      "covered": 302,
+      "n": 398
+     },
+     "2": {
+      "ci95": [
+       0.5283018867924528,
+       0.8979591836734694
+      ],
+      "coverage": 0.7307692307692307,
+      "covered": 266,
+      "n": 364
+     },
+     "2.5": {
+      "ci95": [
+       0.4594594594594595,
+       0.9343495214462957
+      ],
+      "coverage": 0.7208588957055214,
+      "covered": 235,
+      "n": 326
+     },
+     "3": {
+      "ci95": [
+       0.20833333333333334,
+       0.9166666666666666
+      ],
+      "coverage": 0.6757679180887372,
+      "covered": 198,
+      "n": 293
+     }
+    },
+    "sample_coverage_all_tau": {
+     "ci95": [
+      0.5618374558303887,
+      0.8604619930163846
+     ],
+     "coverage": 0.7426861976480297,
+     "covered": 17999,
+     "n": 24235
+    }
+   },
+   "vehicle": {
+    "n_pairs": 33289,
+    "path_coverage_0_2.5s": {
+     "ci95": [
+      0.14366420194066185,
+      0.2543732993433722
+     ],
+     "coverage": 0.1969118928174472,
+     "covered": 6555,
+     "n": 33289
+    },
+    "path_coverage_0_3s": {
+     "ci95": [
+      0.13961253668142815,
+      0.250176956388597
+     ],
+     "coverage": 0.1925560996124846,
+     "covered": 6410,
+     "n": 33289
+    },
+    "per_tau": {
+     "0": {
+      "ci95": [
+       0.31174705136126774,
+       0.44880558032181844
+      ],
+      "coverage": 0.3787437291597825,
+      "covered": 12608,
+      "n": 33289
+     },
+     "0.5": {
+      "ci95": [
+       0.457425594970549,
+       0.5694459136941139
+      ],
+      "coverage": 0.5115082335329342,
+      "covered": 16401,
+      "n": 32064
+     },
+     "1": {
+      "ci95": [
+       0.4988241597147839,
+       0.6428217436538975
+      ],
+      "coverage": 0.5743159810229415,
+      "covered": 17674,
+      "n": 30774
+     },
+     "1.5": {
+      "ci95": [
+       0.5160206593167292,
+       0.7260987923714755
+      ],
+      "coverage": 0.6199293334239315,
+      "covered": 18247,
+      "n": 29434
+     },
+     "2": {
+      "ci95": [
+       0.5310150797282844,
+       0.7418131276596066
+      ],
+      "coverage": 0.6392292349337513,
+      "covered": 17947,
+      "n": 28076
+     },
+     "2.5": {
+      "ci95": [
+       0.5302368245068032,
+       0.7399899220774112
+      ],
+      "coverage": 0.6397905759162303,
+      "covered": 17108,
+      "n": 26740
+     },
+     "3": {
+      "ci95": [
+       0.5298980121602443,
+       0.7443091885529467
+      ],
+      "coverage": 0.643950422978556,
+      "covered": 16366,
+      "n": 25415
+     }
+    },
+    "sample_coverage_all_tau": {
+     "ci95": [
+      0.501073359996264,
+      0.6538681171855116
+     ],
+     "coverage": 0.5787312223665577,
+     "covered": 1037602,
+     "n": 1792891
+    }
+   }
+  },
+  "E5": {
+   "pedestrian": {
+    "n_pairs": 490,
+    "path_coverage_0_2.5s": {
+     "ci95": [
+      0.7005347593582888,
+      0.9298245614035088
+     ],
+     "coverage": 0.826530612244898,
+     "covered": 405,
+     "n": 490
+    },
+    "path_coverage_0_3s": {
+     "ci95": [
+      0.7005347593582888,
+      0.9298245614035088
+     ],
+     "coverage": 0.8122448979591836,
+     "covered": 398,
+     "n": 490
+    },
+    "per_tau": {
+     "0": {
+      "ci95": [
+       0.8512110192837467,
+       0.9766865443425077
+      ],
+      "coverage": 0.9346938775510204,
+      "covered": 458,
+      "n": 490
+     },
+     "0.5": {
+      "ci95": [
+       0.8461538461538461,
+       0.9849181795053518
+      ],
+      "coverage": 0.9546436285097192,
+      "covered": 442,
+      "n": 463
+     },
+     "1": {
+      "ci95": [
+       0.7971018539200357,
+       0.9880952380952381
+      ],
+      "coverage": 0.9471264367816092,
+      "covered": 412,
+      "n": 435
+     },
+     "1.5": {
+      "ci95": [
+       0.8139337800551832,
+       0.963302752293578
+      ],
+      "coverage": 0.9246231155778895,
+      "covered": 368,
+      "n": 398
+     },
+     "2": {
+      "ci95": [
+       0.8297872340425532,
+       0.9743589743589743
+      ],
+      "coverage": 0.9175824175824175,
+      "covered": 334,
+      "n": 364
+     },
+     "2.5": {
+      "ci95": [
+       0.7567567567567568,
+       0.9629629629629629
+      ],
+      "coverage": 0.8773006134969326,
+      "covered": 286,
+      "n": 326
+     },
+     "3": {
+      "ci95": [
+       0.625,
+       0.95
+      ],
+      "coverage": 0.8395904436860068,
+      "covered": 246,
+      "n": 293
+     }
+    },
+    "sample_coverage_all_tau": {
+     "ci95": [
+      0.8090369848295883,
+      0.9619484749777909
+     ],
+     "coverage": 0.9206519496595833,
+     "covered": 22312,
+     "n": 24235
+    }
+   },
+   "vehicle": {
+    "n_pairs": 33289,
+    "path_coverage_0_2.5s": {
+     "ci95": [
+      0.4812814036593577,
+      0.5802845752554191
+     ],
+     "coverage": 0.5308059719426838,
+     "covered": 17670,
+     "n": 33289
+    },
+    "path_coverage_0_3s": {
+     "ci95": [
+      0.47489994726717005,
+      0.5748050235547819
+     ],
+     "coverage": 0.5247679413620114,
+     "covered": 17469,
+     "n": 33289
+    },
+    "per_tau": {
+     "0": {
+      "ci95": [
+       0.6581073390536396,
+       0.7600761925436944
+      ],
+      "coverage": 0.7056985791102166,
+      "covered": 23492,
+      "n": 33289
+     },
+     "0.5": {
+      "ci95": [
+       0.7722438001271547,
+       0.8419609253599669
+      ],
+      "coverage": 0.8077282934131736,
+      "covered": 25899,
+      "n": 32064
+     },
+     "1": {
+      "ci95": [
+       0.7742017972510782,
+       0.8883644860787581
+      ],
+      "coverage": 0.8339182426723858,
+      "covered": 25663,
+      "n": 30774
+     },
+     "1.5": {
+      "ci95": [
+       0.760905293796549,
+       0.8792295738402304
+      ],
+      "coverage": 0.8245226608683836,
+      "covered": 24269,
+      "n": 29434
+     },
+     "2": {
+      "ci95": [
+       0.7621750321251378,
+       0.8767200339590692
+      ],
+      "coverage": 0.8257586550790711,
+      "covered": 23184,
+      "n": 28076
+     },
+     "2.5": {
+      "ci95": [
+       0.7607501511979052,
+       0.8737670217013708
+      ],
+      "coverage": 0.825317875841436,
+      "covered": 22069,
+      "n": 26740
+     },
+     "3": {
+      "ci95": [
+       0.7667780505216564,
+       0.8771050045133689
+      ],
+      "coverage": 0.8305724965571513,
+      "covered": 21109,
+      "n": 25415
+     }
+    },
+    "sample_coverage_all_tau": {
+     "ci95": [
+      0.7659702653800972,
+      0.8585551370827925
+     ],
+     "coverage": 0.8160696885644471,
+     "covered": 1463124,
+     "n": 1792891
+    }
+   }
+  }
+ },
+ "coverage_summary": {
+  "B0": {
+   "pedestrian": {
+    "n_pairs": 490,
+    "path_coverage_0_2.5s": 0.0,
+    "path_coverage_0_3s": 0.0,
+    "per_tau": {
+     "0": {
+      "coverage": 0.0,
+      "n": 490
+     },
+     "0.5": {
+      "coverage": 0.0,
+      "n": 463
+     },
+     "1": {
+      "coverage": 0.0,
+      "n": 435
+     },
+     "1.5": {
+      "coverage": 0.0,
+      "n": 398
+     },
+     "2": {
+      "coverage": 0.0,
+      "n": 364
+     },
+     "2.5": {
+      "coverage": 0.0,
+      "n": 326
+     },
+     "3": {
+      "coverage": 0.0,
+      "n": 293
+     }
+    },
+    "sample_coverage_all_tau": 0.0
+   },
+   "vehicle": {
+    "n_pairs": 33289,
+    "path_coverage_0_2.5s": 0.0,
+    "path_coverage_0_3s": 0.0,
+    "per_tau": {
+     "0": {
+      "coverage": 0.0,
+      "n": 33289
+     },
+     "0.5": {
+      "coverage": 0.0,
+      "n": 32064
+     },
+     "1": {
+      "coverage": 0.0,
+      "n": 30774
+     },
+     "1.5": {
+      "coverage": 0.0,
+      "n": 29434
+     },
+     "2": {
+      "coverage": 0.0,
+      "n": 28076
+     },
+     "2.5": {
+      "coverage": 0.0,
+      "n": 26740
+     },
+     "3": {
+      "coverage": 0.0,
+      "n": 25415
+     }
+    },
+    "sample_coverage_all_tau": 0.0
+   }
+  },
+  "E10": {
+   "pedestrian": {
+    "n_pairs": 490,
+    "path_coverage_0_2.5s": 0.5591836734693878,
+    "path_coverage_0_3s": 0.5428571428571428,
+    "per_tau": {
+     "0": {
+      "coverage": 0.7122448979591837,
+      "n": 490
+     },
+     "0.5": {
+      "coverage": 0.7645788336933045,
+      "n": 463
+     },
+     "1": {
+      "coverage": 0.7540229885057471,
+      "n": 435
+     },
+     "1.5": {
+      "coverage": 0.7587939698492462,
+      "n": 398
+     },
+     "2": {
+      "coverage": 0.7307692307692307,
+      "n": 364
+     },
+     "2.5": {
+      "coverage": 0.7208588957055214,
+      "n": 326
+     },
+     "3": {
+      "coverage": 0.6757679180887372,
+      "n": 293
+     }
+    },
+    "sample_coverage_all_tau": 0.7426861976480297
+   },
+   "vehicle": {
+    "n_pairs": 33289,
+    "path_coverage_0_2.5s": 0.1969118928174472,
+    "path_coverage_0_3s": 0.1925560996124846,
+    "per_tau": {
+     "0": {
+      "coverage": 0.3787437291597825,
+      "n": 33289
+     },
+     "0.5": {
+      "coverage": 0.5115082335329342,
+      "n": 32064
+     },
+     "1": {
+      "coverage": 0.5743159810229415,
+      "n": 30774
+     },
+     "1.5": {
+      "coverage": 0.6199293334239315,
+      "n": 29434
+     },
+     "2": {
+      "coverage": 0.6392292349337513,
+      "n": 28076
+     },
+     "2.5": {
+      "coverage": 0.6397905759162303,
+      "n": 26740
+     },
+     "3": {
+      "coverage": 0.643950422978556,
+      "n": 25415
+     }
+    },
+    "sample_coverage_all_tau": 0.5787312223665577
+   }
+  },
+  "E5": {
+   "pedestrian": {
+    "n_pairs": 490,
+    "path_coverage_0_2.5s": 0.826530612244898,
+    "path_coverage_0_3s": 0.8122448979591836,
+    "per_tau": {
+     "0": {
+      "coverage": 0.9346938775510204,
+      "n": 490
+     },
+     "0.5": {
+      "coverage": 0.9546436285097192,
+      "n": 463
+     },
+     "1": {
+      "coverage": 0.9471264367816092,
+      "n": 435
+     },
+     "1.5": {
+      "coverage": 0.9246231155778895,
+      "n": 398
+     },
+     "2": {
+      "coverage": 0.9175824175824175,
+      "n": 364
+     },
+     "2.5": {
+      "coverage": 0.8773006134969326,
+      "n": 326
+     },
+     "3": {
+      "coverage": 0.8395904436860068,
+      "n": 293
+     }
+    },
+    "sample_coverage_all_tau": 0.9206519496595833
+   },
+   "vehicle": {
+    "n_pairs": 33289,
+    "path_coverage_0_2.5s": 0.5308059719426838,
+    "path_coverage_0_3s": 0.5247679413620114,
+    "per_tau": {
+     "0": {
+      "coverage": 0.7056985791102166,
+      "n": 33289
+     },
+     "0.5": {
+      "coverage": 0.8077282934131736,
+      "n": 32064
+     },
+     "1": {
+      "coverage": 0.8339182426723858,
+      "n": 30774
+     },
+     "1.5": {
+      "coverage": 0.8245226608683836,
+      "n": 29434
+     },
+     "2": {
+      "coverage": 0.8257586550790711,
+      "n": 28076
+     },
+     "2.5": {
+      "coverage": 0.825317875841436,
+      "n": 26740
+     },
+     "3": {
+      "coverage": 0.8305724965571513,
+      "n": 25415
+     }
+    },
+    "sample_coverage_all_tau": 0.8160696885644471
+   }
+  }
+ },
+ "deployed": {
+  "deployed": [
+   "E5",
+   "B0"
+  ],
+  "roles": {
+   "B0": "L*",
+   "E10": "not deployed",
+   "E5": "fl_risk"
+  },
+  "status": "tuning_freeze",
+  "tuning_freeze": {
+   "L_star": "B0",
+   "L_star_sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927",
+   "cited_in_sec13": true,
+   "fl_risk_lease_point": "E5",
+   "path": "outputs/framelease_v4/tuning/selection.json",
+   "protocol": "framelease_v4/PROTOCOL.md",
+   "protocol_sealed": true,
+   "registered_protocol": true,
+   "sha256": "652fcbdbf0a6adb498aa0691fcaaffb097fcd680b4bf40235a28639aed69b930",
+   "variant": "FULL"
+  },
+  "warnings": []
+ },
+ "envelopes": {
+  "B0": {
+   "calibration_clips": [
+    "ControlLoss_Town11_Route401_Weather11",
+    "HardBreakRoute_Town11_Route50_Weather23",
+    "ParkingCrossingPedestrian_Town12_Route953_Weather9",
+    "PedestrianCrossing_Town12_Route867_Weather9",
+    "StaticCutIn_Town03_Route149_Weather19"
+   ],
+   "config": "T_x0.00",
+   "deployed": true,
+   "lambda": 0.0,
+   "of": "T_q95",
+   "params": {
+    "abar_mps2": {
+     "pedestrian": 0.0,
+     "vehicle": 0.0
+    },
+    "sigma_m": {
+     "pedestrian": 0.0,
+     "vehicle": 0.0
+    },
+    "vbar_mps": {
+     "pedestrian": 0.0,
+     "vehicle": 0.0
+    }
+   },
+   "path": "outputs/framelease_v4/envelopes/B0.json",
+   "role": "L*",
+   "sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927"
+  },
+  "E10": {
+   "calibration_clips": [
+    "ControlLoss_Town11_Route401_Weather11",
+    "HardBreakRoute_Town11_Route50_Weather23",
+    "ParkingCrossingPedestrian_Town12_Route953_Weather9",
+    "PedestrianCrossing_Town12_Route867_Weather9",
+    "StaticCutIn_Town03_Route149_Weather19"
+   ],
+   "config": "T_x0.30",
+   "deployed": false,
+   "lambda": 0.3,
+   "of": "T_q95",
+   "params": {
+    "abar_mps2": {
+     "pedestrian": 0.0,
+     "vehicle": 0.5172393726672991
+    },
+    "sigma_m": {
+     "pedestrian": 0.4378380140625328,
+     "vehicle": 0.34793577347268123
+    },
+    "vbar_mps": {
+     "pedestrian": 0.2901118524035434,
+     "vehicle": 0.5516014257992612
+    }
+   },
+   "path": "outputs/framelease_v4/envelopes/E10.json",
+   "role": "not deployed",
+   "sha256": "bf61635ba3a38b7a307a4e1e4db4ad0541d7afc65cfd9afc432f9f054e1a2229"
+  },
+  "E5": {
+   "calibration_clips": [
+    "ControlLoss_Town11_Route401_Weather11",
+    "HardBreakRoute_Town11_Route50_Weather23",
+    "ParkingCrossingPedestrian_Town12_Route953_Weather9",
+    "PedestrianCrossing_Town12_Route867_Weather9",
+    "StaticCutIn_Town03_Route149_Weather19"
+   ],
+   "config": "T_x0.60",
+   "deployed": true,
+   "lambda": 0.6,
+   "of": "T_q95",
+   "params": {
+    "abar_mps2": {
+     "pedestrian": 0.0,
+     "vehicle": 1.0344787453345983
+    },
+    "sigma_m": {
+     "pedestrian": 0.8756760281250656,
+     "vehicle": 0.6958715469453625
+    },
+    "vbar_mps": {
+     "pedestrian": 0.5802237048070868,
+     "vehicle": 1.1032028515985224
+    }
+   },
+   "path": "outputs/framelease_v4/envelopes/E5.json",
+   "role": "fl_risk",
+   "sha256": "21d0b4a441cf80e32e4f04ddeb9bf309b5a0a74c9495652fd04a88331c47df3a"
+  }
+ },
+ "environment": {
+  "numpy": "1.23.4",
+  "python": "3.10.22"
+ },
+ "inputs": {
+  "outputs/framelease_v3/gate2_offline/gate2_20261109/config.json": "6d42cc81c44e5e27fae0a662f31a50892f2c5ca1e2e45f88a529fb87a626d3cc",
+  "outputs/framelease_v3/gate2_offline/gate2_20261109/envelopes/B0_q0_NONE.json": "8d7063660160f287910ce0996092c6060f3b22a298a0513725d43ac0d7d6f58d",
+  "outputs/framelease_v3/gate2_offline/gate2_20261109/envelopes/E0_q95_ORIG.json": "54507a0969e25924d8ccde949eb9852fefa2ec78909efde312e7c71360ed446e",
+  "outputs/framelease_v3/gate2_offline/gate2_20261109/envelopes/E0orig_q95_ORIG.json": "c0bd7f8e90229cc2f9b7375b3f55e2f2530968a642222620bc01cc6076da9091",
+  "outputs/framelease_v3/gate2_offline/gate2_20261109/summary.json": "32e33a04a1b287588320e938e37e8923a87d44110372075507cca9ec42881229",
+  "outputs/framelease_v4/envelopes/B0.json": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927",
+  "outputs/framelease_v4/envelopes/E10.json": "bf61635ba3a38b7a307a4e1e4db4ad0541d7afc65cfd9afc432f9f054e1a2229",
+  "outputs/framelease_v4/envelopes/E5.json": "21d0b4a441cf80e32e4f04ddeb9bf309b5a0a74c9495652fd04a88331c47df3a",
+  "outputs/framelease_v4/envelopes/manifest.json": "7c364867f4aa515855f72e827c393052e564add8f6f6a3201d75c63893af6cbb",
+  "outputs/framelease_v4/offline_ablation/envelopes/train_E0.json": "86821422482caa38ea69f7402ff47ba313c63a3890c97b370c3b625c01f8dff8",
+  "outputs/framelease_v4/offline_ablation/frames/BlockedIntersection_Town03_Route135_Weather5.npz": "69edfd671580b5a7dcc0f8d84b69bd8ef9794c1978bacf2922b9d06a622943c5",
+  "outputs/framelease_v4/offline_ablation/frames/ControlLoss_Town04_Route170_Weather14.npz": "5ba0cc7af40059ade472c3c1af5539a5e8a11d7ab54235324e70fa734afd9f0f",
+  "outputs/framelease_v4/offline_ablation/frames/ControlLoss_Town10HD_Route378_Weather14.npz": "222a9445ecab31e3222187a442114d0a6abef466d2717290728b6b8ebff46fa2",
+  "outputs/framelease_v4/offline_ablation/frames/CrossingBicycleFlow_Town12_Route977_Weather15.npz": "d3c634778c47475e7695c452f1670a42d133a857ea3b3f5b627f8e7c0271a419",
+  "outputs/framelease_v4/offline_ablation/frames/DynamicObjectCrossing_Town01_Route3_Weather3.npz": "c6701800aa8bfa5fb57535778ae850b9706141db5e82df4ee75cb3f311e1be60",
+  "outputs/framelease_v4/offline_ablation/frames/DynamicObjectCrossing_Town02_Route11_Weather11.npz": "6cb40268d5d48f3ffd7f63179c60826bec09bfb9000c49f95a20df3d1e91623d",
+  "outputs/framelease_v4/offline_ablation/frames/HardBreakRoute_Town01_Route32_Weather6.npz": "ca006aef7d733a5dbad7eaadc68b6fe55c96e12dd6ec9f4266eb772a4a176e29",
+  "outputs/framelease_v4/offline_ablation/frames/HighwayCutIn_Town12_Route1029_Weather15.npz": "389a8c2ace8726f6e5969ecfc83f93055d22bd905de12d4003dae194c29d2779",
+  "outputs/framelease_v4/offline_ablation/frames/HighwayExit_Town06_Route312_Weather0.npz": "fba079fd644ae451fcf60c79fc8d91574651220b0e0c499c8811a2b9d5030160",
+  "outputs/framelease_v4/offline_ablation/frames/InterurbanActorFlow_Town12_Route1291_Weather1.npz": "0674dd640873da59425fc3f748fd02f41b8ed14ed50539adeb53b29da9b4c0e7",
+  "outputs/framelease_v4/offline_ablation/frames/InterurbanAdvancedActorFlow_Town06_Route324_Weather2.npz": "95f9fbf1fe888b38ce4a8cc4a541a92f959b6b575d7a8b6b4b1b55a45cd510d9",
+  "outputs/framelease_v4/offline_ablation/frames/InvadingTurn_Town02_Route95_Weather9.npz": "6af749f9828d53e413a17a18b55718c918a5ade7f9e2f05f6b3d0ccc33f14f85",
+  "outputs/framelease_v4/offline_ablation/frames/LaneChange_Town06_Route307_Weather21.npz": "e6316fb24b5887530b2eb1ef29f9c8f0eef30e4abae075a4bb5075208bd2913d",
+  "outputs/framelease_v4/offline_ablation/frames/MergerIntoSlowTrafficV2_Town12_Route857_Weather25.npz": "0ed619cbcca34bc0866ac7a673a16b2045554793b4c2030ad79a81bc9e352a3f",
+  "outputs/framelease_v4/offline_ablation/frames/MergerIntoSlowTraffic_Town06_Route317_Weather5.npz": "2d1c02d537dbf41821167e826d0a65818065c4c3851dedda04a4ee669c4167b9",
+  "outputs/framelease_v4/offline_ablation/frames/NonSignalizedJunctionLeftTurnEnterFlow_Town12_Route949_Weather13.npz": "22513dfcb61054b36f1bec02c22e50f3221e8e7854ca5b634d40b26aba7a9c16",
+  "outputs/framelease_v4/offline_ablation/frames/NonSignalizedJunctionLeftTurn_Town07_Route342_Weather3.npz": "192fb3acfd2d5e191084cc828f43c9263ae917926de985ecc4f4f7546d94fea1",
+  "outputs/framelease_v4/offline_ablation/frames/NonSignalizedJunctionRightTurn_Town03_Route126_Weather18.npz": "b038679e4824934b95af9818669eea663ee2f8f62979d7da9c307226d86e3313",
+  "outputs/framelease_v4/offline_ablation/frames/OppositeVehicleRunningRedLight_Town04_Route180_Weather23.npz": "1685c08a57bd415ee2b3e23b7b0b19b90454c42f0efd7a0d51c615922fca1999",
+  "outputs/framelease_v4/offline_ablation/frames/OppositeVehicleTakingPriority_Town04_Route214_Weather6.npz": "1232140fec03e06dd9ea241775c8f7ff643995524f5fe0d132303fdcab6cd7d6",
+  "outputs/framelease_v4/offline_ablation/frames/ParkingCrossingPedestrian_Town13_Route545_Weather25.npz": "f582f3d75e47bf7886a5ae0f4c020ab2cd8ed9e7570933e15a35c15beea062c1",
+  "outputs/framelease_v4/offline_ablation/frames/ParkingCutIn_Town13_Route1343_Weather1.npz": "86d5987d79ca951d15952440d310d7d1cd0987d4fedc776f4fb7fbac1f281ea9",
+  "outputs/framelease_v4/offline_ablation/frames/ParkingExit_Town12_Route922_Weather12.npz": "92bedddfa3f9f9743409adabd53f0726ea7591ebd3654cd8a7420b249d0ea587",
+  "outputs/framelease_v4/offline_ablation/frames/PedestrianCrossing_Town13_Route747_Weather19.npz": "9c29d91d3b3f3454dfa520da69b5ce16612112669b33d0defe2b12dfbb3aed54",
+  "outputs/framelease_v4/offline_ablation/frames/SignalizedJunctionLeftTurnEnterFlow_Town13_Route657_Weather2.npz": "1bb00b8e6f4c3081a95a2f482cf68267648caca1613c8d2ed208dd7bc4c64cd2",
+  "outputs/framelease_v4/offline_ablation/frames/SignalizedJunctionRightTurn_Town03_Route118_Weather14.npz": "79f90ee85207934e2219bd3dec546bdb6f49a895a38a16d0ce6df3d4f2d3d52c",
+  "outputs/framelease_v4/offline_ablation/frames/StaticCutIn_Town05_Route226_Weather18.npz": "4151443df74151c4ecf006eac64ed0a5d32a6bf555db7be24140e7d8e6d5bea9",
+  "outputs/framelease_v4/offline_ablation/frames/VanillaNonSignalizedTurnEncounterStopsign_Town12_Route979_Weather9.npz": "3ed3062004093fd74169ad6283ce2933759fbed35440d365423edea36bec1edf",
+  "outputs/framelease_v4/offline_ablation/frames/VehicleTurningRoutePedestrian_Town15_Route445_Weather11.npz": "fd42632206c1449fac2a3b9465f11b7b34502ade58cba4c91c35f95f047b0f70",
+  "outputs/framelease_v4/offline_ablation/frames/VehicleTurningRoutePedestrian_Town15_Route481_Weather19.npz": "09518b596cc007344bb926e58adf778a0369f3efcbcae2fe793a97239becbe55",
+  "outputs/framelease_v4/offline_ablation/frames/VehicleTurningRoute_Town15_Route504_Weather10.npz": "0db66ef5d56a9fd44b0dd5a38edd48693e4a209cde53c06b079c3db50cd1b942",
+  "outputs/framelease_v4/offline_ablation/frames/YieldToEmergencyVehicle_Town04_Route166_Weather10.npz": "10e294336fd0ae68dc329a0259ecd57acadc45cd60a9bf3bdf46c4058f7b012a",
+  "outputs/framelease_v4/protocol/route_split.json": "555f6869cb62d89082efc0fefc8f125ee133b16fd36a6fcf9f68bb1269fa527e",
+  "outputs/framelease_v4/tuning/selection.json": "652fcbdbf0a6adb498aa0691fcaaffb097fcd680b4bf40235a28639aed69b930"
+ },
+ "interim_guard": {
+  "freeze": null,
+  "guarded_clips": [],
+  "released_clips": [],
+  "rule": "PROTOCOL Sec. 9.11: no test-route result is examined before the analysis freeze, except job health, timing and disk; such reads are never summarized across arms",
+  "status": "pre_freeze",
+  "test_routes": {
+   "manifest": "outputs/framelease_v4/registration/MANIFEST.sha256",
+   "manifest_sha256": "0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3",
+   "n_extra": 0,
+   "n_registered": 44,
+   "path": "outputs/framelease_v4/protocol/route_split.json",
+   "sha256": "555f6869cb62d89082efc0fefc8f125ee133b16fd36a6fcf9f68bb1269fa527e"
+  }
+ },
+ "outputs": {
+  "coverage.csv": "fe77c98a49c4916a83f083d1054c8cafe65270da3a1aff7391a521e88e4e7a20",
+  "per_clip.csv": "354e8e79269a066ff2fcd5d96506433b8cc107518841f5aaabff53d55b90bffe",
+  "per_tau.csv": "5e79e80c325734d8e2c1956c21df9406117e8c6ee1ff98ee86bdb1a168fee57b"
+ },
+ "protocol": "framelease_v4/PROTOCOL.md Secs. 1.3, 4.3, 7.4, 9.13; GAP_AUDIT Sec. 3.7 row R-5",
+ "schema": "framelease_v4.prop1_coverage/1",
+ "settings": {
+  "bootstrap": {
+   "interval": "percentile 95%",
+   "resamples": 2000,
+   "seed": 20261109,
+   "unit": "clip"
+  },
+  "error_range_m": 50.0,
+  "gate_m": 2.0,
+  "marks_s": [
+   0.0,
+   0.5,
+   1.0,
+   1.5,
+   2.0,
+   2.5,
+   3.0
+  ],
+  "path_short_s": 2.5,
+  "score_threshold": 0.3,
+  "tau_s": {
+   "points": 61,
+   "start": 0.0,
+   "step": 0.05,
+   "stop": 3.0
+  },
+  "warmup_steps": 5
+ },
+ "split": {
+  "clips": [
+   "BlockedIntersection_Town03_Route135_Weather5",
+   "ControlLoss_Town04_Route170_Weather14",
+   "ControlLoss_Town10HD_Route378_Weather14",
+   "CrossingBicycleFlow_Town12_Route977_Weather15",
+   "DynamicObjectCrossing_Town01_Route3_Weather3",
+   "DynamicObjectCrossing_Town02_Route11_Weather11",
+   "HardBreakRoute_Town01_Route32_Weather6",
+   "HighwayCutIn_Town12_Route1029_Weather15",
+   "HighwayExit_Town06_Route312_Weather0",
+   "InterurbanActorFlow_Town12_Route1291_Weather1",
+   "InterurbanAdvancedActorFlow_Town06_Route324_Weather2",
+   "InvadingTurn_Town02_Route95_Weather9",
+   "LaneChange_Town06_Route307_Weather21",
+   "MergerIntoSlowTrafficV2_Town12_Route857_Weather25",
+   "MergerIntoSlowTraffic_Town06_Route317_Weather5",
+   "NonSignalizedJunctionLeftTurnEnterFlow_Town12_Route949_Weather13",
+   "NonSignalizedJunctionLeftTurn_Town07_Route342_Weather3",
+   "NonSignalizedJunctionRightTurn_Town03_Route126_Weather18",
+   "OppositeVehicleRunningRedLight_Town04_Route180_Weather23",
+   "OppositeVehicleTakingPriority_Town04_Route214_Weather6",
+   "ParkingCrossingPedestrian_Town13_Route545_Weather25",
+   "ParkingCutIn_Town13_Route1343_Weather1",
+   "ParkingExit_Town12_Route922_Weather12",
+   "PedestrianCrossing_Town13_Route747_Weather19",
+   "SignalizedJunctionLeftTurnEnterFlow_Town13_Route657_Weather2",
+   "SignalizedJunctionRightTurn_Town03_Route118_Weather14",
+   "StaticCutIn_Town05_Route226_Weather18",
+   "VanillaNonSignalizedTurnEncounterStopsign_Town12_Route979_Weather9",
+   "VehicleTurningRoutePedestrian_Town15_Route445_Weather11",
+   "VehicleTurningRoutePedestrian_Town15_Route481_Weather19",
+   "VehicleTurningRoute_Town15_Route504_Weather10",
+   "YieldToEmergencyVehicle_Town04_Route166_Weather10"
+  ],
+  "evaluated": "VAL",
+  "n_clips": 32,
+  "n_val": 32,
+  "train_clips_never_evaluated": [
+   "ControlLoss_Town11_Route401_Weather11",
+   "HardBreakRoute_Town11_Route50_Weather23",
+   "ParkingCrossingPedestrian_Town12_Route953_Weather9",
+   "PedestrianCrossing_Town12_Route867_Weather9",
+   "StaticCutIn_Town03_Route149_Weather19"
+  ],
+  "view": "outputs/framelease_v3/c1_sweep_ext/merged_37clips_20261109T145344Z"
+ },
+ "statement": "Proposition 1 is conditional on its envelope assumption; these are the empirical coverages of the envelope on the VAL clips, not a guarantee (Secs. 1.3, 9.13)"
+}

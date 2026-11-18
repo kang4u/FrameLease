@@ -1,0 +1,11 @@
+(exit 137, 13.0 s)
+apply_locked: exit 137 (output /tmp/A10A11/applier/treeK1/outputs/framelease_v4/amendment_a10/apply.out)
+bash: 第 17 行： 330330 已杀死                  $X "$PY" -u -I -B "$APPLIER" "$SPEC" --apply > "$OUT/apply.out" 2>&1
+
+--- apply.out
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+inject: SIGKILL after --write-manifest
+apply_locked: PROTOCOL.md unchanged; RESTORED the sealed manifest
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

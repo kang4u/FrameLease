@@ -1,0 +1,209 @@
+{
+ "all_dry_runs_ok": true,
+ "job_file": "outputs/framelease_v4/p1_jobs/FULL/b07_heur_s2.jsonl",
+ "job_file_sha256": "9eb9b7b8bacaaeb27e2f24f99a83644676b0184756847a22f3263b3374c9a14c",
+ "lines": [
+  {
+   "agent_runtime_config_sha256": "34e296e62adcf331f2261bc25ba37ecfe20ec3e44576df0f204b6605e4134d5a",
+   "dry_run": {
+    "arm": "fl_heuristic_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2600,
+     2601,
+     2602,
+     8600
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r24330",
+   "ok": true,
+   "problems": [],
+   "utility": "v4_adet_d1"
+  },
+  {
+   "agent_runtime_config_sha256": "34e296e62adcf331f2261bc25ba37ecfe20ec3e44576df0f204b6605e4134d5a",
+   "dry_run": {
+    "arm": "fl_heuristic_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2610,
+     2611,
+     2612,
+     8610
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r3090",
+   "ok": true,
+   "problems": [],
+   "utility": "v4_adet_d1"
+  },
+  {
+   "agent_runtime_config_sha256": "34e296e62adcf331f2261bc25ba37ecfe20ec3e44576df0f204b6605e4134d5a",
+   "dry_run": {
+    "arm": "fl_heuristic_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2620,
+     2621,
+     2622,
+     8620
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r17569",
+   "ok": true,
+   "problems": [],
+   "utility": "v4_adet_d1"
+  },
+  {
+   "agent_runtime_config_sha256": "34e296e62adcf331f2261bc25ba37ecfe20ec3e44576df0f204b6605e4134d5a",
+   "dry_run": {
+    "arm": "fl_heuristic_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2630,
+     2631,
+     2632,
+     8630
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r3749",
+   "ok": true,
+   "problems": [],
+   "utility": "v4_adet_d1"
+  },
+  {
+   "agent_runtime_config_sha256": "34e296e62adcf331f2261bc25ba37ecfe20ec3e44576df0f204b6605e4134d5a",
+   "dry_run": {
+    "arm": "fl_heuristic_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2600,
+     2601,
+     2602,
+     8600
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r3373",
+   "ok": true,
+   "problems": [],
+   "utility": "v4_adet_d1"
+  },
+  {
+   "agent_runtime_config_sha256": "34e296e62adcf331f2261bc25ba37ecfe20ec3e44576df0f204b6605e4134d5a",
+   "dry_run": {
+    "arm": "fl_heuristic_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2610,
+     2611,
+     2612,
+     8610
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r28093",
+   "ok": true,
+   "problems": [],
+   "utility": "v4_adet_d1"
+  },
+  {
+   "agent_runtime_config_sha256": "34e296e62adcf331f2261bc25ba37ecfe20ec3e44576df0f204b6605e4134d5a",
+   "dry_run": {
+    "arm": "fl_heuristic_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2620,
+     2621,
+     2622,
+     8620
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2397",
+   "ok": true,
+   "problems": [],
+   "utility": "v4_adet_d1"
+  },
+  {
+   "agent_runtime_config_sha256": "34e296e62adcf331f2261bc25ba37ecfe20ec3e44576df0f204b6605e4134d5a",
+   "dry_run": {
+    "arm": "fl_heuristic_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2630,
+     2631,
+     2632,
+     8630
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r23910",
+   "ok": true,
+   "problems": [],
+   "utility": "v4_adet_d1"
+  },
+  {
+   "agent_runtime_config_sha256": "34e296e62adcf331f2261bc25ba37ecfe20ec3e44576df0f204b6605e4134d5a",
+   "dry_run": {
+    "arm": "fl_heuristic_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2600,
+     2601,
+     2602,
+     8600
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2844",
+   "ok": true,
+   "problems": [],
+   "utility": "v4_adet_d1"
+  },
+  {
+   "agent_runtime_config_sha256": "34e296e62adcf331f2261bc25ba37ecfe20ec3e44576df0f204b6605e4134d5a",
+   "dry_run": {
+    "arm": "fl_heuristic_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2610,
+     2611,
+     2612,
+     8610
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2086",
+   "ok": true,
+   "problems": [],
+   "utility": "v4_adet_d1"
+  },
+  {
+   "agent_runtime_config_sha256": "34e296e62adcf331f2261bc25ba37ecfe20ec3e44576df0f204b6605e4134d5a",
+   "dry_run": {
+    "arm": "fl_heuristic_fp",
+    "entry": "framelease_v4_arms_agent_entry.py",
+    "ports": [
+     2620,
+     2621,
+     2622,
+     8620
+    ],
+    "status": "NOT_STARTED"
+   },
+   "id": "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2643",
+   "ok": true,
+   "problems": [],
+   "utility": "v4_adet_d1"
+  }
+ ],
+ "n_lines": 11,
+ "problems": [],
+ "schema": "framelease_v4.p1_check/1",
+ "script_sha256": "d953cb18b92f6f3d627e3e13b9cf5c685abbffbd8a845feb8db31203c1825fad"
+}

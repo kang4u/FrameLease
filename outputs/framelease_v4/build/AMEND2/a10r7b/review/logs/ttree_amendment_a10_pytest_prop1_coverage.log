@@ -1,0 +1,80 @@
+.....................F                                                   [100%]
+=================================== FAILURES ===================================
+_________________ Reproducible.test_reproduces_development_run _________________
+
+self = <test_prop1_coverage.Reproducible testMethod=test_reproduces_development_run>
+
+    def test_reproduces_development_run(self):
+        if not (DEV_RUN / 'coverage.json').is_file():
+            self.skipTest(f'no development run in {DEV_RUN}')
+        self.assertTrue(sums_ok(DEV_RUN))
+        ref = json.loads((DEV_RUN / 'coverage.json').read_text(encoding='utf-8'))
+        with tempfile.TemporaryDirectory() as d:
+            tf = ref['arguments']['tuning_freeze']
+            if ref['deployed']['status'] == 'no_tuning_freeze':
+                tf = Path(d) / 'no_tuning_freeze.json'
+            doc, tables = P.compute(tuning_freeze=tf, log=quiet)
+            self.assertEqual((doc['settings']['bootstrap']['resamples'], doc['settings']['bootstrap']['seed']),
+                             (2000, 20261109))
+            self.assertTrue(doc['complete'])
+            self.assertEqual(doc['split']['n_clips'], 32)
+            self.assertEqual({k: v['sha256'] for k, v in doc['envelopes'].items()}, PINS)
+            self.assertTrue(all(v['pass'] for v in doc['checks'].values()), doc['checks'])
+            self.assertEqual(doc['checks']['gate2']['max_abs_diff'],
+                             {n: 0.0 for n in P.GATE2_VAL_ENVELOPES})
+            out = Path(d) / 'again'
+            P.write_outputs(out, doc, tables)
+            for name in tables:
+                self.assertEqual((out / name).read_bytes(), (DEV_RUN / name).read_bytes(), name)
+            again = json.loads((out / 'coverage.json').read_text(encoding='utf-8'))
+            for key in self.RESULT_KEYS:
+>               self.assertEqual(again[key], ref[key], key)
+E               AssertionError: {'cli[1952 chars]w': '/home/kang/Desktop/DAC/outputs/framelease[45 chars]44Z'} != {'cli[1952 chars]w': 'outputs/framelease_v3/c1_sweep_ext/merged[22 chars]44Z'}
+E               Diff is 2732 characters long. Set self.maxDiff to None to see it. : split
+
+framelease_v4/analysis/tests/test_prop1_coverage.py:490: AssertionError
+==================================== PASSES ====================================
+_______________________ Cli.test_cli_subset_and_refusals _______________________
+----------------------------- Captured stdout call -----------------------------
+[1/2] BlockedIntersection_Town03_Route135_Weather5: 1611 matched pairs (1 s)
+[2/2] ControlLoss_Town10HD_Route378_Weather14: 1413 matched pairs (2 s)
+Proposition-1 coverage on 2 VAL clips (SUBSET: incomplete) -> /tmp/tmpxi0zuerh/sub
+deployed E*: no_tuning_freeze: ['E5', 'E10', 'B0'] (roles {'E5': 'candidate', 'E10': 'candidate', 'B0': 'candidate'})
+  E5   candidate    vehicle    pairs   3024  path[0,3s] 0.506 [0.492, 0.515]  sample 0.812  per-tau 0:0.703 0.5:0.821 1:0.841 1.5:0.821 2:0.805 2.5:0.804 3:0.807
+  E5   candidate    pedestrian pairs      0  path[0,3s] n/a [n/a, n/a]  sample n/a  per-tau 0:n/a 0.5:n/a 1:n/a 1.5:n/a 2:n/a 2.5:n/a 3:n/a
+  E10  candidate    vehicle    pairs   3024  path[0,3s] 0.115 [0.023, 0.170]  sample 0.549  per-tau 0:0.303 0.5:0.534 1:0.568 1.5:0.571 2:0.604 2.5:0.593 3:0.596
+  E10  candidate    pedestrian pairs      0  path[0,3s] n/a [n/a, n/a]  sample n/a  per-tau 0:n/a 0.5:n/a 1:n/a 1.5:n/a 2:n/a 2.5:n/a 3:n/a
+  B0   candidate    vehicle    pairs   3024  path[0,3s] 0.000 [0.000, 0.000]  sample 0.000  per-tau 0:0.000 0.5:0.000 1:0.000 1.5:0.000 2:0.000 2.5:0.000 3:0.000
+  B0   candidate    pedestrian pairs      0  path[0,3s] n/a [n/a, n/a]  sample n/a  per-tau 0:n/a 0.5:n/a 1:n/a 1.5:n/a 2:n/a 2.5:n/a 3:n/a
+checks: {'inputs': True, 'envelope_link': True, 'gate2': None, 'pooled': True}; interim guard: pre_freeze, 0 guarded clips
+----------------------------- Captured stderr call -----------------------------
+REFUSED: /tmp/tmpxi0zuerh/sub already holds outputs (use --force to replace them)
+REFUSED (interim-look guard, logged in /tmp/tmpxi0zuerh/guard/interim_guard.jsonl): analysis-freeze record /tmp/tmpxi0zuerh/bogus_record.json (sha256 7e6a8e3eee946722fea503137abd78b9e112032062e34781220443622a320cf4) is not valid: not an analysis-freeze record (schema framelease_v4.analysis_freeze/1); its sha256 is not cited in Sec. 13 of framelease_v4/PROTOCOL.md
+ERROR: TRAIN / calibration clips are never evaluated: ['ControlLoss_Town11_Route401_Weather11']
+__________________ Cli.test_protected_out_refused_without_log __________________
+----------------------------- Captured stderr call -----------------------------
+REFUSED: outputs/framelease_v4/envelopes/r5_test_never_written: prop1_coverage never writes there (PROTECTED)
+=========================== short test summary info ============================
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::SyntheticEnvelopes::test_all_and_nothing
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::SyntheticEnvelopes::test_bootstrap
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::SyntheticEnvelopes::test_hand_made_counts
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::SyntheticEnvelopes::test_pooled_equals_concatenation_across_clips
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::SyntheticEnvelopes::test_zero_envelope_on_positive_errors_is_zero
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Split::test_inconsistent_lists_or_calibration_refused
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Split::test_real_lists_val_only
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Split::test_train_samples_never_enter
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Deployed::test_b0_with_fl_risk
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Deployed::test_cited_freeze
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Deployed::test_inconsistent_freeze_refused
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Deployed::test_no_freeze_all_three
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Deployed::test_not_cited_or_not_sealed
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Guard::test_compute_refuses_before_reading
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Guard::test_real_clips_not_on_test_routes
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Guard::test_refused_before_freeze
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Guard::test_release
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Envelopes::test_changed_file_refused
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Envelopes::test_pinned_files
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Cli::test_cli_subset_and_refusals
+PASSED framelease_v4/analysis/tests/test_prop1_coverage.py::Cli::test_protected_out_refused_without_log
+FAILED framelease_v4/analysis/tests/test_prop1_coverage.py::Reproducible::test_reproduces_development_run
+1 failed, 21 passed in 20.82s

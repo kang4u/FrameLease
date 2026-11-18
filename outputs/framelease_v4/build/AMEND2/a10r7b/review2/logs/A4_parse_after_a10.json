@@ -1,0 +1,50 @@
+{
+ "amendments": {
+  "A3": [
+   2278
+  ],
+  "A9": [
+   2472
+  ],
+  "A7": [
+   2516
+  ],
+  "A4": [
+   2571
+  ],
+  "A10": [
+   2810
+  ]
+ },
+ "p1_entries_unchanged": true,
+ "phase_entries_unchanged": true,
+ "first_citing_owner": {
+  "framelease_v4/analysis/analyze_v4.py": "A10",
+  "framelease_v4/analysis/figures_tables.py": "A10",
+  "framelease_v4/analysis/prop1_coverage.py": "A10",
+  "framelease_v4/analysis/tests/test_analyze_v4.py": "A10",
+  "framelease_v4/analysis/tests/test_figures_tables.py": "A10",
+  "framelease_v4/analysis/tests/test_prop1_coverage.py": "A10",
+  "framelease_v4/analysis/tests/test_verify_independent.py": "A10",
+  "framelease_v4/analysis/verify_independent.py": "A10",
+  "framelease_v4/analysis/tests/test_verify_table1_extra.py": null,
+  "framelease_v4/analysis/verify_table1_extra.py": null
+ },
+ "g8_waits": [],
+ "after_a_later_G3_entry": {
+  "entries": [
+   "d1_decision",
+   "p2_data",
+   "p2_jobs"
+  ],
+  "analyze_v4_owner": "A10",
+  "g8_waits": []
+ },
+ "added_lines": 279,
+ "prose_over_120": [],
+ "table_rows_over_120": 9,
+ "driver_form_lines": [],
+ "amend_titles_added": [
+  "**Amendment A10, 2026-11-15 09:34 (Beiji"
+ ]
+}

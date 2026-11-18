@@ -1,0 +1,13 @@
+(exit 137, 13.0 s)
+apply_locked: exit 137 (output /tmp/A10A11/applier/treeK2/outputs/framelease_v4/amendment_a10/apply.out)
+bash: 第 17 行： 330464 已杀死                  $X "$PY" -u -I -B "$APPLIER" "$SPEC" --apply > "$OUT/apply.out" 2>&1
+
+--- apply.out
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/A10A11/applier/treeK2/outputs/framelease_v4/registration/MANIFEST.sha256: 222 files, sha256 692002a1bb775209d1c128dc65ee7baf1db9b13d9e8a3f3e37786cf63de0421c
+inject: SIGKILL inside os.replace (temporary file written, PROTOCOL.md not replaced)
+apply_locked: PROTOCOL.md unchanged; RESTORED the sealed manifest
+apply_locked: removed the temporary file framelease_v4/.PROTOCOL.md.entrytmp of the applier
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

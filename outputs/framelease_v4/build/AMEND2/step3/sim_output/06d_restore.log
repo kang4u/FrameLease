@@ -1,0 +1,3 @@
+step3_txn.py restore 2026-11-15T06:19:29+0800 (pid 245765): root /tmp/AMEND3/tree, work /tmp/AMEND3/runs/06c_kill
+journal step before this restore: 'protocol'
+restore: restored ['framelease_v4/PROTOCOL.md', 'outputs/framelease_v4/registration/MANIFEST.sha256']; registration.py --verify: manifest: 1 files differ: [('framelease_v4/analysis/verify_table1_extra.py', 'a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa', 'd416bdedd8eb7ed4f19b03bdc559da2f4589dfd208e9b687f22545a6dfaaf4af')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK -> sealed state OK

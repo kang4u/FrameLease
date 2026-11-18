@@ -1,0 +1,11 @@
+(exit 1, 9.7 s)
+apply_locked: exit 1 (output /tmp/A10A11/applier/treeT1/outputs/framelease_v4/amendment_a10/apply.out)
+
+--- apply.out
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeT1/outputs/framelease_v4/amendment_a10/attempt_20261115T104502_362754
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: in-place text found 2 times: '`outputs/framelease_v4/analysis/final_<stamp>/`, with a sha256 manifest.\n'
+apply_locked: PROTOCOL.md unchanged; the manifest equals the sealed one
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

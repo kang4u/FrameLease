@@ -1,0 +1,4 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B outputs/framelease_v4/build/AMEND2/a10r7b/apply_entry_stream.py outputs/framelease_v4/build/G8CUT/entries/A13_spec.json
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+check: pre-checks passed
+TIME 6.13 s, max RSS 19056 KB

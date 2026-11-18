@@ -1,0 +1,522 @@
+"""Independent review of the amendment prerequisites (APPLY_PLAN Sec. 2 steps 1, 5, 6 and 7), 2026-11-14.
+
+Read only on the tree: it imports the changed modules, reads PROTOCOL.md, the validity note, the P1 driver baseline
+and the pilot decision logs, and writes only into temporary directories. The drafting versions of the eight changed
+files (recovered from the build agents' edit records by undoing every recorded replacement; each equals its
+a3_sha256_at_drafting.txt value, checked below) lie in drafting/ next to this file.
+
+    cd /home/kang/Desktop/DAC && taskset -c 12-15 nice -n 19 ionice -c 3 env CUDA_VISIBLE_DEVICES='' \
+        OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 .conda-unidrive-linux/bin/python -I -B -m pytest \
+        -q -p no:cacheprovider -rA outputs/framelease_v4/build/AMEND/review_prereq/test_review_prereq.py
+"""
+from __future__ import annotations
+
+import ast
+import contextlib
+import hashlib
+import io
+import json
+import os
+import re
+import sys
+import tempfile
+import types
+import unittest
+from pathlib import Path
+from unittest import mock
+
+ROOT = Path('/home/kang/Desktop/DAC')
+HERE = Path(__file__).resolve().parent
+DRAFT = HERE / 'drafting'
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+os.environ['CUDA_VISIBLE_DEVICES'] = ''
+sys.dont_write_bytecode = True
+
+import numpy as np  # noqa: E402
+
+CHANGED = {   # repo path -> (drafting fixture, sha256 reported by the item)
+    'framelease_v4/analysis/manipulation.py':
+        ('manipulation', '78f18dacf323832ef16684b0b81a2ba03b2ffb00186259780d1bafe7e656cbd0'),
+    'framelease_v4/analysis/aggregate_v4.py':
+        ('aggregate_v4', '38175181e68377234b59c881dc042dacdbd64143ead3475ff74b8dd0918021c7'),
+    'framelease_v4/analysis/tests/test_manipulation.py':
+        ('test_manipulation', '07a63194b423e6c0d6f79464f9e0b61d3640f8d7be4c176091d5cb354cfac231'),
+    'framelease_v4/analysis/tests/test_aggregate_v4.py':
+        ('test_aggregate_v4', '5d6fc68c17c309bd6059b364fc98ce4f5018e75d49ec2e1b0d925948580ea756'),
+    'framelease_v4/protocol/p3_rl.py':
+        ('p3_rl', '10a8590d511a9ab4858b87a93ad41e3a2961ad7a17af626bf27aedc781eab94b'),
+    'framelease_v4/protocol/tests/test_p3_rl.py':
+        ('test_p3_rl', '16de84c3de824a272168606e14947b9817a29fad5732650db5d3591076e2cda1'),
+    'framelease_v4/protocol/stress_bench.py':
+        ('stress_bench', '0cff7b56e6fc09686601f06ff919bde29de17336d6342b9c66ea23bb617d04c2'),
+    'framelease_v4/protocol/tests/test_stress_bench.py':
+        ('test_stress_bench', '92abe721bd42643fab8942a231d99ab14d35b1a5c789d1e55610d2b3499c0f58'),
+}
+
+
+def sha256_file(p):
+    return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+
+def draft_text(name):
+    return (DRAFT / f'{name}.py.txt').read_text(encoding='utf-8')
+
+
+def load_draft(name, real_rel):
+    """The drafting version of a module, executed as if it lay at its real path (ROOT and PROTOCOL paths resolve)."""
+    modname = f'review_draft_{name}'
+    m = types.ModuleType(modname)
+    m.__file__ = str(ROOT / real_rel)
+    sys.modules[modname] = m
+    exec(compile(draft_text(name), str(ROOT / real_rel), 'exec'), m.__dict__)
+    return m
+
+
+def _strip_docstrings(tree):
+    for node in ast.walk(tree):
+        body = getattr(node, 'body', None)
+        if isinstance(body, list) and body and isinstance(body[0], ast.Expr) and \
+                isinstance(getattr(body[0], 'value', None), ast.Constant) and isinstance(body[0].value.value, str):
+            node.body = body[1:] or [ast.Pass()]
+    return tree
+
+
+def top_level(src):
+    """{key: ast dump without docstrings} of the top-level statements of a module."""
+    out = {}
+    for i, node in enumerate(_strip_docstrings(ast.parse(src)).body):
+        if isinstance(node, (ast.FunctionDef, ast.ClassDef, ast.AsyncFunctionDef)):
+            key = node.name
+        elif isinstance(node, ast.Assign) and all(isinstance(t, ast.Name) for t in node.targets):
+            key = ','.join(t.id for t in node.targets)
+        elif isinstance(node, ast.Import):
+            key = 'import ' + ','.join(a.name for a in node.names)
+        elif isinstance(node, ast.ImportFrom):
+            key = f'from {node.module} import ' + ','.join(a.name for a in node.names)
+        else:
+            key = 'stmt:' + hashlib.sha256(ast.dump(node).encode()).hexdigest()[:16]
+        out[key] = ast.dump(node)
+    return out
+
+
+def changed_keys(old_src, new_src):
+    a, b = top_level(old_src), top_level(new_src)
+    return ({k for k in a.keys() & b.keys() if a[k] != b[k]}, set(b) - set(a), set(a) - set(b))
+
+
+# ============================================================================================ constraints
+
+class ConstraintsTest(unittest.TestCase):
+    def test_drafting_fixtures_are_the_drafting_versions(self):
+        draft = dict(reversed(line.split()) for line in
+                     (ROOT / 'outputs/framelease_v4/build/AMEND/a3_sha256_at_drafting.txt').read_text().splitlines()
+                     if line.strip())
+        for rel_path, (name, _) in CHANGED.items():
+            with self.subTest(rel_path):
+                self.assertEqual(sha256_file(DRAFT / f'{name}.py.txt'), draft[rel_path])
+
+    def test_changed_files_are_development_files_at_the_reported_sha256(self):
+        base = json.loads((ROOT / 'outputs/framelease_v4/p1_driver/registered_baseline.json').read_text())
+        files = base['files']
+        names = set(files) if isinstance(files, dict) else {f if isinstance(f, str) else f.get('path') for f in files}
+        protocol = (ROOT / 'framelease_v4/PROTOCOL.md').read_text(encoding='utf-8')
+        for rel_path, (name, sha) in CHANGED.items():
+            with self.subTest(rel_path):
+                self.assertEqual(sha256_file(ROOT / rel_path), sha)
+                self.assertNotIn(rel_path, names)
+                self.assertNotIn(sha, protocol)
+                self.assertNotIn(sha256_file(DRAFT / f'{name}.py.txt'), protocol)
+
+
+# ============================================================================================ AGG, steps 1 and 6
+
+class AggTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from framelease_v4.analysis import aggregate_v4 as A
+        from framelease_v4.analysis import manipulation as M
+        cls.A, cls.M = A, M
+        cls.MD = load_draft('manipulation', 'framelease_v4/analysis/manipulation.py')
+
+    def test_idle_band_is_the_sec_9_7_pilot_range(self):
+        text = (ROOT / 'framelease_v4/PROTOCOL.md').read_text(encoding='utf-8')
+        sec = text.split('### 9.7 ', 1)[1].split('\n### ', 1)[0]
+        flat = ' '.join(sec.split())
+        m = re.findall(r'the pilot measured (\d\.\d+)-(\d\.\d+) s at kappa 1\.0', flat)
+        self.assertEqual(len(m), 1, m)
+        self.assertEqual(tuple(float(x) for x in m[0]), self.M.IDLE_PREFIX_BAND_S)
+        self.assertEqual(self.M.IDLE_PREFIX_BAND_S, (0.416, 0.426))
+        self.assertIn('within kappa x [0.35, 0.60] s', flat)
+        self.assertEqual(self.M.CHARGED_PREFIX_BAND_S, (0.35, 0.60))
+        quote = self.M.IDLE_BAND_SOURCE.split('"')[1]
+        self.assertIn(quote, ' '.join(sec.replace('**', '').split()))
+
+    def test_code_change_of_manipulation_is_the_band_only(self):
+        src = (ROOT / 'framelease_v4/analysis/manipulation.py').read_text(encoding='utf-8')
+        changed, added, removed = changed_keys(draft_text('manipulation'), src)
+        self.assertEqual((changed, added, removed), ({'IDLE_PREFIX_BAND_S', 'IDLE_BAND_SOURCE', '__all__'}, set(),
+                                                     set()))
+        self.assertEqual(self.MD.IDLE_PREFIX_BAND_S, (0.416, 0.425))
+        self.assertEqual(self.M.__all__, self.MD.__all__[:2] + ['IDLE_BAND_SOURCE'] + self.MD.__all__[2:])
+
+    def test_code_change_of_the_aggregator_is_the_schema_only(self):
+        from framelease_v4.protocol import p1_jobs, p2_jobs, test_jobs
+        src = (ROOT / 'framelease_v4/analysis/aggregate_v4.py').read_text(encoding='utf-8')
+        self.assertEqual(changed_keys(draft_text('aggregate_v4'), src), ({'STAGE_SCHEMAS'}, set(), set()))
+        self.assertEqual(self.A.STAGE_SCHEMAS, (p1_jobs.STAGE_SCHEMA, p2_jobs.STAGE_SCHEMA, test_jobs.STAGE_SCHEMA))
+        self.assertEqual(test_jobs.STAGE_SCHEMA, 'framelease_v4.test_stage/1')
+
+    def test_classification_differs_only_in_the_added_sliver(self):
+        """Old (0.425) and new (0.426) upper edge: the status differs only for p50 / kappa in (0.425, 0.426], which
+        moves from 'above' to 'within'; an 'above' run's bg_load_excess_s drops by kappa x 1 ms; within, below and
+        the Sec. 9.7 PASS / FLAG check never change."""
+        moved = 0
+        for kappa in (1.0, 1.5, 2.0):
+            for p in np.arange(0.3000, 0.7000, 0.00005):
+                p50 = float(p) * kappa
+                per = p50 / kappa
+                old, new = self.MD.prefix_checks(p50, kappa), self.M.prefix_checks(p50, kappa)
+                self.assertEqual(old['charged_prefix_check'], new['charged_prefix_check'])
+                self.assertEqual(old['prefix_p50_per_kappa_s'], new['prefix_p50_per_kappa_s'])
+                if old['bg_load_status'] != new['bg_load_status']:
+                    self.assertTrue(0.425 < per <= 0.426 + 1e-12, (p50, kappa))
+                    self.assertEqual((old['bg_load_status'], new['bg_load_status']), ('above', 'within'))
+                    moved += 1
+                elif new['bg_load_status'] == 'above':
+                    self.assertAlmostEqual(old['bg_load_excess_s'] - new['bg_load_excess_s'], kappa * 0.001,
+                                           delta=1e-12)
+                else:
+                    self.assertEqual(old, new)
+                    self.assertFalse(0.425 + 1e-9 < per < 0.426 - 1e-9, (p50, kappa))
+        self.assertGreater(moved, 0)
+
+    def test_the_ref_runs_of_the_validity_note(self):
+        """The A8 draft says 15 of the 35 ref runs were above the band (8 Fixed Deep, 7 Fast Only): true with the
+        0.426 edge; the old 0.425 edge gives 16 (the 14:13:23 Fast Only run, p50 0.4257 s, is the only change)."""
+        note = (ROOT / 'outputs/framelease_v4/validity_notes/background_load_20261111.md').read_text()
+        rows = re.findall(r'^\| (\d\d:\d\d:\d\d) \| ref/(\w+) \| \d+ \| (0\.\d+) \|', note, re.M)
+        self.assertEqual(len(rows), 35)
+
+        def above(mod):
+            return [(t, arm) for t, arm, p in rows if mod.prefix_checks(float(p), 1.0)['bg_load_status'] == 'above']
+        new, old = above(self.M), above(self.MD)
+        self.assertEqual(len(new), 15)
+        self.assertEqual(sum(a == 'fixed_deep' for _, a in new), 8)
+        self.assertEqual(sum(a == 'fast_only' for _, a in new), 7)
+        self.assertEqual(len(old), 16)
+        self.assertEqual(sorted(set(old) - set(new)), [('14:13:23', 'fast_only')])
+        self.assertTrue(all(t >= '13:29' for t, _ in new))
+
+    def test_test_stage_specs_load_now_and_were_refused_before(self):
+        from framelease_v4.protocol import test_jobs
+        AD = load_draft('aggregate_v4', 'framelease_v4/analysis/aggregate_v4.py')
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / 'b11.stage.json'
+            p.write_text(json.dumps({'schema': test_jobs.STAGE_SCHEMA, 'block': 's_main', 'jobs': [
+                {'id': 'j1', 'output_dir': 'x/y', 'route_id': 28093, 'protocol_arm': 'fixed_deep'}]}))
+            ((q, spec),) = self.A.load_specs([tmp])
+            self.assertEqual(q, p)
+            self.assertEqual(self.A.spec_jobs(spec), {'j1': {'block': 's_main', 'output_dir': 'x/y',
+                                                             'route_id': '28093', 'protocol_arm': 'fixed_deep'}})
+            with self.assertRaises(Exception) as cm:
+                AD.load_specs([tmp])
+            self.assertEqual(type(cm.exception).__name__, 'AggregateError')
+            for bad in ('framelease_v4.test_check/1', 'framelease_v4.p3_stage/1'):
+                p.write_text(json.dumps({'schema': bad, 'jobs': []}))
+                with self.assertRaises(self.A.AggregateError):
+                    self.A.load_specs([p])
+
+
+# ============================================================================================ P3RL, step 5
+
+class P3rlTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from framelease_v4.protocol import p3_rl as P
+        cls.P = P
+
+    def test_code_change_scope(self):
+        src = (ROOT / 'framelease_v4/protocol/p3_rl.py').read_text(encoding='utf-8')
+        changed, added, removed = changed_keys(draft_text('p3_rl'), src)
+        self.assertEqual(changed, {'OPEN_CASES', 'SEC13_NOTES', 'stage_select'})
+        self.assertEqual(added, {'FIT_UNSUPPORTED', 'HEADS', 'fit_unsupported_folds', 'not_selectable_reason'})
+        self.assertEqual(removed, {'DEFAULT_HEAD_UNSUPPORTED', 'default_head_report', 'import re'})
+
+    def test_no_reference_to_the_removed_branch(self):
+        words = ('DEFAULT_HEAD_UNSUPPORTED', 'default_head_report', 'default_head_unsupported', 'fit_action_counts')
+        for p in sorted((ROOT / 'framelease_v4').rglob('*.py')):
+            txt = p.read_text(encoding='utf-8', errors='replace')
+            for w in words:
+                self.assertNotIn(w, txt, p)
+        tree = ast.parse((ROOT / 'framelease_v4/protocol/p3_rl.py').read_text(encoding='utf-8'))
+        self.assertFalse([n for n in ast.walk(tree) if isinstance(n, ast.Name) and n.id == 're'])
+        notes = self.P.SEC13_NOTES[2]
+        self.assertIn('regular unsupported evaluation', notes)
+        self.assertIn('Amendment A6', notes)
+        self.assertIn('regular unsupported evaluation', self.P.OPEN_CASES['no_selectable'][2])
+        self.assertNotIn('ope.select stops', self.P.OPEN_CASES['no_selectable'][2])
+
+    def test_reason_on_a_dataset_lacking_refresh_in_one_training_fold(self):
+        """Toy dataset (rl/tests/test_ope_support.concentrated_refresh): REFRESH logged only in the routes of fold 0,
+        so the training data of fold 0 hold no REFRESH sample while a_det^4 needs REFRESH; every other training fold
+        holds them. stage_select must name exactly fold 0 with the per-head counts of its fit episodes (computed here
+        from the logged actions), every candidate with the REFRESH cause, leave fold 0 out of fqe_not_converged and
+        fit every other fold."""
+        sys.path.insert(0, str(ROOT / 'framelease_v4/rl/tests'))
+        from framelease_v4.rl.tests import test_ope_support as TOS
+        P = self.P
+        ds, ids, folds, f0 = TOS.concentrated_refresh()
+        self.assertEqual(folds, P.O.route_folds(ds, ids, 5, P.FOLD_SEED))
+        fit0 = sorted(set(ids) - set(folds[f0]))
+        a = ds.A[ds.episode_mask(fit0)]
+        n_refine, n_refresh = int(np.sum(a == P.TR.REFINE)), int(np.sum(a == P.TR.REFRESH))
+        self.assertEqual(n_refresh, 0)
+        self.assertGreater(n_refine, 0)
+        for family in ('fqi', 'bandit', 'fqi_nolease'):
+            with self.subTest(family=family), tempfile.TemporaryDirectory() as tmp:
+                ctx = P.Ctx(Path(tmp) / 'out', 'development', 4, {}, n_jobs=1, n_folds=5, fqe_cfg=TOS.FQE,
+                            grid_kind='smoke', n_boot=50, log=lambda *a, **k: None)
+                ctx.out.mkdir(parents=True)
+                ctx._ds = ds
+                res = P.stage_select(ctx, family)
+                sel = json.loads((ctx.out / f'select_{family}.json').read_text())
+                grid = ctx.grid(family)
+                k = len(grid)
+                self.assertEqual((sel['selected'], sel['not_trainable']), (None, True))
+                self.assertEqual(sel['fit_unsupported'], [
+                    {'fold': f0, 'n_samples': {'REFINE': n_refine, 'REFRESH': 0},
+                     'candidates': [{'label': c.label, 'min_support': c.min_support, 'supported': ['REFINE'],
+                                     'a_det_needs': ['REFINE', 'REFRESH']} for c in grid]}])
+                ms = {c.min_support for c in grid}
+                self.assertEqual(len(ms), 1)
+                want = (f'{P.FIT_UNSUPPORTED}: fold {f0} with REFINE {n_refine} / REFRESH 0 logged samples: '
+                        f'{k} of {k} candidates (min_support {ms.pop()}, a_det^{{d*}} needs the unsupported REFRESH '
+                        'head)')
+                self.assertEqual(sel['not_trainable_reason'], want)
+                self.assertEqual(res['result']['not_trainable_reason'], want)
+                self.assertEqual(res['result']['fit_unsupported_folds'], [f0])
+                fitted_nc = set()
+                for r in sel['candidates']:
+                    self.assertEqual(len(r['folds']), 5)
+                    for j, f in enumerate(r['folds']):
+                        self.assertEqual(f['eval_episodes'], folds[j])
+                        if j == f0:
+                            self.assertEqual((f['fqe_iterations'], f['fit_unsupported']['ok']), (0, False))
+                        else:
+                            self.assertNotIn('fit_unsupported', f)
+                            if not f['fqe_converged']:
+                                fitted_nc.add(r['label'])
+                self.assertEqual(sel['fqe_not_converged'], sorted(fitted_nc))
+
+    def test_not_selectable_reason_causes(self):
+        P = self.P
+
+        def fold(n, ms, sup, needs):
+            return {'fit_unsupported': {'n_samples': n, 'min_support': ms, 'supported': sup, 'a_det_needs': needs,
+                                        'ok': False}}
+        rep = {'candidates': [
+            {'label': 'a', 'folds': [{}, fold([3, 0], 5, [False, False], [True, False])]},
+            {'label': 'b', 'folds': [{}, fold([3, 0], 2, [True, False], [True, True])]},
+            {'label': 'c', 'folds': [{}, {}]}]}
+        ff = P.fit_unsupported_folds(rep)
+        self.assertEqual([e['fold'] for e in ff], [1])
+        self.assertEqual(P.not_selectable_reason(rep, ff),
+                         f'{P.FIT_UNSUPPORTED}: fold 1 with REFINE 3 / REFRESH 0 logged samples: 1 of 3 candidates '
+                         '(min_support 2, a_det^{d*} needs the unsupported REFRESH head), 1 of 3 candidates '
+                         '(min_support 5, no head with min_support samples)')
+        self.assertEqual(P.not_selectable_reason({'candidates': []}, []), P.NOT_SELECTABLE)
+
+
+class DeployCheckMutationTest(unittest.TestCase):
+    """The hardened test_a_deviating_network_and_head_support: robust to overrun bypasses and to a disabled instance,
+    and still failing on a real defect (mutations through mocks; nothing is changed on disk)."""
+
+    @classmethod
+    def setUpClass(cls):
+        from framelease_v4.protocol.tests import test_p3_rl as T
+        cls.T = T
+
+    def run_test(self):
+        t = self.T.DeployCheckTest('test_a_deviating_network_and_head_support')
+        res = unittest.TestResult()
+        t.run(res)
+        return [str(e[1]).splitlines()[-1] for e in res.failures + res.errors]
+
+    def timer_patch(self, every):
+        """QUtility with a fake timer: every `every`-th network call takes 1 ms (> B_pi = 100 us), the others 1 us."""
+        Q = self.T.Q
+        real = Q.QUtility.__init__
+
+        def init(u, *a, **k):
+            real(u, *a, **k)
+            n = [0]
+
+            def timer():
+                i, n[0] = n[0], n[0] + 1
+                call = i // 2
+                return float(call) + (0.0 if i % 2 == 0 else (1e-3 if call % every == 0 else 1e-6))
+            u.timer = timer
+        return mock.patch.object(Q.QUtility, '__init__', init)
+
+    def old_assertions(self):
+        """The drafting test's exact counts (deviations == network calls == choice rows - slack)."""
+        T = self.T
+        with tempfile.TemporaryDirectory() as tmp:
+            path, name = T.write_net(Path(tmp) / 'refresh.json', 1.0)
+            rep = T.P.replay_network(name, path, T.PILOT_DECISIONS, 10)
+        n, slack = T.n_choice_rows(), rep['bypass']['slack']
+        return rep, (rep['deviations'], rep['network_calls']) == (n - slack, n - slack)
+
+    def test_passes_unmodified(self):
+        self.assertEqual(self.run_test(), [])
+
+    def test_passes_with_overruns_and_with_a_disabled_instance(self):
+        for every, disabled in ((40, False), (3, True)):
+            with self.subTest(every=every), self.timer_patch(every):
+                self.assertEqual(self.run_test(), [])
+                rep, old_ok = self.old_assertions()
+                self.assertGreater(rep['bypass']['overrun'], 0)
+                self.assertEqual(rep['disabled_runs'] > 0, disabled)
+                self.assertFalse(old_ok)                  # the drafting test fails here (309 != 310 in the AMEND review)
+
+    def test_fails_on_real_defects(self):
+        Q, P = self.T.Q, self.T.P
+        real_select = Q.QUtility.select
+        real_replay = P.replay_network
+
+        def ignore_answer(u, features, feasible):       # the network's answer never used (always a_det)
+            a = real_select(u, features, feasible)
+            return u._a_det(feasible, features) if len(feasible) == 2 else a
+
+        def forced_slack(u, features, feasible):        # the slack bypass fires on rows with a margin >= B_pi
+            # (the pilot logs hold no choice row with a margin below B_pi: n_slack_rows() == 0, so a slack bypass
+            # that never fires is indistinguishable here, before and after the hardening)
+            f = dict(features or {})
+            f['refine_margin_s'] = 0.0
+            return real_select(u, f, feasible)
+
+        def lose_deviation(*a, **k):                    # one deviation not counted
+            rep = real_replay(*a, **k)
+            return {**rep, 'deviations': rep['deviations'] - 1}
+        for label, patch in (('ignore_answer', mock.patch.object(Q.QUtility, 'select', ignore_answer)),
+                             ('forced_slack', mock.patch.object(Q.QUtility, 'select', forced_slack)),
+                             ('lose_deviation', mock.patch.object(P, 'replay_network', lose_deviation))):
+            with self.subTest(label), patch:
+                self.assertNotEqual(self.run_test(), [], label)
+
+
+# ============================================================================================ STRESS, step 7
+
+class StressTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from framelease_v4.protocol import stress_bench as SB
+        from framelease_v4.protocol.tests import test_stress_bench as TS
+        cls.SB, cls.TS = SB, TS
+        cls.OLD = load_draft('stress_bench', 'framelease_v4/protocol/stress_bench.py')
+        cls.tmp = tempfile.TemporaryDirectory()
+        cls.nets = [TS.make_net(cls.tmp.name, 'fqi', 11), TS.make_net(cls.tmp.name, 'bandit', 12)]
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def canonical_run(self, mod, argv, out):
+        with mock.patch.object(mod, 'qnet_policy', self.TS.zero_timer(mod.qnet_policy)), \
+                contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            self.assertEqual(mod.main(argv + ['--out', str(out)]), 0)
+        rep = json.loads(Path(out).read_text())
+        return self.TS.canonical_report(rep), rep
+
+    def test_registered_grid_report_is_byte_identical_old_and_new(self):
+        """Inputs other than the item's pin: synthetic 200 states seed 11 (fqi + bandit networks), and recorded
+        states of a synthetic closed-loop run; the drafting stress_bench.py and the changed one, timer frozen."""
+        rows = self.TS.closed_loop_rows(400)
+        with tempfile.TemporaryDirectory() as tmp:
+            self.TS.write_run(Path(tmp) / 'runs', 'fl_heuristic', self.TS.training_route(), rows)
+            nets = [x for n in self.nets for x in ('--qnet', str(n))]
+            for label, extra in (('synthetic', ['--states', 'synthetic', '--n-states', '200', '--seed', '11']),
+                                 ('recorded', ['--states', 'recorded', '--runs-root', str(Path(tmp) / 'runs')])):
+                with self.subTest(label):
+                    old, rep_old = self.canonical_run(self.OLD, ['s2'] + nets + extra, Path(tmp) / f'{label}_o.json')
+                    new, rep_new = self.canonical_run(self.SB, ['s2'] + nets + extra, Path(tmp) / f'{label}_n.json')
+                    new2, _ = self.canonical_run(self.SB, ['s2'] + nets + extra + ['--grid', 'registered'],
+                                                 Path(tmp) / f'{label}_r.json')
+                    self.assertEqual(old, new)
+                    self.assertEqual(new, new2)
+                    self.assertEqual(set(rep_old), set(rep_new))
+                    self.assertGreater(rep_new['n_swept'], 0)
+
+    def test_relative_grid_is_the_a7b_grid(self):
+        """D* = t + f(state) + delta, delta in [-0.1, 0.6] s in 10 ms steps (71), f = slack_floor(state)['any'];
+        the sweep goes through the same replay() as the registered grid (D_cand moves with D*); a state without a
+        floor is never replayed."""
+        SB = self.SB
+        self.assertEqual(SB.RELATIVE_OFFSETS_MS, tuple(range(-100, 601, 10)))
+        self.assertEqual(len(SB.RELATIVE_OFFSETS_MS), 71)
+        states, _ = SB.synthetic_states(120, seed=13)
+        states.append(self.TS.S2RelativeTest.no_floor_state())
+        env = SB.lease_env()
+        net = SB.describe_qnet(self.nets[0])
+        calls = []
+        real = SB.replay
+
+        def spy(pol, st, s):
+            r = real(pol, st, s)
+            calls.append((id(st), s, r[2] - st['t'] if isinstance(r[2], float) else None))
+            return r
+        with mock.patch.object(SB, 'replay', spy):
+            res = SB.run_s2_relative(states, [net], env)
+        floors = {id(st): SB.slack_floor(st)['any'] for st in states}
+        by_state = {}
+        for sid, s, dstar in calls:
+            by_state.setdefault(sid, []).append(s)
+            if dstar is not None:
+                self.assertAlmostEqual(dstar, s, delta=1e-9)
+        nofloor = [sid for sid, f in floors.items() if f is None]
+        self.assertTrue(nofloor)
+        for sid in nofloor:
+            self.assertNotIn(sid, by_state)
+        self.assertEqual(len(by_state), res['n_swept'])
+        for sid, ss in by_state.items():
+            self.assertEqual(ss, [floors[sid] + ms / 1000.0 for ms in SB.RELATIVE_OFFSETS_MS])
+        self.assertEqual(res['offsets_s'], [ms / 1000.0 for ms in range(-100, 601, 10)])
+        self.assertEqual(res['grid'], 'relative_to_floor')
+        self.assertTrue(res['pass'])
+
+    def test_the_supplementary_report_cannot_pass_as_the_registered_s2(self):
+        """A relative run with --registered: labelled supplementary, never the registered S2 label; its default name
+        does not match the test freeze's s2_registered_*.json and test_freeze.stress_check refuses it."""
+        from framelease_v4.protocol import test_freeze as TF
+        SB = self.SB
+        with tempfile.TemporaryDirectory() as tmp:
+            name = SB._default_out('S2', True, 'relative').name
+            self.assertTrue(name.startswith('s2_relative_registered_'))
+            out = Path(tmp) / name
+            argv = ['s2', '--qnet', str(self.nets[0]), '--states', 'synthetic', '--n-states', '40', '--grid',
+                    'relative', '--registered', '--out', str(out)]
+            with contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                self.assertEqual(SB.main(argv), 0)
+            rep = json.loads(out.read_text())
+            self.assertTrue(rep['label'].startswith('supplementary: S2 relative to the slack floor'))
+            self.assertNotEqual(rep['label'], SB.label_for('S2', True))
+            self.assertEqual((rep['supplementary'], rep['grid'], rep['registered']), (True, 'relative_to_floor', True))
+            self.assertNotIn('slack_grid_s', rep)
+            with self.assertRaises(FileNotFoundError):
+                TF.stress_paths(stress_dir=tmp)
+            summ, problems = TF.stress_check('S2', out, {}, {'networks': {}})
+            self.assertTrue(any('is not a registered run' in p for p in problems), problems)
+
+    def test_the_a7_log_ends_with_no_failure(self):
+        log = (ROOT / 'outputs/framelease_v4/amendment_a7/pytest_stress_bench.log').read_text()
+        last = log.strip().splitlines()[-1]
+        self.assertRegex(last, r'^=*\s*\d+ passed in [\d.]+s\s*=*$')
+        n = int(re.search(r'(\d+) passed', last).group(1))
+        src = (ROOT / 'framelease_v4/protocol/tests/test_stress_bench.py').read_text()
+        self.assertEqual(n, len(re.findall(r'^    def test_', src, re.M)))
+        self.assertNotRegex(log, r'failed|error|FAILED|ERROR')
+
+
+if __name__ == '__main__':
+    unittest.main()

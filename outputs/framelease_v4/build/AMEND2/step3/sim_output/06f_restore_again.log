@@ -1,0 +1,2 @@
+step3_txn.py restore 2026-11-15T06:19:35+0800 (pid 245810): root /tmp/AMEND3/tree, work /tmp/AMEND3/runs/06c_kill
+STOP: the journal says 'restored': nothing is left to restore; nothing is restored

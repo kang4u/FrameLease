@@ -1,0 +1,969 @@
+{
+ "calibration_clips": [
+  "ControlLoss_Town11_Route401_Weather11",
+  "HardBreakRoute_Town11_Route50_Weather23",
+  "ParkingCrossingPedestrian_Town12_Route953_Weather9",
+  "PedestrianCrossing_Town12_Route867_Weather9",
+  "StaticCutIn_Town03_Route149_Weather19"
+ ],
+ "n_pairs": {
+  "vehicle": 4596,
+  "pedestrian": 194
+ },
+ "form": "B_c(tau) = vbar_c tau + abar_c tau^2 / 2 + sigma_c",
+ "configs": {
+  "T_q30": {
+   "sigma_m": {
+    "vehicle": 0.16528618230218406,
+    "pedestrian": 0.3000484147214507
+   },
+   "vbar_mps": {
+    "vehicle": 0.05993844097382707,
+    "pedestrian": 0.17868518320652624
+   },
+   "abar_mps2": {
+    "vehicle": 0.35791182869260235,
+    "pedestrian": 0.042503870074033986
+   },
+   "q": 0.3,
+   "n_pairs": {
+    "vehicle": 4596,
+    "pedestrian": 194
+   },
+   "notes": [],
+   "d_grid_s": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+   ]
+  },
+  "T_q40": {
+   "sigma_m": {
+    "vehicle": 0.2069357812962632,
+    "pedestrian": 0.39696104115109004
+   },
+   "vbar_mps": {
+    "vehicle": 0.1489616658546534,
+    "pedestrian": 0.21887653593702458
+   },
+   "abar_mps2": {
+    "vehicle": 0.31992567241580916,
+    "pedestrian": 0.06386378911241988
+   },
+   "q": 0.4,
+   "n_pairs": {
+    "vehicle": 4596,
+    "pedestrian": 194
+   },
+   "notes": [],
+   "d_grid_s": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+   ]
+  },
+  "T_q50": {
+   "sigma_m": {
+    "vehicle": 0.25676677139208265,
+    "pedestrian": 0.47341917659798854
+   },
+   "vbar_mps": {
+    "vehicle": 0.27309436274773696,
+    "pedestrian": 0.2867618915917527
+   },
+   "abar_mps2": {
+    "vehicle": 0.1021776469655602,
+    "pedestrian": 0.10812461617061277
+   },
+   "q": 0.5,
+   "n_pairs": {
+    "vehicle": 4596,
+    "pedestrian": 194
+   },
+   "notes": [],
+   "d_grid_s": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+   ]
+  },
+  "T_q60": {
+   "sigma_m": {
+    "vehicle": 0.3251863898030781,
+    "pedestrian": 0.5957204227345217
+   },
+   "vbar_mps": {
+    "vehicle": 0.4162327275400053,
+    "pedestrian": 0.3757647207951641
+   },
+   "abar_mps2": {
+    "vehicle": 0.19988756108464958,
+    "pedestrian": 0.13025747120708203
+   },
+   "q": 0.6,
+   "n_pairs": {
+    "vehicle": 4596,
+    "pedestrian": 194
+   },
+   "notes": [],
+   "d_grid_s": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+   ]
+  },
+  "T_q70": {
+   "sigma_m": {
+    "vehicle": 0.40442288848674246,
+    "pedestrian": 0.773452042822577
+   },
+   "vbar_mps": {
+    "vehicle": 0.6157979079698885,
+    "pedestrian": 0.45253205581377287
+   },
+   "abar_mps2": {
+    "vehicle": 0.6486475215857264,
+    "pedestrian": 0.15232324066665714
+   },
+   "q": 0.7,
+   "n_pairs": {
+    "vehicle": 4596,
+    "pedestrian": 194
+   },
+   "notes": [],
+   "d_grid_s": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+   ]
+  },
+  "T_q80": {
+   "sigma_m": {
+    "vehicle": 0.5459013260896409,
+    "pedestrian": 0.9472211606753936
+   },
+   "vbar_mps": {
+    "vehicle": 0.8936722378638142,
+    "pedestrian": 0.5919606194619355
+   },
+   "abar_mps2": {
+    "vehicle": 1.165390046213873,
+    "pedestrian": 0.09797246719821927
+   },
+   "q": 0.8,
+   "n_pairs": {
+    "vehicle": 4596,
+    "pedestrian": 194
+   },
+   "notes": [],
+   "d_grid_s": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+   ]
+  },
+  "T_q90": {
+   "sigma_m": {
+    "vehicle": 0.8673077337020759,
+    "pedestrian": 1.1691891022487106
+   },
+   "vbar_mps": {
+    "vehicle": 1.3131562514171797,
+    "pedestrian": 0.778368372005826
+   },
+   "abar_mps2": {
+    "vehicle": 1.6170434901591217,
+    "pedestrian": 0.035488863658766884
+   },
+   "q": 0.9,
+   "n_pairs": {
+    "vehicle": 4596,
+    "pedestrian": 194
+   },
+   "notes": [],
+   "d_grid_s": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+   ]
+  },
+  "T_q95": {
+   "sigma_m": {
+    "vehicle": 1.1597859115756042,
+    "pedestrian": 1.4594600468751093
+   },
+   "vbar_mps": {
+    "vehicle": 1.8386714193308709,
+    "pedestrian": 0.9670395080118115
+   },
+   "abar_mps2": {
+    "vehicle": 1.7241312422243307,
+    "pedestrian": 0.0
+   },
+   "q": 0.95,
+   "n_pairs": {
+    "vehicle": 4596,
+    "pedestrian": 194
+   },
+   "notes": [],
+   "d_grid_s": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+   ]
+  },
+  "T_q99": {
+   "sigma_m": {
+    "vehicle": 1.751538497682094,
+    "pedestrian": 1.9323022218946404
+   },
+   "vbar_mps": {
+    "vehicle": 3.34541252878967,
+    "pedestrian": 1.3525124601378935
+   },
+   "abar_mps2": {
+    "vehicle": 6.201585566074864,
+    "pedestrian": 0.0
+   },
+   "q": 0.99,
+   "n_pairs": {
+    "vehicle": 4596,
+    "pedestrian": 194
+   },
+   "notes": [],
+   "d_grid_s": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+   ]
+  },
+  "T_q99.5": {
+   "sigma_m": {
+    "vehicle": 1.872727700535296,
+    "pedestrian": 2.0038627761886105
+   },
+   "vbar_mps": {
+    "vehicle": 3.8424712540297916,
+    "pedestrian": 1.393196159209042
+   },
+   "abar_mps2": {
+    "vehicle": 22.22568623386903,
+    "pedestrian": 0.0
+   },
+   "q": 0.995,
+   "n_pairs": {
+    "vehicle": 4596,
+    "pedestrian": 194
+   },
+   "notes": [],
+   "d_grid_s": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+   ]
+  },
+  "T_x0.00": {
+   "sigma_m": {
+    "vehicle": 0.0,
+    "pedestrian": 0.0
+   },
+   "vbar_mps": {
+    "vehicle": 0.0,
+    "pedestrian": 0.0
+   },
+   "abar_mps2": {
+    "vehicle": 0.0,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.0,
+   "of": "T_q95"
+  },
+  "T_x0.05": {
+   "sigma_m": {
+    "vehicle": 0.057989295578780214,
+    "pedestrian": 0.07297300234375546
+   },
+   "vbar_mps": {
+    "vehicle": 0.09193357096654355,
+    "pedestrian": 0.04835197540059058
+   },
+   "abar_mps2": {
+    "vehicle": 0.08620656211121654,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.05,
+   "of": "T_q95"
+  },
+  "T_x0.10": {
+   "sigma_m": {
+    "vehicle": 0.11597859115756043,
+    "pedestrian": 0.14594600468751093
+   },
+   "vbar_mps": {
+    "vehicle": 0.1838671419330871,
+    "pedestrian": 0.09670395080118116
+   },
+   "abar_mps2": {
+    "vehicle": 0.17241312422243307,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.1,
+   "of": "T_q95"
+  },
+  "T_x0.15": {
+   "sigma_m": {
+    "vehicle": 0.17396788673634062,
+    "pedestrian": 0.2189190070312664
+   },
+   "vbar_mps": {
+    "vehicle": 0.2758007128996306,
+    "pedestrian": 0.1450559262017717
+   },
+   "abar_mps2": {
+    "vehicle": 0.25861968633364957,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.15,
+   "of": "T_q95"
+  },
+  "T_x0.20": {
+   "sigma_m": {
+    "vehicle": 0.23195718231512086,
+    "pedestrian": 0.29189200937502185
+   },
+   "vbar_mps": {
+    "vehicle": 0.3677342838661742,
+    "pedestrian": 0.19340790160236232
+   },
+   "abar_mps2": {
+    "vehicle": 0.34482624844486615,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.2,
+   "of": "T_q95"
+  },
+  "T_x0.25": {
+   "sigma_m": {
+    "vehicle": 0.28994647789390104,
+    "pedestrian": 0.36486501171877733
+   },
+   "vbar_mps": {
+    "vehicle": 0.4596678548327177,
+    "pedestrian": 0.24175987700295287
+   },
+   "abar_mps2": {
+    "vehicle": 0.43103281055608267,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.25,
+   "of": "T_q95"
+  },
+  "T_x0.30": {
+   "sigma_m": {
+    "vehicle": 0.34793577347268123,
+    "pedestrian": 0.4378380140625328
+   },
+   "vbar_mps": {
+    "vehicle": 0.5516014257992612,
+    "pedestrian": 0.2901118524035434
+   },
+   "abar_mps2": {
+    "vehicle": 0.5172393726672991,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.3,
+   "of": "T_q95"
+  },
+  "T_x0.35": {
+   "sigma_m": {
+    "vehicle": 0.4059250690514614,
+    "pedestrian": 0.5108110164062882
+   },
+   "vbar_mps": {
+    "vehicle": 0.6435349967658047,
+    "pedestrian": 0.338463827804134
+   },
+   "abar_mps2": {
+    "vehicle": 0.6034459347785157,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.35,
+   "of": "T_q95"
+  },
+  "T_x0.40": {
+   "sigma_m": {
+    "vehicle": 0.4639143646302417,
+    "pedestrian": 0.5837840187500437
+   },
+   "vbar_mps": {
+    "vehicle": 0.7354685677323484,
+    "pedestrian": 0.38681580320472464
+   },
+   "abar_mps2": {
+    "vehicle": 0.6896524968897323,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.4,
+   "of": "T_q95"
+  },
+  "T_x0.45": {
+   "sigma_m": {
+    "vehicle": 0.5219036602090219,
+    "pedestrian": 0.6567570210937992
+   },
+   "vbar_mps": {
+    "vehicle": 0.8274021386988919,
+    "pedestrian": 0.4351677786053152
+   },
+   "abar_mps2": {
+    "vehicle": 0.7758590590009489,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.45,
+   "of": "T_q95"
+  },
+  "T_x0.50": {
+   "sigma_m": {
+    "vehicle": 0.5798929557878021,
+    "pedestrian": 0.7297300234375547
+   },
+   "vbar_mps": {
+    "vehicle": 0.9193357096654354,
+    "pedestrian": 0.48351975400590574
+   },
+   "abar_mps2": {
+    "vehicle": 0.8620656211121653,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.5,
+   "of": "T_q95"
+  },
+  "T_x0.55": {
+   "sigma_m": {
+    "vehicle": 0.6378822513665824,
+    "pedestrian": 0.8027030257813101
+   },
+   "vbar_mps": {
+    "vehicle": 1.011269280631979,
+    "pedestrian": 0.5318717294064964
+   },
+   "abar_mps2": {
+    "vehicle": 0.9482721832233819,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.55,
+   "of": "T_q95"
+  },
+  "T_x0.60": {
+   "sigma_m": {
+    "vehicle": 0.6958715469453625,
+    "pedestrian": 0.8756760281250656
+   },
+   "vbar_mps": {
+    "vehicle": 1.1032028515985224,
+    "pedestrian": 0.5802237048070868
+   },
+   "abar_mps2": {
+    "vehicle": 1.0344787453345983,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.6,
+   "of": "T_q95"
+  },
+  "T_x0.65": {
+   "sigma_m": {
+    "vehicle": 0.7538608425241428,
+    "pedestrian": 0.9486490304688211
+   },
+   "vbar_mps": {
+    "vehicle": 1.195136422565066,
+    "pedestrian": 0.6285756802076775
+   },
+   "abar_mps2": {
+    "vehicle": 1.120685307445815,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.65,
+   "of": "T_q95"
+  },
+  "T_x0.70": {
+   "sigma_m": {
+    "vehicle": 0.8118501381029228,
+    "pedestrian": 1.0216220328125765
+   },
+   "vbar_mps": {
+    "vehicle": 1.2870699935316094,
+    "pedestrian": 0.676927655608268
+   },
+   "abar_mps2": {
+    "vehicle": 1.2068918695570314,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.7,
+   "of": "T_q95"
+  },
+  "T_x0.75": {
+   "sigma_m": {
+    "vehicle": 0.8698394336817031,
+    "pedestrian": 1.094595035156332
+   },
+   "vbar_mps": {
+    "vehicle": 1.379003564498153,
+    "pedestrian": 0.7252796310088586
+   },
+   "abar_mps2": {
+    "vehicle": 1.293098431668248,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.75,
+   "of": "T_q95"
+  },
+  "T_x0.80": {
+   "sigma_m": {
+    "vehicle": 0.9278287292604834,
+    "pedestrian": 1.1675680375000874
+   },
+   "vbar_mps": {
+    "vehicle": 1.4709371354646967,
+    "pedestrian": 0.7736316064094493
+   },
+   "abar_mps2": {
+    "vehicle": 1.3793049937794646,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.8,
+   "of": "T_q95"
+  },
+  "T_x0.85": {
+   "sigma_m": {
+    "vehicle": 0.9858180248392635,
+    "pedestrian": 1.240541039843843
+   },
+   "vbar_mps": {
+    "vehicle": 1.5628707064312402,
+    "pedestrian": 0.8219835818100397
+   },
+   "abar_mps2": {
+    "vehicle": 1.465511555890681,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.85,
+   "of": "T_q95"
+  },
+  "T_x0.90": {
+   "sigma_m": {
+    "vehicle": 1.0438073204180438,
+    "pedestrian": 1.3135140421875984
+   },
+   "vbar_mps": {
+    "vehicle": 1.6548042773977838,
+    "pedestrian": 0.8703355572106304
+   },
+   "abar_mps2": {
+    "vehicle": 1.5517181180018977,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.9,
+   "of": "T_q95"
+  },
+  "T_x0.95": {
+   "sigma_m": {
+    "vehicle": 1.101796615996824,
+    "pedestrian": 1.3864870445313537
+   },
+   "vbar_mps": {
+    "vehicle": 1.7467378483643272,
+    "pedestrian": 0.9186875326112208
+   },
+   "abar_mps2": {
+    "vehicle": 1.637924680113114,
+    "pedestrian": 0.0
+   },
+   "lambda": 0.95,
+   "of": "T_q95"
+  },
+  "T_x1.00": {
+   "sigma_m": {
+    "vehicle": 1.1597859115756042,
+    "pedestrian": 1.4594600468751093
+   },
+   "vbar_mps": {
+    "vehicle": 1.8386714193308709,
+    "pedestrian": 0.9670395080118115
+   },
+   "abar_mps2": {
+    "vehicle": 1.7241312422243307,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.0,
+   "of": "T_q95"
+  },
+  "T_x1.05": {
+   "sigma_m": {
+    "vehicle": 1.2177752071543844,
+    "pedestrian": 1.532433049218865
+   },
+   "vbar_mps": {
+    "vehicle": 1.9306049902974145,
+    "pedestrian": 1.015391483412402
+   },
+   "abar_mps2": {
+    "vehicle": 1.8103378043355474,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.05,
+   "of": "T_q95"
+  },
+  "T_x1.10": {
+   "sigma_m": {
+    "vehicle": 1.2757645027331648,
+    "pedestrian": 1.6054060515626203
+   },
+   "vbar_mps": {
+    "vehicle": 2.022538561263958,
+    "pedestrian": 1.0637434588129928
+   },
+   "abar_mps2": {
+    "vehicle": 1.8965443664467638,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.1,
+   "of": "T_q95"
+  },
+  "T_x1.15": {
+   "sigma_m": {
+    "vehicle": 1.3337537983119447,
+    "pedestrian": 1.6783790539063757
+   },
+   "vbar_mps": {
+    "vehicle": 2.1144721322305013,
+    "pedestrian": 1.1120954342135831
+   },
+   "abar_mps2": {
+    "vehicle": 1.98275092855798,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.15,
+   "of": "T_q95"
+  },
+  "T_x1.20": {
+   "sigma_m": {
+    "vehicle": 1.391743093890725,
+    "pedestrian": 1.7513520562501312
+   },
+   "vbar_mps": {
+    "vehicle": 2.2064057031970448,
+    "pedestrian": 1.1604474096141737
+   },
+   "abar_mps2": {
+    "vehicle": 2.0689574906691965,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.2,
+   "of": "T_q95"
+  },
+  "T_x1.25": {
+   "sigma_m": {
+    "vehicle": 1.4497323894695051,
+    "pedestrian": 1.8243250585938866
+   },
+   "vbar_mps": {
+    "vehicle": 2.2983392741635886,
+    "pedestrian": 1.2087993850147645
+   },
+   "abar_mps2": {
+    "vehicle": 2.1551640527804135,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.25,
+   "of": "T_q95"
+  },
+  "T_x1.30": {
+   "sigma_m": {
+    "vehicle": 1.5077216850482855,
+    "pedestrian": 1.8972980609376422
+   },
+   "vbar_mps": {
+    "vehicle": 2.390272845130132,
+    "pedestrian": 1.257151360415355
+   },
+   "abar_mps2": {
+    "vehicle": 2.24137061489163,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.3,
+   "of": "T_q95"
+  },
+  "T_x1.35": {
+   "sigma_m": {
+    "vehicle": 1.5657109806270657,
+    "pedestrian": 1.9702710632813978
+   },
+   "vbar_mps": {
+    "vehicle": 2.482206416096676,
+    "pedestrian": 1.3055033358159456
+   },
+   "abar_mps2": {
+    "vehicle": 2.3275771770028464,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.35,
+   "of": "T_q95"
+  },
+  "T_x1.40": {
+   "sigma_m": {
+    "vehicle": 1.6237002762058457,
+    "pedestrian": 2.043244065625153
+   },
+   "vbar_mps": {
+    "vehicle": 2.574139987063219,
+    "pedestrian": 1.353855311216536
+   },
+   "abar_mps2": {
+    "vehicle": 2.413783739114063,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.4,
+   "of": "T_q95"
+  },
+  "T_x1.45": {
+   "sigma_m": {
+    "vehicle": 1.681689571784626,
+    "pedestrian": 2.1162170679689085
+   },
+   "vbar_mps": {
+    "vehicle": 2.6660735580297628,
+    "pedestrian": 1.4022072866171267
+   },
+   "abar_mps2": {
+    "vehicle": 2.4999903012252793,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.45,
+   "of": "T_q95"
+  },
+  "T_x1.50": {
+   "sigma_m": {
+    "vehicle": 1.7396788673634063,
+    "pedestrian": 2.189190070312664
+   },
+   "vbar_mps": {
+    "vehicle": 2.758007128996306,
+    "pedestrian": 1.4505592620177172
+   },
+   "abar_mps2": {
+    "vehicle": 2.586196863336496,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.5,
+   "of": "T_q95"
+  },
+  "T_x1.55": {
+   "sigma_m": {
+    "vehicle": 1.7976681629421865,
+    "pedestrian": 2.2621630726564197
+   },
+   "vbar_mps": {
+    "vehicle": 2.84994069996285,
+    "pedestrian": 1.4989112374183078
+   },
+   "abar_mps2": {
+    "vehicle": 2.6724034254477127,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.55,
+   "of": "T_q95"
+  },
+  "T_x1.60": {
+   "sigma_m": {
+    "vehicle": 1.8556574585209669,
+    "pedestrian": 2.335136075000175
+   },
+   "vbar_mps": {
+    "vehicle": 2.9418742709293935,
+    "pedestrian": 1.5472632128188986
+   },
+   "abar_mps2": {
+    "vehicle": 2.758609987558929,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.6,
+   "of": "T_q95"
+  },
+  "T_x1.65": {
+   "sigma_m": {
+    "vehicle": 1.9136467540997468,
+    "pedestrian": 2.4081090773439304
+   },
+   "vbar_mps": {
+    "vehicle": 3.033807841895937,
+    "pedestrian": 1.595615188219489
+   },
+   "abar_mps2": {
+    "vehicle": 2.8448165496701456,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.65,
+   "of": "T_q95"
+  },
+  "T_x1.70": {
+   "sigma_m": {
+    "vehicle": 1.971636049678527,
+    "pedestrian": 2.481082079687686
+   },
+   "vbar_mps": {
+    "vehicle": 3.1257414128624803,
+    "pedestrian": 1.6439671636200794
+   },
+   "abar_mps2": {
+    "vehicle": 2.931023111781362,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.7,
+   "of": "T_q95"
+  },
+  "T_x1.75": {
+   "sigma_m": {
+    "vehicle": 2.0296253452573074,
+    "pedestrian": 2.554055082031441
+   },
+   "vbar_mps": {
+    "vehicle": 3.217674983829024,
+    "pedestrian": 1.69231913902067
+   },
+   "abar_mps2": {
+    "vehicle": 3.0172296738925786,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.75,
+   "of": "T_q95"
+  },
+  "T_x1.80": {
+   "sigma_m": {
+    "vehicle": 2.0876146408360876,
+    "pedestrian": 2.6270280843751967
+   },
+   "vbar_mps": {
+    "vehicle": 3.3096085547955676,
+    "pedestrian": 1.7406711144212608
+   },
+   "abar_mps2": {
+    "vehicle": 3.1034362360037955,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.8,
+   "of": "T_q95"
+  },
+  "T_x1.85": {
+   "sigma_m": {
+    "vehicle": 2.145603936414868,
+    "pedestrian": 2.7000010867189523
+   },
+   "vbar_mps": {
+    "vehicle": 3.4015421257621115,
+    "pedestrian": 1.7890230898218513
+   },
+   "abar_mps2": {
+    "vehicle": 3.189642798115012,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.85,
+   "of": "T_q95"
+  },
+  "T_x1.90": {
+   "sigma_m": {
+    "vehicle": 2.203593231993648,
+    "pedestrian": 2.7729740890627075
+   },
+   "vbar_mps": {
+    "vehicle": 3.4934756967286544,
+    "pedestrian": 1.8373750652224417
+   },
+   "abar_mps2": {
+    "vehicle": 3.275849360226228,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.9,
+   "of": "T_q95"
+  },
+  "T_x1.95": {
+   "sigma_m": {
+    "vehicle": 2.261582527572428,
+    "pedestrian": 2.845947091406463
+   },
+   "vbar_mps": {
+    "vehicle": 3.5854092676951983,
+    "pedestrian": 1.8857270406230324
+   },
+   "abar_mps2": {
+    "vehicle": 3.362055922337445,
+    "pedestrian": 0.0
+   },
+   "lambda": 1.95,
+   "of": "T_q95"
+  },
+  "T_x2.00": {
+   "sigma_m": {
+    "vehicle": 2.3195718231512084,
+    "pedestrian": 2.9189200937502187
+   },
+   "vbar_mps": {
+    "vehicle": 3.6773428386617417,
+    "pedestrian": 1.934079016023623
+   },
+   "abar_mps2": {
+    "vehicle": 3.4482624844486613,
+    "pedestrian": 0.0
+   },
+   "lambda": 2.0,
+   "of": "T_q95"
+  },
+  "V2file": {
+   "sigma_m": {
+    "vehicle": 1.1597859115756042,
+    "pedestrian": 1.4594600468751093
+   },
+   "vbar_mps": {
+    "vehicle": 1.8386714193308709,
+    "pedestrian": 0.9670395080118115
+   },
+   "abar_mps2": {
+    "vehicle": 1.4922098397955257,
+    "pedestrian": 0.0
+   },
+   "source": "/home/kang/Desktop/DAC/outputs/framelease_v2/c2_calibration/full_20261107T045343Z/lease_params_q95_envelope.json",
+   "h_max_s_deployed": 2.0,
+   "margin_mode_deployed": "global"
+  }
+ }
+}

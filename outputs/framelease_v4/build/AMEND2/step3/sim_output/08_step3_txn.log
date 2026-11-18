@@ -1,0 +1,48 @@
+step3_txn.py locked 2026-11-15T06:22:16+0800 (pid 247477): root /tmp/AMEND3/tree, work /tmp/AMEND3/runs/08_transaction
+sealed state copied into /tmp/AMEND3/runs/08_transaction: PROTOCOL.md 73599efe65c2063d3396c957d3b929f4f37ab50fafd58cef0cd4bd6134ae4b15, MANIFEST.sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+registration.py --write-manifest --force (exit 0): wrote /tmp/AMEND3/tree/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 8c50b99209af9648f0ff35c95a8725a1c6585f221dbd26ea1d56545a2e60e0c9
+post-manifest check (step 3.2): OK; P1 job files of the sealed manifest: OK; P1 job files new in the manifest: none
+new manifest: 221 files, sha256 8c50b99209af9648f0ff35c95a8725a1c6585f221dbd26ea1d56545a2e60e0c9; new in it: none; changed since the seal (unregistered): ['framelease_v4/analysis/verify_table1_extra.py']
+PROTOCOL.md written: sha256 20ab7ffd490fd99e1dc140cfa792496692f6d633bbecf2a20f08735fbe23f1c3 (2836 lines)
+pre-seal check (PROTOCOL.md and the new manifest on disk; registered baseline, P1 job files and the 40 newly registered files at their new-manifest sha256; must_equal): OK
+registration.py --seal (exit 0): sealed: PROTOCOL.md 20ab7ffd490fd99e1dc140cfa792496692f6d633bbecf2a20f08735fbe23f1c3, manifest 8c50b99209af9648f0ff35c95a8725a1c6585f221dbd26ea1d56545a2e60e0c9 
+registration.py --verify: manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+entry A3: 193 lines (/tmp/AMEND3/runs/08_transaction/entry_A3.md)
+entry A9: 43 lines (/tmp/AMEND3/runs/08_transaction/entry_A9.md)
+entry A7: 54 lines (/tmp/AMEND3/runs/08_transaction/entry_A7.md)
+entry A4: 74 lines (/tmp/AMEND3/runs/08_transaction/entry_A4.md)
+entry OP: 114 lines (/tmp/AMEND3/runs/08_transaction/entry_OP.md)
+step3_txn.py postcheck 2026-11-15T06:22:27+0800 (pid 247641): root /tmp/AMEND3/tree, work /tmp/AMEND3/runs/08_transaction
+step 3.2 on the sealed manifest: OK
+P1 job files of the earlier sealed manifest at their sha256 in the sealed manifest: OK; new: none
+registration.py --verify: manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+phase_driver.py --dry-run (exit 0; full output /tmp/AMEND3/runs/08_transaction/phase_driver_dry_run.txt):
+    G0 passed: P1 done, P1 entries ['freeze', 'd1'], amendments ['A3', 'A4', 'A7', 'A9']; seal OK, manifest OK
+    G0  passed       seal OK, manifest OK
+    G1  waiting      waiting for outputs/framelease_v4/phase_driver/D1_DECISION.json (the coordinating session's D1 decision under the delegation of 2026-11-14)
+    G2  blocked      waits for G1
+    G3  blocked      waits for G1
+    G4  blocked      waits for G1
+    G5  blocked      waits for G1
+    G6  blocked      waits for G1
+    G7  blocked      waits for G1
+    G8  blocked      waits for G1
+G5 plan (phase_driver.stress_runs on the sealed PROTOCOL.md): ['s3', 's2', 's2_relative', 's1']; A7b read from the A7 text: True; s2_relative: framelease_v4/protocol/stress_bench.py s2 --registered --states synthetic --qnet <network of the RL freeze> --grid relative
+check_drafts.py on the new PROTOCOL.md (exit 0):
+  OP: 114 lines, 12 placeholders, 3 framelease_v4 files cited by sha256
+  A10: 230 lines, 34 placeholders, 8 framelease_v4 files cited by sha256
+  A10 in-place found 1x now: 'If an offline output lacks a paired quantity, the v4 analysis script c'
+  A10 in-place found 1x now: 'freeze.\n\n**Freeze.** The analysis freeze happens when every registered'
+  A10 in-place found 1x now: '`outputs/framelease_v4/analysis/final_<stamp>/`, with a sha256 manifes'
+  A10 in-place found 1x now: '**Verification.** Before any number enters the paper, an independent s'
+  A10 in-place found 0x now: 'the analysis script, the Proposition-1 coverage and the figure and tab'
+  all checks passed
+files registered by this transaction (manifest files outside the P1 baseline whose sha256 the sealed PROTOCOL.md cites and the earlier one did not): 40
+Sec. 4.1 status paragraph (the text the fifth A10 in-place "old" is taken from, APPLY_PLAN2.md Sec. 4 step 1):
+  | Status (Amendment A3): the `fl_global_shield` lease of item 1, the aggregator of item 2 (with infractions per km), item
+  | 3 and item 4 are implemented and registered; the analysis script, the Proposition-1 coverage and the figure and table
+  | generators remain required before the analysis freeze. `fl_bandit` and `fl_fqi_nolease` of item 1 are configurations of
+  | launcher arm `fl_full` with the networks of their families (Amendment A4).
+postcheck: passed
+step3_txn.py restore 2026-11-15T06:22:41+0800 (pid 247789): root /tmp/AMEND3/tree, work /tmp/AMEND3/runs/08_transaction
+STOP: the journal says 'verified': the transaction was sealed; run `postcheck`, never `restore`; nothing is restored

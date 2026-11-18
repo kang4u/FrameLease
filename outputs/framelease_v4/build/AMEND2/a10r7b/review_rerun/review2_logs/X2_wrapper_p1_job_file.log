@@ -1,0 +1,11 @@
+(exit 1, 9.6 s)
+apply_locked: exit 1 (output /tmp/A10A11/applier/treeX2/outputs/framelease_v4/amendment_a10/apply.out)
+
+--- apply.out
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeX2/outputs/framelease_v4/amendment_a10/attempt_20261115T105041_365543
+registration --verify -> 1 | manifest: 1 files differ: [('outputs/framelease_v4/p1_jobs/FULL/b04_lease_s2.check.json', 'c57e008251af27117a6c25f99b3b94f424e3efc6bf1e6c57e868d18b14e4de5e', 'c7d8750d9cf31f0301a9b1e441b29a996de6a9e822997210a23193ae718b170a')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: registered files differ from the sealed manifest or are missing: ['outputs/framelease_v4/p1_jobs/FULL/b04_lease_s2.check.json']
+apply_locked: PROTOCOL.md unchanged; the manifest equals the sealed one
+manifest: 1 files differ: [('outputs/framelease_v4/p1_jobs/FULL/b04_lease_s2.check.json', 'c57e008251af27117a6c25f99b3b94f424e3efc6bf1e6c57e868d18b14e4de5e', 'c7d8750d9cf31f0301a9b1e441b29a996de6a9e822997210a23193ae718b170a')]
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

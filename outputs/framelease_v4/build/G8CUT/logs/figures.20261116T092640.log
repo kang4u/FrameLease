@@ -1,0 +1,11 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B framelease_v4/analysis/figures_tables.py --out outputs/framelease_v4/analysis/final_20261116T091445/figures --analysis outputs/framelease_v4/analysis/final_20261116T091445/analysis --offline outputs/framelease_v4/offline_ablation --coverage outputs/framelease_v4/analysis/final_20261116T091445/coverage --s1 outputs/framelease_v4/stress/s1_registered_20261115T124141Z.json --s2 outputs/framelease_v4/stress/s2_registered_20261115T123104Z.json --s2-relative outputs/framelease_v4/stress/s2_relative_registered_20261115T123118Z.json --s3 outputs/framelease_v4/stress/s3_registered_20261115T122819Z.json --d1 outputs/framelease_v4/tuning/d1/FULL_d1_summary.json --rl-freeze outputs/framelease_v4/rl_freeze/rl_freeze.json --require-registered
+figures_tables: registered -> outputs/framelease_v4/analysis/final_20261116T091445/figures
+  fig1: fig1.pdf, fig1.png, fig1_caption.tex (524 numbers)
+  fig1_scenarios: fig1_scenarios.pdf, fig1_scenarios.png, fig1_scenarios_caption.tex (264 numbers)
+  fig3: fig3.pdf, fig3.png, fig3_caption.tex (320 numbers)
+  table1: table1.tex (483 numbers)
+  table2a: table2a.tex (425 numbers)
+  table2b: table2b.tex (247 numbers)
+  table_train: table_train.tex (323 numbers)
+  numbers.json, figures.json, SHA256SUMS; guard log interim_guard.jsonl
+TIME 5.08 s, max RSS 163608 KB

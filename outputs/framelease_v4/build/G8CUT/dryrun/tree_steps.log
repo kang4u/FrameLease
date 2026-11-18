@@ -1,0 +1,36 @@
+2026-11-16 00:24:48 g8_check exit 3 (TIME 0.15 s, max RSS 33404 KB) outputs/framelease_v4/build/G8CUT/logs/g8_check.20261116T002448.log
+2026-11-16 00:24:58 g8_check exit 3 (TIME 0.15 s, max RSS 33260 KB) outputs/framelease_v4/build/G8CUT/logs/g8_check.20261116T002458.log
+2026-11-16 00:25:19 g8_check exit 0 (TIME 0.14 s, max RSS 33312 KB) outputs/framelease_v4/build/G8CUT/logs/g8_check.20261116T002519.log
+2026-11-16 00:25:22 g8_swap exit 0 (TIME 0.23 s, max RSS 36852 KB) outputs/framelease_v4/build/G8CUT/logs/g8_swap.20261116T002522.log
+2026-11-16 00:25:23 test_freeze_verify exit 0 (TIME 0.21 s, max RSS 41900 KB) outputs/framelease_v4/build/G8CUT/logs/test_freeze_verify.20261116T002522.log
+2026-11-16 00:25:26 g8_swap exit 0 (TIME 0.24 s, max RSS 36768 KB) outputs/framelease_v4/build/G8CUT/logs/g8_swap.20261116T002526.log
+2026-11-16 00:25:26 test_freeze_verify exit 0 (TIME 0.22 s, max RSS 41900 KB) outputs/framelease_v4/build/G8CUT/logs/test_freeze_verify.20261116T002526.log
+2026-11-16 00:25:30 g8_check_registered exit 0 (TIME 0.18 s, max RSS 36548 KB) outputs/framelease_v4/build/G8CUT/logs/g8_check_registered.20261116T002530.log
+2026-11-16 00:25:36 aggregate_freeze exit 0 (TIME 6.00 s, max RSS 62828 KB) outputs/framelease_v4/build/G8CUT/logs/aggregate_freeze.20261116T002530.log
+2026-11-16 00:25:36 required exit 0 (TIME 0.11 s, max RSS 33224 KB) outputs/framelease_v4/build/G8CUT/logs/required.20261116T002536.log
+2026-11-16 00:25:36 record_check exit 0 (TIME 0.26 s, max RSS 51080 KB) outputs/framelease_v4/build/G8CUT/logs/record_check.20261116T002536.log
+2026-11-16 00:25:37 entry exit 0 (TIME 0.26 s, max RSS 51160 KB) outputs/framelease_v4/build/G8CUT/logs/entry.20261116T002536.log
+2026-11-16 00:25:37 simulate exit 0 (TIME 0.20 s, max RSS 51988 KB) outputs/framelease_v4/build/G8CUT/logs/simulate.20261116T002537.log
+2026-11-16 00:25:43 applier_check exit 0 (TIME 6.55 s, max RSS 18768 KB) outputs/framelease_v4/build/G8CUT/logs/applier_check.20261116T002537.log
+2026-11-16 00:26:01 apply_A13 exit 0 (18 s) outputs/framelease_v4/amendment_a13/apply.out
+2026-11-16 00:26:05 post_A13 exit 0 (TIME 0.19 s, max RSS 51444 KB) outputs/framelease_v4/build/G8CUT/logs/post_A13.20261116T002605.log
+2026-11-16 00:26:09 post_check exit 0 (TIME 0.19 s, max RSS 51384 KB) outputs/framelease_v4/build/G8CUT/logs/post_check.20261116T002609.log
+2026-11-16 00:26:16 aggregate_p4 exit 0 (TIME 7.41 s, max RSS 65340 KB) outputs/framelease_v4/build/G8CUT/logs/aggregate_p4.20261116T002609.log
+2026-11-16 00:26:27 aggregate_p1 exit 0 (TIME 10.33 s, max RSS 59340 KB) outputs/framelease_v4/build/G8CUT/logs/aggregate_p1.20261116T002616.log
+2026-11-16 00:26:35 aggregate_p2 exit 0 (TIME 7.94 s, max RSS 51628 KB) outputs/framelease_v4/build/G8CUT/logs/aggregate_p2.20261116T002627.log
+2026-11-16 00:26:36 analyze exit 0 (TIME 1.82 s, max RSS 128192 KB) outputs/framelease_v4/build/G8CUT/logs/analyze.20261116T002635.log
+2026-11-16 00:26:55 coverage exit 0 (TIME 18.40 s, max RSS 117380 KB) outputs/framelease_v4/build/G8CUT/logs/coverage.20261116T002636.log
+2026-11-16 00:26:56 figures exit 2 (TIME 1.20 s, max RSS 128616 KB) outputs/framelease_v4/build/G8CUT/logs/figures.20261116T002655.log
+2026-11-16 00:27:00 post_check exit 0 (TIME 0.19 s, max RSS 51448 KB) outputs/framelease_v4/build/G8CUT/logs/post_check.20261116T002659.log
+2026-11-16 00:27:01 figures exit 2 (TIME 1.52 s, max RSS 128316 KB) outputs/framelease_v4/build/G8CUT/logs/figures.20261116T002700.log
+2026-11-16 00:27:05 post_check exit 0 (TIME 0.19 s, max RSS 51420 KB) outputs/framelease_v4/build/G8CUT/logs/post_check.20261116T002704.log
+2026-11-16 00:27:09 figures exit 0 (TIME 4.60 s, max RSS 164004 KB) outputs/framelease_v4/build/G8CUT/logs/figures.20261116T002705.log
+2026-11-16 00:27:09 outputs_manifest 62 files
+2026-11-16 00:27:13 post_check exit 0 (TIME 0.20 s, max RSS 51436 KB) outputs/framelease_v4/build/G8CUT/logs/post_check.20261116T002713.log
+2026-11-16 00:27:14 verify_independent exit 0 (TIME 1.51 s, max RSS 93944 KB) outputs/framelease_v4/build/G8CUT/logs/verify_independent.20261116T002713.log
+2026-11-16 00:27:18 verify_table1_extra exit 1 (TIME 3.47 s, max RSS 103092 KB) outputs/framelease_v4/build/G8CUT/logs/verify_table1_extra.20261116T002714.log
+2026-11-16 00:27:18 f1_class_report exit 0 (TIME 0.06 s, max RSS 26128 KB) outputs/framelease_v4/build/G8CUT/logs/f1_class_report.20261116T002718.log
+2026-11-16 00:27:18 entry_verify exit 0 (TIME 0.10 s, max RSS 33292 KB) outputs/framelease_v4/build/G8CUT/logs/entry_verify.20261116T002718.log
+2026-11-16 00:27:18 entry_extra exit 0 (TIME 0.10 s, max RSS 33288 KB) outputs/framelease_v4/build/G8CUT/logs/entry_extra.20261116T002718.log
+2026-11-16 00:27:34 apply_A14 exit 0 (16 s) outputs/framelease_v4/amendment_a14/apply.out
+2026-11-16 00:27:56 apply_A15 exit 0 (18 s) outputs/framelease_v4/amendment_a15/apply.out

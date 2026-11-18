@@ -1,0 +1,747 @@
+#!/usr/bin/env python3
+"""Step 3 of outputs/framelease_v4/build/AMEND2/APPLY_PLAN2.md Sec. 3: Amendments A3, A9, A7 (A7b), A4 and the
+operational addition of the phase driver in ONE transaction (one manifest, one seal). Called by amend_step3.sh, which
+takes framelease_v4/.protocol.lock around the subcommand `locked`; every process runs on the E-cores 12-15 at nice 19,
+idle I/O class, one BLAS thread, CUDA_VISIBLE_DEVICES=''.
+
+  step3_txn.py precheck  --root R                       # Sec. 3 step 1 (no lock, writes nothing)
+  step3_txn.py locked    --root R --work W --datetime D # Sec. 3 step 3 (caller holds the lock)
+  step3_txn.py postcheck --root R --work W              # Sec. 3 step 4 (writes only into W)
+  step3_txn.py restore   --root R --work W              # after an interrupted `locked`: back to the sealed state
+
+Input: step3_spec.json next to this file (make_step3_spec.py): the entries, the in-place texts in their order, the
+sha256 of every file the entries cite (must_equal), the reviewed sha256 of the 38 A3 files, the files the transaction
+registers.
+
+precheck: registration.py --verify (both seal lines OK; a manifest difference only of unregistered files); P1_DONE.json
+(schema framelease_v4.p1_driver_done/1); no p1_driver.py or phase_driver.py process of this root (process table and
+driver.lock); no p1_driver/protocol_txn.json, p1_driver/ALERT.txt, phase_driver/ALERT.txt or phase_driver/
+protocol_txn.json; the P1 driver's "Tuning freeze" and "D1 summary" entries in Sec. 13.2; final/OP_spec.json
+"must_equal" and the spec's must_equal; every A3 file at the sha256 its review record gives (APPLY_PLAN.md Sec. 4); no
+title of A3, A4, A7, A9 or the operational addition in PROTOCOL.md yet; every in-place "old" exactly once at its turn;
+check_drafts.py exit 0 ("all checks passed"); the registered baseline in the sealed manifest; a dry run of the whole
+composition in memory (fill with the current manifest, rewrap, the checks of `locked`).
+
+locked: PROTOCOL.md and MANIFEST.sha256 must be the sealed ones; copies of PROTOCOL.md, MANIFEST.sha256, SEAL.sha256
+and REGISTRATION.json into W (the sealed state); registration.py --write-manifest --force (file count, sha256); the
+post-manifest check of step 3.2 (every file of p1_driver/registered_baseline.json in the new manifest at its sealed
+sha256, none vanished): anything but OK restores the sealed manifest and stops; the five entries filled with ONE time
+stamp by fill_entry.py (the rules of apply_entry.py: {{datetime}}, {{sha256:...}}, {{pytest:...}}, {{manifest:files}})
+and every block with a filled line over 120 columns rewrapped (words unchanged; table rows stay single lines); every
+entry checked (no line that a driver reads as an entry, a heading, the anchor or another amendment title; the manifest
+clause cites the new manifest); the in-place texts applied in their order; the entries inserted, each its own block,
+directly before the paragraph "Each amendment gets the date and time" in the order A3, A9, A7, A4, operational addition;
+the new text checked with the parsers of both drivers (the P1 entries unchanged; A3, A4, A7 and A9 each read once,
+A7 read as A7b; the heading of the phase driver absent; the operational addition once); the manifest files that become
+registered (not in the registered baseline, sha256 cited by PROTOCOL.md) are exactly the 40 expected ones; PROTOCOL.md
+written atomically; registration.py --seal; registration.py --verify (both seals OK; a manifest difference only of
+unregistered files, which the next seal names, as the drivers allow). Every failure (a signal included)
+before the seal restores PROTOCOL.md and MANIFEST.sha256 (and SEAL.sha256 and REGISTRATION.json if --seal touched them)
+from the copies and checks that both seals verify again: nothing is applied. W/journal.json records each step.
+
+postcheck: the command of step 3.2 on the sealed manifest prints OK; registration.py --verify (as above);
+phase_driver.py
+--dry-run shows G0 passed and G1 waiting for D1_DECISION.json; the G5 plan of phase_driver.stress_runs on the sealed
+PROTOCOL.md holds `s2 --grid relative` (A7b read from the A7 text); check_drafts.py exit 0 on the new PROTOCOL.md; the
+Sec. 4.1 status paragraph as it now reads (the "old" of the fifth A10 in-place text, APPLY_PLAN2.md Sec. 4 step 1).
+
+Simulation (a scratch copy, --root other than the project): check_drafts.py and fill_entry.py hard-code the project
+root, so they run with ROOT replaced in memory (the files themselves are unchanged); AMEND_STEP3_FAULT=post_manifest |
+before_seal | seal_fail | signal_before_seal (SIGTERM) | kill_before_seal (SIGKILL, then `restore`) injects a failure
+at that point. Both are refused in the project tree.
+Exit codes: 0 OK; 1 STOP, nothing applied (sealed state verified); 2 STOP, the restore needs a manual check (journal);
+3 STOP after the seal (sealed; a seal line or a registered file does not verify); 4 a post-check failed (sealed).
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import importlib.util
+import json
+import os
+import re
+import shutil
+import signal
+import subprocess
+import sys
+import time
+from pathlib import Path
+
+REAL_ROOT = Path('/home/kang/Desktop/DAC')
+HERE = Path(__file__).resolve().parent
+SPEC_PATH = HERE / 'step3_spec.json'
+PREFIX = ['taskset', '-c', '12-15', 'nice', '-n', '19', 'ionice', '-c', '3']
+ENV = {**os.environ, 'CUDA_VISIBLE_DEVICES': '', 'OMP_NUM_THREADS': '1', 'MKL_NUM_THREADS': '1',
+       'OPENBLAS_NUM_THREADS': '1'}
+ANCHOR = 'Each amendment gets the date and time'
+PROTOCOL = 'framelease_v4/PROTOCOL.md'
+MANIFEST = 'outputs/framelease_v4/registration/MANIFEST.sha256'
+SEAL = 'outputs/framelease_v4/registration/SEAL.sha256'
+RECORD = 'outputs/framelease_v4/registration/REGISTRATION.json'
+REGISTRATION = 'framelease_v4/protocol/registration.py'
+PHASE_DRIVER = 'framelease_v4/protocol/phase_driver.py'
+BASELINE = 'outputs/framelease_v4/p1_driver/registered_baseline.json'
+P1_DIR = 'outputs/framelease_v4/p1_driver'
+PD_DIR = 'outputs/framelease_v4/phase_driver'
+FILL = 'outputs/framelease_v4/build/AMEND2/fill_entry.py'
+CHECK = 'outputs/framelease_v4/build/AMEND2/check_drafts.py'
+OP_SPEC = 'outputs/framelease_v4/build/AMEND2/final/OP_spec.json'
+P1_DONE_SCHEMA = 'framelease_v4.p1_driver_done/1'
+ROOT_LINE = "ROOT = Path('/home/kang/Desktop/DAC')"
+FAULT_ENV = 'AMEND_STEP3_FAULT'
+FAULTS = ('post_manifest', 'before_seal', 'seal_fail', 'signal_before_seal', 'kill_before_seal')
+ORDER = ('A3', 'A9', 'A7', 'A4', 'OP')
+BULLET = re.compile(r'^( *)(\* |\d+\. )')
+LIST_LIKE = re.compile(r'^\s*(\d+\)|[-+>#])(\s|$)')
+STEP32 = ("import json; b=json.load(open('outputs/framelease_v4/p1_driver/registered_baseline.json'))['files']; "
+          "m=dict(reversed(l.rstrip('\\n').split('  ',1)) for l in open('outputs/framelease_v4/registration/"
+          "MANIFEST.sha256')); print([k for k,v in b.items() if m.get(k)!=v] or 'OK')")
+
+
+class Stop(Exception):
+    """A failed check: the message names it."""
+
+
+def say(msg=''):
+    print(msg, flush=True)
+
+
+def sha256(path):
+    h = hashlib.sha256()
+    with open(path, 'rb') as fh:
+        for chunk in iter(lambda: fh.read(1 << 20), b''):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def sha256_text(text):
+    return hashlib.sha256(text.encode('utf-8')).hexdigest()
+
+
+def load_module(name, path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    mod = importlib.util.module_from_spec(spec)
+    sys.modules[name] = mod
+    spec.loader.exec_module(mod)
+    return mod
+
+
+MS = load_module('make_step3_spec', HERE / 'make_step3_spec.py')
+
+
+def drivers(root):
+    """p1_driver and phase_driver of `root` (imported from it; nothing is written)."""
+    sys.dont_write_bytecode = True
+    if str(root) not in sys.path:
+        sys.path.insert(0, str(root))
+    from framelease_v4.protocol import p1_driver as P1  # noqa: E402
+    from framelease_v4.protocol import phase_driver as PD  # noqa: E402
+    if Path(PD.__file__).resolve() != (root / PHASE_DRIVER).resolve():
+        raise Stop(f'phase_driver imported from {PD.__file__}, not from {root}')
+    return P1, PD
+
+
+def py(root):
+    return str(root / '.conda-unidrive-linux/bin/python')
+
+
+def run(cmd, root, timeout=3600):
+    p = subprocess.run(PREFIX + cmd, cwd=root, capture_output=True, text=True, env=ENV, timeout=timeout)
+    return p.returncode, p.stdout, p.stderr
+
+
+def tool_cmd(root, rel, args):
+    """check_drafts.py / fill_entry.py of `root`: run as files in the project tree; in a scratch copy with their
+    hard-coded ROOT replaced in memory (the file is read, never changed)."""
+    script = str(root / rel)
+    if root == REAL_ROOT:
+        return [py(root), '-I', '-B', script] + list(args)
+    loader = ("import sys, pathlib; s, r = sys.argv[1], sys.argv[2]; sys.argv = [s] + sys.argv[3:]; "
+              "src = pathlib.Path(s).read_text(encoding='utf-8'); old = " + repr(ROOT_LINE) + "; "
+              "assert src.count(old) == 1, 'ROOT line'; src = src.replace(old, 'ROOT = Path(%r)' % r); "
+              "g = {'__name__': '__main__', '__file__': s}; exec(compile(src, s, 'exec'), g)")
+    return [py(root), '-I', '-B', '-c', loader, script, str(root)] + list(args)
+
+
+def registration(root, *flags):
+    return run([py(root), '-I', '-B', str(root / REGISTRATION)] + list(flags), root)
+
+
+def seal_lines_ok(out):
+    return out.count(f'seal {PROTOCOL}: OK') == 1 and out.count(f'seal {MANIFEST}: OK') == 1
+
+
+def manifest_map(path):
+    out = {}
+    for ln in Path(path).read_text(encoding='utf-8').splitlines():
+        if '  ' in ln:
+            s, rel = ln.split('  ', 1)
+            out[rel] = s
+    return out
+
+
+def baseline_files(root):
+    doc = json.loads((root / BASELINE).read_text(encoding='utf-8'))
+    files = doc.get('files')
+    if not isinstance(files, dict) or not files:
+        raise Stop(f'{BASELINE} holds no files')
+    return files
+
+
+def tree_sha(root, rel):
+    p = Path(rel) if Path(rel).is_absolute() else root / rel
+    try:
+        return sha256(p)
+    except OSError as e:
+        return f'unreadable ({e.strerror})'
+
+
+def driver_pids(root, script):
+    """pids of processes that run <root>/framelease_v4/protocol/<script> (argv resolved against their cwd)."""
+    target = os.path.realpath(root / 'framelease_v4/protocol' / script)
+    pids = []
+    for d in os.listdir('/proc'):
+        if not d.isdigit() or int(d) == os.getpid():
+            continue
+        try:
+            argv = Path(f'/proc/{d}/cmdline').read_bytes().split(b'\0')
+            cwd = os.readlink(f'/proc/{d}/cwd')
+        except OSError:
+            continue
+        for a in argv[1:]:
+            a = a.decode(errors='replace')
+            if a.endswith(script) and os.path.realpath(a if os.path.isabs(a) else os.path.join(cwd, a)) == target:
+                pids.append(int(d))
+                break
+    return pids
+
+
+def spec_load():
+    spec = json.loads(SPEC_PATH.read_text(encoding='utf-8'))
+    if spec.get('schema') != MS.SCHEMA:
+        raise Stop(f'{SPEC_PATH}: schema {spec.get("schema")}')
+    return spec
+
+
+# ------------------------------------------------------------------------------------------------ entries
+
+def rewrap(text, width=120):
+    """Every paragraph block (a bullet with its continuation lines, or a plain paragraph) that holds a line over
+    `width` columns, rewrapped with the same first-line prefix and continuation indent; other lines unchanged."""
+    lines = text.rstrip('\n').split('\n')
+    out, i = [], 0
+    while i < len(lines):
+        ln = lines[i]
+        if not ln.strip() or ln.lstrip().startswith('|'):
+            out.append(ln)
+            i += 1
+            continue
+        m = BULLET.match(ln)
+        ind = len(m.group(0)) if m else len(ln) - len(ln.lstrip(' '))
+        j = i + 1
+        while j < len(lines) and lines[j].strip() and not lines[j].lstrip().startswith('|') \
+                and not BULLET.match(lines[j]) and len(lines[j]) - len(lines[j].lstrip(' ')) == ind:
+            j += 1
+        blk = lines[i:j]
+        if any(len(x) > width for x in blk):
+            blk = MS.wrap(' '.join([ln[ind:]] + [x.strip() for x in blk[1:]]), ln[:ind], ' ' * ind, width)
+        out.extend(blk)
+        i = j
+    return '\n'.join(out) + '\n'
+
+
+def entry_problems(P1, PD, name, aid, text, op_mark, m_sha, n_files):
+    """Problems of one filled entry (module docstring)."""
+    out = []
+    lines = text.rstrip('\n').split('\n')
+    for k, ln in enumerate(lines, 1):
+        if len(ln) > 120 and not ln.lstrip().startswith('|'):
+            out.append(f'{name}: line {k} has {len(ln)} columns')
+        if ln.startswith('## ') or ln.startswith(ANCHOR) or ln.strip() in (P1.HEADING, PD.HEADING):
+            out.append(f'{name}: line {k} starts with a heading or the anchor')
+        if P1.ENTRY_RE.match(ln) or PD.ENTRY_RE.match(ln):
+            out.append(f'{name}: line {k} reads as a driver entry')
+        if PD.AMEND_RE.match(ln) and not (aid and k == 1):
+            out.append(f'{name}: line {k} reads as an amendment title')
+        if LIST_LIKE.match(ln) or (re.match(r'^\s*\d+\.\s', ln) and not ln.startswith('  ')):
+            out.append(f'{name}: line {k} starts like a list item, a quote or a heading')
+    first = PD.AMEND_RE.match(lines[0])
+    if aid and (not first or first.group('id') != aid):
+        out.append(f'{name}: the first line is not the title of Amendment {aid}')
+    if not aid and op_mark not in lines[0] + ' ' + (lines[1] if len(lines) > 1 else ''):
+        out.append(f'{name}: the title of the operational addition is missing')
+    if not aid and PD.A7B_RE.search(' '.join(text.split())):
+        out.append(f'{name}: the text matches phase_driver.A7B_RE')
+    if ANCHOR in text or '{{' in text or '}}' in text:
+        out.append(f'{name}: anchor phrase or unfilled placeholder in the text')
+    flat = ' '.join(text.split())
+    if f'`MANIFEST.sha256`, {n_files} files, sha256 `{m_sha}`, sealed with this entry.' not in flat:
+        out.append(f'{name}: the manifest-and-seal line does not cite {n_files} files, sha256 {m_sha}')
+    return out
+
+
+def fill_entries(root, spec, work, when, P1, PD, m_sha, n_files, tag=''):
+    """{name: filled and rewrapped entry}; each template, raw fill and entry written into `work`."""
+    entries, problems = {}, []
+    for e in spec['entries']:
+        name, aid = e['name'], e['amendment']
+        tmpl = work / f'template_{name}{tag}.md'
+        tmpl.write_text(MS.entry_template(root, name), encoding='utf-8')
+        rc, out, err = run(tool_cmd(root, FILL, [str(tmpl), '--datetime', when]), root, 600)
+        (work / f'fill_{name}{tag}.stderr.txt').write_text(err, encoding='utf-8')
+        if rc != 0:
+            problems.append(f'{name}: fill_entry.py exit {rc}: {err.strip()[-600:]}')
+            continue
+        (work / f'filled_{name}{tag}.raw.md').write_text(out, encoding='utf-8')
+        text = rewrap(out)
+        (work / f'entry_{name}{tag}.md').write_text(text, encoding='utf-8')
+        if ' '.join(text.split()) != ' '.join(out.split()):
+            problems.append(f'{name}: the rewrap changed words')
+        problems += entry_problems(P1, PD, name, aid, text, spec['op_title_mark'], m_sha, n_files)
+        if aid and not text.startswith(f'**Amendment {aid}, {when} (Beijing time):'):
+            problems.append(f'{name}: the title does not carry the time stamp {when}')
+        if not aid and not text.startswith(f'**Operational addition, {when} (Beijing time):'):
+            problems.append(f'{name}: the title does not carry the time stamp {when}')
+        entries[name] = text
+    return entries, problems
+
+
+def compose(P1, PD, spec, text, entries):
+    """(new PROTOCOL.md text, problems): the in-place texts in order, then the entries before the anchor."""
+    problems = []
+    if text.count(ANCHOR) != 1:
+        return None, [f'the anchor phrase occurs {text.count(ANCHOR)} times in PROTOCOL.md']
+    p1_before = {k: v['text'] for k, v in P1.protocol_view(None, text)['entries'].items()}
+    try:
+        new = MS.apply_inplace(text, spec['inplace'])
+    except ValueError as e:
+        return None, [str(e)]
+    for name in ORDER:
+        k = new.index(ANCHOR)
+        new = new[:k].rstrip('\n') + '\n\n' + entries[name].strip('\n') + '\n\n' + new[k:]
+    try:
+        pv = P1.protocol_view(None, new)
+        view = PD.phase_view(None, new)
+    except Exception as exc:             # an ALERT of either driver's parser
+        return new, [f'driver parser on the new text: {type(exc).__name__}: {exc}']
+    if {k: v['text'] for k, v in pv['entries'].items()} != p1_before:
+        problems.append('the P1 driver entries changed')
+    for aid in ('A3', 'A4', 'A7', 'A9'):
+        if len(view['amendments'].get(aid, [])) != 1:
+            problems.append(f'Amendment {aid} read {len(view["amendments"].get(aid, []))} times')
+    if view['heading'] is not None or view['entries']:
+        problems.append('the phase driver heading or a phase driver entry exists already')
+    if not PD.a7_supplementary(view):
+        problems.append('the entered A7 is not read as the variant A7b (phase_driver.a7_supplementary)')
+    s, e = view['sec']
+    if sum(spec['op_title_mark'] in view['lines'][i] for i in range(s, e)) != 1:
+        problems.append('the operational addition is not read exactly once in Sec. 13.2')
+    if new.count(ANCHOR) != 1:
+        problems.append('the anchor phrase is not unique after the insertion')
+    return new, problems
+
+
+P1_JOBS = 'outputs/framelease_v4/p1_jobs/'      # always registered (phase_driver docstring, "Registered files")
+
+
+def verify_classified(root, registered):
+    """registration.py --verify, with the differing manifest files split into registered ones (in `registered`, or a
+    P1 job file) and the others (unregistered development files: tolerated, named at the next seal, as the drivers
+    do). Returns (seal lines OK, registered differences, other differences, output)."""
+    rc, out, err = registration(root, '--verify')
+    if 'manifest: OK' in out:
+        return seal_lines_ok(out), [], [], out
+    diffs = []
+    for p, s in manifest_map(root / MANIFEST).items():
+        got = tree_sha(root, p)
+        if got != s:
+            diffs.append(p)
+    strict = [p for p in diffs if p in registered or p.startswith(P1_JOBS)]
+    return seal_lines_ok(out), strict, [p for p in diffs if p not in strict], out
+
+
+def registered_by(old_text, new_text, man, base):
+    """Manifest files the transaction registers: outside the registered baseline and the P1 job files, with a sha256
+    that the new PROTOCOL.md cites and the sealed one does not (the rule of phase_driver.refresh_baseline)."""
+    return sorted(k for k, v in man.items()
+                  if k not in base and not k.startswith(P1_JOBS) and v in new_text and v not in old_text)
+
+
+# ------------------------------------------------------------------------------------------------ precheck
+
+def check_inputs(root, spec):
+    probs = []
+    op_spec = json.loads((root / OP_SPEC).read_text(encoding='utf-8'))
+    for p, want in sorted({**op_spec['must_equal'], **spec['must_equal']}.items()):
+        have = tree_sha(root, p)
+        if have != want:
+            probs.append(f'{p}: sha256 {have[:16]} != {want[:16]} (prepared / OP_spec.json): the file changed after '
+                         'the '
+                         'preparation; a changed file carries its review, then make_step3_spec.py is run again')
+    want_a3 = MS.a3_reviewed(root)
+    if want_a3 != spec['a3_files']:
+        probs.append('the A3 review record of the AMEND draft differs from step3_spec.json')
+    for p, want in sorted(want_a3.items()):
+        if tree_sha(root, p) != want:
+            probs.append(f'A3 file {p} is not at the sha256 of its review record ({want[:16]})')
+    return probs
+
+
+def precheck(root, spec, work):
+    P1, PD = drivers(root)
+    probs, notes = [], []
+    rc, out, err = registration(root, '--verify')
+    say(f'registration.py --verify (exit {rc}): ' + ' | '.join(out.strip().splitlines()))
+    if not seal_lines_ok(out):
+        probs.append('registration.py --verify: the two seal lines are not both OK')
+    base = baseline_files(root)
+    sealed = manifest_map(root / MANIFEST)
+    reg_diff = [p for p, s in base.items() if sealed.get(p) != s or tree_sha(root, p) != s]
+    if reg_diff:
+        probs.append(f'registered files differ from the sealed manifest or the tree: {reg_diff[:10]}')
+    say(f'registered baseline: {len(base)} files; in the sealed manifest at their sha256 and unchanged in the tree: '
+        f'{"yes" if not reg_diff else "NO"}')
+    done = P1.read_json(root / P1_DIR / 'P1_DONE.json')
+    if not (root / P1_DIR / 'P1_DONE.json').is_file():
+        probs.append(f'{P1_DIR}/P1_DONE.json does not exist (P1 has not ended)')
+    elif not isinstance(done, dict) or done.get('schema') != P1_DONE_SCHEMA:
+        probs.append(f'{P1_DIR}/P1_DONE.json is not a P1 completion record ({P1_DONE_SCHEMA})')
+    for script in ('p1_driver.py', 'phase_driver.py'):
+        pids = driver_pids(root, script)
+        if pids:
+            probs.append(f'{script} of this root is alive: pids {pids}')
+    cfg = PD.Cfg(PD.parse_args(['--root', str(root), '--dry-run']))
+    if PD.p1_driver_alive(cfg):
+        probs.append(f'{P1_DIR}/driver.lock names a live p1_driver.py process')
+    for rel in (f'{P1_DIR}/protocol_txn.json', f'{P1_DIR}/ALERT.txt', f'{PD_DIR}/protocol_txn.json',
+                f'{PD_DIR}/ALERT.txt'):
+        if (root / rel).exists():
+            probs.append(f'{rel} exists')
+    text = (root / PROTOCOL).read_text(encoding='utf-8')
+    view = PD.phase_view(None, text)
+    miss = [P1.LABEL[k] for k in ('freeze', 'd1') if k not in view['p1_entries']]
+    if miss:
+        probs.append(f'Sec. 13.2 has no P1 driver entry {miss}')
+    else:
+        d1 = cfg.d1_paths()[0]
+        jsha = tree_sha(root, d1)
+        say(f'P1 driver entries: Tuning freeze line {view["p1_entries"]["freeze"]["line"]}, D1 summary line '
+            f'{view["p1_entries"]["d1"]["line"]}; {cfg.rel(d1)} sha256 {jsha} '
+            f'{"cited by the D1 summary entry" if jsha in view["p1_entries"]["d1"]["shas"] else "NOT CITED"}')
+        if jsha not in view['p1_entries']['d1']['shas']:
+            probs.append(f'the D1 summary entry does not cite the sha256 of {cfg.rel(d1)}')
+    for aid in ('A3', 'A4', 'A7', 'A9'):
+        if aid in view['amendments']:
+            probs.append(f'Amendment {aid} is entered already (lines {view["amendments"][aid]})')
+    if spec['op_title_mark'] in text:
+        probs.append('the operational addition of the phase driver is entered already')
+    if view['heading'] is not None:
+        probs.append(f'the heading {PD.HEADING} exists already')
+    probs += check_inputs(root, spec)
+    try:
+        MS.apply_inplace(text, spec['inplace'])
+    except ValueError as e:
+        probs.append(str(e))
+    rc, out, err = run(tool_cmd(root, CHECK, []), root, 600)
+    say(f'check_drafts.py exit {rc}: {out.strip().splitlines()[-1] if out.strip() else err.strip()[-300:]}')
+    if rc != 0 or 'all checks passed' not in out:
+        probs.append(f'check_drafts.py exit {rc}: ' + ' | '.join(out.strip().splitlines()[-6:]))
+    # dry composition with the current manifest (nothing written outside `work`)
+    m_sha, n_files = sha256(root / MANIFEST), len(sealed)
+    entries, fprobs = fill_entries(root, spec, work, '2000-01-01 00:00', P1, PD, m_sha, n_files, tag='.dry')
+    probs += [f'dry fill: {p}' for p in fprobs]
+    if not fprobs:
+        new, cprobs = compose(P1, PD, spec, text, entries)
+        probs += [f'dry composition: {p}' for p in cprobs]
+        if new is not None and not cprobs:
+            got = registered_by(text, new, sealed, base)
+            if got != spec['expected_new_registered']:
+                probs.append(f'dry composition registers {len(got)} files, expected '
+                             f'{len(spec["expected_new_registered"])}: '
+                             f'{sorted(set(got) ^ set(spec["expected_new_registered"]))[:10]}')
+            say(f'dry composition: {len(new.splitlines())} lines; entries '
+                + ', '.join(f'{n} {len(entries[n].splitlines())} lines' for n in ORDER)
+                + f'; {len(got)} files become registered')
+    for n in notes:
+        say(n)
+    return probs
+
+
+# ------------------------------------------------------------------------------------------------ locked part
+
+class Txn:
+    def __init__(self, root, work):
+        self.root, self.work = root, work
+        self.journal = work / 'journal.json'
+        self.state = {'root': str(root), 'started': time.strftime('%Y-%m-%dT%H:%M:%S%z'), 'steps': []}
+
+    def step(self, name, **kw):
+        self.state['step'] = name
+        self.state['steps'].append({'step': name, 'time': time.strftime('%Y-%m-%dT%H:%M:%S%z'), **kw})
+        tmp = self.journal.with_suffix('.tmp')
+        tmp.write_text(json.dumps(self.state, indent=1) + '\n', encoding='utf-8')
+        os.replace(tmp, self.journal)
+
+
+def atomic_copy(src, dst, work, mode=None):
+    tmp = work / f'.restore_{Path(dst).name}.tmp'
+    shutil.copyfile(src, tmp)
+    if mode is not None:
+        os.chmod(tmp, mode)
+    os.replace(tmp, dst)
+
+
+SAVED = ((PROTOCOL, 'PROTOCOL.sealed.md'), (MANIFEST, 'MANIFEST.sealed.sha256'), (SEAL, 'SEAL.before.sha256'),
+         (RECORD, 'REGISTRATION.before.json'))
+
+
+def restore(root, work):
+    """PROTOCOL.md, MANIFEST.sha256, SEAL.sha256 and REGISTRATION.json back to the copies taken at the start of the
+    locked part (only the files that differ); True when both seal lines verify OK afterwards."""
+    restored = []
+    for rel, name in SAVED:
+        src, dst = work / name, root / rel
+        if src.is_file() and (not dst.is_file() or sha256(dst) != sha256(src)):
+            atomic_copy(src, dst, work, dst.stat().st_mode & 0o7777 if dst.exists() else None)
+            restored.append(rel)
+    rc, out, _ = registration(root, '--verify')
+    ok = seal_lines_ok(out) and all(sha256(root / rel) == sha256(work / name) for rel, name in SAVED
+                                    if (work / name).is_file())
+    say(f'restore: restored {restored or "nothing (unchanged)"}; registration.py --verify: '
+        + ' | '.join(out.strip().splitlines()) + f' -> {"sealed state OK" if ok else "NOT OK"}')
+    return ok
+
+
+def quiet():
+    """From the seal on (and during a restore) a signal no longer interrupts the transaction."""
+    for s in (signal.SIGTERM, signal.SIGINT, signal.SIGHUP):
+        signal.signal(s, signal.SIG_IGN)
+
+
+def fault(name):
+    return os.environ.get(FAULT_ENV) == name
+
+
+def locked(root, spec, work, when):
+    P1, PD = drivers(root)
+    txn = Txn(root, work)
+    txn.step('begin', datetime=when)
+    reg = P1.registration_view(PD.Cfg(PD.parse_args(['--root', str(root), '--dry-run'])))
+    if not reg['seal_ok']:
+        raise Stop('PROTOCOL.md / MANIFEST.sha256 are not the sealed versions (an unsealed edit since the pre-check)')
+    for rel in (f'{P1_DIR}/protocol_txn.json', f'{P1_DIR}/ALERT.txt', f'{PD_DIR}/protocol_txn.json'):
+        if (root / rel).exists():
+            raise Stop(f'{rel} appeared since the pre-check')
+    if os.stat(work).st_dev != os.stat(root / PROTOCOL).st_dev or \
+            os.stat(work).st_dev != os.stat(root / MANIFEST).st_dev:
+        raise Stop(f'{work} is not on the file system of PROTOCOL.md and MANIFEST.sha256 (atomic rename)')
+    text = (root / PROTOCOL).read_text(encoding='utf-8')
+    for rel, name in SAVED:
+        shutil.copyfile(root / rel, work / name)
+    txn.step('copied', protocol_sha256=sha256(work / 'PROTOCOL.sealed.md'),
+             manifest_sha256=sha256(work / 'MANIFEST.sealed.sha256'))
+    say(f'sealed state copied into {work}: PROTOCOL.md {sha256(work / "PROTOCOL.sealed.md")}, MANIFEST.sha256 '
+        f'{sha256(work / "MANIFEST.sealed.sha256")}')
+    def interrupted(signum, _frame):
+        raise Stop(f'signal {signum} during the transaction')
+    for s in (signal.SIGTERM, signal.SIGINT, signal.SIGHUP):
+        signal.signal(s, interrupted)
+    try:
+        rc, out, err = registration(root, '--write-manifest', '--force')
+        m = re.search(r'^wrote .*MANIFEST\.sha256: (\d+) files, sha256 ([0-9a-f]{64})$', out, re.M)
+        txn.step('manifest', exit=rc, output=out.strip())
+        say(f'registration.py --write-manifest --force (exit {rc}): {out.strip()}')
+        if rc != 0 or not m:
+            raise Stop(f'--write-manifest failed: {err.strip()[-500:]}')
+        n_files, m_sha = int(m.group(1)), m.group(2)
+        new_man = manifest_map(root / MANIFEST)
+        if sha256(root / MANIFEST) != m_sha or len(new_man) != n_files:
+            raise Stop('the manifest on disk is not the one --write-manifest reported')
+        # step 3.2: the post-manifest check, before anything is inserted
+        base = baseline_files(root)
+        bad = [k for k, v in base.items() if new_man.get(k) != v]
+        if fault('post_manifest') and root != REAL_ROOT:
+            bad = bad or ['(simulated post-manifest failure)']
+        txn.step('post_manifest_check', result='OK' if not bad else bad)
+        say(f'post-manifest check (step 3.2): {bad or "OK"}')
+        if bad:
+            raise Stop(f'post-manifest check: registered files not in the new manifest at their sealed sha256: '
+                       f'{bad[:10]}')
+        sealed_man = manifest_map(work / 'MANIFEST.sealed.sha256')
+        added = sorted(set(new_man) - set(sealed_man))
+        changed = sorted(k for k in new_man if k in sealed_man and new_man[k] != sealed_man[k])
+        say(f'new manifest: {n_files} files, sha256 {m_sha}; new in it: {added or "none"}; changed since the seal '
+            f'(unregistered): {changed or "none"}')
+        entries, probs = fill_entries(root, spec, work, when, P1, PD, m_sha, n_files)
+        txn.step('filled', problems=probs)
+        if probs:
+            raise Stop('entries: ' + '; '.join(probs))
+        if sha256(root / PROTOCOL) != sha256(work / 'PROTOCOL.sealed.md'):
+            raise Stop('PROTOCOL.md changed while the lock was held (an editor without the lock)')
+        new, probs = compose(P1, PD, spec, text, entries)
+        if not probs:
+            got = registered_by(text, new, new_man, base)
+            if got != spec['expected_new_registered']:
+                probs.append(f'the transaction would register {len(got)} files, expected '
+                             f'{len(spec["expected_new_registered"])}: '
+                             f'{sorted(set(got) ^ set(spec["expected_new_registered"]))[:10]}')
+        txn.step('composed', problems=probs, protocol_after_sha256=sha256_text(new) if new else None)
+        if probs:
+            raise Stop('composition: ' + '; '.join(probs))
+        (work / 'PROTOCOL.new.md').write_text(new, encoding='utf-8')
+        mode = (root / PROTOCOL).stat().st_mode & 0o7777
+        atomic_copy(work / 'PROTOCOL.new.md', root / PROTOCOL, work, mode)
+        txn.step('protocol', protocol_sha256=sha256(root / PROTOCOL))
+        say(f'PROTOCOL.md written: sha256 {sha256(root / PROTOCOL)} ({len(new.splitlines())} lines)')
+        if fault('before_seal') and root != REAL_ROOT:
+            raise Stop('simulated failure after PROTOCOL.md was written, before the seal')
+        if fault('signal_before_seal') and root != REAL_ROOT:
+            os.kill(os.getpid(), signal.SIGTERM)
+        if fault('kill_before_seal') and root != REAL_ROOT:
+            os.kill(os.getpid(), signal.SIGKILL)
+        rc, out, err = (1, '', 'simulated seal failure') if fault('seal_fail') and root != REAL_ROOT else \
+            registration(root, '--seal')
+        say(f'registration.py --seal (exit {rc}): {out.strip()} {err.strip()[-300:]}')
+        sm = re.search(r'sealed: PROTOCOL\.md ([0-9a-f]{64}), manifest ([0-9a-f]{64})', out)
+        if rc != 0 or not sm or sm.group(1) != sha256_text(new) or sm.group(2) != m_sha:
+            raise Stop(f'--seal failed (exit {rc})')
+        txn.step('sealed', protocol_sha256=sm.group(1), manifest_sha256=sm.group(2))
+        quiet()
+    except Stop as e:
+        quiet()
+        txn.step('failed', reason=str(e))
+        say(f'FAILURE before the seal: {e}')
+        ok = restore(root, work)
+        txn.step('restored' if ok else 'restore_incomplete')
+        return 1 if ok else 2
+    except Exception as e:                       # an unexpected error: same rule
+        quiet()
+        txn.step('failed', reason=f'{type(e).__name__}: {e}')
+        say(f'FAILURE before the seal: {type(e).__name__}: {e}')
+        ok = restore(root, work)
+        txn.step('restored' if ok else 'restore_incomplete')
+        return 1 if ok else 2
+    registered = set(base) | set(spec['expected_new_registered'])
+    seal_ok, strict, loose, out = verify_classified(root, registered)
+    ok = seal_ok and not strict
+    txn.step('verified' if ok else 'verify_not_clean', output=out.strip(), registered_differ=strict,
+             unregistered_differ=loose)
+    say('registration.py --verify: ' + ' | '.join(out.strip().splitlines()))
+    if loose:
+        say(f'note: unregistered files changed during the transaction (named at the next seal): {loose[:10]}')
+    if strict:
+        say(f'registered files differ from the sealed manifest: {strict[:10]}')
+    for n in ORDER:
+        say(f'entry {n}: {len(entries[n].splitlines())} lines ({work / f"entry_{n}.md"})')
+    return 0 if ok else 3
+
+
+# ------------------------------------------------------------------------------------------------ post-check
+
+def postcheck(root, spec, work):
+    P1, PD = drivers(root)
+    probs = []
+    rc, out, err = run([py(root), '-I', '-B', '-c', STEP32], root)
+    say(f'step 3.2 on the sealed manifest: {out.strip() or err.strip()[-300:]}')
+    if out.strip() != 'OK':
+        probs.append(f'step 3.2: {out.strip()[:300]}')
+    seal_ok, strict, loose, out = verify_classified(root, set(baseline_files(root))
+                                                    | set(spec['expected_new_registered']))
+    say('registration.py --verify: ' + ' | '.join(out.strip().splitlines()))
+    if loose:
+        say(f'note: unregistered files differ from the sealed manifest (named at the next seal): {loose[:10]}')
+    if not seal_ok or strict:
+        probs.append(f'registration.py --verify: seal lines OK {seal_ok}; registered files differing: {strict[:10]}')
+    rc, out, err = run([py(root), '-I', '-B', str(root / PHASE_DRIVER), '--dry-run'], root, 3600)
+    (work / 'phase_driver_dry_run.txt').write_text(out + ('\n--- stderr\n' + err if err else ''), encoding='utf-8')
+    gates = [ln for ln in out.splitlines() if re.match(r'^  G\d ', ln)]
+    say(f'phase_driver.py --dry-run (exit {rc}; full output {work / "phase_driver_dry_run.txt"}):')
+    for ln in gates:
+        say('  ' + ln)
+    decision = (root / PD_DIR / 'D1_DECISION.json').exists()
+    if rc != 0 or 'WOULD ALERT' in out:
+        probs.append(f'phase_driver.py --dry-run exit {rc}')
+    if not any(re.match(r'^  G0\s+passed\b', ln) for ln in gates):
+        probs.append('phase_driver.py --dry-run: G0 is not passed')
+    if not decision and not any(re.match(r'^  G1\s+waiting\b.*D1_DECISION\.json', ln) for ln in gates):
+        probs.append('phase_driver.py --dry-run: G1 does not wait for D1_DECISION.json')
+    cfg = PD.Cfg(PD.parse_args(['--root', str(root), '--dry-run']))
+    view = PD.phase_view(cfg)
+    runs = [r[0] for r in PD.stress_runs(view)]
+    cmd = cfg.stress_cmd('s2_relative', ['<network of the RL freeze>']) if 's2_relative' in runs else []
+    say(f'G5 plan (phase_driver.stress_runs on the sealed PROTOCOL.md): {runs}; A7b read from the A7 text: '
+        f'{PD.a7_supplementary(view)}; s2_relative: {" ".join(cmd[3:])}')
+    if runs != ['s3', 's2', 's2_relative', 's1'] or '--grid relative' not in ' '.join(cmd):
+        probs.append('the G5 plan holds no `s2 --grid relative`')
+    rc, out, err = run(tool_cmd(root, CHECK, []), root, 600)
+    (work / 'check_drafts_after.txt').write_text(out + err, encoding='utf-8')
+    say(f'check_drafts.py on the new PROTOCOL.md (exit {rc}):')
+    for ln in out.strip().splitlines():
+        say('  ' + ln)
+    if rc != 0 or 'all checks passed' not in out:
+        probs.append(f'check_drafts.py exit {rc}')
+    text = (root / PROTOCOL).read_text(encoding='utf-8')
+    base, man = baseline_files(root), manifest_map(root / MANIFEST)
+    before = (work / 'PROTOCOL.sealed.md').read_text(encoding='utf-8')
+    got = registered_by(before, text, man, base)
+    say(f'files registered by this transaction (manifest files outside the P1 baseline whose sha256 the sealed '
+        f'PROTOCOL.md cites and the earlier one did not): {len(got)}')
+    if got != spec['expected_new_registered']:
+        probs.append(f'registered files {len(got)} != expected {len(spec["expected_new_registered"])}')
+    i = text.index('Status (Amendment A3):')
+    para = text[i:text.index('\n\n', i)]
+    (work / 'sec_4_1_status_paragraph.txt').write_text(para + '\n', encoding='utf-8')
+    say('Sec. 4.1 status paragraph (the text the fifth A10 in-place "old" is taken from, APPLY_PLAN2.md Sec. 4 '
+        'step 1):')
+    for ln in para.splitlines():
+        say('  | ' + ln)
+    return probs
+
+
+# ------------------------------------------------------------------------------------------------ main
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
+    ap.add_argument('command', choices=('precheck', 'locked', 'postcheck', 'restore'))
+    ap.add_argument('--root', default=str(REAL_ROOT))
+    ap.add_argument('--work', help='transaction directory (the copies, the filled entries, the journal)')
+    ap.add_argument('--datetime', help="'YYYY-MM-DD HH:MM' (Beijing time), the one time stamp of the five entries")
+    a = ap.parse_args()
+    root = Path(a.root).resolve()
+    if os.environ.get(FAULT_ENV) and (root == REAL_ROOT or os.environ[FAULT_ENV] not in FAULTS):
+        say(f'STOP: {FAULT_ENV} is a simulation hook; refused here')
+        return 1
+    work = Path(a.work).resolve() if a.work else None
+    try:
+        spec = spec_load()
+        if a.command == 'precheck':
+            work = work or Path(f'/tmp/amend_step3_precheck_{os.getpid()}')
+            work.mkdir(parents=True, exist_ok=True)
+            probs = precheck(root, spec, work)
+            for p in probs:
+                say(f'PROBLEM: {p}')
+            say(f'precheck: {"passed" if not probs else f"{len(probs)} problem(s)"} (dry files in {work})')
+            return 0 if not probs else 1
+        if work is None or not work.is_dir():
+            raise Stop('--work must name an existing directory')
+        if a.command == 'restore':
+            j = json.loads((work / 'journal.json').read_text(encoding='utf-8'))
+            if j.get('step') in ('sealed', 'verified', 'verify_not_clean'):
+                raise Stop(f'the journal says {j.get("step")!r}: the transaction was sealed; nothing is restored')
+            return 0 if restore(root, work) else 2
+        if a.command == 'locked':
+            if not a.datetime or not re.fullmatch(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}', a.datetime):
+                raise Stop("--datetime 'YYYY-MM-DD HH:MM' is required")
+            return locked(root, spec, work, a.datetime)
+        probs = postcheck(root, spec, work)
+        for p in probs:
+            say(f'PROBLEM: {p}')
+        say(f'postcheck: {"passed" if not probs else f"{len(probs)} problem(s)"}')
+        return 0 if not probs else 4
+    except Stop as e:
+        say(f'STOP: {e}')
+        return 1
+
+
+if __name__ == '__main__':
+    sys.exit(main())

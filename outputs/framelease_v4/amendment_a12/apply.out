@@ -1,0 +1,63 @@
+apply_locked: copies of the sealed files and of both baselines in outputs/framelease_v4/amendment_a12/attempt_20261115T233047_665698
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /home/kang/Desktop/DAC/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3
+manifest difference: new [] / left [] / changed []
+composed PROTOCOL.md sha256 3fa337c1ec2c48b18a43bfa9f27ebec5f858103816a6af853b6b3e2ee7fcf0a4
+registration --seal -> 0 | sealed: PROTOCOL.md 3fa337c1ec2c48b18a43bfa9f27ebec5f858103816a6af853b6b3e2ee7fcf0a4, manifest 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+PROTOCOL 3fa337c1ec2c48b18a43bfa9f27ebec5f858103816a6af853b6b3e2ee7fcf0a4 MANIFEST 0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3 221 files; newly cited manifest files: []
+**Amendment A12, 2026-11-15 23:30 (Beijing time): cut of the test blocks P4-P6 by the user's decision (Sec. 10.2): Table
+I runs on 14 of the 44 test routes and every other block on its first routes among those 14; no criterion, arm, job
+line or analysis rule changes.**
+* Decision. On 2026-11-15 at about 23:05 the user asked to shorten the test phase so that the results and a complete
+  paper exist in about 11 to 12 hours, by reducing every block rather than whole tiers, and chose 14 routes for
+  Table I. The measured rate at the decision was 28 of the 308 Table I jobs final after 2 h 20 min (one of them a
+  1500 s timeout twice), so the registered P4-P6 plan of 632 jobs needed about three days. The cut depends on run
+  time only. No test-route outcome was examined: the runner's END lines were read for job health only and never
+  summarized (Sec. 9.11).
+* Departure from Sec. 10.2. Sec. 10.2 cuts tiers from the bottom and never cuts tier 3 (Table I). This cut reduces
+  every tier, Table I included, by the user's decision. The registered analysis applies unchanged to the jobs that
+  remain; the paper reports every result with its number of routes and labels the reduced blocks.
+* Rule. S = the first 14 routes of the registered order of `outputs/framelease_v4/test_jobs/FULL/b11_ti_main.jsonl`:
+  26458, 2790, 23658, 2390, 2084, 2204, 2115, 2050, 3248, 17563, 3464, 2509, 2286, 3561. Each other block keeps its
+  first k routes, in its own registered order, among the routes of S. The kept job lines are byte-identical to the
+  registered ones.
+
+  | block | routes kept | jobs kept / registered |
+  |---|---|---|
+  | `b11_ti_main` (tier 3, Table I) | the 14 routes of S | 98 / 308 |
+  | `b12_f3_k` (tier 4, Fig. 3, kappa 1.5 and 2.0) | 3248, 2390 | 16 / 176 |
+  | `b13_a_lease` (tier 5, Table II-A lease panel) | 2050, 2204, 2286 | 3 / 22 |
+  | `b14_a_rl` (tier 5, Table II-A RL panel) | 3248, 2509 | 4 / 44 |
+  | `b15_s_seed12` (tier 6, seed-12 replicates) | 2050 | 4 / 60 |
+  | `b16_s_risk` (tier 6, `fl_risk`) | 2286, 3248 | 2 / 22 |
+
+  127 of the 632 registered jobs remain; the other 505 never start and carry the outcome "cut" in the analysis-freeze
+  record. The plan with the kept routes per block: `outputs/framelease_v4/cut_20261115T231415/CUT_PLAN.json`
+  (`9285400b7af3b8f62f98f62d2cdcea31e68a2ab3a5c3b5e35692b99671af78e3`).
+* Job status at the cutoff. 29 jobs of `b11_ti_main` final (28 ok; `v4p4_fl_original_k1.0_s11_r23658` timeout after
+  two attempts), the last of them `v4p4_fl_original_k1.0_s11_r2084`, which was running when the cut was decided; all
+  of them on routes of S. No job of tiers 4-6 had started.
+* Execution. The registered job files in `outputs/framelease_v4/test_jobs/FULL/` stay unchanged (their sha256 as the
+  G6 entry cites). The runner of `outputs/framelease_v4/queue_p4` stopped after its running job and runs the reduced
+  files, each a byte-identical subset of the registered file, kept in `outputs/framelease_v4/cut_20261115T231415/`:
+  `jobs_reduced/b11_ti_main.jsonl` (`f2ca9523bebe100ea7f81c94705c85f8529b3efc6deb3bc8709548b6165c4b76`),
+  `b12_f3_k.jsonl` (`f109356426295d766cbdf2b16ecb7e46c1a34fbd1e5e7fa2f54595198e0c1e91`),
+  `b13_a_lease.jsonl` (`d8553d2fad38ebf93245315497ab7ea92e500d70dd60812ecb8b966eab0e0b2c`),
+  `b14_a_rl.jsonl` (`29b3040630d1597818486db8f5767af18e3ceea155308d56e45ddd64c9a97508`),
+  `b15_s_seed12.jsonl` (`bed17136118812267838bd8d869460d43db9d366c34ab37d465c0e7f7b166dd5`) and
+  `b16_s_risk.jsonl` (`c1bb5723ab8ab2a0771a1579b0c0b427c8a98bb909a1805608b356a19593bc57`); the
+  registered copies that `jobs.d` held are kept in `jobs_registered/`. The phase driver is stopped, because its G7
+  requires the registered copies in `jobs.d`. When every kept job is final, the coordinating session carries out G8
+  with the registered tools: `aggregate_v4.py --queue outputs/framelease_v4/queue_p4 --specs
+  outputs/framelease_v4/test_jobs/FULL --write-freeze-record <record> --cut-amendment A12` (the job lines that never
+  started are recorded as cut), the record entered by its sha256 as a dated Sec. 13 entry, then the registered
+  analysis (Amendments A3 and A10).
+* Later runs. The cut jobs keep their lines in the registered files. Running them later is a new amendment with its
+  own freeze and analysis; the analysis under this cut stays as frozen.
+* Manifest and seal after this amendment: `MANIFEST.sha256`, 221 files, sha256
+  `0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3`, sealed with this entry.
+
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

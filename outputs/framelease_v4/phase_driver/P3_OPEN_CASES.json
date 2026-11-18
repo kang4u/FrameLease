@@ -1,0 +1,7 @@
+{
+ "schema": "framelease_v4.p3_open_cases/1",
+ "options": {
+  "distill_shortfall": "deploy_best"
+ },
+ "rationale": "Open case GAP_AUDIT Sec. 6 item 5 (b): the distillation agreement of the selected FQI policy (fqi_K128_leaf40_beta0_d1; FQE mean Delta 42.0, 95% route-bootstrap interval [28.9, 56.9] over 44 routes) is 0.930 on 13,051 states after the registered 64x64 retry, below the 0.98 target. The audit's registered default applies: the best try is deployed and its agreement is reported. The deployed network acts only inside the feasible set of the shield and under the budgeted call with deterministic fallback, so the timing and commit guarantees are unchanged; the FQE estimate refers to the FQI policy, and the agreement 0.930 is reported with the RL results (Table II-A, RL panel) as the distance between the deployed network and that policy. The RL freeze records the deviation. Decided by the coordinating session under the user's delegation of the phase gates (2026-11-14)."
+}

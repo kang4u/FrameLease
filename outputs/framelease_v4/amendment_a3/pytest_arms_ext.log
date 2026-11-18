@@ -1,0 +1,64 @@
+......................................                                   [100%]
+=============================== warnings summary ===============================
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/yapf/yapflib/errors.py:16: PendingDeprecationWarning: lib2to3 package is deprecated and may not be able to parse Python 3.10+
+    from lib2to3.pgen2 import tokenize
+
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+  /home/kang/Desktop/DAC/third_party/UniDriveVLA-linux/third_party/mmcv-1.7.2/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+    warnings.warn(
+
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/deepspeed/accelerator/real_accelerator.py:162: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+    accel_logger.warn(
+
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:66: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._family)
+
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:70: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._size)
+
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:74: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._name)
+
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:78: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._value)
+
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._families)
+
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:92: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._point_sizes)
+
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:102: PyparsingDeprecationWarning: 'setParseAction' deprecated - use 'set_parse_action'
+    ).setParseAction(self._property)
+
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:127: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    self._parser.parseString(pattern)
+
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/fontconfig_pattern.py:134: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    self._parser.resetCache()
+
+framelease_v4/arms_ext/tests/test_agent_ext.py::AgentExtTest::test_extension_agent_runs_an_arms_v4_arm_as_the_pinned_agent
+  /home/kang/Desktop/DAC/.conda-unidrive-linux/lib/python3.10/site-packages/matplotlib/_mathtext.py:30: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+38 passed, 21 warnings in 133.66s (0:02:13)

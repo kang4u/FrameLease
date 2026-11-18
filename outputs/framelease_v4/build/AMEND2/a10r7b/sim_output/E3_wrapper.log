@@ -1,0 +1,8 @@
+apply_locked: exit 1 (output /tmp/A10A11/fix2/sim_tree/treeE/outputs/framelease_v4/amendment_a10/apply.out)
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/fix2/sim_tree/treeE/outputs/framelease_v4/amendment_a10/attempt_20261115T103434_357214
+registration --verify -> 1 | manifest: 1 files differ: [('framelease_v4/arms_ext/tests/test_drift_guard.py', 'fdd3ff374c1cbf54b3f9a009d9d0b662e4ab9ecf61723350a24700aaef142115', 'unreadable (No such file or directory)')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/arms_ext/tests/test_drift_guard.py']
+apply_locked: PROTOCOL.md unchanged; the manifest equals the sealed one
+manifest: 1 files differ: [('framelease_v4/arms_ext/tests/test_drift_guard.py', 'fdd3ff374c1cbf54b3f9a009d9d0b662e4ab9ecf61723350a24700aaef142115', 'unreadable (No such file or directory)')]
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

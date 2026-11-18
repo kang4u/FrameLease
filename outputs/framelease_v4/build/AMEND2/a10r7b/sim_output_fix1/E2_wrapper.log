@@ -1,0 +1,7 @@
+apply_locked: exit 1 (output /tmp/AMEND3/a10r7b/sim_tree/treeE/outputs/framelease_v4/amendment_a10/apply.out)
+registration --verify -> 1 | manifest: 1 files differ: [('framelease_v4/protocol/p3_rl.py', '10a8590d511a9ab4858b87a93ad41e3a2961ad7a17af626bf27aedc781eab94b', '311880f1ed5dd05c0a45933111da070305865f9102f31b13156c3189706138d0')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/protocol/p3_rl.py']
+apply_locked: PROTOCOL.md unchanged; the manifest equals the sealed one
+manifest: 1 files differ: [('framelease_v4/protocol/p3_rl.py', '10a8590d511a9ab4858b87a93ad41e3a2961ad7a17af626bf27aedc781eab94b', '311880f1ed5dd05c0a45933111da070305865f9102f31b13156c3189706138d0')]
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

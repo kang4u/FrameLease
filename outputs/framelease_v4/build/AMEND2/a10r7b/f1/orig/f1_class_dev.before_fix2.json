@@ -1,0 +1,292 @@
+{
+ "schema": "framelease_v4.f1_class/2",
+ "verification": "outputs/framelease_v4/build/R7B/dev/verify_p1_snap_2203_d",
+ "inputs_sha256": {
+  "SHA256SUMS": "33f12f0fbe738df7e1da562c5d0250f5b40a25574d534eae954a26dc74670ff6",
+  "cause_plans.csv": "52953e4c5770a9b4b114c1e5bec1067d4fac8528544c9324e009d9bca87f2096",
+  "differences.csv": "88102ad6f7a9e0a7e660952ebef0e6b099037250b78a4a3946ddd56c4de5e8b9",
+  "runs_recomputed.csv": "3bef875bd7f14deb27df19617ce1914b6626e82e098cd7e89415b07431f1af65",
+  "table1_extra.json": "15b0409126b6e5e5554e6e883a51c92915428bb8dab554bf3939a4166a1bdec2"
+ },
+ "sha256sums": "OK: the four inputs equal SHA256SUMS",
+ "status": "development",
+ "verdict": "DIFFER",
+ "comparisons": 12259,
+ "differences": 136,
+ "differences_by_cause": {
+  "F1": 26,
+  "unclassified": 110
+ },
+ "analysis_differences_by_cause": {
+  "F1": 1
+ },
+ "agree_within_bounds_by_cause": {
+  "F3": 3
+ },
+ "class_F1": {
+  "differences": 26,
+  "analysis_differences": 1,
+  "differences_without_abs_diff": 0,
+  "agree_within_bounds": 0,
+  "runs": 19,
+  "runs_per_arm": {
+   "event_triggered": {
+    "runs": 6,
+    "runs_with_analysis_difference": 0
+   },
+   "fast_only": {
+    "runs": 5,
+    "runs_with_analysis_difference": 1
+   },
+   "fixed_deep": {
+    "runs": 4,
+    "runs_with_analysis_difference": 0
+   },
+   "fl_heuristic": {
+    "runs": 4,
+    "runs_with_analysis_difference": 0
+   }
+  },
+  "run_list": [
+   {
+    "run_dir": "outputs/framelease_v4/tuning/event_s1/event_triggered_s_hb1.0/runs/20261113T235943_5770af97",
+    "arm": "event_triggered",
+    "jobs": [
+     "v4p1_event_triggered_s_hb1.0_k1.0_s11_r2715"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/event_s1/event_triggered_s_hb1.0/runs/20261114T010941_63f09243",
+    "arm": "event_triggered",
+    "jobs": [
+     "v4p1_event_triggered_s_hb1.0_k1.0_s11_r2539"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/event_s1/event_triggered_s_hb2.0/runs/20261113T222111_143b2c1c",
+    "arm": "event_triggered",
+    "jobs": [
+     "v4p1_event_triggered_s_hb2.0_k1.0_s11_r2215"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/event_s1/event_triggered_s_hb2.0/runs/20261113T234635_fb3e4b5f",
+    "arm": "event_triggered",
+    "jobs": [
+     "v4p1_event_triggered_s_hb2.0_k1.0_s11_r3514"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/event_s1/event_triggered_s_hb2.0/runs/20261114T000516_6ac28049",
+    "arm": "event_triggered",
+    "jobs": [
+     "v4p1_event_triggered_s_hb2.0_k1.0_s11_r24211"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/event_s1/event_triggered_v2_hb2.0/runs/20261113T232433_660a5812",
+    "arm": "event_triggered",
+    "jobs": [
+     "v4p1_event_triggered_v2_hb2.0_k1.0_s11_r23659"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d1/runs/20261114T065202_59a638c9",
+    "arm": "fl_heuristic",
+    "jobs": [
+     "v4p1_fl_heuristic_B0_d1_k1.0_s11_r2215"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/heur_s1/fl_heuristic_B0_d4/runs/20261114T070109_2205a815",
+    "arm": "fl_heuristic",
+    "jobs": [
+     "v4p1_fl_heuristic_B0_d4_k1.0_s11_r24211"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/lease_s1/fl_heuristic_E5_d10/runs/20261111T173059_6a975166",
+    "arm": "fl_heuristic",
+    "jobs": [
+     "v4p1_fl_heuristic_E5_d10_k1.0_s11_r2943"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/lease_s2/fl_heuristic_B0_d10/runs/20261114T035754_faca36c0",
+    "arm": "fl_heuristic",
+    "jobs": [
+     "v4p1_fl_heuristic_B0_d10_k1.0_s11_r17569"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/ref/fast_only/runs/20261111T043516_120122c8",
+    "arm": "fast_only",
+    "jobs": [
+     "v4p1_fast_only_k1.0_s11_r3749"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/ref/fast_only/runs/20261111T050432_9e35e12b",
+    "arm": "fast_only",
+    "jobs": [
+     "v4p1_fast_only_k1.0_s11_r3090"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/ref/fast_only/runs/20261111T061323_be1da27b",
+    "arm": "fast_only",
+    "jobs": [
+     "v4p1_fast_only_k1.0_s11_r2844"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/ref/fast_only/runs/20261111T061645_75eb8240",
+    "arm": "fast_only",
+    "jobs": [
+     "v4p1_fast_only_k1.0_s11_r1792"
+    ],
+    "analysis": true
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/ref/fast_only/runs/20261111T162614_df6e5635",
+    "arm": "fast_only",
+    "jobs": [
+     "v4p1_fast_only_k1.0_s11_r4937"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/ref/fixed_deep/runs/20261111T052519_001dd7d5",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p1_fixed_deep_k1.0_s11_r2539"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/ref/fixed_deep/runs/20261111T070017_e7410c9d",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p1_fixed_deep_k1.0_s11_r2215"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/ref/fixed_deep/runs/20261111T161255_2f5b368b",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p1_fixed_deep_k1.0_s11_r2943"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/tuning/ref/fixed_deep/runs/20261111T162849_eb0703d3",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p1_fixed_deep_k1.0_s11_r4937"
+    ],
+    "analysis": false
+   }
+  ],
+  "largest_abs_diff": [
+   {
+    "target": "arm_summary.csv",
+    "metric": "",
+    "column": "realized_invalid_tick_ratio",
+    "abs_diff": 0.0009929390997352044,
+    "key": "fast_only/fast_only/1.0/11.0/P1/ref",
+    "ours": "0.11020683117922499",
+    "theirs": "0.10921389207948978",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_conflict_plans",
+    "abs_diff": 1.0,
+    "key": "v4p1_fixed_deep_k1.0_s11_r2539",
+    "ours": "21",
+    "theirs": "20",
+    "scope": "record",
+    "rows": 2,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_invalid_tick_ratio",
+    "abs_diff": 0.021844660194174775,
+    "key": "v4p1_fast_only_k1.0_s11_r1792",
+    "ours": "0.22815533980582525",
+    "theirs": "0.20631067961165048",
+    "scope": "analysis",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_invalid_ticks",
+    "abs_diff": 9.0,
+    "key": "v4p1_fast_only_k1.0_s11_r1792",
+    "ours": "94",
+    "theirs": "85",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_log_censored_plans",
+    "abs_diff": 10.0,
+    "key": "v4p1_event_triggered_v2_hb2.0_k1.0_s11_r23659",
+    "ours": "6",
+    "theirs": "16",
+    "scope": "record",
+    "rows": 19,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_misses",
+    "abs_diff": 1.0,
+    "key": "v4p1_fixed_deep_k1.0_s11_r2539",
+    "ours": "21",
+    "theirs": "20",
+    "scope": "record",
+    "rows": 2,
+    "rows_without_abs_diff": 0
+   }
+  ],
+  "plans": {
+   "plans": 40,
+   "run_dirs": 19
+  }
+ },
+ "other_causes": {
+  "differences": 110,
+  "by_cause": {
+   "unclassified": 110
+  },
+  "analysis_differences": 0
+ },
+ "outcome": "verification failure",
+ "release": "not final"
+}

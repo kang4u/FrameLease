@@ -1,0 +1,125 @@
+{
+ "blocks": [
+  {
+   "block": "ti_main",
+   "budget_block": "TI-main",
+   "check": "outputs/framelease_v4/test_jobs/FULL/b11_ti_main.check.json",
+   "check_sha256": "8530a88961e9fe838c5a84af72be9345f65fd6e5b144779442a789898978de51",
+   "expected_runs_sec_10_1": 308,
+   "job_file": "outputs/framelease_v4/test_jobs/FULL/b11_ti_main.jsonl",
+   "job_file_sha256": "54e551df44f30a02277e91849f1e40390cd77ffca7e59256edc98b3f5cd4a6df",
+   "n_lines": 308,
+   "no": 11,
+   "phase": "P4",
+   "skipped": null,
+   "stage_spec": "outputs/framelease_v4/test_jobs/FULL/b11_ti_main.stage.json",
+   "stage_spec_sha256": "0235c2920f621618bcc8c722408529c410abce1c7806fca755523b850c45f057",
+   "tier": 3
+  },
+  {
+   "block": "f3_k",
+   "budget_block": "F3-k",
+   "check": "outputs/framelease_v4/test_jobs/FULL/b12_f3_k.check.json",
+   "check_sha256": "02fbb38ff50a7b6a6f2577b5485895f357b4d9b8d9515074dc9c82a9186f1332",
+   "expected_runs_sec_10_1": 176,
+   "job_file": "outputs/framelease_v4/test_jobs/FULL/b12_f3_k.jsonl",
+   "job_file_sha256": "8ba8a4e5f6874860f9fefae81d836ccbdd297ac6a801a67663d6a5322507311b",
+   "n_lines": 176,
+   "no": 12,
+   "phase": "P5",
+   "skipped": null,
+   "stage_spec": "outputs/framelease_v4/test_jobs/FULL/b12_f3_k.stage.json",
+   "stage_spec_sha256": "2ebdf8916777f1ade643d2802b958f0baf4ee6a1801252924fdfb47b8aabd0f2",
+   "tier": 4
+  },
+  {
+   "block": "a_lease",
+   "budget_block": "A-lease",
+   "check": "outputs/framelease_v4/test_jobs/FULL/b13_a_lease.check.json",
+   "check_sha256": "cff3c46a8d2f3930b5d659c84bdf9004d774330ad032d6856d46e59374ac8e69",
+   "expected_runs_sec_10_1": 22,
+   "job_file": "outputs/framelease_v4/test_jobs/FULL/b13_a_lease.jsonl",
+   "job_file_sha256": "6b906bc220d74fdf8fb5bfce287465e608fd378b22869af6d188ec411d37bd2a",
+   "n_lines": 22,
+   "no": 13,
+   "phase": "P6",
+   "skipped": null,
+   "stage_spec": "outputs/framelease_v4/test_jobs/FULL/b13_a_lease.stage.json",
+   "stage_spec_sha256": "5c2674bb9c4b80281f41ebe5ef6c4138d0207f19c244224b2fa51fbd11c6fdf1",
+   "tier": 5
+  },
+  {
+   "block": "a_rl",
+   "budget_block": "A-rl",
+   "check": "outputs/framelease_v4/test_jobs/FULL/b14_a_rl.check.json",
+   "check_sha256": "fb1c14ff34d28f4f1a0fd5f87f62e0544c01e1fb7230ddfca074ad4fd4ca856c",
+   "expected_runs_sec_10_1": 44,
+   "job_file": "outputs/framelease_v4/test_jobs/FULL/b14_a_rl.jsonl",
+   "job_file_sha256": "a73491e47ab5cb3fcba868a0e5e6bf7f34c5ad6a09ea3fde8cd11d18ef623e31",
+   "n_lines": 44,
+   "no": 14,
+   "phase": "P6",
+   "skipped": null,
+   "stage_spec": "outputs/framelease_v4/test_jobs/FULL/b14_a_rl.stage.json",
+   "stage_spec_sha256": "4745ec462908886a0d840477310bb550dbb3aba93218088e6525ff9ddf44e41f",
+   "tier": 5
+  },
+  {
+   "block": "s_seed12",
+   "budget_block": "S-seed12",
+   "check": "outputs/framelease_v4/test_jobs/FULL/b15_s_seed12.check.json",
+   "check_sha256": "5a30e90fd059bb4329e8b584cc8f37d46a5aa8477a375eaeb05894c5975d9562",
+   "expected_runs_sec_10_1": 60,
+   "job_file": "outputs/framelease_v4/test_jobs/FULL/b15_s_seed12.jsonl",
+   "job_file_sha256": "bd77e5ed172bc834b63a4fa188cae97f92047f8072a45b92e738aad52cffd207",
+   "n_lines": 60,
+   "no": 15,
+   "phase": "P6",
+   "skipped": null,
+   "stage_spec": "outputs/framelease_v4/test_jobs/FULL/b15_s_seed12.stage.json",
+   "stage_spec_sha256": "a407ac93108e436b2e5bcd519ad199e0fa7c8fc52b75b3037b3d4327c28d87a1",
+   "tier": 6
+  },
+  {
+   "block": "s_risk",
+   "budget_block": "S-risk",
+   "check": "outputs/framelease_v4/test_jobs/FULL/b16_s_risk.check.json",
+   "check_sha256": "cc02d2f7c40be4b9c0a9961e2ab393b49d8665783fb4e95b4a9c79bc0d733ca4",
+   "expected_runs_sec_10_1": 22,
+   "job_file": "outputs/framelease_v4/test_jobs/FULL/b16_s_risk.jsonl",
+   "job_file_sha256": "83fe874f000340d6ee15509c35c7829bd03a6612a75a181e82c0b26ab36a156b",
+   "n_lines": 22,
+   "no": 16,
+   "phase": "P6",
+   "skipped": null,
+   "stage_spec": "outputs/framelease_v4/test_jobs/FULL/b16_s_risk.stage.json",
+   "stage_spec_sha256": "cbd99ef47c9d9a93e197a67d6cdef05938ecefc52347bfce59b4237bd8ab42b8",
+   "tier": 6
+  }
+ ],
+ "cross_block_problems": [],
+ "enqueue": "after the test freeze: copy the job files, in name order, into outputs/framelease_v4/queue_p4/jobs.d/ (one queue for tiers 3-6; a cut takes the bottom tiers first, PROTOCOL Sec. 10.2)",
+ "n_lines": 632,
+ "not_for_launch_before": "the test freeze (PROTOCOL Secs. 3.3 rule 4 and 8.1): selection.json, the RL freeze and these job files with their sha256 and pins entered in PROTOCOL Sec. 13.2 and sealed",
+ "protocol": {
+  "path": "framelease_v4/PROTOCOL.md",
+  "seal": {
+   "protocol_sha256": "0f4ee590ab1182fa3f642c628377772236cfd8b7560987aa1b44271bde624039",
+   "sealed": true,
+   "sealed_sha256": "0f4ee590ab1182fa3f642c628377772236cfd8b7560987aa1b44271bde624039"
+  },
+  "sha256": "0f4ee590ab1182fa3f642c628377772236cfd8b7560987aa1b44271bde624039"
+ },
+ "queue": "outputs/framelease_v4/queue_p4",
+ "rl_freeze": {
+  "path": "outputs/framelease_v4/rl_freeze/rl_freeze.json",
+  "sha256": "a9e08c1931ea8cc6ab0f74111fa8bfb6a0b043ed44606fe0e7657c2d254db31d"
+ },
+ "schema": "framelease_v4.test_jobs_index/1",
+ "script_sha256": "2ea6899d07b990f244d3481366eea2dec02e24cbb3af4944049ac78b36639151",
+ "tuning_freeze": {
+  "path": "outputs/framelease_v4/tuning/selection.json",
+  "sha256": "652fcbdbf0a6adb498aa0691fcaaffb097fcd680b4bf40235a28639aed69b930"
+ },
+ "variant": "FULL"
+}

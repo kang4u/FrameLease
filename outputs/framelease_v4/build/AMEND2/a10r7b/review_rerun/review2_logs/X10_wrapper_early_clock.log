@@ -1,0 +1,12 @@
+(exit 1, 9.6 s)
+apply_locked: exit 1 (output /tmp/A10A11/applier/treeX10/outputs/framelease_v4/amendment_a10/apply.out)
+
+--- apply.out
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeX10/outputs/framelease_v4/amendment_a10/attempt_20261115T105221_366477
+inject: clock fixed at 2026-11-15 06:30 +0800
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: the time 2026-11-15 06:30 is earlier than the last stamp of Sec. 13.2 (2026-11-15 06:43): check the clock
+apply_locked: PROTOCOL.md unchanged; the manifest equals the sealed one
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

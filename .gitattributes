@@ -1,0 +1,3 @@
+# Store every file byte-exact: the registration manifest and the output lists cite sha256 of the exact bytes,
+# including files with CRLF line ends.
+* -text

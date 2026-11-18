@@ -1,0 +1,25 @@
+{
+ "rc": [
+  0,
+  0
+ ],
+ "newly": [
+  "['framelease_v4/analysis/analyze_v4.py', 'framelease_v4/analysis/figures_tables.py', 'framelease_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_analyze_v4.py', 'framelease_v4/analysis/tests/test_figures_tables.py', 'framelease_v4/analysis/tests/test_prop1_coverage.py', 'framelease_v4/analysis/tests/test_verify_independent.py', 'framelease_v4/analysis/verify_independent.py']",
+  "['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']"
+ ],
+ "verify": "manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK",
+ "problems": [],
+ "owners": {
+  "framelease_v4/analysis/analyze_v4.py": "A10",
+  "framelease_v4/analysis/prop1_coverage.py": "A10",
+  "framelease_v4/analysis/figures_tables.py": "A10",
+  "framelease_v4/analysis/verify_independent.py": "A10",
+  "framelease_v4/analysis/tests/test_analyze_v4.py": "A10",
+  "framelease_v4/analysis/tests/test_prop1_coverage.py": "A10",
+  "framelease_v4/analysis/tests/test_figures_tables.py": "A10",
+  "framelease_v4/analysis/tests/test_verify_independent.py": "A10",
+  "framelease_v4/analysis/verify_table1_extra.py": "A11",
+  "framelease_v4/analysis/tests/test_verify_table1_extra.py": "A11"
+ },
+ "G8_waits": []
+}

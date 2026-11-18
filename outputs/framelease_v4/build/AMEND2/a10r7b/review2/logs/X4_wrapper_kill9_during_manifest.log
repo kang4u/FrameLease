@@ -1,0 +1,13 @@
+(exit 137, 13.7 s)
+apply_locked: exit 137 (output /tmp/A10A11/applier/treeX4/outputs/framelease_v4/amendment_a10/apply.out)
+bash: 第 25 行： 344102 已杀死                  $X "$PY" -u -I -B "$APPLIER" "$SPEC" --apply >> "$OUT/apply.out" 2>&1
+
+--- apply.out
+apply_locked: copies of the sealed files in /tmp/A10A11/applier/treeX4/outputs/framelease_v4/amendment_a10/attempt_20261115T100439
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+inject: SIGKILL 1.0 s after registration.py --write-manifest started
+apply_locked: waited 3 s for a registration.py the applier started
+apply_locked: PROTOCOL.md unchanged; RESTORED the sealed manifest
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

@@ -1,0 +1,21 @@
+..............                                                         [100%]
+==================================== PASSES ====================================
+_______________________ HandRecomputation.test_two_runs ________________________
+----------------------------- Captured stdout call -----------------------------
+uu
+=========================== short test summary info ============================
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::BoxDistance::test_random_rectangles_match_shapely
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::Injection::test_analysis_output_injection_is_reported
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::Injection::test_runs_csv_injection_is_reported
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::HandRecomputation::test_two_runs
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::ContinuousV::test_builder_fixture_H_equal_grid_vsuf_is_a_miss
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::ContinuousV::test_builder_fixture_eir_is_unchanged
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::ContinuousV::test_smoke_fl_heuristic_lease_cap_conflicts_are_misses
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::LeaseFootprint::test_e5_r1792_knot_conflict
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::LeaseFootprint::test_ego_box_is_the_lease_box_not_the_log_header
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::LeaseFootprint::test_knot_heading_is_the_central_difference
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::Independence::test_no_shared_block_with_the_actor_log_decoder
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::Guard::test_analysis_json_route_table_and_cells_are_guarded
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::Guard::test_registered_test_route_run_is_refused
+PASSED outputs/framelease_v4/build/R7B/review/test_review_r7b.py::Guard::test_run_directory_without_a_route_is_refused
+14 passed, 2 subtests passed in 3.96s

@@ -1,0 +1,63 @@
+fake tuning freeze outputs/framelease_v4/tuning/selection.json sha256 46ad14b3cd965a5732a61b54cc96cb7dfafa0846c9f28928ce6adb8fb3b66273
+2026-11-15T04:59:11+0800 ran (3.0 s, exit 0): /tmp/AMEND3_review/tree/.conda-unidrive-linux/bin/python -I -B -c '
+import hashlib, json, os, sys
+root, man = sys.argv[1], sys.argv[2]
+n, differ = 0, []
+with open(man, encoding='"'"'utf-8'"'"') as fh:
+    for line in fh:
+        line = line.rstrip('"'"'\n'"'"')
+        if '"'"'  '"'"' not in line:
+            continue
+        sha, rel = line.split('"'"'  '"'"', 1)
+        n += 1
+        p = rel if os.path.isabs(rel) else os.path.join(root, rel)
+        try:
+            h = hashlib.sha256()
+            with open(p, '"'"'rb'"'"') as f:
+                for b in iter(lambda: f.read(1 << 20), b'"'"''"'"'):
+                    h.update(b)
+            got = h.hexdigest()
+        except OSError as e:
+            got = '"'"'unreadable (%s)'"'"' % (e.strerror,)
+        if got != sha:
+            differ.append([rel, sha, got])
+print(json.dumps({'"'"'entries'"'"': n, '"'"'differ'"'"': differ}))
+' /tmp/AMEND3_review/tree /tmp/AMEND3_review/tree/outputs/framelease_v4/p1_driver/manifest_sealed.sha256
+2026-11-15T04:59:14+0800 ran (3.0 s, exit 0): /tmp/AMEND3_review/tree/.conda-unidrive-linux/bin/python -I -B framelease_v4/protocol/registration.py --write-manifest --force
+2026-11-15T04:59:14+0800 Tuning freeze: 3 files are new in the manifest: ['outputs/framelease_v4/p1_jobs/FULL/b09_age_s2.check.json', 'outputs/framelease_v4/p1_jobs/FULL/b09_age_s2.jsonl', 'outputs/framelease_v4/p1_jobs/FULL/b09_age_s2.stage.json']
+2026-11-15T04:59:14+0800 ran (0.0 s, exit 0): /tmp/AMEND3_review/tree/.conda-unidrive-linux/bin/python -I -B framelease_v4/protocol/registration.py --seal
+2026-11-15T04:59:17+0800 ran (3.0 s, exit 0): /tmp/AMEND3_review/tree/.conda-unidrive-linux/bin/python -I -B framelease_v4/protocol/registration.py --verify
+2026-11-15T04:59:17+0800 recorded Tuning freeze in PROTOCOL.md Sec. 13.2 (sha256 46ad14b3cd965a5732a61b54cc96cb7dfafa0846c9f28928ce6adb8fb3b66273); manifest 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033 (221 files), PROTOCOL.md e72c4c44a1c6d16a9a1dde3b83acbb30d12ba113e717f75b364032863bd7ce4b; sealed and verified
+Tuning freeze entry: written
+fake D1 summary outputs/framelease_v4/tuning/d1/FULL_d1_summary.json sha256 53d8c97a185d52870358e3341d6e698dcf8fe136425aa7bd1eb0f9b065923cb2; outputs/framelease_v4/tuning/d1/FULL_d1_summary.md sha256 eedae8cb0c9bfafe8dfd3faaebd9762716754e1e86eedb3041cd2ed71611407d
+2026-11-15T04:59:20+0800 ran (3.0 s, exit 0): /tmp/AMEND3_review/tree/.conda-unidrive-linux/bin/python -I -B -c '
+import hashlib, json, os, sys
+root, man = sys.argv[1], sys.argv[2]
+n, differ = 0, []
+with open(man, encoding='"'"'utf-8'"'"') as fh:
+    for line in fh:
+        line = line.rstrip('"'"'\n'"'"')
+        if '"'"'  '"'"' not in line:
+            continue
+        sha, rel = line.split('"'"'  '"'"', 1)
+        n += 1
+        p = rel if os.path.isabs(rel) else os.path.join(root, rel)
+        try:
+            h = hashlib.sha256()
+            with open(p, '"'"'rb'"'"') as f:
+                for b in iter(lambda: f.read(1 << 20), b'"'"''"'"'):
+                    h.update(b)
+            got = h.hexdigest()
+        except OSError as e:
+            got = '"'"'unreadable (%s)'"'"' % (e.strerror,)
+        if got != sha:
+            differ.append([rel, sha, got])
+print(json.dumps({'"'"'entries'"'"': n, '"'"'differ'"'"': differ}))
+' /tmp/AMEND3_review/tree /tmp/AMEND3_review/tree/outputs/framelease_v4/p1_driver/manifest_sealed.sha256
+2026-11-15T04:59:23+0800 ran (3.0 s, exit 0): /tmp/AMEND3_review/tree/.conda-unidrive-linux/bin/python -I -B framelease_v4/protocol/registration.py --write-manifest --force
+2026-11-15T04:59:23+0800 ran (0.0 s, exit 0): /tmp/AMEND3_review/tree/.conda-unidrive-linux/bin/python -I -B framelease_v4/protocol/registration.py --seal
+2026-11-15T04:59:26+0800 ran (3.0 s, exit 0): /tmp/AMEND3_review/tree/.conda-unidrive-linux/bin/python -I -B framelease_v4/protocol/registration.py --verify
+2026-11-15T04:59:26+0800 recorded D1 summary in PROTOCOL.md Sec. 13.2 (sha256 53d8c97a185d52870358e3341d6e698dcf8fe136425aa7bd1eb0f9b065923cb2); manifest 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033 (221 files), PROTOCOL.md 216b5d90a4d321b4cf205b4685e1400bd82c28b2da683479323264a02a1e21a3; sealed and verified
+D1 summary entry: written
+2026-11-15T04:59:26+0800 P1 DONE: outputs/framelease_v4/p1_driver/P1_DONE.json written; D1 goes to the user; the driver stops
+P1_DONE.json written; driver.lock names pid 4000000 (not alive)

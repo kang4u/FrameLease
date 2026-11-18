@@ -1,0 +1,1512 @@
+{
+ "schema": "framelease_v4.protocol.route_split/1",
+ "routes_xml": "third_party/UniDriveVLA-linux/Bench2Drive/bench2drive/leaderboard/data/bench2drive220.xml",
+ "routes_xml_sha256": "ffff24b3a2b8584632730fb42de7cb6036af780c3952cfef08ee8cf96a712f88",
+ "test_source": "outputs/framelease_v2/closed_loop_matrix/routes.json",
+ "test_source_sha256": "09f581de9828bae882d6ca29e7d61cbe70a49ef12a684bc1b8469e717fac73f2",
+ "rules": {
+  "test": "the 44 routes of outputs/framelease_v2/closed_loop_matrix/routes.json (lowest route id of each scenario type; dev route 2086 excluded there, which did not change the selection)",
+  "training_pool": "the second-lowest route id of each scenario type (numeric order); disjoint from test",
+  "test_subsets": "E = index % 2 == 0 (22), C = index % 4 == 0 (11), R = index % 3 == 0 (15) (v2 definitions)",
+  "training_subsets": "index = position in the id-sorted training list; T22a = index % 4 == 0 (11), T22b = index % 4 == 2 (11), T22 = T22a + T22b (tuning), RL = all 44"
+ },
+ "test": [
+  {
+   "index": 0,
+   "route_id": "1711",
+   "scenario_type": "ParkingCutIn",
+   "town": "Town12",
+   "length_m": 134.0,
+   "subsets": {
+    "E": true,
+    "C": true,
+    "R": true
+   }
+  },
+  {
+   "index": 1,
+   "route_id": "1773",
+   "scenario_type": "ParkedObstacle",
+   "town": "Town12",
+   "length_m": 134.0,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 2,
+   "route_id": "1790",
+   "scenario_type": "HazardAtSideLane",
+   "town": "Town12",
+   "length_m": 120.0,
+   "subsets": {
+    "E": true,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 3,
+   "route_id": "1825",
+   "scenario_type": "ConstructionObstacleTwoWays",
+   "town": "Town12",
+   "length_m": 134.0,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": true
+   }
+  },
+  {
+   "index": 4,
+   "route_id": "1852",
+   "scenario_type": "AccidentTwoWays",
+   "town": "Town12",
+   "length_m": 134.0,
+   "subsets": {
+    "E": true,
+    "C": true,
+    "R": false
+   }
+  },
+  {
+   "index": 5,
+   "route_id": "1956",
+   "scenario_type": "ParkingExit",
+   "town": "Town12",
+   "length_m": 134.0,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 6,
+   "route_id": "2050",
+   "scenario_type": "SignalizedJunctionRightTurn",
+   "town": "Town12",
+   "length_m": 74.0,
+   "subsets": {
+    "E": true,
+    "C": false,
+    "R": true
+   }
+  },
+  {
+   "index": 7,
+   "route_id": "2082",
+   "scenario_type": "OppositeVehicleRunningRedLight",
+   "town": "Town12",
+   "length_m": 78.4,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 8,
+   "route_id": "2084",
+   "scenario_type": "NonSignalizedJunctionLeftTurn",
+   "town": "Town12",
+   "length_m": 73.8,
+   "subsets": {
+    "E": true,
+    "C": true,
+    "R": false
+   }
+  },
+  {
+   "index": 9,
+   "route_id": "2115",
+   "scenario_type": "NonSignalizedJunctionRightTurn",
+   "town": "Town12",
+   "length_m": 68.3,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": true
+   }
+  },
+  {
+   "index": 10,
+   "route_id": "2127",
+   "scenario_type": "OppositeVehicleTakingPriority",
+   "town": "Town12",
+   "length_m": 72.8,
+   "subsets": {
+    "E": true,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 11,
+   "route_id": "2144",
+   "scenario_type": "VehicleTurningRoute",
+   "town": "Town12",
+   "length_m": 71.2,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 12,
+   "route_id": "2164",
+   "scenario_type": "VehicleTurningRoutePedestrian",
+   "town": "Town12",
+   "length_m": 69.9,
+   "subsets": {
+    "E": true,
+    "C": true,
+    "R": true
+   }
+  },
+  {
+   "index": 13,
+   "route_id": "2201",
+   "scenario_type": "EnterActorFlow",
+   "town": "Town12",
+   "length_m": 78.5,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 14,
+   "route_id": "2204",
+   "scenario_type": "BlockedIntersection",
+   "town": "Town12",
+   "length_m": 69.8,
+   "subsets": {
+    "E": true,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 15,
+   "route_id": "2273",
+   "scenario_type": "MergerIntoSlowTraffic",
+   "town": "Town12",
+   "length_m": 138.4,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": true
+   }
+  },
+  {
+   "index": 16,
+   "route_id": "2286",
+   "scenario_type": "HighwayCutIn",
+   "town": "Town12",
+   "length_m": 106.1,
+   "subsets": {
+    "E": true,
+    "C": true,
+    "R": false
+   }
+  },
+  {
+   "index": 17,
+   "route_id": "2373",
+   "scenario_type": "VanillaSignalizedTurnEncounterRedLight",
+   "town": "Town12",
+   "length_m": 60.8,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 18,
+   "route_id": "2390",
+   "scenario_type": "VanillaNonSignalizedTurn",
+   "town": "Town12",
+   "length_m": 59.7,
+   "subsets": {
+    "E": true,
+    "C": false,
+    "R": true
+   }
+  },
+  {
+   "index": 19,
+   "route_id": "2416",
+   "scenario_type": "VanillaNonSignalizedTurnEncounterStopsign",
+   "town": "Town12",
+   "length_m": 51.8,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 20,
+   "route_id": "2509",
+   "scenario_type": "ConstructionObstacle",
+   "town": "Town12",
+   "length_m": 135.1,
+   "subsets": {
+    "E": true,
+    "C": true,
+    "R": false
+   }
+  },
+  {
+   "index": 21,
+   "route_id": "2534",
+   "scenario_type": "Accident",
+   "town": "Town12",
+   "length_m": 134.1,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": true
+   }
+  },
+  {
+   "index": 22,
+   "route_id": "2664",
+   "scenario_type": "ParkedObstacleTwoWays",
+   "town": "Town12",
+   "length_m": 134.1,
+   "subsets": {
+    "E": true,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 23,
+   "route_id": "2709",
+   "scenario_type": "StaticCutIn",
+   "town": "Town12",
+   "length_m": 134.6,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 24,
+   "route_id": "2790",
+   "scenario_type": "InvadingTurn",
+   "town": "Town12",
+   "length_m": 100.3,
+   "subsets": {
+    "E": true,
+    "C": true,
+    "R": true
+   }
+  },
+  {
+   "index": 25,
+   "route_id": "3086",
+   "scenario_type": "CrossingBicycleFlow",
+   "town": "Town12",
+   "length_m": 78.8,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 26,
+   "route_id": "3248",
+   "scenario_type": "ParkingCrossingPedestrian",
+   "town": "Town13",
+   "length_m": 134.0,
+   "subsets": {
+    "E": true,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 27,
+   "route_id": "3364",
+   "scenario_type": "YieldToEmergencyVehicle",
+   "town": "Town13",
+   "length_m": 104.0,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": true
+   }
+  },
+  {
+   "index": 28,
+   "route_id": "3436",
+   "scenario_type": "HazardAtSideLaneTwoWays",
+   "town": "Town13",
+   "length_m": 134.0,
+   "subsets": {
+    "E": true,
+    "C": true,
+    "R": false
+   }
+  },
+  {
+   "index": 29,
+   "route_id": "3464",
+   "scenario_type": "VehicleOpensDoorTwoWays",
+   "town": "Town13",
+   "length_m": 134.0,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 30,
+   "route_id": "3540",
+   "scenario_type": "HardBreakRoute",
+   "town": "Town13",
+   "length_m": 136.2,
+   "subsets": {
+    "E": true,
+    "C": false,
+    "R": true
+   }
+  },
+  {
+   "index": 31,
+   "route_id": "3561",
+   "scenario_type": "ControlLoss",
+   "town": "Town13",
+   "length_m": 133.2,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 32,
+   "route_id": "3936",
+   "scenario_type": "SignalizedJunctionLeftTurn",
+   "town": "Town12",
+   "length_m": 77.8,
+   "subsets": {
+    "E": true,
+    "C": true,
+    "R": false
+   }
+  },
+  {
+   "index": 33,
+   "route_id": "14194",
+   "scenario_type": "PedestrianCrossing",
+   "town": "Town12",
+   "length_m": 75.7,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": true
+   }
+  },
+  {
+   "index": 34,
+   "route_id": "14842",
+   "scenario_type": "VanillaSignalizedTurnEncounterGreenLight",
+   "town": "Town12",
+   "length_m": 53.9,
+   "subsets": {
+    "E": true,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 35,
+   "route_id": "17563",
+   "scenario_type": "SequentialLaneChange",
+   "town": "Town12",
+   "length_m": 117.2,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 36,
+   "route_id": "17752",
+   "scenario_type": "DynamicObjectCrossing",
+   "town": "Town12",
+   "length_m": 134.0,
+   "subsets": {
+    "E": true,
+    "C": true,
+    "R": true
+   }
+  },
+  {
+   "index": 37,
+   "route_id": "23658",
+   "scenario_type": "HighwayExit",
+   "town": "Town12",
+   "length_m": 105.6,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 38,
+   "route_id": "23695",
+   "scenario_type": "InterurbanAdvancedActorFlow",
+   "town": "Town13",
+   "length_m": 154.2,
+   "subsets": {
+    "E": true,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 39,
+   "route_id": "23771",
+   "scenario_type": "MergerIntoSlowTrafficV2",
+   "town": "Town12",
+   "length_m": 145.9,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": true
+   }
+  },
+  {
+   "index": 40,
+   "route_id": "23901",
+   "scenario_type": "InterurbanActorFlow",
+   "town": "Town13",
+   "length_m": 159.4,
+   "subsets": {
+    "E": true,
+    "C": true,
+    "R": false
+   }
+  },
+  {
+   "index": 41,
+   "route_id": "26458",
+   "scenario_type": "T_Junction",
+   "town": "Town07",
+   "length_m": 72.6,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  },
+  {
+   "index": 42,
+   "route_id": "28087",
+   "scenario_type": "NonSignalizedJunctionLeftTurnEnterFlow",
+   "town": "Town04",
+   "length_m": 75.2,
+   "subsets": {
+    "E": true,
+    "C": false,
+    "R": true
+   }
+  },
+  {
+   "index": 43,
+   "route_id": "28099",
+   "scenario_type": "SignalizedJunctionLeftTurnEnterFlow",
+   "town": "Town04",
+   "length_m": 80.4,
+   "subsets": {
+    "E": false,
+    "C": false,
+    "R": false
+   }
+  }
+ ],
+ "training": [
+  {
+   "route_id": "1792",
+   "scenario_type": "HazardAtSideLane",
+   "town": "Town12",
+   "length_m": 134.0,
+   "test_route_of_type": "1790",
+   "index": 0,
+   "subsets": {
+    "T22a": true,
+    "T22b": false,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": true
+  },
+  {
+   "route_id": "1833",
+   "scenario_type": "ConstructionObstacleTwoWays",
+   "town": "Town12",
+   "length_m": 134.0,
+   "test_route_of_type": "1825",
+   "index": 1,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "2086",
+   "scenario_type": "NonSignalizedJunctionLeftTurn",
+   "town": "Town12",
+   "length_m": 74.0,
+   "test_route_of_type": "2084",
+   "index": 2,
+   "subsets": {
+    "T22a": false,
+    "T22b": true,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": true,
+   "pilot_route": true
+  },
+  {
+   "route_id": "2129",
+   "scenario_type": "OppositeVehicleTakingPriority",
+   "town": "Town12",
+   "length_m": 76.7,
+   "test_route_of_type": "2127",
+   "index": 3,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "2215",
+   "scenario_type": "BlockedIntersection",
+   "town": "Town12",
+   "length_m": 69.3,
+   "test_route_of_type": "2204",
+   "index": 4,
+   "subsets": {
+    "T22a": true,
+    "T22b": false,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "2283",
+   "scenario_type": "MergerIntoSlowTraffic",
+   "town": "Town12",
+   "length_m": 139.5,
+   "test_route_of_type": "2273",
+   "index": 5,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "2397",
+   "scenario_type": "VanillaNonSignalizedTurn",
+   "town": "Town12",
+   "length_m": 60.5,
+   "test_route_of_type": "2390",
+   "index": 6,
+   "subsets": {
+    "T22a": false,
+    "T22b": true,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "2513",
+   "scenario_type": "ConstructionObstacle",
+   "town": "Town12",
+   "length_m": 134.0,
+   "test_route_of_type": "2509",
+   "index": 7,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "2539",
+   "scenario_type": "Accident",
+   "town": "Town12",
+   "length_m": 134.4,
+   "test_route_of_type": "2534",
+   "index": 8,
+   "subsets": {
+    "T22a": true,
+    "T22b": false,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "2554",
+   "scenario_type": "ParkedObstacle",
+   "town": "Town12",
+   "length_m": 134.0,
+   "test_route_of_type": "1773",
+   "index": 9,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": true
+  },
+  {
+   "route_id": "2643",
+   "scenario_type": "AccidentTwoWays",
+   "town": "Town12",
+   "length_m": 104.0,
+   "test_route_of_type": "1852",
+   "index": 10,
+   "subsets": {
+    "T22a": false,
+    "T22b": true,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "2668",
+   "scenario_type": "ParkedObstacleTwoWays",
+   "town": "Town12",
+   "length_m": 113.6,
+   "test_route_of_type": "2664",
+   "index": 11,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "2715",
+   "scenario_type": "StaticCutIn",
+   "town": "Town12",
+   "length_m": 134.0,
+   "test_route_of_type": "2709",
+   "index": 12,
+   "subsets": {
+    "T22a": true,
+    "T22b": false,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "2802",
+   "scenario_type": "InvadingTurn",
+   "town": "Town12",
+   "length_m": 114.0,
+   "test_route_of_type": "2790",
+   "index": 13,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "2844",
+   "scenario_type": "OppositeVehicleRunningRedLight",
+   "town": "Town12",
+   "length_m": 78.0,
+   "test_route_of_type": "2082",
+   "index": 14,
+   "subsets": {
+    "T22a": false,
+    "T22b": true,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "2903",
+   "scenario_type": "NonSignalizedJunctionRightTurn",
+   "town": "Town12",
+   "length_m": 78.1,
+   "test_route_of_type": "2115",
+   "index": 15,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "2943",
+   "scenario_type": "VehicleTurningRoute",
+   "town": "Town12",
+   "length_m": 71.2,
+   "test_route_of_type": "2144",
+   "index": 16,
+   "subsets": {
+    "T22a": true,
+    "T22b": false,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "3072",
+   "scenario_type": "HighwayCutIn",
+   "town": "Town12",
+   "length_m": 138.0,
+   "test_route_of_type": "2286",
+   "index": 17,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "3090",
+   "scenario_type": "CrossingBicycleFlow",
+   "town": "Town12",
+   "length_m": 79.0,
+   "test_route_of_type": "3086",
+   "index": 18,
+   "subsets": {
+    "T22a": false,
+    "T22b": true,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "3144",
+   "scenario_type": "VanillaSignalizedTurnEncounterRedLight",
+   "town": "Town12",
+   "length_m": 50.7,
+   "test_route_of_type": "2373",
+   "index": 19,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "3184",
+   "scenario_type": "VanillaNonSignalizedTurnEncounterStopsign",
+   "town": "Town12",
+   "length_m": 58.2,
+   "test_route_of_type": "2416",
+   "index": 20,
+   "subsets": {
+    "T22a": true,
+    "T22b": false,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "3255",
+   "scenario_type": "ParkingCrossingPedestrian",
+   "town": "Town13",
+   "length_m": 118.0,
+   "test_route_of_type": "3248",
+   "index": 21,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "3373",
+   "scenario_type": "YieldToEmergencyVehicle",
+   "town": "Town13",
+   "length_m": 104.0,
+   "test_route_of_type": "3364",
+   "index": 22,
+   "subsets": {
+    "T22a": false,
+    "T22b": true,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "3472",
+   "scenario_type": "VehicleOpensDoorTwoWays",
+   "town": "Town13",
+   "length_m": 134.0,
+   "test_route_of_type": "3464",
+   "index": 23,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "3514",
+   "scenario_type": "ParkingExit",
+   "town": "Town13",
+   "length_m": 134.0,
+   "test_route_of_type": "1956",
+   "index": 24,
+   "subsets": {
+    "T22a": true,
+    "T22b": false,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "3731",
+   "scenario_type": "VehicleTurningRoutePedestrian",
+   "town": "Town13",
+   "length_m": 75.2,
+   "test_route_of_type": "2164",
+   "index": 25,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "3749",
+   "scenario_type": "EnterActorFlow",
+   "town": "Town13",
+   "length_m": 82.0,
+   "test_route_of_type": "2201",
+   "index": 26,
+   "subsets": {
+    "T22a": false,
+    "T22b": true,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "4183",
+   "scenario_type": "SignalizedJunctionLeftTurn",
+   "town": "Town12",
+   "length_m": 68.4,
+   "test_route_of_type": "3936",
+   "index": 27,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "4937",
+   "scenario_type": "SignalizedJunctionRightTurn",
+   "town": "Town12",
+   "length_m": 62.3,
+   "test_route_of_type": "2050",
+   "index": 28,
+   "subsets": {
+    "T22a": true,
+    "T22b": false,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "14862",
+   "scenario_type": "VanillaSignalizedTurnEncounterGreenLight",
+   "town": "Town12",
+   "length_m": 57.2,
+   "test_route_of_type": "14842",
+   "index": 29,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "17569",
+   "scenario_type": "SequentialLaneChange",
+   "town": "Town12",
+   "length_m": 117.1,
+   "test_route_of_type": "17563",
+   "index": 30,
+   "subsets": {
+    "T22a": false,
+    "T22b": true,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "18305",
+   "scenario_type": "ParkingCutIn",
+   "town": "Town12",
+   "length_m": 134.0,
+   "test_route_of_type": "1711",
+   "index": 31,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": true
+  },
+  {
+   "route_id": "23659",
+   "scenario_type": "HighwayExit",
+   "town": "Town12",
+   "length_m": 100.1,
+   "test_route_of_type": "23658",
+   "index": 32,
+   "subsets": {
+    "T22a": true,
+    "T22b": false,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "23700",
+   "scenario_type": "InterurbanAdvancedActorFlow",
+   "town": "Town12",
+   "length_m": 113.1,
+   "test_route_of_type": "23695",
+   "index": 33,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "23910",
+   "scenario_type": "InterurbanActorFlow",
+   "town": "Town12",
+   "length_m": 106.3,
+   "test_route_of_type": "23901",
+   "index": 34,
+   "subsets": {
+    "T22a": false,
+    "T22b": true,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "24092",
+   "scenario_type": "MergerIntoSlowTrafficV2",
+   "town": "Town13",
+   "length_m": 151.1,
+   "test_route_of_type": "23771",
+   "index": 35,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "24211",
+   "scenario_type": "DynamicObjectCrossing",
+   "town": "Town01",
+   "length_m": 134.0,
+   "test_route_of_type": "17752",
+   "index": 36,
+   "subsets": {
+    "T22a": true,
+    "T22b": false,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "24258",
+   "scenario_type": "HazardAtSideLaneTwoWays",
+   "town": "Town07",
+   "length_m": 132.5,
+   "test_route_of_type": "3436",
+   "index": 37,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "24330",
+   "scenario_type": "HardBreakRoute",
+   "town": "Town10HD",
+   "length_m": 102.3,
+   "test_route_of_type": "3540",
+   "index": 38,
+   "subsets": {
+    "T22a": false,
+    "T22b": true,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "24340",
+   "scenario_type": "ControlLoss",
+   "town": "Town10HD",
+   "length_m": 102.3,
+   "test_route_of_type": "3561",
+   "index": 39,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "25863",
+   "scenario_type": "PedestrianCrossing",
+   "town": "Town07",
+   "length_m": 86.0,
+   "test_route_of_type": "14194",
+   "index": 40,
+   "subsets": {
+    "T22a": true,
+    "T22b": false,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "28035",
+   "scenario_type": "T_Junction",
+   "town": "Town01",
+   "length_m": 112.9,
+   "test_route_of_type": "26458",
+   "index": 41,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "28093",
+   "scenario_type": "NonSignalizedJunctionLeftTurnEnterFlow",
+   "town": "Town04",
+   "length_m": 77.5,
+   "test_route_of_type": "28087",
+   "index": 42,
+   "subsets": {
+    "T22a": false,
+    "T22b": true,
+    "T22": true,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  },
+  {
+   "route_id": "28198",
+   "scenario_type": "SignalizedJunctionLeftTurnEnterFlow",
+   "town": "Town15",
+   "length_m": 77.9,
+   "test_route_of_type": "28099",
+   "index": 43,
+   "subsets": {
+    "T22a": false,
+    "T22b": false,
+    "T22": false,
+    "RL": true
+   },
+   "dev_route": false,
+   "pilot_route": false
+  }
+ ],
+ "subsets": {
+  "test_all": [
+   "1711",
+   "1773",
+   "1790",
+   "1825",
+   "1852",
+   "1956",
+   "2050",
+   "2082",
+   "2084",
+   "2115",
+   "2127",
+   "2144",
+   "2164",
+   "2201",
+   "2204",
+   "2273",
+   "2286",
+   "2373",
+   "2390",
+   "2416",
+   "2509",
+   "2534",
+   "2664",
+   "2709",
+   "2790",
+   "3086",
+   "3248",
+   "3364",
+   "3436",
+   "3464",
+   "3540",
+   "3561",
+   "3936",
+   "14194",
+   "14842",
+   "17563",
+   "17752",
+   "23658",
+   "23695",
+   "23771",
+   "23901",
+   "26458",
+   "28087",
+   "28099"
+  ],
+  "E": [
+   "1711",
+   "1790",
+   "1852",
+   "2050",
+   "2084",
+   "2127",
+   "2164",
+   "2204",
+   "2286",
+   "2390",
+   "2509",
+   "2664",
+   "2790",
+   "3248",
+   "3436",
+   "3540",
+   "3936",
+   "14842",
+   "17752",
+   "23695",
+   "23901",
+   "28087"
+  ],
+  "C": [
+   "1711",
+   "1852",
+   "2084",
+   "2164",
+   "2286",
+   "2509",
+   "2790",
+   "3436",
+   "3936",
+   "17752",
+   "23901"
+  ],
+  "R": [
+   "1711",
+   "1825",
+   "2050",
+   "2115",
+   "2164",
+   "2273",
+   "2390",
+   "2534",
+   "2790",
+   "3364",
+   "3540",
+   "14194",
+   "17752",
+   "23771",
+   "28087"
+  ],
+  "train_all": [
+   "1792",
+   "1833",
+   "2086",
+   "2129",
+   "2215",
+   "2283",
+   "2397",
+   "2513",
+   "2539",
+   "2554",
+   "2643",
+   "2668",
+   "2715",
+   "2802",
+   "2844",
+   "2903",
+   "2943",
+   "3072",
+   "3090",
+   "3144",
+   "3184",
+   "3255",
+   "3373",
+   "3472",
+   "3514",
+   "3731",
+   "3749",
+   "4183",
+   "4937",
+   "14862",
+   "17569",
+   "18305",
+   "23659",
+   "23700",
+   "23910",
+   "24092",
+   "24211",
+   "24258",
+   "24330",
+   "24340",
+   "25863",
+   "28035",
+   "28093",
+   "28198"
+  ],
+  "T22a": [
+   "1792",
+   "2215",
+   "2539",
+   "2715",
+   "2943",
+   "3184",
+   "3514",
+   "4937",
+   "23659",
+   "24211",
+   "25863"
+  ],
+  "T22b": [
+   "2086",
+   "2397",
+   "2643",
+   "2844",
+   "3090",
+   "3373",
+   "3749",
+   "17569",
+   "23910",
+   "24330",
+   "28093"
+  ],
+  "T22": [
+   "1792",
+   "2086",
+   "2215",
+   "2397",
+   "2539",
+   "2643",
+   "2715",
+   "2844",
+   "2943",
+   "3090",
+   "3184",
+   "3373",
+   "3514",
+   "3749",
+   "4937",
+   "17569",
+   "23659",
+   "23910",
+   "24211",
+   "24330",
+   "25863",
+   "28093"
+  ],
+  "RL": [
+   "1792",
+   "1833",
+   "2086",
+   "2129",
+   "2215",
+   "2283",
+   "2397",
+   "2513",
+   "2539",
+   "2554",
+   "2643",
+   "2668",
+   "2715",
+   "2802",
+   "2844",
+   "2903",
+   "2943",
+   "3072",
+   "3090",
+   "3144",
+   "3184",
+   "3255",
+   "3373",
+   "3472",
+   "3514",
+   "3731",
+   "3749",
+   "4183",
+   "4937",
+   "14862",
+   "17569",
+   "18305",
+   "23659",
+   "23700",
+   "23910",
+   "24092",
+   "24211",
+   "24258",
+   "24330",
+   "24340",
+   "25863",
+   "28035",
+   "28093",
+   "28198"
+  ]
+ },
+ "totals": {
+  "test_length_km": 4.61,
+  "train_length_km": 4.49,
+  "test_towns": {
+   "Town04": 2,
+   "Town07": 1,
+   "Town12": 33,
+   "Town13": 8
+  },
+  "train_towns": {
+   "Town01": 2,
+   "Town04": 1,
+   "Town07": 2,
+   "Town10HD": 2,
+   "Town12": 29,
+   "Town13": 7,
+   "Town15": 1
+  }
+ }
+}

@@ -1,0 +1,446 @@
+{
+ "candidates": [
+  {
+   "arm": "age_only",
+   "envelope": null,
+   "name": "A1.0",
+   "order": 0,
+   "policy_params": {
+    "age_lease_s": 1.0,
+    "utility": "v4_adet_d1"
+   },
+   "tag": "A1.0_d1"
+  },
+  {
+   "arm": "age_only",
+   "envelope": null,
+   "name": "A2.5",
+   "order": 3,
+   "policy_params": {
+    "age_lease_s": 2.5,
+    "utility": "v4_adet_d1"
+   },
+   "tag": "A2.5_d1"
+  }
+ ],
+ "complete": true,
+ "dropped_routes": {},
+ "final": true,
+ "finality": "runner records (--queue)",
+ "flags": [],
+ "grid": "age",
+ "job_file": "outputs/framelease_v4/p1_jobs/FULL/b09_age_s2.jsonl",
+ "job_file_sha256": "8a1dd8879dd5a2f8db14e61b624eeeebc39cd4d19e2869dc569fb95b79e31efd",
+ "kept_routes": [
+  "2086",
+  "2397",
+  "2643",
+  "2844",
+  "3090",
+  "3373",
+  "3749",
+  "17569",
+  "23910",
+  "24330",
+  "28093"
+ ],
+ "pending": [],
+ "previous_selection_sha256": "88fa28271484e92758978b5b1ddcdeba42567fa1a7979715eedddc5bad31acdc",
+ "provisional": false,
+ "queue": "outputs/framelease_v4/queue_p1",
+ "ranking": [
+  "A1.0",
+  "A2.5"
+ ],
+ "ranking_T22": [
+  "A1.0",
+  "A2.5"
+ ],
+ "routes": [
+  "2086",
+  "2397",
+  "2643",
+  "2844",
+  "3090",
+  "3373",
+  "3749",
+  "17569",
+  "23910",
+  "24330",
+  "28093"
+ ],
+ "rule": "final stage of successive halving: best mean DS over the T22 routes (stage-1 kept + stage-2 kept); ties to the earlier candidate",
+ "schema": "framelease_v4.p1_selection/1",
+ "script_sha256": "146b8b1a3f75a467a7a21f1080a0b7c46b5e8a8500fe85c311487b6d9f12c867",
+ "selected": "A1.0",
+ "selected_candidate": {
+  "arm": "age_only",
+  "envelope": null,
+  "name": "A1.0",
+  "order": 0,
+  "policy_params": {
+   "age_lease_s": 1.0,
+   "utility": "v4_adet_d1"
+  },
+  "tag": "A1.0_d1"
+ },
+ "stage": "age_s2",
+ "stage_no": 2,
+ "stage_spec": "outputs/framelease_v4/p1_jobs/FULL/b09_age_s2.stage.json",
+ "stage_spec_sha256": "a5bfe45011b4e99f08fb250d1780dd9368684cc62dddba9e3b24ed4743a8749a",
+ "table": [
+  {
+   "arm": "age_only",
+   "candidate": "A1.0",
+   "envelope": null,
+   "mean_ds": 60.18459781818182,
+   "mean_ds_T22": 63.97602786363636,
+   "n": 11,
+   "n_T22": 22,
+   "order": 0,
+   "outcomes": {
+    "ok": 11
+   },
+   "per_route": {
+    "17569": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r17569",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1/runs/20261114T222738_aad066ea",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2086": {
+     "attempts_found": 1,
+     "ds": 9.32724,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r2086",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1/runs/20261114T215715_e4269282",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "23910": {
+     "attempts_found": 1,
+     "ds": 75.365894,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r23910",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1/runs/20261114T222452_074d0cc7",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2397": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r2397",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1/runs/20261114T203021_39b3bd94",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "24330": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r24330",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1/runs/20261114T211944_1f342ca7",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2643": {
+     "attempts_found": 1,
+     "ds": 25.35,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r2643",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1/runs/20261114T213234_758c61a7",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "28093": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r28093",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1/runs/20261114T203253_6c8cae13",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2844": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r2844",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1/runs/20261114T221204_a20da8d4",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3090": {
+     "attempts_found": 1,
+     "ds": 78.221453,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r3090",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1/runs/20261114T212909_b7b2a295",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3373": {
+     "attempts_found": 1,
+     "ds": 42.0,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r3373",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1/runs/20261114T202129_563582b3",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3749": {
+     "attempts_found": 2,
+     "ds": 11.765989,
+     "job": "v4p1_age_only_A1.0_d1_k1.0_s11_r3749",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 2,
+      "counted": 2,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A1.0_d1/runs/20261114T210757_e7feb449",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    }
+   },
+   "policy_params": {
+    "age_lease_s": 1.0,
+    "utility": "v4_adet_d1"
+   },
+   "reused_from": null,
+   "tag": "A1.0_d1"
+  },
+  {
+   "arm": "age_only",
+   "candidate": "A2.5",
+   "envelope": null,
+   "mean_ds": 52.67632363636364,
+   "mean_ds_T22": 58.11468640909091,
+   "n": 11,
+   "n_T22": 22,
+   "order": 3,
+   "outcomes": {
+    "ok": 11
+   },
+   "per_route": {
+    "17569": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r17569",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1/runs/20261114T223020_9ee0de2a",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2086": {
+     "attempts_found": 1,
+     "ds": 6.688907,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r2086",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1/runs/20261114T214231_0a765315",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "23910": {
+     "attempts_found": 1,
+     "ds": 73.403901,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r23910",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1/runs/20261114T222215_2df83b27",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2397": {
+     "attempts_found": 1,
+     "ds": 65.0,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r2397",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1/runs/20261114T202740_7bf07047",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "24330": {
+     "attempts_found": 1,
+     "ds": 36.0,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r24330",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1/runs/20261114T212250_30f7524d",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2643": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r2643",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1/runs/20261114T213733_7247c18a",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "28093": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r28093",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1/runs/20261114T203650_e1c037fa",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2844": {
+     "attempts_found": 1,
+     "ds": 40.456,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r2844",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1/runs/20261114T221516_fa89edc3",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "3090": {
+     "attempts_found": 1,
+     "ds": 62.578102,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r3090",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1/runs/20261114T212554_fc99db11",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3373": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r3373",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1/runs/20261114T202435_e6ee3b6e",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3749": {
+     "attempts_found": 1,
+     "ds": 15.31265,
+     "job": "v4p1_age_only_A2.5_d1_k1.0_s11_r3749",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/age_s2/age_only_A2.5_d1/runs/20261114T204040_7297ceee",
+     "setup_failures": 0,
+     "status": "Failed - Agent deviated from the route"
+    }
+   },
+   "policy_params": {
+    "age_lease_s": 2.5,
+    "utility": "v4_adet_d1"
+   },
+   "reused_from": null,
+   "tag": "A2.5_d1"
+  }
+ ],
+ "variant": "FULL",
+ "warnings": [],
+ "written": "2026-11-15T06:36:37+0800"
+}

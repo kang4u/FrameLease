@@ -1,0 +1,4 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/A10A11/recheck1/own/apply_entry_scratch_treeWD.py outputs/framelease_v4/build/AMEND2/final/WD2_spec.json
+(exit 1, 6.5 s)
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: template problem: ['* Width probe of the scratch tree, prose that the reviewers fill to an exact number of columns here x x x x x x x x x x x'] / starts '**Amendment A10, {{datetime}} (Beijing t' / anchor phrase 0 times

@@ -1,0 +1,47 @@
+{
+ "root": "/tmp/AMEND3/tree",
+ "started": "2026-11-15T06:20:25+0800",
+ "steps": [
+  {
+   "step": "begin",
+   "time": "2026-11-15T06:20:25+0800",
+   "datetime": "2026-11-15 06:20",
+   "pid": 246315
+  },
+  {
+   "step": "copied",
+   "time": "2026-11-15T06:20:25+0800",
+   "copies": {
+    "framelease_v4/PROTOCOL.md": "73599efe65c2063d3396c957d3b929f4f37ab50fafd58cef0cd4bd6134ae4b15",
+    "outputs/framelease_v4/registration/MANIFEST.sha256": "4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033",
+    "outputs/framelease_v4/registration/SEAL.sha256": "03638b5402b335316cb0b46fbb3a980d3c75edd481f8037c7cc2a97ba5d12fbe",
+    "outputs/framelease_v4/registration/REGISTRATION.json": "79130355275f6905bde3186f39445f491a591ffb9983b679f53b7862138e848f"
+   },
+   "protocol_sha256": "73599efe65c2063d3396c957d3b929f4f37ab50fafd58cef0cd4bd6134ae4b15",
+   "manifest_sha256": "4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033"
+  },
+  {
+   "step": "manifest",
+   "time": "2026-11-15T06:20:29+0800",
+   "exit": 0,
+   "output": "wrote /tmp/AMEND3/tree/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 8c50b99209af9648f0ff35c95a8725a1c6585f221dbd26ea1d56545a2e60e0c9",
+   "manifest_sha256": "8c50b99209af9648f0ff35c95a8725a1c6585f221dbd26ea1d56545a2e60e0c9"
+  },
+  {
+   "step": "post_manifest_check",
+   "time": "2026-11-15T06:20:29+0800",
+   "result": "OK",
+   "p1_jobs": "OK"
+  },
+  {
+   "step": "failed",
+   "time": "2026-11-15T06:20:29+0800",
+   "reason": "signal 1 during the transaction"
+  },
+  {
+   "step": "restored",
+   "time": "2026-11-15T06:20:32+0800"
+  }
+ ],
+ "step": "restored"
+}

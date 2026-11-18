@@ -1,0 +1,58 @@
+amend_step3.sh 2026-11-15T05:06:26+08:00: root /tmp/AMEND3_review/tree; transaction directory /tmp/AMEND3_review/runs/R10
+inputs: step3_txn.py 86f69e70c31edfc49e95cb07b55d62a4afc07e7b05e0e058b724407ed6c36ea0,
+        step3_spec.json 89836a6f2e01ab0e99effb4467bc20fdb86059bcfb4689aeddceadb878c4cfcd
+== 1. pre-check (no lock)
+registration.py --verify (exit 1): manifest: 1 files differ: [('framelease_v4/analysis/verify_table1_extra.py', 'a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa', '27ceb0bd600a7c802024ee28a5caaa9d44fbff832c585f92a734d98da4bcedff')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registered baseline: 153 files; in the sealed manifest at their sha256 and unchanged in the tree: yes
+P1 driver entries: Tuning freeze line 2211, D1 summary line 2221; outputs/framelease_v4/tuning/d1/FULL_d1_summary.json sha256 53d8c97a185d52870358e3341d6e698dcf8fe136425aa7bd1eb0f9b065923cb2 cited by the D1 summary entry
+check_drafts.py exit 0: all checks passed
+dry composition: 2835 lines; entries A3 193 lines, A9 43 lines, A7 53 lines, A4 74 lines, OP 114 lines; 40 files become registered
+precheck: passed (dry files in /tmp/AMEND3_review/runs/R10/precheck)
+== 3. locked part (framelease_v4/.protocol.lock, wait up to 600 s)
+lock held 2026-11-15T05:06:32+08:00; time stamp of the five entries: 2026-11-15 05:06
+sealed state copied into /tmp/AMEND3_review/runs/R10: PROTOCOL.md 216b5d90a4d321b4cf205b4685e1400bd82c28b2da683479323264a02a1e21a3, MANIFEST.sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+registration.py --write-manifest --force (exit 0): wrote /tmp/AMEND3_review/tree/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d
+post-manifest check (step 3.2): OK
+new manifest: 221 files, sha256 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d; new in it: none; changed since the seal (unregistered): ['framelease_v4/analysis/verify_table1_extra.py']
+PROTOCOL.md written: sha256 74f8b33e261fbc462114ed06f367c14913e9216eb5ada7f24f7d698fd1ed345c (2835 lines)
+registration.py --seal (exit 0): sealed: PROTOCOL.md 74f8b33e261fbc462114ed06f367c14913e9216eb5ada7f24f7d698fd1ed345c, manifest 0772a80110247c4efb7d1df4066a439d5315abbe904bf745fca5641d7c4ebe3d 
+registration.py --verify: manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+entry A3: 193 lines (/tmp/AMEND3_review/runs/R10/entry_A3.md)
+entry A9: 43 lines (/tmp/AMEND3_review/runs/R10/entry_A9.md)
+entry A7: 53 lines (/tmp/AMEND3_review/runs/R10/entry_A7.md)
+entry A4: 74 lines (/tmp/AMEND3_review/runs/R10/entry_A4.md)
+entry OP: 114 lines (/tmp/AMEND3_review/runs/R10/entry_OP.md)
+lock released 2026-11-15T05:06:39+08:00
+== 4. post-check (no lock)
+step 3.2 on the sealed manifest: OK
+registration.py --verify: manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+phase_driver.py --dry-run (exit 0; full output /tmp/AMEND3_review/runs/R10/phase_driver_dry_run.txt):
+    G0 passed: P1 done, P1 entries ['freeze', 'd1'], amendments ['A3', 'A4', 'A7', 'A9']; seal OK, manifest OK
+    G0  passed       seal OK, manifest OK
+    G1  waiting      waiting for outputs/framelease_v4/phase_driver/D1_DECISION.json (the coordinating session's D1 decision under the delegation of 2026-11-14)
+    G2  blocked      waits for G1
+    G3  blocked      waits for G1
+    G4  blocked      waits for G1
+    G5  blocked      waits for G1
+    G6  blocked      waits for G1
+    G7  blocked      waits for G1
+    G8  blocked      waits for G1
+G5 plan (phase_driver.stress_runs on the sealed PROTOCOL.md): ['s3', 's2', 's2_relative', 's1']; A7b read from the A7 text: True; s2_relative: framelease_v4/protocol/stress_bench.py s2 --registered --states synthetic --qnet <network of the RL freeze> --grid relative
+check_drafts.py on the new PROTOCOL.md (exit 0):
+  OP: 114 lines, 12 placeholders, 3 framelease_v4 files cited by sha256
+  A10: 230 lines, 34 placeholders, 8 framelease_v4 files cited by sha256
+  A10 in-place found 1x now: 'If an offline output lacks a paired quantity, the v4 analysis script c'
+  A10 in-place found 1x now: 'freeze.\n\n**Freeze.** The analysis freeze happens when every registered'
+  A10 in-place found 1x now: '`outputs/framelease_v4/analysis/final_<stamp>/`, with a sha256 manifes'
+  A10 in-place found 1x now: '**Verification.** Before any number enters the paper, an independent s'
+  A10 in-place found 0x now: 'the analysis script, the Proposition-1 coverage and the figure and tab'
+  all checks passed
+files registered by this transaction (manifest files outside the P1 baseline whose sha256 the sealed PROTOCOL.md cites and the earlier one did not): 40
+Sec. 4.1 status paragraph (the text the fifth A10 in-place "old" is taken from, APPLY_PLAN2.md Sec. 4 step 1):
+  | Status (Amendment A3): the `fl_global_shield` lease of item 1, the aggregator of item 2 (with infractions per km), item
+  | 3 and item 4 are implemented and registered; the analysis script, the Proposition-1 coverage and the figure and table
+  | generators remain required before the analysis freeze. `fl_bandit` and `fl_fqi_nolease` of item 1 are configurations of
+  | launcher arm `fl_full` with the networks of their families (Amendment A4).
+postcheck: passed
+PASS: Amendments A3, A9, A7 (A7b), A4 and the operational addition entered at 2026-11-15 05:06, one manifest, one seal;
+      post-checks passed. Next: update framelease_v4/PIPELINE_STATE.md, then the D1 decision (RUNBOOK.md).

@@ -1,0 +1,58 @@
+{
+ "root": "/tmp/AMEND3_review/tree",
+ "started": "2026-11-15T05:22:37+0800",
+ "steps": [
+  {
+   "step": "begin",
+   "time": "2026-11-15T05:22:37+0800",
+   "datetime": "2026-11-15 05:22"
+  },
+  {
+   "step": "copied",
+   "time": "2026-11-15T05:22:37+0800",
+   "protocol_sha256": "216b5d90a4d321b4cf205b4685e1400bd82c28b2da683479323264a02a1e21a3",
+   "manifest_sha256": "4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033"
+  },
+  {
+   "step": "manifest",
+   "time": "2026-11-15T05:22:40+0800",
+   "exit": 0,
+   "output": "wrote /tmp/AMEND3_review/tree/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 3dccb81d409ed52ce90552331d9199e69b3e05ba72854678864a41e0f9b70cfb"
+  },
+  {
+   "step": "post_manifest_check",
+   "time": "2026-11-15T05:22:40+0800",
+   "result": "OK"
+  },
+  {
+   "step": "filled",
+   "time": "2026-11-15T05:22:40+0800",
+   "problems": []
+  },
+  {
+   "step": "composed",
+   "time": "2026-11-15T05:22:40+0800",
+   "problems": [],
+   "protocol_after_sha256": "b62a2d3c00ecb97a6682f2d4f2dabcdc581dc77c17ce66e4abcf98d514b46989"
+  },
+  {
+   "step": "protocol",
+   "time": "2026-11-15T05:22:40+0800",
+   "protocol_sha256": "b62a2d3c00ecb97a6682f2d4f2dabcdc581dc77c17ce66e4abcf98d514b46989"
+  },
+  {
+   "step": "sealed",
+   "time": "2026-11-15T05:22:40+0800",
+   "protocol_sha256": "b62a2d3c00ecb97a6682f2d4f2dabcdc581dc77c17ce66e4abcf98d514b46989",
+   "manifest_sha256": "3dccb81d409ed52ce90552331d9199e69b3e05ba72854678864a41e0f9b70cfb"
+  },
+  {
+   "step": "verified",
+   "time": "2026-11-15T05:22:43+0800",
+   "output": "manifest: OK\nseal framelease_v4/PROTOCOL.md: OK\nseal outputs/framelease_v4/registration/MANIFEST.sha256: OK",
+   "registered_differ": [],
+   "unregistered_differ": []
+  }
+ ],
+ "step": "verified"
+}

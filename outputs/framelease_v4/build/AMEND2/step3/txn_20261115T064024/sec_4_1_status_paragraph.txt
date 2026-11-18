@@ -1,0 +1,4 @@
+Status (Amendment A3): the `fl_global_shield` lease of item 1, the aggregator of item 2 (with infractions per km), item
+3 and item 4 are implemented and registered; the analysis script, the Proposition-1 coverage and the figure and table
+generators remain required before the analysis freeze. `fl_bandit` and `fl_fqi_nolease` of item 1 are configurations of
+launcher arm `fl_full` with the networks of their families (Amendment A4).

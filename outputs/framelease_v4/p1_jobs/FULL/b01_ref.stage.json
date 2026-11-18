@@ -1,0 +1,310 @@
+{
+ "block": "ref",
+ "block_no": 1,
+ "candidates": [
+  {
+   "arm": "fixed_deep",
+   "envelope": null,
+   "jobs": {
+    "17569": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r17569",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "1792": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r1792",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "2086": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r2086",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "2215": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r2215",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "23659": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r23659",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "23910": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r23910",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "2397": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r2397",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "24211": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r24211",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "24330": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r24330",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "2539": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r2539",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "25863": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r25863",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "2643": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r2643",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "2715": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r2715",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "28093": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r28093",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "2844": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r2844",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "2943": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r2943",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "3090": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r3090",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "3184": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r3184",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "3373": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r3373",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "3514": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r3514",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "3749": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r3749",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    },
+    "4937": {
+     "block": "ref",
+     "id": "v4p1_fixed_deep_k1.0_s11_r4937",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fixed_deep"
+    }
+   },
+   "name": "fixed_deep",
+   "order": 0,
+   "policy_params": {},
+   "reused_from": null,
+   "tag": ""
+  },
+  {
+   "arm": "fast_only",
+   "envelope": null,
+   "jobs": {
+    "17569": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r17569",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "1792": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r1792",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "2086": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r2086",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "2215": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r2215",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "23659": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r23659",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "23910": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r23910",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "2397": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r2397",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "24211": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r24211",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "24330": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r24330",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "2539": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r2539",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "25863": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r25863",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "2643": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r2643",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "2715": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r2715",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "28093": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r28093",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "2844": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r2844",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "2943": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r2943",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "3090": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r3090",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "3184": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r3184",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "3373": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r3373",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "3514": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r3514",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "3749": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r3749",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    },
+    "4937": {
+     "block": "ref",
+     "id": "v4p1_fast_only_k1.0_s11_r4937",
+     "output_dir": "outputs/framelease_v4/tuning/ref/fast_only"
+    }
+   },
+   "name": "fast_only",
+   "order": 1,
+   "policy_params": {},
+   "reused_from": null,
+   "tag": ""
+  }
+ ],
+ "final_stage": false,
+ "grid": "ref",
+ "inputs": {},
+ "job_file": "outputs/framelease_v4/p1_jobs/FULL/b01_ref.jsonl",
+ "job_file_sha256": "ca41d996e59d03fb99e84189fc7968d0be79fcf9f305e77a00ffc8cb02d721e5",
+ "n_candidates": 2,
+ "n_lines": 44,
+ "previous_stage": null,
+ "route_order": [
+  "17569",
+  "3749",
+  "25863",
+  "24330",
+  "24211",
+  "3090",
+  "2715",
+  "23910",
+  "2539",
+  "23659",
+  "2844",
+  "1792",
+  "2086",
+  "3514",
+  "2215",
+  "2397",
+  "3184",
+  "28093",
+  "2643",
+  "3373",
+  "2943",
+  "4937"
+ ],
+ "route_set": "T22",
+ "routes": [
+  "1792",
+  "2086",
+  "2215",
+  "2397",
+  "2539",
+  "2643",
+  "2715",
+  "2844",
+  "2943",
+  "3090",
+  "3184",
+  "3373",
+  "3514",
+  "3749",
+  "4937",
+  "17569",
+  "23659",
+  "23910",
+  "24211",
+  "24330",
+  "25863",
+  "28093"
+ ],
+ "rules": "PROTOCOL Sec. 4.2 (select_stage.py)",
+ "schema": "framelease_v4.p1_stage/1",
+ "stage": 0,
+ "survive": null,
+ "variant": "FULL"
+}

@@ -1,0 +1,14 @@
+(exit 1, 12.9 s)
+apply_locked: exit 1 (output /tmp/A10A11/applier/treeB/outputs/framelease_v4/amendment_a10/apply.out)
+
+--- apply.out
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeB/outputs/framelease_v4/amendment_a10/attempt_20261115T104121_360840
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+inject: appended a line to /tmp/A10A11/applier/treeB/framelease_v4/analysis/manipulation.py
+registration --write-manifest --force -> 0 | wrote /tmp/A10A11/applier/treeB/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 0fd0400ae2d149b42659aa9f6d15958877bf316ae6e745080fb9f91fcd9adf2e
+manifest difference: new [] / left [] / changed ['framelease_v4/analysis/manipulation.py']
+STOP: registered files changed or left the new manifest: ['framelease_v4/analysis/manipulation.py']
+apply_locked: PROTOCOL.md unchanged; RESTORED the sealed manifest
+manifest: 1 files differ: [('framelease_v4/analysis/manipulation.py', '78f18dacf323832ef16684b0b81a2ba03b2ffb00186259780d1bafe7e656cbd0', '5c86d888aa938b5c5d45db2a5e4851514144a637d0cd6884372f893d8fb6f1ff')]
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

@@ -1,0 +1,30 @@
+# Progress log (offline lease ablation, framelease_v4/offline)
+- 2026-11-10 start: dirs created; reading v2/v3 sources.
+- 2026-11-10 15:42:28 envelopes fitted: TRAIN self-check pass=True {'T_q80 vs gate2 E0_q80_ORIG': 0.0, 'T_q90 vs gate2 E0_q90_ORIG': 0.0, 'T_q95 vs gate2 E0_q95_ORIG': 0.0, 'T_q99 vs gate2 E0_q99_ORIG': 0.0, 'T_q99.5 vs gate2 E0_q99.5_ORIG': 0.0, 'V2file vs gate2 E0orig_q95_ORIG': 0.0}; pairs {'vehicle': 4596, 'pedestrian': 194}
+- 2026-11-10 15:43:13 stage_frames start: 1 clips to run (0 done)
+- 2026-11-10 15:43:15 stage_frames done: 1 clips in 3s
+- 2026-11-10 15:43:56 stage_frames start: 36 clips to run (1 done)
+- 2026-11-10 15:44:07 stage_frames done: 36 clips in 11s
+- 2026-11-10 15:44:22 checks: pass=True
+- 2026-11-10 15:50 code: framelease_v4/offline/{common,envelopes_v4,stage_frames,checks}.py written and run; stage = 37 clips in 11 s; checks PASS (suffix tau* and V vs gate2 <5e-6 s; v2 global lease vs v2 c2_eval H_avl_s <5e-6 s; counts 2447/246, 2970/663; static V0 268; TRAIN 1004 plans, 12 conflicts).
+- Pre-declared (before any VAL metric was looked at): TRAIN selection rule (a) = max TRAIN continuity at need s.t. TRAIN R_cond <= alpha (alpha 5% primary, 10% secondary), ties lower R_cond then grid order; no qualifying candidate -> fallback H = 0. Nested LOCO over 32 VAL clips same rule. Frontier = in-sample VAL rule (a). Global cap 2.5 s primary, 2.0 s (v2) sensitivity.
+- next: analyze.py (metrics, frontier, nested, TRAIN-selected, paired bootstrap), fig1_data.py, make_readme.py
+- 2026-11-10 15:46:17 analyze done in 3s: 1240 candidate rows
+- 2026-11-10 15:53:45 analyze done in 3s: 1452 candidate rows
+- 2026-11-10 15:55:11 fig1_data: check pass=True
+- 15:56 analyze.py run (adds GLOBAL_TAU control); fig1_data.py run, checks pass (C1 panel a reproduced to 4e-16; closed-loop means equal frozen contrasts). next: README (make_readme.py), tests, summary.
+- 2026-11-10 15:56:44 README.md and summary.json written
+- 2026-11-10 15:58:07 analyze done in 3s: 1452 candidate rows
+- 2026-11-10 15:58:07 fig1_data: check pass=True
+- 2026-11-10 15:58:20 README.md and summary.json written
+- 2026-11-10 15:58:31 README.md and summary.json written
+- 2026-11-10 15:59:11 analyze done in 5s: 2292 candidate rows
+- 2026-11-10 15:59:35 README.md and summary.json written
+- 2026-11-10 16:00:30 checks: pass=True
+- 2026-11-10 16:00:30 README.md and summary.json written
+- 2026-11-10 16:00:45 README.md and summary.json written
+- 16:01 added need-capped sensitivity designs, end-to-end metric check vs gate2 metrics.csv (pass), tests (9 pass), README final. DONE except final summary message.
+- 2026-11-10 16:01:35 analyze done in 5s: 2292 candidate rows
+- 2026-11-10 16:01:35 fig1_data: check pass=True
+- 2026-11-10 16:01:36 checks: pass=True
+- 2026-11-10 16:01:36 README.md and summary.json written

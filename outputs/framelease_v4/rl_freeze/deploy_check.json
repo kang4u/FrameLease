@@ -1,0 +1,339 @@
+{
+ "bench_states": {
+  "kind": "choice states",
+  "n": 5000
+ },
+ "checks": "GAP_AUDIT P3-2: loaded by name through behaviour.register_utility_name + v3_shield.make_utility with an absolute FRAMELEASE_V4_QNET; logged decision rows replayed through v3_shield.decide (answer in A_feas, reason, a_det depth = d*, bypass -> a_det, no deviation without both heads); the sha256 pin refuses another file; bench_qnet p50 / p99 against B_pi = 100 us (Sec. 5.7)",
+ "d_star": 1,
+ "failures": [],
+ "gate": "featurize_forward p99 <= B_pi",
+ "host": {
+  "affinity": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15
+  ],
+  "cpu": "Intel(R) Core(TM) i5-14490F",
+  "loadavg": [
+   3.7890625,
+   6.5888671875,
+   5.8486328125
+  ],
+  "threads": {
+   "MKL_NUM_THREADS": "1",
+   "OMP_NUM_THREADS": "1",
+   "OPENBLAS_NUM_THREADS": "1"
+  }
+ },
+ "mode": "production",
+ "n_logged_runs": 132,
+ "networks": {
+  "bandit": {
+   "a_det_depth": 1,
+   "abs_path": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_freeze/qnet_bandit.json",
+   "arm": "fl_bandit",
+   "bench_gate_p99_us": 11.56612999999998,
+   "bench_us": {
+    "decide_bypass": {
+     "max_us": 6.572,
+     "n": 20000,
+     "p50_us": 1.298,
+     "p90_us": 1.497,
+     "p99_us": 1.877049999999992
+    },
+    "decide_heuristic": {
+     "max_us": 5.511,
+     "n": 20000,
+     "p50_us": 0.576,
+     "p90_us": 0.636,
+     "p99_us": 1.1790099999999983
+    },
+    "decide_q": {
+     "max_us": 36.074,
+     "n": 20000,
+     "p50_us": 10.413499999999999,
+     "p90_us": 10.994,
+     "p99_us": 13.796139999999976
+    },
+    "featurize_forward": {
+     "max_us": 17.771,
+     "n": 20000,
+     "p50_us": 8.153,
+     "p90_us": 8.733,
+     "p99_us": 11.56612999999998
+    },
+    "forward": {
+     "max_us": 11.082,
+     "n": 20000,
+     "p50_us": 4.767,
+     "p90_us": 5.007100000000002,
+     "p99_us": 6.806049999999992
+    },
+    "select": {
+     "max_us": 20.471,
+     "n": 20000,
+     "p50_us": 9.823,
+     "p90_us": 10.408,
+     "p99_us": 13.196019999999997
+    }
+   },
+   "failures": [],
+   "family": "bandit",
+   "file_sha256": "d70c979df81780ac9e97eb36b8b88d7e52bbc71c19d5d84b32174d8c5b2018a7",
+   "identity": {
+    "a_det_depth": true,
+    "family": true,
+    "n_inputs": true,
+    "policy_budget": true
+   },
+   "n_inputs": 16,
+   "name": "v4_qnet_1c3d57e3d8e7",
+   "ok": true,
+   "path": "outputs/framelease_v4/rl_freeze/qnet_bandit.json",
+   "pin_other": "v4_qnet_5d8ffd7cf7dd",
+   "pin_refuses_other_file": true,
+   "policy_budget_s": 0.0001,
+   "replay": {
+    "actions_at_choice": {
+     "REFINE": 3761,
+     "REFRESH": 2830
+    },
+    "bypass": {
+     "disabled": 0,
+     "nonfinite": 0,
+     "overrun": 0,
+     "slack": 0
+    },
+    "bypass_not_adet": 0,
+    "choice_rows": 6591,
+    "depth_not_d_star": 0,
+    "deviation_rate": 0.5706266120467304,
+    "deviation_unsupported": 0,
+    "deviations": 3761,
+    "disabled_runs": 0,
+    "left_feasible_set": 0,
+    "network_calls": 6591,
+    "problems": {},
+    "rows": 17880,
+    "runs": 132,
+    "shield_mismatch": 0,
+    "wrong_reason": 0
+   },
+   "supported": [
+    true,
+    true
+   ],
+   "weights_sha256": "1c3d57e3d8e7671fcff43fdc4a2debf5afc08013fa028f60abe46156489e4145"
+  },
+  "fqi": {
+   "a_det_depth": 1,
+   "abs_path": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_freeze/qnet_fqi.json",
+   "arm": "fl_full",
+   "bench_gate_p99_us": 10.804079999999987,
+   "bench_us": {
+    "decide_bypass": {
+     "max_us": 7.505,
+     "n": 20000,
+     "p50_us": 1.293,
+     "p90_us": 1.507,
+     "p99_us": 2.147
+    },
+    "decide_heuristic": {
+     "max_us": 4.631,
+     "n": 20000,
+     "p50_us": 0.574,
+     "p90_us": 0.627,
+     "p99_us": 1.0010099999999984
+    },
+    "decide_q": {
+     "max_us": 35.423,
+     "n": 20000,
+     "p50_us": 10.405,
+     "p90_us": 10.977100000000002,
+     "p99_us": 14.09411999999998
+    },
+    "featurize_forward": {
+     "max_us": 15.384,
+     "n": 20000,
+     "p50_us": 8.104,
+     "p90_us": 8.609,
+     "p99_us": 10.804079999999987
+    },
+    "forward": {
+     "max_us": 11.038,
+     "n": 20000,
+     "p50_us": 4.835,
+     "p90_us": 5.089,
+     "p99_us": 7.276269999999957
+    },
+    "select": {
+     "max_us": 64.974,
+     "n": 20000,
+     "p50_us": 9.941,
+     "p90_us": 10.5911,
+     "p99_us": 14.150059999999991
+    }
+   },
+   "failures": [],
+   "family": "fqi",
+   "file_sha256": "b98de0ea0c0e55a3fa7c9a8accd8780b72f0ae9bc62c19bdf95f1e66e7f390f9",
+   "identity": {
+    "a_det_depth": true,
+    "family": true,
+    "n_inputs": true,
+    "policy_budget": true
+   },
+   "n_inputs": 16,
+   "name": "v4_qnet_5d8ffd7cf7dd",
+   "ok": true,
+   "path": "outputs/framelease_v4/rl_freeze/qnet_fqi.json",
+   "pin_other": "v4_qnet_1c3d57e3d8e7",
+   "pin_refuses_other_file": true,
+   "policy_budget_s": 0.0001,
+   "replay": {
+    "actions_at_choice": {
+     "REFINE": 4160,
+     "REFRESH": 2431
+    },
+    "bypass": {
+     "disabled": 0,
+     "nonfinite": 0,
+     "overrun": 0,
+     "slack": 0
+    },
+    "bypass_not_adet": 0,
+    "choice_rows": 6591,
+    "depth_not_d_star": 0,
+    "deviation_rate": 0.631163708086785,
+    "deviation_unsupported": 0,
+    "deviations": 4160,
+    "disabled_runs": 0,
+    "left_feasible_set": 0,
+    "network_calls": 6591,
+    "problems": {},
+    "rows": 17880,
+    "runs": 132,
+    "shield_mismatch": 0,
+    "wrong_reason": 0
+   },
+   "supported": [
+    true,
+    true
+   ],
+   "weights_sha256": "5d8ffd7cf7ddd365011dd740a2b2e518732ae0c3d62374628443713fc47ebc29"
+  },
+  "fqi_nolease": {
+   "a_det_depth": 1,
+   "abs_path": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_freeze/qnet_fqi_nolease.json",
+   "arm": "fl_fqi_nolease",
+   "bench_gate_p99_us": 11.078049999999992,
+   "bench_us": {
+    "decide_bypass": {
+     "max_us": 7.519,
+     "n": 20000,
+     "p50_us": 1.412,
+     "p90_us": 1.688,
+     "p99_us": 2.4830099999999984
+    },
+    "decide_heuristic": {
+     "max_us": 3.374,
+     "n": 20000,
+     "p50_us": 0.572,
+     "p90_us": 0.622,
+     "p99_us": 0.791
+    },
+    "decide_q": {
+     "max_us": 117.779,
+     "n": 20000,
+     "p50_us": 9.512,
+     "p90_us": 10.024,
+     "p99_us": 13.911289999999953
+    },
+    "featurize_forward": {
+     "max_us": 63.83,
+     "n": 20000,
+     "p50_us": 7.231,
+     "p90_us": 7.775,
+     "p99_us": 11.078049999999992
+    },
+    "forward": {
+     "max_us": 59.514,
+     "n": 20000,
+     "p50_us": 4.715,
+     "p90_us": 5.01,
+     "p99_us": 12.073009999999998
+    },
+    "select": {
+     "max_us": 21.515,
+     "n": 20000,
+     "p50_us": 8.973,
+     "p90_us": 9.521,
+     "p99_us": 13.655079999999987
+    }
+   },
+   "failures": [],
+   "family": "fqi_nolease",
+   "file_sha256": "757d7b99c76d5f69217acf50b3633d407555f2346492736447c58ea6b5cfdc23",
+   "identity": {
+    "a_det_depth": true,
+    "family": true,
+    "n_inputs": true,
+    "policy_budget": true
+   },
+   "n_inputs": 10,
+   "name": "v4_qnet_6d5026a7b46f",
+   "ok": true,
+   "path": "outputs/framelease_v4/rl_freeze/qnet_fqi_nolease.json",
+   "pin_other": "v4_qnet_5d8ffd7cf7dd",
+   "pin_refuses_other_file": true,
+   "policy_budget_s": 0.0001,
+   "replay": {
+    "actions_at_choice": {
+     "REFINE": 4529,
+     "REFRESH": 2062
+    },
+    "bypass": {
+     "disabled": 0,
+     "nonfinite": 0,
+     "overrun": 0,
+     "slack": 0
+    },
+    "bypass_not_adet": 0,
+    "choice_rows": 6591,
+    "depth_not_d_star": 0,
+    "deviation_rate": 0.6871491427704446,
+    "deviation_unsupported": 0,
+    "deviations": 4529,
+    "disabled_runs": 0,
+    "left_feasible_set": 0,
+    "network_calls": 6591,
+    "problems": {},
+    "rows": 17880,
+    "runs": 132,
+    "shield_mismatch": 0,
+    "wrong_reason": 0
+   },
+   "supported": [
+    true,
+    true
+   ],
+   "weights_sha256": "6d5026a7b46f6ddf7d4d7462a1919af0b6375c43228a539dd50ef2dee48c3fba"
+  }
+ },
+ "ok": true,
+ "policy_budget_us": 100.0,
+ "schema": "framelease_v4.p3_rl_deploy_check/1"
+}

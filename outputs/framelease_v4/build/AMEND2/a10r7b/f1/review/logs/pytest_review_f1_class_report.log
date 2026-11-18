@@ -1,0 +1,24 @@
+.......                                                                  [100%]
+==================================== PASSES ====================================
+____ ClassReportOnVerifierOutput.test_analysis_columns_separated_by_metric _____
+---------------------------- Captured stdout setup -----------------------------
+verify_table1_extra DIFFER (development): 4 run dirs (4 recomputed), 4 runs.csv rows (4 used, 0 of them without raw logs), 4 used analysis cells; comparisons 242, differences 50 (24 in values the analysis reads)
+  analysis                 compared      4  differences     4  (analysis-read 4; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared      8  differences     2  (analysis-read 2; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared      8  differences     4  (analysis-read 4; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared     22  differences     8  (analysis-read 8; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared    172  differences     7  (analysis-read 2; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  secondary.csv            compared      7  differences     4  (analysis-read 4; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  summary.json             compared     21  differences    21  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  differences by cause: F1 19, unclassified 31; in values the analysis reads: F1 14, unclassified 10; agreements within bounds at the value under a convention: none; plans changed by F1: 1 in 1 run directories, by F3: 0 in 0 run directories
+outputs: /tmp/review_f1a11_kj7vb834/out
+=========================== short test summary info ============================
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_analysis_columns_separated_by_metric
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_one_side_empty_gap
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_pinned_versions
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_release_ignores_status_gap
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_runs_per_arm_from_runs_csv
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_sha256sums_not_checked_gap
+PASSED outputs/framelease_v4/build/AMEND2/a10r7b/f1/review/test_review_f1_class_report.py::ClassReportOnVerifierOutput::test_verifier_differs_and_counts_agree
+7 passed in 0.25s
+0.57 s 62116 kB

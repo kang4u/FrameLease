@@ -1,0 +1,11 @@
+(exit 1, 12.8 s)
+apply_locked: exit 1 (output /tmp/A10A11/applier/treeT4/outputs/framelease_v4/amendment_a10/apply.out)
+
+--- apply.out
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/A10A11/applier/treeT4/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+STOP: filled entry problem: ['**Amendment A221: probe.**'] / anchor phrase 0 times
+apply_locked: PROTOCOL.md unchanged; the manifest equals the sealed one
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

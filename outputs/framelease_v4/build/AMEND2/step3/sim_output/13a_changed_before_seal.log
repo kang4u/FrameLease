@@ -1,0 +1,28 @@
+amend_step3.sh 2026-11-15T06:20:52+08:00 (pid 246558): root /tmp/AMEND3/tree; transaction directory /tmp/AMEND3/runs/13a
+inputs: step3_txn.py a778ad618c0a587a2a73fa8d3bae564bcac4945ec8f4ddbf3157b3b61fc703a0,
+        step3_spec.json 5ffa420793cb394fe6cd148663254c9d67a25dbf7ca016ae0c789ca48cba9142
+== 1. pre-check (no lock)
+step3_txn.py precheck 2026-11-15T06:20:52+0800 (pid 246575): root /tmp/AMEND3/tree, work /tmp/AMEND3/runs/13a/precheck
+registration.py --verify (exit 1): manifest: 1 files differ: [('framelease_v4/analysis/verify_table1_extra.py', 'a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa', 'd416bdedd8eb7ed4f19b03bdc559da2f4589dfd208e9b687f22545a6dfaaf4af')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registered baseline: 153 files; in the sealed manifest at their sha256 and unchanged in the tree: yes
+P1 job files: 37 in the sealed manifest; unchanged in the tree: yes
+P1 driver entries: Tuning freeze line 2211, D1 summary line 2221; outputs/framelease_v4/tuning/d1/FULL_d1_summary.json sha256 9095a11a7daaa4a982206af657829e43d475043d3102559f4c2ef137b6c8aa37 cited by the D1 summary entry
+check_drafts.py exit 0: all checks passed
+dry composition: 2836 lines; entries A3 193 lines, A9 43 lines, A7 54 lines, A4 74 lines, OP 114 lines; 40 files become registered
+precheck: passed (dry files in /tmp/AMEND3/runs/13a/precheck)
+== 3. locked part (framelease_v4/.protocol.lock, wait up to 600 s)
+lock held 2026-11-15T06:20:59+08:00; time stamp of the five entries: 2026-11-15 06:20; from here on this script ignores SIGINT,
+     SIGTERM and SIGHUP (the helper undoes everything on a signal before the seal)
+step3_txn.py locked 2026-11-15T06:20:59+0800 (pid 246627): root /tmp/AMEND3/tree, work /tmp/AMEND3/runs/13a
+sealed state copied into /tmp/AMEND3/runs/13a: PROTOCOL.md 73599efe65c2063d3396c957d3b929f4f37ab50fafd58cef0cd4bd6134ae4b15, MANIFEST.sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+registration.py --write-manifest --force (exit 0): wrote /tmp/AMEND3/tree/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 8c50b99209af9648f0ff35c95a8725a1c6585f221dbd26ea1d56545a2e60e0c9
+post-manifest check (step 3.2): OK; P1 job files of the sealed manifest: OK; P1 job files new in the manifest: none
+new manifest: 221 files, sha256 8c50b99209af9648f0ff35c95a8725a1c6585f221dbd26ea1d56545a2e60e0c9; new in it: none; changed since the seal (unregistered): ['framelease_v4/analysis/verify_table1_extra.py']
+PROTOCOL.md written: sha256 6f9cc75f677bef1c6d28dda298af40234c7192f285e7a427332d97443321cf74 (2836 lines)
+pre-seal check (PROTOCOL.md and the new manifest on disk; registered baseline, P1 job files and the 40 newly registered files at their new-manifest sha256; must_equal): ['framelease_v4/protocol/p1_driver.py (registered) changed after --write-manifest']
+FAILURE before the seal: pre-seal check: framelease_v4/protocol/p1_driver.py (registered) changed after --write-manifest
+restore: restored ['framelease_v4/PROTOCOL.md', 'outputs/framelease_v4/registration/MANIFEST.sha256']; registration.py --verify: manifest: 2 files differ: [('framelease_v4/analysis/verify_table1_extra.py', 'a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa', 'd416bdedd8eb7ed4f19b03bdc559da2f4589dfd208e9b687f22545a6dfaaf4af'), ('framelease_v4/protocol/p1_driver.py', 'e881692e40db20786bf5a821f113d0554edd3db47b0633ef3a94821208cdebcb', '35f92d99d64e214968cbacf20bd95f07544e27a34a77ee67baa89ce951a1c756')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK -> sealed state OK
+lock released 2026-11-15T06:21:09+08:00
+STOP: the transaction failed before the seal and was undone: PROTOCOL.md and MANIFEST.sha256 are
+     restored and both seals verify (journal step 'restored'; nothing applied). Cause: the FAILURE
+     line in /tmp/AMEND3/runs/13a/amend_step3.log; journal /tmp/AMEND3/runs/13a/journal.json

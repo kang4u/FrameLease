@@ -1,0 +1,26 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B framelease_v4/protocol/test_freeze.py --verify --jobs-dir outputs/framelease_v4/test_jobs --rl-freeze outputs/framelease_v4/rl_freeze/rl_freeze.json --selection outputs/framelease_v4/tuning/selection.json --stress-dir outputs/framelease_v4/stress --out-dir outputs/framelease_v4/test_freeze --queue-dir outputs/framelease_v4/queue_p4/jobs.d
+{
+ "record": "outputs/framelease_v4/test_freeze/test_freeze.json",
+ "record_sha256": "e9e2d309fefd49209d1303356328049f8c0e89534f1b0cfaffffea82ed1ba633",
+ "manifest_sha256": "69aae833d875d64003b3729ea83a386bcc0ce61f23da767b9cc03103763b2a93",
+ "cited_lines": {
+  "record": [
+   2885,
+   2903
+  ],
+  "manifest": [
+   2887,
+   2905
+  ]
+ },
+ "queue_copies": [
+  "b11_ti_main.jsonl",
+  "b12_f3_k.jsonl",
+  "b13_a_lease.jsonl",
+  "b14_a_rl.jsonl",
+  "b15_s_seed12.jsonl",
+  "b16_s_risk.jsonl"
+ ]
+}
+test freeze OK: the P4-P6 job files may be copied, in name order, into outputs/framelease_v4/queue_p4/jobs.d/
+TIME 0.26 s, max RSS 41244 KB

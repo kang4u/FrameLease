@@ -1,0 +1,105 @@
+{
+ "by_kappa": {
+  "1.0": {
+   "choice_epochs": 3112,
+   "decision_epochs": 7813,
+   "n_episodes": 44,
+   "p_both": 0.39831050812747987,
+   "per_episode": {
+    "max": 1.0,
+    "median": 0.7819834250295982,
+    "min": 0.002232142857142857
+   }
+  },
+  "1.5": {
+   "choice_epochs": 1669,
+   "decision_epochs": 5479,
+   "n_episodes": 44,
+   "p_both": 0.30461763095455374,
+   "per_episode": {
+    "max": 0.9863013698630136,
+    "median": 0.7620967741935484,
+    "min": 0.006666666666666667
+   }
+  },
+  "2.0": {
+   "choice_epochs": 1810,
+   "decision_epochs": 4588,
+   "n_episodes": 44,
+   "p_both": 0.3945074106364429,
+   "per_episode": {
+    "max": 0.9763779527559056,
+    "median": 0.580603448275862,
+    "min": 0.0
+   }
+  }
+ },
+ "choice_epochs": 3112,
+ "decision_epochs": 7813,
+ "kappa": 1.0,
+ "label": "testable",
+ "metrics_v4": {
+  "agrees": true,
+  "choice_epochs": 3112,
+  "logs": {
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261114T224321_4704d28b/raw/agent/framelease/decisions.jsonl": "a481d3f2c002defdd99c2487389e7ba36c475fe8a0aa9a1f2fea1ae9aafb5655",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261114T232012_308b7c87/raw/agent/framelease/decisions.jsonl": "5a935e8abc7ef055c47eb23a75e961a9b2294578b66c4e109f39d5da952162c1",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261114T235421_4b70f61b/raw/agent/framelease/decisions.jsonl": "44e22a3657b729279e0006b57378bcabd1871008269c64cd351d18b340aaafbd",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T000325_41171550/raw/agent/framelease/decisions.jsonl": "afaa8f98093d9cd5774aa51b9574c304f0941053c676ee92ba051638b328ca63",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T004348_890ee2b8/raw/agent/framelease/decisions.jsonl": "ffb175ea37d18ec3d853f295a39177570f33fb4dd9ed52e9ac5284ef2ee51793",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T010349_af180c87/raw/agent/framelease/decisions.jsonl": "dc3961040ce87d06845b1d3ccc7767a9a9a79f2efbcc7a89faf41c0a1d7a990c",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T011247_d1d1e286/raw/agent/framelease/decisions.jsonl": "f6ad508903e18b8a2ff8d5736d0b325da0479fb82d236b99b4cf8fe7dbbe2853",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T013145_6fdfb5b6/raw/agent/framelease/decisions.jsonl": "a3f5aca3471f17c7b48834f191f89dc1270ff5d731998e588754912c8db4ea3f",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T013827_993c31c4/raw/agent/framelease/decisions.jsonl": "6eb51d00148a67f03e1124140ee90e2f696bd4f52c022d71cbe291aee7e6d2b7",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T014504_ccc2d6f6/raw/agent/framelease/decisions.jsonl": "c3b1792751857ef90dcc2fdf03e8ee8e81069bdf03e468732c0ec54eac3673df",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T020227_44ed215f/raw/agent/framelease/decisions.jsonl": "a9bc7148a71d6d356ccafd4d5dd2a91a3ac4b857710ba69502321d44738b2faf",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T021702_a89c742c/raw/agent/framelease/decisions.jsonl": "9cb1524db87d111965eb729ea7000ed5c447c0c244b988e63eef1eaab3fa2d8c",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T023023_572f16e9/raw/agent/framelease/decisions.jsonl": "be1fcb371cd23a90d2ae994d459975dd02beaa0bc1934bb9c99189bc44da76db",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T024756_ac379205/raw/agent/framelease/decisions.jsonl": "234fa61c35b541ae43e33de40e482273ae9031c6fb0faf7ba3b5610e6ee22648",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T030232_166cae12/raw/agent/framelease/decisions.jsonl": "feb306820424d1a3fc09846593d5816cae55e0377e61c27a14c5369bcd8ff506",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T031715_7467a3e2/raw/agent/framelease/decisions.jsonl": "80485d33077e377fb91fd7255a30e9d7304db8464527f811b94ff948a58c0b37",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T034507_0a2d5e28/raw/agent/framelease/decisions.jsonl": "3165ce566349c901678d007837278e2d9adb5fa0d6d8c3f2fc1bda45806a005f",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T035340_ee97a380/raw/agent/framelease/decisions.jsonl": "d8f3de6567e25035871e48d110073e4435e3d58e427fc2465686f162e9156692",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T040020_ae60fa31/raw/agent/framelease/decisions.jsonl": "cd00e93f55bedc50162e7a4fb6aaac2ca221431a684ceb7408e15584240765e8",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T045518_9b0a5cd4/raw/agent/framelease/decisions.jsonl": "382f963af4364df391ea3a36240a9cea013eeac040ba488c5e1a69fe27010752",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T051504_4f570cfa/raw/agent/framelease/decisions.jsonl": "541ff5bb83022bfe09b6ca92ccf03e58f8d6d5a378c2a3d8eb6bd2e044058067",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T052442_414b7c74/raw/agent/framelease/decisions.jsonl": "23cdf4177267dd03fab508533a23e3e90cf80b5a4a1c4b633f392354933d572a",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T054010_e1862c96/raw/agent/framelease/decisions.jsonl": "2dd900ed9e1bf5d5d3ae1f1cb2f84c0f86a33c27c1495213ec99d4737597b9be",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T054856_5f6d21bd/raw/agent/framelease/decisions.jsonl": "7d45182168bd4b54cfbfddc4f470edb92a85a1ac51eadc85b51b06f59b65d29e",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T055944_f96aa9eb/raw/agent/framelease/decisions.jsonl": "4e82d22f8ae7c01d91cf1008db90a608730d37c2d76f1781a2368848c9d45026",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T061810_b4456612/raw/agent/framelease/decisions.jsonl": "31919368ba48e7a279dc7869dbcfb89308afa26fba47d7b1b251d655ad66cb16",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T063350_43376ade/raw/agent/framelease/decisions.jsonl": "42a09ad84d3a06292e5deb665e248d22065a21aa951d677ed1df5ca06bff5ebe",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T070221_9542ad26/raw/agent/framelease/decisions.jsonl": "ca8e2ed602ca78dca93dbec9f4f538bbb30b92cf182b3549c3674f15bcc87cf4",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T074841_e2ab1cd2/raw/agent/framelease/decisions.jsonl": "151a3cb51a723d66c13cf4f11f98c60bc7ce302f370e6f15854a33985e6f322e",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T075755_ad88d6ef/raw/agent/framelease/decisions.jsonl": "d8a6dcca4f61f1d59135eb5f548d9d43bed8de913dadffd57131cf66e2b8b439",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T080214_43f832e1/raw/agent/framelease/decisions.jsonl": "304408071430afe00db2548a37e9f3e9037a78d933266e5f5d6db5b4649252a9",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T082348_91833351/raw/agent/framelease/decisions.jsonl": "d88f96509b5f80fdc52d1d24488623fcdb3dedffbf5c4df63e08ff8ca9660735",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T083148_08773fc8/raw/agent/framelease/decisions.jsonl": "64645482f14649b03338a35b372fbce8947eeb270c9bf50bfc0ef1c2c1791030",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T083743_1518bd48/raw/agent/framelease/decisions.jsonl": "d1f025ab8f067c55605cfcf3f3785ff92b59ec848d972b71088be8ec6084487c",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T092204_cf47c529/raw/agent/framelease/decisions.jsonl": "88c7c4a14a6dee4f7ca18a7d78a0f44876c02b975ff43849b4e0bd9f53a07c44",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T093837_62a7e23c/raw/agent/framelease/decisions.jsonl": "2c2efff59a09fac1b7506f7b594bde20143934733e980e149a6d073c4bd652b7",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T095035_c4953318/raw/agent/framelease/decisions.jsonl": "073249ca77743ef6cc337385f1fe588e5f4ab683053fa639a01035b7947299b7",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T103238_6d996bc1/raw/agent/framelease/decisions.jsonl": "06d93b993c45c5dd9009bc329401b560996496bbd25aca1e7bda0c2ea1e7c629",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T104329_9a233c7c/raw/agent/framelease/decisions.jsonl": "341e12bdf753244596c36803b529093c38b2058a1c1d5a854c56fa5c3df2b5de",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T110016_d25e19dc/raw/agent/framelease/decisions.jsonl": "377102a6d4366b43eeb81551abd12a8b4dbbd8773664fc528a9be1202a86a78b",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T113057_3e9636c2/raw/agent/framelease/decisions.jsonl": "31013cc2ccca47bda01dd10fd72aecb9039051e47924579add600cd35d6d13e6",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T113947_928ebbf3/raw/agent/framelease/decisions.jsonl": "b8da296f526eb23e363bc9bb82a741282fdd4efd34f5630901eb8d3cc8c41e47",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T114600_00455d72/raw/agent/framelease/decisions.jsonl": "126c14ada73529e621e6bbfc28ce273185f2391f240fa9b1fbae3d53045d371c",
+   "outputs/framelease_v4/rl_data/k1.0/runs/20261115T120813_d48c8757/raw/agent/framelease/decisions.jsonl": "d1f792c102c27349ece69923ebdef6547320fbaf909debaf72e70ac46bc33b28"
+  },
+  "n_runs": 44,
+  "p_both": 0.39831050812747987,
+  "rule": "metrics_v4.decision_metrics (the P_both of every table) pooled over the same runs; its shield and choice epoch counts must equal the dataset's",
+  "shield_epochs": 7813
+ },
+ "n_episodes": 44,
+ "p_both": 0.39831050812747987,
+ "per_episode": {
+  "max": 1.0,
+  "median": 0.7819834250295982,
+  "min": 0.002232142857142857
+ },
+ "rule": "P_both = Pr(|A_feas| = 2) over decision epochs (outline IV-B); if P_both < 0.05 in the kappa-1.0 episodes of the RL dataset the RL contribution is labelled \"not testable at this operating point\", the RL arms still run and H2 is reported with that label (PROTOCOL Sec. 5.8)",
+ "schema": "framelease_v4.p3_rl_p_both/1",
+ "threshold": 0.05
+}

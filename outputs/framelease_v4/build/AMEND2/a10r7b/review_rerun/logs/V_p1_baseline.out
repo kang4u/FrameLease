@@ -1,0 +1,7 @@
+apply_locked: exit 1 (output /tmp/AMEND3/a10r7b/rsim/treeV_p1_baseline/outputs/framelease_v4/amendment_a10/apply.out)
+registration --verify -> 1 | manifest: 1 files differ: [('framelease_v4/rl/RL_PROTOCOL.md', 'c12b935b740494fda4c54d6c162d7d8776a0a29bfe84e5b3ec14b482d1bf2557', 'unreadable (No such file or directory)')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/rl/RL_PROTOCOL.md']
+apply_locked: PROTOCOL.md unchanged; the manifest equals the sealed one
+manifest: 1 files differ: [('framelease_v4/rl/RL_PROTOCOL.md', 'c12b935b740494fda4c54d6c162d7d8776a0a29bfe84e5b3ec14b482d1bf2557', 'unreadable (No such file or directory)')]
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

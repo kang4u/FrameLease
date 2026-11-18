@@ -1,0 +1,61 @@
+tests: PASS analyze_v4 48 passed, 107 subtests
+tests: PASS prop1_coverage 22 passed, or 21 and the tree artifact the review names (Reproducible)
+tests: PASS figures_tables 50 passed
+tests: PASS verify_independent 28 passed, 20 subtests
+tests: PASS verify_table1_extra 71 passed, 67 subtests
+tests: PASS review_r7b 14 passed, 2 subtests
+tests: PASS no protected path, no __pycache__ in the tree
+tests: 85 s
+A: PASS A10 sealed, newly cited = the 8 A10 files
+A: PASS verify after A10
+A: PASS parsers after A10 without problem
+A: PASS refresh after A10: +8, none changed
+A: PASS A10 lines: no prose line > 120, no pattern
+A: PASS A11 sealed, newly cited = the 2 R7B files
+A: PASS verify after A11
+A: PASS parsers after A11 without problem
+A: PASS A11 lines: no prose line > 120, no pattern
+A: PASS post_check A11 exit 0 (refresh written)
+A: PASS post_check A10 after A11 fails on in-place 4 only (as the review found)
+A: 61 s
+B: PASS A11 first: STOP in-place 0 times, nothing changed
+B: 13 s
+C: PASS no overlap of the 5 A10 in-place texts
+C: PASS old text twice: STOP before write-manifest, nothing changed
+C: PASS derive_inplace5 exits 1 on the doubled paragraph
+C: 13 s
+D: PASS commit_audit.py changed: STOP before write-manifest (was: sealed)
+D: PASS phase refresh adopts nothing
+D: PASS control realized.py: STOP, nothing changed
+D: 32 s
+E: PASS phase_only: sealed, wrapper exit 95 (was: 0)
+E: PASS p1_baseline: sealed, wrapper exit 95 (was: 0)
+E: 45 s
+F: PASS F1: killed before the seal: entry kept, hand seal consistent
+F: PASS F2: the rewritten manifest is kept (was: restored), hand seal consistent
+F: PASS F3: truncated PROTOCOL.md: STOP at the seal check
+F: 47 s
+G: PASS caller TZ=UTC: sealed with Beijing time (was: UTC)
+G: 20 s
+H: PASS template line read as the G3 entry: check STOP, apply STOP (was: sealed)
+H: 32 s
+fix: PASS A: A10 and A11 sealed with the 8 and the 2 files
+fix: PASS D: STOP, nothing changed
+fix: PASS E: exit 95
+fix: PASS F2: kept, hand seal consistent
+fix: PASS G: applier alone under UTC stops; wrapper stamps Beijing time
+fix: PASS H: template STOP
+fix: 124 s
+V: PASS p1_baseline: removed registered file: STOP (was: sealed), the manifest still lists it
+V: PASS p1_baseline_fix: STOP, nothing changed
+V: PASS phase_only: removed registered file: STOP (was: sealed), the manifest still lists it
+V: PASS phase_only_fix: STOP, nothing changed
+V: 46 s
+T: PASS leftover temporary file: wrapper exit 96 (was: sealed into the manifest)
+T: 4 s
+D3: PASS p3_rl.py changed: STOP (was: sealed)
+D3: 13 s
+fixAV: PASS A10 then refresh then A11: 8 and 2 files, verify OK, parsers clean
+fixAV: PASS owners: A10 files by A10, R7B files by A11
+fixAV: 35 s
+ALL EXPECTED

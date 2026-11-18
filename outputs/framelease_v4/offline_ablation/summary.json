@@ -1,0 +1,976 @@
+{
+ "bottom_line": [
+  "1. **Age-Only cannot be risk-controlled.** Every positive age deadline already misses 42.0% of the conflicts (T_age = 0.05 s; plans whose conflict starts within T_c of capture). The shortest deadline that covers the need misses 62.8% [38.3, 74.3] (T_age 1.00 s, need 0.964 s; R_marg 10.5%) and 80.4% (1.85 s, need 1.842 s). At any R_cond limit up to 30% (TRAIN-selected, nested and in-sample alike) it can only fall back: continuity 0%, premature refresh 100%.",
+  "2. **Action-conditioned leases make the risk controllable.** At R_cond <= 5% (nested leave-one-clip-out, held-out per clip) the Suffix-Aligned lease keeps 53.1% of plans continuous at 0.964 s (realized R_cond 5.0%, utilization 54.8%) and 40.8% at 1.842 s; Age-Only keeps 0%.",
+  "3. **Suffix alignment is not better than the whole-horizon leases at matched risk.** Nested at R_cond <= 5%: Suffix 53.1% vs Global-Margin 52.1% continuity at 0.964 s (paired difference +1.0 [-4.8, +5.6] points) and 40.8% vs 43.7% at 1.842 s (-2.9 [-7.3, +1.2]); utilization 54.8% vs 54.4%. The whole-horizon control with the same tau-indexed envelope reaches 53.6% at both needs (Suffix minus control at 1.842 s: -12.8 [-19.1, -7.2]). The outline's expected effect (\"larger usable window at a similar validity risk\") is not observed on UniDriveVLA's own detections.",
+  "4. **Where suffix alignment does help: the high-continuity end.** Without an envelope the whole-horizon leases saturate at 73.8% continuity (R_cond 14.7%), while the suffix lease reaches 83.0% at 0.964 s (R_cond 23.8%) because it ignores approaches after the need. That region is above every literature risk level used so far (5-10%).",
+  "5. **TRAIN-selected settings (the \"best training-clip setting\")** are not risk-matched: TRAIN has only 12 conflicts, so R_cond <= 5% on TRAIN means zero TRAIN misses. Suffix picks E0 q70 (TRAIN) and Global E0 q80 (TRAIN); on VAL Suffix has 62.5% vs 42.4% continuity (0.964 s) but also R_cond 7.2% vs 3.3% (above the 5% limit for Suffix).",
+  "6. **The v2 deployed lease** (Global-Margin, E0-orig q95, 2.0 s cap) is a low-risk, low-availability point: continuity 37.2% / 27.4% (0.964 / 1.842 s) at R_cond 0.9%; P(H = 0) 49.4%.",
+  "7. **Conclusion for Table II-A.** The validity-lease row that the data supports is \"action-conditioned vs age-only\", not \"suffix vs global\". All conclusions hold without the static V = 0 plans, without BlockedIntersection and with the 36-clip LOCO envelopes; if only violations inside the replacement window count (every lease capped at the need) the whole-horizon lease is ahead of Suffix: -9.3 [-18.8, -2.3] points at 0.964 s and -12.0 [-19.2, -5.9] at 1.842 s (Sec. 5)."
+ ],
+ "nested_paired": {
+  "SUFFIX-GLOBAL|fast|0.05": {
+   "continuity": [
+    0.0101532,
+    -0.0475703,
+    0.0555289
+   ],
+   "utilization": [
+    0.00371471,
+    -0.0275267,
+    0.034619
+   ],
+   "premature_refresh": [
+    -0.0121549,
+    -0.0628279,
+    0.0509797
+   ],
+   "R_cond": [
+    0.00110011,
+    -0.0264945,
+    0.0331107
+   ]
+  },
+  "SUFFIX-GLOBAL|meas|0.05": {
+   "continuity": [
+    -0.0289828,
+    -0.0731648,
+    0.0121771
+   ],
+   "utilization": [
+    0.00306082,
+    -0.0286735,
+    0.0344855
+   ],
+   "premature_refresh": [
+    0.0322099,
+    -0.0138844,
+    0.0831978
+   ],
+   "R_cond": [
+    0.00110011,
+    -0.0264945,
+    0.0331107
+   ]
+  },
+  "SUFFIX-GLOBAL|fast|0.1": {
+   "continuity": [
+    -0.0166144,
+    -0.116093,
+    0.0586282
+   ],
+   "utilization": [
+    -0.0277899,
+    -0.114348,
+    0.0446644
+   ],
+   "premature_refresh": [
+    0.0189534,
+    -0.0701438,
+    0.124605
+   ],
+   "R_cond": [
+    0.00330033,
+    -0.079381,
+    0.047163
+   ]
+  },
+  "SUFFIX-GLOBAL|meas|0.1": {
+   "continuity": [
+    -0.105224,
+    -0.20179,
+    -0.0247723
+   ],
+   "utilization": [
+    -0.0277899,
+    -0.114348,
+    0.0446644
+   ],
+   "premature_refresh": [
+    0.120094,
+    0.0273883,
+    0.226829
+   ],
+   "R_cond": [
+    0.00330033,
+    -0.079381,
+    0.047163
+   ]
+  },
+  "SUFFIX-GLOBAL_TAU|fast|0.05": {
+   "continuity": [
+    -0.00424589,
+    -0.0600107,
+    0.0436957
+   ],
+   "utilization": [
+    -0.0275352,
+    -0.0767948,
+    0.0169005
+   ],
+   "premature_refresh": [
+    0.00412031,
+    -0.051413,
+    0.065537
+   ],
+   "R_cond": [
+    0.0,
+    -0.0473086,
+    0.0357612
+   ]
+  },
+  "SUFFIX-GLOBAL_TAU|meas|0.05": {
+   "continuity": [
+    -0.127561,
+    -0.19059,
+    -0.0720134
+   ],
+   "utilization": [
+    -0.0275352,
+    -0.0767948,
+    0.0169005
+   ],
+   "premature_refresh": [
+    0.143558,
+    0.0815899,
+    0.211323
+   ],
+   "R_cond": [
+    0.0,
+    -0.0473086,
+    0.0357612
+   ]
+  },
+  "SUFFIX-GLOBAL_TAU|fast|0.1": {
+   "continuity": [
+    0.0587041,
+    -0.0335276,
+    0.128505
+   ],
+   "utilization": [
+    0.0283439,
+    -0.0609526,
+    0.100342
+   ],
+   "premature_refresh": [
+    -0.0648949,
+    -0.151465,
+    0.0367014
+   ],
+   "R_cond": [
+    0.0121012,
+    -0.0758794,
+    0.0650492
+   ]
+  },
+  "SUFFIX-GLOBAL_TAU|meas|0.1": {
+   "continuity": [
+    -0.0950711,
+    -0.190604,
+    -0.0211783
+   ],
+   "utilization": [
+    0.0283439,
+    -0.0609526,
+    0.100342
+   ],
+   "premature_refresh": [
+    0.106869,
+    0.0213641,
+    0.208773
+   ],
+   "R_cond": [
+    0.0121012,
+    -0.0758794,
+    0.0650492
+   ]
+  },
+  "SUFFIX-AGE|fast|0.05": {
+   "continuity": [
+    0.53129,
+    0.406018,
+    0.668421
+   ],
+   "utilization": [
+    0.547777,
+    0.423307,
+    0.666954
+   ],
+   "premature_refresh": [
+    -0.590235,
+    -0.716224,
+    -0.462163
+   ],
+   "R_cond": [
+    0.049505,
+    0.0161972,
+    0.128696
+   ]
+  },
+  "SUFFIX-AGE|meas|0.05": {
+   "continuity": [
+    0.407975,
+    0.261313,
+    0.561759
+   ],
+   "utilization": [
+    0.547777,
+    0.423307,
+    0.666954
+   ],
+   "premature_refresh": [
+    -0.46971,
+    -0.616787,
+    -0.314108
+   ],
+   "R_cond": [
+    0.049505,
+    0.0161972,
+    0.128696
+   ]
+  },
+  "SUFFIX-AGE|fast|0.1": {
+   "continuity": [
+    0.653867,
+    0.544266,
+    0.768063
+   ],
+   "utilization": [
+    0.666566,
+    0.553878,
+    0.771134
+   ],
+   "premature_refresh": [
+    -0.723527,
+    -0.827339,
+    -0.605541
+   ],
+   "R_cond": [
+    0.10011,
+    0.0483632,
+    0.194848
+   ]
+  },
+  "SUFFIX-AGE|meas|0.1": {
+   "continuity": [
+    0.500092,
+    0.365377,
+    0.644412
+   ],
+   "utilization": [
+    0.666566,
+    0.553878,
+    0.771134
+   ],
+   "premature_refresh": [
+    -0.572312,
+    -0.708988,
+    -0.430849
+   ],
+   "R_cond": [
+    0.10011,
+    0.0483632,
+    0.194848
+   ]
+  }
+ },
+ "train_selected_alpha5": {
+  "AGE|fast": {
+   "candidate": "T_age=0.00s",
+   "continuity": 0.0,
+   "R_cond": 0.0,
+   "R_marg": 0.0,
+   "utilization": 0.0,
+   "premature_refresh": 1.0,
+   "mean_H_s": 0.0,
+   "continuity_ci": [
+    0.0,
+    0.0
+   ],
+   "R_cond_ci": [
+    0.0,
+    0.0
+   ],
+   "R_marg_ci": [
+    0.0,
+    0.0
+   ],
+   "utilization_ci": [
+    0.0,
+    0.0
+   ],
+   "premature_refresh_ci": [
+    1.0,
+    1.0
+   ]
+  },
+  "AGE|meas": {
+   "candidate": "T_age=0.00s",
+   "continuity": 0.0,
+   "R_cond": 0.0,
+   "R_marg": 0.0,
+   "utilization": 0.0,
+   "premature_refresh": 1.0,
+   "mean_H_s": 0.0,
+   "continuity_ci": [
+    0.0,
+    0.0
+   ],
+   "R_cond_ci": [
+    0.0,
+    0.0
+   ],
+   "R_marg_ci": [
+    0.0,
+    0.0
+   ],
+   "utilization_ci": [
+    0.0,
+    0.0
+   ],
+   "premature_refresh_ci": [
+    1.0,
+    1.0
+   ]
+  },
+  "GLOBAL|fast": {
+   "candidate": "T_q80",
+   "continuity": 0.423851,
+   "R_cond": 0.0330033,
+   "R_marg": 0.00553812,
+   "utilization": 0.458998,
+   "premature_refresh": 0.527606,
+   "mean_H_s": 1.06231,
+   "continuity_ci": [
+    0.2900029960154615,
+    0.5705754869267654
+   ],
+   "R_cond_ci": [
+    0.01043671868829789,
+    0.08363592010102165
+   ],
+   "R_marg_ci": [
+    0.0017030878041431753,
+    0.01078954630689705
+   ],
+   "utilization_ci": [
+    0.3282750814483731,
+    0.5956732582232978
+   ],
+   "premature_refresh_ci": [
+    0.3842988664575575,
+    0.6662339486297647
+   ]
+  },
+  "GLOBAL|meas": {
+   "candidate": "T_q80",
+   "continuity": 0.360716,
+   "R_cond": 0.0330033,
+   "R_marg": 0.00553812,
+   "utilization": 0.458998,
+   "premature_refresh": 0.584471,
+   "mean_H_s": 1.06231,
+   "continuity_ci": [
+    0.21698290792665523,
+    0.5143317433353661
+   ],
+   "R_cond_ci": [
+    0.01043671868829789,
+    0.08363592010102165
+   ],
+   "R_marg_ci": [
+    0.0017030878041431753,
+    0.01078954630689705
+   ],
+   "utilization_ci": [
+    0.3282750814483731,
+    0.5956732582232978
+   ],
+   "premature_refresh_ci": [
+    0.42798508245877065,
+    0.7410704182839861
+   ]
+  },
+  "SUFFIX|fast": {
+   "candidate": "T_q70",
+   "continuity": 0.624885,
+   "R_cond": 0.0715072,
+   "R_marg": 0.0119993,
+   "utilization": 0.6336,
+   "premature_refresh": 0.307169,
+   "mean_H_s": 1.43908,
+   "continuity_ci": [
+    0.5169015118038539,
+    0.7401688866213886
+   ],
+   "R_cond_ci": [
+    0.03376458136086746,
+    0.1482782639757098
+   ],
+   "R_marg_ci": [
+    0.0051753867208229705,
+    0.020652452305276427
+   ],
+   "utilization_ci": [
+    0.5160816502775325,
+    0.7414192169235206
+   ],
+   "premature_refresh_ci": [
+    0.20143335308787352,
+    0.4255541868404262
+   ]
+  },
+  "SUFFIX|meas": {
+   "candidate": "T_q70",
+   "continuity": 0.465756,
+   "R_cond": 0.0715072,
+   "R_marg": 0.0119993,
+   "utilization": 0.6336,
+   "premature_refresh": 0.46459,
+   "mean_H_s": 1.43908,
+   "continuity_ci": [
+    0.324393445500218,
+    0.6195545614844566
+   ],
+   "R_cond_ci": [
+    0.03376458136086746,
+    0.1482782639757098
+   ],
+   "R_marg_ci": [
+    0.0051753867208229705,
+    0.020652452305276427
+   ],
+   "utilization_ci": [
+    0.5160816502775325,
+    0.7414192169235206
+   ],
+   "premature_refresh_ci": [
+    0.32189247555512074,
+    0.6175131762134474
+   ]
+  }
+ },
+ "nested_alpha5": {
+  "AGE|fast": {
+   "modal_choice": "T_age=0.00s (32/32)",
+   "continuity": 0.0,
+   "R_cond": 0.0,
+   "R_marg": 0.0,
+   "utilization": 0.0,
+   "premature_refresh": 1.0,
+   "mean_H_s": 0.0,
+   "continuity_ci": [
+    0.0,
+    0.0
+   ],
+   "R_cond_ci": [
+    0.0,
+    0.0
+   ],
+   "R_marg_ci": [
+    0.0,
+    0.0
+   ],
+   "utilization_ci": [
+    0.0,
+    0.0
+   ],
+   "premature_refresh_ci": [
+    1.0,
+    1.0
+   ]
+  },
+  "AGE|meas": {
+   "modal_choice": "T_age=0.00s (32/32)",
+   "continuity": 0.0,
+   "R_cond": 0.0,
+   "R_marg": 0.0,
+   "utilization": 0.0,
+   "premature_refresh": 1.0,
+   "mean_H_s": 0.0,
+   "continuity_ci": [
+    0.0,
+    0.0
+   ],
+   "R_cond_ci": [
+    0.0,
+    0.0
+   ],
+   "R_marg_ci": [
+    0.0,
+    0.0
+   ],
+   "utilization_ci": [
+    0.0,
+    0.0
+   ],
+   "premature_refresh_ci": [
+    1.0,
+    1.0
+   ]
+  },
+  "GLOBAL|fast": {
+   "modal_choice": "T_x0.30 (25/32)",
+   "continuity": 0.521137,
+   "R_cond": 0.0484048,
+   "R_marg": 0.00812258,
+   "utilization": 0.544063,
+   "premature_refresh": 0.42192,
+   "mean_H_s": 1.26138,
+   "continuity_ci": [
+    0.3944323895925822,
+    0.6558793575460774
+   ],
+   "R_cond_ci": [
+    0.018065420748622968,
+    0.1173599651189103
+   ],
+   "R_marg_ci": [
+    0.0031989330378088044,
+    0.01489348470690905
+   ],
+   "utilization_ci": [
+    0.42314157487449566,
+    0.665575544222091
+   ],
+   "premature_refresh_ci": [
+    0.29338376494880836,
+    0.5568705597880405
+   ]
+  },
+  "GLOBAL|meas": {
+   "modal_choice": "T_x0.30 (25/32)",
+   "continuity": 0.436958,
+   "R_cond": 0.0484048,
+   "R_marg": 0.00812258,
+   "utilization": 0.544717,
+   "premature_refresh": 0.49808,
+   "mean_H_s": 1.26309,
+   "continuity_ci": [
+    0.30411109740299797,
+    0.5781237138530154
+   ],
+   "R_cond_ci": [
+    0.018065420748622968,
+    0.1173599651189103
+   ],
+   "R_marg_ci": [
+    0.0031989330378088044,
+    0.01489348470690905
+   ],
+   "utilization_ci": [
+    0.42337220853380764,
+    0.6656562688748018
+   ],
+   "premature_refresh_ci": [
+    0.3597253060691833,
+    0.6366639444671292
+   ]
+  },
+  "GLOBAL_TAU|fast": {
+   "modal_choice": "T_q30 (20/32)",
+   "continuity": 0.535536,
+   "R_cond": 0.049505,
+   "R_marg": 0.00830718,
+   "utilization": 0.575313,
+   "premature_refresh": 0.405645,
+   "mean_H_s": 1.33884,
+   "continuity_ci": [
+    0.41158988371079763,
+    0.6688733980414096
+   ],
+   "R_cond_ci": [
+    0.02,
+    0.1333400809716599
+   ],
+   "R_marg_ci": [
+    0.0038745579328193385,
+    0.014757417965453434
+   ],
+   "utilization_ci": [
+    0.4548496977942053,
+    0.6916639589945917
+   ],
+   "premature_refresh_ci": [
+    0.29425709688272805,
+    0.525396023228462
+   ]
+  },
+  "GLOBAL_TAU|meas": {
+   "modal_choice": "T_q30 (20/32)",
+   "continuity": 0.535536,
+   "R_cond": 0.049505,
+   "R_marg": 0.00830718,
+   "utilization": 0.575313,
+   "premature_refresh": 0.386732,
+   "mean_H_s": 1.33884,
+   "continuity_ci": [
+    0.41158988371079763,
+    0.6688733980414096
+   ],
+   "R_cond_ci": [
+    0.02,
+    0.1333400809716599
+   ],
+   "R_marg_ci": [
+    0.0038745579328193385,
+    0.014757417965453434
+   ],
+   "utilization_ci": [
+    0.4548496977942053,
+    0.6916639589945917
+   ],
+   "premature_refresh_ci": [
+    0.27649858421806267,
+    0.5045342901625185
+   ]
+  },
+  "SUFFIX|fast": {
+   "modal_choice": "T_x0.60 (23/32)",
+   "continuity": 0.53129,
+   "R_cond": 0.049505,
+   "R_marg": 0.00830718,
+   "utilization": 0.547777,
+   "premature_refresh": 0.409765,
+   "mean_H_s": 1.24861,
+   "continuity_ci": [
+    0.40601757917388376,
+    0.6684212937777393
+   ],
+   "R_cond_ci": [
+    0.016197193927763014,
+    0.12869574207778317
+   ],
+   "R_marg_ci": [
+    0.002885674147597751,
+    0.01549490246827492
+   ],
+   "utilization_ci": [
+    0.4233072204382626,
+    0.6669543123016364
+   ],
+   "premature_refresh_ci": [
+    0.28377622425264043,
+    0.5378374584698349
+   ]
+  },
+  "SUFFIX|meas": {
+   "modal_choice": "T_x0.60 (23/32)",
+   "continuity": 0.407975,
+   "R_cond": 0.049505,
+   "R_marg": 0.00830718,
+   "utilization": 0.547777,
+   "premature_refresh": 0.53029,
+   "mean_H_s": 1.24861,
+   "continuity_ci": [
+    0.2613133461003596,
+    0.561759154783734
+   ],
+   "R_cond_ci": [
+    0.016197193927763014,
+    0.12869574207778317
+   ],
+   "R_marg_ci": [
+    0.002885674147597751,
+    0.01549490246827492
+   ],
+   "utilization_ci": [
+    0.4233072204382626,
+    0.6669543123016364
+   ],
+   "premature_refresh_ci": [
+    0.3832126725705707,
+    0.6858921683967014
+   ]
+  }
+ },
+ "nested_alpha10": {
+  "AGE|fast": {
+   "modal_choice": "T_age=0.00s (32/32)",
+   "continuity": 0.0,
+   "R_cond": 0.0,
+   "R_marg": 0.0,
+   "utilization": 0.0,
+   "premature_refresh": 1.0,
+   "mean_H_s": 0.0,
+   "continuity_ci": [
+    0.0,
+    0.0
+   ],
+   "R_cond_ci": [
+    0.0,
+    0.0
+   ],
+   "R_marg_ci": [
+    0.0,
+    0.0
+   ],
+   "utilization_ci": [
+    0.0,
+    0.0
+   ],
+   "premature_refresh_ci": [
+    1.0,
+    1.0
+   ]
+  },
+  "AGE|meas": {
+   "modal_choice": "T_age=0.00s (32/32)",
+   "continuity": 0.0,
+   "R_cond": 0.0,
+   "R_marg": 0.0,
+   "utilization": 0.0,
+   "premature_refresh": 1.0,
+   "mean_H_s": 0.0,
+   "continuity_ci": [
+    0.0,
+    0.0
+   ],
+   "R_cond_ci": [
+    0.0,
+    0.0
+   ],
+   "R_marg_ci": [
+    0.0,
+    0.0
+   ],
+   "utilization_ci": [
+    0.0,
+    0.0
+   ],
+   "premature_refresh_ci": [
+    1.0,
+    1.0
+   ]
+  },
+  "GLOBAL|fast": {
+   "modal_choice": "T_x0.10 (30/32)",
+   "continuity": 0.670482,
+   "R_cond": 0.0968097,
+   "R_marg": 0.0162452,
+   "utilization": 0.694356,
+   "premature_refresh": 0.25752,
+   "mean_H_s": 1.61337,
+   "continuity_ci": [
+    0.5509283381802155,
+    0.7957708879222237
+   ],
+   "R_cond_ci": [
+    0.04368667466986795,
+    0.22575534566206729
+   ],
+   "R_marg_ci": [
+    0.007667051617478347,
+    0.02598426088865894
+   ],
+   "utilization_ci": [
+    0.5931006856262325,
+    0.7886968877323687
+   ],
+   "premature_refresh_ci": [
+    0.1671991496543161,
+    0.357155154866506
+   ]
+  },
+  "GLOBAL|meas": {
+   "modal_choice": "T_x0.10 (30/32)",
+   "continuity": 0.605317,
+   "R_cond": 0.0968097,
+   "R_marg": 0.0162452,
+   "utilization": 0.694356,
+   "premature_refresh": 0.307594,
+   "mean_H_s": 1.61337,
+   "continuity_ci": [
+    0.4790737174577807,
+    0.7323394341049365
+   ],
+   "R_cond_ci": [
+    0.04368667466986795,
+    0.22575534566206729
+   ],
+   "R_marg_ci": [
+    0.007667051617478347,
+    0.02598426088865894
+   ],
+   "utilization_ci": [
+    0.5931006856262325,
+    0.7886968877323687
+   ],
+   "premature_refresh_ci": [
+    0.21140114836506976,
+    0.4234221138388599
+   ]
+  },
+  "GLOBAL_TAU|fast": {
+   "modal_choice": "T_x0.10 (27/32)",
+   "continuity": 0.595163,
+   "R_cond": 0.0880088,
+   "R_marg": 0.0147683,
+   "utilization": 0.638222,
+   "premature_refresh": 0.341368,
+   "mean_H_s": 1.48791,
+   "continuity_ci": [
+    0.47122001047987355,
+    0.7232589447795599
+   ],
+   "R_cond_ci": [
+    0.0369287994085401,
+    0.22047787130057014
+   ],
+   "R_marg_ci": [
+    0.006565936815632496,
+    0.024220938937717436
+   ],
+   "utilization_ci": [
+    0.5257388742834919,
+    0.740927770111245
+   ],
+   "premature_refresh_ci": [
+    0.24242142306123124,
+    0.4535390484396194
+   ]
+  },
+  "GLOBAL_TAU|meas": {
+   "modal_choice": "T_x0.10 (27/32)",
+   "continuity": 0.595163,
+   "R_cond": 0.0880088,
+   "R_marg": 0.0147683,
+   "utilization": 0.638222,
+   "premature_refresh": 0.320819,
+   "mean_H_s": 1.48791,
+   "continuity_ci": [
+    0.47122001047987355,
+    0.7232589447795599
+   ],
+   "R_cond_ci": [
+    0.0369287994085401,
+    0.22047787130057014
+   ],
+   "R_marg_ci": [
+    0.006565936815632496,
+    0.024220938937717436
+   ],
+   "utilization_ci": [
+    0.5257388742834919,
+    0.740927770111245
+   ],
+   "premature_refresh_ci": [
+    0.2268402769726588,
+    0.4309611792341647
+   ]
+  },
+  "SUFFIX|fast": {
+   "modal_choice": "T_x0.30 (23/32)",
+   "continuity": 0.653867,
+   "R_cond": 0.10011,
+   "R_marg": 0.016799,
+   "utilization": 0.666566,
+   "premature_refresh": 0.276473,
+   "mean_H_s": 1.51192,
+   "continuity_ci": [
+    0.5442655749459344,
+    0.768062977632572
+   ],
+   "R_cond_ci": [
+    0.04836322822529045,
+    0.1948482008995501
+   ],
+   "R_marg_ci": [
+    0.007964147881304829,
+    0.028091974175371036
+   ],
+   "utilization_ci": [
+    0.5538782506789469,
+    0.7711335414733851
+   ],
+   "premature_refresh_ci": [
+    0.17266139356317176,
+    0.3944590154347635
+   ]
+  },
+  "SUFFIX|meas": {
+   "modal_choice": "T_x0.30 (23/32)",
+   "continuity": 0.500092,
+   "R_cond": 0.10011,
+   "R_marg": 0.016799,
+   "utilization": 0.666566,
+   "premature_refresh": 0.427688,
+   "mean_H_s": 1.51192,
+   "continuity_ci": [
+    0.36537667639541693,
+    0.644411564935764
+   ],
+   "R_cond_ci": [
+    0.04836322822529045,
+    0.1948482008995501
+   ],
+   "R_marg_ci": [
+    0.007964147881304829,
+    0.028091974175371036
+   ],
+   "utilization_ci": [
+    0.5538782506789469,
+    0.7711335414733851
+   ],
+   "premature_refresh_ci": [
+    0.2910115745628772,
+    0.569150546729535
+   ]
+  }
+ },
+ "age_only_at_need": {
+  "fast": {
+   "T_age": 1.0,
+   "R_cond": 0.628163,
+   "R_marg": 0.105409
+  },
+  "meas": {
+   "T_age": 1.85,
+   "R_cond": 0.80418,
+   "R_marg": 0.134946
+  },
+  "any_positive_T_age_R_cond_min": 0.420242
+ },
+ "context": {
+  "val_all": {
+   "plans": 5417.0,
+   "conflicts": 909.0,
+   "oracle_continuity_fast": 0.8960679342809673,
+   "oracle_continuity_meas": 0.8654236662359239
+  },
+  "train_all": {
+   "plans": 1004.0,
+   "conflicts": 12.0,
+   "oracle_continuity_fast": 0.9960159362549801,
+   "oracle_continuity_meas": 0.9920318725099602
+  },
+  "val_no_static_v0": {
+   "plans": 5149.0,
+   "conflicts": 641.0,
+   "oracle_continuity_fast": 0.9427073218100602,
+   "oracle_continuity_meas": 0.9104680520489415
+  },
+  "train_no_static_v0": {
+   "plans": 1004.0,
+   "conflicts": 12.0,
+   "oracle_continuity_fast": 0.9960159362549801,
+   "oracle_continuity_meas": 0.9920318725099602
+  },
+  "val_conflicts_Vsuf_zero": 378,
+  "val_conflicts_by_status": {
+   "confident": 782,
+   "low_confidence": 63,
+   "undetected": 40,
+   "absent_at_capture": 24
+  },
+  "val_conflicts_BI": 300,
+  "val_static_v0": 268,
+  "val_static_v0_BI": 232,
+  "invalid_detection_plans_val": 0
+ },
+ "checks_pass": {
+  "envelopes": true,
+  "crosscheck": true,
+  "fig1": true
+ }
+}

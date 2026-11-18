@@ -1,0 +1,19 @@
+apply_locked: exit 93 (output /tmp/A10A11/fix2/sim_tree/treeH1/outputs/framelease_v4/amendment_a10/apply.out)
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/fix2/sim_tree/treeH1/outputs/framelease_v4/amendment_a10/attempt_20261115T103647_358404
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/A10A11/fix2/sim_tree/treeH1/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+manifest difference: new [] / left [] / changed []
+composed PROTOCOL.md sha256 4a3b0fd659370b7a080cde9cd1d3b50d23140d2a09238d742950c92af23a08f4
+inject: appended a line to the manifest, killed before --seal
+Traceback (most recent call last):
+  File "/tmp/A10A11/fix2/sim_tree/treeH1/framelease_v4/protocol/registration.py", line 185, in <module>
+    raise SystemExit(main())
+  File "/tmp/A10A11/fix2/sim_tree/treeH1/framelease_v4/protocol/registration.py", line 179, in main
+    pro, man = seal()
+  File "/tmp/A10A11/fix2/sim_tree/treeH1/framelease_v4/protocol/registration.py", line 142, in seal
+    raise ValueError('PROTOCOL.md does not cite the manifest sha256 in its registration entry')
+ValueError: PROTOCOL.md does not cite the manifest sha256 in its registration entry
+apply_locked: the seal failed: ROLLED BACK PROTOCOL.md, the manifest, SEAL.sha256 and REGISTRATION.json to the copies in /tmp/A10A11/fix2/sim_tree/treeH1/outputs/framelease_v4/amendment_a10/attempt_20261115T103647_358404 (nothing applied)
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

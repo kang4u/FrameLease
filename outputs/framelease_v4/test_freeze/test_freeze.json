@@ -1,0 +1,678 @@
+{
+ "code_sha256": {
+  "framelease_v2/gpu_queue.py": "7a44bc95269d606a71bba32e89605bdd7a6822d5a0c3ff4d0607124195ad4e04",
+  "framelease_v4/protocol/check_smoke_ext.py": "584cbdc19c2fa547c59e632974b923a962da141f667eebad064e70d0fc632210",
+  "framelease_v4/protocol/p1_jobs.py": "d953cb18b92f6f3d627e3e13b9cf5c685abbffbd8a845feb8db31203c1825fad",
+  "framelease_v4/protocol/p2_jobs.py": "104408ee6f096f1ca16b72230ba1c8eb5e85623b0c675cfcadd63630bea97377",
+  "framelease_v4/protocol/p3_rl.py": "10a8590d511a9ab4858b87a93ad41e3a2961ad7a17af626bf27aedc781eab94b",
+  "framelease_v4/protocol/registration.py": "1f1cc02314635a674733e70cfc0729cb2815b50275d4e599fe263fce5568f1b8",
+  "framelease_v4/protocol/select_stage.py": "146b8b1a3f75a467a7a21f1080a0b7c46b5e8a8500fe85c311487b6d9f12c867",
+  "framelease_v4/protocol/stress_bench.py": "0cff7b56e6fc09686601f06ff919bde29de17336d6342b9c66ea23bb617d04c2",
+  "framelease_v4/protocol/test_freeze.py": "866f350ee8966b385c5e806725d475f8edb5b00a247c4f30bd14030a5da471dd",
+  "framelease_v4/protocol/test_jobs.py": "2ea6899d07b990f244d3481366eea2dec02e24cbb3af4944049ac78b36639151"
+ },
+ "deviations": [
+  "Test-route guard (G-2 \"refuses while any test-route run exists\"): a run is detected by its existence only, a runs/ entry in an output directory of the P4-P6 lines or under matrix/, fig3/, ablation/, replicates/ (Sec. 8.6), or a status record in outputs/framelease_v4/queue_p4; no result file is opened (Sec. 9.11).",
+  "Stress tests: the freeze takes one registered report per test (stress_bench.py --registered) and refuses S2 or S3 with a violation (Sec. 7.6: the admitted actions with bound >= D* and the commits violating Eq. 9 \"must be 0\"); S1 has no pass criterion and is recorded as measured.",
+  "G-3: the P4-P6 job files, the RL freeze and the test-freeze record are covered by the test freeze's own sha256 manifest, cited in this entry and sealed with it; registration.py is unchanged.",
+  "The P2 data manifest is entered in Sec. 13.2 by this entry when no earlier entry cites it (Sec. 5.9: the dataset manifest is entered in Sec. 13 as part of the test freeze).",
+  "Arm identity (GAP_AUDIT Sec. 2, \"Recommended labelling\"; Sec. 4.1 names no launcher arm for these arms): fl_bandit and fl_fqi_nolease run through the launcher arm fl_full with the network file of their family, fl_risk through fl_heuristic at its lease point; each such arm is the pair (launcher arm, network file sha256 or envelope sha256), recorded in the job line (protocol_arm), in the output directory (ablation/<arm>/) and in the block spec."
+ ],
+ "entry": "PROTOCOL Secs. 3.3 rule 4, 5.9 and 8.1: the coordinating session enters the sha256 of this record and of its manifest in Sec. 13.2 and seals; no test-route run starts before (test_freeze.py --verify)",
+ "job_files": {
+  "blocks": [
+   {
+    "block": "ti_main",
+    "budget_block": "TI-main",
+    "check": "outputs/framelease_v4/test_jobs/FULL/b11_ti_main.check.json",
+    "check_sha256": "8530a88961e9fe838c5a84af72be9345f65fd6e5b144779442a789898978de51",
+    "expected_runs_sec_10_1": 308,
+    "job_file": "outputs/framelease_v4/test_jobs/FULL/b11_ti_main.jsonl",
+    "job_file_sha256": "54e551df44f30a02277e91849f1e40390cd77ffca7e59256edc98b3f5cd4a6df",
+    "kappas": [
+     1.0
+    ],
+    "n_lines": 308,
+    "no": 11,
+    "phase": "P4",
+    "protocol_arms": [
+     "fixed_deep",
+     "fast_only",
+     "age_only",
+     "event_triggered",
+     "fl_original",
+     "fl_heuristic",
+     "fl_full"
+    ],
+    "route_set": "test_all",
+    "seed": 11,
+    "skipped": null,
+    "stage_spec": "outputs/framelease_v4/test_jobs/FULL/b11_ti_main.stage.json",
+    "stage_spec_sha256": "0235c2920f621618bcc8c722408529c410abce1c7806fca755523b850c45f057",
+    "tier": 3
+   },
+   {
+    "block": "f3_k",
+    "budget_block": "F3-k",
+    "check": "outputs/framelease_v4/test_jobs/FULL/b12_f3_k.check.json",
+    "check_sha256": "02fbb38ff50a7b6a6f2577b5485895f357b4d9b8d9515074dc9c82a9186f1332",
+    "expected_runs_sec_10_1": 176,
+    "job_file": "outputs/framelease_v4/test_jobs/FULL/b12_f3_k.jsonl",
+    "job_file_sha256": "8ba8a4e5f6874860f9fefae81d836ccbdd297ac6a801a67663d6a5322507311b",
+    "kappas": [
+     1.5,
+     2.0
+    ],
+    "n_lines": 176,
+    "no": 12,
+    "phase": "P5",
+    "protocol_arms": [
+     "fixed_deep",
+     "fast_only",
+     "fl_heuristic",
+     "fl_full"
+    ],
+    "route_set": "E",
+    "seed": 11,
+    "skipped": null,
+    "stage_spec": "outputs/framelease_v4/test_jobs/FULL/b12_f3_k.stage.json",
+    "stage_spec_sha256": "2ebdf8916777f1ade643d2802b958f0baf4ee6a1801252924fdfb47b8aabd0f2",
+    "tier": 4
+   },
+   {
+    "block": "a_lease",
+    "budget_block": "A-lease",
+    "check": "outputs/framelease_v4/test_jobs/FULL/b13_a_lease.check.json",
+    "check_sha256": "cff3c46a8d2f3930b5d659c84bdf9004d774330ad032d6856d46e59374ac8e69",
+    "expected_runs_sec_10_1": 22,
+    "job_file": "outputs/framelease_v4/test_jobs/FULL/b13_a_lease.jsonl",
+    "job_file_sha256": "6b906bc220d74fdf8fb5bfce287465e608fd378b22869af6d188ec411d37bd2a",
+    "kappas": [
+     1.0
+    ],
+    "n_lines": 22,
+    "no": 13,
+    "phase": "P6",
+    "protocol_arms": [
+     "fl_global_shield"
+    ],
+    "route_set": "E",
+    "seed": 11,
+    "skipped": null,
+    "stage_spec": "outputs/framelease_v4/test_jobs/FULL/b13_a_lease.stage.json",
+    "stage_spec_sha256": "5c2674bb9c4b80281f41ebe5ef6c4138d0207f19c244224b2fa51fbd11c6fdf1",
+    "tier": 5
+   },
+   {
+    "block": "a_rl",
+    "budget_block": "A-rl",
+    "check": "outputs/framelease_v4/test_jobs/FULL/b14_a_rl.check.json",
+    "check_sha256": "fb1c14ff34d28f4f1a0fd5f87f62e0544c01e1fb7230ddfca074ad4fd4ca856c",
+    "expected_runs_sec_10_1": 44,
+    "job_file": "outputs/framelease_v4/test_jobs/FULL/b14_a_rl.jsonl",
+    "job_file_sha256": "a73491e47ab5cb3fcba868a0e5e6bf7f34c5ad6a09ea3fde8cd11d18ef623e31",
+    "kappas": [
+     1.0
+    ],
+    "n_lines": 44,
+    "no": 14,
+    "phase": "P6",
+    "protocol_arms": [
+     "fl_bandit",
+     "fl_fqi_nolease"
+    ],
+    "route_set": "E",
+    "seed": 11,
+    "skipped": null,
+    "stage_spec": "outputs/framelease_v4/test_jobs/FULL/b14_a_rl.stage.json",
+    "stage_spec_sha256": "4745ec462908886a0d840477310bb550dbb3aba93218088e6525ff9ddf44e41f",
+    "tier": 5
+   },
+   {
+    "block": "s_seed12",
+    "budget_block": "S-seed12",
+    "check": "outputs/framelease_v4/test_jobs/FULL/b15_s_seed12.check.json",
+    "check_sha256": "5a30e90fd059bb4329e8b584cc8f37d46a5aa8477a375eaeb05894c5975d9562",
+    "expected_runs_sec_10_1": 60,
+    "job_file": "outputs/framelease_v4/test_jobs/FULL/b15_s_seed12.jsonl",
+    "job_file_sha256": "bd77e5ed172bc834b63a4fa188cae97f92047f8072a45b92e738aad52cffd207",
+    "kappas": [
+     1.0
+    ],
+    "n_lines": 60,
+    "no": 15,
+    "phase": "P6",
+    "protocol_arms": [
+     "fixed_deep",
+     "fast_only",
+     "fl_heuristic",
+     "fl_full"
+    ],
+    "route_set": "R",
+    "seed": 12,
+    "skipped": null,
+    "stage_spec": "outputs/framelease_v4/test_jobs/FULL/b15_s_seed12.stage.json",
+    "stage_spec_sha256": "a407ac93108e436b2e5bcd519ad199e0fa7c8fc52b75b3037b3d4327c28d87a1",
+    "tier": 6
+   },
+   {
+    "block": "s_risk",
+    "budget_block": "S-risk",
+    "check": "outputs/framelease_v4/test_jobs/FULL/b16_s_risk.check.json",
+    "check_sha256": "cc02d2f7c40be4b9c0a9961e2ab393b49d8665783fb4e95b4a9c79bc0d733ca4",
+    "expected_runs_sec_10_1": 22,
+    "job_file": "outputs/framelease_v4/test_jobs/FULL/b16_s_risk.jsonl",
+    "job_file_sha256": "83fe874f000340d6ee15509c35c7829bd03a6612a75a181e82c0b26ab36a156b",
+    "kappas": [
+     1.0
+    ],
+    "n_lines": 22,
+    "no": 16,
+    "phase": "P6",
+    "protocol_arms": [
+     "fl_risk"
+    ],
+    "route_set": "E",
+    "seed": 11,
+    "skipped": null,
+    "stage_spec": "outputs/framelease_v4/test_jobs/FULL/b16_s_risk.stage.json",
+    "stage_spec_sha256": "cbd99ef47c9d9a93e197a67d6cdef05938ecefc52347bfce59b4237bd8ab42b8",
+    "tier": 6
+   }
+  ],
+  "dir": "outputs/framelease_v4/test_jobs/FULL",
+  "enqueue": "after the test freeze: copy the job files, in name order, into outputs/framelease_v4/queue_p4/jobs.d/ (one queue for tiers 3-6; a cut takes the bottom tiers first, PROTOCOL Sec. 10.2)",
+  "expected_runs_sec_10_1": 632,
+  "generator": {
+   "path": "framelease_v4/protocol/test_jobs.py",
+   "sha256": "2ea6899d07b990f244d3481366eea2dec02e24cbb3af4944049ac78b36639151"
+  },
+  "index": {
+   "path": "outputs/framelease_v4/test_jobs/FULL/index.json",
+   "sha256": "34c528abc28688b816f2704bd1630ecf8dca15706d66ccf8ca933cd4e228a9ce"
+  },
+  "n_lines": 632,
+  "not_for_launch_before": "the test freeze (PROTOCOL Secs. 3.3 rule 4 and 8.1): selection.json, the RL freeze and these job files with their sha256 and pins entered in PROTOCOL Sec. 13.2 and sealed",
+  "pin_sets": {
+   "age_only": {
+    "n": 49,
+    "sha256": "a2d259f0c04b4cc6f9ec936fdf3702bdb78fe78969586e923b3ad59457d8be9a"
+   },
+   "event_triggered": {
+    "n": 49,
+    "sha256": "a2d259f0c04b4cc6f9ec936fdf3702bdb78fe78969586e923b3ad59457d8be9a"
+   },
+   "fast_only": {
+    "n": 49,
+    "sha256": "a2d259f0c04b4cc6f9ec936fdf3702bdb78fe78969586e923b3ad59457d8be9a"
+   },
+   "fixed_deep": {
+    "n": 49,
+    "sha256": "a2d259f0c04b4cc6f9ec936fdf3702bdb78fe78969586e923b3ad59457d8be9a"
+   },
+   "fl_bandit": {
+    "n": 51,
+    "sha256": "7489875a035697535ff4bf85412925c43c9bb423679b1cf35c88e6da7627d1ab"
+   },
+   "fl_fqi_nolease": {
+    "n": 51,
+    "sha256": "39ba860bb74ab55d6eaceab821ea57079f02024580fb21dcf46938bb229fbc90"
+   },
+   "fl_full": {
+    "n": 51,
+    "sha256": "50610e9400e0f4e79524a1f0b05ee4a31b032ef09478de82d5d03b239e161d0f"
+   },
+   "fl_global_shield": {
+    "n": 55,
+    "sha256": "763d595d046e5f789fc3ee132f9dfbc360dc763d29f1fe6655f10da084e0a631"
+   },
+   "fl_heuristic": {
+    "n": 50,
+    "sha256": "c83a2d1d400e4da2bf3e83789348f64ac28c6f2ea082fdbc3a0b23ead58d89b6"
+   },
+   "fl_original": {
+    "n": 49,
+    "sha256": "a2d259f0c04b4cc6f9ec936fdf3702bdb78fe78969586e923b3ad59457d8be9a"
+   },
+   "fl_risk": {
+    "n": 50,
+    "sha256": "25a0910157ceb79c3765f9d9867f22d884c63767cb0f5705cdcda0c4a68f274b"
+   }
+  },
+  "queue": "outputs/framelease_v4/queue_p4"
+ },
+ "manifest": {
+  "n_files": 125,
+  "path": "outputs/framelease_v4/test_freeze/MANIFEST.sha256",
+  "sha256": "69aae833d875d64003b3729ea83a386bcc0ce61f23da767b9cc03103763b2a93"
+ },
+ "pins": {
+  "files": {
+   "checkpoints/Qwen3-VL-2B-Instruct/89644892e4d85e24eaac8bacfd4f463576704203/preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+   "framelease_common.py": "4f7328974c88703caf17d709cb238f28de543e698b8ad9ca3b4a9ae23a8ee576",
+   "framelease_v2/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "framelease_v2/geometry.py": "b26ccab28d00219b18d9dd59bce112f54917ba05c9f293cbb6357288b7954006",
+   "framelease_v2/latency_agent.py": "285f2fc4f328d360dba2aecd84bbb7fc81c072c964ee793b2a43362e7c467bfc",
+   "framelease_v2/lease.py": "d3895edfd8d8640a8514ebe8c7eb3b0efb9c32847e3614158a4562c59fe466b6",
+   "framelease_v2/policies.py": "5fb8d34d8b405a668b2286452f0ec8a66b867d909b76c7c30998b779f97f6074",
+   "framelease_v2/run_closed_loop.py": "7876025b56fe18d220366d86c50feff5bf280565162e73129e15448c12cde425",
+   "framelease_v2/unidrive_boxes.py": "ee2b2cea1a2496ac54b3b301399de352dde0fc9cf6c9ecebb1b676525aaec97b",
+   "framelease_v3/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "framelease_v3/fastprefix/__init__.py": "7b2370e7c4a3708b4a44f07fc03857168ea416558a7779da888708907a445155",
+   "framelease_v3/fastprefix/agent_entry.py": "08d739166aac34c89783b0193eb32834fed21f15bbda2f068b8e638325cea6c7",
+   "framelease_v3/fastprefix/fast_path.py": "480fbb5ae0dcfdbf71a1527034b496ae3447b135ecaf3190fd548dd2291e5524",
+   "framelease_v3/fastprefix/run_closed_loop_fast.py": "3cf3cc3c11d4913e85009faa715a7cb42bbb743563a03013c475902d571ba89f",
+   "framelease_v3/runtime/__init__.py": "49e484f41e0d9feb5168f08d99feda3448f08d8e62906c88c95ddeedc42f021e",
+   "framelease_v3/runtime/run_closed_loop_v3.py": "e9f945bd1a579a42cb8ecbd4352b676f2e9726498b5a2278a6820cc8eda9f4ec",
+   "framelease_v3/runtime/v3_agent.py": "b9f1324df71a25ef3379197b05ba84cdf120d492c883ff351fcaccd05e925c63",
+   "framelease_v3/runtime/v3_arms.py": "1b9dd78a47406086323faa8ec30345e1559b23c8aea87e40cbcda64696b1f205",
+   "framelease_v3/runtime/v3_commit.py": "72892940f22b610da3c2f6b7c47fd69020a09977fc394201ae85ec1c54c79987",
+   "framelease_v3/runtime/v3_lease.py": "64d56c95e9b6c2aac23ceb35d494f0054bd5b48a6cd9f84528afabc587d471b3",
+   "framelease_v3/runtime/v3_scheduler.py": "c64e97d9ba2fc578ca8fa6142998939ca4e6f82f2ded189894134ab0ac71217b",
+   "framelease_v3/runtime/v3_shield.py": "138d6b8b186e2397b8d1a13a12711150d42fad214509271ff777052d867b2a84",
+   "framelease_v4/__init__.py": "f596deb9464c3955bb62f7a2ac0344f9bf97a6432adf3ffe052996d0446c4757",
+   "framelease_v4/arms/__init__.py": "e5c3b076fead1edd2321c8cfa7d42a84fd9cb5bb911f65717aace0d3110271d9",
+   "framelease_v4/arms/actor_log.py": "0fd0218a1e566bc6531fdf2b112c459bfa97e25eb58574c55516d57004d10b3b",
+   "framelease_v4/arms/agent_v4.py": "d81ae1d7ac79baf1edfce024f154668469a30812d0bebce6beccfbed21a43c7a",
+   "framelease_v4/arms/arms_v4.py": "3a20c70e6ddcbe3da0c8a61594bedf23f7c8b77fcd0adda585b6dad4a53b8606",
+   "framelease_v4/arms/policies_v4.py": "6b98ccbedec7f0bab2e04f24fe589e8928d18fa58cf3732563eaba979805b748",
+   "framelease_v4/arms/run_closed_loop_v4.py": "cf60d3e12048a76f058ae431a281e48d4a092543d706ed46074d7e93f732829b",
+   "framelease_v4/arms/runtime_v4.py": "a316f2fa201d24f7c31c2022ff8116c18e6b64f36f973b79ef6d2612710c626b",
+   "framelease_v4/arms_ext/__init__.py": "3932f70fcc48605d4f36a86097084cfeb8ad66a0a4a9c5d575a5d15a2ad1299e",
+   "framelease_v4/arms_ext/agent_ext.py": "405ee5c3ba30cf9aa8e634710e980c72494542bc2502a9c2a6154fdf2e47c4e4",
+   "framelease_v4/arms_ext/arms_ext.py": "456bb04fa8564bf208f8b863f7eabae3f91ad57740c82431a60d02dd87eebdce",
+   "framelease_v4/arms_ext/global_shield.py": "885d56ee0d45c533b7d6f2a72ae50f6b2d9d7f018fd3d99226e536b48f8abc41",
+   "framelease_v4/arms_ext/run_closed_loop_ext.py": "4e5968ede4f2b3292ed74cf3346e8a5c962bcd23e457a1bf02ec5549564e808c",
+   "framelease_v4/rl/__init__.py": "d807a3471e4dc141ebc039956af55eb7d28ea6718b2229b0d6d9ecdb24bc1f46",
+   "framelease_v4/rl/behaviour.py": "3ba13de1569b79dadf3a2019ec6495ff1ae1f4113a8d9f2e72b69e987dba8345",
+   "framelease_v4/rl/features.py": "537ee597e34f3e8ab44ae7e3f08f35293a81e6fd266a9e838774a34cca40e6e3",
+   "framelease_v4/rl/qnet.py": "53bbf8c69124519c6bb2133961695aa4f238c6d52e325f0d8e7de53008d23f3f",
+   "linux/env.sh": "208260089a7726972b2b6114b4acd4cab2bd751bc989567bb70102bcc1f02e23",
+   "outputs/framelease_v2/c2_calibration/full_20261107T045343Z/lease_params_q95_envelope.json": "00c62aad25d041312d6ba1918d6fb5ecb41c3ea1259f58be5977abcb3cce10e8",
+   "outputs/framelease_v4/envelopes/B0.json": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927",
+   "outputs/framelease_v4/envelopes/E5.json": "21d0b4a441cf80e32e4f04ddeb9bf309b5a0a74c9495652fd04a88331c47df3a",
+   "outputs/framelease_v4/rl_freeze/qnet_bandit.json": "d70c979df81780ac9e97eb36b8b88d7e52bbc71c19d5d84b32174d8c5b2018a7",
+   "outputs/framelease_v4/rl_freeze/qnet_fqi.json": "b98de0ea0c0e55a3fa7c9a8accd8780b72f0ae9bc62c19bdf95f1e66e7f390f9",
+   "outputs/framelease_v4/rl_freeze/qnet_fqi_nolease.json": "757d7b99c76d5f69217acf50b3633d407555f2346492736447c58ea6b5cfdc23",
+   "stage02_real_vla.py": "a98abe92c6cf5f8ec38106ac20241bb9c4ccc61fd8ec40527dd7da8dca24fcbc",
+   "stage05_carla_closed_loop.py": "0a6142eed3b057c1c8b1ee037c25fb18750d35a575488a0992517c3a3a7d9a0b",
+   "third_party/UniDriveVLA-linux/Bench2Drive/bench2drive/leaderboard/data/bench2drive220.xml": "ffff24b3a2b8584632730fb42de7cb6036af780c3952cfef08ee8cf96a712f88",
+   "third_party/UniDriveVLA-linux/Bench2Drive/bench2drive/leaderboard/leaderboard/leaderboard_evaluator.py": "5cbd28779050575dcd8f86f7b0805d0791ff41000319d83e16379e902bbe358f",
+   "third_party/UniDriveVLA-linux/Bench2Drive/bench2drive/leaderboard/team_code/pid_controller.py": "2276269fca0befdf31a34cd3e22052495e0eac34dcbbab54ada1dea6ff71c6d6",
+   "third_party/UniDriveVLA-linux/Bench2Drive/bench2drive/leaderboard/team_code/unidrivevla_b2d_agent.py": "96d347c1b0eacc6a5036670595b1baaed2654dd2c44e1a674564617ccae8d284",
+   "third_party/UniDriveVLA-linux/Bench2Drive/projects/configs/unidrivevla_b2d_stage2_unified_2b.py": "39aaf2d834165d9d9a19867720b03c8817381e1b5d7111f9412c924bd2eff4af",
+   "third_party/UniDriveVLA-linux/Bench2Drive/projects/mmdet3d_plugin/models/vla/qwenvl3_vla_planning_head.py": "b61293f8b9f94b20edbcee828f7008d18c475408f3e3a67697c61e57131654cf",
+   "third_party/UniDriveVLA-linux/Bench2Drive/projects/mmdet3d_plugin/models/vla/unidrivevla_vlm_qwenvl3.py": "c7f28dde1d485049f0d69e62a61bae862f5905a5b93a9264ce8dd046928bf181",
+   "third_party/bench2drive-linux/leaderboard/team_code/pid_controller.py": "2276269fca0befdf31a34cd3e22052495e0eac34dcbbab54ada1dea6ff71c6d6",
+   "third_party/bench2drive-linux/leaderboard/team_code/planner.py": "99178efb83af3d02068d7346732948cef445ad76a756caf2f95d489147aece31",
+   "third_party/bench2drive-linux/leaderboard/team_code/unidrivevla_b2d_agent.py": "96d347c1b0eacc6a5036670595b1baaed2654dd2c44e1a674564617ccae8d284",
+   "third_party/transformers-linux/src/transformers/models/qwen3_vl/modeling_qwen3_vl.py": "4fc1f406bc9dc908411c4fb142179bb021c32afc3515f6f140ec956d66320509"
+  },
+  "n": 59
+ },
+ "protocol": {
+  "path": "framelease_v4/PROTOCOL.md",
+  "seal": {
+   "protocol_sha256": "0f4ee590ab1182fa3f642c628377772236cfd8b7560987aa1b44271bde624039",
+   "sealed": true,
+   "sealed_sha256": "0f4ee590ab1182fa3f642c628377772236cfd8b7560987aa1b44271bde624039"
+  },
+  "sha256": "0f4ee590ab1182fa3f642c628377772236cfd8b7560987aa1b44271bde624039"
+ },
+ "registered_inputs": {
+  "framelease_v2/gpu_queue.py": "7a44bc95269d606a71bba32e89605bdd7a6822d5a0c3ff4d0607124195ad4e04",
+  "framelease_v4/protocol/make_protocol_tables.py": "e2afe1c0c5ab25c402ef4a43a03b8bd9ae7178323bb542fa6711a49c6f466842",
+  "framelease_v4/protocol/p1_jobs.py": "d953cb18b92f6f3d627e3e13b9cf5c685abbffbd8a845feb8db31203c1825fad",
+  "framelease_v4/protocol/registration.py": "1f1cc02314635a674733e70cfc0729cb2815b50275d4e599fe263fce5568f1b8",
+  "framelease_v4/protocol/select_stage.py": "146b8b1a3f75a467a7a21f1080a0b7c46b5e8a8500fe85c311487b6d9f12c867",
+  "outputs/framelease_v2/closed_loop_matrix/routes.json": "09f581de9828bae882d6ca29e7d61cbe70a49ef12a684bc1b8469e717fac73f2",
+  "outputs/framelease_v4/envelopes/manifest.json": "7c364867f4aa515855f72e827c393052e564add8f6f6a3201d75c63893af6cbb",
+  "outputs/framelease_v4/protocol/route_split.json": "555f6869cb62d89082efc0fefc8f125ee133b16fd36a6fcf9f68bb1269fa527e"
+ },
+ "rl_freeze": {
+  "cited_lines": [
+   2824
+  ],
+  "deviations": [
+   {
+    "agreement": 0.9297371848900468,
+    "case": "distill_shortfall",
+    "family": "fqi",
+    "hidden": [
+     64,
+     64
+    ],
+    "note": "to be recorded in PROTOCOL Sec. 13 when used (GAP_AUDIT Sec. 6 item 5)",
+    "option": "deploy_best",
+    "rule": "(b) the distillation agreement stays below 0.98 after the 64x64 retry: deploy the best try and report its agreement",
+    "stage": "export_fqi"
+   },
+   {
+    "agreement": 0.8243812734656348,
+    "case": "distill_shortfall",
+    "family": "bandit",
+    "hidden": [
+     64,
+     64
+    ],
+    "note": "to be recorded in PROTOCOL Sec. 13 when used (GAP_AUDIT Sec. 6 item 5)",
+    "option": "deploy_best",
+    "rule": "(b) the distillation agreement stays below 0.98 after the 64x64 retry: deploy the best try and report its agreement",
+    "stage": "export_bandit"
+   },
+   {
+    "agreement": 0.9370163205884606,
+    "case": "distill_shortfall",
+    "family": "fqi_nolease",
+    "hidden": [
+     64,
+     64
+    ],
+    "note": "to be recorded in PROTOCOL Sec. 13 when used (GAP_AUDIT Sec. 6 item 5)",
+    "option": "deploy_best",
+    "rule": "(b) the distillation agreement stays below 0.98 after the 64x64 retry: deploy the best try and report its agreement",
+    "stage": "export_fqi_nolease"
+   }
+  ],
+  "n_files": 24,
+  "networks": {
+   "fl_bandit": {
+    "a_det_depth": 1,
+    "abs_path": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_freeze/qnet_bandit.json",
+    "family": "bandit",
+    "n_inputs": 16,
+    "name": "v4_qnet_1c3d57e3d8e7",
+    "path": "outputs/framelease_v4/rl_freeze/qnet_bandit.json",
+    "sha256": "d70c979df81780ac9e97eb36b8b88d7e52bbc71c19d5d84b32174d8c5b2018a7"
+   },
+   "fl_fqi_nolease": {
+    "a_det_depth": 1,
+    "abs_path": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_freeze/qnet_fqi_nolease.json",
+    "family": "fqi_nolease",
+    "n_inputs": 10,
+    "name": "v4_qnet_6d5026a7b46f",
+    "path": "outputs/framelease_v4/rl_freeze/qnet_fqi_nolease.json",
+    "sha256": "757d7b99c76d5f69217acf50b3633d407555f2346492736447c58ea6b5cfdc23"
+   },
+   "fl_full": {
+    "a_det_depth": 1,
+    "abs_path": "/home/kang/Desktop/DAC/outputs/framelease_v4/rl_freeze/qnet_fqi.json",
+    "family": "fqi",
+    "n_inputs": 16,
+    "name": "v4_qnet_5d8ffd7cf7dd",
+    "path": "outputs/framelease_v4/rl_freeze/qnet_fqi.json",
+    "sha256": "b98de0ea0c0e55a3fa7c9a8accd8780b72f0ae9bc62c19bdf95f1e66e7f390f9"
+   }
+  },
+  "p2_manifest": {
+   "cited_lines": [
+    2810,
+    2829
+   ],
+   "path": "outputs/framelease_v4/rl_data/data_manifest.json",
+   "sha256": "c29168e54f3102d9ab02f2ead828d47ea501afc0edbcba409dda267574a45bc4"
+  },
+  "p_both_label": "testable",
+  "path": "outputs/framelease_v4/rl_freeze/rl_freeze.json",
+  "sec13_notes": [
+   "GAP_AUDIT P3-2 (\"bench_qnet.py: p50 / p99 against B_pi\") is a hard gate here: deploy_check passes only when the featurize_forward p99 is at most B_pi = 100 us; PROTOCOL Sec. 5.7 defines B_pi only as the run-time bypass. The gate is stricter and changes no network.",
+   "GAP_AUDIT P3-5 (\"time ope.select on a synthetic dataset of the expected size\") is p3_rl.py calibrate: CPU-time probes of every part of an ope.select task at three sizes, a cost law c + a n ln n and one real ope.select at the smallest size as an in-sample check; it sets --n-jobs only, which is no stage parameter.",
+   "GAP_AUDIT Sec. 6 item 5: an a_det^{d*} head without support in a training fold is a regular unsupported evaluation (Amendment A6: ope.select marks the candidate unsupported in that fold and continues), so open case (a) covers a family that it leaves without a selectable candidate; open case (c) also covers a registered P2 run that the P2 data manifest does not list. Either is a deviation only when used (deviations)."
+  ],
+  "sha256": "a9e08c1931ea8cc6ab0f74111fa8bfb6a0b043ed44606fe0e7657c2d254db31d",
+  "shared_names": {}
+ },
+ "schema": "framelease_v4.test_freeze/1",
+ "script": "framelease_v4/protocol/test_freeze.py",
+ "stress": {
+  "S1": {
+   "code_sha256": {
+    "framelease_v2/latency_agent.py": "285f2fc4f328d360dba2aecd84bbb7fc81c072c964ee793b2a43362e7c467bfc",
+    "framelease_v3/runtime/v3_commit.py": "72892940f22b610da3c2f6b7c47fd69020a09977fc394201ae85ec1c54c79987",
+    "framelease_v3/runtime/v3_lease.py": "64d56c95e9b6c2aac23ceb35d494f0054bd5b48a6cd9f84528afabc587d471b3",
+    "framelease_v3/runtime/v3_scheduler.py": "c64e97d9ba2fc578ca8fa6142998939ca4e6f82f2ded189894134ab0ac71217b",
+    "framelease_v3/runtime/v3_shield.py": "138d6b8b186e2397b8d1a13a12711150d42fad214509271ff777052d867b2a84",
+    "framelease_v4/arms/runtime_v4.py": "a316f2fa201d24f7c31c2022ff8116c18e6b64f36f973b79ef6d2612710c626b",
+    "framelease_v4/protocol/stress_bench.py": "0cff7b56e6fc09686601f06ff919bde29de17336d6342b9c66ea23bb617d04c2",
+    "framelease_v4/rl/behaviour.py": "3ba13de1569b79dadf3a2019ec6495ff1ae1f4113a8d9f2e72b69e987dba8345",
+    "framelease_v4/rl/features.py": "537ee597e34f3e8ab44ae7e3f08f35293a81e6fd266a9e838774a34cca40e6e3",
+    "framelease_v4/rl/qnet.py": "53bbf8c69124519c6bb2133961695aa4f238c6d52e325f0d8e7de53008d23f3f"
+   },
+   "envelope": {
+    "path": "outputs/framelease_v4/envelopes/B0.json",
+    "sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927"
+   },
+   "foreign_cpu_accepted": true,
+   "label": "registered S1 run (PROTOCOL Sec. 7.6)",
+   "loads": [
+    0,
+    4,
+    8,
+    15
+   ],
+   "networks": {
+    "v4_qnet_1c3d57e3d8e7": "d70c979df81780ac9e97eb36b8b88d7e52bbc71c19d5d84b32174d8c5b2018a7",
+    "v4_qnet_5d8ffd7cf7dd": "b98de0ea0c0e55a3fa7c9a8accd8780b72f0ae9bc62c19bdf95f1e66e7f390f9",
+    "v4_qnet_6d5026a7b46f": "757d7b99c76d5f69217acf50b3633d407555f2346492736447c58ea6b5cfdc23"
+   },
+   "path": "outputs/framelease_v4/stress/s1_registered_20261115T124141Z.json",
+   "registered": true,
+   "scenes": {
+    "dir": "outputs/framelease_v2/c1_sweep/merged_20clips_20261108T0052/clips",
+    "every": 9,
+    "max_clips": 20,
+    "n": 469,
+    "source": "c1_sweep"
+   },
+   "sha256": "c04d06a20e9686878fb0a6c91dcd5b33cc77cbee2ed14d034f8b6b03f2fc5673",
+   "shared_cpu": false,
+   "states": {
+    "generator": "stress_bench.synthetic_states (kappa 1.0/1.5/2.0, depth 1-10, D* - t in [-0.3, 2.5] s, active candidate in 97%, D_cand = D* in half, newer frames 0-24)",
+    "n": 2000,
+    "seed": 20261111,
+    "source": "synthetic"
+   },
+   "test": "S1"
+  },
+  "S2": {
+   "code_sha256": {
+    "framelease_v2/latency_agent.py": "285f2fc4f328d360dba2aecd84bbb7fc81c072c964ee793b2a43362e7c467bfc",
+    "framelease_v3/runtime/v3_commit.py": "72892940f22b610da3c2f6b7c47fd69020a09977fc394201ae85ec1c54c79987",
+    "framelease_v3/runtime/v3_lease.py": "64d56c95e9b6c2aac23ceb35d494f0054bd5b48a6cd9f84528afabc587d471b3",
+    "framelease_v3/runtime/v3_scheduler.py": "c64e97d9ba2fc578ca8fa6142998939ca4e6f82f2ded189894134ab0ac71217b",
+    "framelease_v3/runtime/v3_shield.py": "138d6b8b186e2397b8d1a13a12711150d42fad214509271ff777052d867b2a84",
+    "framelease_v4/arms/runtime_v4.py": "a316f2fa201d24f7c31c2022ff8116c18e6b64f36f973b79ef6d2612710c626b",
+    "framelease_v4/protocol/stress_bench.py": "0cff7b56e6fc09686601f06ff919bde29de17336d6342b9c66ea23bb617d04c2",
+    "framelease_v4/rl/behaviour.py": "3ba13de1569b79dadf3a2019ec6495ff1ae1f4113a8d9f2e72b69e987dba8345",
+    "framelease_v4/rl/features.py": "537ee597e34f3e8ab44ae7e3f08f35293a81e6fd266a9e838774a34cca40e6e3",
+    "framelease_v4/rl/qnet.py": "53bbf8c69124519c6bb2133961695aa4f238c6d52e325f0d8e7de53008d23f3f"
+   },
+   "label": "registered S2 run (PROTOCOL Sec. 7.6)",
+   "n_slack_values": 71,
+   "n_states": 2000,
+   "n_swept": 1944,
+   "networks": {
+    "v4_qnet_1c3d57e3d8e7": {
+     "admitted_bound_ge_Dstar": 0,
+     "bypass_rate": 0.002506265664160401,
+     "bypass_rate_slack": 0.002506265664160401,
+     "bypass_rate_timing": 0.0,
+     "family": "bandit",
+     "file_sha256": "d70c979df81780ac9e97eb36b8b88d7e52bbc71c19d5d84b32174d8c5b2018a7",
+     "share_admitted": 0.0063974381267026025,
+     "violations_total": 0
+    },
+    "v4_qnet_5d8ffd7cf7dd": {
+     "admitted_bound_ge_Dstar": 0,
+     "bypass_rate": 0.002506265664160401,
+     "bypass_rate_slack": 0.002506265664160401,
+     "bypass_rate_timing": 0.0,
+     "family": "fqi",
+     "file_sha256": "b98de0ea0c0e55a3fa7c9a8accd8780b72f0ae9bc62c19bdf95f1e66e7f390f9",
+     "share_admitted": 0.0063974381267026025,
+     "violations_total": 0
+    },
+    "v4_qnet_6d5026a7b46f": {
+     "admitted_bound_ge_Dstar": 0,
+     "bypass_rate": 0.002506265664160401,
+     "bypass_rate_slack": 0.002506265664160401,
+     "bypass_rate_timing": 0.0,
+     "family": "fqi_nolease",
+     "file_sha256": "757d7b99c76d5f69217acf50b3633d407555f2346492736447c58ea6b5cfdc23",
+     "share_admitted": 0.0063974381267026025,
+     "violations_total": 0
+    }
+   },
+   "passed": true,
+   "path": "outputs/framelease_v4/stress/s2_registered_20261115T123104Z.json",
+   "registered": true,
+   "sha256": "80b3c1b046febeed565544cc30a526683b6e43328e79fd1397629f4ad6d7ef12",
+   "states": {
+    "generator": "stress_bench.synthetic_states (kappa 1.0/1.5/2.0, depth 1-10, D* - t in [-0.3, 2.5] s, active candidate in 97%, D_cand = D* in half, newer frames 0-24)",
+    "n": 2000,
+    "seed": 20261111,
+    "source": "synthetic"
+   },
+   "test": "S2",
+   "violations_total": 0
+  },
+  "S3": {
+   "code_sha256": {
+    "framelease_v2/latency_agent.py": "285f2fc4f328d360dba2aecd84bbb7fc81c072c964ee793b2a43362e7c467bfc",
+    "framelease_v3/runtime/v3_commit.py": "72892940f22b610da3c2f6b7c47fd69020a09977fc394201ae85ec1c54c79987",
+    "framelease_v3/runtime/v3_lease.py": "64d56c95e9b6c2aac23ceb35d494f0054bd5b48a6cd9f84528afabc587d471b3",
+    "framelease_v3/runtime/v3_scheduler.py": "c64e97d9ba2fc578ca8fa6142998939ca4e6f82f2ded189894134ab0ac71217b",
+    "framelease_v3/runtime/v3_shield.py": "138d6b8b186e2397b8d1a13a12711150d42fad214509271ff777052d867b2a84",
+    "framelease_v4/arms/runtime_v4.py": "a316f2fa201d24f7c31c2022ff8116c18e6b64f36f973b79ef6d2612710c626b",
+    "framelease_v4/protocol/stress_bench.py": "0cff7b56e6fc09686601f06ff919bde29de17336d6342b9c66ea23bb617d04c2",
+    "framelease_v4/rl/behaviour.py": "3ba13de1569b79dadf3a2019ec6495ff1ae1f4113a8d9f2e72b69e987dba8345",
+    "framelease_v4/rl/features.py": "537ee597e34f3e8ab44ae7e3f08f35293a81e6fd266a9e838774a34cca40e6e3",
+    "framelease_v4/rl/qnet.py": "53bbf8c69124519c6bb2133961695aa4f238c6d52e325f0d8e7de53008d23f3f"
+   },
+   "coverage_ok": true,
+   "label": "registered S3 run (PROTOCOL Sec. 7.6)",
+   "n_sequences": 100000,
+   "passed": true,
+   "path": "outputs/framelease_v4/stress/s3_registered_20261115T122819Z.json",
+   "registered": true,
+   "sha256": "90b0393cbfef9ab76821271134479d7dc80aa645042cf623f43e26f54a98c6d4",
+   "targets": [
+    "gate",
+    "runtime"
+   ],
+   "test": "S3",
+   "violations_total": 0
+  }
+ },
+ "test_route_runs": {
+  "checked": [
+   "runs/ in the 23 output directories of the 632 lines",
+   "outputs/framelease_v4/matrix/*/runs",
+   "outputs/framelease_v4/fig3/*/runs",
+   "outputs/framelease_v4/ablation/*/runs",
+   "outputs/framelease_v4/replicates/*/runs",
+   "outputs/framelease_v4/queue_p4/status.jsonl"
+  ],
+  "existing": []
+ },
+ "tuning_freeze": {
+  "A_star": 1.0,
+  "L_star": {
+   "label": "B0",
+   "path": "outputs/framelease_v4/envelopes/B0.json",
+   "sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927"
+  },
+  "cited_lines": [
+   2261,
+   2274,
+   2772,
+   2798,
+   2827
+  ],
+  "d_star": 1,
+  "d_utility": "v4_adet_d1",
+  "event_star": {
+   "candidate": "s_hb2.0",
+   "policy_params": {
+    "det_shift_m": 1.0,
+    "heartbeat_s": 2.0,
+    "speed_delta_mps": 0.5,
+    "yaw_delta_rad": 0.05
+   }
+  },
+  "fl_risk": {
+   "lease_point": "E5",
+   "reason": "L* = B0: fl_risk at E5, the better of E5 / E10 on lease_s1 (PROTOCOL Sec. 4.3)"
+  },
+  "path": "outputs/framelease_v4/tuning/selection.json",
+  "sha256": "652fcbdbf0a6adb498aa0691fcaaffb097fcd680b4bf40235a28639aed69b930",
+  "stage_selections": [
+   {
+    "cited_lines": [
+     2239
+    ],
+    "path": "outputs/framelease_v4/tuning/selection/FULL/age_s1.json",
+    "sha256": "88fa28271484e92758978b5b1ddcdeba42567fa1a7979715eedddc5bad31acdc",
+    "stage": "age_s1"
+   },
+   {
+    "cited_lines": [
+     2251
+    ],
+    "path": "outputs/framelease_v4/tuning/selection/FULL/age_s2.json",
+    "sha256": "b79b9440bde4b8f1c4fad1d7bcfb41fe88f3995fd0eb501084bd38c5e178b355",
+    "stage": "age_s2"
+   },
+   {
+    "cited_lines": [
+     2178
+    ],
+    "path": "outputs/framelease_v4/tuning/selection/FULL/event_s1.json",
+    "sha256": "b66a83c6c5d1b4e7ee6db23a6eaa942276ce7fcf3e89c9d0736c4002f61cfc0f",
+    "stage": "event_s1"
+   },
+   {
+    "cited_lines": [
+     2205
+    ],
+    "path": "outputs/framelease_v4/tuning/selection/FULL/event_s2.json",
+    "sha256": "682a8e0560a388047fb89c4e77ce4f51869e5e23342ffa0ecfa829c5451ec659",
+    "stage": "event_s2"
+   },
+   {
+    "cited_lines": [
+     2218
+    ],
+    "path": "outputs/framelease_v4/tuning/selection/FULL/heur_s1.json",
+    "sha256": "03d1145dba118b22806a0246fbca35d41338a815a9e9cb9f8d4d79ca2e230914",
+    "stage": "heur_s1"
+   },
+   {
+    "cited_lines": [
+     2228
+    ],
+    "path": "outputs/framelease_v4/tuning/selection/FULL/heur_s2.json",
+    "sha256": "ca497c268b94cd18b19cbd5fd36ba174a3e86bdd739695c7954de948c919ac4d",
+    "stage": "heur_s2"
+   },
+   {
+    "cited_lines": [
+     2168
+    ],
+    "path": "outputs/framelease_v4/tuning/selection/FULL/lease_s1.json",
+    "sha256": "f23a6522c28aedc27b02494521cb763331fbf3097b8114b8ece8cd83021fa261",
+    "stage": "lease_s1"
+   },
+   {
+    "cited_lines": [
+     2193
+    ],
+    "path": "outputs/framelease_v4/tuning/selection/FULL/lease_s2.json",
+    "sha256": "bc2f7299f438309d99ddfb6017ab86d1593e996247e50456c51b747e0a332351",
+    "stage": "lease_s2"
+   }
+  ]
+ },
+ "variant": "FULL",
+ "written": "2026-11-15T20:43:43+0800"
+}

@@ -1,0 +1,386 @@
+{
+ "runs": [
+  {
+   "finished": "2026-11-10T15:43:15+0800",
+   "wall_s": 2.7,
+   "clips": [
+    {
+     "clip": "HardBreakRoute_Town01_Route32_Weather6",
+     "frames": 257,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 2.7
+    }
+   ]
+  },
+  {
+   "finished": "2026-11-10T15:44:07+0800",
+   "wall_s": 11.0,
+   "clips": [
+    {
+     "clip": "StaticCutIn_Town03_Route149_Weather19",
+     "frames": 176,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.4
+    },
+    {
+     "clip": "HardBreakRoute_Town11_Route50_Weather23",
+     "frames": 269,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.8
+    },
+    {
+     "clip": "ControlLoss_Town11_Route401_Weather11",
+     "frames": 315,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 2.1
+    },
+    {
+     "clip": "ParkingCrossingPedestrian_Town12_Route953_Weather9",
+     "frames": 170,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.2
+    },
+    {
+     "clip": "ParkingCutIn_Town13_Route1343_Weather1",
+     "frames": 174,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 2.0
+    },
+    {
+     "clip": "CrossingBicycleFlow_Town12_Route977_Weather15",
+     "frames": 326,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 3.9
+    },
+    {
+     "clip": "StaticCutIn_Town05_Route226_Weather18",
+     "frames": 172,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 2.4
+    },
+    {
+     "clip": "YieldToEmergencyVehicle_Town04_Route166_Weather10",
+     "frames": 296,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 4.9
+    },
+    {
+     "clip": "ParkingCrossingPedestrian_Town13_Route545_Weather25",
+     "frames": 169,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 2.0
+    },
+    {
+     "clip": "PedestrianCrossing_Town13_Route747_Weather19",
+     "frames": 477,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 5.4
+    },
+    {
+     "clip": "DynamicObjectCrossing_Town02_Route11_Weather11",
+     "frames": 160,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.6
+    },
+    {
+     "clip": "ControlLoss_Town10HD_Route378_Weather14",
+     "frames": 170,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 2.5
+    },
+    {
+     "clip": "ParkingExit_Town12_Route922_Weather12",
+     "frames": 166,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.9
+    },
+    {
+     "clip": "DynamicObjectCrossing_Town01_Route3_Weather3",
+     "frames": 156,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.6
+    },
+    {
+     "clip": "VehicleTurningRoutePedestrian_Town15_Route445_Weather11",
+     "frames": 158,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 2.2
+    },
+    {
+     "clip": "VehicleTurningRoute_Town15_Route504_Weather10",
+     "frames": 141,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.8
+    },
+    {
+     "clip": "MergerIntoSlowTraffic_Town06_Route317_Weather5",
+     "frames": 134,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.4
+    },
+    {
+     "clip": "SignalizedJunctionRightTurn_Town03_Route118_Weather14",
+     "frames": 121,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.4
+    },
+    {
+     "clip": "NonSignalizedJunctionRightTurn_Town03_Route126_Weather18",
+     "frames": 138,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.7
+    },
+    {
+     "clip": "OppositeVehicleRunningRedLight_Town04_Route180_Weather23",
+     "frames": 118,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 0.9
+    },
+    {
+     "clip": "InvadingTurn_Town02_Route95_Weather9",
+     "frames": 104,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 0.6
+    },
+    {
+     "clip": "InterurbanAdvancedActorFlow_Town06_Route324_Weather2",
+     "frames": 117,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.4
+    },
+    {
+     "clip": "HighwayCutIn_Town12_Route1029_Weather15",
+     "frames": 112,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.2
+    },
+    {
+     "clip": "MergerIntoSlowTrafficV2_Town12_Route857_Weather25",
+     "frames": 115,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.5
+    },
+    {
+     "clip": "HighwayExit_Town06_Route312_Weather0",
+     "frames": 115,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.6
+    },
+    {
+     "clip": "OppositeVehicleTakingPriority_Town04_Route214_Weather6",
+     "frames": 101,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 0.9
+    },
+    {
+     "clip": "InterurbanActorFlow_Town12_Route1291_Weather1",
+     "frames": 85,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 0.6
+    },
+    {
+     "clip": "VehicleTurningRoutePedestrian_Town15_Route481_Weather19",
+     "frames": 85,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 0.8
+    },
+    {
+     "clip": "PedestrianCrossing_Town12_Route867_Weather9",
+     "frames": 74,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 0.5
+    },
+    {
+     "clip": "SignalizedJunctionLeftTurnEnterFlow_Town13_Route657_Weather2",
+     "frames": 102,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.6
+    },
+    {
+     "clip": "NonSignalizedJunctionLeftTurnEnterFlow_Town12_Route949_Weather13",
+     "frames": 32,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 0.2
+    },
+    {
+     "clip": "NonSignalizedJunctionLeftTurn_Town07_Route342_Weather3",
+     "frames": 65,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 0.5
+    },
+    {
+     "clip": "VanillaNonSignalizedTurnEncounterStopsign_Town12_Route979_Weather9",
+     "frames": 62,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 0.6
+    },
+    {
+     "clip": "LaneChange_Town06_Route307_Weather21",
+     "frames": 98,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 1.7
+    },
+    {
+     "clip": "ControlLoss_Town04_Route170_Weather14",
+     "frames": 321,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 10.7
+    },
+    {
+     "clip": "BlockedIntersection_Town03_Route135_Weather5",
+     "frames": 570,
+     "skipped": {
+      "warmup": 5,
+      "insufficient_future_gt": 30,
+      "nonfinite_plan": 0
+     },
+     "seconds": 10.9
+    }
+   ]
+  }
+ ]
+}

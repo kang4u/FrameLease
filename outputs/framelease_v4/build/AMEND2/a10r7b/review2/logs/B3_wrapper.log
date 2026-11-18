@@ -1,0 +1,10 @@
+(exit 1, 10.6 s)
+apply_locked: exit 1 (output /tmp/A10A11/applier/treeB/outputs/framelease_v4/amendment_a10/apply.out)
+
+--- apply.out
+registration --verify -> 1 | manifest: 1 files differ: [('framelease_v4/protocol/stress_bench.py', '0cff7b56e6fc09686601f06ff919bde29de17336d6342b9c66ea23bb617d04c2', 'unreadable (No such file or directory)')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: registered files differ from the sealed manifest or are missing: ['framelease_v4/protocol/stress_bench.py']
+apply_locked: PROTOCOL.md unchanged; the manifest equals the sealed one
+manifest: 1 files differ: [('framelease_v4/protocol/stress_bench.py', '0cff7b56e6fc09686601f06ff919bde29de17336d6342b9c66ea23bb617d04c2', 'unreadable (No such file or directory)')]
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

@@ -1,0 +1,1341 @@
+{
+ "schema": "framelease_v4.f1_class/3",
+ "verification": "outputs/framelease_v4/verification/final_20261116T091445_table1_extra",
+ "inputs_sha256": {
+  "/home/kang/Desktop/DAC/outputs/framelease_v4/analysis/final_20261116T091445/agg_p4/runs.csv": "0c0f5d2dec0345c0a30dbab63c272189f584018ecf6bff280dd550d5e109fd1d",
+  "/home/kang/Desktop/DAC/outputs/framelease_v4/analysis/final_20261116T091445/analysis/paired_differences.csv": "8f3e3d038c6e435875b39b7060b0ff6f928762c19c3c29621c1a7684d662a47b",
+  "/home/kang/Desktop/DAC/outputs/framelease_v4/queue_p4/status.jsonl": "4550f0e35b2a25ab87be929cf86ea214501ed7c65fa21dfc635727d134b84460",
+  "SHA256SUMS": "9bad4595e777270f154b526f37b7a987cc37e01a4e02b54de614a9e061f4b7a4",
+  "cause_plans.csv": "b3ef1cb258ebd917baf1f08bf68551b244b203e46882215c10fcf0da7cb69930",
+  "differences.csv": "60aae07289fe354669cd9d7ad2254faef799bc06acb7c99a289fdcbbc631314f",
+  "runs_recomputed.csv": "1be46e784a1d9d52f942cc30a3021b4e323bc26f93ccaf4d95d087cf5d08468d",
+  "table1_extra.json": "2f5c8cbbe249bfaa8cd53abca327a6c155d87a8d846a7a7516fcccb40bbb4139"
+ },
+ "sha256sums": "OK: the four inputs equal SHA256SUMS",
+ "status": "final",
+ "verdict": "DIFFER",
+ "comparisons": 24766,
+ "differences": 295,
+ "differences_by_cause": {
+  "F1": 105,
+  "unclassified": 190
+ },
+ "analysis_differences_by_cause": {
+  "F1": 92,
+  "unclassified": 104
+ },
+ "agree_within_bounds_by_cause": {},
+ "differences_by_class": {
+  "F1": 105,
+  "F3": 0,
+  "in_flight": 46,
+  "not_ok_record": 40,
+  "undefined_metric_pairing": 76,
+  "unexplained": 28
+ },
+ "class_F1": {
+  "differences": 105,
+  "analysis_differences": 92,
+  "differences_without_abs_diff": 0,
+  "runs": 8,
+  "runs_per_arm": {
+   "age_only": {
+    "runs": 1,
+    "runs_with_analysis_difference": 0
+   },
+   "event_triggered": {
+    "runs": 1,
+    "runs_with_analysis_difference": 0
+   },
+   "fixed_deep": {
+    "runs": 2,
+    "runs_with_analysis_difference": 0
+   },
+   "fl_full": {
+    "runs": 3,
+    "runs_with_analysis_difference": 1
+   },
+   "fl_heuristic": {
+    "runs": 1,
+    "runs_with_analysis_difference": 0
+   }
+  },
+  "run_list": [
+   {
+    "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261116T001621_588b10bb",
+    "arm": "fl_full",
+    "jobs": [
+     "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2509"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T191748_35947532",
+    "arm": "age_only",
+    "jobs": [
+     "v4p4_age_only_A1.0_d1_k1.0_s11_r3248"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T201940_fb0795f2",
+    "arm": "event_triggered",
+    "jobs": [
+     "v4p4_event_triggered_s_hb2.0_k1.0_s11_r3464"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T181409_a52f1ce4",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p4_fixed_deep_k1.0_s11_r2050"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T220533_a54636e9",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p4_fixed_deep_k1.0_s11_r3561"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T201138_7f246ed2",
+    "arm": "fl_full",
+    "jobs": [
+     "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563"
+    ],
+    "analysis": true
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T204007_7cc9ade8",
+    "arm": "fl_full",
+    "jobs": [
+     "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r3464"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T190459_f0fc3e9a",
+    "arm": "fl_heuristic",
+    "jobs": [
+     "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2050"
+    ],
+    "analysis": false
+   }
+  ],
+  "largest_abs_diff": [
+   {
+    "target": "analysis.json:secondary",
+    "metric": "eir",
+    "column": "mean",
+    "abs_diff": 0.002564102564102569,
+    "key": "analysis.json:secondary:fl_full_minus_fl_original_k1.0_s11_all/eir",
+    "ours": "0.04777232908287997",
+    "theirs": "0.0452082265187774",
+    "scope": "analysis",
+    "rows": 6,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "analysis.json:secondary",
+    "metric": "eir",
+    "column": "mean_a",
+    "abs_diff": 0.002564102564102555,
+    "key": "analysis.json:secondary:fl_full_minus_fl_original_k1.0_s11_all/eir",
+    "ours": "0.1366155779690934",
+    "theirs": "0.13405147540499085",
+    "scope": "analysis",
+    "rows": 6,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "analysis.json:secondary",
+    "metric": "eir",
+    "column": "min",
+    "abs_diff": 0.03253588516746411,
+    "key": "analysis.json:secondary:fl_full_minus_fl_original_k1.0_s11_all/eir",
+    "ours": "0.0",
+    "theirs": "-0.03253588516746411",
+    "scope": "analysis",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "analysis.json:secondary",
+    "metric": "r_cond",
+    "column": "mean",
+    "abs_diff": 0.0009157509157510235,
+    "key": "analysis.json:secondary:fl_full_minus_fl_original_k1.0_s11_all/r_cond",
+    "ours": "0.32693707893936735",
+    "theirs": "0.32602132802361633",
+    "scope": "analysis",
+    "rows": 6,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "analysis.json:secondary",
+    "metric": "r_cond",
+    "column": "mean_a",
+    "abs_diff": 0.0009157509157510235,
+    "key": "analysis.json:secondary:fl_full_minus_fl_original_k1.0_s11_all/r_cond",
+    "ours": "0.6692057942057943",
+    "theirs": "0.6682900432900433",
+    "scope": "analysis",
+    "rows": 6,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "analysis.json:secondary",
+    "metric": "r_cond",
+    "column": "median",
+    "abs_diff": 0.0064102564102564985,
+    "key": "analysis.json:secondary:fl_full_minus_fast_only_k1.0_s11_all/r_cond",
+    "ours": "-0.07692307692307687",
+    "theirs": "-0.08333333333333337",
+    "scope": "analysis",
+    "rows": 5,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "arm_summary.csv",
+    "metric": "",
+    "column": "realized_invalid_tick_ratio",
+    "abs_diff": 0.0023809523809523725,
+    "key": "fl_full/fl_full/1.0/11.0/P4/ti_main",
+    "ours": "0.15111608250768915",
+    "theirs": "0.14873513012673678",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "conditions.csv",
+    "metric": "eir",
+    "column": "mean",
+    "abs_diff": 0.0023809523809523725,
+    "key": "fl_full_k1.0_s11/all/eir",
+    "ours": "0.15111608250768915",
+    "theirs": "0.14873513012673678",
+    "scope": "analysis",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "conditions.csv",
+    "metric": "eir",
+    "column": "median",
+    "abs_diff": 0.01666666666666667,
+    "key": "fl_full_k1.0_s11/all/eir",
+    "ours": "0.06836772634318647",
+    "theirs": "0.0517010596765198",
+    "scope": "analysis",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "conditions.csv",
+    "metric": "r_cond",
+    "column": "mean",
+    "abs_diff": 0.0005341880341880323,
+    "key": "fl_full_k1.0_s11/all/r_cond",
+    "ours": "0.6321751165501165",
+    "theirs": "0.6316409285159285",
+    "scope": "analysis",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "conditions.csv",
+    "metric": "r_cond",
+    "column": "median",
+    "abs_diff": 0.0032051282051283048,
+    "key": "fl_full_k1.0_s11/all/r_cond",
+    "ours": "0.9038461538461539",
+    "theirs": "0.9006410256410255",
+    "scope": "analysis",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "paired_differences.csv",
+    "metric": "eir",
+    "column": "difference",
+    "abs_diff": 0.033333333333333354,
+    "key": "secondary:fl_full_minus_age_only_k1.0_s11_all/eir/17563",
+    "ours": "-0.1598569969356486",
+    "theirs": "-0.19319033026898194",
+    "scope": "analysis",
+    "rows": 6,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "paired_differences.csv",
+    "metric": "eir",
+    "column": "value_a",
+    "abs_diff": 0.03333333333333334,
+    "key": "secondary:fl_full_minus_fixed_deep_k1.0_s11_all/eir/17563",
+    "ours": "0.10606060606060606",
+    "theirs": "0.07272727272727272",
+    "scope": "analysis",
+    "rows": 6,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "paired_differences.csv",
+    "metric": "r_cond",
+    "column": "difference",
+    "abs_diff": 0.0064102564102564985,
+    "key": "secondary:fl_full_minus_fixed_deep_k1.0_s11_all/r_cond/17563",
+    "ours": "-0.07692307692307687",
+    "theirs": "-0.08333333333333337",
+    "scope": "analysis",
+    "rows": 6,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "paired_differences.csv",
+    "metric": "r_cond",
+    "column": "value_a",
+    "abs_diff": 0.0064102564102564985,
+    "key": "secondary:fl_full_minus_fixed_deep_k1.0_s11_all/r_cond/17563",
+    "ours": "0.9230769230769231",
+    "theirs": "0.9166666666666666",
+    "scope": "analysis",
+    "rows": 6,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "per_scenario.csv",
+    "metric": "eir",
+    "column": "eir",
+    "abs_diff": 0.03333333333333334,
+    "key": "fl_full_k1.0_s11/17563",
+    "ours": "0.10606060606060606",
+    "theirs": "0.07272727272727272",
+    "scope": "analysis",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "per_scenario.csv",
+    "metric": "r_cond",
+    "column": "r_cond",
+    "abs_diff": 0.0064102564102564985,
+    "key": "fl_full_k1.0_s11/17563",
+    "ours": "0.9230769230769231",
+    "theirs": "0.9166666666666666",
+    "scope": "analysis",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_conflict_plans",
+    "abs_diff": 1.0,
+    "key": "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563",
+    "ours": "13",
+    "theirs": "12",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_invalid_tick_ratio",
+    "abs_diff": 0.03333333333333334,
+    "key": "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563",
+    "ours": "0.10606060606060606",
+    "theirs": "0.07272727272727272",
+    "scope": "analysis",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_invalid_ticks",
+    "abs_diff": 11.0,
+    "key": "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563",
+    "ours": "35",
+    "theirs": "24",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_log_censored_plans",
+    "abs_diff": 1.0,
+    "key": "v4p4_fixed_deep_k1.0_s11_r2050",
+    "ours": "3",
+    "theirs": "4",
+    "scope": "record",
+    "rows": 8,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_misses",
+    "abs_diff": 1.0,
+    "key": "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563",
+    "ours": "12",
+    "theirs": "11",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_r_cond",
+    "abs_diff": 0.0064102564102564985,
+    "key": "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563",
+    "ours": "0.9230769230769231",
+    "theirs": "0.9166666666666666",
+    "scope": "analysis",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_r_cond_excl_v0",
+    "abs_diff": 0.0064102564102564985,
+    "key": "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563",
+    "ours": "0.9230769230769231",
+    "theirs": "0.9166666666666666",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "secondary.csv",
+    "metric": "eir",
+    "column": "mean",
+    "abs_diff": 0.002564102564102569,
+    "key": "secondary.csv:fl_full_minus_fl_original_k1.0_s11_all/eir",
+    "ours": "0.04777232908287997",
+    "theirs": "0.0452082265187774",
+    "scope": "analysis",
+    "rows": 6,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "secondary.csv",
+    "metric": "eir",
+    "column": "mean_a",
+    "abs_diff": 0.002564102564102555,
+    "key": "secondary.csv:fl_full_minus_fl_original_k1.0_s11_all/eir",
+    "ours": "0.1366155779690934",
+    "theirs": "0.13405147540499085",
+    "scope": "analysis",
+    "rows": 6,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "secondary.csv",
+    "metric": "eir",
+    "column": "min",
+    "abs_diff": 0.03253588516746411,
+    "key": "secondary.csv:fl_full_minus_fl_original_k1.0_s11_all/eir",
+    "ours": "0.0",
+    "theirs": "-0.03253588516746411",
+    "scope": "analysis",
+    "rows": 1,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "secondary.csv",
+    "metric": "r_cond",
+    "column": "mean",
+    "abs_diff": 0.0009157509157510235,
+    "key": "secondary.csv:fl_full_minus_fl_original_k1.0_s11_all/r_cond",
+    "ours": "0.32693707893936735",
+    "theirs": "0.32602132802361633",
+    "scope": "analysis",
+    "rows": 6,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "secondary.csv",
+    "metric": "r_cond",
+    "column": "mean_a",
+    "abs_diff": 0.0009157509157510235,
+    "key": "secondary.csv:fl_full_minus_fl_original_k1.0_s11_all/r_cond",
+    "ours": "0.6692057942057943",
+    "theirs": "0.6682900432900433",
+    "scope": "analysis",
+    "rows": 6,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "secondary.csv",
+    "metric": "r_cond",
+    "column": "median",
+    "abs_diff": 0.0064102564102564985,
+    "key": "secondary.csv:fl_full_minus_fast_only_k1.0_s11_all/r_cond",
+    "ours": "-0.07692307692307687",
+    "theirs": "-0.08333333333333337",
+    "scope": "analysis",
+    "rows": 5,
+    "rows_without_abs_diff": 0
+   }
+  ],
+  "agree_within_bounds": 0,
+  "plans": {
+   "plans": 8,
+   "run_dirs": 8
+  }
+ },
+ "class_F3": {
+  "differences": 0,
+  "analysis_differences": 0,
+  "differences_without_abs_diff": 0,
+  "runs": 0,
+  "runs_per_arm": {},
+  "run_list": [],
+  "largest_abs_diff": [],
+  "by_cause": {},
+  "agree_within_bounds": 0,
+  "plans": {
+   "plans": 0,
+   "run_dirs": 0
+  }
+ },
+ "class_in_flight": {
+  "differences": 46,
+  "analysis_differences": 0,
+  "differences_without_abs_diff": 0,
+  "runs": 22,
+  "runs_per_arm": {
+   "event_triggered": {
+    "runs": 2,
+    "runs_with_analysis_difference": 0
+   },
+   "fast_only": {
+    "runs": 2,
+    "runs_with_analysis_difference": 0
+   },
+   "fixed_deep": {
+    "runs": 8,
+    "runs_with_analysis_difference": 0
+   },
+   "fl_full": {
+    "runs": 2,
+    "runs_with_analysis_difference": 0
+   },
+   "fl_heuristic": {
+    "runs": 4,
+    "runs_with_analysis_difference": 0
+   },
+   "fl_original": {
+    "runs": 4,
+    "runs_with_analysis_difference": 0
+   }
+  },
+  "run_list": [
+   {
+    "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261116T001304_06a30fd2",
+    "arm": "fl_full",
+    "jobs": [
+     "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2509"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261115T231511_842aa484",
+    "arm": "fast_only",
+    "jobs": [
+     "v4p5_fast_only_k1.5_s11_r2390"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261115T222558_b6102cd4",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p5_fixed_deep_k1.5_s11_r3248"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261115T234339_328bd2cd",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p5_fixed_deep_k2.0_s11_r2390"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T143134_9d739d50",
+    "arm": "event_triggered",
+    "jobs": [
+     "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2390"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T201940_fb0795f2",
+    "arm": "event_triggered",
+    "jobs": [
+     "v4p4_event_triggered_s_hb2.0_k1.0_s11_r3464"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T161316_045a57ff",
+    "arm": "fast_only",
+    "jobs": [
+     "v4p4_fast_only_k1.0_s11_r2084"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T142015_0aac0bbc",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p4_fixed_deep_k1.0_s11_r23658"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T145927_ab2b6b1f",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p4_fixed_deep_k1.0_s11_r2390"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T165449_da0da734",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p4_fixed_deep_k1.0_s11_r2204"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T181409_a52f1ce4",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p4_fixed_deep_k1.0_s11_r2050"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T194213_e1f87751",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p4_fixed_deep_k1.0_s11_r3248"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T220533_a54636e9",
+    "arm": "fixed_deep",
+    "jobs": [
+     "v4p4_fixed_deep_k1.0_s11_r3561"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T154919_6c923082",
+    "arm": "fl_full",
+    "jobs": [
+     "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2084"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T131310_98324b42",
+    "arm": "fl_heuristic",
+    "jobs": [
+     "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2790"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T144858_0a7d3c70",
+    "arm": "fl_heuristic",
+    "jobs": [
+     "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2390"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T164634_83ca525c",
+    "arm": "fl_heuristic",
+    "jobs": [
+     "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2204"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T180105_0855c6b6",
+    "arm": "fl_heuristic",
+    "jobs": [
+     "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2115"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T125208_c81b620b",
+    "arm": "fl_original",
+    "jobs": [
+     "v4p4_fl_original_k1.0_s11_r26458"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T171945_cbfcc6d1",
+    "arm": "fl_original",
+    "jobs": [
+     "v4p4_fl_original_k1.0_s11_r2204"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T184924_1d0a17b5",
+    "arm": "fl_original",
+    "jobs": [
+     "v4p4_fl_original_k1.0_s11_r2050"
+    ],
+    "analysis": false
+   },
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T195434_6b5b195c",
+    "arm": "fl_original",
+    "jobs": [
+     "v4p4_fl_original_k1.0_s11_r17563"
+    ],
+    "analysis": false
+   }
+  ],
+  "largest_abs_diff": [
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "commits",
+    "abs_diff": 5.0,
+    "key": "v4p4_fl_original_k1.0_s11_r26458",
+    "ours": "206",
+    "theirs": "201",
+    "scope": "record",
+    "rows": 2,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "gpu_busy_recomputed_s",
+    "abs_diff": 0.40923671600720013,
+    "key": "v4p5_fixed_deep_k2.0_s11_r2390",
+    "ours": "81.78441091034317",
+    "theirs": "81.37517419433597",
+    "scope": "record",
+    "rows": 22,
+    "rows_without_abs_diff": 0
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "gpu_usage_recomputed",
+    "abs_diff": 0.006871089953627396,
+    "key": "v4p4_fl_original_k1.0_s11_r26458",
+    "ours": "0.9730520209472822",
+    "theirs": "0.9661809309936548",
+    "scope": "record",
+    "rows": 22,
+    "rows_without_abs_diff": 0
+   }
+  ],
+  "runs_ending_with_job_in_flight": 22,
+  "runs_recomputed": 127
+ },
+ "class_not_ok_record": {
+  "differences": 40,
+  "analysis_differences": 0,
+  "differences_without_abs_diff": 40,
+  "runs": 1,
+  "runs_per_arm": {
+   "fl_original": {
+    "runs": 1,
+    "runs_with_analysis_difference": 0
+   }
+  },
+  "run_list": [
+   {
+    "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T135050_fcc4d44b",
+    "arm": "fl_original",
+    "jobs": [
+     "v4p4_fl_original_k1.0_s11_r23658"
+    ],
+    "analysis": false
+   }
+  ],
+  "largest_abs_diff": [
+   {
+    "target": "runner result",
+    "metric": "",
+    "column": "result.action_age_p50_s",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "1.0000000149011612",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runner result",
+    "metric": "",
+    "column": "result.fallback_tick_ratio",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0.966893039049236",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "action_age_mean_s",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "1.0820512981751027",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "action_age_p50_s",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "1.0000000149011612",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "action_age_p95_s",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "1.855000027641654",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "choice_epochs",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "commits",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "11",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "committed_plans",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "11",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "cuda_s_per_s",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0.9930733887312904",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "deadline_miss_ratio",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0.966893039049236",
+    "theirs": "",
+    "scope": "record",
+    "rows": 2,
+    "rows_without_abs_diff": 2
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "deadline_miss_ratio_after_first_commit",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0.9666381522668948",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "decision_epochs",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "141",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "dmr",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0.9666381522668948",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "dmr_ticks",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "1169",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "expired_ratio",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0.9592529711375212",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "expired_ratio_after_first_commit",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0.9666381522668948",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "fallback_by_reason",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "{\"expired\": 1130, \"no_plan\": 9}",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "fallback_episodes",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "3",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "fallback_ticks",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "1139",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "first_commit_s",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0.485010924246395",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "first_tick_s",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0.05000000074505806",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "gpu_busy_in_span_s",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "58.49202346787206",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "gpu_busy_recomputed_s",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "58.49202346787206",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "gpu_usage",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0.9930733887312904",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "gpu_usage_recomputed",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0.9930733887312904",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "last_tick_s",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "58.900000877678394",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "max_age_s",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "2.0",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_available",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "True",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_conflict_plans",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_invalid_tick_ratio",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0.0",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_invalid_ticks",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_log_censored_plans",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_misses",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "realized_v0_plans",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "shield_epochs",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "0",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "sim_span_s",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "58.900000877678394",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "ticks",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "1178",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "ticks_after_first_commit",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "1169",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   },
+   {
+    "target": "runs.csv",
+    "metric": "",
+    "column": "track_ticks",
+    "abs_diff": null,
+    "key": "v4p4_fl_original_k1.0_s11_r23658",
+    "ours": "39",
+    "theirs": "",
+    "scope": "record",
+    "rows": 1,
+    "rows_without_abs_diff": 1
+   }
+  ],
+  "jobs": {
+   "v4p4_fl_original_k1.0_s11_r23658": {
+    "runner_outcome": "timeout",
+    "runs_csv_outcome": "sim_failure"
+   }
+  },
+  "sources": {
+   "runner_records": [
+    "/home/kang/Desktop/DAC/outputs/framelease_v4/queue_p4/status.jsonl"
+   ],
+   "runs_csv": "/home/kang/Desktop/DAC/outputs/framelease_v4/analysis/final_20261116T091445/agg_p4/runs.csv"
+  }
+ },
+ "class_undefined_metric_pairing": {
+  "differences": 76,
+  "analysis_differences": 76,
+  "differences_without_abs_diff": 76,
+  "runs": 0,
+  "runs_per_arm": {},
+  "run_list": [],
+  "largest_abs_diff": [
+   {
+    "target": "paired_differences.csv",
+    "metric": "p_both",
+    "column": "status",
+    "abs_diff": null,
+    "key": "secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/2050",
+    "ours": "True",
+    "theirs": "False",
+    "scope": "analysis",
+    "rows": 76,
+    "rows_without_abs_diff": 76
+   }
+  ],
+  "by_metric_and_arm": {
+   "p_both|event_triggered": 14,
+   "p_both|fast_only": 18,
+   "p_both|fixed_deep": 18,
+   "p_both|fl_original": 26
+  },
+  "by_contrast": {
+   "secondary:fl_full_minus_event_triggered_k1.0_s11_all": 14,
+   "secondary:fl_full_minus_fast_only_k1.0_s11_all": 14,
+   "secondary:fl_full_minus_fast_only_k1.5_s11_E": 2,
+   "secondary:fl_full_minus_fast_only_k2.0_s11_E": 2,
+   "secondary:fl_full_minus_fixed_deep_k1.0_s11_all": 14,
+   "secondary:fl_full_minus_fixed_deep_k1.5_s11_E": 2,
+   "secondary:fl_full_minus_fixed_deep_k2.0_s11_E": 2,
+   "secondary:fl_full_minus_fl_original_k1.0_s11_all": 13,
+   "secondary:fl_heuristic_minus_fl_original_k1.0_s11_all": 13
+  },
+  "source": "/home/kang/Desktop/DAC/outputs/framelease_v4/analysis/final_20261116T091445/analysis/paired_differences.csv"
+ },
+ "unexplained": {
+  "differences": 28,
+  "analysis_differences": 28,
+  "differences_without_abs_diff": 28,
+  "runs": 0,
+  "runs_per_arm": {},
+  "run_list": [],
+  "largest_abs_diff": [
+   {
+    "target": "paired_differences.csv",
+    "metric": "r_cond",
+    "column": "status",
+    "abs_diff": null,
+    "key": "secondary:fl_full_minus_fixed_deep_k1.0_s11_all/r_cond/2204",
+    "ours": "True",
+    "theirs": "False",
+    "scope": "analysis",
+    "rows": 28,
+    "rows_without_abs_diff": 28
+   }
+  ],
+  "by_cause": {
+   "unclassified": 28
+  },
+  "by_column": {
+   "paired_differences.csv|status|analysis": 28
+  }
+ },
+ "outcome": "verification failure",
+ "release_checks": {
+  "status_final": true,
+  "registered_verifier": true,
+  "runs_csv_values_false": true
+ },
+ "release": "verification failure"
+}

@@ -1,0 +1,1 @@
+wall 230.20 s, max RSS 50812 kB, exit 0

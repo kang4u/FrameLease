@@ -1,0 +1,5 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/A10A11/applier/treeX6/framelease_v4/protocol/registration.py --verify
+(exit 0, 3.2 s)
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

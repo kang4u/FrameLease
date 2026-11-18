@@ -1,0 +1,7 @@
+apply_locked: exit 1 (output /tmp/AMEND3/a10r7b/rsim/treeH/outputs/framelease_v4/amendment_a11/apply.out)
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: template problem: ['* **G3 P2 data manifest** (2026-11-15 12:00, Beijing time). A line of the template that the phase driver reads as its G3 entry.'] / starts '**Amendment A11, {{datetime}} (Beijing t' / anchor phrase 0 times
+apply_locked: PROTOCOL.md unchanged; the manifest equals the sealed one
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

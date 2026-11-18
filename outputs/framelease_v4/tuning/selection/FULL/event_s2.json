@@ -1,0 +1,456 @@
+{
+ "candidates": [
+  {
+   "arm": "event_triggered",
+   "envelope": null,
+   "name": "s_hb2.0",
+   "order": 2,
+   "policy_params": {
+    "det_shift_m": 1.0,
+    "heartbeat_s": 2.0,
+    "speed_delta_mps": 0.5,
+    "yaw_delta_rad": 0.05
+   },
+   "tag": "s_hb2.0"
+  },
+  {
+   "arm": "event_triggered",
+   "envelope": null,
+   "name": "s_hb1.0",
+   "order": 3,
+   "policy_params": {
+    "det_shift_m": 1.0,
+    "heartbeat_s": 1.0,
+    "speed_delta_mps": 0.5,
+    "yaw_delta_rad": 0.05
+   },
+   "tag": "s_hb1.0"
+  }
+ ],
+ "complete": true,
+ "dropped_routes": {},
+ "final": true,
+ "finality": "runner records (--queue)",
+ "flags": [],
+ "grid": "event",
+ "job_file": "outputs/framelease_v4/p1_jobs/FULL/b05_event_s2.jsonl",
+ "job_file_sha256": "779badf855ef6929fbdb148637bfcd17b233111098046ae41d21215f4ba44bd2",
+ "kept_routes": [
+  "2086",
+  "2397",
+  "2643",
+  "2844",
+  "3090",
+  "3373",
+  "3749",
+  "17569",
+  "23910",
+  "24330",
+  "28093"
+ ],
+ "pending": [],
+ "previous_selection_sha256": "b66a83c6c5d1b4e7ee6db23a6eaa942276ce7fcf3e89c9d0736c4002f61cfc0f",
+ "provisional": false,
+ "queue": "outputs/framelease_v4/queue_p1",
+ "ranking": [
+  "s_hb2.0",
+  "s_hb1.0"
+ ],
+ "ranking_T22": [
+  "s_hb2.0",
+  "s_hb1.0"
+ ],
+ "routes": [
+  "2086",
+  "2397",
+  "2643",
+  "2844",
+  "3090",
+  "3373",
+  "3749",
+  "17569",
+  "23910",
+  "24330",
+  "28093"
+ ],
+ "rule": "final stage of successive halving: best mean DS over the T22 routes (stage-1 kept + stage-2 kept); ties to the earlier candidate",
+ "schema": "framelease_v4.p1_selection/1",
+ "script_sha256": "146b8b1a3f75a467a7a21f1080a0b7c46b5e8a8500fe85c311487b6d9f12c867",
+ "selected": "s_hb2.0",
+ "selected_candidate": {
+  "arm": "event_triggered",
+  "envelope": null,
+  "name": "s_hb2.0",
+  "order": 2,
+  "policy_params": {
+   "det_shift_m": 1.0,
+   "heartbeat_s": 2.0,
+   "speed_delta_mps": 0.5,
+   "yaw_delta_rad": 0.05
+  },
+  "tag": "s_hb2.0"
+ },
+ "stage": "event_s2",
+ "stage_no": 2,
+ "stage_spec": "outputs/framelease_v4/p1_jobs/FULL/b05_event_s2.stage.json",
+ "stage_spec_sha256": "5af2c46d314f3a590d0d3c5c62c77f28d7d534c5cd6209f4d5799e0bba9b2969",
+ "table": [
+  {
+   "arm": "event_triggered",
+   "candidate": "s_hb2.0",
+   "envelope": null,
+   "mean_ds": 60.30833454545454,
+   "mean_ds_T22": 61.641726272727276,
+   "n": 11,
+   "n_T22": 22,
+   "order": 2,
+   "outcomes": {
+    "ok": 11
+   },
+   "per_route": {
+    "17569": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_event_triggered_s_hb2.0_k1.0_s11_r17569",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb2.0/runs/20261114T061732_c14775f1",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2086": {
+     "attempts_found": 1,
+     "ds": 33.703948,
+     "job": "v4p1_event_triggered_s_hb2.0_k1.0_s11_r2086",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb2.0/runs/20261114T062717_3fd76c8b",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "23910": {
+     "attempts_found": 1,
+     "ds": 97.06,
+     "job": "v4p1_event_triggered_s_hb2.0_k1.0_s11_r23910",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb2.0/runs/20261114T054341_11d05b2e",
+     "setup_failures": 0,
+     "status": "Failed - Agent deviated from the route"
+    },
+    "2397": {
+     "attempts_found": 1,
+     "ds": 91.722352,
+     "job": "v4p1_event_triggered_s_hb2.0_k1.0_s11_r2397",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb2.0/runs/20261114T054110_35bbbbc5",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "24330": {
+     "attempts_found": 1,
+     "ds": 30.433197,
+     "job": "v4p1_event_triggered_s_hb2.0_k1.0_s11_r24330",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb2.0/runs/20261114T051418_0bc470c1",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2643": {
+     "attempts_found": 1,
+     "ds": 28.584,
+     "job": "v4p1_event_triggered_s_hb2.0_k1.0_s11_r2643",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb2.0/runs/20261114T060254_5eff80b2",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "28093": {
+     "attempts_found": 1,
+     "ds": 58.09,
+     "job": "v4p1_event_triggered_s_hb2.0_k1.0_s11_r28093",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb2.0/runs/20261114T045547_7408ea4a",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2844": {
+     "attempts_found": 1,
+     "ds": 65.0,
+     "job": "v4p1_event_triggered_s_hb2.0_k1.0_s11_r2844",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb2.0/runs/20261114T053040_048ab105",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3090": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_event_triggered_s_hb2.0_k1.0_s11_r3090",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb2.0/runs/20261114T063536_792c9540",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3373": {
+     "attempts_found": 1,
+     "ds": 42.0,
+     "job": "v4p1_event_triggered_s_hb2.0_k1.0_s11_r3373",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb2.0/runs/20261114T052744_036a63a2",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3749": {
+     "attempts_found": 1,
+     "ds": 16.798183,
+     "job": "v4p1_event_triggered_s_hb2.0_k1.0_s11_r3749",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb2.0/runs/20261114T051728_59d26313",
+     "setup_failures": 0,
+     "status": "Failed - Agent deviated from the route"
+    }
+   },
+   "policy_params": {
+    "det_shift_m": 1.0,
+    "heartbeat_s": 2.0,
+    "speed_delta_mps": 0.5,
+    "yaw_delta_rad": 0.05
+   },
+   "reused_from": null,
+   "tag": "s_hb2.0"
+  },
+  {
+   "arm": "event_triggered",
+   "candidate": "s_hb1.0",
+   "envelope": null,
+   "mean_ds": 56.45312772727273,
+   "mean_ds_T22": 58.948372409090915,
+   "n": 11,
+   "n_T22": 22,
+   "order": 3,
+   "outcomes": {
+    "ok": 11
+   },
+   "per_route": {
+    "17569": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_event_triggered_s_hb1.0_k1.0_s11_r17569",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb1.0/runs/20261114T062008_4a79a801",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2086": {
+     "attempts_found": 1,
+     "ds": 20.005601,
+     "job": "v4p1_event_triggered_s_hb1.0_k1.0_s11_r2086",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb1.0/runs/20261114T062243_092720c7",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "23910": {
+     "attempts_found": 1,
+     "ds": 28.527434,
+     "job": "v4p1_event_triggered_s_hb1.0_k1.0_s11_r23910",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb1.0/runs/20261114T054621_cbf7b983",
+     "setup_failures": 0,
+     "status": "Failed - Agent got blocked"
+    },
+    "2397": {
+     "attempts_found": 1,
+     "ds": 65.0,
+     "job": "v4p1_event_triggered_s_hb1.0_k1.0_s11_r2397",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb1.0/runs/20261114T053834_2600e321",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "24330": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_event_triggered_s_hb1.0_k1.0_s11_r24330",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb1.0/runs/20261114T051117_8aee965e",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "2643": {
+     "attempts_found": 1,
+     "ds": 100.0,
+     "job": "v4p1_event_triggered_s_hb1.0_k1.0_s11_r2643",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb1.0/runs/20261114T055754_22aa6b75",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "28093": {
+     "attempts_found": 1,
+     "ds": 31.938,
+     "job": "v4p1_event_triggered_s_hb1.0_k1.0_s11_r28093",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb1.0/runs/20261114T045952_a93ae95a",
+     "setup_failures": 0,
+     "status": "Failed - TickRuntime"
+    },
+    "2844": {
+     "attempts_found": 1,
+     "ds": 42.25,
+     "job": "v4p1_event_triggered_s_hb1.0_k1.0_s11_r2844",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb1.0/runs/20261114T053446_513195ee",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3090": {
+     "attempts_found": 1,
+     "ds": 95.064612,
+     "job": "v4p1_event_triggered_s_hb1.0_k1.0_s11_r3090",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb1.0/runs/20261114T063914_4f3009d8",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3373": {
+     "attempts_found": 1,
+     "ds": 60.0,
+     "job": "v4p1_event_triggered_s_hb1.0_k1.0_s11_r3373",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb1.0/runs/20261114T052449_0c6627b4",
+     "setup_failures": 0,
+     "status": "Completed"
+    },
+    "3749": {
+     "attempts_found": 1,
+     "ds": 18.198758,
+     "job": "v4p1_event_triggered_s_hb1.0_k1.0_s11_r3749",
+     "outcome": "ok",
+     "queue": {
+      "attempts": 1,
+      "counted": 1,
+      "final_outcome": "ok"
+     },
+     "run_dir": "outputs/framelease_v4/tuning/event_s2/event_triggered_s_hb1.0/runs/20261114T052106_7aba63b9",
+     "setup_failures": 0,
+     "status": "Failed - Agent deviated from the route"
+    }
+   },
+   "policy_params": {
+    "det_shift_m": 1.0,
+    "heartbeat_s": 1.0,
+    "speed_delta_mps": 0.5,
+    "yaw_delta_rad": 0.05
+   },
+   "reused_from": null,
+   "tag": "s_hb1.0"
+  }
+ ],
+ "variant": "FULL",
+ "warnings": [],
+ "written": "2026-11-14T14:47:21+0800"
+}

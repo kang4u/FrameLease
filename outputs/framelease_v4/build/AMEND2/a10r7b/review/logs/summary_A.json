@@ -1,0 +1,241 @@
+{
+ "verify0": {
+  "manifest_ok": true,
+  "seal_lines": [
+   [
+    "framelease_v4/PROTOCOL.md",
+    "OK"
+   ],
+   [
+    "outputs/framelease_v4/registration/MANIFEST.sha256",
+    "OK"
+   ]
+  ],
+  "all_ok": true,
+  "text": "manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK"
+ },
+ "A10_check": [
+  "check: pre-checks passed"
+ ],
+ "A10_apply_rc": 0,
+ "A10_newly": [
+  "PROTOCOL 86ef3d0c02051975f8082654bc386165c542106b119cceefe8aa73eb344b4712 MANIFEST 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033 221 files; newly cited manifest files: ['framelease_v4/analysis/analyze_v4.py', 'framelease_v4/analysis/figures_tables.py', 'framelease_v4/analysis/prop1_coverage.py', 'framelease_v4/analysis/tests/test_analyze_v4.py', 'framelease_v4/analysis/tests/test_figures_tables.py', 'framelease_v4/analysis/tests/test_prop1_coverage.py', 'framelease_v4/analysis/tests/test_verify_independent.py', 'framelease_v4/analysis/verify_independent.py']"
+ ],
+ "verify_after_A10": {
+  "manifest_ok": true,
+  "seal_lines": [
+   [
+    "framelease_v4/PROTOCOL.md",
+    "OK"
+   ],
+   [
+    "outputs/framelease_v4/registration/MANIFEST.sha256",
+    "OK"
+   ]
+  ],
+  "all_ok": true,
+  "text": "manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK"
+ },
+ "parse_after_A10": {
+  "problems": [],
+  "amendments": {
+   "A3": [
+    2278
+   ],
+   "A9": [
+    2472
+   ],
+   "A7": [
+    2516
+   ],
+   "A4": [
+    2571
+   ],
+   "A10": [
+    2810
+   ]
+  },
+  "first_citing_owner": {
+   "framelease_v4/analysis/analyze_v4.py": "A10",
+   "framelease_v4/analysis/prop1_coverage.py": "A10",
+   "framelease_v4/analysis/figures_tables.py": "A10",
+   "framelease_v4/analysis/verify_independent.py": "A10",
+   "framelease_v4/analysis/tests/test_analyze_v4.py": "A10",
+   "framelease_v4/analysis/tests/test_prop1_coverage.py": "A10",
+   "framelease_v4/analysis/tests/test_figures_tables.py": "A10",
+   "framelease_v4/analysis/tests/test_verify_independent.py": "A10",
+   "framelease_v4/analysis/verify_table1_extra.py": null,
+   "framelease_v4/analysis/tests/test_verify_table1_extra.py": null
+  },
+  "G8_waits": [],
+  "later_gate": {
+   "read": true,
+   "line": 2809,
+   "A10_title_line": 2811,
+   "others_unchanged": true
+  }
+ },
+ "refresh_after_A10": {
+  "files": 207,
+  "added": [
+   "framelease_v4/analysis/analyze_v4.py",
+   "framelease_v4/analysis/figures_tables.py",
+   "framelease_v4/analysis/prop1_coverage.py",
+   "framelease_v4/analysis/tests/test_analyze_v4.py",
+   "framelease_v4/analysis/tests/test_figures_tables.py",
+   "framelease_v4/analysis/tests/test_prop1_coverage.py",
+   "framelease_v4/analysis/tests/test_verify_independent.py",
+   "framelease_v4/analysis/verify_independent.py"
+  ],
+  "changed": []
+ },
+ "lines_A10": [
+  [],
+  [
+   [
+    2827,
+    829
+   ],
+   [
+    2828,
+    590
+   ],
+   [
+    2829,
+    658
+   ],
+   [
+    2830,
+    757
+   ],
+   [
+    3021,
+    121
+   ],
+   [
+    3022,
+    124
+   ],
+   [
+    3023,
+    128
+   ],
+   [
+    3024,
+    128
+   ],
+   [
+    3025,
+    132
+   ]
+  ],
+  []
+ ],
+ "standin": "stand-in written in the tree",
+ "A11_check": [
+  "check: pre-checks passed"
+ ],
+ "A11_apply_rc": 0,
+ "A11_newly": [
+  "PROTOCOL 6354922fcc49e9033c76212021af914c52a9321a7af8b256ed88f1029415b279 MANIFEST 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033 221 files; newly cited manifest files: ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']"
+ ],
+ "verify_after_A11": {
+  "manifest_ok": true,
+  "seal_lines": [
+   [
+    "framelease_v4/PROTOCOL.md",
+    "OK"
+   ],
+   [
+    "outputs/framelease_v4/registration/MANIFEST.sha256",
+    "OK"
+   ]
+  ],
+  "all_ok": true,
+  "text": "manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK"
+ },
+ "parse_after_A11": {
+  "problems": [],
+  "amendments": {
+   "A3": [
+    2278
+   ],
+   "A9": [
+    2472
+   ],
+   "A7": [
+    2516
+   ],
+   "A4": [
+    2571
+   ],
+   "A10": [
+    2810
+   ],
+   "A11": [
+    3065
+   ]
+  },
+  "first_citing_owner": {
+   "framelease_v4/analysis/analyze_v4.py": "A10",
+   "framelease_v4/analysis/prop1_coverage.py": "A10",
+   "framelease_v4/analysis/figures_tables.py": "A10",
+   "framelease_v4/analysis/verify_independent.py": "A10",
+   "framelease_v4/analysis/tests/test_analyze_v4.py": "A10",
+   "framelease_v4/analysis/tests/test_prop1_coverage.py": "A10",
+   "framelease_v4/analysis/tests/test_figures_tables.py": "A10",
+   "framelease_v4/analysis/tests/test_verify_independent.py": "A10",
+   "framelease_v4/analysis/verify_table1_extra.py": "A11",
+   "framelease_v4/analysis/tests/test_verify_table1_extra.py": "A11"
+  },
+  "G8_waits": [],
+  "later_gate": {
+   "read": true,
+   "line": 2809,
+   "A10_title_line": 2811,
+   "others_unchanged": true
+  }
+ },
+ "refresh_after_A11": {
+  "files": 209,
+  "added": [
+   "framelease_v4/analysis/tests/test_verify_table1_extra.py",
+   "framelease_v4/analysis/verify_table1_extra.py"
+  ],
+  "changed": []
+ },
+ "lines_A11": [
+  [],
+  [
+   [
+    3082,
+    690
+   ],
+   [
+    3083,
+    304
+   ],
+   [
+    3190,
+    122
+   ],
+   [
+    3191,
+    133
+   ]
+  ],
+  []
+ ],
+ "post_check_A10": [
+  1,
+  [
+   "FAIL: in-place text 4"
+  ]
+ ],
+ "post_check_A11": [
+  0,
+  [
+   "post-check A11: passed"
+  ]
+ ]
+}

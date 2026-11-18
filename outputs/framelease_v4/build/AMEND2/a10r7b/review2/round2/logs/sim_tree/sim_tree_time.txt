@@ -1,0 +1,23 @@
+	Command being timed: ".conda-unidrive-linux/bin/python -I -B outputs/framelease_v4/build/AMEND2/a10r7b/sim_tree.py --out /tmp/A10A11/recheck1/sim_tree"
+	User time (seconds): 321.88
+	System time (seconds): 82.14
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:52.16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 33044
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 181
+	Minor (reclaiming a frame) page faults: 748747
+	Voluntary context switches: 37859
+	Involuntary context switches: 1892
+	Swaps: 0
+	File system inputs: 10058856
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

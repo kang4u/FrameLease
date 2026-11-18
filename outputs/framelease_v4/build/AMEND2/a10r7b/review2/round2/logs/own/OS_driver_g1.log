@@ -1,0 +1,3 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/A10A11/recheck1/own/drv.py g1 /tmp/A10A11/recheck1/own/treeOS
+(exit 0)
+{"mode": "g1", "result": "done"}

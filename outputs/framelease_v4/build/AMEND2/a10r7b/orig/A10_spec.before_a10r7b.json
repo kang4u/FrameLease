@@ -1,0 +1,66 @@
+{
+ "name": "A10",
+ "template": "outputs/framelease_v4/build/AMEND2/final/A10_entry.md",
+ "tests": [
+  {
+   "log": "outputs/framelease_v4/amendment_a10/pytest_analyze_v4.log",
+   "argv": [
+    "framelease_v4/analysis/tests/test_analyze_v4.py"
+   ]
+  },
+  {
+   "log": "outputs/framelease_v4/amendment_a10/pytest_prop1_coverage.log",
+   "argv": [
+    "framelease_v4/analysis/tests/test_prop1_coverage.py"
+   ]
+  },
+  {
+   "log": "outputs/framelease_v4/amendment_a10/pytest_figures_tables.log",
+   "argv": [
+    "framelease_v4/analysis/tests/test_figures_tables.py"
+   ]
+  },
+  {
+   "log": "outputs/framelease_v4/amendment_a10/pytest_verify_independent.log",
+   "argv": [
+    "framelease_v4/analysis/tests/test_verify_independent.py"
+   ]
+  }
+ ],
+ "inplace": [
+  {
+   "old": "If an offline output lacks a paired quantity, the v4 analysis script computes it from `per_clip_selected.csv` with the\nsame bootstrap.\n",
+   "new": "If an offline output lacks a paired quantity, the v4 analysis script computes it from `per_clip_selected.csv` with the\nsame bootstrap, within that file's scope (TRAIN-selected candidates, subset all, alpha 0.05); a nested quantity comes\nfrom `paired.csv` only (Amendment A10).\n"
+  },
+  {
+   "old": "freeze.\n\n**Freeze.** The analysis freeze happens when every registered job of tiers 3-6 is final",
+   "new": "freeze (the aggregator: Amendment A3; the analysis code:\nAmendment A10).\n\n**Analysis code (Amendment A10).** `analyze_v4.py`, `prop1_coverage.py`, `figures_tables.py` and\n`verify_independent.py` (`framelease_v4/analysis/`) are registered by Amendment A10. Besides synthetic data, they were\nrun read-only during development on training-route aggregations, the offline VAL clips and P1 run directories, never\non a test-route run.\n\n**Freeze.** The analysis freeze happens when every registered job of tiers 3-6 is final"
+  },
+  {
+   "old": "`outputs/framelease_v4/analysis/final_<stamp>/`, with a sha256 manifest.\n",
+   "new": "`outputs/framelease_v4/analysis/final_<stamp>/`, with a sha256 manifest; the analysis writes into its subdirectory\n`analysis/` with its own manifest (Amendment A10).\n"
+  },
+  {
+   "old": "**Verification.** Before any number enters the paper, an independent session recomputes the H1 contrasts and the\nTable I columns from the raw run directories.\n",
+   "new": "**Verification.** Before any number enters the paper, an independent session recomputes the H1 contrasts and the\nTable I columns from the raw run directories (Amendment A10: `framelease_v4/analysis/verify_independent.py`\nrecomputes DS, SR, RC, collisions/km and infractions/km; a second script, registered by its own amendment before\nthe analysis freeze, recomputes the other Table I columns, which enter the paper once its result is entered in\nSec. 13).\n"
+  },
+  {
+   "old": "the analysis script, the Proposition-1 coverage and the figure and table generators remain required before the analysis freeze",
+   "new": "the analysis script, the Proposition-1 coverage, the figure and table generator and the independent verification script are registered by Amendment A10"
+  }
+ ],
+ "must_equal": {
+  "framelease_v4/analysis/analyze_v4.py": "10d7ea4f9516725cd94932a0618bbe5cc6a20bae60b49f4004013b3682cee54c",
+  "framelease_v4/analysis/prop1_coverage.py": "ffaee8ddf74e707901208d1d28ad0f692fefda2a4f4ce24f9e36e6eba1c852c0",
+  "framelease_v4/analysis/figures_tables.py": "bd4ed54c60fbc5259aeb2ed56f5301ad612c3006fd4172f06b889f2ea0c2118c",
+  "framelease_v4/analysis/verify_independent.py": "4935152684abcfdaef547438772bb041f323344dcbfe636d41b2a161ff149bff",
+  "framelease_v4/analysis/tests/test_analyze_v4.py": "1a59a3e044478d56a0bb1700d756bfcf80f9c4b2e4b1c38c83fa2a111780564c",
+  "framelease_v4/analysis/tests/test_prop1_coverage.py": "fa72530489076fe1620002e77997abbae46b9f602b8cf39c987de8206a0d1bd3",
+  "framelease_v4/analysis/tests/test_figures_tables.py": "8b61b3b35933e1f4dbc33c682462a6533500158013053182ab0aae6281ae793e",
+  "framelease_v4/analysis/tests/test_verify_independent.py": "c647f9091c99944fa6d39e97e2f8c7283a819aeb820e668ae512885f2ff77823",
+  "framelease_v3/envelopes.py": "4b50e33d5abcf1e791fe87d84039cdc560be313827db457ef7160968e633307c",
+  "framelease_v2/calibration.py": "eb69bae0a64ece0fabc4c5133d18985f9d83f7c41fc3b42dca39e789f6193e2b",
+  "framelease_v3/suffix_lease_eval.py": "48417c1fc9ce6d0e7d604da1292f6a002ab266c500f9226b4cd17fbbf490691c"
+ },
+ "max_new_registered": 8
+}

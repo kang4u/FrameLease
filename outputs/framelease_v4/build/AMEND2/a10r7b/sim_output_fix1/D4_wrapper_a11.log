@@ -1,0 +1,167 @@
+apply_locked: exit 0 (output /tmp/AMEND3/a10r7b/sim_tree/treeD/outputs/framelease_v4/amendment_a11/apply.out)
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/AMEND3/a10r7b/sim_tree/treeD/outputs/framelease_v4/registration/MANIFEST.sha256: 222 files, sha256 1ea365bc6e0f8267bf347c38ec302dd447fa8e0e1d6cbf557e3c28c65ecbfb88
+registration --seal -> 0 | sealed: PROTOCOL.md 108a7dd186df4d2160eb79c581eb272667df685233534e94cfe126865f65c546, manifest 1ea365bc6e0f8267bf347c38ec302dd447fa8e0e1d6cbf557e3c28c65ecbfb88
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+PROTOCOL 108a7dd186df4d2160eb79c581eb272667df685233534e94cfe126865f65c546 MANIFEST 1ea365bc6e0f8267bf347c38ec302dd447fa8e0e1d6cbf557e3c28c65ecbfb88 222 files; newly cited manifest files: ['framelease_v4/analysis/tests/test_verify_table1_extra.py', 'framelease_v4/analysis/verify_table1_extra.py']
+**Amendment A11, 2026-11-15 09:10 (Beijing time): registration of the independent recomputation of the Table I columns
+GPU usage, DMR, action age, fallback ratio, EIR and P_both and of the closed-loop R_cond (Secs. 7.2, 9.12, 9.13; no
+effect on any run, job file, selection or criterion).**
+* Cause. Sec. 7.2 lists GPU usage, DMR, action age p50 and p95, fallback ratio, EIR and P_both as columns of Table I and
+  puts the closed-loop R_cond in the table notes or the text; Sec. 9.13 puts every registered result in the paper or its
+  supplement; Sec. 9.12 requires an independent recomputation of the Table I columns from the raw run directories before
+  any number enters the paper. Amendment A10 registers `verify_independent.py`, which recomputes DS, SR, RC,
+  collisions/km and infractions/km, and leaves the other columns to a second independent script registered by its own
+  amendment before the analysis freeze (Amendment A10, deviation 9). This entry registers that script and its tests.
+  Item R7B built it from the PROTOCOL text and the data formats, independently of the aggregator, the analysis and the
+  implementation of these metrics (Sec. 9.12; `outputs/framelease_v4/build/R7B/`). The review returned GO_WITH_FIXES;
+  must-fix M1-M5 and should-fix S1-S5 are applied, and the review of the fixes returned GO. From this entry on, a change
+  of either file is an amendment.
+* Change: the files, their roles and the PROTOCOL sections they implement.
+
+  | file | role | PROTOCOL | review |
+  |---|---|---|---|
+  | `framelease_v4/analysis/verify_table1_extra.py` | the recomputation, per run from the raw logs, of GPU usage (and CUDA-seconds per second), DMR (from the first commit on; the all-ticks and expired-only variants), action age p50 and p95, the fallback ratio and episodes, P_both, EIR and the closed-loop R_cond (also without the V = 0 plans), and its comparison with the aggregator's `runs.csv` and `arm_summary.csv`, the runtime's `summary.json`, the runner's END-line results and the analysis outputs; the Sec. 9.11 guard | 5.1, 5.8, 6.2-6.4, 7.2, 9.11-9.13 | `build/R7B/review/REVIEW.md`: GO_WITH_FIXES, must-fix M1-M5 and should-fix S1-S5 applied; `build/R7B/rereview/REVIEW.md`: GO |
+  | `framelease_v4/analysis/tests/test_verify_table1_extra.py` | known answers on synthetic run directories, the run-level and analysis-level comparisons, the Sec. 6.3 definitions, the actor-log decoder, the guard, the imports, and the P1-0 smoke runs against their `summary.json` | as above | as above |
+
+* What it computes (its docstring fixes every definition; the route is the unit, arm-level values are means over
+  routes).
+  * Inputs: the runner's `status.jsonl` (the last final 'end' record of a job names its run directory) and, in each run
+    directory, `config.json`, `raw/agent/framelease/{ticks,jobs,events,decisions}.jsonl`, `summary.json` where present,
+    the actor-box log `raw/agent/framelease/actors.jsonl.gz` and the lease parameter file that the config names.
+  * GPU usage: the union of the cost-model intervals of prefixes and flow steps (`jobs.jsonl`; for a job still running
+    at the end, its `job_start` event and the step quanta in the ticks) over the span of the ticks.
+  * DMR: the ticks from the first commit on whose committed action, rebuilt from the accepted commit events, is not
+    valid by the arm's rule (before the deadline for the lease arms; below the age cap for Fixed Deep, Fast Only and
+    Event-Triggered), over those ticks. Fallback ratio: the ticks in mode 'fallback' over all ticks. Action age: the
+    tick time minus the capture time of the committed action over the tracked ticks, p50 and p95 by linear
+    interpolation. P_both: the decision rows at depth >= 1 with the shield evaluated and two feasible actions, over
+    those rows.
+  * EIR and the closed-loop R_cond (Sec. 6.3, standard validity): every accepted commit is a committed plan, placed
+    with the true capture pose of the actor-box log; the ego footprint is the lease footprint of Eqs. 1-3 (headings by
+    central differences, the ego box of the lease parameter file); the actor boxes are those of the log at t_k + tau.
+    V is the first time at which the footprint comes within d_safe = 0.5 m of an actor box (the first conflicting
+    sample of the 0.05 s grid brackets it; bisection refines it to 1e-4 s) and V_suf = clip(V - T_c, 0, H_bar). A
+    conflict plan is a miss when H > V_suf; EIR counts the tracked ticks whose committed plan is a conflict plan at an
+    age of at least V_suf. Plans that cannot be evaluated and the time resolution of V give bounds.
+  * Not recomputed: the CIs and p-values of the contrasts of these metrics (the S-dmr family and the secondary rows;
+    their per-route values and means are compared), the ability membership of the per-ability rows, and the
+    closed-loop lease utilization and premature expiry (Sec. 6.3; not columns of Table I).
+* Independence. Standard library, `zlib` and numpy only. It imports nothing of `framelease_v4/analysis`,
+  `framelease_v4/arms/metrics_v4.py`, `realized.py`, `actor_log.py` or `framelease_v2` and uses no code of them: the
+  definitions follow the PROTOCOL text and the documented conventions of the lease footprint, its own RFC 1952 decoder
+  reads the gzip members of the actor-box log, and only data formats are taken from elsewhere. The block comparison of
+  the review (`build/R7B/review/scripts/blocks.py`) finds no shared block of four or more lines with these files other
+  than import lists; must-fix M3 removed the one copied block.
+* Tolerances (in the docstring: stated before the first comparison of each part; the time resolution of V with must-fix
+  M1). Counts are compared exactly; fractions, ratios and times at 1e-6 absolute (the mean episode count at 1e-9). A
+  value with bounds (the in-flight step quanta of a job still running at the end; Sec. 6.3: the unevaluable plans and
+  the plans with |H - V_suf| < 1e-3 s) agrees when the other side lies within the bounds widened by the tolerance;
+  these agreements are counted by kind. A difference below the registered grid (1e-4 for fractions, 1 ms for ages) is
+  flagged 'below_grid' and remains a difference. An expected column, field or file that is absent is a difference.
+  Every comparison has a scope: 'analysis' for a value the analysis reads for a column of Table I, 'record' for every
+  other value; the verdict counts every difference.
+* Interim looks (Sec. 9.11). Before any log is read, every input that names a route is classified with the registered
+  route split (runner records, `runs.csv` rows, run directories, the jobs of `cells.csv` and every route list of the
+  analysis outputs); an input whose route is unknown counts as a registered test route. A test route is released only
+  by a valid analysis-freeze record that covers the input (its sha256 cited in Sec. 13, PROTOCOL.md equal to its seal,
+  the recorded route split and analysis code on disk); otherwise the run is refused (exit 4) and only
+  `guard_log.jsonl` is written. Under the registered record (status 'final') every run directory is recomputed: the
+  development option `--runs-csv-values` is refused there. The test options `--route-split`, `--protocol` and `--seal`
+  apply to synthetic test routes only.
+* Development data (Secs. 9.11, 9.12; `build/` stands for `outputs/framelease_v4/build/`). No test-route run existed or
+  was read; the values were used to check the code, never to choose a definition, a tolerance or a rule. Synthetic run
+  directories with known answers (the tests); with `--runs-csv-values`, the synthetic analysis outputs
+  `build/R7/dev/syn_r4/`, `build/R7/dev/syn_varied/` and `build/R6/dev_inputs/`; the 14 P1-0 smoke run directories of
+  training route 18305 (the tests); and the P1 training-route run directories named by two copies of the `queue_p1`
+  runner records (`build/R7/dev/p1_snapshot/`, made on 2026-11-14 at 11:46; `build/R7B/dev/p1_snap_2203/`, made on
+  2026-11-14 at 22:03), compared with the development aggregations `build/R7/dev/agg_p1/`, `build/R7B/dev/agg_now/`
+  and `build/R7B/dev/agg_snap_2203/` (Amendment A10, deviation 1), from 2026-11-14 14:39 to 2026-11-15 01:13, into
+  `build/R7B/dev/verify_p1*/` and scratch directories under /tmp (`build/R7B/PROGRESS.md`). The review of item R7B
+  ran the reviewed version (with injected `runs.csv` values and guard probes), monkeypatched variants of it and a
+  plan-by-plan comparison with `realized.py` on the 180 run directories of `build/R7B/dev/p1_snap_2203/`, from
+  2026-11-14 23:22 to 2026-11-15 00:20, into /tmp/review_R7B/ and `build/R7B/review/logs/`
+  (`build/R7B/review/PROGRESS.md`). The definitions and tolerances were fixed in the docstring before the first
+  comparison; the corrections of must-fix M1 and M2 (the continuous V, the lease footprint) follow the text of Sec. 6.3.
+* Development comparison of the registered version (2026-11-15 01:13, `build/R7B/dev/verify_p1_snap_2203_c/`). On the
+  P1 runs of `build/R7B/dev/p1_snap_2203/` against `build/R7B/dev/agg_snap_2203/` (the aggregator of Amendment A3):
+  180 run directories recomputed, 179 `runs.csv` rows with analysis_use, 12,259 comparisons, 136 differences, 1 of them
+  in a value the analysis reads. Every difference has a recorded cause (`build/R7B/PROGRESS.md`;
+  `build/R7B/dev/reconcile_p1_c.json` for Sec. 6.3): the cross-check columns `gpu_usage_recomputed` and
+  `gpu_busy_recomputed_s` and the commit count of `runs.csv` omit the work of a job still running at the end of a run
+  (the `gpu_usage` that the analysis reads agrees within the in-flight bounds); the timed-out run of job
+  `v4p1_fl_heuristic_B0_d10_k1.0_s11_r23659` (not used; no `summary.json`) has empty cells there; the Sec. 6.3 counts
+  of 19 runs differ by finding F1, which also gives the one difference the analysis reads (`fast_only`, route 1792:
+  EIR 94/412 = 0.2282 recomputed, 85/412 = 0.2063 in `runs.csv`); 2 runs agree only within the Sec. 6.3 bounds
+  (finding F2; one miss within the time resolution of V). `summary.json`: 3,759 comparisons, 0 differences. On the
+  synthetic analysis outputs (`--runs-csv-values`; `build/R7B/dev/syn_r4_c/`, `r6_dev_inputs_c/`, `syn_varied_c/`):
+  AGREE with 25,746, 25,746 and 20,242 comparisons.
+* Findings about registered files (Sec. 6.3), carried to the analysis freeze; this entry changes neither file.
+  * F1. `framelease_v4/arms/actor_log.py` places a row of the actor-box log at its frame time, and `realized.py` treats
+    a time above the last row by more than 1e-9 s as outside the log, while the plan sample times `capture_s + tau`
+    carry the runtime's offset of 3e-7 to 1.1e-6 s: a sample that lands on the last row has no actors, and a plan whose
+    horizon ends at that row counts as log-censored. On the P1 runs above this changes the Sec. 6.3 counts of 19 runs
+    (38 plans log-censored there and clear here; 2 conflict plans missed there) and one EIR value the analysis reads.
+  * F2. `realized.py` places a plan only through the actor-log row of its capture step: a plan without that row (a
+    decimated log) and the commits of a job still running at the end leave the counts and, with their tracked ticks,
+    the EIR denominator, which Sec. 6.3 forms from all tracked ticks. No P1 log was decimated; the recomputation
+    reports such values within its bounds.
+  The recomputation reports every value that F1 changes as a difference; its cause is entered with the result (use
+  rule 2).
+* Use of the registered files (fixed by this entry).
+  1. After the analysis freeze is entered and `analyze_v4.py` has written `final_<stamp>/analysis/` (Amendment A10, use
+     rule 1), an independent session (Sec. 9.12) runs `verify_table1_extra.py` next to `verify_independent.py`
+     (Amendment A10, use rule 4): with `--analysis-freeze` (the record, or the `final_<stamp>/` directory that holds
+     it), one `--queue` for every queue whose job lines the aggregation covers, `--agg final_<stamp>/`,
+     `--analysis final_<stamp>/analysis/` and `--out` a new directory such as
+     `outputs/framelease_v4/verification/final_<stamp>_table1_extra/`; never with `--runs-csv-values` or a test option.
+     Only a result with status 'final' in `table1_extra.json` counts.
+  2. AGREE releases the Table I columns GPU usage, DMR, action age p50 and p95, fallback ratio, EIR and P_both and the
+     closed-loop R_cond (table notes or text). On DIFFER every difference is resolved and its cause entered in Sec. 13
+     before any of these numbers enters the paper.
+  3. The sha256 of `table1_extra.json` and of the `SHA256SUMS` of that directory are entered in their own dated Sec. 13
+     entry before the paper is written.
+* In-place text. Sec. 9.12, "**Verification.**" (as Amendment A10 leaves it): "a second script, registered by its own
+  amendment before the analysis freeze, recomputes the other Table I columns," becomes "Amendment A11:
+  `framelease_v4/analysis/verify_table1_extra.py` recomputes GPU usage, DMR, action age p50 and p95, fallback ratio,
+  EIR, P_both and the closed-loop R_cond,".
+* Scope. No run, job file, pin, stage selection, freeze or criterion changes. No job line pins these files, no agent
+  process imports them, and neither the aggregator nor the analysis imports them; the analysis-freeze record does not
+  list them. This entry precedes the analysis freeze; the phase driver's gate G8 waits for Amendment A10 only.
+* Files (sha256).
+
+  | file | sha256 |
+  |---|---|
+  | `framelease_v4/analysis/verify_table1_extra.py` | `a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa` |
+  | `framelease_v4/analysis/tests/test_verify_table1_extra.py` | `c3bf160c7d5a6203c40577928acbb16c799677e73e0b4c11222f0041d3c553cd` |
+
+* Evidence (outside the manifest; fixed by these sha256). Reviews: `outputs/framelease_v4/build/R7B/review/REVIEW.md`
+  (`0aeac210c746641abf1f4290a1779acfbcde268c96197bdc420f9e82946ce57e`), `build/R7B/rereview/REVIEW.md`
+  (`7e71062b04b1f0f08c33c74e4c146dea65611b8b1049add0b858f4960060170f`), the review tests
+  `build/R7B/review/test_review_r7b.py` (`63c4359d5cf4991a4904bac1f1c95b4519856d84e4e96431182496b1b45ce0d0`).
+  Development comparison: `build/R7B/dev/verify_p1_snap_2203_c/SHA256SUMS`
+  (`918212a6e08628403cc588bd3bc38a112f20d2816235784ec56534791034f76a`),
+  `build/R7B/dev/reconcile_p1_c.json` (`21375e999bc7522e6519edeefcbf378c083b1876f2d24948d8d994dd5087b184`),
+  `build/R7B/dev/syn_r4_c/SHA256SUMS` (`3f0853691592b66d61ae072e6f417afa9a30fcb7d6ba760780072454873074b0`),
+  `build/R7B/dev/r6_dev_inputs_c/SHA256SUMS`
+  (`ff1bd3290b403bc655de879aab3c9816813c9f0dff38569706927aee9a480c6f`),
+  `build/R7B/dev/syn_varied_c/SHA256SUMS` (`e21a1429b0246be97d6997f4e8c8961f2df39115eda5dcebf33959a1aef34e34`).
+  Mutation test of the tests: `build/R7B/logs/mutate.log`
+  (`8dafbcd811e848585519f0ee74998c42247cdcebca3a2df56fc2345c51de6840`; 110 of 110 mutants killed).
+* Tests (CPU; logs in `outputs/framelease_v4/amendment_a11/`):
+  * `tests/test_verify_table1_extra.py`: 71 passed, 67 subtests passed in 4.93s
+    (`pytest_verify_table1_extra.log`, `cd8d75adc82840df9edec591cf38c8c598f42836f6ee6d88d123f25584959802`);
+  * the review tests `build/R7B/review/test_review_r7b.py`:
+    14 passed, 2 subtests passed in 4.06s
+    (`pytest_review_r7b.log`, `0a6d4014f31a74c558436d22e94150874e8640f361105662b663cf0cb9c38965`).
+
+  At drafting (2026-11-15): 71 passed and 67 subtests; 14 passed and 2 subtests
+  (`outputs/framelease_v4/build/AMEND2/a10r7b/logs/`). Besides synthetic run directories, the tests read the 14 P1-0
+  smoke run directories of training route 18305 and the review tests three P1 training-route run directories and
+  `build/R7B/dev/agg_snap_2203/runs.csv`, all read only.
+* Manifest and seal after this amendment: `MANIFEST.sha256`, 222 files, sha256
+  `1ea365bc6e0f8267bf347c38ec302dd447fa8e0e1d6cbf557e3c28c65ecbfb88`, sealed with this entry.
+
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

@@ -1,0 +1,23 @@
++ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B framelease_v4/analysis/verify_table1_extra.py --analysis-freeze outputs/framelease_v4/analysis/final_20261116T091445 --queue outputs/framelease_v4/queue_p4 --agg outputs/framelease_v4/analysis/final_20261116T091445/agg_p4 --analysis outputs/framelease_v4/analysis/final_20261116T091445/analysis --out outputs/framelease_v4/verification/final_20261116T091445_table1_extra
+verify_table1_extra DIFFER (final): 127 run dirs (127 recomputed), 632 runs.csv rows (126 used, 0 of them without raw logs), 126 used analysis cells; comparisons 24766, differences 295 (196 in values the analysis reads)
+  analysis.json            compared    188  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:descriptive compared     14  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:families/S-dmr compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:per_ability compared    288  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  analysis.json:secondary  compared    812  differences    30  (analysis-read 30; agree within in-flight GPU bounds 28, within Sec. 6.3 bounds 0)
+  arm_summary.csv          compared    230  differences     1  (analysis-read 0; agree within in-flight GPU bounds 3, within Sec. 6.3 bounds 0)
+  conditions.csv           compared   1280  differences     4  (analysis-read 4; agree within in-flight GPU bounds 18, within Sec. 6.3 bounds 0)
+  descriptive.csv          compared     14  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  family_S-dmr.csv         compared     33  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  paired_differences.csv   compared   6472  differences   128  (analysis-read 128; agree within in-flight GPU bounds 50, within Sec. 6.3 bounds 0)
+  per_ability.csv          compared    288  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  per_scenario.csv         compared   5814  differences     2  (analysis-read 2; agree within in-flight GPU bounds 11, within Sec. 6.3 bounds 0)
+  runner                   compared    127  differences     0  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runner result            compared    254  differences     2  (analysis-read 0; agree within in-flight GPU bounds 0, within Sec. 6.3 bounds 0)
+  runs.csv                 compared   5461  differences    98  (analysis-read 2; agree within in-flight GPU bounds 43, within Sec. 6.3 bounds 0)
+  secondary.csv            compared    812  differences    30  (analysis-read 30; agree within in-flight GPU bounds 28, within Sec. 6.3 bounds 0)
+  summary.json             compared   2646  differences     0  (analysis-read 0; agree within in-flight GPU bounds 32, within Sec. 6.3 bounds 0)
+  differences by cause: F1 105, unclassified 190; in values the analysis reads: F1 92, unclassified 104; agreements within bounds at the value under a convention: none; plans changed by F1: 8 in 8 run directories, by F3: 0 in 0 run directories
+outputs: outputs/framelease_v4/verification/final_20261116T091445_table1_extra
+Command exited with non-zero status 1
+TIME 34.47 s, max RSS 148348 KB

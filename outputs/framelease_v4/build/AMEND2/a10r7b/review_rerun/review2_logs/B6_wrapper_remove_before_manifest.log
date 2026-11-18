@@ -1,0 +1,14 @@
+(exit 1, 12.8 s)
+apply_locked: exit 1 (output /tmp/A10A11/applier/treeB/outputs/framelease_v4/amendment_a10/apply.out)
+
+--- apply.out
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/applier/treeB/outputs/framelease_v4/amendment_a10/attempt_20261115T104134_360944
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+inject: removed /tmp/A10A11/applier/treeB/framelease_v4/rl/RL_PROTOCOL.md
+registration --write-manifest --force -> 0 | wrote /tmp/A10A11/applier/treeB/outputs/framelease_v4/registration/MANIFEST.sha256: 220 files, sha256 e1154bf73a0c73c23ae443b02638793b792c18e936b4cb904c42c251341775d3
+manifest difference: new [] / left ['framelease_v4/rl/RL_PROTOCOL.md'] / changed []
+STOP: registered files changed or left the new manifest: ['framelease_v4/rl/RL_PROTOCOL.md']
+apply_locked: PROTOCOL.md unchanged; RESTORED the sealed manifest
+manifest: 1 files differ: [('framelease_v4/rl/RL_PROTOCOL.md', 'c12b935b740494fda4c54d6c162d7d8776a0a29bfe84e5b3ec14b482d1bf2557', 'unreadable (No such file or directory)')]
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

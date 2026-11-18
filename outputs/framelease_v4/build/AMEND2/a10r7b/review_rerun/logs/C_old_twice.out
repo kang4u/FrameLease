@@ -1,0 +1,7 @@
+apply_locked: exit 1 (output /tmp/AMEND3/a10r7b/rsim/treeC/outputs/framelease_v4/amendment_a10/apply.out)
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+STOP: in-place text found 2 times: 'Status (Amendment A3): the `fl_global_shield` lease of item 1, the aggregator of'
+apply_locked: PROTOCOL.md unchanged; the manifest equals the sealed one
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

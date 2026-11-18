@@ -1,0 +1,12 @@
+{
+ "A10_rc": 0,
+ "A11_check_with_gate_line": [
+  "STOP: template problem: ['* **G3 P2 data manifest** (2026-11-15 12:00, Beijing time). A line of the template that the phase driver reads as its G3 entry.'] / starts '**Amendment A11, {{datetime}} (Beijing t' / anchor phrase 0 times"
+ ],
+ "A11_apply_rc": 1,
+ "phase_entries_read": {
+  "d1_decision": 2762,
+  "p2_jobs": 2789
+ },
+ "A11_title_line": null
+}

@@ -1,0 +1,8 @@
+apply_locked: exit 137 (output /tmp/A10A11/fix2/sim_tree/treeD/outputs/framelease_v4/amendment_a11/apply.out)
+apply_locked: copies of the sealed files and of both baselines in /tmp/A10A11/fix2/sim_tree/treeD/outputs/framelease_v4/amendment_a11/attempt_20261115T103321_356683
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+inject: killed after --write-manifest
+apply_locked: PROTOCOL.md unchanged; RESTORED the sealed manifest
+manifest: OK
+seal framelease_v4/PROTOCOL.md: OK
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

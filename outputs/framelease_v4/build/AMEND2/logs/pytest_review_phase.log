@@ -1,0 +1,31 @@
+......                                                                   [100%]
+==================================== PASSES ====================================
+____________ ReviewTest.test_chaos_sigkill_after_tool_calls_seed_3 _____________
+----------------------------- Captured stdout call -----------------------------
+
+chaos seed 3: 7 kills in 11 runs; aggregate calls 1; p3 runs 5; kill points (last log line): ; ran (0.0; started pid
+_____________________ ReviewTest.test_chaos_sigkill_seed_1 _____________________
+----------------------------- Captured stdout call -----------------------------
+
+chaos seed 1: 13 kills in 17 runs; aggregate calls 1; p3 runs 6; kill points (last log line): /tmp/PHASE_REVIEW/phdrv_9tmlpz0g/root /t; G1 D1; START pid; started pid
+_________________ ReviewTest.test_orphaned_stress_tool_restart _________________
+----------------------------- Captured stdout call -----------------------------
+
+orphan: restart exit 0; s3 calls 1; s3 reports 1; ALERT: ''
+____ ReviewTest.test_registered_file_deleted_between_precheck_and_manifest _____
+----------------------------- Captured stdout call -----------------------------
+
+F1 deletion: exit 1; ALERT True; entries []; tool.py in the baseline True; in the sealed manifest False; seal ok False; verify ok False
+____ BaselineReviewTest.test_registration_only_amendment_after_an_own_seal _____
+----------------------------- Captured stdout call -----------------------------
+
+registration-only amendment after an own seal: p3_tool.py in the driver baseline True; after the change: exit 1, ALERT True, G3 entry names it as unregistered False
+=========================== short test summary info ============================
+PASSED outputs/framelease_v4/build/PHASE/review/test_review_phase.py::ReviewTest::test_chaos_sigkill_after_tool_calls_seed_3
+PASSED outputs/framelease_v4/build/PHASE/review/test_review_phase.py::ReviewTest::test_chaos_sigkill_seed_1
+PASSED outputs/framelease_v4/build/PHASE/review/test_review_phase.py::ReviewTest::test_orphaned_stress_tool_restart
+PASSED outputs/framelease_v4/build/PHASE/review/test_review_phase.py::ReviewTest::test_p1_driver_record_between_phase_records
+PASSED outputs/framelease_v4/build/PHASE/review/test_review_phase.py::ReviewTest::test_registered_file_deleted_between_precheck_and_manifest
+PASSED outputs/framelease_v4/build/PHASE/review/test_review_phase.py::BaselineReviewTest::test_registration_only_amendment_after_an_own_seal
+6 passed in 66.68s (0:01:06)
+wall 66.94 s, max RSS 49672 KB, exit 0

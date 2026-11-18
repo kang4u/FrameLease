@@ -1,0 +1,11 @@
+{
+ "manifest": "outputs/framelease_v4/registration/MANIFEST.sha256",
+ "manifest_files": 221,
+ "manifest_sha256": "0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3",
+ "protocol": "framelease_v4/PROTOCOL.md",
+ "protocol_sha256": "e51c0ceb19dcbf868a5af4a049993e9e9aad793fb5dc3d1d2c13e3dd87fabcca",
+ "schema": "framelease_v4.registration/1",
+ "script_sha256": "1f1cc02314635a674733e70cfc0729cb2815b50275d4e599fe263fce5568f1b8",
+ "sealed": "2026-11-15T20:43:52+0800",
+ "variant": "FULL"
+}

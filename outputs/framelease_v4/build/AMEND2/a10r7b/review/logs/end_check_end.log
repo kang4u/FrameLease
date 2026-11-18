@@ -1,0 +1,7 @@
+registration --verify (exit 0): manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+seal names manifest 4bfe7451a41b | MANIFEST.sha256 is 4bfe7451a41b | PROTOCOL.md is ca54d359b4b9 | seal names PROTOCOL ca54d359b4b9
+p1_driver baseline: 153 files; differ from the tree: none; differ from the sealed manifest: none
+phase_driver baseline: 199 files; differ from the tree: none; differ from the sealed manifest: none
+framelease_v4 entries changed since 2026-11-15 07:31: none
+new __pycache__ under framelease_v4: none
+empty files under framelease_v4: ['framelease_v4/.protocol.lock', 'framelease_v4/offline/__init__.py']

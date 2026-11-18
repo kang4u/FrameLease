@@ -1,0 +1,296 @@
+target,key,field,their_field,ours,theirs,abs_diff,tolerance,status,cause,below_grid,scope,value_source,note
+runs.csv,v4p4_fl_original_k1.0_s11_r26458,gpu_usage,gpu_usage_recomputed,0.9730520209472822,0.9661809309936548,0.006871089953627396,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r26458,gpu_busy_s,gpu_busy_recomputed_s,15.909400779556606,15.797058456420906,0.11234232313569947,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r26458,commits,commits,206,201,5.0,0,differ,,,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2790,gpu_usage,gpu_usage_recomputed,0.9924715808774324,0.991148608300308,0.0013229725771243261,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2790,gpu_busy_s,gpu_busy_recomputed_s,16.276534168929146,16.254837417602538,0.02169675132660842,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,gpu_usage,gpu_usage,0.9930733887312904,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,gpu_usage,gpu_usage_recomputed,0.9930733887312904,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,gpu_busy_s,gpu_busy_recomputed_s,58.49202346787206,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,gpu_busy_s,gpu_busy_in_span_s,58.49202346787206,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,cuda_s_per_s,cuda_s_per_s,0.9930733887312904,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,sim_span_s,sim_span_s,58.900000877678394,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,ticks,ticks,1178,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,first_tick_s,first_tick_s,0.05000000074505806,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,last_tick_s,last_tick_s,58.900000877678394,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,dmr,dmr,0.9666381522668948,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,dmr,deadline_miss_ratio_after_first_commit,0.9666381522668948,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,ticks_after_first_commit,ticks_after_first_commit,1169,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,ticks_after_first_commit,dmr_ticks,1169,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,dmr_all_ticks,deadline_miss_ratio,0.966893039049236,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,expired_ratio_after_first_commit,expired_ratio_after_first_commit,0.9666381522668948,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,expired_ratio_all_ticks,expired_ratio,0.9592529711375212,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,first_commit_s,first_commit_s,0.485010924246395,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,fallback_ticks,fallback_ticks,1139,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,fallback_episodes,fallback_episodes,3,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,fallback_by_reason,fallback_by_reason,"{""expired"": 1130, ""no_plan"": 9}",,,,differ,,,record,raw,row not used by the analysis (analysis_use false); mapping differs
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,track_ticks,track_ticks,39,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,action_age_p50_s,action_age_p50_s,1.0000000149011612,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,action_age_p95_s,action_age_p95_s,1.855000027641654,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,action_age_mean_s,action_age_mean_s,1.0820512981751027,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,shield_epochs,shield_epochs,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,choice_epochs,choice_epochs,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,decision_rows,decision_epochs,141,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,commits,commits,11,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,max_age_s,max_age_s,2.0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,committed_plans,committed_plans,11,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,conflict_plans,realized_conflict_plans,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,misses,realized_misses,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,v0_plans,realized_v0_plans,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,eir_invalid_ticks,realized_invalid_ticks,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,eir,realized_invalid_tick_ratio,0.0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,log_censored_plans,realized_log_censored_plans,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,validity_available,realized_available,True,,,,differ,,,record,raw,row not used by the analysis (analysis_use false)
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,fallback_ratio,deadline_miss_ratio,0.966893039049236,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); column the analysis reads as fallback_ratio; theirs empty
+runs.csv,v4p4_fixed_deep_k1.0_s11_r23658,gpu_usage,gpu_usage_recomputed,0.9973791224683151,0.995377359027768,0.002001763440547033,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r23658,gpu_busy_s,gpu_busy_recomputed_s,73.80605616245124,73.65792566490182,0.14813049754941687,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2390,gpu_usage,gpu_usage_recomputed,0.9907878894442546,0.9902049382417222,0.000582951202532378,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2390,gpu_busy_s,gpu_busy_recomputed_s,67.1258805101018,67.08638556480395,0.039494945297846584,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2390,commits,commits,990,989,1.0,0,differ,,,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2390,gpu_usage,gpu_usage_recomputed,0.993672947667791,0.9930537888656504,0.0006191588021405847,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2390,gpu_busy_s,gpu_busy_recomputed_s,33.58614613164391,33.565218563079824,0.020927568564083288,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2390,gpu_usage,gpu_usage_recomputed,0.9945592705344005,0.9883951788951579,0.006164091639242586,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2390,gpu_busy_s,gpu_busy_recomputed_s,13.177910530946972,13.096236314773558,0.08167421617341475,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2084,gpu_usage,gpu_usage_recomputed,0.9940812360350864,0.9939648154193725,0.00011642061571381923,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2084,gpu_busy_s,gpu_busy_recomputed_s,198.8162501696102,198.79296604537996,0.023284124230258385,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fast_only_k1.0_s11_r2084,gpu_usage,gpu_usage_recomputed,0.9975744767070424,0.9966878953024405,0.0008865814046018494,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fast_only_k1.0_s11_r2084,gpu_busy_s,gpu_busy_recomputed_s,25.338392085930334,25.315872917175298,0.02251916875503568,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2204,gpu_usage,gpu_usage_recomputed,0.9937796635306401,0.99325713993206,0.0005225235985800714,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2204,gpu_busy_s,gpu_busy_recomputed_s,47.65173557636037,47.62668056869507,0.025055007665301332,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2204,gpu_usage,gpu_usage_recomputed,0.997669791620796,0.9975586649580398,0.00011112666275625571,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2204,gpu_busy_s,gpu_busy_recomputed_s,199.5339612974469,199.51173596382122,0.02222533362566992,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r2204,gpu_usage,gpu_usage_recomputed,0.9906359036826244,0.9905301273983348,0.00010577628428964925,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r2204,gpu_busy_s,gpu_busy_recomputed_s,198.12718368884995,198.10602843093878,0.02115525791117534,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2115,gpu_usage,gpu_usage_recomputed,0.9945372426953609,0.99443171232785,0.00010553036751093092,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2115,gpu_busy_s,gpu_busy_recomputed_s,198.90745150302413,198.88634542846654,0.0211060745575935,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2050,gpu_usage,gpu_usage_recomputed,0.9978454497636733,0.9974349007215266,0.00041054904214665733,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2050,gpu_busy_s,gpu_busy_recomputed_s,199.56909292654584,199.48698311614984,0.08210981039599119,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2050,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p4_fl_original_k1.0_s11_r2050,gpu_usage,gpu_usage_recomputed,0.9883212580307078,0.9881919320424658,0.0001293259882420017,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r2050,gpu_busy_s,gpu_busy_recomputed_s,197.66425455156843,197.63838935279836,0.025865198770077313,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2050,log_censored_plans,realized_log_censored_plans,5,6,1.0,0,differ,F1,,record,raw,equal to the value 6 under F1
+runs.csv,v4p4_age_only_A1.0_d1_k1.0_s11_r3248,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p4_fixed_deep_k1.0_s11_r3248,gpu_usage,gpu_usage_recomputed,0.9975267479825278,0.9953896996322914,0.0021370483502364257,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r3248,gpu_busy_s,gpu_busy_recomputed_s,90.4756773902079,90.28184710121154,0.19383028899636656,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r17563,gpu_usage,gpu_usage_recomputed,0.9934087047413143,0.9932986868034241,0.00011001793789011671,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r17563,gpu_busy_s,gpu_busy_recomputed_s,198.6817439088515,198.65974032020554,0.022003588645958416,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,conflict_plans,realized_conflict_plans,13,12,1.0,0,differ,F1,,record,raw,equal to the value 12 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,misses,realized_misses,12,11,1.0,0,differ,F1,,record,raw,equal to the value 11 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,r_cond,realized_r_cond,0.9230769230769231,0.9166666666666666,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.916666667 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,r_cond_excl_v0,realized_r_cond_excl_v0,0.9230769230769231,0.9166666666666666,0.0064102564102564985,1e-06,differ,F1,False,record,raw,equal to the value 0.916666667 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,eir_invalid_ticks,realized_invalid_ticks,35,24,11.0,0,differ,F1,,record,raw,equal to the value 24 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,eir,realized_invalid_tick_ratio,0.10606060606060606,0.07272727272727272,0.03333333333333334,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0727272727 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,log_censored_plans,realized_log_censored_plans,1,2,1.0,0,differ,F1,,record,raw,equal to the value 2 under F1
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r3464,gpu_usage,gpu_usage_recomputed,0.9458356892846257,0.945358125109829,0.00047756417479671853,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r3464,gpu_busy_s,gpu_busy_recomputed_s,38.30634598683637,38.28700463676454,0.01934135007182647,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r3464,log_censored_plans,realized_log_censored_plans,22,23,1.0,0,differ,F1,,record,raw,equal to the value 23 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r3464,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p4_fixed_deep_k1.0_s11_r3561,gpu_usage,gpu_usage_recomputed,0.9965805217313388,0.989983946006308,0.006596575725030807,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r3561,gpu_busy_s,gpu_busy_recomputed_s,23.618958716982636,23.46261986923218,0.1563388477504546,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r3561,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p5_fixed_deep_k1.5_s11_r3248,gpu_usage,gpu_usage_recomputed,0.9979737398096368,0.9945406205012575,0.0034331193083793066,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k1.5_s11_r3248,gpu_busy_s,gpu_busy_recomputed_s,78.19124367922535,77.92225877666465,0.2689849025607032,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fast_only_k1.5_s11_r2390,gpu_usage,gpu_usage_recomputed,0.9992147642005786,0.9987678259849925,0.00044693821558616786,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fast_only_k1.5_s11_r2390,gpu_busy_s,gpu_busy_recomputed_s,69.99499527525722,69.96368725204475,0.03130802321247472,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r2390,gpu_usage,gpu_usage_recomputed,0.9985886409238156,0.9935918557080792,0.004996785215736432,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r2390,gpu_busy_s,gpu_busy_recomputed_s,81.78441091034317,81.37517419433597,0.40923671600720013,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2509,gpu_usage,gpu_usage_recomputed,0.9921977703728033,0.9914677923290348,0.0007299780437685088,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2509,gpu_busy_s,gpu_busy_recomputed_s,27.28543909183681,27.265364694595345,0.020074397241465647,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2509,log_censored_plans,realized_log_censored_plans,4,5,1.0,0,differ,F1,,record,raw,equal to the value 5 under F1
+runner result,v4p4_fl_original_k1.0_s11_r23658,action_age_p50_s,result.action_age_p50_s,1.0000000149011612,,,,differ,,,record,raw,runner outcome 'timeout'; theirs empty
+runner result,v4p4_fl_original_k1.0_s11_r23658,fallback_ratio,result.fallback_tick_ratio,0.966893039049236,,,,differ,,,record,raw,runner outcome 'timeout'; theirs empty
+arm_summary.csv,fl_full/fl_full/1.0/11.0/P4/ti_main,realized_invalid_tick_ratio,realized_invalid_tick_ratio,0.15111608250768915,0.14873513012673678,0.0023809523809523725,1e-06,differ,F1,False,record,raw,equal to the value 0.14873513 under F1
+conditions.csv,fl_full_k1.0_s11/all/eir,mean,mean,0.15111608250768915,0.14873513012673678,0.0023809523809523725,1e-06,differ,F1,False,analysis,raw,equal to the value 0.14873513 under F1
+conditions.csv,fl_full_k1.0_s11/all/eir,median,median,0.06836772634318647,0.0517010596765198,0.01666666666666667,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0517010597 under F1
+conditions.csv,fl_full_k1.0_s11/all/r_cond,mean,mean,0.6321751165501165,0.6316409285159285,0.0005341880341880323,1e-06,differ,F1,False,analysis,raw,equal to the value 0.631640929 under F1
+conditions.csv,fl_full_k1.0_s11/all/r_cond,median,median,0.9038461538461539,0.9006410256410255,0.0032051282051283048,1e-06,differ,F1,False,analysis,raw,equal to the value 0.900641026 under F1
+secondary.csv,secondary.csv:fl_full_minus_fixed_deep_k1.0_s11_all/eir,mean_a,mean_a,0.15111608250768915,0.14873513012673678,0.0023809523809523725,1e-06,differ,F1,False,analysis,raw,equal to the value 0.14873513 under F1
+secondary.csv,secondary.csv:fl_full_minus_fixed_deep_k1.0_s11_all/eir,mean,mean,0.036875672896918524,0.034494720515966144,0.0023809523809523794,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0344947205 under F1
+secondary.csv,secondary.csv:fl_full_minus_fixed_deep_k1.0_s11_all/r_cond,mean_a,mean_a,0.6028687221869041,0.6022859716041534,0.0005827505827507018,1e-06,differ,F1,False,analysis,raw,equal to the value 0.602285972 under F1
+secondary.csv,secondary.csv:fl_full_minus_fixed_deep_k1.0_s11_all/r_cond,mean,mean,-0.397131277813096,-0.3977140283958466,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value -0.397714028 under F1
+secondary.csv,secondary.csv:fl_full_minus_fast_only_k1.0_s11_all/eir,mean_a,mean_a,0.15111608250768915,0.14873513012673678,0.0023809523809523725,1e-06,differ,F1,False,analysis,raw,equal to the value 0.14873513 under F1
+secondary.csv,secondary.csv:fl_full_minus_fast_only_k1.0_s11_all/eir,mean,mean,0.014989926408874173,0.01260897402792179,0.002380952380952383,1e-06,differ,F1,False,analysis,raw,equal to the value 0.012608974 under F1
+secondary.csv,secondary.csv:fl_full_minus_fast_only_k1.0_s11_all/r_cond,mean_a,mean_a,0.6782819453273998,0.6776991947446492,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value 0.677699195 under F1
+secondary.csv,secondary.csv:fl_full_minus_fast_only_k1.0_s11_all/r_cond,mean,mean,-0.3217180546726001,-0.3223008052553507,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value -0.322300805 under F1
+secondary.csv,secondary.csv:fl_full_minus_fast_only_k1.0_s11_all/r_cond,median,median,-0.07692307692307687,-0.08333333333333337,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0833333333 under F1
+secondary.csv,secondary.csv:fl_full_minus_age_only_k1.0_s11_all/eir,mean_a,mean_a,0.15111608250768915,0.14873513012673678,0.0023809523809523725,1e-06,differ,F1,False,analysis,raw,equal to the value 0.14873513 under F1
+secondary.csv,secondary.csv:fl_full_minus_age_only_k1.0_s11_all/eir,mean,mean,-0.03342867759527381,-0.03580962997622621,0.0023809523809523933,1e-06,differ,F1,False,analysis,raw,equal to the value -0.03580963 under F1
+secondary.csv,secondary.csv:fl_full_minus_age_only_k1.0_s11_all/r_cond,mean_a,mean_a,0.6321751165501165,0.6316409285159285,0.0005341880341880323,1e-06,differ,F1,False,analysis,raw,equal to the value 0.631640929 under F1
+secondary.csv,secondary.csv:fl_full_minus_age_only_k1.0_s11_all/r_cond,mean,mean,0.0027898188823549503,0.0022556308481669063,0.000534188034188044,1e-06,differ,F1,False,analysis,raw,equal to the value 0.00225563085 under F1
+secondary.csv,secondary.csv:fl_full_minus_age_only_k1.0_s11_all/r_cond,median,median,0.08972027972027974,0.08651515151515149,0.0032051282051282493,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0865151515 under F1
+secondary.csv,secondary.csv:fl_full_minus_event_triggered_k1.0_s11_all/eir,mean_a,mean_a,0.15111608250768915,0.14873513012673678,0.0023809523809523725,1e-06,differ,F1,False,analysis,raw,equal to the value 0.14873513 under F1
+secondary.csv,secondary.csv:fl_full_minus_event_triggered_k1.0_s11_all/eir,mean,mean,-0.028007881515978557,-0.030388833896930933,0.002380952380952376,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0303888339 under F1
+secondary.csv,secondary.csv:fl_full_minus_event_triggered_k1.0_s11_all/r_cond,mean_a,mean_a,0.6782819453273998,0.6776991947446492,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value 0.677699195 under F1
+secondary.csv,secondary.csv:fl_full_minus_event_triggered_k1.0_s11_all/r_cond,mean,mean,-0.3217180546726001,-0.3223008052553507,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value -0.322300805 under F1
+secondary.csv,secondary.csv:fl_full_minus_event_triggered_k1.0_s11_all/r_cond,median,median,-0.07692307692307687,-0.08333333333333337,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0833333333 under F1
+secondary.csv,secondary.csv:fl_full_minus_fl_heuristic_k1.0_s11_all/eir,mean_a,mean_a,0.15111608250768915,0.14873513012673678,0.0023809523809523725,1e-06,differ,F1,False,analysis,raw,equal to the value 0.14873513 under F1
+secondary.csv,secondary.csv:fl_full_minus_fl_heuristic_k1.0_s11_all/eir,mean,mean,-0.025440688980977254,-0.027821641361929637,0.002380952380952383,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0278216414 under F1
+secondary.csv,secondary.csv:fl_full_minus_fl_heuristic_k1.0_s11_all/r_cond,mean_a,mean_a,0.6896455816910362,0.6890628311082856,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value 0.689062831 under F1
+secondary.csv,secondary.csv:fl_full_minus_fl_heuristic_k1.0_s11_all/r_cond,mean,mean,0.054556193361006214,0.05397344277825562,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0539734428 under F1
+secondary.csv,secondary.csv:fl_full_minus_fl_heuristic_k1.0_s11_all/r_cond,median,median,0.22307692307692317,0.21666666666666667,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.216666667 under F1
+secondary.csv,secondary.csv:fl_full_minus_fl_original_k1.0_s11_all/eir,mean_a,mean_a,0.1366155779690934,0.13405147540499085,0.002564102564102555,1e-06,differ,F1,False,analysis,raw,equal to the value 0.134051475 under F1
+secondary.csv,secondary.csv:fl_full_minus_fl_original_k1.0_s11_all/eir,mean,mean,0.04777232908287997,0.0452082265187774,0.002564102564102569,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0452082265 under F1
+secondary.csv,secondary.csv:fl_full_minus_fl_original_k1.0_s11_all/eir,min,min,0.0,-0.03253588516746411,0.03253588516746411,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0325358852 under F1
+secondary.csv,secondary.csv:fl_full_minus_fl_original_k1.0_s11_all/r_cond,mean_a,mean_a,0.6692057942057943,0.6682900432900433,0.0009157509157510235,1e-06,differ,F1,False,analysis,raw,equal to the value 0.668290043 under F1
+secondary.csv,secondary.csv:fl_full_minus_fl_original_k1.0_s11_all/r_cond,mean,mean,0.32693707893936735,0.32602132802361633,0.0009157509157510235,1e-06,differ,F1,False,analysis,raw,equal to the value 0.326021328 under F1
+secondary.csv,secondary.csv:fl_full_minus_fl_original_k1.0_s11_all/r_cond,median,median,0.42307692307692313,0.41666666666666663,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.416666667 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fixed_deep_k1.0_s11_all/eir,mean_a,mean_a,0.15111608250768915,0.14873513012673678,0.0023809523809523725,1e-06,differ,F1,False,analysis,raw,equal to the value 0.14873513 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fixed_deep_k1.0_s11_all/eir,mean,mean,0.036875672896918524,0.034494720515966144,0.0023809523809523794,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0344947205 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fixed_deep_k1.0_s11_all/r_cond,mean_a,mean_a,0.6028687221869041,0.6022859716041534,0.0005827505827507018,1e-06,differ,F1,False,analysis,raw,equal to the value 0.602285972 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fixed_deep_k1.0_s11_all/r_cond,mean,mean,-0.397131277813096,-0.3977140283958466,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value -0.397714028 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fast_only_k1.0_s11_all/eir,mean_a,mean_a,0.15111608250768915,0.14873513012673678,0.0023809523809523725,1e-06,differ,F1,False,analysis,raw,equal to the value 0.14873513 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fast_only_k1.0_s11_all/eir,mean,mean,0.014989926408874173,0.01260897402792179,0.002380952380952383,1e-06,differ,F1,False,analysis,raw,equal to the value 0.012608974 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fast_only_k1.0_s11_all/r_cond,mean_a,mean_a,0.6782819453273998,0.6776991947446492,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value 0.677699195 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fast_only_k1.0_s11_all/r_cond,mean,mean,-0.3217180546726001,-0.3223008052553507,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value -0.322300805 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fast_only_k1.0_s11_all/r_cond,median,median,-0.07692307692307687,-0.08333333333333337,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0833333333 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_age_only_k1.0_s11_all/eir,mean_a,mean_a,0.15111608250768915,0.14873513012673678,0.0023809523809523725,1e-06,differ,F1,False,analysis,raw,equal to the value 0.14873513 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_age_only_k1.0_s11_all/eir,mean,mean,-0.03342867759527381,-0.03580962997622621,0.0023809523809523933,1e-06,differ,F1,False,analysis,raw,equal to the value -0.03580963 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_age_only_k1.0_s11_all/r_cond,mean_a,mean_a,0.6321751165501165,0.6316409285159285,0.0005341880341880323,1e-06,differ,F1,False,analysis,raw,equal to the value 0.631640929 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_age_only_k1.0_s11_all/r_cond,mean,mean,0.0027898188823549503,0.0022556308481669063,0.000534188034188044,1e-06,differ,F1,False,analysis,raw,equal to the value 0.00225563085 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_age_only_k1.0_s11_all/r_cond,median,median,0.08972027972027974,0.08651515151515149,0.0032051282051282493,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0865151515 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_event_triggered_k1.0_s11_all/eir,mean_a,mean_a,0.15111608250768915,0.14873513012673678,0.0023809523809523725,1e-06,differ,F1,False,analysis,raw,equal to the value 0.14873513 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_event_triggered_k1.0_s11_all/eir,mean,mean,-0.028007881515978557,-0.030388833896930933,0.002380952380952376,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0303888339 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_event_triggered_k1.0_s11_all/r_cond,mean_a,mean_a,0.6782819453273998,0.6776991947446492,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value 0.677699195 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_event_triggered_k1.0_s11_all/r_cond,mean,mean,-0.3217180546726001,-0.3223008052553507,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value -0.322300805 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_event_triggered_k1.0_s11_all/r_cond,median,median,-0.07692307692307687,-0.08333333333333337,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0833333333 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fl_heuristic_k1.0_s11_all/eir,mean_a,mean_a,0.15111608250768915,0.14873513012673678,0.0023809523809523725,1e-06,differ,F1,False,analysis,raw,equal to the value 0.14873513 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fl_heuristic_k1.0_s11_all/eir,mean,mean,-0.025440688980977254,-0.027821641361929637,0.002380952380952383,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0278216414 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fl_heuristic_k1.0_s11_all/r_cond,mean_a,mean_a,0.6896455816910362,0.6890628311082856,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value 0.689062831 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fl_heuristic_k1.0_s11_all/r_cond,mean,mean,0.054556193361006214,0.05397344277825562,0.0005827505827505908,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0539734428 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fl_heuristic_k1.0_s11_all/r_cond,median,median,0.22307692307692317,0.21666666666666667,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.216666667 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fl_original_k1.0_s11_all/eir,mean_a,mean_a,0.1366155779690934,0.13405147540499085,0.002564102564102555,1e-06,differ,F1,False,analysis,raw,equal to the value 0.134051475 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fl_original_k1.0_s11_all/eir,mean,mean,0.04777232908287997,0.0452082265187774,0.002564102564102569,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0452082265 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fl_original_k1.0_s11_all/eir,min,min,0.0,-0.03253588516746411,0.03253588516746411,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0325358852 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fl_original_k1.0_s11_all/r_cond,mean_a,mean_a,0.6692057942057943,0.6682900432900433,0.0009157509157510235,1e-06,differ,F1,False,analysis,raw,equal to the value 0.668290043 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fl_original_k1.0_s11_all/r_cond,mean,mean,0.32693707893936735,0.32602132802361633,0.0009157509157510235,1e-06,differ,F1,False,analysis,raw,equal to the value 0.326021328 under F1
+analysis.json:secondary,analysis.json:secondary:fl_full_minus_fl_original_k1.0_s11_all/r_cond,median,median,0.42307692307692313,0.41666666666666663,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.416666667 under F1
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/eir/17563,value_a,value_a,0.10606060606060606,0.07272727272727272,0.03333333333333334,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0727272727 under F1
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/eir/17563,difference,difference,0.024500322372662794,-0.008833010960670545,0.03333333333333334,1e-06,differ,F1,False,analysis,raw,equal to the value -0.00883301096 under F1
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/r_cond/2204,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/r_cond/3561,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_full_k1.0_s11, fixed_deep_k1.0_s11'"
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/r_cond/17563,value_a,value_a,0.9230769230769231,0.9166666666666666,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.916666667 under F1
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/r_cond/17563,difference,difference,-0.07692307692307687,-0.08333333333333337,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0833333333 under F1
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/r_cond/26458,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_full_k1.0_s11, fixed_deep_k1.0_s11'"
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/2050,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/2084,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/2115,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/2204,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/2286,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/2390,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/2509,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/2790,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/3248,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/3464,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/3561,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/17563,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/23658,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.0_s11_all/p_both/26458,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/eir/17563,value_a,value_a,0.10606060606060606,0.07272727272727272,0.03333333333333334,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0727272727 under F1
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/eir/17563,difference,difference,-0.12443584784010316,-0.1577691811734365,0.03333333333333334,1e-06,differ,F1,False,analysis,raw,equal to the value -0.157769181 under F1
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/r_cond/2390,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/r_cond/3561,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: fl_full_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/r_cond/17563,value_a,value_a,0.9230769230769231,0.9166666666666666,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.916666667 under F1
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/r_cond/17563,difference,difference,-0.07692307692307687,-0.08333333333333337,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0833333333 under F1
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/r_cond/26458,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_full_k1.0_s11, fast_only_k1.0_s11'"
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/2050,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/2084,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/2115,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/2204,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/2286,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/2390,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/2509,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/2790,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/3248,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/3464,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/3561,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/17563,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/23658,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.0_s11_all/p_both/26458,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_age_only_k1.0_s11_all/eir/17563,value_a,value_a,0.10606060606060606,0.07272727272727272,0.03333333333333334,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0727272727 under F1
+paired_differences.csv,secondary:fl_full_minus_age_only_k1.0_s11_all/eir/17563,difference,difference,-0.1598569969356486,-0.19319033026898194,0.033333333333333354,1e-06,differ,F1,False,analysis,raw,equal to the value -0.19319033 under F1
+paired_differences.csv,secondary:fl_full_minus_age_only_k1.0_s11_all/r_cond/3561,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: fl_full_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_age_only_k1.0_s11_all/r_cond/17563,value_a,value_a,0.9230769230769231,0.9166666666666666,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.916666667 under F1
+paired_differences.csv,secondary:fl_full_minus_age_only_k1.0_s11_all/r_cond/17563,difference,difference,0.1048951048951049,0.0984848484848484,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0984848485 under F1
+paired_differences.csv,secondary:fl_full_minus_age_only_k1.0_s11_all/r_cond/26458,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_full_k1.0_s11, age_only_k1.0_s11'"
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/eir/17563,value_a,value_a,0.10606060606060606,0.07272727272727272,0.03333333333333334,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0727272727 under F1
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/eir/17563,difference,difference,-0.03245290745290745,-0.06578624078624079,0.03333333333333334,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0657862408 under F1
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/r_cond/2390,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/r_cond/3561,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_full_k1.0_s11, event_triggered_k1.0_s11'"
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/r_cond/17563,value_a,value_a,0.9230769230769231,0.9166666666666666,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.916666667 under F1
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/r_cond/17563,difference,difference,-0.07692307692307687,-0.08333333333333337,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0833333333 under F1
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/r_cond/26458,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_full_k1.0_s11, event_triggered_k1.0_s11'"
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/2050,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/2084,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/2115,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/2204,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/2286,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/2390,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/2509,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/2790,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/3248,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/3464,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/3561,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/17563,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/23658,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_event_triggered_k1.0_s11_all/p_both/26458,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: event_triggered_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_heuristic_k1.0_s11_all/eir/17563,value_a,value_a,0.10606060606060606,0.07272727272727272,0.03333333333333334,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0727272727 under F1
+paired_differences.csv,secondary:fl_full_minus_fl_heuristic_k1.0_s11_all/eir/17563,difference,difference,-0.14481047407876674,-0.1781438074121001,0.033333333333333354,1e-06,differ,F1,False,analysis,raw,equal to the value -0.178143807 under F1
+paired_differences.csv,secondary:fl_full_minus_fl_heuristic_k1.0_s11_all/r_cond/3464,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: fl_heuristic_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_heuristic_k1.0_s11_all/r_cond/3561,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_full_k1.0_s11, fl_heuristic_k1.0_s11'"
+paired_differences.csv,secondary:fl_full_minus_fl_heuristic_k1.0_s11_all/r_cond/17563,value_a,value_a,0.9230769230769231,0.9166666666666666,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.916666667 under F1
+paired_differences.csv,secondary:fl_full_minus_fl_heuristic_k1.0_s11_all/r_cond/17563,difference,difference,0.22307692307692317,0.21666666666666667,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.216666667 under F1
+paired_differences.csv,secondary:fl_full_minus_fl_heuristic_k1.0_s11_all/r_cond/26458,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_full_k1.0_s11, fl_heuristic_k1.0_s11'"
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/r_cond/2204,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/r_cond/2509,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/r_cond/2790,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/r_cond/3464,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_heuristic_k1.0_s11, fl_original_k1.0_s11'"
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/r_cond/3561,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_heuristic_k1.0_s11, fl_original_k1.0_s11'"
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/r_cond/26458,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_heuristic_k1.0_s11, fl_original_k1.0_s11'"
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/p_both/2050,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/p_both/2084,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/p_both/2115,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/p_both/2204,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/p_both/2286,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/p_both/2390,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/p_both/2509,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/p_both/2790,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/p_both/3248,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/p_both/3464,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/p_both/3561,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/p_both/17563,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_heuristic_minus_fl_original_k1.0_s11_all/p_both/26458,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/eir/17563,value_a,value_a,0.10606060606060606,0.07272727272727272,0.03333333333333334,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0727272727 under F1
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/eir/17563,difference,difference,0.0007974481658692273,-0.03253588516746411,0.03333333333333334,1e-06,differ,F1,False,analysis,raw,equal to the value -0.0325358852 under F1
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/r_cond/2204,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/r_cond/2509,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/r_cond/2790,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/r_cond/3464,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/r_cond/3561,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_full_k1.0_s11, fl_original_k1.0_s11'"
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/r_cond/17563,value_a,value_a,0.9230769230769231,0.9166666666666666,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.916666667 under F1
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/r_cond/17563,difference,difference,0.42307692307692313,0.41666666666666663,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.416666667 under F1
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/r_cond/26458,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_full_k1.0_s11, fl_original_k1.0_s11'"
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/p_both/2050,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/p_both/2084,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/p_both/2115,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/p_both/2204,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/p_both/2286,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/p_both/2390,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/p_both/2509,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/p_both/2790,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/p_both/3248,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/p_both/3464,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/p_both/3561,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/p_both/17563,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fl_original_k1.0_s11_all/p_both/26458,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fl_original_k1.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.5_s11_E/r_cond/2390,paired,status,True,False,,,differ,,,analysis,raw,"status 'realized_r_cond missing: fl_full_k1.5_s11, fixed_deep_k1.5_s11'"
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.5_s11_E/p_both/2390,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.5_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k1.5_s11_E/p_both/3248,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k1.5_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.5_s11_E/r_cond/2390,paired,status,True,False,,,differ,,,analysis,raw,status 'realized_r_cond missing: fl_full_k1.5_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.5_s11_E/p_both/2390,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.5_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k1.5_s11_E/p_both/3248,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k1.5_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k2.0_s11_E/p_both/2390,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k2.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fixed_deep_k2.0_s11_E/p_both/3248,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fixed_deep_k2.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k2.0_s11_E/p_both/2390,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k2.0_s11'
+paired_differences.csv,secondary:fl_full_minus_fast_only_k2.0_s11_E/p_both/3248,paired,status,True,False,,,differ,,,analysis,raw,status 'p_both missing: fast_only_k2.0_s11'
+per_scenario.csv,fl_full_k1.0_s11/17563,eir,eir,0.10606060606060606,0.07272727272727272,0.03333333333333334,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0727272727 under F1
+per_scenario.csv,fl_full_k1.0_s11/17563,r_cond,r_cond,0.9230769230769231,0.9166666666666666,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.916666667 under F1

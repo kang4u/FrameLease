@@ -1,0 +1,11 @@
+--- a/src/transformers/models/bloom/modeling_bloom.py
++++ b/src/transformers/models/bloom/modeling_bloom.py
+@@ -16,7 +16,7 @@
+ 
+ import math
+ import warnings
+-from typing import Optional, Union
++from typing import Optional, Union, Tuple
+ 
+ import torch
+ from torch import nn

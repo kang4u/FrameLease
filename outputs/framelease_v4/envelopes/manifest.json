@@ -1,0 +1,123 @@
+{
+ "schema": "framelease_v4.envelopes/1",
+ "written": "2026-11-10T16:55:00+0800",
+ "grid_order": [
+  "E5",
+  "E10",
+  "B0"
+ ],
+ "kept": [
+  "E5",
+  "E10",
+  "B0"
+ ],
+ "dropped": {},
+ "picks": {
+  "E5": "T_x0.60",
+  "E10": "T_x0.30"
+ },
+ "validity": "std",
+ "ra": "not in the closed-loop grid (offline sensitivity only)",
+ "files": {
+  "E5": {
+   "path": "outputs/framelease_v4/envelopes/E5.json",
+   "sha256": "21d0b4a441cf80e32e4f04ddeb9bf309b5a0a74c9495652fd04a88331c47df3a",
+   "config": "T_x0.60",
+   "kind": "iso",
+   "sigma_m": {
+    "pedestrian": 0.8756760281250656,
+    "vehicle": 0.6958715469453625
+   },
+   "vbar_mps": {
+    "pedestrian": 0.5802237048070868,
+    "vehicle": 1.1032028515985224
+   },
+   "abar_mps2": {
+    "pedestrian": 0.0,
+    "vehicle": 1.0344787453345983
+   }
+  },
+  "E10": {
+   "path": "outputs/framelease_v4/envelopes/E10.json",
+   "sha256": "bf61635ba3a38b7a307a4e1e4db4ad0541d7afc65cfd9afc432f9f054e1a2229",
+   "config": "T_x0.30",
+   "kind": "iso",
+   "sigma_m": {
+    "pedestrian": 0.4378380140625328,
+    "vehicle": 0.34793577347268123
+   },
+   "vbar_mps": {
+    "pedestrian": 0.2901118524035434,
+    "vehicle": 0.5516014257992612
+   },
+   "abar_mps2": {
+    "pedestrian": 0.0,
+    "vehicle": 0.5172393726672991
+   }
+  },
+  "B0": {
+   "path": "outputs/framelease_v4/envelopes/B0.json",
+   "sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927",
+   "config": "T_x0.00",
+   "kind": "iso",
+   "sigma_m": {
+    "pedestrian": 0.0,
+    "vehicle": 0.0
+   },
+   "vbar_mps": {
+    "pedestrian": 0.0,
+    "vehicle": 0.0
+   },
+   "abar_mps2": {
+    "pedestrian": 0.0,
+    "vehicle": 0.0
+   }
+  }
+ },
+ "inputs": {
+  "outputs/framelease_v4/offline_ablation/envelopes/train_E0.json": "86821422482caa38ea69f7402ff47ba313c63a3890c97b370c3b625c01f8dff8",
+  "outputs/framelease_v4/offline_ablation/frontier.csv": "9941574c2c10244f111a3974512b3e34f0409192c5c37b749cc9bce5126ed5f7",
+  "outputs/framelease_v2/c2_calibration/full_20261107T045343Z/lease_params_q95_envelope.json": "00c62aad25d041312d6ba1918d6fb5ecb41c3ea1259f58be5977abcb3cce10e8"
+ },
+ "frontier_rows": {
+  "E5": {
+   "alpha": "0.05",
+   "candidate": "T_x0.60",
+   "continuity": "0.527968",
+   "R_cond": "0.0484048"
+  },
+  "E10": {
+   "alpha": "0.1",
+   "candidate": "T_x0.30",
+   "continuity": "0.642976",
+   "R_cond": "0.0880088"
+  }
+ },
+ "script_sha256": "e01589a874734e4b5694dfc1414d24a74b0a66bbe3bf4a73d04db8fcba9ead67",
+ "verification": {
+  "tolerance_s": 5e-06,
+  "clips": 37,
+  "every": 1,
+  "frames": 6421,
+  "comparisons": 19263,
+  "max_abs_tau_star_s": {
+   "E5": 0.0,
+   "E10": 0.0,
+   "B0": 0.0
+  },
+  "max_abs_H_s": {
+   "E5": 0.0,
+   "E10": 0.0,
+   "B0": 0.0
+  },
+  "violations": [],
+  "statuses": {
+   "horizon_cap": 8502,
+   "first_failure": 7197,
+   "immediate_failure": 3333,
+   "no_relevant_agents": 231
+  },
+  "pass": true
+ },
+ "reader": "framelease_v3.runtime.v3_lease.load_envelope / build_lease_env(lease_params, envelope)"
+}

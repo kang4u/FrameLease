@@ -1,0 +1,4 @@
+$ /home/kang/Desktop/DAC/.conda-unidrive-linux/bin/python -I -B /tmp/A10A11/f1/sim_tree/apply_entry_scratch_treeA.py outputs/framelease_v4/build/AMEND2/final/A10_spec.json
+(exit 0)
+registration --verify -> 1 | 40577928acbb16c799677e73e0b4c11222f0041d3c553cd', 'f0e74336e2244eea7136f3a94475ab0d96d5dfcd4b7fe0d8f97308877ac50154'), ('framelease_v4/analysis/verify_table1_extra.py', 'a8bf57b7c23f2c9e8746ab8af116490a215e3185a788921f3dee242af191acfa', 'f77b2dcf34484d2537a4c22d804912f0c155c3e3c26a576f433b9f4f73d83c27')] | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+check: pre-checks passed

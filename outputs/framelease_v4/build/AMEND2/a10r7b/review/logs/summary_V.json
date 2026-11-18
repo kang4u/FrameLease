@@ -1,0 +1,32 @@
+{
+ "p1_baseline": {
+  "in_p1_baseline": true,
+  "in_phase_baseline": true,
+  "rc": 0,
+  "sealed_manifest_lists_it": false,
+  "verify": "manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK",
+  "phase_refresh_keeps_it": false
+ },
+ "p1_baseline_fix": {
+  "rc": 1,
+  "stop": [
+   "STOP: registered files differ from the sealed manifest: ['framelease_v4/rl/RL_PROTOCOL.md']"
+  ],
+  "unchanged": true
+ },
+ "phase_only": {
+  "in_p1_baseline": false,
+  "in_phase_baseline": true,
+  "rc": 0,
+  "sealed_manifest_lists_it": false,
+  "verify": "manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK",
+  "phase_refresh_keeps_it": false
+ },
+ "phase_only_fix": {
+  "rc": 1,
+  "stop": [
+   "STOP: registered files differ from the sealed manifest: ['framelease_v4/arms_ext/tests/test_drift_guard.py']"
+  ],
+  "unchanged": true
+ }
+}

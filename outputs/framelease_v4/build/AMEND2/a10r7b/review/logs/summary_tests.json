@@ -1,0 +1,14 @@
+{
+ "outputs/framelease_v4/build/AMEND2/final/A10_spec.json": [
+  "outputs/framelease_v4/amendment_a10/pytest_analyze_v4.log exit 0 | 48 passed, 107 subtests passed in 16.88s",
+  "outputs/framelease_v4/amendment_a10/pytest_prop1_coverage.log exit 1 | 1 failed, 21 passed in 20.82s",
+  "outputs/framelease_v4/amendment_a10/pytest_figures_tables.log exit 0 | 50 passed, 422 warnings in 24.94s",
+  "outputs/framelease_v4/amendment_a10/pytest_verify_independent.log exit 0 | 28 passed, 20 subtests passed in 14.38s"
+ ],
+ "outputs/framelease_v4/build/AMEND2/a10r7b/A11_spec.json": [
+  "outputs/framelease_v4/amendment_a11/pytest_verify_table1_extra.log exit 0 | 71 passed, 67 subtests passed in 4.92s",
+  "outputs/framelease_v4/amendment_a11/pytest_review_r7b.log exit 0 | 14 passed, 2 subtests passed in 4.10s"
+ ],
+ "protected_paths_created_in_tree": [],
+ "pycache_in_tree": []
+}

@@ -1,0 +1,1191 @@
+{
+ "blocks": [
+  {
+   "block": "ref",
+   "block_no": 1,
+   "candidates": [
+    {
+     "arm": "fixed_deep",
+     "candidate": "fixed_deep",
+     "dmr": 0.0,
+     "ds": 46.00944995454545,
+     "eir": 0.3577565734181596,
+     "envelope": null,
+     "fallback_ratio": 0.022387787685696464,
+     "mean_ds_kept": 46.00944995454545,
+     "n_kept": 22,
+     "outcomes": {
+      "ok": 22
+     },
+     "p_both": null,
+     "policy_params": {},
+     "r_cond": 1.0,
+     "rc": 79.80681818181819,
+     "realized_conflicts": 1284,
+     "realized_misses": 1284,
+     "reused_from": null,
+     "shield_epochs": 0,
+     "sr": 0.045454545454545456,
+     "tag": "",
+     "valid_runs": 22
+    },
+    {
+     "arm": "fast_only",
+     "candidate": "fast_only",
+     "dmr": 0.0,
+     "ds": 75.51776054545455,
+     "eir": 0.1092138920794898,
+     "envelope": null,
+     "fallback_ratio": 0.020528685620433265,
+     "mean_ds_kept": 75.51776054545455,
+     "n_kept": 22,
+     "outcomes": {
+      "ok": 22
+     },
+     "p_both": null,
+     "policy_params": {},
+     "r_cond": 1.0,
+     "rc": 93.75727272727272,
+     "realized_conflicts": 262,
+     "realized_misses": 262,
+     "reused_from": null,
+     "shield_epochs": 0,
+     "sr": 0.45454545454545453,
+     "tag": "",
+     "valid_runs": 22
+    }
+   ],
+   "dropped_routes": {},
+   "flags": [],
+   "grid": "ref",
+   "kept_routes": [
+    "1792",
+    "2086",
+    "2215",
+    "2397",
+    "2539",
+    "2643",
+    "2715",
+    "2844",
+    "2943",
+    "3090",
+    "3184",
+    "3373",
+    "3514",
+    "3749",
+    "4937",
+    "17569",
+    "23659",
+    "23910",
+    "24211",
+    "24330",
+    "25863",
+    "28093"
+   ],
+   "pending": 0,
+   "route_set": "T22",
+   "routes": [
+    "1792",
+    "2086",
+    "2215",
+    "2397",
+    "2539",
+    "2643",
+    "2715",
+    "2844",
+    "2943",
+    "3090",
+    "3184",
+    "3373",
+    "3514",
+    "3749",
+    "4937",
+    "17569",
+    "23659",
+    "23910",
+    "24211",
+    "24330",
+    "25863",
+    "28093"
+   ],
+   "selection": null,
+   "stage": 0,
+   "stage_spec": "outputs/framelease_v4/p1_jobs/FULL/b01_ref.stage.json",
+   "stage_spec_sha256": "1b75a988aad1f1053dbfc1cb1f73fe9b3af2a8528b14cd43855388d207050809"
+  },
+  {
+   "block": "lease_s1",
+   "block_no": 2,
+   "candidates": [
+    {
+     "arm": "fl_heuristic",
+     "candidate": "E5",
+     "dmr": 0.7449229448035908,
+     "ds": 46.567355727272734,
+     "eir": 0.08798724451562293,
+     "envelope": "E5",
+     "fallback_ratio": 0.7462044941954615,
+     "mean_ds_kept": 44.27448430000001,
+     "n_kept": 10,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 0.5270689887943837,
+     "policy_params": {
+      "utility": "heuristic"
+     },
+     "r_cond": 0.6146616541353384,
+     "rc": 59.99909090909091,
+     "realized_conflicts": 532,
+     "realized_misses": 327,
+     "reused_from": null,
+     "shield_epochs": 7407,
+     "sr": 0.09090909090909091,
+     "tag": "E5_d10",
+     "valid_runs": 11
+    },
+    {
+     "arm": "fl_heuristic",
+     "candidate": "E10",
+     "dmr": 0.5019590039621415,
+     "ds": 39.171366454545456,
+     "eir": 0.08234152507433187,
+     "envelope": "E10",
+     "fallback_ratio": 0.5060969675967076,
+     "mean_ds_kept": 35.3005031,
+     "n_kept": 10,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 0.6888563764935381,
+     "policy_params": {
+      "utility": "heuristic"
+     },
+     "r_cond": 0.7086183310533516,
+     "rc": 48.77,
+     "realized_conflicts": 731,
+     "realized_misses": 518,
+     "reused_from": null,
+     "shield_epochs": 8202,
+     "sr": 0.09090909090909091,
+     "tag": "E10_d10",
+     "valid_runs": 11
+    },
+    {
+     "arm": "fl_heuristic",
+     "candidate": "B0",
+     "dmr": 0.27713060607636875,
+     "ds": 52.4450736,
+     "eir": 0.13907818430011665,
+     "envelope": "B0",
+     "fallback_ratio": 0.28983431257578024,
+     "mean_ds_kept": 52.4450736,
+     "n_kept": 10,
+     "outcomes": {
+      "ok": 10,
+      "sim_failure": 1
+     },
+     "p_both": 0.760578468130691,
+     "policy_params": {
+      "utility": "heuristic"
+     },
+     "r_cond": 0.9115942028985508,
+     "rc": 76.18900000000001,
+     "realized_conflicts": 690,
+     "realized_misses": 629,
+     "reused_from": null,
+     "shield_epochs": 5601,
+     "sr": 0.2,
+     "tag": "B0_d10",
+     "valid_runs": 10
+    }
+   ],
+   "dropped_routes": {
+    "23659": [
+     "B0: queue: timeout (None)"
+    ]
+   },
+   "flags": [],
+   "grid": "lease",
+   "kept_routes": [
+    "1792",
+    "2215",
+    "2539",
+    "2715",
+    "2943",
+    "3184",
+    "3514",
+    "4937",
+    "24211",
+    "25863"
+   ],
+   "pending": 0,
+   "route_set": "T22a",
+   "routes": [
+    "1792",
+    "2215",
+    "2539",
+    "2715",
+    "2943",
+    "3184",
+    "3514",
+    "4937",
+    "23659",
+    "24211",
+    "25863"
+   ],
+   "selection": {
+    "mean_ds_T22": null,
+    "path": "outputs/framelease_v4/tuning/selection/FULL/lease_s1.json",
+    "selected": null,
+    "sha256": "f23a6522c28aedc27b02494521cb763331fbf3097b8114b8ece8cd83021fa261",
+    "survivors": [
+     "E5",
+     "B0"
+    ]
+   },
+   "stage": 1,
+   "stage_spec": "outputs/framelease_v4/p1_jobs/FULL/b02_lease_s1.stage.json",
+   "stage_spec_sha256": "d5b9089688f713a61ed7736353eb5cdc41cf36085cfab4e5734d140967188c04"
+  },
+  {
+   "block": "event_s1",
+   "block_no": 3,
+   "candidates": [
+    {
+     "arm": "event_triggered",
+     "candidate": "v2_hb2.0",
+     "dmr": 0.0,
+     "ds": 56.265028,
+     "eir": 0.1100003724447714,
+     "envelope": null,
+     "fallback_ratio": 0.018772879551774146,
+     "mean_ds_kept": 56.265028,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": null,
+     "policy_params": {
+      "det_shift_m": 2.0,
+      "heartbeat_s": 2.0,
+      "speed_delta_mps": 1.0,
+      "yaw_delta_rad": 0.1
+     },
+     "r_cond": 1.0,
+     "rc": 89.88454545454546,
+     "realized_conflicts": 587,
+     "realized_misses": 587,
+     "reused_from": null,
+     "shield_epochs": 0,
+     "sr": 0.0,
+     "tag": "v2_hb2.0",
+     "valid_runs": 11
+    },
+    {
+     "arm": "event_triggered",
+     "candidate": "v2_hb1.0",
+     "dmr": 0.0,
+     "ds": 60.52613509090909,
+     "eir": 0.18753955349225987,
+     "envelope": null,
+     "fallback_ratio": 0.01827126923262897,
+     "mean_ds_kept": 60.52613509090909,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": null,
+     "policy_params": {
+      "det_shift_m": 2.0,
+      "heartbeat_s": 1.0,
+      "speed_delta_mps": 1.0,
+      "yaw_delta_rad": 0.1
+     },
+     "r_cond": 1.0,
+     "rc": 90.63727272727273,
+     "realized_conflicts": 580,
+     "realized_misses": 580,
+     "reused_from": null,
+     "shield_epochs": 0,
+     "sr": 0.18181818181818182,
+     "tag": "v2_hb1.0",
+     "valid_runs": 11
+    },
+    {
+     "arm": "event_triggered",
+     "candidate": "s_hb2.0",
+     "dmr": 0.0,
+     "ds": 62.975118,
+     "eir": 0.22818386476541785,
+     "envelope": null,
+     "fallback_ratio": 0.016223962601479656,
+     "mean_ds_kept": 62.975118,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": null,
+     "policy_params": {
+      "det_shift_m": 1.0,
+      "heartbeat_s": 2.0,
+      "speed_delta_mps": 0.5,
+      "yaw_delta_rad": 0.05
+     },
+     "r_cond": 1.0,
+     "rc": 99.70727272727272,
+     "realized_conflicts": 2035,
+     "realized_misses": 2035,
+     "reused_from": null,
+     "shield_epochs": 0,
+     "sr": 0.36363636363636365,
+     "tag": "s_hb2.0",
+     "valid_runs": 11
+    },
+    {
+     "arm": "event_triggered",
+     "candidate": "s_hb1.0",
+     "dmr": 0.0,
+     "ds": 61.443617090909086,
+     "eir": 0.2372891359446019,
+     "envelope": null,
+     "fallback_ratio": 0.020261154137299543,
+     "mean_ds_kept": 61.443617090909086,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": null,
+     "policy_params": {
+      "det_shift_m": 1.0,
+      "heartbeat_s": 1.0,
+      "speed_delta_mps": 0.5,
+      "yaw_delta_rad": 0.05
+     },
+     "r_cond": 1.0,
+     "rc": 100.0,
+     "realized_conflicts": 263,
+     "realized_misses": 263,
+     "reused_from": null,
+     "shield_epochs": 0,
+     "sr": 0.18181818181818182,
+     "tag": "s_hb1.0",
+     "valid_runs": 11
+    }
+   ],
+   "dropped_routes": {},
+   "flags": [],
+   "grid": "event",
+   "kept_routes": [
+    "1792",
+    "2215",
+    "2539",
+    "2715",
+    "2943",
+    "3184",
+    "3514",
+    "4937",
+    "23659",
+    "24211",
+    "25863"
+   ],
+   "pending": 0,
+   "route_set": "T22a",
+   "routes": [
+    "1792",
+    "2215",
+    "2539",
+    "2715",
+    "2943",
+    "3184",
+    "3514",
+    "4937",
+    "23659",
+    "24211",
+    "25863"
+   ],
+   "selection": {
+    "mean_ds_T22": null,
+    "path": "outputs/framelease_v4/tuning/selection/FULL/event_s1.json",
+    "selected": null,
+    "sha256": "b66a83c6c5d1b4e7ee6db23a6eaa942276ce7fcf3e89c9d0736c4002f61cfc0f",
+    "survivors": [
+     "s_hb2.0",
+     "s_hb1.0"
+    ]
+   },
+   "stage": 1,
+   "stage_spec": "outputs/framelease_v4/p1_jobs/FULL/b03_event_s1.stage.json",
+   "stage_spec_sha256": "bc7c58dfbc6db3cc85047008f1f81191322cec122a5f09c21b9c8bca77188323"
+  },
+  {
+   "block": "lease_s2",
+   "block_no": 4,
+   "candidates": [
+    {
+     "arm": "fl_heuristic",
+     "candidate": "E5",
+     "dmr": 0.7984560542736333,
+     "ds": 37.568681818181815,
+     "eir": 0.04037898631695856,
+     "envelope": "E5",
+     "fallback_ratio": 0.8015109526073734,
+     "mean_ds_kept": 37.568681818181815,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 0.336283185840708,
+     "policy_params": {
+      "utility": "heuristic"
+     },
+     "r_cond": 0.17391304347826086,
+     "rc": 46.374545454545455,
+     "realized_conflicts": 529,
+     "realized_misses": 92,
+     "reused_from": null,
+     "shield_epochs": 5085,
+     "sr": 0.0,
+     "tag": "E5_d10",
+     "valid_runs": 11
+    },
+    {
+     "arm": "fl_heuristic",
+     "candidate": "B0",
+     "dmr": 0.3209714696844411,
+     "ds": 47.762471454545455,
+     "eir": 0.07172107412850764,
+     "envelope": "B0",
+     "fallback_ratio": 0.3292724395264259,
+     "mean_ds_kept": 47.762471454545455,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 0.8298821548821549,
+     "policy_params": {
+      "utility": "heuristic"
+     },
+     "r_cond": 0.8419182948490231,
+     "rc": 62.76272727272728,
+     "realized_conflicts": 2815,
+     "realized_misses": 2370,
+     "reused_from": null,
+     "shield_epochs": 11880,
+     "sr": 0.2727272727272727,
+     "tag": "B0_d10",
+     "valid_runs": 11
+    }
+   ],
+   "dropped_routes": {},
+   "flags": [],
+   "grid": "lease",
+   "kept_routes": [
+    "2086",
+    "2397",
+    "2643",
+    "2844",
+    "3090",
+    "3373",
+    "3749",
+    "17569",
+    "23910",
+    "24330",
+    "28093"
+   ],
+   "pending": 0,
+   "route_set": "T22b",
+   "routes": [
+    "2086",
+    "2397",
+    "2643",
+    "2844",
+    "3090",
+    "3373",
+    "3749",
+    "17569",
+    "23910",
+    "24330",
+    "28093"
+   ],
+   "selection": {
+    "mean_ds_T22": {
+     "B0": 49.992281999999996,
+     "E5": 40.76192109523811
+    },
+    "path": "outputs/framelease_v4/tuning/selection/FULL/lease_s2.json",
+    "selected": "B0",
+    "sha256": "bc2f7299f438309d99ddfb6017ab86d1593e996247e50456c51b747e0a332351",
+    "survivors": null
+   },
+   "stage": 2,
+   "stage_spec": "outputs/framelease_v4/p1_jobs/FULL/b04_lease_s2.stage.json",
+   "stage_spec_sha256": "a8fdcdc93fcd65d9681e79a1d125f8b01b54a9ef5a285419654519f39c8e4932"
+  },
+  {
+   "block": "event_s2",
+   "block_no": 5,
+   "candidates": [
+    {
+     "arm": "event_triggered",
+     "candidate": "s_hb2.0",
+     "dmr": 0.0,
+     "ds": 60.30833454545454,
+     "eir": 0.29147280233613626,
+     "envelope": null,
+     "fallback_ratio": 0.017182892200304365,
+     "mean_ds_kept": 60.30833454545454,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": null,
+     "policy_params": {
+      "det_shift_m": 1.0,
+      "heartbeat_s": 2.0,
+      "speed_delta_mps": 0.5,
+      "yaw_delta_rad": 0.05
+     },
+     "r_cond": 1.0,
+     "rc": 90.45272727272727,
+     "realized_conflicts": 4242,
+     "realized_misses": 4242,
+     "reused_from": null,
+     "shield_epochs": 0,
+     "sr": 0.18181818181818182,
+     "tag": "s_hb2.0",
+     "valid_runs": 11
+    },
+    {
+     "arm": "event_triggered",
+     "candidate": "s_hb1.0",
+     "dmr": 0.0,
+     "ds": 56.45312772727273,
+     "eir": 0.27078647706835934,
+     "envelope": null,
+     "fallback_ratio": 0.017567094003026685,
+     "mean_ds_kept": 56.45312772727273,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": null,
+     "policy_params": {
+      "det_shift_m": 1.0,
+      "heartbeat_s": 1.0,
+      "speed_delta_mps": 0.5,
+      "yaw_delta_rad": 0.05
+     },
+     "r_cond": 1.0,
+     "rc": 90.80636363636364,
+     "realized_conflicts": 1052,
+     "realized_misses": 1052,
+     "reused_from": null,
+     "shield_epochs": 0,
+     "sr": 0.18181818181818182,
+     "tag": "s_hb1.0",
+     "valid_runs": 11
+    }
+   ],
+   "dropped_routes": {},
+   "flags": [],
+   "grid": "event",
+   "kept_routes": [
+    "2086",
+    "2397",
+    "2643",
+    "2844",
+    "3090",
+    "3373",
+    "3749",
+    "17569",
+    "23910",
+    "24330",
+    "28093"
+   ],
+   "pending": 0,
+   "route_set": "T22b",
+   "routes": [
+    "2086",
+    "2397",
+    "2643",
+    "2844",
+    "3090",
+    "3373",
+    "3749",
+    "17569",
+    "23910",
+    "24330",
+    "28093"
+   ],
+   "selection": {
+    "mean_ds_T22": {
+     "s_hb1.0": 58.948372409090915,
+     "s_hb2.0": 61.641726272727276
+    },
+    "path": "outputs/framelease_v4/tuning/selection/FULL/event_s2.json",
+    "selected": "s_hb2.0",
+    "sha256": "682a8e0560a388047fb89c4e77ce4f51869e5e23342ffa0ecfa829c5451ec659",
+    "survivors": null
+   },
+   "stage": 2,
+   "stage_spec": "outputs/framelease_v4/p1_jobs/FULL/b05_event_s2.stage.json",
+   "stage_spec_sha256": "5af2c46d314f3a590d0d3c5c62c77f28d7d534c5cd6209f4d5799e0bba9b2969"
+  },
+  {
+   "block": "heur_s1",
+   "block_no": 6,
+   "candidates": [
+    {
+     "arm": "fl_heuristic",
+     "candidate": "d10",
+     "dmr": 0.27713060607636875,
+     "ds": 52.4450736,
+     "eir": 0.13907818430011665,
+     "envelope": "B0",
+     "fallback_ratio": 0.28983431257578024,
+     "mean_ds_kept": 52.4450736,
+     "n_kept": 10,
+     "outcomes": {
+      "ok": 10,
+      "sim_failure": 1
+     },
+     "p_both": 0.760578468130691,
+     "policy_params": {
+      "utility": "heuristic"
+     },
+     "r_cond": 0.9115942028985508,
+     "rc": 76.18900000000001,
+     "realized_conflicts": 690,
+     "realized_misses": 629,
+     "reused_from": "lease_s1",
+     "shield_epochs": 5601,
+     "sr": 0.2,
+     "tag": "B0_d10",
+     "valid_runs": 10
+    },
+    {
+     "arm": "fl_heuristic",
+     "candidate": "d4",
+     "dmr": 0.3561562467132063,
+     "ds": 48.77162509090909,
+     "eir": 0.09223240588635688,
+     "envelope": "B0",
+     "fallback_ratio": 0.36770878486232,
+     "mean_ds_kept": 49.9812568,
+     "n_kept": 10,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 0.6475258004763165,
+     "policy_params": {
+      "utility": "v4_adet_d4"
+     },
+     "r_cond": 0.8091872791519434,
+     "rc": 76.51,
+     "realized_conflicts": 283,
+     "realized_misses": 229,
+     "reused_from": null,
+     "shield_epochs": 3779,
+     "sr": 0.09090909090909091,
+     "tag": "B0_d4",
+     "valid_runs": 11
+    },
+    {
+     "arm": "fl_heuristic",
+     "candidate": "d1",
+     "dmr": 0.25808633976250045,
+     "ds": 68.193152,
+     "eir": 0.06900389771437483,
+     "envelope": "B0",
+     "fallback_ratio": 0.27309846347925726,
+     "mean_ds_kept": 65.0124672,
+     "n_kept": 10,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 0.39233449477351917,
+     "policy_params": {
+      "utility": "v4_adet_d1"
+     },
+     "r_cond": 0.6601941747572816,
+     "rc": 88.15818181818182,
+     "realized_conflicts": 103,
+     "realized_misses": 68,
+     "reused_from": null,
+     "shield_epochs": 1435,
+     "sr": 0.2727272727272727,
+     "tag": "B0_d1",
+     "valid_runs": 11
+    }
+   ],
+   "dropped_routes": {
+    "23659": [
+     "d10: queue: timeout (None)"
+    ]
+   },
+   "flags": [],
+   "grid": "heur",
+   "kept_routes": [
+    "1792",
+    "2215",
+    "2539",
+    "2715",
+    "2943",
+    "3184",
+    "3514",
+    "4937",
+    "24211",
+    "25863"
+   ],
+   "pending": 0,
+   "route_set": "T22a",
+   "routes": [
+    "1792",
+    "2215",
+    "2539",
+    "2715",
+    "2943",
+    "3184",
+    "3514",
+    "4937",
+    "23659",
+    "24211",
+    "25863"
+   ],
+   "selection": {
+    "mean_ds_T22": null,
+    "path": "outputs/framelease_v4/tuning/selection/FULL/heur_s1.json",
+    "selected": null,
+    "sha256": "03d1145dba118b22806a0246fbca35d41338a815a9e9cb9f8d4d79ca2e230914",
+    "survivors": [
+     "d10",
+     "d1"
+    ]
+   },
+   "stage": 1,
+   "stage_spec": "outputs/framelease_v4/p1_jobs/FULL/b06_heur_s1.stage.json",
+   "stage_spec_sha256": "f6d9867dd3ae7d85274d67bc32311c159880ca9514b514fda18e1527bacb1ff6"
+  },
+  {
+   "block": "heur_s2",
+   "block_no": 7,
+   "candidates": [
+    {
+     "arm": "fl_heuristic",
+     "candidate": "d10",
+     "dmr": 0.3209714696844411,
+     "ds": 47.762471454545455,
+     "eir": 0.07172107412850764,
+     "envelope": "B0",
+     "fallback_ratio": 0.3292724395264259,
+     "mean_ds_kept": 47.762471454545455,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 0.8298821548821549,
+     "policy_params": {
+      "utility": "heuristic"
+     },
+     "r_cond": 0.8419182948490231,
+     "rc": 62.76272727272728,
+     "realized_conflicts": 2815,
+     "realized_misses": 2370,
+     "reused_from": "lease_s2",
+     "shield_epochs": 11880,
+     "sr": 0.2727272727272727,
+     "tag": "B0_d10",
+     "valid_runs": 11
+    },
+    {
+     "arm": "fl_heuristic",
+     "candidate": "d1",
+     "dmr": 0.44903192363883115,
+     "ds": 49.91109845454545,
+     "eir": 0.07072988869122071,
+     "envelope": "B0",
+     "fallback_ratio": 0.45778143733390625,
+     "mean_ds_kept": 49.91109845454545,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 0.20291720291720292,
+     "policy_params": {
+      "utility": "v4_adet_d1"
+     },
+     "r_cond": 0.38181818181818183,
+     "rc": 69.94727272727272,
+     "realized_conflicts": 220,
+     "realized_misses": 84,
+     "reused_from": null,
+     "shield_epochs": 2331,
+     "sr": 0.09090909090909091,
+     "tag": "B0_d1",
+     "valid_runs": 11
+    }
+   ],
+   "dropped_routes": {},
+   "flags": [],
+   "grid": "heur",
+   "kept_routes": [
+    "2086",
+    "2397",
+    "2643",
+    "2844",
+    "3090",
+    "3373",
+    "3749",
+    "17569",
+    "23910",
+    "24330",
+    "28093"
+   ],
+   "pending": 0,
+   "route_set": "T22b",
+   "routes": [
+    "2086",
+    "2397",
+    "2643",
+    "2844",
+    "3090",
+    "3373",
+    "3749",
+    "17569",
+    "23910",
+    "24330",
+    "28093"
+   ],
+   "selection": {
+    "mean_ds_T22": {
+     "d1": 57.10222642857144,
+     "d10": 49.992281999999996
+    },
+    "path": "outputs/framelease_v4/tuning/selection/FULL/heur_s2.json",
+    "selected": "d1",
+    "sha256": "ca497c268b94cd18b19cbd5fd36ba174a3e86bdd739695c7954de948c919ac4d",
+    "survivors": null
+   },
+   "stage": 2,
+   "stage_spec": "outputs/framelease_v4/p1_jobs/FULL/b07_heur_s2.stage.json",
+   "stage_spec_sha256": "7bf38a18c7081993fa10c15d2e6486f61bd694985f3f1a422861ad5d97395af9"
+  },
+  {
+   "block": "age_s1",
+   "block_no": 8,
+   "candidates": [
+    {
+     "arm": "age_only",
+     "candidate": "A1.0",
+     "dmr": 0.0031861526471171843,
+     "ds": 67.76745790909091,
+     "eir": 0.15316043722596323,
+     "envelope": null,
+     "fallback_ratio": 0.023353698473708415,
+     "mean_ds_kept": 67.76745790909091,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 0.2859259259259259,
+     "policy_params": {
+      "age_lease_s": 1.0,
+      "utility": "v4_adet_d1"
+     },
+     "r_cond": 0.7302631578947368,
+     "rc": 100.0,
+     "realized_conflicts": 152,
+     "realized_misses": 111,
+     "reused_from": null,
+     "shield_epochs": 675,
+     "sr": 0.2727272727272727,
+     "tag": "A1.0_d1",
+     "valid_runs": 11
+    },
+    {
+     "arm": "age_only",
+     "candidate": "A1.5",
+     "dmr": 0.0,
+     "ds": 63.26991436363637,
+     "eir": 0.1373583749300299,
+     "envelope": null,
+     "fallback_ratio": 0.018885990714195132,
+     "mean_ds_kept": 63.26991436363637,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 0.9792452830188679,
+     "policy_params": {
+      "age_lease_s": 1.5,
+      "utility": "v4_adet_d1"
+     },
+     "r_cond": 0.7512437810945274,
+     "rc": 92.14727272727272,
+     "realized_conflicts": 201,
+     "realized_misses": 151,
+     "reused_from": null,
+     "shield_epochs": 1060,
+     "sr": 0.2727272727272727,
+     "tag": "A1.5_d1",
+     "valid_runs": 11
+    },
+    {
+     "arm": "age_only",
+     "candidate": "A2.0",
+     "dmr": 0.0,
+     "ds": 63.19662718181819,
+     "eir": 0.15476264813204443,
+     "envelope": null,
+     "fallback_ratio": 0.018969019619001787,
+     "mean_ds_kept": 63.19662718181819,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 1.0,
+     "policy_params": {
+      "age_lease_s": 2.0,
+      "utility": "v4_adet_d1"
+     },
+     "r_cond": 0.8926553672316384,
+     "rc": 99.72727272727273,
+     "realized_conflicts": 177,
+     "realized_misses": 158,
+     "reused_from": null,
+     "shield_epochs": 812,
+     "sr": 0.18181818181818182,
+     "tag": "A2.0_d1",
+     "valid_runs": 11
+    },
+    {
+     "arm": "age_only",
+     "candidate": "A2.5",
+     "dmr": 0.0,
+     "ds": 63.55304918181818,
+     "eir": 0.19469946643091107,
+     "envelope": null,
+     "fallback_ratio": 0.01854204397974019,
+     "mean_ds_kept": 63.55304918181818,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 1.0,
+     "policy_params": {
+      "age_lease_s": 2.5,
+      "utility": "v4_adet_d1"
+     },
+     "r_cond": 1.0,
+     "rc": 89.85000000000001,
+     "realized_conflicts": 285,
+     "realized_misses": 285,
+     "reused_from": null,
+     "shield_epochs": 888,
+     "sr": 0.18181818181818182,
+     "tag": "A2.5_d1",
+     "valid_runs": 11
+    }
+   ],
+   "dropped_routes": {},
+   "flags": [],
+   "grid": "age",
+   "kept_routes": [
+    "1792",
+    "2215",
+    "2539",
+    "2715",
+    "2943",
+    "3184",
+    "3514",
+    "4937",
+    "23659",
+    "24211",
+    "25863"
+   ],
+   "pending": 0,
+   "route_set": "T22a",
+   "routes": [
+    "1792",
+    "2215",
+    "2539",
+    "2715",
+    "2943",
+    "3184",
+    "3514",
+    "4937",
+    "23659",
+    "24211",
+    "25863"
+   ],
+   "selection": {
+    "mean_ds_T22": null,
+    "path": "outputs/framelease_v4/tuning/selection/FULL/age_s1.json",
+    "selected": null,
+    "sha256": "88fa28271484e92758978b5b1ddcdeba42567fa1a7979715eedddc5bad31acdc",
+    "survivors": [
+     "A1.0",
+     "A2.5"
+    ]
+   },
+   "stage": 1,
+   "stage_spec": "outputs/framelease_v4/p1_jobs/FULL/b08_age_s1.stage.json",
+   "stage_spec_sha256": "e8b892854118e414542da3b6359dc2fa1b0b6a627c08fbf49d56594f2b9e791e"
+  },
+  {
+   "block": "age_s2",
+   "block_no": 9,
+   "candidates": [
+    {
+     "arm": "age_only",
+     "candidate": "A1.0",
+     "dmr": 0.016030726296331836,
+     "ds": 60.18459781818182,
+     "eir": 0.14724649011209906,
+     "envelope": null,
+     "fallback_ratio": 0.035371630478777255,
+     "mean_ds_kept": 60.18459781818182,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 0.10838150289017341,
+     "policy_params": {
+      "age_lease_s": 1.0,
+      "utility": "v4_adet_d1"
+     },
+     "r_cond": 0.8497854077253219,
+     "rc": 90.12545454545455,
+     "realized_conflicts": 233,
+     "realized_misses": 198,
+     "reused_from": null,
+     "shield_epochs": 1384,
+     "sr": 0.2727272727272727,
+     "tag": "A1.0_d1",
+     "valid_runs": 11
+    },
+    {
+     "arm": "age_only",
+     "candidate": "A2.5",
+     "dmr": 0.0,
+     "ds": 52.67632363636364,
+     "eir": 0.21243349370189504,
+     "envelope": null,
+     "fallback_ratio": 0.019118036980370998,
+     "mean_ds_kept": 52.67632363636364,
+     "n_kept": 11,
+     "outcomes": {
+      "ok": 11
+     },
+     "p_both": 1.0,
+     "policy_params": {
+      "age_lease_s": 2.5,
+      "utility": "v4_adet_d1"
+     },
+     "r_cond": 1.0,
+     "rc": 87.86272727272727,
+     "realized_conflicts": 572,
+     "realized_misses": 572,
+     "reused_from": null,
+     "shield_epochs": 1144,
+     "sr": 0.09090909090909091,
+     "tag": "A2.5_d1",
+     "valid_runs": 11
+    }
+   ],
+   "dropped_routes": {},
+   "flags": [],
+   "grid": "age",
+   "kept_routes": [
+    "2086",
+    "2397",
+    "2643",
+    "2844",
+    "3090",
+    "3373",
+    "3749",
+    "17569",
+    "23910",
+    "24330",
+    "28093"
+   ],
+   "pending": 0,
+   "route_set": "T22b",
+   "routes": [
+    "2086",
+    "2397",
+    "2643",
+    "2844",
+    "3090",
+    "3373",
+    "3749",
+    "17569",
+    "23910",
+    "24330",
+    "28093"
+   ],
+   "selection": {
+    "mean_ds_T22": {
+     "A1.0": 63.97602786363636,
+     "A2.5": 58.11468640909091
+    },
+    "path": "outputs/framelease_v4/tuning/selection/FULL/age_s2.json",
+    "selected": "A1.0",
+    "sha256": "b79b9440bde4b8f1c4fad1d7bcfb41fe88f3995fd0eb501084bd38c5e178b355",
+    "survivors": null
+   },
+   "stage": 2,
+   "stage_spec": "outputs/framelease_v4/p1_jobs/FULL/b09_age_s2.stage.json",
+   "stage_spec_sha256": "a5bfe45011b4e99f08fb250d1780dd9368684cc62dddba9e3b24ed4743a8749a"
+  }
+ ],
+ "columns": {
+  "dmr": "mean deadline miss rate from the first commit on",
+  "ds": "mean DS over valid runs",
+  "eir": "mean executed-invalid tick rate (actor log, standard validity)",
+  "fallback_ratio": "mean share of control ticks in fallback (all ticks)",
+  "mean_ds_kept": "selection statistic: mean DS over the kept routes (agent crash = 0)",
+  "p_both": "P_both pooled over shield decision epochs",
+  "r_cond": "closed-loop R_cond pooled over runs (misses / conflict plans)",
+  "rc": "mean route completion",
+  "sr": "Bench2Drive success rate"
+ },
+ "queue": "outputs/framelease_v4/queue_p1",
+ "realized": true,
+ "schema": "framelease_v4.d1_summary/1",
+ "script_sha256": "e12130fab39449afa1ae2ced4996d415cabcc79fbd051745dc0473dcbbf508f9",
+ "training_routes_only": true,
+ "tuning_freeze": {
+  "A_star": {
+   "age_lease_s": 1.0
+  },
+  "L_star": {
+   "config": "T_x0.00",
+   "envelope_path": "outputs/framelease_v4/envelopes/B0.json",
+   "envelope_sha256": "9ef8479f04dab873d22b50e8732176804ed67f351f17584355b241e424fa1927",
+   "label": "B0",
+   "validity": "std"
+  },
+  "d_star": {
+   "d": 1,
+   "utility": "v4_adet_d1"
+  },
+  "event_star": {
+   "candidate": "s_hb2.0",
+   "policy_params": {
+    "det_shift_m": 1.0,
+    "heartbeat_s": 2.0,
+    "speed_delta_mps": 0.5,
+    "yaw_delta_rad": 0.05
+   }
+  },
+  "fl_risk": {
+   "lease_point": "E5",
+   "rule": "L* = B0: fl_risk runs the better of E5 / E10 by mean DS on lease_s1 (T22a), ties earlier"
+  },
+  "sha256": "652fcbdbf0a6adb498aa0691fcaaffb097fcd680b4bf40235a28639aed69b930"
+ },
+ "variant": "FULL",
+ "written": "2026-11-15T06:38:37+0800"
+}

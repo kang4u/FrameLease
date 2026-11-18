@@ -1,0 +1,7 @@
+apply_locked: exit 137 (output /tmp/AMEND3/a10r7b/rsim/treeF1/outputs/framelease_v4/amendment_a10/apply.out)
+registration --verify -> 0 | manifest: OK | seal framelease_v4/PROTOCOL.md: OK | seal outputs/framelease_v4/registration/MANIFEST.sha256: OK
+registration --write-manifest --force -> 0 | wrote /tmp/AMEND3/a10r7b/rsim/treeF1/outputs/framelease_v4/registration/MANIFEST.sha256: 221 files, sha256 4bfe7451a41b853042f181cbcd7c326649b4222279bc35dd9787afa38c8d4033
+apply_locked: PROTOCOL.md holds the entry but is not sealed; the rewritten manifest (the one the entry names) is kept: seal it now under the lock (RUNBOOK.md Sec. 1)
+manifest: OK
+seal framelease_v4/PROTOCOL.md: CHANGED
+seal outputs/framelease_v4/registration/MANIFEST.sha256: OK

@@ -1,0 +1,8 @@
+....                                                                     [100%]
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED framelease_v4/protocol/tests/test_check_smoke_ext.py::ReviewFixesTest::test_sf4_disable_rule_is_replayed_exactly
+PASSED outputs/framelease_v4/build/QNET/review/test_review_qnet.py::ProtocolTextTest::test_denominator_below_256_calls
+PASSED outputs/framelease_v4/build/QNET/review/test_review_qnet.py::ProtocolTextTest::test_no_disable_before_64_calls
+PASSED outputs/framelease_v4/build/QNET/review/test_review_qnet.py::ProtocolTextTest::test_window_and_threshold
+4 passed in 0.55s
