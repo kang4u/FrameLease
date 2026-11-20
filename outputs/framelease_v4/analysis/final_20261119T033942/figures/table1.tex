@@ -1,0 +1,33 @@
+% framelease_v4/analysis/figures_tables.py: generated; every number is listed in numbers.json
+\begin{table*}[t]
+\centering
+\caption{End-to-end driving performance under matched compute budgets}
+\label{tab:table1}
+\footnotesize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{lccccccccccc}
+\toprule
+Method & \begin{tabular}[b]{@{}c@{}}DS $\uparrow$ \\{} [95\% CI]\end{tabular} & \begin{tabular}[b]{@{}c@{}}SR \\{} (\%) $\uparrow$\end{tabular} & \begin{tabular}[b]{@{}c@{}}Coll./ \\{} km $\downarrow$\end{tabular} & \begin{tabular}[b]{@{}c@{}}Infr./ \\{} km $\downarrow$\end{tabular} & \begin{tabular}[b]{@{}c@{}}GPU \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}DMR \\{} (\%) $\downarrow$\end{tabular} & \begin{tabular}[b]{@{}c@{}}Age \\{} p50 (s)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Age \\{} p95 (s)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Fallback \\{} (\%) $\downarrow$\end{tabular} & \begin{tabular}[b]{@{}c@{}}EIR \\{} (\%) $\downarrow$\end{tabular} & \begin{tabular}[b]{@{}c@{}}$P_\mathrm{both}$ \\{} (\%)\end{tabular} \\
+\midrule
+Fixed Deep & 50.4 [41.4, 59.5] & 15.9 & 14.80 & 24.87 & 100 & 0.0 & 0.95 & 1.22 & 2.1 & 22.36 & -- \\
+Fast Only & 53.5 [43.7, 63.5] & 20.5 & 13.69 & 33.87 & 100 & 0.0 & 0.70 & 0.90 & 1.8 & 24.86 & -- \\
+Age-Only & 52.6 [42.8, 62.8] & 20.5 & 12.20 & 32.15 & 100 & 0.3 & 0.70 & 0.90 & 1.9 & 28.71 & 36.9 \\
+Event-Triggered & 51.0 [42.4, 59.8] & 13.6 & 11.90 & 28.56 & 96 & 0.0 & 0.73 & 1.06 & 1.6 & 24.81 & -- \\
+Original FrameLease & 25.9 [17.9, 34.5]$^\dagger$ & 2.3$^\dagger$ & 4.48$^\dagger$ & 16.43$^\dagger$ & 99$^\dagger$ & 81.3$^\dagger$ & 0.89$^\dagger$ & 1.46$^\dagger$ & 81.5$^\dagger$ & 6.05$^\dagger$ & -- \\
+FrameLease + Heuristic & 47.7 [38.2, 57.3] & 13.6 & 7.85 & 27.93 & 99 & 41.8 & 0.71 & 1.17 & 42.8 & 11.46 & 51.9 \\
+\midrule
+Full FrameLease & 55.3 [46.1, 64.8] & 20.5 & 8.01 & 20.57 & 99 & 38.4 & 0.73 & 1.27 & 39.5 & 10.70 & 61.2 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\parbox{\textwidth}{\footnotesize
+Mean over the 44 test routes at $\kappa$ = 1.0, seed 11; DS with its 95\% route-bootstrap interval. Coll./km pooled over routes (sum of collisions / sum of km); the other columns are means over routes. GPU: GPU-busy time per second; EIR: executed-invalid tick rate (standard validity); $P_\mathrm{both}$: share of shield decision epochs with both actions feasible. --: no value. 
+Coll./km, 95\% route-cluster bootstrap interval: Fixed Deep [10.32, 20.16]; Fast Only [8.70, 19.87]; Age-Only [7.99, 17.16]; Event-Triggered [8.37, 16.13]; Original FrameLease [1.14, 9.58]; FrameLease + Heuristic [5.09, 11.32]; Full FrameLease [5.19, 11.41]. 
+RC: Fixed Deep 85.9; Fast Only 86.1; Age-Only 82.8; Event-Triggered 84.9; Original FrameLease 29.8; FrameLease + Heuristic 69.0; Full FrameLease 75.4. 
+Closed-loop $R_\mathrm{cond}$ (\%): Fixed Deep 100.0; Fast Only 100.0; Age-Only 72.2; Event-Triggered 100.0; Original FrameLease 36.8; FrameLease + Heuristic 65.0; Full FrameLease 65.7. 
+H1 (primary; Full FrameLease $-$ each, DS, Holm over 4): Fixed Deep 5.0 [$-$4.6, 14.5], $p_\mathrm{Holm}$ 1.000, inconclusive; Fast Only 1.9 [$-$8.9, 12.4], $p_\mathrm{Holm}$ 1.000, inconclusive; Age-Only 2.8 [$-$7.3, 12.7], $p_\mathrm{Holm}$ 1.000, inconclusive; Event-Triggered 4.4 [$-$5.0, 14.2], $p_\mathrm{Holm}$ 1.000, inconclusive; n = 44 routes each. 
+Secondary (labelled secondary, Sec. 9.3 of the protocol). H3 (each $-$ Original FrameLease, DS, Holm over 2): FrameLease + Heuristic 21.8 [10.7, 33.5], $p_\mathrm{Holm}$ \textless{} 0.001, improves, n 43 of 44 (dropped: 23658: cell not used: B fl\_original\_k1.0\_s11: missing (sim\_failure)); Full FrameLease 29.6 [19.1, 40.4], $p_\mathrm{Holm}$ \textless{} 0.001, improves, n 43 of 44 (dropped: 23658: cell not used: B fl\_original\_k1.0\_s11: missing (sim\_failure)). S-coll (Full FrameLease $-$ each, collisions/km per route, lower is better, Holm over 4): Fixed Deep $-$2.79 [$-$12.81, 10.29], $p_\mathrm{Holm}$ 0.715, inconclusive; Fast Only $-$9.64 [$-$25.47, 2.25], $p_\mathrm{Holm}$ 0.546, inconclusive; Age-Only $-$6.50 [$-$14.37, 1.57], $p_\mathrm{Holm}$ 0.497, inconclusive; Event-Triggered $-$4.30 [$-$10.55, 1.80], $p_\mathrm{Holm}$ 0.546, inconclusive; n = 44 routes each. S-dmr (Full FrameLease $-$ each, DMR in percentage points, lower is better, Holm over 4): Fixed Deep 38.4 [26.8, 50.4], $p_\mathrm{Holm}$ \textless{} 0.001, worse; Fast Only 38.4 [26.8, 50.4], $p_\mathrm{Holm}$ \textless{} 0.001, worse; Age-Only 38.1 [26.6, 50.0], $p_\mathrm{Holm}$ \textless{} 0.001, worse; Event-Triggered 38.4 [26.8, 50.4], $p_\mathrm{Holm}$ \textless{} 0.001, worse; n = 44 routes each. 
+Charged prefix above the idle band (background load, flagged and never excluded): Fixed Deep 2/44; Fast Only 2/44; Age-Only 2/44; Event-Triggered 0/44; Original FrameLease 2/43; FrameLease + Heuristic 1/44; Full FrameLease 2/44 runs. 
+$^\dagger$ Fewer than 44 routes (pairwise-complete contrasts; Sec. 9.8 of the protocol).
+}
+\end{table*}

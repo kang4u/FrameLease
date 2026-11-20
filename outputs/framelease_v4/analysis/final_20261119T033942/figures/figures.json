@@ -1,0 +1,192 @@
+{
+ "analysis": "outputs/framelease_v4/analysis/final_20261119T033942/analysis",
+ "arguments": [
+  "framelease_v4/analysis/figures_tables.py",
+  "--out",
+  "outputs/framelease_v4/analysis/final_20261119T033942/figures",
+  "--analysis",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis",
+  "--offline",
+  "outputs/framelease_v4/offline_ablation",
+  "--coverage",
+  "outputs/framelease_v4/analysis/final_20261119T033942/coverage",
+  "--s1",
+  "outputs/framelease_v4/stress/s1_registered_20261115T124141Z.json",
+  "--s2",
+  "outputs/framelease_v4/stress/s2_registered_20261115T123104Z.json",
+  "--s2-relative",
+  "outputs/framelease_v4/stress/s2_relative_registered_20261115T123118Z.json",
+  "--s3",
+  "outputs/framelease_v4/stress/s3_registered_20261115T122819Z.json",
+  "--d1",
+  "outputs/framelease_v4/tuning/d1/FULL_d1_summary.json",
+  "--rl-freeze",
+  "outputs/framelease_v4/rl_freeze/rl_freeze.json",
+  "--require-registered"
+ ],
+ "development": [],
+ "figures": {
+  "fig1": {
+   "description": "Fig. 1 (Sec. 7.1): (a) execution error vs. observation age, (b) Fast@Fresh - Deep@Old vs. kappa, (c) Fixed Deep - Fast Only DS by ability, this work and v2",
+   "files": [
+    "fig1.pdf",
+    "fig1.png",
+    "fig1_caption.tex"
+   ],
+   "numbers": 524,
+   "sources": [
+    "offline",
+    "analysis"
+   ]
+  },
+  "fig1_scenarios": {
+   "description": "companion of Fig. 1(c): Fixed Deep - Fast Only DS per scenario type, this work and v2",
+   "files": [
+    "fig1_scenarios.pdf",
+    "fig1_scenarios.png",
+    "fig1_scenarios_caption.tex"
+   ],
+   "numbers": 264,
+   "sources": [
+    "offline",
+    "analysis"
+   ]
+  },
+  "fig3": {
+   "description": "Fig. 3 (Sec. 7.3): DS vs. action age p50 / p95 on E at kappa 1.0, 1.5, 2.0 with EIR / GPU usage",
+   "files": [
+    "fig3.pdf",
+    "fig3.png",
+    "fig3_caption.tex"
+   ],
+   "numbers": 320,
+   "sources": [
+    "analysis"
+   ]
+  },
+  "table1": {
+   "description": "Table I (Sec. 7.2): end-to-end performance of the 7 arms, 44 test routes, kappa 1.0, with the H1 notes",
+   "files": [
+    "table1.tex"
+   ],
+   "numbers": 483,
+   "sources": [
+    "analysis"
+   ]
+  },
+  "table2a": {
+   "description": "Table II-A (Secs. 7.4, 7.5): offline lease ablation with the cited RA rows, Proposition-1 envelope coverage, closed-loop lease panel and RL panel with the FQE estimates and P_both",
+   "files": [
+    "table2a.tex"
+   ],
+   "numbers": 425,
+   "sources": [
+    "analysis",
+    "offline",
+    "rnd",
+    "coverage",
+    "rl_freeze"
+   ]
+  },
+  "table2b": {
+   "description": "Table II-B (Sec. 7.6): runtime overhead from the logs (kappa 1.0; kappa 2.0 = S4) and the stress tests S1, S2 (registered grid and the supplementary grid of Amendment A7) and S3",
+   "files": [
+    "table2b.tex"
+   ],
+   "numbers": 247,
+   "sources": [
+    "analysis",
+    "s1",
+    "s2",
+    "s2_relative",
+    "s3"
+   ]
+  },
+  "table_train": {
+   "description": "training-route operating points of the tuned arms and the references (D1 summary, Sec. 4.8)",
+   "files": [
+    "table_train.tex"
+   ],
+   "numbers": 323,
+   "sources": [
+    "d1"
+   ]
+  }
+ },
+ "inputs": {
+  "framelease_v3/RND_REPORT_20261110.md": "1ca847572e4cca37766ed17f820d96de1c6f51166c43f64ca586b3c7e677aa2e",
+  "framelease_v4/PROTOCOL.md": "d85d929cfe9ae904d1f8ca56d4577e5fdb14d933597d17dc3df90c564ba38851",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/analysis.json": "2d8b7ed68616b3115622d6d5dffcf1544262d9c21cb0b532867289d411a6072a",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/cells.csv": "d6d39a3b673f515665974646bf5c0aa21abbd692b9e7cd507a73c46b032db034",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/conditions.csv": "f4f49f72c73fb5c29bc5da5ae1b193d166cdf3852d9ae7c4415dfc249f1f9d4c",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/family_F3.csv": "b88f6af34c2d56fda322242284ec7a66a3ff6b86e3d5d35c341a056331954fe5",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/family_H1.csv": "4e3ded72615a57eb33e512219ed18465860fe07a2e0eea31bd8c6372fe1c4496",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/family_H2.csv": "2d77607c7295560ce8df8f8ee6fcd37755edfad3ca7ba69c6c6b1d4879e699f5",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/family_H3.csv": "b53900461d2b58c26fb663f4e8844a5c377a5bd581ee5fd39ac5e98aeac949c0",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/family_H4-cl.csv": "5b69afe514ecb0ac2fa93a3357cb1f6c973daa8f6224de7f091b549bdc3d07e8",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/family_RL-abl.csv": "160288fabf5db4d07298abf4785f3377689897025e6db8eccc3e17fe01387f5e",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/family_S-coll.csv": "ce55f2bebe80f05d4f0e798bf2073711b10041b3b9515c1b8a711802bae8dccb",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/family_S-dmr.csv": "70b932682a9ad1c6ece61562a54c9f8a314a23fc3eeb25151685075714df6671",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/h4_offline.csv": "06508ebe0fb02dabe24efc6c2f3f65787128ef243f97ec29e67c1ce098d2229d",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/paired_differences.csv": "9fe11676c4557c5c733d82062053a7d7e60832a05ecca8edf23ea5eb2eea76a7",
+  "outputs/framelease_v4/analysis/final_20261119T033942/analysis/per_ability.csv": "1a553466c69ce6a32524f90431f38b22ecd32e02cf0347d9805ec18c34105b4e",
+  "outputs/framelease_v4/analysis/final_20261119T033942/coverage/coverage.csv": "fe77c98a49c4916a83f083d1054c8cafe65270da3a1aff7391a521e88e4e7a20",
+  "outputs/framelease_v4/offline_ablation/fig1/c1_age_vs_depth.csv": "e181a85821ecc01769cdbf62a89d2d758ab3faa8cb004981101368c48bd5eac2",
+  "outputs/framelease_v4/offline_ablation/fig1/c1_fresh_vs_deep_kappa.csv": "62b089a78510cb30b5b3e81db116203a6e7603930d0f30599d38d353883c0794",
+  "outputs/framelease_v4/offline_ablation/fig1/closed_loop_ds_by_ability.csv": "76073a44974e742e77c004377333c68f4afa22826311f0b67cf3551a1b1da119",
+  "outputs/framelease_v4/offline_ablation/fig1/closed_loop_ds_by_route.csv": "69ff9a63a82cd7c10c314d5247cf5c0e9042b138d142dd0dd3b55c10d7f28784",
+  "outputs/framelease_v4/offline_ablation/fig1/closed_loop_kappa_trend.csv": "a6dcc4529aa8a6c0231c7314f3b680575d3f20d41beca4af849c8deda05f9f2d",
+  "outputs/framelease_v4/offline_ablation/fig1/fig1_check.json": "a6e3aa97ee7f0c91abb651a6e1ce999dedd5663a61d9236e6bbb43a4fa6f96da",
+  "outputs/framelease_v4/offline_ablation/nested.csv": "b6e922ffda3afc9deb8a99448899f920d9ad43643907ecb988e37d77f8931b9f",
+  "outputs/framelease_v4/offline_ablation/nested_folds.csv": "57e11eb5b4100d7180da988115c61cc65c0d7c5e315ab96fd048e1a7736742aa",
+  "outputs/framelease_v4/rl_freeze/rl_freeze.json": "a9e08c1931ea8cc6ab0f74111fa8bfb6a0b043ed44606fe0e7657c2d254db31d",
+  "outputs/framelease_v4/stress/s1_registered_20261115T124141Z.json": "c04d06a20e9686878fb0a6c91dcd5b33cc77cbee2ed14d034f8b6b03f2fc5673",
+  "outputs/framelease_v4/stress/s2_registered_20261115T123104Z.json": "80b3c1b046febeed565544cc30a526683b6e43328e79fd1397629f4ad6d7ef12",
+  "outputs/framelease_v4/stress/s2_relative_registered_20261115T123118Z.json": "53f2f89d691e0ef305a7acc0023aabd15a8d0d5926a5ef5279803f30ca23a92a",
+  "outputs/framelease_v4/stress/s3_registered_20261115T122819Z.json": "90b0393cbfef9ab76821271134479d7dc80aa645042cf623f43e26f54a98c6d4",
+  "outputs/framelease_v4/tuning/d1/FULL_d1_summary.json": "d8c0a76eba80c0c5d4faf93346146ff3db59d162d27636c2411cd206a09a2fb3"
+ },
+ "outputs": {
+  "fig1.pdf": "08dc766f9c4e6673bf4cc20dcfd4c282ccb8eb86b9986c151eda2b2213c8c9d4",
+  "fig1.png": "8979d6d3367e158fcf357ca6cf2adf1a7b8dc4eda7cea3bec015d28b9f26b9e7",
+  "fig1_caption.tex": "925064290bc6767cc1c31dcaa3447d50982c8b69e08bfca64c7a2d28aa9ec0f6",
+  "fig1_scenarios.pdf": "d317d8f4da8c3ed98033b285d8000b25d1114efc236128b0fdae6dfd6bf701e8",
+  "fig1_scenarios.png": "0292a6914d7b6ee253904f5dfa0072fcacd7a87ff655624e51e374127f409f2e",
+  "fig1_scenarios_caption.tex": "f364a8faa21bd46e0298cf02936cc84fd2a8e46b24e723d8db7682554aa0f469",
+  "fig3.pdf": "c8e8bb8808cb959e36dbc92a0ae520216b76d0e927003160f749a61e19c1738f",
+  "fig3.png": "d5e0e6b1311bdea2ee0fdc5c76912c97786c33972da6cf3a2c90e9150449d454",
+  "fig3_caption.tex": "cf9cd62f51599f7ce49290bf770cb46cea55f86b6f320835e0c86ec73ae3e42e",
+  "numbers.json": "2ca354e993aa630f3de22b63cf667d50dbc878c99bc78c9a547fe0dbb9b792f4",
+  "table1.tex": "28c9df1fe533062012ae883a8c0e26b3b491ed9928e2cc455b91cbbf79757b03",
+  "table2a.tex": "dbbc0b717ea9143182d18ff1a0f5a08f373ed3c5e0878823aa7aef63b98f6986",
+  "table2b.tex": "5bb59cf173d4c2947d151f505ad8c184a3d042261e247d61444c3050561696c6",
+  "table_train.tex": "2fc9a3b36444d65ff5c5163a4debf6dd5b2ee528df707b45053936a5eb59fb9b"
+ },
+ "rule": "PROTOCOL Sec. 9.11; figures and tables only from analysis outputs whose status allows it",
+ "schema": "framelease_v4.figures_tables/1",
+ "scope": {
+  "analysis_scope": "test routes, released by the analysis-freeze record",
+  "freeze": {
+   "frozen": "2026-11-19T11:41:59+0800",
+   "path": "outputs/framelease_v4/analysis/final_20261119T033942/analysis_freeze.json",
+   "registered": true,
+   "sha256": "7caf9e9f1a7d44ea6e451ce93631d978c7193eb502f53c31bb9dbaedec744047"
+  },
+  "guard_released_rows": 631,
+  "guard_status": "frozen",
+  "guard_test_input_rows": 632,
+  "registered_test_routes_used": 44
+ },
+ "script": "framelease_v4/analysis/figures_tables.py",
+ "script_sha256": "bd4ed54c60fbc5259aeb2ed56f5301ad612c3006fd4172f06b889f2ea0c2118c",
+ "sources": {
+  "coverage": "outputs/framelease_v4/analysis/final_20261119T033942/coverage",
+  "d1": "outputs/framelease_v4/tuning/d1/FULL_d1_summary.json",
+  "rl_freeze": "outputs/framelease_v4/rl_freeze/rl_freeze.json",
+  "s1": "outputs/framelease_v4/stress/s1_registered_20261115T124141Z.json",
+  "s2": "outputs/framelease_v4/stress/s2_registered_20261115T123104Z.json",
+  "s2_relative": "outputs/framelease_v4/stress/s2_relative_registered_20261115T123118Z.json",
+  "s3": "outputs/framelease_v4/stress/s3_registered_20261115T122819Z.json"
+ },
+ "status": "registered"
+}

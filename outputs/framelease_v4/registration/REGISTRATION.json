@@ -3,9 +3,9 @@
  "manifest_files": 221,
  "manifest_sha256": "0fdb720ea103b891218cf538960a8fb93f9f8d46dcef59c421716c0c6137dca3",
  "protocol": "framelease_v4/PROTOCOL.md",
- "protocol_sha256": "cf6f50821c772ff8af0b7c5cf609243c9ef3ffd2eccbf414c6f9d233a7c59a65",
+ "protocol_sha256": "d85d929cfe9ae904d1f8ca56d4577e5fdb14d933597d17dc3df90c564ba38851",
  "schema": "framelease_v4.registration/1",
  "script_sha256": "1f1cc02314635a674733e70cfc0729cb2815b50275d4e599fe263fce5568f1b8",
- "sealed": "2026-11-16T15:54:01+0800",
+ "sealed": "2026-11-19T11:52:43+0800",
  "variant": "FULL"
 }

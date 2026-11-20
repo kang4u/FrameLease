@@ -1,0 +1,74 @@
+% framelease_v4/analysis/figures_tables.py: generated; every number is listed in numbers.json
+\begin{table*}[t]
+\centering
+\renewcommand{\thetable}{\Roman{table}-A}
+\caption{Mechanism ablations: validity lease and RL contribution}
+\label{tab:table2a}
+\footnotesize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{lcccccc}
+\toprule
+\multicolumn{7}{@{}l}{\textbf{(a)} Offline lease ablation: 32 VAL clips, 5417 depth-1 plans, 909 conflict plans; nested leave-one-clip-out selection at $R_\mathrm{cond} \le$ 5\%} \\
+\midrule
+Lease & \begin{tabular}[b]{@{}c@{}}$R_\mathrm{cond}$ $\downarrow$ \\{} (\%) [95\% CI]\end{tabular} & \begin{tabular}[b]{@{}c@{}}$R_\mathrm{marg}$ $\downarrow$ \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Util. $\uparrow$ \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Prem. refresh $\downarrow$ \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Continuity $\uparrow$ \\{} 0.964 s (\%) [95\% CI]\end{tabular} & \begin{tabular}[b]{@{}c@{}}Continuity \\{} 1.842 s (\%) [95\% CI]\end{tabular} \\
+\midrule
+Age-Only & 0.0 [0.0, 0.0] & 0.00 & 0.0 & 100.0 & 0.0 [0.0, 0.0] & 0.0 [0.0, 0.0] \\
+Global-Margin & 4.8 [1.8, 11.7] & 0.81 & 54.4 & 42.2 & 52.1 [39.4, 65.6] & 43.7 [30.4, 57.8] \\
+Suffix-Aligned & 5.0 [1.6, 12.9] & 0.83 & 54.8 & 41.0 & 53.1 [40.6, 66.8] & 40.8 [26.1, 56.2] \\
+\midrule
+RA validity, model detections$^\S$ & 10.1 [0.8, 27.5] & -- & -- & -- & -- & 57.8 [38.7, 75.4] \\
+Standard validity, same setting$^\S$ & 9.6 [0.8, 27.1] & -- & -- & -- & -- & 48.5 [26.0, 69.7] \\
+RA validity, oracle boxes$^\S$ & 4.9 [0.0, 15.8] & -- & -- & -- & -- & 73.3 [56.5, 87.5] \\
+Standard validity, oracle boxes$^\S$ & 5.1 [0.0, 16.0] & -- & -- & -- & -- & 80.8 [62.9, 93.0] \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{llrccccc}
+\toprule
+\multicolumn{8}{@{}l}{\textbf{(b)} Proposition 1: envelope coverage of the deployed lease envelope on the 32 VAL clips} \\
+\midrule
+Envelope & Class & Pairs & \begin{tabular}[b]{@{}c@{}}Per $\tau$ \\{} 0 s (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Per $\tau$ \\{} 1 s (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Per $\tau$ \\{} 2 s (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Per $\tau$ \\{} 3 s (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Whole path \\{} 0--3 s (\%) [95\% CI]\end{tabular} \\
+\midrule
+E5 (fl\_risk) & vehicle & 33289 & 70.6 & 83.4 & 82.6 & 83.1 & 52.5 [47.5, 57.5] \\
+E5 (fl\_risk) & pedestrian & 490 & 93.5 & 94.7 & 91.8 & 84.0 & 81.2 [70.1, 93.0] \\
+B0 (L*) & vehicle & 33289 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 [0.0, 0.0] \\
+B0 (L*) & pedestrian & 490 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 [0.0, 0.0] \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{lcccccccc}
+\toprule
+\multicolumn{9}{@{}l}{\textbf{(c)} Closed-loop lease ablation: subset E, $\kappa$ = 1.0, seed 11, same shield and utility $a_\mathrm{det}^{d^*}$} \\
+\midrule
+Lease & \begin{tabular}[b]{@{}c@{}}DS $\uparrow$ \\{} [95\% CI]\end{tabular} & \begin{tabular}[b]{@{}c@{}}Fallback $\downarrow$ \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}DMR $\downarrow$ \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Util. $\uparrow$ \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Prem. $\downarrow$ \\{} expiry (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}EIR $\downarrow$ \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}$R_\mathrm{cond}$ $\downarrow$ \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}$P_\mathrm{both}$ \\{} (\%)\end{tabular} \\
+\midrule
+Age-Only lease & 45.1 [31.4, 60.0] & 1.8 & 0.4 & 46.2 & 2.7 & 30.73 & 71.9$^\dagger$ & 36.8 \\
+Global-Margin lease & 52.0 [37.6, 67.1] & 47.6 & 46.7 & 100.0$^\dagger$ & 0.0 & 11.48 & 100.0$^\dagger$ & 40.2 \\
+Suffix-Aligned lease & 47.0 [33.9, 60.8] & 53.2 & 52.6 & 85.3$^\dagger$ & 16.5 & 13.58 & 60.4$^\dagger$ & 41.3 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{lccccccc}
+\toprule
+\multicolumn{8}{@{}l}{\textbf{(d)} RL contribution: subset E, $\kappa$ = 1.0, seed 11, same shield and lease} \\
+\midrule
+Utility & \begin{tabular}[b]{@{}c@{}}DS $\uparrow$ \\{} [95\% CI]\end{tabular} & \begin{tabular}[b]{@{}c@{}}$P_\mathrm{both}$ \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Deviation \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Bypass \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Q-net \\{} p50 ($\mu$s)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Q-net \\{} p99 ($\mu$s)\end{tabular} & \begin{tabular}[b]{@{}c@{}}FQE $\Delta$ \\{} [90\% CI]\end{tabular} \\
+\midrule
+Shield + Heuristic & 47.0 [33.9, 60.8] & 41.3 & 0.0 & -- & -- & -- & ref. \\
+Shield + Contextual Bandit & 45.1 [34.5, 56.4] & 52.2 & 46.2 & 0.12 & 29.2 & 61.6 & 10.80 [6.22, 15.55] \\
+Shield + FQI (Full FrameLease) & 51.1 [38.2, 64.6] & 56.2 & 69.0 & 0.14 & 30.3 & 65.7 & 42.01 [28.95, 56.90] \\
+FQI w/o lease features & 52.0 [38.9, 65.7] & 49.4 & 63.1 & 0.00 & 26.6 & 59.4 & 57.15 [36.84, 79.11] \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\parbox{\textwidth}{\footnotesize
+(a) Realized validity of every plan; each lease at its nested leave-one-clip-out choice under rule (a) at $R_\mathrm{cond} \le$ 5\% for the need 0.964 s; the 1.842 s column is its own nested choice (realized $R_\mathrm{cond}$, \%: Age-Only 0.0; Global-Margin 4.8; Suffix-Aligned 5.0); 95\% clip-bootstrap intervals (2000 resamples). 
+H4 offline (SUFFIX $-$ GLOBAL, continuity at 0.964 s): 1.0 [$-$4.8, 5.6] points at an $R_\mathrm{cond}$ difference of 0.1 [$-$2.6, 3.3] points: inconclusive (pre-specified in code, executed before registration). 
+$^\S$ Cited from the renewal study (another setting: lease renewal on a shared GPU with the perception pass aligned with the release, 15 VAL clips, the unmodified prefix with need 1.842 s; continuity and realized $R_\mathrm{cond}$). RA changes the validity definition (responsibility-aware validity); these rows are not compared statistically with the rows above and are not standard-validity safety evidence. 
+(b) Proposition 1 holds under its envelope assumption; per-$\tau$ coverage $P(\mathrm{iso}(\tau) \le B_c(\tau))$ of matched detections and whole-path coverage on [0, 3 s], 95\% clip-bootstrap interval: empirical coverage, not a guarantee. 
+Closed loop: route means over subset E (22 test routes); DS with its 95\% route-bootstrap interval. H4-cl (Suffix-Aligned $-$ each, Holm over 2): Global-Margin $-$4.9 [$-$17.7, 7.8], $p_\mathrm{Holm}$ 0.932, inconclusive; Age-Only 1.9 [$-$10.1, 14.0], $p_\mathrm{Holm}$ 0.932, inconclusive; n = 22 routes each. 
+RL: Q-net p50 / p99 are the per-run quantiles of the network wall time, median over the runs of the condition; FQE $\Delta$: cross-fitted FQE estimate of the selected candidate relative to $a_\mathrm{det}^{d^*}$ (DS points per episode) with its 90\% route-cluster bootstrap interval. RL-abl (Full FrameLease $-$ each, Holm over 2): Contextual Bandit 6.0 [$-$5.7, 18.5], $p_\mathrm{Holm}$ 0.703, inconclusive; FQI w/o lease features $-$0.9 [$-$10.3, 8.2], $p_\mathrm{Holm}$ 0.853, inconclusive; n = 22 routes each. H2 (key secondary, single test, 44 routes): FrameLease + Heuristic 7.7 [$-$0.4, 15.4], $p$ 0.067, inconclusive; n = 44 routes; RL benefit: not claimed (H2 inconclusive). $P_\mathrm{both}$ of the RL dataset ($\kappa$ = 1.0 episodes): 39.8\% (testable; threshold 5\%). 
+RL gain (Full FrameLease $-$ FrameLease + Heuristic, DS; descriptive, Sec. 7.5 of the protocol): by ability on the 44 routes, Merging: 8.6 [0.1, 19.4] (n 16); Overtaking: 2.7 [$-$11.6, 16.9] (n 9); Emergency brake: 8.5 [$-$8.8, 25.7] (n 12); Give way: 16.6 (n 2); Traffic signs: 11.9 [$-$4.1, 27.1] (n 19); All routes: 7.7 [$-$0.4, 15.4] (n 44); by GPU budget on E, $\kappa$ 1.0: 4.0 [$-$7.9, 15.0] (n 22); $\kappa$ 1.5: $-$3.9 [$-$14.9, 6.2] (n 22); $\kappa$ 2.0: 0.9 [$-$7.6, 9.6] (n 22); by seed on R, seed 11: 10.2 [$-$6.2, 24.7] (n 15); seed 12: $-$14.8 [$-$30.0, $-$1.7] (n 15); 95\% route-bootstrap intervals (none below 5 routes). 
+$^\dagger$ after a closed-loop value: fewer routes than the subset (pairwise-complete; Sec. 9.8 of the protocol). --: no value.
+}
+\end{table*}

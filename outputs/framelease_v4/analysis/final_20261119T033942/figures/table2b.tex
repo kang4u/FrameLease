@@ -1,0 +1,86 @@
+% framelease_v4/analysis/figures_tables.py: generated; every number is listed in numbers.json
+\begin{table*}[t]
+\centering
+\addtocounter{table}{-1}
+\renewcommand{\thetable}{\Roman{table}-B}
+\caption{Runtime overhead and stress tests}
+\label{tab:table2b}
+\footnotesize
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{lccccc}
+\toprule
+\multicolumn{6}{@{}l}{\textbf{(a)} Runtime overhead from the run logs (per-run p50 / p99, median over runs)} \\
+\midrule
+ & \multicolumn{3}{c}{$\kappa$ = 1.0 (Table I runs)} & \multicolumn{2}{c}{$\kappa$ = 2.0 (GPU contention, S4)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+Quantity & Age-Only & FL + Heuristic & Full FrameLease & FL + Heuristic & Full FrameLease \\
+\midrule
+Runs & 44 & 44 & 44 & 22 & 22 \\
+CPU Q-network inference p50 / p99 ($\mu$s) & -- / -- & -- / -- & 30.3 / 65.7 & -- / -- & 36.5 / 64.1 \\
+Runs with Q-network p99 $> B_\pi$ & -- & -- & 0/44 & -- & 3/20 \\
+Policy bypass: epochs (mean rate, \%) & 0 (--) & 0 (--) & 6 (0.08) & 0 (--) & 9 (0.77) \\
+Shield decision p50 / p99 ($\mu$s) & 64.6 / 113.5 & 65.8 / 115.4 & 96.7 / 191.5 & 64.4 / 106.2 & 91.7 / 185.6 \\
+Lease computation p50 / p99 (ms) & 0.06 / 0.08 & 0.88 / 2.33 & 0.86 / 2.33 & 0.90 / 2.55 & 1.03 / 2.70 \\
+GPU quantum: charged prefix p50 / p99 (ms) & 419 / 430 & 419 / 431 & 419 / 430 & 838 / 861 & 837 / 858 \\
+GPU quantum: flow step p50 / p99 (ms) & 21.4 / 28.6 & 20.8 / 26.6 & 20.2 / 26.7 & 41.1 / 51.8 & 41.1 / 53.7 \\
+Switching latency p50 / p99 (ms) & 0.36 / 0.55 & 1.11 / 2.77 & 1.09 / 2.74 & 1.15 / 2.90 & 1.19 / 2.53 \\
+Cancelled GPU work (\% of GPU-busy time) & 0.0 & 40.4 & 40.5 & 45.7 & 50.5 \\
+Versioned commit: validation p50 / p99 ($\mu$s) & 80 / 124 & 907 / 2371 & 888 / 2373 & 935 / 2583 & 1062 / 2738 \\
+Commit-gate rejects & 0 & 4901 & 4943 & 1411 & 1696 \\
+DMR (\%) & 0.27 & 41.77 & 38.39 & 48.12 & 52.77 \\
+Fallback episodes & 233 & 789 & 417 & 283 & 215 \\
+Shield violations & 4 & 0 & 0 & 0 & 0 \\
+Budget overruns & 27 & 16 & 189 & 6 & 76 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{rccccccccccccc}
+\toprule
+\multicolumn{14}{@{}l}{\textbf{(b)} S1, CPU contention: background busy processes on 16 cores; network Full FrameLease (FQI)} \\
+\midrule
+Busy & \multicolumn{4}{c}{Q-network call ($\mu$s)} & \multicolumn{3}{c}{Shield + decision ($\mu$s)} & \multicolumn{3}{c}{Lease ($\mu$s)} & \multicolumn{3}{c}{Commit check ($\mu$s)} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-8}\cmidrule(lr){9-11}\cmidrule(lr){12-14}
+proc. & p50 & p99 & max & $> B_\pi$ (\%) & p50 & p99 & max & p50 & p99 & max & p50 & p99 & max \\
+\midrule
+0 & 7.6 & 10.9 & 46.5 & 0.00 & 13.7 & 28.8 & 79.8 & 559 & 1479 & 1969 & 65.5 & 82.8 & 150.7 \\
+4 & 7.7 & 9.9 & 14.4 & 0.00 & 14.2 & 50.0 & 99.5 & 559 & 1498 & 3205 & 65.5 & 89.8 & 180.4 \\
+8 & 16.5 & 19.6 & 31.8 & 0.00 & 24.4 & 52.3 & 68.8 & 1151 & 3157 & 3605 & 124.7 & 149.9 & 230.3 \\
+15 & 13.0 & 15.3 & 98.3 & 0.00 & 25.2 & 52.8 & 131.3 & 1043 & 2785 & 5836 & 111.3 & 141.8 & 514.2 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{llcccccccc}
+\toprule
+\multicolumn{10}{@{}l}{\textbf{(c)} S2, near deadline: synthetic decision states, slack swept in 10 ms steps} \\
+\midrule
+Grid & Network & States & \begin{tabular}[b]{@{}c@{}}Admitted \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Bound \\{} $\ge D^*$\end{tabular} & \begin{tabular}[b]{@{}c@{}}Bypass \\{} (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}Near \\{} deadline (\%)\end{tabular} & \begin{tabular}[b]{@{}c@{}}CPU \\{} timing (\%)\end{tabular} & Violations & \begin{tabular}[b]{@{}c@{}}Floor \\{} check\end{tabular} \\
+\midrule
+Registered & Full FrameLease (FQI) & 1944 & 0.6 & 0 & 0.25 & 0.25 & 0.00 & 0 & -- \\
+ & Contextual Bandit &  & 0.6 & 0 & 0.25 & 0.25 & 0.00 & 0 & -- \\
+ & FQI w/o lease features &  & 0.6 & 0 & 0.25 & 0.25 & 0.00 & 0 & -- \\
+Supplementary (A7) & Full FrameLease (FQI) & 1881 & 84.8 & 0 & 0.02 & 0.02 & 0.00 & 0 & yes \\
+ & Contextual Bandit &  & 84.8 & 0 & 0.02 & 0.02 & 0.00 & 0 & yes \\
+ & FQI w/o lease features &  & 84.8 & 0 & 0.02 & 0.02 & 0.00 & 0 & yes \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{lccccc}
+\toprule
+\multicolumn{6}{@{}l}{\textbf{(d)} S3, cancellation and regression: random event sequences against the commit gate} \\
+\midrule
+Target & Sequences & Offers & \begin{tabular}[b]{@{}c@{}}Accepted \\{} commits\end{tabular} & \begin{tabular}[b]{@{}c@{}}Eq. 9 \\{} violations\end{tabular} & \begin{tabular}[b]{@{}c@{}}Fault-class \\{} coverage\end{tabular} \\
+\midrule
+Commit gate & 100000 & 1722750 & 371199 & 0 & yes \\
+V4Runtime commit path & 100000 & 1722750 & 384788 & 0 & yes \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\parbox{\textwidth}{\footnotesize
+(a) Shield arms of Table I at $\kappa$ = 1.0 (44 test routes) and the Fig. 3 runs at $\kappa$ = 2.0 (subset E) as GPU contention (S4); per-run quantiles of the logged wall times, median over the runs of the condition; $B_\pi$ = 100 $\mu$s. Commit audit (Eq. 9): 1055 runs (P1, P1-0, P2, P4, P5, P6), 164214 accepted commits, 0 violating; S3: 0 violations; H5: contradicted. 
+Commit-gate rejects by reason (all conditions of (a)): expired\_before\_commit 12951. 
+S1: Q-network call = featurize, forward and read (QUtility timed region); shield + decision = ShieldedHeuristicPolicy.decide with the network on synthetic decision states; lease and commit check on c1\_sweep scenes. 
+S2: registered grid $D^* = t + s$, $s \in [-0.1, 0.6]$ s (Sec. 7.6); supplementary grid $D^* = t + f(\mathrm{state}) + \delta$ relative to each state's Eq. 5 slack floor (Amendment A7), reported in addition to the registered grid, never in its place. An admitted action whose bound reaches $D^*$ is a violation (must be 0); bypass = near-deadline part + CPU-timing part. Median slack floor: $\kappa$ 1.0 0.787 s; $\kappa$ 1.5 1.128 s; $\kappa$ 2.0 1.489 s. 
+S3: 100000 sequences per target with late, out-of-order and cancelled completions, duplicate releases, older observations after a newer commit and expired candidates; an independent oracle counts every Eq. 9 violation (must be 0). 
+--: no value.
+}
+\end{table*}

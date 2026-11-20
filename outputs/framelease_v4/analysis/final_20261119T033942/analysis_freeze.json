@@ -1,0 +1,3184 @@
+{
+ "analysis_code": {
+  "framelease_v4/analysis/aggregate_v4.py": "ee13c90b91bf44ad59d0a3c7e60bf93d65964785ed386d3e81c44fea0f5e4b96",
+  "framelease_v4/analysis/commit_audit.py": "7439a4eac0986cad6a25b7395975a0411b7483944a988d68dabb656bd2544ec7",
+  "framelease_v4/analysis/extra_metrics.py": "53050f6bed5aa48054d5217832fb84ed4089b3ae80e8fdcf965769af2af79c4c",
+  "framelease_v4/analysis/interim_guard.py": "5453a3573e7cca958cad1bc1c44d53995a11e034e251bba634fe09390efed9c7",
+  "framelease_v4/analysis/manipulation.py": "78f18dacf323832ef16684b0b81a2ba03b2ffb00186259780d1bafe7e656cbd0"
+ },
+ "cut_amendment": null,
+ "frozen": "2026-11-19T11:41:59+0800",
+ "job_files": {
+  "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl": "54e551df44f30a02277e91849f1e40390cd77ffca7e59256edc98b3f5cd4a6df",
+  "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl": "8ba8a4e5f6874860f9fefae81d836ccbdd297ac6a801a67663d6a5322507311b",
+  "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl": "6b906bc220d74fdf8fb5bfce287465e608fd378b22869af6d188ec411d37bd2a",
+  "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl": "a73491e47ab5cb3fcba868a0e5e6bf7f34c5ad6a09ea3fde8cd11d18ef623e31",
+  "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl": "bd77e5ed172bc834b63a4fa188cae97f92047f8072a45b92e738aad52cffd207",
+  "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl": "83fe874f000340d6ee15509c35c7829bd03a6612a75a181e82c0b26ab36a156b"
+ },
+ "jobs": {
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r14194": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261117T111450_587a3498"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T192018_f2025757"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T235938_f3c52f37"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r17563": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T194900_da460365"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r1773": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T080208_3eb4762f"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T083822_feea2626"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T120150_44d2fcde"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r1825": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T143624_ab769663"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261117T003513_e7f85fb5"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r1956": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261117T081332_e3b5005a"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T183151_342ac9ef"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2082": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T135640_a74f6892"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T161656_2a212258"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2115": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T174145_ac97dcdb"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T223000_d174a26b"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2144": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261117T103830_1f9bee12"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T182756_88781ff8"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2201": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T130315_0b32b5c9"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T171159_7b8850f5"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2273": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T112826_e2bce25c"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T214849_ae90082d"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r23658": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T132158_68593b9b"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261117T084302_1d5d6f42"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2373": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261117T095045_59859891"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r23771": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T204821_dd55a8b9"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T150441_c8c04b72"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T213026_80df54ec"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2416": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T195021_81340b7d"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T213155_cc93127f"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2534": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261117T013546_7e8e9f8d"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r26458": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T124805_0a5972df"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261117T092112_a1789112"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2709": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T220107_70f02ef7"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T130118_167bbfc7"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T230644_d15b5be3"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r28099": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T090653_daed7840"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r3086": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T172511_a8706209"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T191748_35947532"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r3364": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T180111_17387506"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T154918_7aa2a531"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r3464": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T205900_9bd3882d"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T201439_c127aa67"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r3561": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261115T221131_6501289c"
+  },
+  "v4p4_age_only_A1.0_d1_k1.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/age_only/runs/20261116T105145_055c1532"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r14194": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261117T111813_ff17029b"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T192434_eb91d25d"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261117T000323_5e911a1a"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r17563": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T195138_c7b46f3a"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r1773": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T080601_148973a5"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T084210_89d2d618"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T120536_f123f6c2"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r1825": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T145003_2d20c72f"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261117T003857_3a826bf8"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r1956": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261117T020839_3fd663f0"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T184623_249024e7"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2082": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T140613_331a0513"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T162726_9e5f50ad"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2115": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T174447_5b4e4245"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T223520_bc358de0"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2144": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261117T104230_543cb20e"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T183558_518237a0"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2201": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T130857_a0f9bc46"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T171551_985d165e"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2273": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T113116_a5110859"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T215127_050c66af"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r23658": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T132436_bdf7edfd"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261117T084546_7592fd51"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2373": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261117T095608_4436fe32"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r23771": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T205113_6af8c3dd"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T143134_9d739d50"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T211001_52850245"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2416": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T195246_73bdc8f5"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T213452_b0c7ec24"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2534": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261117T013844_d82869fa"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r26458": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T125008_404da8cd"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261117T092530_2969729b"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2709": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T220447_263ad493"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T130413_9bc30087"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T230919_968ee765"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r28099": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T090924_bd48254b"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r3086": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T165445_810a62ea"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T192212_be96ba76"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r3364": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T180426_ebd42bcc"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T160318_7b5924d2"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r3464": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T201940_fb0795f2"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T202046_7155b9ea"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r3561": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261115T221436_a82c1cfb"
+  },
+  "v4p4_event_triggered_s_hb2.0_k1.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/event_triggered/runs/20261116T093341_cbced6e6"
+  },
+  "v4p4_fast_only_k1.0_s11_r14194": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261117T111143_a5aed9ba"
+  },
+  "v4p4_fast_only_k1.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T190023_3e32b9ef"
+  },
+  "v4p4_fast_only_k1.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T234516_c4bba91c"
+  },
+  "v4p4_fast_only_k1.0_s11_r17563": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T201704_071c4342"
+  },
+  "v4p4_fast_only_k1.0_s11_r1773": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T075813_9a3f76dc"
+  },
+  "v4p4_fast_only_k1.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T083434_e18fba94"
+  },
+  "v4p4_fast_only_k1.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T115806_27602821"
+  },
+  "v4p4_fast_only_k1.0_s11_r1825": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T143244_00a6b910"
+  },
+  "v4p4_fast_only_k1.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261117T003100_0c344b31"
+  },
+  "v4p4_fast_only_k1.0_s11_r1956": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261117T075828_8cd459dd"
+  },
+  "v4p4_fast_only_k1.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T182853_39d1e9eb"
+  },
+  "v4p4_fast_only_k1.0_s11_r2082": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T133754_eeb817c1"
+  },
+  "v4p4_fast_only_k1.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T161316_045a57ff"
+  },
+  "v4p4_fast_only_k1.0_s11_r2115": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T173852_1fbde537"
+  },
+  "v4p4_fast_only_k1.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T222447_88c28bfd"
+  },
+  "v4p4_fast_only_k1.0_s11_r2144": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261117T103431_b2059b2d"
+  },
+  "v4p4_fast_only_k1.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T182453_e0b9c922"
+  },
+  "v4p4_fast_only_k1.0_s11_r2201": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T125004_3d2eb921"
+  },
+  "v4p4_fast_only_k1.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T170729_c573d98f"
+  },
+  "v4p4_fast_only_k1.0_s11_r2273": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T112547_ce888579"
+  },
+  "v4p4_fast_only_k1.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T214609_64d1dc21"
+  },
+  "v4p4_fast_only_k1.0_s11_r23658": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T142558_6c61868f"
+  },
+  "v4p4_fast_only_k1.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261117T084016_49d5f9a2"
+  },
+  "v4p4_fast_only_k1.0_s11_r2373": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261117T094519_21445136"
+  },
+  "v4p4_fast_only_k1.0_s11_r23771": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T210718_fa317761"
+  },
+  "v4p4_fast_only_k1.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T150201_d21a2888"
+  },
+  "v4p4_fast_only_k1.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T212714_a327b3d6"
+  },
+  "v4p4_fast_only_k1.0_s11_r2416": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T194755_6982650e"
+  },
+  "v4p4_fast_only_k1.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T212854_09b014ec"
+  },
+  "v4p4_fast_only_k1.0_s11_r2534": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261117T020545_59a98fea"
+  },
+  "v4p4_fast_only_k1.0_s11_r26458": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T124601_183ffe35"
+  },
+  "v4p4_fast_only_k1.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261117T091735_d64524d6"
+  },
+  "v4p4_fast_only_k1.0_s11_r2709": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T215737_cec3aa4d"
+  },
+  "v4p4_fast_only_k1.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T125813_48ade7cc"
+  },
+  "v4p4_fast_only_k1.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T230402_0e23eb6a"
+  },
+  "v4p4_fast_only_k1.0_s11_r28099": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T093059_5b77317c"
+  },
+  "v4p4_fast_only_k1.0_s11_r3086": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T172214_5aed1867"
+  },
+  "v4p4_fast_only_k1.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T191352_43542123"
+  },
+  "v4p4_fast_only_k1.0_s11_r3364": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T175810_63cebbf2"
+  },
+  "v4p4_fast_only_k1.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T165103_8d0f78f1"
+  },
+  "v4p4_fast_only_k1.0_s11_r3464": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T205528_6ed33025"
+  },
+  "v4p4_fast_only_k1.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T200308_75d4d7c1"
+  },
+  "v4p4_fast_only_k1.0_s11_r3561": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261115T220830_b4dfb6df"
+  },
+  "v4p4_fast_only_k1.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fast_only/runs/20261116T103402_7903de96"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r14194": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261117T113926_0ea21c13"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T185251_5957b23a"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T233751_474383b1"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r17563": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T201426_9157cb33"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r1773": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T075423_a97857e7"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T090110_a74bf57e"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T115250_5a09471a"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r1825": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T153607_9c7fa641"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261117T012059_f40dc278"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r1956": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261117T075129_dd49360e"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T181409_a52f1ce4"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2082": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T133437_f0689088"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T160810_8caefde4"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2115": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T173603_9c9e8e20"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T222144_8e498892"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2144": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261117T102647_4861a292"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T182155_4e928425"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2201": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T124436_498b65fc"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T165449_da0da734"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2273": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T111747_6dc17c81"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T214329_67c5ddfd"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r23658": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T142015_0aac0bbc"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261117T083726_47d53139"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2373": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261117T093945_629f1524"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r23771": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T210432_b1baf526"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T145927_ab2b6b1f"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T212404_3ba911a1"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2416": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T194533_57b8ffe5"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T212548_8112c7b9"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2534": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261117T020232_8182f4eb"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r26458": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T124401_1420213f"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261117T091351_5b5d11e8"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2709": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T215201_110840c1"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T131910_0b845832"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T225331_647a045e"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r28099": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T092830_0e1f19b3"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r3086": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T171900_c5425221"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T194213_e1f87751"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r3364": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T175519_4ac09e6a"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T164727_e7a8aa7d"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r3464": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T205139_cd005ee8"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T204427_a6de4a47"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r3561": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261115T220533_a54636e9"
+  },
+  "v4p4_fixed_deep_k1.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fixed_deep/runs/20261116T103001_d13e81dd"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r14194": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261117T113256_953f0815"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T184840_5d24616f"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261117T002325_9542a6b4"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T201138_7f246ed2"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r1773": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T083031_fbdf5f41"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T085706_fb575bcb"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T114643_01f9891c"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r1825": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T152212_a324cf11"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261117T010619_376226c2"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r1956": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261117T073638_ecbbb9f3"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T191028_d3b8b256"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2082": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T142545_a58409eb"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T154919_6c923082"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2115": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T173301_96bef320"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T221535_df9e7260"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2144": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261117T110741_417da10f"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T181522_b7144065"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2201": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T122917_b6f101de"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T165107_9a7b65a6"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2273": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T111511_c9d341b4"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T214051_d46c0d96"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r23658": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T141722_d4f37591"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261117T083430_6c7f2d0e"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2373": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261117T093414_5df52ee7"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r23771": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T210145_6c2438fb"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T145240_9ecba3fa"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T212047_894dfa6a"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2416": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T200023_facb5836"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T212237_2885fe1a"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2534": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261117T015850_0500bdfa"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r26458": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T125618_e2224954"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261117T090112_98add566"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2709": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T214821_b6961ab9"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T131614_0775b342"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T225046_a281f59e"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r28099": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T092545_3943b505"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r3086": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T171149_227a6971"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T193639_9b2941aa"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r3364": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T175219_1b3e28d5"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T163425_b70507d6"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r3464": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T204007_7cc9ade8"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T203615_cc932b5b"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r3561": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261115T220235_12298dc9"
+  },
+  "v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_full/runs/20261116T101152_bef397e5"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r14194": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261117T112950_8d943bb3"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T194023_6ca32d36"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261117T001701_d5fb7798"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r17563": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T200834_3acec2b3"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r1773": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T082610_3c42bb7f"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T085224_45624bca"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T114128_c794642e"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r1825": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T150834_7bbbf0bf"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261117T005210_0c5aab12"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r1956": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261117T072132_690ecc96"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T190459_f0fc3e9a"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2082": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T141701_c1ad8a09"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T153010_683e2b9f"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2115": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T180105_0855c6b6"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T220857_936ec289"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2144": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261117T105946_83475ab7"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T180725_9c964d26"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2201": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T132825_0e9bef18"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T164634_83ca525c"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2273": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T111233_b8545127"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T213801_19329021"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r23658": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T141423_524ac959"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261117T083142_7a691a66"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2373": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261117T102122_c3814635"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r23771": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T205900_8839e7ed"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T144858_0a7d3c70"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T211733_b537d0c0"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2416": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T195749_4d5721c5"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T211521_e02c656a"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2534": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261117T015513_965047e9"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r26458": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T125414_85d31ccd"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261117T084836_171bd956"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2709": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T214018_ed8c9b7f"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T131310_98324b42"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T232531_979b636c"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r28099": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T092313_0bc6ec39"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r3086": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T170342_9f04b164"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T193118_e00de0ba"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r3364": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T174902_858b573e"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T162059_5d23d35c"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r3464": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T202829_daf23616"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T203000_9b83df4f"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r3561": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261115T222246_8f159f31"
+  },
+  "v4p4_fl_heuristic_B0_d1_k1.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_heuristic/runs/20261116T095355_657eefd8"
+  },
+  "v4p4_fl_original_k1.0_s11_r14194": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261117T112125_5fda92dc"
+  },
+  "v4p4_fl_original_k1.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T193323_a744863f"
+  },
+  "v4p4_fl_original_k1.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261117T001021_44b07b4a"
+  },
+  "v4p4_fl_original_k1.0_s11_r17563": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T195434_6b5b195c"
+  },
+  "v4p4_fl_original_k1.0_s11_r1773": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T080937_2b0c51e6"
+  },
+  "v4p4_fl_original_k1.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T084548_6b8c462e"
+  },
+  "v4p4_fl_original_k1.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T121049_b51537af"
+  },
+  "v4p4_fl_original_k1.0_s11_r1825": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T150306_6e877951"
+  },
+  "v4p4_fl_original_k1.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261117T004638_d55031d1"
+  },
+  "v4p4_fl_original_k1.0_s11_r1956": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261117T070630_8c7eabf3"
+  },
+  "v4p4_fl_original_k1.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T184924_1d0a17b5"
+  },
+  "v4p4_fl_original_k1.0_s11_r2082": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T140947_94db1b06"
+  },
+  "v4p4_fl_original_k1.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T151101_e96e37d2"
+  },
+  "v4p4_fl_original_k1.0_s11_r2115": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T174755_8c6aa492"
+  },
+  "v4p4_fl_original_k1.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T223827_38657715"
+  },
+  "v4p4_fl_original_k1.0_s11_r2144": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261117T105203_10a193d9"
+  },
+  "v4p4_fl_original_k1.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T183905_bc87ec19"
+  },
+  "v4p4_fl_original_k1.0_s11_r2201": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T132303_617d06ac"
+  },
+  "v4p4_fl_original_k1.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T171945_cbfcc6d1"
+  },
+  "v4p4_fl_original_k1.0_s11_r2273": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T110954_55602d1a"
+  },
+  "v4p4_fl_original_k1.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T215405_0a9fe550"
+  },
+  "v4p4_fl_original_k1.0_s11_r23658": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "sim_failure",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T135050_fcc4d44b"
+  },
+  "v4p4_fl_original_k1.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261117T082848_814be8c1"
+  },
+  "v4p4_fl_original_k1.0_s11_r2373": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261117T100928_d58757a7"
+  },
+  "v4p4_fl_original_k1.0_s11_r23771": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T205400_ff6fba02"
+  },
+  "v4p4_fl_original_k1.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T143706_a7acc0c9"
+  },
+  "v4p4_fl_original_k1.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T211312_0644e33d"
+  },
+  "v4p4_fl_original_k1.0_s11_r2416": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T195508_c81c01ce"
+  },
+  "v4p4_fl_original_k1.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T210233_95021728"
+  },
+  "v4p4_fl_original_k1.0_s11_r2534": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261117T014216_a717de0d"
+  },
+  "v4p4_fl_original_k1.0_s11_r26458": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T125208_c81b620b"
+  },
+  "v4p4_fl_original_k1.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261117T092912_bc07e383"
+  },
+  "v4p4_fl_original_k1.0_s11_r2709": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T213339_0bf7ed1e"
+  },
+  "v4p4_fl_original_k1.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T130706_e18fc27f"
+  },
+  "v4p4_fl_original_k1.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T231332_10a55c97"
+  },
+  "v4p4_fl_original_k1.0_s11_r28099": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T091153_f5991bfd"
+  },
+  "v4p4_fl_original_k1.0_s11_r3086": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T165802_dd28d864"
+  },
+  "v4p4_fl_original_k1.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T192601_dd03b437"
+  },
+  "v4p4_fl_original_k1.0_s11_r3364": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T173657_5d31bcec"
+  },
+  "v4p4_fl_original_k1.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T160708_a0473ee3"
+  },
+  "v4p4_fl_original_k1.0_s11_r3464": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T202332_a183ff6c"
+  },
+  "v4p4_fl_original_k1.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T202436_5150166f"
+  },
+  "v4p4_fl_original_k1.0_s11_r3561": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261115T221752_d3c04492"
+  },
+  "v4p4_fl_original_k1.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b11_ti_main.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/matrix/fl_original/runs/20261116T093715_a3dc34fa"
+  },
+  "v4p5_fast_only_k1.5_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261118T001015_e1920f48"
+  },
+  "v4p5_fast_only_k1.5_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T220443_5a7f9b0e"
+  },
+  "v4p5_fast_only_k1.5_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261118T104018_d6546e58"
+  },
+  "v4p5_fast_only_k1.5_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261118T005152_4b49e8d8"
+  },
+  "v4p5_fast_only_k1.5_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T211421_9ce59655"
+  },
+  "v4p5_fast_only_k1.5_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T173533_ca80ce79"
+  },
+  "v4p5_fast_only_k1.5_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T145026_80140b79"
+  },
+  "v4p5_fast_only_k1.5_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T165653_708bb052"
+  },
+  "v4p5_fast_only_k1.5_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T194828_f0f69593"
+  },
+  "v4p5_fast_only_k1.5_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261118T023357_62d0d959"
+  },
+  "v4p5_fast_only_k1.5_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T153201_93ce4d98"
+  },
+  "v4p5_fast_only_k1.5_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T184520_830edeeb"
+  },
+  "v4p5_fast_only_k1.5_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261115T231511_842aa484"
+  },
+  "v4p5_fast_only_k1.5_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T114903_cdcfa634"
+  },
+  "v4p5_fast_only_k1.5_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T181957_f460048a"
+  },
+  "v4p5_fast_only_k1.5_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T132459_a0ee7c16"
+  },
+  "v4p5_fast_only_k1.5_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261118T012259_278e2762"
+  },
+  "v4p5_fast_only_k1.5_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T232115_4618edad"
+  },
+  "v4p5_fast_only_k1.5_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261115T224138_7d07bba6"
+  },
+  "v4p5_fast_only_k1.5_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T161540_fc2a9777"
+  },
+  "v4p5_fast_only_k1.5_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261117T224201_cd8113d4"
+  },
+  "v4p5_fast_only_k1.5_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k1.5/runs/20261118T094717_c8292f65"
+  },
+  "v4p5_fast_only_k2.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261118T001825_40e82375"
+  },
+  "v4p5_fast_only_k2.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T221149_67f27ce6"
+  },
+  "v4p5_fast_only_k2.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261118T104354_1ade0642"
+  },
+  "v4p5_fast_only_k2.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261118T005622_164aa2e0"
+  },
+  "v4p5_fast_only_k2.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T212731_fc452790"
+  },
+  "v4p5_fast_only_k2.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T173823_53700832"
+  },
+  "v4p5_fast_only_k2.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T150705_939f7e37"
+  },
+  "v4p5_fast_only_k2.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T170129_c8065875"
+  },
+  "v4p5_fast_only_k2.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T190624_295bdf77"
+  },
+  "v4p5_fast_only_k2.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261118T014529_458cdeb5"
+  },
+  "v4p5_fast_only_k2.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T153434_a8dceda1"
+  },
+  "v4p5_fast_only_k2.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T184756_70c89a93"
+  },
+  "v4p5_fast_only_k2.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261115T232016_3f9d0d61"
+  },
+  "v4p5_fast_only_k2.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T115159_092d7149"
+  },
+  "v4p5_fast_only_k2.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T182251_c7083d14"
+  },
+  "v4p5_fast_only_k2.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T121045_05ae5e32"
+  },
+  "v4p5_fast_only_k2.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261118T012545_3428c727"
+  },
+  "v4p5_fast_only_k2.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T232343_21ea9851"
+  },
+  "v4p5_fast_only_k2.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261115T225313_95324c01"
+  },
+  "v4p5_fast_only_k2.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T162715_3e8ed89b"
+  },
+  "v4p5_fast_only_k2.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261117T224537_7dac5e2a"
+  },
+  "v4p5_fast_only_k2.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fast_only_k2.0/runs/20261118T100218_bf5f1d0b"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T235656_f076168a"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T215116_4236005e"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261118T103400_de9fff6f"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261118T011902_4c25a08e"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T204737_68626a12"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T172001_8fe0bf7e"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T143329_0c7d8b5b"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T164849_cca225df"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T193510_e6810d2c"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261118T022225_47d33a4f"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T152657_8a78d13f"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T190108_9224f75d"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261115T234125_2d56fd9e"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T120753_0bff741a"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T184230_2ff50049"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T130303_4f2913a4"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261118T013957_ce1e60b7"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T231219_5c6feb9b"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261115T222558_b6102cd4"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T160121_1f821396"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261117T223526_476ea26e"
+  },
+  "v4p5_fixed_deep_k1.5_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k1.5/runs/20261118T033742_a24c2ed9"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261118T000633_451e152a"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T215431_da27afc2"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261118T103715_ac121092"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261118T004834_d3c16b44"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T210123_d8e05f84"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T172255_1015507b"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T144616_ffd74344"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T165213_68c24c30"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T194252_60ec8d42"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261118T022610_9c8d3087"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T152929_99347a08"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T190352_89ea5a6c"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261115T234339_328bd2cd"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T114556_465b3e64"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T181715_4963699b"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T131440_e0787e1f"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261118T014239_1b476bae"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T231605_821370a1"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261115T223138_86b2e377"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T160523_87350119"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261117T223850_6d378b22"
+  },
+  "v4p5_fixed_deep_k2.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fixed_deep_k2.0/runs/20261118T035301_a165a6b3"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261118T003704_d4783b4e"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T213647_e22d8e63"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261118T101655_7a2da417"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261118T010856_5f9f8096"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T202313_d692d47a"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T175640_2ee971f0"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T140028_b3d78161"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T171421_65b8567d"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T192402_519f9dda"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261118T020540_df9688ae"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T152141_9f10b027"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T185554_974bb399"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261115T233336_8df29282"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T120101_9fb231f0"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T183611_36be8bcf"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T124209_9a397c08"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261118T013425_7e9aa4c6"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T234631_6804ccfd"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261115T230604_c4b1d413"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T153946_208c8e90"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261117T222758_defa269c"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k1.5/runs/20261118T030834_e3684fc2"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261118T004435_67398019"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T214552_3af97b46"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261118T102049_f356aa33"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261118T011358_f0923263"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T203550_65b83481"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T180516_9474102d"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T141803_99aea178"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T164546_710cd233"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T192949_73739d90"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261118T021732_4defc521"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T152413_3977006b"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T185836_2cceaa12"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261115T233645_93ac67d2"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T120401_fdd3e117"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T183907_c2ad0d73"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T125256_4833dabc"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261118T013713_dcff4306"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T230312_39acaf93"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261115T231049_691e3a28"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T155118_b41ab9b7"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261117T223156_db8f3c8e"
+  },
+  "v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_full_k2.0/runs/20261118T032316_e5b50974"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261118T002149_4cea05c1"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T222200_ed13153c"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261118T104741_f1fef00d"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261118T010046_55b47ee8"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T200004_7dc64b21"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T175022_616caa29"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T132824_2dc92a2b"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T170422_6e5bd972"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T191529_b2630638"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261118T015604_5e9d1fad"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T153706_64e5563d"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T185042_2631132d"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261115T232559_817e1be0"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T115449_25268477"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T182540_6c24fd13"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T122113_670bf39e"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261118T012826_698f9475"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T232721_b2240eb6"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261115T225647_e5dc5c72"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T163045_94f7501e"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261117T224937_c6b57c92"
+  },
+  "v4p5_fl_heuristic_B0_d1_k1.5_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k1.5/runs/20261118T023836_29489ec6"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261118T002912_0aad8ce5"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T213123_bb3d51eb"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261118T101233_e09a2ca5"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261118T010414_6be495fd"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T201232_4730a9c1"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T175334_5e200c32"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T134434_5e68a196"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T170927_4d521c55"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T191826_fd452ae4"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261118T020152_e255ca4c"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T151857_846dc146"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T185318_e280f378"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261115T232849_b10bf45d"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T115801_64dc3d93"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T183309_ace5c84c"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T123206_b65d61f5"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261118T013108_80670990"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T233728_ebb02f5d"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261115T230131_23a30085"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T164140_38377634"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261117T225318_0534aff5"
+  },
+  "v4p5_fl_heuristic_B0_d1_k2.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b12_f3_k.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/fig3/fl_heuristic_k2.0/runs/20261118T025400_fbba66e3"
+  },
+  "v4p6_fast_only_k1.0_s12_r14194": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T185437_00241401"
+  },
+  "v4p6_fast_only_k1.0_s12_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T223540_80b11ed1"
+  },
+  "v4p6_fast_only_k1.0_s12_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T193547_38b23fdd"
+  },
+  "v4p6_fast_only_k1.0_s12_r1825": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T205010_318d1846"
+  },
+  "v4p6_fast_only_k1.0_s12_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261116T002438_3cc1d042"
+  },
+  "v4p6_fast_only_k1.0_s12_r2115": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T214926_1ec840e8"
+  },
+  "v4p6_fast_only_k1.0_s12_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T182236_5831652d"
+  },
+  "v4p6_fast_only_k1.0_s12_r2273": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T222801_b78e8c27"
+  },
+  "v4p6_fast_only_k1.0_s12_r23771": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T232555_6670e223"
+  },
+  "v4p6_fast_only_k1.0_s12_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T211441_463cf380"
+  },
+  "v4p6_fast_only_k1.0_s12_r2534": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T221914_8da692bb"
+  },
+  "v4p6_fast_only_k1.0_s12_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T220954_0b1051ea"
+  },
+  "v4p6_fast_only_k1.0_s12_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T212339_2eaef0fe"
+  },
+  "v4p6_fast_only_k1.0_s12_r3364": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T191618_64f027d5"
+  },
+  "v4p6_fast_only_k1.0_s12_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fast_only/runs/20261118T190521_145ca0b9"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r14194": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T184812_a2509504"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T230954_21db1b86"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T200446_0cc0b8a5"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r1825": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T203659_3589978f"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261116T004808_6284bfce"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r2115": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T215802_999dc016"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T181928_9609c82b"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r2273": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T222531_01d118b5"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r23771": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T232316_3caa4e5c"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T210915_218ffe78"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r2534": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T221615_413f0a15"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T220704_498b71e1"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T212106_9b7f1b37"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r3364": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T191330_cdf8de9d"
+  },
+  "v4p6_fixed_deep_k1.0_s12_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fixed_deep/runs/20261118T190146_64c15281"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T132913_3d0462ac"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T175632_a919a91a"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T131134_909ad552"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T174946_82e165e2"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T134725_86a8dc92"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T151724_0a3bcac7"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T170816_902f311f"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T181624_14677eac"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T154627_e13dd61e"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T155852_a23a6769"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T150225_5cd08626"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T151438_f3f3caa6"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T154037_066d902b"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T150505_2ee3cdfd"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261116T001304_06a30fd2"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T143504_8850056f"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T160521_7567d7cf"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T163452_f50d5438"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261116T000159_d02eb26e"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T165956_e6117607"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T164612_1d1614ad"
+  },
+  "v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_bandit/runs/20261118T141810_f3edc541"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T132429_03abe7c2"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T180424_b4aaf90d"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T131518_d7ce0e18"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T174449_9399cf6a"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T133319_260f78a1"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T153124_d5002bd7"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T172637_24174540"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T181039_b306be95"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T154921_97ccabae"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T155521_ebbcf077"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T145949_2e9f359d"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T151152_a1ed3d9f"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T153511_14d669ea"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T150816_0e33a1e0"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261116T001621_588b10bb"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T144708_97f11150"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T162031_e36fcb26"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T162321_b3460615"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261116T000714_4e103808"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T165636_20335dc9"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T165234_4ff42810"
+  },
+  "v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b14_a_rl.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_fqi_nolease/runs/20261118T140121_7611a842"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r14194": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T184436_23dbbc9d"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T225704_aea946ca"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T195745_3ca7f3ed"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r1825": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T202410_70dd111c"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261116T003303_bc4f251d"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r2115": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T215514_85041c6d"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T182828_3b59ed0f"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r2273": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T223310_49c25c0f"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r23771": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T232036_5a51fee8"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T210322_709d1e2f"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r2534": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T221244_7fdd32d2"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T220353_0ee2f764"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T213755_57479d86"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r3364": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T193226_13469343"
+  },
+  "v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_full/runs/20261118T185744_d0a8aadd"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T111709_05195b2c"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T115204_d35e2b80"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T130740_df1c3fd1"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T114404_e2b6b4df"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T123442_81c68d35"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261115T234854_a7817660"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T105252_a7b42654"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T125314_5a1a339b"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T122845_bfb1db46"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261115T235205_65238bcc"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261115T235914_e0f13599"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T111423_1c7ff5f6"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T113817_89bfd91b"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T130433_e16bb17c"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T114853_ab3e85e6"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T121607_c54c7305"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T123152_dd68ed79"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T124858_8db881dc"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T110912_4564e2ee"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T112523_98b3a04a"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T130021_d8fa10b5"
+  },
+  "v4p6_fl_global_shield_B0_d1_k1.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b13_a_lease.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_global_shield/runs/20261118T115909_134a9610"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r14194": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T183521_b5c21c9a"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T225046_05294d32"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T194229_3657b4ec"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r1825": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T201125_b3a22956"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261116T002751_00194945"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r2115": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T215214_93e073cb"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T182523_2fed2688"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r2273": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T223037_3f4ee07b"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r23771": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T231740_9f51adb7"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T211715_2fe292c4"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r2534": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T222214_29e7aa20"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T220102_bf587e54"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T212611_94aa3127"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r3364": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T192939_4641da63"
+  },
+  "v4p6_fl_heuristic_B0_d1_k1.0_s12_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b15_s_seed12.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/replicates/fl_heuristic/runs/20261118T190915_24a00a77"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r14842": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261118T235118_4d9e63f5"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r1711": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261118T232833_5fb1d852"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r17752": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T001346_0a429bfc"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r1790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T021229_8de89687"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r1852": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T020659_2a6a5d17"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r2050": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T002051_8917e06e"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r2084": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T005125_593b23ae"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r2127": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T003603_4c6c2e7c"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r2164": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T004109_58467480"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r2204": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T012923_05b04214"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r2286": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261116T010353_380e21e8"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r23695": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T004839_a8c6c86a"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r2390": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T015456_360b10ef"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r23901": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T010829_b91b831d"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r2509": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T014217_f410b3c3"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r2664": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261118T234611_2aba7110"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r2790": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261118T235800_28f971d1"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r28087": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261118T233427_d81dadb2"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r3248": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261116T010713_d3a1b089"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r3436": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T022340_d15add9b"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r3540": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T022846_6538f629"
+  },
+  "v4p6_fl_risk_E5_d1_k1.0_s11_r3936": {
+   "job_file": "outputs/framelease_v4/queue_p4/jobs.d/b16_s_risk.jsonl",
+   "outcome": "ok",
+   "run_dir": "outputs/framelease_v4/ablation/fl_risk/runs/20261119T011337_abdfbdd9"
+  }
+ },
+ "route_split_sha256": "555f6869cb62d89082efc0fefc8f125ee133b16fd36a6fcf9f68bb1269fa527e",
+ "schema": "framelease_v4.analysis_freeze/1",
+ "trigger": "all_final"
+}

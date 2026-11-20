@@ -1,0 +1,310 @@
+target,key,field,their_field,ours,theirs,abs_diff,tolerance,status,cause,below_grid,scope,value_source,note
+runs.csv,v4p4_fl_original_k1.0_s11_r26458,gpu_usage,gpu_usage_recomputed,0.9730520209472822,0.9661809309936548,0.006871089953627396,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r26458,gpu_busy_s,gpu_busy_recomputed_s,15.909400779556606,15.797058456420906,0.11234232313569947,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r26458,commits,commits,206,201,5.0,0,differ,,,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2790,gpu_usage,gpu_usage_recomputed,0.9924715808774324,0.991148608300308,0.0013229725771243261,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2790,gpu_busy_s,gpu_busy_recomputed_s,16.276534168929146,16.254837417602538,0.02169675132660842,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,gpu_usage,gpu_usage,0.9930733887312904,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,gpu_usage,gpu_usage_recomputed,0.9930733887312904,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,gpu_busy_s,gpu_busy_recomputed_s,58.49202346787206,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,gpu_busy_s,gpu_busy_in_span_s,58.49202346787206,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,cuda_s_per_s,cuda_s_per_s,0.9930733887312904,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,sim_span_s,sim_span_s,58.900000877678394,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,ticks,ticks,1178,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,first_tick_s,first_tick_s,0.05000000074505806,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,last_tick_s,last_tick_s,58.900000877678394,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,dmr,dmr,0.9666381522668948,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,dmr,deadline_miss_ratio_after_first_commit,0.9666381522668948,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,ticks_after_first_commit,ticks_after_first_commit,1169,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,ticks_after_first_commit,dmr_ticks,1169,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,dmr_all_ticks,deadline_miss_ratio,0.966893039049236,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,expired_ratio_after_first_commit,expired_ratio_after_first_commit,0.9666381522668948,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,expired_ratio_all_ticks,expired_ratio,0.9592529711375212,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,first_commit_s,first_commit_s,0.485010924246395,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,fallback_ticks,fallback_ticks,1139,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,fallback_episodes,fallback_episodes,3,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,fallback_by_reason,fallback_by_reason,"{""expired"": 1130, ""no_plan"": 9}",,,,differ,,,record,raw,row not used by the analysis (analysis_use false); mapping differs
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,track_ticks,track_ticks,39,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,action_age_p50_s,action_age_p50_s,1.0000000149011612,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,action_age_p95_s,action_age_p95_s,1.855000027641654,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,action_age_mean_s,action_age_mean_s,1.0820512981751027,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,shield_epochs,shield_epochs,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,choice_epochs,choice_epochs,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,decision_rows,decision_epochs,141,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,commits,commits,11,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,max_age_s,max_age_s,2.0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,committed_plans,committed_plans,11,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,conflict_plans,realized_conflict_plans,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,misses,realized_misses,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,v0_plans,realized_v0_plans,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,eir_invalid_ticks,realized_invalid_ticks,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,eir,realized_invalid_tick_ratio,0.0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,log_censored_plans,realized_log_censored_plans,0,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); theirs empty
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,validity_available,realized_available,True,,,,differ,,,record,raw,row not used by the analysis (analysis_use false)
+runs.csv,v4p4_fl_original_k1.0_s11_r23658,fallback_ratio,deadline_miss_ratio,0.966893039049236,,,,differ,,,record,raw,row not used by the analysis (analysis_use false); column the analysis reads as fallback_ratio; theirs empty
+runs.csv,v4p4_fixed_deep_k1.0_s11_r23658,gpu_usage,gpu_usage_recomputed,0.9973791224683151,0.995377359027768,0.002001763440547033,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r23658,gpu_busy_s,gpu_busy_recomputed_s,73.80605616245124,73.65792566490182,0.14813049754941687,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2390,gpu_usage,gpu_usage_recomputed,0.9907878894442546,0.9902049382417222,0.000582951202532378,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2390,gpu_busy_s,gpu_busy_recomputed_s,67.1258805101018,67.08638556480395,0.039494945297846584,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2390,commits,commits,990,989,1.0,0,differ,,,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2390,gpu_usage,gpu_usage_recomputed,0.993672947667791,0.9930537888656504,0.0006191588021405847,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2390,gpu_busy_s,gpu_busy_recomputed_s,33.58614613164391,33.565218563079824,0.020927568564083288,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2390,gpu_usage,gpu_usage_recomputed,0.9945592705344005,0.9883951788951579,0.006164091639242586,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2390,gpu_busy_s,gpu_busy_recomputed_s,13.177910530946972,13.096236314773558,0.08167421617341475,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2084,gpu_usage,gpu_usage_recomputed,0.9940812360350864,0.9939648154193725,0.00011642061571381923,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2084,gpu_busy_s,gpu_busy_recomputed_s,198.8162501696102,198.79296604537996,0.023284124230258385,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fast_only_k1.0_s11_r2084,gpu_usage,gpu_usage_recomputed,0.9975744767070424,0.9966878953024405,0.0008865814046018494,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fast_only_k1.0_s11_r2084,gpu_busy_s,gpu_busy_recomputed_s,25.338392085930334,25.315872917175298,0.02251916875503568,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2204,gpu_usage,gpu_usage_recomputed,0.9937796635306401,0.99325713993206,0.0005225235985800714,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2204,gpu_busy_s,gpu_busy_recomputed_s,47.65173557636037,47.62668056869507,0.025055007665301332,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2204,gpu_usage,gpu_usage_recomputed,0.997669791620796,0.9975586649580398,0.00011112666275625571,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2204,gpu_busy_s,gpu_busy_recomputed_s,199.5339612974469,199.51173596382122,0.02222533362566992,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r2204,gpu_usage,gpu_usage_recomputed,0.9906359036826244,0.9905301273983348,0.00010577628428964925,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r2204,gpu_busy_s,gpu_busy_recomputed_s,198.12718368884995,198.10602843093878,0.02115525791117534,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2115,gpu_usage,gpu_usage_recomputed,0.9945372426953609,0.99443171232785,0.00010553036751093092,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2115,gpu_busy_s,gpu_busy_recomputed_s,198.90745150302413,198.88634542846654,0.0211060745575935,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2050,gpu_usage,gpu_usage_recomputed,0.9978454497636733,0.9974349007215266,0.00041054904214665733,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2050,gpu_busy_s,gpu_busy_recomputed_s,199.56909292654584,199.48698311614984,0.08210981039599119,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2050,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p4_fl_original_k1.0_s11_r2050,gpu_usage,gpu_usage_recomputed,0.9883212580307078,0.9881919320424658,0.0001293259882420017,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r2050,gpu_busy_s,gpu_busy_recomputed_s,197.66425455156843,197.63838935279836,0.025865198770077313,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2050,log_censored_plans,realized_log_censored_plans,5,6,1.0,0,differ,F1,,record,raw,equal to the value 6 under F1
+runs.csv,v4p4_age_only_A1.0_d1_k1.0_s11_r3248,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p4_fixed_deep_k1.0_s11_r3248,gpu_usage,gpu_usage_recomputed,0.9975267479825278,0.9953896996322914,0.0021370483502364257,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r3248,gpu_busy_s,gpu_busy_recomputed_s,90.4756773902079,90.28184710121154,0.19383028899636656,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r17563,gpu_usage,gpu_usage_recomputed,0.9934087047413143,0.9932986868034241,0.00011001793789011671,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r17563,gpu_busy_s,gpu_busy_recomputed_s,198.6817439088515,198.65974032020554,0.022003588645958416,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,conflict_plans,realized_conflict_plans,13,12,1.0,0,differ,F1,,record,raw,equal to the value 12 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,misses,realized_misses,12,11,1.0,0,differ,F1,,record,raw,equal to the value 11 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,r_cond,realized_r_cond,0.9230769230769231,0.9166666666666666,0.0064102564102564985,1e-06,differ,F1,False,analysis,raw,equal to the value 0.916666667 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,r_cond_excl_v0,realized_r_cond_excl_v0,0.9230769230769231,0.9166666666666666,0.0064102564102564985,1e-06,differ,F1,False,record,raw,equal to the value 0.916666667 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,eir_invalid_ticks,realized_invalid_ticks,35,24,11.0,0,differ,F1,,record,raw,equal to the value 24 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,eir,realized_invalid_tick_ratio,0.10606060606060606,0.07272727272727272,0.03333333333333334,1e-06,differ,F1,False,analysis,raw,equal to the value 0.0727272727 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r17563,log_censored_plans,realized_log_censored_plans,1,2,1.0,0,differ,F1,,record,raw,equal to the value 2 under F1
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r3464,gpu_usage,gpu_usage_recomputed,0.9458356892846257,0.945358125109829,0.00047756417479671853,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r3464,gpu_busy_s,gpu_busy_recomputed_s,38.30634598683637,38.28700463676454,0.01934135007182647,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r3464,log_censored_plans,realized_log_censored_plans,22,23,1.0,0,differ,F1,,record,raw,equal to the value 23 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r3464,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p4_fixed_deep_k1.0_s11_r3561,gpu_usage,gpu_usage_recomputed,0.9965805217313388,0.989983946006308,0.006596575725030807,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r3561,gpu_busy_s,gpu_busy_recomputed_s,23.618958716982636,23.46261986923218,0.1563388477504546,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r3561,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p4_age_only_A1.0_d1_k1.0_s11_r1773,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p4_fast_only_k1.0_s11_r17752,gpu_usage,gpu_usage_recomputed,0.9977913203362518,0.9968891261986275,0.0009021941376243792,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fast_only_k1.0_s11_r17752,gpu_busy_s,gpu_busy_recomputed_s,26.64102864996018,26.616940065383922,0.0240885845762584,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r17752,gpu_usage,gpu_usage_recomputed,0.9934978162970641,0.9929040135778489,0.0005938027192152751,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r17752,gpu_busy_s,gpu_busy_recomputed_s,39.64056346094328,39.616870731353764,0.02369272958951285,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fast_only_k1.0_s11_r28099,log_censored_plans,realized_log_censored_plans,1,2,1.0,0,differ,F1,,record,raw,equal to the value 2 under F1
+runs.csv,v4p4_fl_original_k1.0_s11_r2273,gpu_usage,gpu_usage_recomputed,0.9738702992784176,0.9701367587844235,0.003733540493994103,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r2273,gpu_busy_s,gpu_busy_recomputed_s,18.113987836498016,18.044543981552124,0.06944385494589156,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r2273,commits,commits,263,261,2.0,0,differ,,,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r2273,log_censored_plans,realized_log_censored_plans,30,40,10.0,0,differ,F1,,record,raw,equal to the value 40 under F1
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2273,log_censored_plans,realized_log_censored_plans,5,6,1.0,0,differ,F1,,record,raw,equal to the value 6 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2273,gpu_usage,gpu_usage_recomputed,0.9844368112840154,0.9800744223841271,0.00436238889988827,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2273,gpu_busy_s,gpu_busy_recomputed_s,17.079978930289183,17.00429148101808,0.07568744927110416,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2273,commits,commits,258,255,3.0,0,differ,,,record,raw,
+runs.csv,v4p4_fast_only_k1.0_s11_r2273,log_censored_plans,realized_log_censored_plans,5,6,1.0,0,differ,F1,,record,raw,equal to the value 6 under F1
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2273,gpu_usage,gpu_usage_recomputed,0.6575341135217736,0.6572607534817388,0.00027336004003475356,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2273,gpu_busy_s,gpu_busy_recomputed_s,131.5068246639591,131.45215265464776,0.054672009311332204,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2273,commits,commits,1933,1931,2.0,0,differ,,,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r2201,log_censored_plans,realized_log_censored_plans,23,33,10.0,0,differ,F1,,record,raw,equal to the value 33 under F1
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2201,gpu_usage,gpu_usage_recomputed,0.9947061994888576,0.9943385425637767,0.00036765692508089476,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r2201,gpu_busy_s,gpu_busy_recomputed_s,59.980784722961445,59.95861500930787,0.02216971365357523,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2082,gpu_usage,gpu_usage_recomputed,0.9952625545205077,0.9860738644935935,0.009188690026914248,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2082,gpu_busy_s,gpu_busy_recomputed_s,17.864963119851804,17.70002613067626,0.1649369891755441,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r1825,gpu_usage,gpu_usage_recomputed,0.9248368612980535,0.9239613965098502,0.0008754647882033284,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r1825,gpu_busy_s,gpu_busy_recomputed_s,184.96737501583934,184.7922820549012,0.17509296093814442,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r1825,commits,commits,2873,2864,9.0,0,differ,,,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r1825,log_censored_plans,realized_log_censored_plans,30,40,10.0,0,differ,F1,,record,raw,equal to the value 40 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r1825,misses,realized_misses,3,1,2.0,0,differ,F3,,record,raw,equal to the value 1 under F3
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r1825,r_cond,realized_r_cond,0.42857142857142855,0.14285714285714285,0.2857142857142857,1e-06,differ,F3,False,analysis,raw,equal to the value 0.142857143 under F3
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r1825,r_cond_excl_v0,realized_r_cond_excl_v0,0.42857142857142855,0.14285714285714285,0.2857142857142857,1e-06,differ,F3,False,record,raw,equal to the value 0.142857143 under F3
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2164,gpu_usage,gpu_usage_recomputed,0.9956437334043712,0.9926030940577591,0.0030406393466120285,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2164,gpu_busy_s,gpu_busy_recomputed_s,20.112003714460503,20.05058279800415,0.061420916456352614,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fast_only_k1.0_s11_r2164,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p4_fl_original_k1.0_s11_r2164,gpu_usage,gpu_usage_recomputed,0.9900259913132085,0.9898516458866677,0.00017434542654071183,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r2164,gpu_busy_s,gpu_busy_recomputed_s,128.2578690858173,128.23528263473492,0.022586451082389658,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2416,gpu_usage,gpu_usage_recomputed,0.990692696678155,0.9863315447534738,0.004361151924681117,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2416,gpu_busy_s,gpu_busy_recomputed_s,17.58479562807112,17.507385179519652,0.07741044855146839,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2416,commits,commits,72,69,3.0,0,differ,,,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r3540,gpu_usage,gpu_usage_recomputed,0.9935374779921674,0.9932808186386036,0.0002566593535637818,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_heuristic_B0_d1_k1.0_s11_r3540,gpu_busy_s,gpu_busy_recomputed_s,77.74430881136756,77.72422521591187,0.02008359545568794,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r23771,gpu_usage,gpu_usage_recomputed,0.990343447631407,0.9813866256241571,0.008956822007249898,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r23771,gpu_busy_s,gpu_busy_recomputed_s,20.203006632728957,20.020287460327143,0.18271917240181423,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r23771,commits,commits,129,120,9.0,0,differ,,,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r23901,gpu_usage,gpu_usage_recomputed,0.9961070316150001,0.990442760645166,0.005664270969834129,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r23901,gpu_busy_s,gpu_busy_recomputed_s,23.05987812550621,22.928750249862656,0.13112787564355344,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r23901,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2709,gpu_usage,gpu_usage_recomputed,0.9967660064901535,0.9941463415534811,0.002619664936672317,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2709,gpu_busy_s,gpu_busy_recomputed_s,45.153500766843536,45.03482994270325,0.11867082414028829,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2709,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p4_age_only_A1.0_d1_k1.0_s11_r2709,log_censored_plans,realized_log_censored_plans,4,5,1.0,0,differ,F1,,record,raw,equal to the value 5 under F1
+runs.csv,v4p4_fixed_deep_k1.0_s11_r28087,gpu_usage,gpu_usage_recomputed,0.9974979224086443,0.9971857820923059,0.0003121403163384162,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r28087,gpu_busy_s,gpu_busy_recomputed_s,186.73161385741605,186.67318118858384,0.058432668832210766,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_age_only_A1.0_d1_k1.0_s11_r28087,log_censored_plans,realized_log_censored_plans,5,6,1.0,0,differ,F1,,record,raw,equal to the value 6 under F1
+runs.csv,v4p4_fixed_deep_k1.0_s11_r1711,gpu_usage,gpu_usage_recomputed,0.9972488978852182,0.9946880308477393,0.002560867037478931,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r1711,gpu_busy_s,gpu_busy_recomputed_s,73.44738242369759,73.25877456283568,0.18860786086190728,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r1711,misses,realized_misses,1,0,1.0,0,differ,F3,,record,raw,equal to the value 0 under F3
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r1711,r_cond,realized_r_cond,1.0,0.0,1.0,1e-06,differ,F3,False,analysis,raw,equal to the value 0 under F3
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r1711,r_cond_excl_v0,realized_r_cond_excl_v0,1.0,0.0,1.0,1e-06,differ,F3,False,record,raw,equal to the value 0 under F3
+runs.csv,v4p4_age_only_A1.0_d1_k1.0_s11_r1852,log_censored_plans,realized_log_censored_plans,5,6,1.0,0,differ,F1,,record,raw,equal to the value 6 under F1
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2534,gpu_usage,gpu_usage_recomputed,0.9851851857118945,0.9841203698664389,0.0010648158454555912,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2534,gpu_busy_s,gpu_busy_recomputed_s,33.34851903327928,33.31247501564028,0.036044017639,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r2534,commits,commits,224,223,1.0,0,differ,,,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r1956,gpu_usage,gpu_usage_recomputed,0.6728726014862473,0.6721185064990752,0.0007540949871720493,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r1956,gpu_busy_s,gpu_busy_recomputed_s,134.57452230256607,134.42370330238353,0.1508190001825369,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r1956,commits,commits,2180,2173,7.0,0,differ,,,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r23695,gpu_usage,gpu_usage_recomputed,0.9898959207019042,0.9878968974513309,0.0019990232505733285,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r23695,gpu_busy_s,gpu_busy_recomputed_s,17.768632041372427,17.732749572753907,0.035882468618520846,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s11_r23695,commits,commits,147,146,1.0,0,differ,,,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r23695,gpu_usage,gpu_usage_recomputed,0.9954068798688441,0.9873597617076515,0.008047118161192635,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r23695,gpu_busy_s,gpu_busy_recomputed_s,18.36525720724383,18.21678787422182,0.14846933302201037,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2373,gpu_usage,gpu_usage_recomputed,0.9974682445705816,0.9968074283795222,0.000660816191059399,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fixed_deep_k1.0_s11_r2373,gpu_busy_s,gpu_busy_recomputed_s,59.24961461038059,59.21036212730407,0.03925248307651685,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2373,gpu_usage,gpu_usage_recomputed,0.880832465994352,0.8798527533747103,0.0009797126196418038,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2373,gpu_busy_s,gpu_busy_recomputed_s,168.89962787121755,168.71176797294638,0.18785989827117078,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2373,commits,commits,2540,2531,9.0,0,differ,,,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2144,gpu_usage,gpu_usage_recomputed,0.9783998204250995,0.9782091633156009,0.00019065710949861536,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_event_triggered_s_hb2.0_k1.0_s11_r2144,gpu_busy_s,gpu_busy_recomputed_s,112.27138106675409,112.2495031623843,0.02187790436978787,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r2144,gpu_usage,gpu_usage_recomputed,0.9887516763951887,0.9885000756406059,0.0002516007545827481,1e-06,differ,,False,record,raw,
+runs.csv,v4p4_fl_original_k1.0_s11_r2144,gpu_busy_s,gpu_busy_recomputed_s,84.24164408416837,84.22020769882201,0.021436385346362385,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k1.5_s11_r3248,gpu_usage,gpu_usage_recomputed,0.9979737398096368,0.9945406205012575,0.0034331193083793066,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k1.5_s11_r3248,gpu_busy_s,gpu_busy_recomputed_s,78.19124367922535,77.92225877666465,0.2689849025607032,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fast_only_k1.5_s11_r2390,gpu_usage,gpu_usage_recomputed,0.9992147642005786,0.9987678259849925,0.00044693821558616786,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fast_only_k1.5_s11_r2390,gpu_busy_s,gpu_busy_recomputed_s,69.99499527525722,69.96368725204475,0.03130802321247472,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r2390,gpu_usage,gpu_usage_recomputed,0.9985886409238156,0.9935918557080792,0.004996785215736432,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r2390,gpu_busy_s,gpu_busy_recomputed_s,81.78441091034317,81.37517419433597,0.40923671600720013,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2084,gpu_usage,gpu_usage_recomputed,0.9954612160335345,0.995273264701598,0.00018795133193649782,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2084,gpu_busy_s,gpu_busy_recomputed_s,199.09224617341252,199.05465590572356,0.03759026768895524,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r2084,gpu_usage,gpu_usage_recomputed,0.9981249459748639,0.9909739238694109,0.007151022105453042,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r2084,gpu_busy_s,gpu_busy_recomputed_s,48.15952936092008,47.814492538452185,0.3450368224678968,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r3436,gpu_usage,gpu_usage_recomputed,0.9989032381551903,0.9978979422871994,0.0010052958679909185,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r3436,gpu_busy_s,gpu_busy_recomputed_s,199.7806506080017,199.579591430664,0.2010591773376973,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fast_only_k2.0_s11_r3436,conflict_plans,realized_conflict_plans,23,22,1.0,0,differ,F1,,record,raw,equal to the value 22 under F1
+runs.csv,v4p5_fast_only_k2.0_s11_r3436,misses,realized_misses,23,22,1.0,0,differ,F1,,record,raw,equal to the value 22 under F1
+runs.csv,v4p5_fast_only_k2.0_s11_r3436,eir_invalid_ticks,realized_invalid_ticks,328,319,9.0,0,differ,F1,,record,raw,equal to the value 319 under F1
+runs.csv,v4p5_fast_only_k2.0_s11_r3436,eir,realized_invalid_tick_ratio,0.49028400597907323,0.476831091180867,0.013452914798206261,1e-06,differ,F1,False,analysis,raw,equal to the value 0.476831091 under F1
+runs.csv,v4p5_fast_only_k2.0_s11_r3436,log_censored_plans,realized_log_censored_plans,0,1,1.0,0,differ,F1,,record,raw,equal to the value 1 under F1
+runs.csv,v4p5_fast_only_k2.0_s11_r2127,gpu_usage,gpu_usage_recomputed,0.9981692296335908,0.9967697713706621,0.0013994582629286434,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fast_only_k2.0_s11_r2127,gpu_busy_s,gpu_busy_recomputed_s,29.94507733522414,29.903093585968026,0.04198374925611503,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_heuristic_B0_d1_k1.5_s11_r2127,gpu_usage,gpu_usage_recomputed,0.996269703770007,0.9958637689897953,0.00040593478021166973,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_heuristic_B0_d1_k1.5_s11_r2127,gpu_busy_s,gpu_busy_recomputed_s,77.16108970677686,77.129650056839,0.031439649937865966,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2127,gpu_usage,gpu_usage_recomputed,0.9963530534987654,0.9960100605486653,0.0003429929501000961,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2127,gpu_busy_s,gpu_busy_recomputed_s,90.46885860577892,90.43771484470366,0.031143761075256293,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k1.5_s11_r2050,gpu_usage,gpu_usage_recomputed,0.9967067440503747,0.9897618173299854,0.006944926720389377,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k1.5_s11_r2050,gpu_busy_s,gpu_busy_recomputed_s,21.728207344073684,21.57680793857574,0.15139940549794417,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fast_only_k1.5_s11_r2050,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p5_fl_heuristic_B0_d1_k1.5_s11_r2509,gpu_usage,gpu_usage_recomputed,0.9963855476025486,0.9961465037089483,0.0002390438936002992,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_heuristic_B0_d1_k1.5_s11_r2509,gpu_busy_s,gpu_busy_recomputed_s,124.29909891561881,124.26927818870563,0.02982072691318649,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2509,gpu_usage,gpu_usage_recomputed,0.9861421312283649,0.9849741527603679,0.0011679784679969885,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2509,gpu_busy_s,gpu_busy_recomputed_s,26.132766866960235,26.101815436363243,0.03095143059699268,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_heuristic_B0_d1_k1.5_s11_r23695,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r23695,gpu_usage,gpu_usage_recomputed,0.9892624927890515,0.9784621523643614,0.010800340424690136,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r23695,gpu_busy_s,gpu_busy_recomputed_s,17.955114511673337,17.759088329315183,0.19602618235815328,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r23695,commits,commits,161,155,6.0,0,differ,,,record,raw,
+runs.csv,v4p5_fixed_deep_k1.5_s11_r23695,gpu_usage,gpu_usage_recomputed,0.9966176883908108,0.9928645455291053,0.003753142861705472,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k1.5_s11_r23695,gpu_busy_s,gpu_busy_recomputed_s,18.487258395131153,18.417637593269344,0.06962080186180941,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r23695,gpu_usage,gpu_usage_recomputed,0.998035570069924,0.9854460885639905,0.01258948150593353,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r23695,gpu_busy_s,gpu_busy_recomputed_s,18.56346187991772,18.329297519683823,0.23416436023389764,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2164,gpu_usage,gpu_usage_recomputed,0.9957122135941305,0.9952868320309896,0.00042538156314098075,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2164,gpu_busy_s,gpu_busy_recomputed_s,78.26298115470794,78.22954616260529,0.03343499210265577,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r2164,gpu_usage,gpu_usage_recomputed,0.9983807082873157,0.9932425635287697,0.005138144758546015,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r2164,gpu_busy_s,gpu_busy_recomputed_s,87.15863713224755,86.71007708740238,0.4485600448451663,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r1852,gpu_usage,gpu_usage_recomputed,0.9986300000133884,0.997174535410923,0.0014554646024653728,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r1852,gpu_busy_s,gpu_busy_recomputed_s,199.726002978827,199.43491005325336,0.2910929255736505,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r1711,log_censored_plans,realized_log_censored_plans,1,2,1.0,0,differ,F1,,record,raw,equal to the value 2 under F1
+runs.csv,v4p5_fixed_deep_k1.5_s11_r28087,gpu_usage,gpu_usage_recomputed,0.9981281332370079,0.9963620454218838,0.0017660878151241066,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k1.5_s11_r28087,gpu_busy_s,gpu_busy_recomputed_s,62.38300925689226,62.27262876605985,0.11038049083240509,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r28087,log_censored_plans,realized_log_censored_plans,1,2,1.0,0,differ,F1,,record,raw,equal to the value 2 under F1
+runs.csv,v4p5_fast_only_k1.5_s11_r28087,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p5_fl_heuristic_B0_d1_k2.0_s11_r28087,conflict_plans,realized_conflict_plans,3,2,1.0,0,differ,F1,,record,raw,equal to the value 2 under F1
+runs.csv,v4p5_fl_heuristic_B0_d1_k2.0_s11_r28087,misses,realized_misses,3,2,1.0,0,differ,F1,,record,raw,equal to the value 2 under F1
+runs.csv,v4p5_fl_heuristic_B0_d1_k2.0_s11_r28087,eir_invalid_ticks,realized_invalid_ticks,27,22,5.0,0,differ,F1,,record,raw,equal to the value 22 under F1
+runs.csv,v4p5_fl_heuristic_B0_d1_k2.0_s11_r28087,eir,realized_invalid_tick_ratio,0.07068062827225131,0.05759162303664921,0.013089005235602101,1e-06,differ,F1,False,analysis,raw,equal to the value 0.057591623 under F1
+runs.csv,v4p5_fl_heuristic_B0_d1_k2.0_s11_r28087,log_censored_plans,realized_log_censored_plans,1,2,1.0,0,differ,F1,,record,raw,equal to the value 2 under F1
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r28087,gpu_usage,gpu_usage_recomputed,0.9961581421416906,0.9960038118947329,0.00015433024695776787,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r28087,gpu_busy_s,gpu_busy_recomputed_s,199.23163139712074,199.20076534652716,0.03086605059357339,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k1.5_s11_r14842,gpu_usage,gpu_usage_recomputed,0.9981259314804661,0.9951961277346635,0.0029298037458026505,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k1.5_s11_r14842,gpu_busy_s,gpu_busy_recomputed_s,103.006597663702,102.70424191188823,0.3023557518137636,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r1790,log_censored_plans,realized_log_censored_plans,1,2,1.0,0,differ,F1,,record,raw,equal to the value 2 under F1
+runs.csv,v4p5_fast_only_k2.0_s11_r2790,gpu_usage,gpu_usage_recomputed,0.9968831513496808,0.9943371313959833,0.0025460199536974093,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fast_only_k2.0_s11_r2790,gpu_busy_s,gpu_busy_recomputed_s,16.747637192233874,16.70486405563355,0.042773136600324335,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_heuristic_B0_d1_k1.5_s11_r2790,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p5_fixed_deep_k1.5_s11_r2790,gpu_usage,gpu_usage_recomputed,0.995693321465155,0.9877151309031306,0.007978190562024423,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k1.5_s11_r2790,gpu_busy_s,gpu_busy_recomputed_s,15.582600713128517,15.45774202823639,0.1248586848921267,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2204,gpu_usage,gpu_usage_recomputed,0.9965926724626627,0.9964234690091845,0.00016920345347815058,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.5_s11_r2204,gpu_busy_s,gpu_busy_recomputed_s,199.31853746261015,199.28469677066786,0.033840691942288004,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r2204,gpu_usage,gpu_usage_recomputed,0.993006241760623,0.9924067579378519,0.0005994838227710853,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k2.0_s11_r2204,gpu_busy_s,gpu_busy_recomputed_s,70.60274484124317,70.5601215400696,0.04262330117356328,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fl_heuristic_B0_d1_k2.0_s11_r17752,log_censored_plans,realized_log_censored_plans,2,3,1.0,0,differ,F1,,record,raw,equal to the value 3 under F1
+runs.csv,v4p5_fixed_deep_k2.0_s11_r17752,gpu_usage,gpu_usage_recomputed,0.9981186314854003,0.9838009973324336,0.014317634152966607,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fixed_deep_k2.0_s11_r17752,gpu_busy_s,gpu_busy_recomputed_s,24.95296615896317,24.595025299072283,0.3579408598908884,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fast_only_k1.5_s11_r17752,gpu_usage,gpu_usage_recomputed,0.9986778204680204,0.9976912186819767,0.000986601786043706,1e-06,differ,,False,record,raw,
+runs.csv,v4p5_fast_only_k1.5_s11_r17752,gpu_busy_s,gpu_busy_recomputed_s,31.158748462903766,31.127966485977176,0.03078197692659046,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_global_shield_B0_d1_k1.0_s11_r28087,gpu_usage,gpu_usage_recomputed,0.9942360410370544,0.9939175794388403,0.000318461598214137,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_global_shield_B0_d1_k1.0_s11_r28087,gpu_busy_s,gpu_busy_recomputed_s,61.49350005446636,61.47380320358278,0.019696850883576644,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_global_shield_B0_d1_k1.0_s11_r17752,log_censored_plans,realized_log_censored_plans,5,6,1.0,0,differ,F1,,record,raw,equal to the value 6 under F1
+runs.csv,v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r14842,gpu_usage,gpu_usage_recomputed,0.9868429159562117,0.984084403531738,0.002758512424473669,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r14842,gpu_busy_s,gpu_busy_recomputed_s,28.223707816913667,28.144814359664917,0.07889345724874985,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r14842,commits,commits,115,112,3.0,0,differ,,,record,raw,
+runs.csv,v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r1852,gpu_usage,gpu_usage_recomputed,0.9944775014528875,0.994372685686883,0.00010481576600451792,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r1852,gpu_busy_s,gpu_busy_recomputed_s,198.8955032543514,198.87454010009728,0.020963154254133087,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2509,gpu_usage,gpu_usage_recomputed,0.9921977703728033,0.9914677923290348,0.0007299780437685088,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_bandit_B0_d1_v4_qnet_1c3d57e3d8e7_k1.0_s11_r2509,gpu_busy_s,gpu_busy_recomputed_s,27.28543909183681,27.265364694595345,0.020074397241465647,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2509,log_censored_plans,realized_log_censored_plans,4,5,1.0,0,differ,F1,,record,raw,equal to the value 5 under F1
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2664,gpu_usage,gpu_usage_recomputed,0.9933020479158954,0.9931847535947497,0.00011729432114571114,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2664,gpu_busy_s,gpu_busy_recomputed_s,198.66041254344987,198.6369536781312,0.02345886531867336,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r23695,gpu_usage,gpu_usage_recomputed,0.9912463650591551,0.9828750042227677,0.008371360836387343,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r23695,gpu_busy_s,gpu_busy_recomputed_s,17.693747879963304,17.54431908607483,0.1494287938884753,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r23695,commits,commits,112,106,6.0,0,differ,,,record,raw,
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2204,gpu_usage,gpu_usage_recomputed,0.9918157752902264,0.9901428831216356,0.0016728921685907894,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2204,gpu_busy_s,gpu_busy_recomputed_s,32.13483159824963,32.080629890441905,0.05420170780772793,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2204,commits,commits,94,92,2.0,0,differ,,,record,raw,
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2204,log_censored_plans,realized_log_censored_plans,8,13,5.0,0,differ,F1,,record,raw,equal to the value 13 under F1
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2790,gpu_usage,gpu_usage_recomputed,0.986470553817197,0.983912068539601,0.0025584852775959455,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2790,gpu_busy_s,gpu_busy_recomputed_s,15.240970283583845,15.201441684722894,0.039528598860950837,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r2790,commits,commits,115,114,1.0,0,differ,,,record,raw,
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r28087,conflict_plans,realized_conflict_plans,25,23,2.0,0,differ,F1,,record,raw,equal to the value 23 under F1
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r28087,r_cond,realized_r_cond,0.72,0.782608695652174,0.06260869565217397,1e-06,differ,F1,False,analysis,raw,equal to the value 0.782608696 under F1
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r28087,r_cond_excl_v0,realized_r_cond_excl_v0,0.6956521739130435,0.7619047619047619,0.0662525879917184,1e-06,differ,F1,False,record,raw,equal to the value 0.761904762 under F1
+runs.csv,v4p6_fl_fqi_nolease_B0_d1_v4_qnet_6d5026a7b46f_k1.0_s11_r28087,log_censored_plans,realized_log_censored_plans,0,2,2.0,0,differ,F1,,record,raw,equal to the value 2 under F1
+runs.csv,v4p6_fixed_deep_k1.0_s12_r2164,gpu_usage,gpu_usage_recomputed,0.996283225017149,0.992635205398448,0.0036480196187010927,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fixed_deep_k1.0_s12_r2164,gpu_busy_s,gpu_busy_recomputed_s,21.868417114991225,21.78834308242797,0.08007403256325318,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fast_only_k1.0_s12_r2164,gpu_usage,gpu_usage_recomputed,0.9978134184626749,0.9966191718990796,0.001194246563595347,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fast_only_k1.0_s12_r2164,gpu_busy_s,gpu_busy_recomputed_s,18.509439188294753,18.48728591346741,0.02215327482734253,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r3540,gpu_usage,gpu_usage_recomputed,0.9888255894054959,0.985272846010914,0.003552743394581892,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r3540,gpu_busy_s,gpu_busy_recomputed_s,37.13040143546246,36.996995918273925,0.13340551718853533,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r3540,commits,commits,170,163,7.0,0,differ,,,record,raw,
+runs.csv,v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r3364,commits,commits,248,243,5.0,0,differ,,,record,raw,
+runs.csv,v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r17752,log_censored_plans,realized_log_censored_plans,5,6,1.0,0,differ,F1,,record,raw,equal to the value 6 under F1
+runs.csv,v4p6_fixed_deep_k1.0_s12_r17752,gpu_usage,gpu_usage_recomputed,0.9974921922894116,0.9962591136992259,0.0012330785901856212,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fixed_deep_k1.0_s12_r17752,gpu_busy_s,gpu_busy_recomputed_s,74.21342021219834,74.1216791629792,0.09174104921913795,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r2390,gpu_usage,gpu_usage_recomputed,0.9887853589906861,0.9876992190600131,0.001086139930672969,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r2390,gpu_busy_s,gpu_busy_recomputed_s,67.08908760722335,67.01539301109315,0.07369459613019558,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r2390,commits,commits,551,548,3.0,0,differ,,,record,raw,
+runs.csv,v4p6_fl_heuristic_B0_d1_k1.0_s12_r2390,log_censored_plans,realized_log_censored_plans,5,6,1.0,0,differ,F1,,record,raw,equal to the value 6 under F1
+runs.csv,v4p6_fixed_deep_k1.0_s12_r28087,gpu_usage,gpu_usage_recomputed,0.9967534626816427,0.9930889644366826,0.0036644982449600683,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fixed_deep_k1.0_s12_r28087,gpu_busy_s,gpu_busy_recomputed_s,27.809422023210505,27.707182519912724,0.1022395032977812,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r2534,gpu_usage,gpu_usage_recomputed,0.9887923491294243,0.9878842509271826,0.0009080982022416917,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_full_B0_d1_v4_qnet_5d8ffd7cf7dd_k1.0_s12_r2534,gpu_busy_s,gpu_busy_recomputed_s,30.059287861452784,30.03168167495724,0.027606186495543028,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fixed_deep_k1.0_s12_r2534,conflict_plans,realized_conflict_plans,14,13,1.0,0,differ,F1,,record,raw,equal to the value 13 under F1
+runs.csv,v4p6_fixed_deep_k1.0_s12_r2534,misses,realized_misses,14,13,1.0,0,differ,F1,,record,raw,equal to the value 13 under F1
+runs.csv,v4p6_fixed_deep_k1.0_s12_r2534,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p6_fixed_deep_k1.0_s12_r2273,gpu_usage,gpu_usage_recomputed,0.9961180535587788,0.9880362034811203,0.008081850077658492,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fixed_deep_k1.0_s12_r2273,gpu_busy_s,gpu_busy_recomputed_s,17.581483907296967,17.43883925056458,0.14264465673238647,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_heuristic_B0_d1_k1.0_s12_r1711,gpu_usage,gpu_usage_recomputed,0.9945925645605417,0.994245929109018,0.00034663545152369135,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_heuristic_B0_d1_k1.0_s12_r1711,gpu_busy_s,gpu_busy_recomputed_s,62.21176584028942,62.190083791732754,0.021682048556662892,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fixed_deep_k1.0_s12_r23771,gpu_usage,gpu_usage_recomputed,0.996437686569148,0.9872329390053549,0.009204747563793081,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fixed_deep_k1.0_s12_r23771,gpu_busy_s,gpu_busy_recomputed_s,20.078219683557116,19.892744016647338,0.18547566690977746,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_risk_E5_d1_k1.0_s11_r17752,log_censored_plans,realized_log_censored_plans,5,6,1.0,0,differ,F1,,record,raw,equal to the value 6 under F1
+runs.csv,v4p6_fl_risk_E5_d1_k1.0_s11_r2127,log_censored_plans,realized_log_censored_plans,5,6,1.0,0,differ,F1,,record,raw,equal to the value 6 under F1
+runs.csv,v4p6_fl_risk_E5_d1_k1.0_s11_r2204,gpu_usage,gpu_usage_recomputed,0.9944614296626932,0.9943550799914228,0.00010634967127043371,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_risk_E5_d1_k1.0_s11_r2204,gpu_busy_s,gpu_busy_recomputed_s,198.89228889626466,198.8710189609528,0.02126993531186372,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_risk_E5_d1_k1.0_s11_r2390,conflict_plans,realized_conflict_plans,399,398,1.0,0,differ,F1,,record,raw,equal to the value 398 under F1
+runs.csv,v4p6_fl_risk_E5_d1_k1.0_s11_r2390,r_cond,realized_r_cond,0.002506265664160401,0.002512562814070352,6.2971499099509325e-06,1e-06,differ,F1,True,analysis,raw,equal to the value 0.00251256281 under F1
+runs.csv,v4p6_fl_risk_E5_d1_k1.0_s11_r2390,r_cond_excl_v0,realized_r_cond_excl_v0,0.002506265664160401,0.002512562814070352,6.2971499099509325e-06,1e-06,differ,F1,True,record,raw,equal to the value 0.00251256281 under F1
+runs.csv,v4p6_fl_risk_E5_d1_k1.0_s11_r2390,log_censored_plans,realized_log_censored_plans,3,4,1.0,0,differ,F1,,record,raw,equal to the value 4 under F1
+runs.csv,v4p6_fl_risk_E5_d1_k1.0_s11_r3436,gpu_usage,gpu_usage_recomputed,0.9938344371193758,0.9933951913645905,0.00043924575478526684,1e-06,differ,,False,record,raw,
+runs.csv,v4p6_fl_risk_E5_d1_k1.0_s11_r3436,gpu_busy_s,gpu_busy_recomputed_s,47.45559507959366,47.43462109374998,0.020973985843674825,1e-06,differ,,False,record,raw,
+arm_summary.csv,fast_only/fast_only/2.0/11.0/P5/f3_k,realized_invalid_tick_ratio,realized_invalid_tick_ratio,0.27472105016101067,0.2741095540338195,0.0006114961271911912,1e-06,differ,F1,False,record,raw,equal to the value 0.274109554 under F1
+arm_summary.csv,fl_full/fl_full/1.0/11.0/P4/ti_main,realized_invalid_tick_ratio,realized_invalid_tick_ratio,0.10770069605717496,0.10697076865667703,0.0007299274004979317,1e-06,differ,F1,False,record,raw,equal to the value 0.10694312 under F1
+arm_summary.csv,fl_heuristic/fl_heuristic/2.0/11.0/P5/f3_k,realized_invalid_tick_ratio,realized_invalid_tick_ratio,0.1512886230949491,0.15069366831151265,0.0005949547834364355,1e-06,differ,F1,False,record,raw,equal to the value 0.150693668 under F1
